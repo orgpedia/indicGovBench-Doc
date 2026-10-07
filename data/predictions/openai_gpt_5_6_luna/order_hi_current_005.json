@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_hi_current_005",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        16.66,
+        16.0,
+        55.34,
+        16.0,
+        55.34,
+        26.1,
+        16.66,
+        26.1
+      ],
+      "text": "199/23"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        488.49,
+        16.0,
+        571.2,
+        16.0,
+        571.2,
+        26.1,
+        488.49,
+        26.1
+      ],
+      "text": "1/499278/2025"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        83.3,
+        82.52,
+        506.94,
+        82.52,
+        506.94,
+        145.67,
+        83.3,
+        145.67
+      ],
+      "text": "पुलिस मुख्यालय (अपराध अनुसंधान विभाग) म०प्र० भोपाल\nक्र. अअवि/विविध/1/विविध/199/23/1433/2025 दि. 24/09/25\n//परिपत्र//"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        80.33,
+        149.88,
+        315.35,
+        149.88,
+        315.35,
+        458.89,
+        80.33,
+        458.89
+      ],
+      "text": "प्रति,\n\n पुलिस आयुक्त,\n नगरीय पुलिस भोपाल/इंदौर\n समस्त पुलिस अधीक्षक, म.प्र.\n\nविषय:-भारतीय नागरिक सुरक्षा संहिता की धारा 356 के संबंध में।\nसंदर्भ:-परिपत्र क्र.अअवि/विविध/1/विविध/199/23/227/2025 दि.\n10-02-2025\n\n -00-"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        79.14,
+        318.28,
+        518.25,
+        318.28,
+        518.25,
+        459.73,
+        79.14,
+        459.73
+      ],
+      "text": "विषयांतर्गत संदर्भित परिपत्र का अवलोकन करने का कष्ट करें,\nजिसके माध्यम से नवीन कानूनों के क्रियान्वयन के संबंध में\nजांच/विचारण/निर्णय की प्रक्रिया अभियुक्त की अनुपस्थिति में होने से\nसंबंधित भारतीय नागरिक सुरक्षा संहिता 2023 की धारा 356 के संबंध\nमें निर्देश जारी किये गये है।\n\nभारतीय नागरिक सुरक्षा संहिता 2023 की धारा 356 निम्नानुसार\nहै :-"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        80.33,
+        466.47,
+        535.5,
+        466.47,
+        535.5,
+        744.33,
+        80.33,
+        744.33
+      ],
+      "text": "“356. Inquiry, trial or judgment in absentia of proclaimed offender.\n\n1. Notwithstanding anything contained in this Sanhita or in any other law for the time being in force, when a person\ndeclared as a proclaimed offender, whether or not charged jointly, has absconded to evade trial and there is no\nimmediate prospect of arresting him, it shall be deemed to operate as a waiver of the right of such person to be\npresent and tried in person, and the Court shall, after recording reasons in writing, in the interest of justice,\nproceed with the trial in the like manner and with like effect as if he was present, under this Sanhita and\npronounce the judgment: Provided that the Court shall not commence the trial unless a period of ninety days has\nlapsed from the date of framing of the charge.\n\n2. The Court shall ensure that the following procedure has been complied with before proceeding under sub-section\n(1), namely: - (i) issuance of two consecutive warrants of arrest within the interval of at least thirty days; (ii) publish\nin a national or local daily newspaper circulating in the place of his last known address of residence, requiring the\nproclaimed offender to appear before the Court for trial and informing him that in case he fails to appear within\nthirty days from the date of such publication, the trial shall commence in his absence; (iii) inform his relative or\nfriend, if any, about the commencement of the trial; and(iv) affix information about the commencement of the trial\non some conspicuous part of the house or homestead in which such person ordinarily resides and display in the\npolice station of the district of his last known address of residence.\n\n3. Where the proclaimed offender is not represented by any advocate, he shall be provided with an advocate for his\ndefence at the expense of the State.\n\n4. Where the Court competent to try the case or commit for trial, has examined any witnesses for prosecution and\nrecorded their depositions, such depositions shall be given in evidence against such proclaimed offender on the\ninquiry into, or in trial for, the offence with which he is charged: Provided that if the proclaimed offender is arrested\nand produced or appears before the Court during such trial, the Court may, in the interest of justice, allow him to\nexamine any evidence which may have been taken in his absence.”"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 1931,
+      "total": 5221
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002753,
+      "batch": 0.001377
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.27535,
+      "batch": 0.137675,
+      "savings": 0.137675,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

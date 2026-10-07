@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_en_current_001",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        17.85,
+        16.84,
+        148.75,
+        16.84,
+        148.75,
+        75.78,
+        17.85,
+        75.78
+      ],
+      "text": "कुलाधिपति\nडॉ. भीमराव अम्बेडकर विश्वविद्यालय, आगरा\n\nCHANCELLOR\nDR. BHIMRAO AMBEDKAR UNIVERSITY\nAGRA"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        446.25,
+        16.84,
+        565.25,
+        16.84,
+        565.25,
+        75.78,
+        446.25,
+        75.78
+      ],
+      "text": "राजभवन, लखनऊ\n\nRAJ BHAWAN, LUCKNOW"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        446.25,
+        67.36,
+        565.25,
+        67.36,
+        565.25,
+        101.04,
+        446.25,
+        101.04
+      ],
+      "text": "Dated.......................20.............."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        17.85,
+        126.3,
+        565.25,
+        126.3,
+        565.25,
+        168.4,
+        17.85,
+        168.4
+      ],
+      "text": "No. E- 4/3898 /G.S. Dated: May 11/06, 2013\n\nORDER"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        17.85,
+        185.24,
+        565.25,
+        185.24,
+        565.25,
+        799.9,
+        17.85,
+        799.9
+      ],
+      "text": "1. The applicant Dr. Nirmal Agarwal, Reader, Kishori Raman Girls P.G. College, Mathura, has moved her representation dated 30.03.2012 and the rejoinder representation dated 04.07.2012 u/s 68 of the UP State Universities Act, 1973 (in short the 'Act') against the order dated 03.03.2012 issued by the Registrar of Dr. Bhim Rao Ambedkar University, Agra (in short the 'University') in compliance with the decision dated 29.02.2012 of the Vice-Chancellor of the University whereby the applicant named above was debarred from the examinership of the University for the next ten years.\n\n2. The common facts emerging from the aforesaid representations of the applicant Dr. Nirmal Agarwal and the comments dated 22.01.2013 and 06.05.2013 submitted thereon by the Registrar and the Vice-Chancellor of the University are that the applicant Dr. Nirmal Agarwal and two other Lecturers namely Dr. Nagendra Kumar and Dr. Raj Kumar Singh were appointed as external examiners for the B.Ed. Examination for the academic session 2010-11 of the Excellent Degree College, Fatehpur Sikri Road, Laramada, Agra, affiliated to the University. Total 150 marks were allocated for evaluation of the examinees by the three external examiners named above and none of the examinees had failed in the external examination. Total 25 examinees had failed in internal examination. An external examiner does not have any role in the matter of internal examination of the examinees. Some of the failed examinees made complaints to the University by alleging therein that the said external examiner, acting in collusion with the College administration, declared certain examinees failed as they did not fulfill the demand of illicit money of the College administration and of the said external examiners, some of the examinees were shown absent despite being"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1924,
+      "output": 833,
+      "total": 2757
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004871,
+      "batch": 0.002436
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.48712,
+      "batch": 0.24356,
+      "savings": 0.24356,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

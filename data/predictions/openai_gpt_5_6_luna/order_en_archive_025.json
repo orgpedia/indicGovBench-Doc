@@ -1,0 +1,174 @@
+{
+  "doc_id": "order_en_archive_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        364.14,
+        31.15,
+        431.97,
+        31.15,
+        431.97,
+        76.62,
+        364.14,
+        76.62
+      ],
+      "text": "S9"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        419.47,
+        75.78,
+        464.1,
+        75.78,
+        464.1,
+        86.73,
+        419.47,
+        86.73
+      ],
+      "text": "ANNEX"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        299.29,
+        81.67,
+        464.1,
+        81.67,
+        464.1,
+        93.46,
+        299.29,
+        93.46
+      ],
+      "text": "to Memo.No.1/34/1/2009-Cab.\nDated : 22nd May, 2009"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        154.11,
+        97.67,
+        429.59,
+        97.67,
+        429.59,
+        113.67,
+        154.11,
+        113.67
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        192.78,
+        121.25,
+        312.97,
+        121.25,
+        312.97,
+        135.56,
+        192.78,
+        135.56
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        42.84,
+        138.09,
+        167.2,
+        138.09,
+        167.2,
+        156.61,
+        42.84,
+        156.61
+      ],
+      "text": "1 Dr. Manmohan Singh"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        218.37,
+        146.51,
+        462.91,
+        146.51,
+        462.91,
+        651.71,
+        218.37,
+        651.71
+      ],
+      "text": "Prime Minister and also in-charge of the\nMinistries/Departments not specifically allocated\nto the charge of any Minister viz.:\n\n(i) Ministry of Personnel, Public Grievances &\n Pensions;\n(ii) Ministry of Planning;\n(iii) Department of Atomic Energy;\n(iv) Department of Space,\n(v) Ministry of Coal,\n(vi) Ministry of Environment and Forests, and\n(vii) Ministry of Information & Broadcasting."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        36.3,
+        343.54,
+        164.82,
+        343.54,
+        164.82,
+        551.51,
+        36.3,
+        551.51
+      ],
+      "text": "2 Shri Pranab Mukherjee\n\n3 Shri Arjun Singh\n\n4 Shri Sharad Pawar\n\n5 Shri Lalu Prasad\n\n6 Shri A.K. Antony\n\n7 Shri A.R. Antulay\n\n8 Shri Sushilkumar Shinde\n\n9 Shri Ram Vilas Paswan\n\n10 Shri S. Jaipal Reddy\n\n11 Shri Sis Ram Ola\n\n12 Shri P. Chidambaram\n\n13 Shri Mahavir Prasad\n\n14 Shri P.R. Kyndiah\n\n15 Shri T.R. Baalu\n\n16 Shri Shankersinh Vaghela\n\n17 Shri Vayalar Ravi\n\n18 Shri Kamal Nath\n\n19 Shri H.R. Bhardwaj"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        211.22,
+        343.54,
+        458.15,
+        343.54,
+        458.15,
+        638.24,
+        211.22,
+        638.24
+      ],
+      "text": "Minister of External Affairs and Minister of\nFinance.\n\nMinister of Human Resource Development.\n\nMinister of Agriculture and Minister of Consumer\nAffairs, Food & Public Distribution.\n\nMinister of Railways.\n\nMinister of Defence.\n\nMinister of Minority Affairs.\n\nMinister of Power.\n\nMinister of Chemicals & Fertilizers and\nMinister of Steel.\n\nMinister of Urban Development.\n\nMinister of Mines.\n\nMinister of Home Affairs.\n\nMinister of Micro, Small and Medium\nEnterprises.\n\nMinister of Tribal Affairs.\n\nMinister of Shipping, Road Transport &\nHighways.\n\nMinister of Textiles.\n\nMinister of Overseas Indian Affairs and Minister\nof Parliamentary Affairs.\n\nMinister of Commerce & Industry.\n\nMinister of Law & Justice."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3269,
+      "output": 1506,
+      "total": 4775
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002323,
+      "batch": 0.001162
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.232325,
+      "batch": 0.116162,
+      "savings": 0.116162,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        260.61,
+        27.79,
+        282.03,
+        27.79,
+        282.03,
+        55.57,
+        260.61,
+        55.57
+      ],
+      "text": "25"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        268.35,
+        57.26,
+        312.97,
+        57.26,
+        312.97,
+        67.36,
+        268.35,
+        67.36
+      ],
+      "text": "-: 2 :-"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        213.01,
+        73.25,
+        332.01,
+        73.25,
+        332.01,
+        85.88,
+        213.01,
+        85.88
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        70.21,
+        79.15,
+        556.33,
+        79.15,
+        556.33,
+        600.35,
+        70.21,
+        600.35
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1. Dr. Henry Austin</td><td>...</td><td>Minister of State in the Ministry of\nCommerce and Civil Supplies.</td></tr><tr><td>2. Shri Bedabrata Barua</td><td>...</td><td>Minister of State in the Ministry of\nExternal Affairs.</td></tr><tr><td>3. Smt. Rashida Haque\nChaudhury</td><td>...</td><td>Minister of State in the Ministry of\nEducation and Culture.</td></tr><tr><td>4. Shri V. Kishore Chandra\nS. Deo</td><td>...</td><td>Minister of State in the Ministry of\nSteel, Mines and Coal.</td></tr><tr><td>5. Shri K. Gopal</td><td>...</td><td>Minister of State for Parliamentary\nAffairs to be also the Minister of\nState in the Ministry of Finance.</td></tr><tr><td>6. Shri M.V. Krishnappa</td><td>...</td><td>Minister of State in the Ministry of\nAgriculture and Irrigation.</td></tr><tr><td>7. Shri Dhanik Lal Mandal</td><td>...</td><td>Minister of State in the Ministry of\nHome Affairs.</td></tr><tr><td>8. Shri Nathuram Mirdha</td><td>...</td><td>Minister of State in the Ministry of\nFinance.</td></tr><tr><td>9. Shri Janeshwar Mishra</td><td>...</td><td>Minister of State of Shipping and\nTransport.</td></tr><tr><td>10. Shri Narsingh</td><td>...</td><td>Minister of State in the Ministry of\nCommunications.</td></tr><tr><td>11. Shri B. Rachaiah</td><td>...</td><td>Minister of State in the Ministry of\nIndustry.</td></tr><tr><td>12. Shri Saugata Roy</td><td>...</td><td>Minister of State in the Ministry of\nPetroleum, Chemicals and Fertilizers.</td></tr><tr><td>13. Shri P.M. Sayeed</td><td>...</td><td>Minister of State in the Ministry of\nSteel, Mines and Coal.</td></tr><tr><td>14. Shri T.S. Shrangare</td><td>...</td><td>Minister of State in the Ministry of\nCommunications.</td></tr><tr><td>15. Shri Bhanu Pratap Singh</td><td>...</td><td>Minister of State of Rural Reconstru\n-tion.</td></tr><tr><td>16. Shri Jagbir Singh</td><td>...</td><td>Minister of State in the Ministry of\nDefence.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 731,
+      "total": 2336
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.005661,
+      "batch": 0.002831
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.566125,
+      "batch": 0.283062,
+      "savings": 0.283062,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        367.71,
+        37.05,
+        409.36,
+        37.05,
+        409.36,
+        62.31,
+        367.71,
+        62.31
+      ],
+      "text": "59"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        418.88,
+        71.57,
+        462.31,
+        71.57,
+        462.31,
+        81.67,
+        418.88,
+        81.67
+      ],
+      "text": "ANNEX"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        299.88,
+        79.99,
+        460.53,
+        79.99,
+        460.53,
+        104.41,
+        299.88,
+        104.41
+      ],
+      "text": "to Memo.No.1/34/1/2009-Cab.\nDated: 22nd May, 2009"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        154.11,
+        98.51,
+        344.5,
+        98.51,
+        344.5,
+        111.14,
+        154.11,
+        111.14
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        193.38,
+        122.09,
+        303.45,
+        122.09,
+        303.45,
+        132.19,
+        193.38,
+        132.19
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        23.2,
+        139.77,
+        460.53,
+        139.77,
+        460.53,
+        768.75,
+        23.2,
+        768.75
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1</td><td>Dr. Manmohan Singh</td><td>Prime Minister and also in-charge of the\nMinistries/Departments not specifically allocated\nto the charge of any Minister viz.:</td></tr><tr><td></td><td></td><td>(i) Ministry of Personnel, Public Grievances &amp;\nPensions;</td></tr><tr><td></td><td></td><td>(ii) Ministry of Planning;</td></tr><tr><td></td><td></td><td>(iii) Department of Atomic Energy;</td></tr><tr><td></td><td></td><td>(iv) Department of Space,</td></tr><tr><td></td><td></td><td>(v) Ministry of Coal,</td></tr><tr><td></td><td></td><td>(vi) Ministry of Environment and Forests, and</td></tr><tr><td></td><td></td><td>(vii) Ministry of Information &amp; Broadcasting.</td></tr><tr><td>2</td><td>Shri Pranab Mukherjee</td><td>Minister of External Affairs and Minister of\nFinance.</td></tr><tr><td>3</td><td>Shri Arjun Singh</td><td>Minister of Human Resource Development.</td></tr><tr><td>4</td><td>Shri Sharad Pawar</td><td>Minister of Agriculture and Minister of Consumer\nAffairs, Food &amp; Public Distribution.</td></tr><tr><td>5</td><td>Shri Lalu Prasad</td><td>Minister of Railways.</td></tr><tr><td>6</td><td>Shri A.K. Antony</td><td>Minister of Defence.</td></tr><tr><td>7</td><td>Shri A.R. Antulay</td><td>Minister of Minority Affairs.</td></tr><tr><td>8</td><td>Shri Sushilkumar Shinde</td><td>Minister of Power.</td></tr><tr><td>9</td><td>Shri Ram Vilas Paswan</td><td>Minister of Chemicals &amp; Fertilizers and\nMinister of Steel.</td></tr><tr><td>10</td><td>Shri S. Jaipal Reddy</td><td>Minister of Urban Development.</td></tr><tr><td>11</td><td>Shri Sis Ram Ola</td><td>Minister of Mines.</td></tr><tr><td>12</td><td>Shri P. Chidambaram</td><td>Minister of Home Affairs.</td></tr><tr><td>13</td><td>Shri Mahavir Prasad</td><td>Minister of Micro, Small and Medium\nEnterprises.</td></tr><tr><td>14</td><td>Shri P.R. Kyndiah</td><td>Minister of Tribal Affairs.</td></tr><tr><td>15</td><td>Shri T.R. Baalu</td><td>Minister of Shipping, Road Transport &amp;\nHighways.</td></tr><tr><td>16</td><td>Shri Shankersinh Vaghela</td><td>Minister of Textiles.</td></tr><tr><td>17</td><td>Shri Vayalar Ravi</td><td>Minister of Overseas Indian Affairs and Minister\nof Parliamentary Affairs.</td></tr><tr><td>18</td><td>Shri Kamal Nath</td><td>Minister of Commerce &amp; Industry.</td></tr><tr><td>19</td><td>Shri H.R. Bhardwaj</td><td>Minister of Law &amp; Justice.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 940,
+      "total": 2545
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.006706,
+      "batch": 0.003353
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.670625,
+      "batch": 0.335313,
+      "savings": 0.335313,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

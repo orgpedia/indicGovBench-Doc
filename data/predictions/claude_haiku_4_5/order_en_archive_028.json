@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        166.6,
+        113.67,
+        226.1,
+        113.67,
+        226.1,
+        138.93,
+        166.6,
+        138.93
+      ],
+      "text": "MADDRELL"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        166.6,
+        168.4,
+        226.1,
+        168.4,
+        226.1,
+        202.08,
+        166.6,
+        202.08
+      ],
+      "text": "S.W.41"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        166.6,
+        210.5,
+        499.8,
+        210.5,
+        499.8,
+        277.86,
+        166.6,
+        277.86
+      ],
+      "text": "No. 554/OVER-CALL\nGOVERNMENT CABLE\nCABLER SECRETARIAT\n(Department Gaslit Affairs)\nNew Delhi 9th June 1964"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        166.6,
+        294.7,
+        565.25,
+        294.7,
+        565.25,
+        715.7,
+        166.6,
+        715.7
+      ],
+      "text": "The undersigned is directed to state that the Members\nof the New Council are shown in the enclosed list\nassured with effect from the forenoon of 1964."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        166.6,
+        336.8,
+        505.75,
+        336.8,
+        505.75,
+        421.0,
+        166.6,
+        421.0
+      ],
+      "text": "Draft\n(D.P. Chopra )\nCabinet Secretariat"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        166.6,
+        463.1,
+        565.25,
+        463.1,
+        565.25,
+        799.9,
+        166.6,
+        799.9
+      ],
+      "text": "To All Members of the Council of Ministers\n\nPrincipally with a copy of the enclosed to the Prime\nMinistry to the Secretary to the Prime Minister\nSame day to the Prime Minister."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        505.75,
+        757.8,
+        565.25,
+        757.8,
+        565.25,
+        799.9,
+        505.75,
+        799.9
+      ],
+      "text": "P.T.O."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 464,
+      "total": 2389
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003396,
+      "batch": 0.001698
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3396,
+      "batch": 0.1698,
+      "savings": 0.1698,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

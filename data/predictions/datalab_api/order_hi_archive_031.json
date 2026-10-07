@@ -1,0 +1,74 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        43.7,
+        223.1,
+        574.9,
+        223.1,
+        574.9,
+        268.2,
+        43.7,
+        268.2
+      ],
+      "text": "संभाव में माह _____ की तिथि में अनुबंध की कोडिका 3 (सी) के कुल लंबित प्रकरणों का विवरण\nसंभाग _____ मण्डल _____ परिसर _____ (एस.सी. छात्रों में)"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        41.3,
+        265.2,
+        576.7,
+        265.2,
+        576.7,
+        404.2,
+        41.3,
+        404.2
+      ],
+      "html": "<table><thead><tr><td>स. क्र.</td><td>कार्य का नाम</td><td>अनुबंध क्रमांक</td><td>अनुमानित लागत</td><td>निविदा दर</td><td>निविदा लागत</td><td>ठेकेदार द्वारा किया कार्य</td><td>शेष कार्य</td><td>शेष कार्य की निविदा दर</td><td>शेष कार्य की निविदा लागत</td><td>मूल ठेकेदार से वसूली योग्य राशि</td><td>संभाग में ठेकेदार के नाम से उपलब्ध राशि</td><td>ठेकेदार से की गई वसूली की राशि</td><td>शेष वसूली योग्य राशि</td><td>शेष वसूली हेतु दर्ज BRC प्रकरण का क्रमांक एवं दिनांक</td><td>इंजीनियर BRC को सौंपे गए हैं या नहीं</td><td>रिप्लेसमेंट</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        430.9,
+        437.8,
+        523.6,
+        437.8,
+        523.6,
+        492.6,
+        430.9,
+        492.6
+      ],
+      "text": "कार्यपालन संत्री\nलोक निर्माण विभाग\nसंभाग _____\nजिला _____"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

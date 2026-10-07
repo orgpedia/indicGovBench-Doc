@@ -1,0 +1,29 @@
+{
+  "doc_id": "order_mr_current_083",
+  "blocks": [],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 5345,
+      "output": 8192,
+      "total": 13537
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.138915,
+      "batch": 0.069457
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 13.8915,
+      "batch": 6.94575,
+      "savings": 6.94575,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

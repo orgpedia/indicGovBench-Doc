@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_en_archive_007",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        147.56,
+        23.58,
+        370.69,
+        23.58,
+        370.69,
+        42.1,
+        147.56,
+        42.1
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS\n(as on 18.12.2011)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        492.66,
+        21.89,
+        531.93,
+        21.89,
+        531.93,
+        42.1,
+        492.66,
+        42.1
+      ],
+      "text": "265"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        235.62,
+        58.1,
+        346.88,
+        58.1,
+        346.88,
+        69.89,
+        235.62,
+        69.89
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        99.96,
+        70.73,
+        535.5,
+        70.73,
+        535.5,
+        738.43,
+        99.96,
+        738.43
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Dr. Manmohan Singh</td><td>Prime Minister and also in-charge of the Ministries/Departments not specifically allocated to the charge of any Minister viz.:(i) Ministry of Personnel, Public Grievances and Pensions;(ii) Ministry of Planning;(iii) Department of Atomic Energy; and(iv) Department of Space.</td></tr><tr><td>2.</td><td>Shri Pranab Mukherjee</td><td>Minister of Finance.</td></tr><tr><td>3.</td><td>Shri Sharad Pawar</td><td>Minister of Agriculture and Minister of Food Processing Industries.</td></tr><tr><td>4.</td><td>Shri A.K. Antony</td><td>Minister of Defence.</td></tr><tr><td>5.</td><td>Shri P. Chidambaram</td><td>Minister of Home Affairs.</td></tr><tr><td>6.</td><td>Shri S.M. Krishna</td><td>Minister of External Affairs.</td></tr><tr><td>7.</td><td>Shri Virbhadra Singh</td><td>Minister of Micro, Small and Medium Enterprises.</td></tr><tr><td>8.</td><td>Shri Vilasrao Deshmukh</td><td>Minister of Science and Technology and Minister of Earth Sciences.</td></tr><tr><td>9.</td><td>Shri Ghulam Nabi Azad</td><td>Minister of Health and Family Welfare.</td></tr><tr><td>10.</td><td>Shri Sushilkumar Shinde</td><td>Minister of Power.</td></tr><tr><td>11.</td><td>Shri M. Veerappa Moily</td><td>Minister of Corporate Affairs.</td></tr><tr><td>12.</td><td>Dr. Farooq Abdullah</td><td>Minister of New and Renewable Energy.</td></tr><tr><td>13.</td><td>Shri S. Jaipal Reddy</td><td>Minister of Petroleum and Natural Gas.</td></tr><tr><td>14.</td><td>Shri Kamal Nath</td><td>Minister of Urban Development.</td></tr><tr><td>15.</td><td>Shri Ajit Singh</td><td>Minister of Civil Aviation.</td></tr><tr><td>16.</td><td>Shri Vayalar Ravi</td><td>Minister of Overseas Indian Affairs.</td></tr><tr><td>17.</td><td>Smt. Ambika Soni</td><td>Minister of Information and Broadcasting.</td></tr><tr><td>18.</td><td>Shri Mallikarjun Kharge</td><td>Minister of Labour and Employment.</td></tr><tr><td>19.</td><td>Shri Kapil Sibal</td><td>Minister of Human Resource Development and Minister of Communications and Information Technology.</td></tr><tr><td>20.</td><td>Shri Anand Sharma</td><td>Minister of Commerce and Industry and Minister of Textiles.</td></tr><tr><td>21.</td><td>Shri C.P. Joshi</td><td>Minister of Road Transport and Highways.</td></tr><tr><td>22.</td><td>Kumari Selja</td><td>Minister of Housing and Urban Poverty Alleviation and Minister of Culture.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        489.68,
+        740.96,
+        520.03,
+        740.96,
+        520.03,
+        751.91,
+        489.68,
+        751.91
+      ],
+      "text": "Page 1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 5370,
+      "output": 1406,
+      "total": 6776
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.0372,
+      "batch": 0.0186
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.72,
+      "batch": 1.86,
+      "savings": 1.86,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

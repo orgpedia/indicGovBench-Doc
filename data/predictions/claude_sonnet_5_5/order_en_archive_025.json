@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_en_archive_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        365.33,
+        30.31,
+        429.59,
+        30.31,
+        429.59,
+        77.46,
+        365.33,
+        77.46
+      ],
+      "text": "59"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        298.1,
+        71.57,
+        461.72,
+        71.57,
+        461.72,
+        105.25,
+        298.1,
+        105.25
+      ],
+      "text": "ANNEX\nto Memo.No.1/34/1/2009-Cab.\nDated : 22nd May, 2009"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        153.51,
+        98.51,
+        345.1,
+        98.51,
+        345.1,
+        111.99,
+        153.51,
+        111.99
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        192.78,
+        122.09,
+        304.05,
+        122.09,
+        304.05,
+        135.56,
+        192.78,
+        135.56
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        23.8,
+        140.61,
+        458.15,
+        140.61,
+        458.15,
+        772.11,
+        23.8,
+        772.11
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1</td><td>Dr. Manmohan Singh</td><td>Prime Minister and also in-charge of the Ministries/Departments not specifically allocated to the charge of any Minister viz.:(i) Ministry of Personnel, Public Grievances &amp; Pensions;(ii) Ministry of Planning;(iii) Department of Atomic Energy;(iv) Department of Space,(v) Ministry of Coal,(vi) Ministry of Environment and Forests, and(vii) Ministry of Information &amp; Broadcasting.</td></tr><tr><td>2</td><td>Shri Pranab Mukherjee</td><td>Minister of External Affairs and Minister of Finance.</td></tr><tr><td>3</td><td>Shri Arjun Singh</td><td>Minister of Human Resource Development.</td></tr><tr><td>4</td><td>Shri Sharad Pawar</td><td>Minister of Agriculture and Minister of Consumer Affairs, Food &amp; Public Distribution.</td></tr><tr><td>5</td><td>Shri Lalu Prasad</td><td>Minister of Railways.</td></tr><tr><td>6</td><td>Shri A.K. Antony</td><td>Minister of Defence.</td></tr><tr><td>7</td><td>Shri A.R. Antulay</td><td>Minister of Minority Affairs.</td></tr><tr><td>8</td><td>Shri Sushilkumar Shinde</td><td>Minister of Power.</td></tr><tr><td>9</td><td>Shri Ram Vilas Paswan</td><td>Minister of Chemicals &amp; Fertilizers and Minister of Steel.</td></tr><tr><td>10</td><td>Shri S. Jaipal Reddy</td><td>Minister of Urban Development.</td></tr><tr><td>11</td><td>Shri Sis Ram Ola</td><td>Minister of Mines.</td></tr><tr><td>12</td><td>Shri P. Chidambaram</td><td>Minister of Home Affairs.</td></tr><tr><td>13</td><td>Shri Mahavir Prasad</td><td>Minister of Micro, Small and Medium Enterprises.</td></tr><tr><td>14</td><td>Shri P.R. Kyndiah</td><td>Minister of Tribal Affairs.</td></tr><tr><td>15</td><td>Shri T.R. Baalu</td><td>Minister of Shipping, Road Transport &amp; Highways.</td></tr><tr><td>16</td><td>Shri Shankersinh Vaghela</td><td>Minister of Textiles.</td></tr><tr><td>17</td><td>Shri Vayalar Ravi</td><td>Minister of Overseas Indian Affairs and Minister of Parliamentary Affairs.</td></tr><tr><td>18</td><td>Shri Kamal Nath</td><td>Minister of Commerce &amp; Industry.</td></tr><tr><td>19</td><td>Shri H.R. Bhardwaj</td><td>Minister of Law &amp; Justice.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 5366,
+      "output": 1313,
+      "total": 6679
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.035793,
+      "batch": 0.017896
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.5793,
+      "batch": 1.78965,
+      "savings": 1.78965,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

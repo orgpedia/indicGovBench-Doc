@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_hi_current_044",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        58.31,
+        84.2,
+        107.1,
+        84.2,
+        107.1,
+        95.99,
+        58.31,
+        95.99
+      ],
+      "text": "Page 3 of 4"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2198,
+      "output": 8000,
+      "total": 10198
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 3.76
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

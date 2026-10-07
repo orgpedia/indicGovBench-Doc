@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        65.02,
+        64.58,
+        558.05,
+        64.58,
+        558.05,
+        648.73,
+        65.02,
+        648.73
+      ],
+      "html": "<table><thead><tr><td colspan=\"2\">MINISTERS OF STATE</td></tr></thead><tbody><tr><td>1. Dr. Henry Austin</td><td>... Minister of State in the Ministry of Commerce and Civil Supplies.</td></tr><tr><td>2. Shri Bedabrata Barua</td><td>... Minister of State in the Ministry of External Affairs.</td></tr><tr><td>3. Smt. Rashida Haque Chaudhury</td><td>... Minister of State in the Ministry of Education and Culture.</td></tr><tr><td>4. Shri V. Kishore Chandra S. Deo</td><td>... Minister of State in the Ministry of Steel, Mines and Coal.</td></tr><tr><td>5. Shri K. Gopal</td><td>... Minister of State for Parliamentary Affairs to be also the Minister of State in the Ministry of Finance.</td></tr><tr><td>6. Shri M.V. Krishnappa</td><td>... Minister of State in the Ministry of Agriculture and Irrigation.</td></tr><tr><td>7. Shri Dhanik Lal Mandal</td><td>... Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>8. Shri Nathuram Mirda</td><td>... Minister of State in the Ministry of Finance.</td></tr><tr><td>9. Shri Janeshwar Mishra</td><td>... Minister of State of Shipping and Transport.</td></tr><tr><td>10. Shri Narsingh</td><td>... Minister of State in the Ministry of Communications.</td></tr><tr><td>11. Shri B. Racheaiah</td><td>... Minister of State in the Ministry of Industry.</td></tr><tr><td>12. Shri Saugata Roy</td><td>... Minister of State in the Ministry of Petroleum, Chemicals and Fertilizers.</td></tr><tr><td>13. Shri P.M. Sayeed</td><td>... Minister of State in the Ministry of Steel, Mines and Coal.</td></tr><tr><td>14. Shri T.S. Shrengare</td><td>... Minister of State in the Ministry of Communications.</td></tr><tr><td>15. Shri Bhanu Pratap Singh</td><td>... Minister of State of Rural Reconstruction.</td></tr><tr><td>16. Shri Jagbir Singh</td><td>... Minister of State in the Ministry of Defence.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        89.25,
+        122.09,
+        116.03,
+        122.09,
+        116.03,
+        214.71,
+        89.25,
+        214.71
+      ],
+      "text": "S.No. 43"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        121.97,
+        143.14,
+        138.04,
+        143.14,
+        138.04,
+        294.7,
+        121.97,
+        294.7
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        130.31,
+        132.19,
+        181.47,
+        132.19,
+        181.47,
+        440.37,
+        130.31,
+        440.37
+      ],
+      "text": "No. 55/4/CF-64(1)\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        190.4,
+        203.76,
+        208.25,
+        203.76,
+        208.25,
+        458.89,
+        190.4,
+        458.89
+      ],
+      "text": "New Delhi, the 9th June 1964."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        223.72,
+        124.62,
+        273.11,
+        124.62,
+        273.11,
+        425.21,
+        223.72,
+        425.21
+      ],
+      "text": "The undersigned is directed to state that the Members\nof the new Council of Ministers shown in the enclosed list\nassumed office with effect from the forenoon of Tuesday, June 9,\n1964."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        309.4,
+        234.92,
+        342.72,
+        234.92,
+        342.72,
+        345.22,
+        309.4,
+        345.22
+      ],
+      "text": "(D.P. Chopra)\nfor Cabinet Secretary."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        342.72,
+        256.81,
+        361.16,
+        256.81,
+        361.16,
+        432.79,
+        342.72,
+        432.79
+      ],
+      "text": "To\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        366.52,
+        159.98,
+        414.12,
+        159.98,
+        414.12,
+        429.42,
+        366.52,
+        429.42
+      ],
+      "text": "Copy with a copy of the enclosure forwarded to the\nPrincipal Private Secretary to the Prime Minister/the Private\nSecretary to the Prime Minister, for information."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        427.21,
+        154.09,
+        440.3,
+        154.09,
+        440.3,
+        183.56,
+        427.21,
+        183.56
+      ],
+      "text": "P.T.O."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 5370,
+      "output": 2915,
+      "total": 8285
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.059835,
+      "batch": 0.029917
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 5.9835,
+      "batch": 2.99175,
+      "savings": 2.99175,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

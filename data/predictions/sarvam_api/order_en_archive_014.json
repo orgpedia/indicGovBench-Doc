@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_en_archive_014",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        16.31,
+        0.0,
+        588.28,
+        0.0,
+        588.28,
+        779.58,
+        16.31,
+        779.58
+      ],
+      "text": "यह एक ऐतिहासिक दस्तावेज है जिसमें भारत सरकार के कैबिनेट सचिव के कार्यालय से 3 मई 1971 को जारी एक अधिसूचना है। इसमें विभिन्न मंत्रियों के पदभार ग्रहण करने की जानकारी दी गई है।"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

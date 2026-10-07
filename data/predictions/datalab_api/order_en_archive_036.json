@@ -1,0 +1,106 @@
+{
+  "doc_id": "order_en_archive_036",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        180.1,
+        56.2,
+        456.3,
+        56.2,
+        456.3,
+        94.2,
+        180.1,
+        94.2
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTER SHORN - IN\nAT 10.45 A.M. ON MONDAY, 14 JANUARY, 1980,\nIN THE RASHTRAPATI BHAVAN."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        261.7,
+        104.4,
+        410.5,
+        104.4,
+        410.5,
+        117.4,
+        261.7,
+        117.4
+      ],
+      "text": "MEMBERS OF THE CABINET"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        92.3,
+        135.0,
+        546.3,
+        135.0,
+        546.3,
+        518.6,
+        92.3,
+        518.6
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shrimati Indira Gandhi</td><td>... Prime Minister/All Ministries/ Departments not specified below.</td></tr><tr><td>2.</td><td>Shri B. R. Chandra Singh</td><td>... Minister of Agriculture.</td></tr><tr><td>3.</td><td>Shri R. Shankermamand</td><td>... Minister of Education.</td></tr><tr><td>4.</td><td>Shri C. V. S. Gopal ReddyChandrasekhar</td><td>... Minister of Energy and Irrigation</td></tr><tr><td>5.</td><td>Shri P. V. Narasimha Rao</td><td>... Minister of External Affairs</td></tr><tr><td>6.</td><td>Shri B. Venkataraman</td><td>... Minister of Finance.</td></tr><tr><td>7.</td><td>Shri V. P. Menon</td><td>... Minister of Information and Broadcasting.</td></tr><tr><td>8.</td><td>Shri M. L. Singh</td><td>... Minister of Home Affairs</td></tr><tr><td>9.</td><td>Shri Shiv Shanker</td><td>... Minister of Law, Justice and Company Affairs.</td></tr><tr><td>10.</td><td>Shri Dalip Singh</td><td>... Minister of Railways</td></tr><tr><td>11.</td><td>Shri A. P. Gama</td><td>... Minister of Shipping and Transport</td></tr><tr><td>12.</td><td>Shri J. R. Patnaik</td><td>... Minister of Tourism and Civil Aviation.</td></tr><tr><td>13.</td><td>Shri P. C. Sethi</td><td>... Minister of Works and Housing</td></tr><tr><td>14.</td><td>Shri Bhishan Narain Singh</td><td>... Minister of Parliamentary Affairs.</td></tr><tr><td>15.</td><td>Shri Pranab Mukherjee</td><td>... Minister of Commerce.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        254.4,
+        526.0,
+        380.3,
+        526.0,
+        380.3,
+        539.6,
+        254.4,
+        539.6
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        92.3,
+        545.3,
+        546.3,
+        545.3,
+        546.3,
+        774.5,
+        92.3,
+        774.5
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri R. V. Deshpande</td><td>... Minister of State in the Ministry of Agriculture.</td></tr><tr><td>2.</td><td>Shri Jagannath Jansda</td><td>... Minister of State in the Ministry of Finance.</td></tr><tr><td>3.</td><td>Shri Nihar Ranjan Jaskar</td><td>... Minister of State in the Ministry of Health.</td></tr><tr><td>4.</td><td>Shri P. Venkateswaraiah</td><td>... Minister of State in the Ministry of Home Affairs. &lt; Home</td></tr><tr><td>5.</td><td>Shri Yogendra Nakwara</td><td>... Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>6.</td><td>Shri C. K. Jaffer Sharief</td><td>... Minister of State in the Ministry of Railways.</td></tr><tr><td>7.</td><td>Shri Kartik Ojha</td><td>... Minister of State in the Ministry of Tourism and Civil Aviation.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

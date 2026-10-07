@@ -1,0 +1,238 @@
+{
+  "doc_id": "order_en_current_049",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        307.02,
+        70.73,
+        330.23,
+        70.73,
+        330.23,
+        80.83,
+        307.02,
+        80.83
+      ],
+      "text": "-2-"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        96.98,
+        83.36,
+        494.44,
+        83.36,
+        494.44,
+        127.14,
+        96.98,
+        127.14
+      ],
+      "text": "VIGILANCE PROFILE OF OFFICERS FOR WHOM VIGILANCE COMMENTS /\nCELARANCE BEING SOUGHT"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        196.95,
+        109.46,
+        434.35,
+        109.46,
+        434.35,
+        123.77,
+        196.95,
+        123.77
+      ],
+      "text": "(To be furnished and signed by the CVO or HOD)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        96.39,
+        135.56,
+        346.29,
+        135.56,
+        346.29,
+        149.88,
+        96.39,
+        149.88
+      ],
+      "text": "Name of the Officer :"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        96.39,
+        159.98,
+        346.29,
+        159.98,
+        346.29,
+        218.92,
+        96.39,
+        218.92
+      ],
+      "text": "8. Whether the officer has been placed :\non the “Agreed List” or “List of\nOfficers of Doubtful Integrity”.\n(If yes, details to be given)"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        96.39,
+        227.34,
+        346.29,
+        227.34,
+        346.29,
+        295.54,
+        96.39,
+        295.54
+      ],
+      "text": "9. Whether any allegation of misconduct :\ninvolving vigilance angle was\nexamined against the officer during\nthe last 10 years and if so with\nwhat result (*)"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        96.39,
+        308.17,
+        346.88,
+        308.17,
+        346.88,
+        490.04,
+        96.39,
+        490.04
+      ],
+      "text": "10. Whether any punishment was awarded to :\nthe officer during the last 10 years and\nif so, the date of imposition and details\nof the penalty (*)"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        96.39,
+        375.53,
+        346.88,
+        375.53,
+        346.88,
+        498.46,
+        96.39,
+        498.46
+      ],
+      "text": "11. Is any disciplinary / criminal proceedings :\nor charge sheet pending against the officers,\nas on date. [If so, details to be furnished\nincluding reference no., if any,\nof the Commission]"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        96.39,
+        456.36,
+        346.88,
+        456.36,
+        346.88,
+        501.83,
+        96.39,
+        501.83
+      ],
+      "text": "12. Is any action contemplated against the :\nofficer as on date [If so, details to be\nfurnished (*)"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        96.39,
+        506.88,
+        346.88,
+        506.88,
+        346.88,
+        563.3,
+        96.39,
+        563.3
+      ],
+      "text": "13. Whether any complaint with :\nvigilance angle is pending against\nthe officer [If so, details\nto be furnished]."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        390.92,
+        599.5,
+        549.19,
+        599.5,
+        549.19,
+        614.66,
+        390.92,
+        614.66
+      ],
+      "text": "(NAME AND SIGNATURE)"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        134.47,
+        600.35,
+        171.36,
+        600.35,
+        171.36,
+        612.98,
+        134.47,
+        612.98
+      ],
+      "text": "DATE:"
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        95.2,
+        626.45,
+        502.18,
+        626.45,
+        502.18,
+        655.92,
+        95.2,
+        655.92
+      ],
+      "text": "(*) If vigilance clearance had been obtained from the Commission in the past, the\ninformation may be provided for the period thereafter."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3312,
+      "output": 2324,
+      "total": 5636
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003152,
+      "batch": 0.001576
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3152,
+      "batch": 0.1576,
+      "savings": 0.1576,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

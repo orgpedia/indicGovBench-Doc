@@ -1,0 +1,97 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        44.03,
+        223.97,
+        516.46,
+        223.97,
+        516.46,
+        256.81,
+        44.03,
+        256.81
+      ],
+      "text": "संग्राम से माह ______ की दिवाली में अनुबंध की कांडिका 3 (ली) के कुल लाभित प्रकरणों का विवरण\nसंग्राम ______________\nमण्डल _________________\nपरिसंख्या (खरीद लाखों में)"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        41.65,
+        266.07,
+        575.37,
+        266.07,
+        575.37,
+        406.69,
+        41.65,
+        406.69
+      ],
+      "html": "<table><thead><tr><td>सं. क्र.</td><td>कार्य का नाम</td><td>अनुबंध क्रमांक</td><td>अनुमानित लागत</td><td>निविदा दर</td><td>निविदा लागत</td><td>ठेकेदार द्वारा किया कार्य</td><td>शेष कार्य की निविदा दर</td><td>शेष कार्य की निविदा लागत</td><td>मूल ठेकेदार से बसुली योग्य राशि</td><td>संग्राम में ठेकेदार के नाम से उपलब्ध राशि</td><td>ठेकेदार से की गई बसुली की राशि</td><td>शेष बसुली योग्य राशि</td><td>शेष बसुली BRC प्रकरण का क्रमांक एवं दिनांक</td><td>स्थिति BRC जारी की गई राशि</td><td>लिख के</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        438.51,
+        440.37,
+        515.27,
+        440.37,
+        515.27,
+        490.04,
+        438.51,
+        490.04
+      ],
+      "text": "कार्यपालन यंत्री\nलोक नियंत्रण विभाग\nसंग्राम\nजिला"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        331.42,
+        791.48,
+        352.83,
+        791.48,
+        352.83,
+        810.85,
+        331.42,
+        810.85
+      ],
+      "text": "12"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2076,
+      "output": 1145,
+      "total": 3221
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.54
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

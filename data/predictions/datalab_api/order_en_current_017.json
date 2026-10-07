@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        250.0,
+        178.2,
+        336.6,
+        178.2,
+        336.6,
+        197.5,
+        250.0,
+        197.5
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        146.5,
+        246.2,
+        443.5,
+        246.2,
+        443.5,
+        425.5,
+        146.5,
+        425.5
+      ],
+      "text": "सिविल लिस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        202.4,
+        588.9,
+        383.6,
+        588.9,
+        383.6,
+        626.4,
+        202.4,
+        626.4
+      ],
+      "text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        116.3,
+        658.7,
+        474.8,
+        658.7,
+        474.8,
+        781.9,
+        116.3,
+        781.9
+      ],
+      "text": "गृह मंत्रालय\nभारत सरकार\nMINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

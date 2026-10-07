@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_current_024",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        61.28,
+        -0.84,
+        535.5,
+        -0.84,
+        535.5,
+        63.99,
+        61.28,
+        63.99
+      ],
+      "text": "उत्तर प्रदेश\nUttar Pradesh\n(1) (2)\n(3)\n(4)\n(5)\n(6)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        60.69,
+        66.52,
+        434.35,
+        66.52,
+        434.35,
+        680.34,
+        60.69,
+        680.34
+      ],
+      "text": "सर्वश्री S/Shri\n447\nआशना चौधरी\nRR\n28/08/1998\nASP Mathura\nAashna Chaudhary\n20231013\n01/08/2023\n26/07/2025\nB.A.(Hons)\nUttar Pradesh\nLevel 10\n448\nविश्वजीत सौर्य\nRR\n03/05/1991\nASP Sidharth Nagar\nVishwajeet Souryan\n20231019\n01/08/2023\n26/07/2025\nB. Tech\nUttar Pradesh\nLevel 10\n449\nशिवम आशुतोष\nRR\n11/03/1994\nASP Bareilly\nShivam Ashutosh\n20231021\n01/08/2023\n26/07/2025\nB.A.(Hons)\nDelhi\nLevel 10\n450\nअभिनव द्विवेदी\nRR\n10/01/1996\nASP Moradabad\nAbhinav Dwivedi\n20231025\n01/08/2023\n26/07/2025\nB. Tech.\nDelhi\nLevel 10\n451\nसोनाली मिश्र\nRR\n03/04/1995\nASP Bareilly\nSonali Mishra\n20231027\n13/11/2023\n28/07/2025\nB. Tech.\nUttar Pradesh\nLevel 10\n452\nदिनेश गोदारा\nRR\n06/03/1998\nASP (U/T) Gorakhpur\nDinesh Godara\n20231031\n01/08/2023\n29/12/2025\nB. Tech.\nRajasthan\nLevel 10\n453\nशुभम जैन\nRR\n20/11/1997\nASP (U/T) Ayodhya\nShubham Jain\n20231033\n13/11/2023\n29/12/2025\nB.A.L.L.B. Hons\nDelhi\nLevel 10\n454\nश्रुति जैन\nRR\n10/02/1998\nASP (U/T) Kanpur\nShrusti Jain\n20231040\n13/11/2023\n29/12/2025\nB.E.\nMadhya Pradesh\nLevel 10\n455\nनताशा गोयल\nRR\n10/06/1992\nASP Pilibhit\nNatasha Goyal\n20231043\n13/11/2023\n26/07/2025\nB.A.\nPunjab\nLevel 10\n456\nमानसी\nRR\n26/05/1999\nASP (U/T) Police\nMansi\n20231044\n13/11/2023\nCommissionerate, Varanasi\nB.Sc.\nHaryana\n29/12/2025\nLevel 10\n457\nगोल्डी गुप्ता\nRR\n12/10/1996\nASP Jaunpur\nGoldi Gupta\n20231046\n13/11/2023\n26/07/2025\nB.A.(Hons)\nMadhya Pradesh\nLevel 10"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        289.76,
+        692.97,
+        304.64,
+        692.97,
+        304.64,
+        699.7,
+        289.76,
+        699.7
+      ],
+      "text": "409"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 1185,
+      "total": 2790
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000476,
+      "batch": 0.000238
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.047587,
+      "batch": 0.023794,
+      "savings": 0.023794,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

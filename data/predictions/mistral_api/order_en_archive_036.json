@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_archive_036",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        404.1,
+        18.2,
+        544.59,
+        18.2,
+        544.59,
+        47.15,
+        404.1,
+        47.15
+      ],
+      "text": "ANNEXURE-B 26"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        180.98,
+        57.9,
+        456.99,
+        57.9,
+        456.99,
+        96.77,
+        180.98,
+        96.77
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTER SHOWN - IN\nAT 10.45 A.M. ON MONDAY, 14 JANUARY, 1980,\nIN THE RACEWAY AND BHAVAN."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        263.62,
+        105.04,
+        411.54,
+        105.04,
+        411.54,
+        120.76,
+        263.62,
+        120.76
+      ],
+      "text": "MINISTERS OF THE CABINET"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        94.21,
+        137.3,
+        547.07,
+        137.3,
+        547.07,
+        521.08,
+        94.21,
+        521.08
+      ],
+      "html": "<table><thead><tr><td>1.</td><td>Sarbatti Indira Gandhi</td><td>... Prime Minister/All Ministries/Departments not specified below.</td></tr></thead><tbody><tr><td>2.</td><td>Rao Brendra Singh</td><td>... Minister of Agriculture.</td></tr><tr><td>3.</td><td>Shri R. Shankaranand</td><td>... Minister of Education.</td></tr><tr><td>4.</td><td>Shri A. B. A. Ghani Khan Chaudhary</td><td>... Minister of Energy and Irrigation</td></tr><tr><td>5.</td><td>Shri P. V. Narasimha Rao</td><td>... Minister of External Affairs</td></tr><tr><td>6.</td><td>Shri J. Venkataraman</td><td>... Minister of Finance.</td></tr><tr><td>7.</td><td>Shri V. P. Sutha</td><td>... Minister of Information and Broadcasting.</td></tr><tr><td>8.</td><td>Giani Zaili Singh</td><td>... Minister of Home Affairs</td></tr><tr><td>9.</td><td>Shri Shiv Shankar</td><td>... Minister of Law, Justice and Company Affairs.</td></tr><tr><td>10.</td><td>Shri Dhanipati Tripathi</td><td>... Minister of Railways</td></tr><tr><td>11.</td><td>Shri A. P. Sharma</td><td>... Minister of Shipping and Transport</td></tr><tr><td>12.</td><td>Shri J. D. Patnaik</td><td>... Minister of Tourism and Civil Aviation.</td></tr><tr><td>13.</td><td>Shri P. G. Sethi</td><td>... Minister of Works and Housing</td></tr><tr><td>14.</td><td>Shri Dheshwar Narain Singh</td><td>... Minister of Parliamentary Affairs.</td></tr><tr><td>15.</td><td>Shri Pranab Mukherjee</td><td>... Minister of Commerce.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        256.18,
+        527.7,
+        380.97,
+        527.7,
+        380.97,
+        540.93,
+        256.18,
+        540.93
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        94.21,
+        549.2,
+        547.07,
+        549.2,
+        547.07,
+        777.49,
+        94.21,
+        777.49
+      ],
+      "html": "<table><thead><tr><td>1.</td><td>Shri R. V. Swaminathan</td><td>... Minister of State in the Ministry of Agriculture.</td></tr></thead><tbody><tr><td>2.</td><td>Shri Jagannath Janadia</td><td>... Minister of State in the Ministry of Finance.</td></tr><tr><td>3.</td><td>Shri Nihar Ranjan Laskar</td><td>... Minister of State in the Ministry of Health.</td></tr><tr><td>4.</td><td>Shri P. Venkataraman</td><td>... Minister of State in the Ministry of Affairs.</td></tr><tr><td>5.</td><td>Shri Yogendra Makwana</td><td>... Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>6.</td><td>Shri G. K. Jaffer Sharief</td><td>... Minister of State in the Ministry of Railways.</td></tr><tr><td>7.</td><td>Shri Kartik Orach</td><td>... Minister of State in the Ministry of Tourism and Civil Aviation.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

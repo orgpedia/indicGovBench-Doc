@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        72.0,
+        228.18,
+        82.71,
+        228.18,
+        82.71,
+        310.7,
+        72.0,
+        310.7
+      ],
+      "text": "VAJULA MT"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        111.86,
+        229.02,
+        148.16,
+        229.02,
+        148.16,
+        447.1,
+        111.86,
+        447.1
+      ],
+      "text": "Copy forwarded to ----\nPrime Minister/the Principal Private Secretary to the\nPrime Minister/the Private Secretary to the Prime Minister, for\ninformation.\n----"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        160.65,
+        229.87,
+        184.45,
+        229.87,
+        184.45,
+        383.11,
+        160.65,
+        383.11
+      ],
+      "text": "To All Members of the Council of Ministers."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        215.39,
+        231.55,
+        283.81,
+        231.55,
+        283.81,
+        545.62,
+        215.39,
+        545.62
+      ],
+      "text": "The undersigned is directed to state that with\neffect from the forenoon of February 16, 1963, the designation\nof Shri S.K. Dey will be \"Minister of Community Development\nand Cooperation\"."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        306.43,
+        307.33,
+        357.0,
+        307.33,
+        357.0,
+        545.62,
+        306.43,
+        545.62
+      ],
+      "text": "No.55/4/CF-63\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\n\nNew Delhi, the 16th February 1963.\n----"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        393.89,
+        374.69,
+        414.12,
+        374.69,
+        414.12,
+        455.52,
+        393.89,
+        455.52
+      ],
+      "text": "S. No. 77."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        159.46,
+        437.84,
+        209.44,
+        437.84,
+        209.44,
+        546.46,
+        159.46,
+        546.46
+      ],
+      "text": "(B. G. Rau)\nJoint Secretary to the Cabinet."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        371.88,
+        568.35,
+        377.23,
+        568.35,
+        377.23,
+        635.71,
+        371.88,
+        635.71
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        89.84,
+        624.76,
+        100.56,
+        624.76,
+        100.56,
+        666.86,
+        89.84,
+        666.86
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        399.84,
+        637.39,
+        418.88,
+        637.39,
+        418.88,
+        682.02,
+        399.84,
+        682.02
+      ],
+      "text": "168"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2241,
+      "total": 5535
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.015322,
+      "batch": 0.007661
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.53225,
+      "batch": 0.766125,
+      "savings": 0.766125,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

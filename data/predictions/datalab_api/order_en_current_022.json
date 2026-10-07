@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_en_current_022",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        56.5,
+        44.3,
+        535.2,
+        44.3,
+        535.2,
+        682.6,
+        56.5,
+        682.6
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>205</td><td>श्यामल सामंताShyamal SamantaM.Sc.</td><td>SPS20152901West Bengal</td><td>22/11/198004/01/2023</td><td>DC, HQ, Howrah PC04/02/2024Level 11</td><td></td></tr><tr><td>206</td><td>तौसीफ अली अजहरTauseef Ali AzharB.A.</td><td>SPS20152903</td><td>20/11/197604/01/2023</td><td>CO, SIRB, Borjora30/12/2023Level 11</td><td></td></tr><tr><td>207</td><td>वांगडेन भूटियाWangden BhutiaB.A.</td><td>SPS20152904West Bengal</td><td>05/05/198204/01/2023</td><td>CO, 2nd IR Bn Siliguri WB16/11/2023Level 11</td><td></td></tr><tr><td>208</td><td>तनमोय सरकार-IITanmoy Sarkar-IIM.Sc.</td><td>SPS20152905West Bengal</td><td>23/06/198004/01/2023</td><td>CO,SAP 12th Bn31/12/2023Level 11</td><td></td></tr><tr><td>209</td><td>ध्रुबा दासDhruba DasB.Sc.</td><td>SPS20152906West Bengal</td><td>20/02/198104/01/2023</td><td>DC,Central, Asansol DurgapurPC19/02/2024Level 11</td><td></td></tr><tr><td>210</td><td>गणेश बिस्वासGanesh BiswasB.Tech.</td><td>SPS20152907West Bengal</td><td>19/07/197904/01/2023</td><td>DC, North, Barrackpore PC19/02/2024Level 11</td><td></td></tr><tr><td>211</td><td>पिनाकी रंजन दासPinaki Ranjan DasB.A.</td><td>SPS20152908West Bengal</td><td>07/02/197504/01/2023</td><td>SP, WBHRC17/11/2023Level 11</td><td></td></tr><tr><td colspan=\"6\">Allotment Year : 2016</td></tr><tr><td>212</td><td>सुरिंदर सिंहSurinder SinghMA, LLB</td><td>RR20161190Uttar Pradesh</td><td>15/05/198429/08/2016</td><td>DC, South, Howrah PC22/11/2024Level 11</td><td></td></tr><tr><td>213</td><td>होसैन मेहेदी रेहमानHossain Mehedi RehmanMBBS</td><td>RR20161535West Bengal</td><td>02/06/198919/12/2016</td><td>SP, Basirhat PD02/02/2024Level 11</td><td></td></tr><tr><td>214</td><td>सोनवणे कुलदीप सुरेशSonawane Kuldip SureshMBBS</td><td>RR20161636Maharashtra</td><td>29/07/198919/12/2016</td><td>SP, Rajganj Police District03/12/2025Level 11</td><td></td></tr><tr><td>215</td><td>अभिषेक गुप्ताAbhishek GuptaB.Tech</td><td>RR20161202West Bengal</td><td>11/12/199129/08/2016</td><td>DC, East, Asansol DurgapurPC06/02/2024Level 11</td><td></td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

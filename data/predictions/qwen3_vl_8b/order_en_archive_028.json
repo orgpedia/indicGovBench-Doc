@@ -1,0 +1,177 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        79.73,
+        147.35,
+        130.9,
+        147.35,
+        130.9,
+        251.76,
+        79.73,
+        251.76
+      ],
+      "text": "INMEDIATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        220.15,
+        147.35,
+        261.8,
+        147.35,
+        261.8,
+        589.4,
+        220.15,
+        589.4
+      ],
+      "text": "The undersigned is directed to state that the Members\nof the new Council of Ministers shown in the enclosed list\nassumed office with effect from the forenoon of Tuesday, June 9,\n1964."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        416.5,
+        147.35,
+        434.35,
+        147.35,
+        434.35,
+        197.87,
+        416.5,
+        197.87
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        357.0,
+        176.82,
+        404.6,
+        176.82,
+        404.6,
+        589.4,
+        357.0,
+        589.4
+      ],
+      "text": "Copy with a copy of the enclosure forwarded to the\nPrincipal Private Secretary to the Prime Minister/the Private\nSecretary to the Prime Minister, for information."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        279.65,
+        206.29,
+        327.25,
+        206.29,
+        327.25,
+        336.8,
+        279.65,
+        336.8
+      ],
+      "text": "( D.P. Chopra )\nfor Cabinet Secretary."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        327.25,
+        252.6,
+        357.0,
+        252.6,
+        357.0,
+        543.09,
+        327.25,
+        543.09
+      ],
+      "text": "To\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        185.64,
+        265.23,
+        205.27,
+        265.23,
+        205.27,
+        478.26,
+        185.64,
+        478.26
+      ],
+      "text": "New Delhi, the 9th June 1964."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        123.76,
+        307.33,
+        148.75,
+        307.33,
+        148.75,
+        437.84,
+        123.76,
+        437.84
+      ],
+      "text": "No. 55/4/CF-64(1)\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        79.73,
+        315.75,
+        119.0,
+        315.75,
+        119.0,
+        399.95,
+        79.73,
+        399.95
+      ],
+      "text": "8.N0.43"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 557,
+      "total": 2844
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.26
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

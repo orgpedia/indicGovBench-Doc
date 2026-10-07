@@ -1,0 +1,3642 @@
+{
+  "doc_id": "order_en_archive_016",
+  "total_words": 184,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "55",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "55",
+          "gcv_text": "SS",
+          "page_no": 1,
+          "bbox": {
+            "l": 551.83,
+            "t": 824.71,
+            "r": 569.58,
+            "b": 811.27
+          },
+          "crop_bbox": {
+            "l": 547.83,
+            "t": 828.71,
+            "r": 573.58,
+            "b": 807.27
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "MOST IMMEDIATE",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "MOST",
+          "gcv_text": "MOST",
+          "page_no": 1,
+          "bbox": {
+            "l": 382.52,
+            "t": 791.1,
+            "r": 407.94,
+            "b": 781.98
+          },
+          "crop_bbox": {
+            "l": 378.52,
+            "t": 795.1,
+            "r": 411.94,
+            "b": 777.98
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "IMMEDIATE",
+          "gcv_text": "IMMEDIATE",
+          "page_no": 1,
+          "bbox": {
+            "l": 415.85,
+            "t": 790.62,
+            "r": 473.41,
+            "b": 781.02
+          },
+          "crop_bbox": {
+            "l": 411.85,
+            "t": 794.62,
+            "r": 477.41,
+            "b": 777.02
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "No. 55/1/1/79-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "No.",
+          "gcv_text": "No.",
+          "page_no": 1,
+          "bbox": {
+            "l": 290.67,
+            "t": 770.45,
+            "r": 307.45,
+            "b": 760.37
+          },
+          "crop_bbox": {
+            "l": 286.67,
+            "t": 774.45,
+            "r": 311.45,
+            "b": 756.37
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "55/1/1/79-Cab.",
+          "gcv_text": "55",
+          "page_no": 1,
+          "bbox": {
+            "l": 316.33,
+            "t": 769.97,
+            "r": 328.8,
+            "b": 760.13
+          },
+          "crop_bbox": {
+            "l": 312.33,
+            "t": 773.97,
+            "r": 332.8,
+            "b": 756.13
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "GOVERNMENT",
+          "gcv_text": "GOVERNMENT",
+          "page_no": 1,
+          "bbox": {
+            "l": 244.14,
+            "t": 759.89,
+            "r": 308.89,
+            "b": 750.29
+          },
+          "crop_bbox": {
+            "l": 240.14,
+            "t": 763.89,
+            "r": 312.89,
+            "b": 746.29
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "OF",
+          "gcv_text": "OF",
+          "page_no": 1,
+          "bbox": {
+            "l": 316.57,
+            "t": 758.69,
+            "r": 329.52,
+            "b": 750.05
+          },
+          "crop_bbox": {
+            "l": 312.57,
+            "t": 762.69,
+            "r": 333.52,
+            "b": 746.05
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "INDIA",
+          "gcv_text": "INDIA",
+          "page_no": 1,
+          "bbox": {
+            "l": 336.47,
+            "t": 758.45,
+            "r": 368.61,
+            "b": 749.32
+          },
+          "crop_bbox": {
+            "l": 332.47,
+            "t": 762.45,
+            "r": 372.61,
+            "b": 745.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "(BHARAT",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 369.57,
+            "t": 757.97,
+            "r": 373.4,
+            "b": 749.56
+          },
+          "crop_bbox": {
+            "l": 365.57,
+            "t": 761.97,
+            "r": 377.4,
+            "b": 745.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "SARKAR)",
+          "gcv_text": "BHARAT",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.8,
+            "t": 757.97,
+            "r": 413.45,
+            "b": 748.84
+          },
+          "crop_bbox": {
+            "l": 371.8,
+            "t": 761.97,
+            "r": 417.45,
+            "b": 744.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "CABINET",
+          "gcv_text": "CABINET",
+          "page_no": 1,
+          "bbox": {
+            "l": 211.04,
+            "t": 749.32,
+            "r": 255.89,
+            "b": 739.48
+          },
+          "crop_bbox": {
+            "l": 207.04,
+            "t": 753.32,
+            "r": 259.89,
+            "b": 735.48
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "SECRETARIAT",
+          "gcv_text": "SECRETARIAT",
+          "page_no": 1,
+          "bbox": {
+            "l": 263.8,
+            "t": 748.36,
+            "r": 335.27,
+            "b": 738.28
+          },
+          "crop_bbox": {
+            "l": 259.8,
+            "t": 752.36,
+            "r": 339.27,
+            "b": 734.28
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "(MANTRIMANDAL",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 336.95,
+            "t": 747.16,
+            "r": 341.27,
+            "b": 738.28
+          },
+          "crop_bbox": {
+            "l": 332.95,
+            "t": 751.16,
+            "r": 345.27,
+            "b": 734.28
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "SACHIVALAYA)",
+          "gcv_text": "MANTRIMANDAL",
+          "page_no": 1,
+          "bbox": {
+            "l": 341.75,
+            "t": 747.4,
+            "r": 421.13,
+            "b": 737.08
+          },
+          "crop_bbox": {
+            "l": 337.75,
+            "t": 751.4,
+            "r": 425.13,
+            "b": 733.08
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "New Delhi, 26 January, 1979.\n6 Magha, 1900(s).",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "New",
+          "gcv_text": "New",
+          "page_no": 1,
+          "bbox": {
+            "l": 348.7,
+            "t": 720.27,
+            "r": 368.85,
+            "b": 711.15
+          },
+          "crop_bbox": {
+            "l": 344.7,
+            "t": 724.27,
+            "r": 372.85,
+            "b": 707.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Delhi,",
+          "gcv_text": "Delhi",
+          "page_no": 1,
+          "bbox": {
+            "l": 374.6,
+            "t": 719.31,
+            "r": 406.98,
+            "b": 709.23
+          },
+          "crop_bbox": {
+            "l": 370.6,
+            "t": 723.31,
+            "r": 410.98,
+            "b": 705.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "26",
+          "gcv_text": "26",
+          "page_no": 1,
+          "bbox": {
+            "l": 426.88,
+            "t": 719.31,
+            "r": 439.59,
+            "b": 709.95
+          },
+          "crop_bbox": {
+            "l": 422.88,
+            "t": 723.31,
+            "r": 443.59,
+            "b": 705.95
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "January,",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 408.42,
+            "t": 717.87,
+            "r": 412.49,
+            "b": 709.23
+          },
+          "crop_bbox": {
+            "l": 404.42,
+            "t": 721.87,
+            "r": 416.49,
+            "b": 705.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "1979.",
+          "gcv_text": "January",
+          "page_no": 1,
+          "bbox": {
+            "l": 446.79,
+            "t": 718.83,
+            "r": 493.08,
+            "b": 708.27
+          },
+          "crop_bbox": {
+            "l": 442.79,
+            "t": 722.83,
+            "r": 497.08,
+            "b": 704.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "6",
+          "gcv_text": "6",
+          "page_no": 1,
+          "bbox": {
+            "l": 434.08,
+            "t": 706.35,
+            "r": 439.36,
+            "b": 696.98
+          },
+          "crop_bbox": {
+            "l": 430.08,
+            "t": 710.35,
+            "r": 443.36,
+            "b": 692.98
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Magha,",
+          "gcv_text": "Magha",
+          "page_no": 1,
+          "bbox": {
+            "l": 446.55,
+            "t": 706.59,
+            "r": 479.17,
+            "b": 696.74
+          },
+          "crop_bbox": {
+            "l": 442.55,
+            "t": 710.59,
+            "r": 483.17,
+            "b": 692.74
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "1900(s).",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 480.6,
+            "t": 706.11,
+            "r": 483.48,
+            "b": 696.74
+          },
+          "crop_bbox": {
+            "l": 476.6,
+            "t": 710.11,
+            "r": 487.48,
+            "b": 692.74
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "The undersigned is directed to state that with\neffect from afternoon of January 26, 1979 -",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "The",
+          "gcv_text": "The",
+          "page_no": 1,
+          "bbox": {
+            "l": 209.37,
+            "t": 672.98,
+            "r": 228.31,
+            "b": 663.61
+          },
+          "crop_bbox": {
+            "l": 205.37,
+            "t": 676.98,
+            "r": 232.31,
+            "b": 659.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "undersigned",
+          "gcv_text": "undersigned",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.27,
+            "t": 672.5,
+            "r": 307.93,
+            "b": 662.17
+          },
+          "crop_bbox": {
+            "l": 231.27,
+            "t": 676.5,
+            "r": 311.93,
+            "b": 658.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 315.37,
+            "t": 671.06,
+            "r": 327.12,
+            "b": 661.69
+          },
+          "crop_bbox": {
+            "l": 311.37,
+            "t": 675.06,
+            "r": 331.12,
+            "b": 657.69
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "directed",
+          "gcv_text": "directed",
+          "page_no": 1,
+          "bbox": {
+            "l": 334.07,
+            "t": 670.81,
+            "r": 386.11,
+            "b": 660.73
+          },
+          "crop_bbox": {
+            "l": 330.07,
+            "t": 674.81,
+            "r": 390.11,
+            "b": 656.73
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 393.31,
+            "t": 669.85,
+            "r": 405.78,
+            "b": 660.49
+          },
+          "crop_bbox": {
+            "l": 389.31,
+            "t": 673.85,
+            "r": 409.78,
+            "b": 656.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "state",
+          "gcv_text": "state",
+          "page_no": 1,
+          "bbox": {
+            "l": 413.69,
+            "t": 669.37,
+            "r": 445.59,
+            "b": 659.77
+          },
+          "crop_bbox": {
+            "l": 409.69,
+            "t": 673.37,
+            "r": 449.59,
+            "b": 655.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "that",
+          "gcv_text": "that",
+          "page_no": 1,
+          "bbox": {
+            "l": 452.79,
+            "t": 668.65,
+            "r": 477.97,
+            "b": 659.29
+          },
+          "crop_bbox": {
+            "l": 448.79,
+            "t": 672.65,
+            "r": 481.97,
+            "b": 655.29
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "with",
+          "gcv_text": "with",
+          "page_no": 1,
+          "bbox": {
+            "l": 484.92,
+            "t": 668.17,
+            "r": 512.02,
+            "b": 658.57
+          },
+          "crop_bbox": {
+            "l": 480.92,
+            "t": 672.17,
+            "r": 516.02,
+            "b": 654.57
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "effect",
+          "gcv_text": "26",
+          "page_no": 1,
+          "bbox": {
+            "l": 380.12,
+            "t": 658.81,
+            "r": 392.83,
+            "b": 648.73
+          },
+          "crop_bbox": {
+            "l": 376.12,
+            "t": 662.81,
+            "r": 396.83,
+            "b": 644.73
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "from",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.27,
+            "t": 658.33,
+            "r": 397.87,
+            "b": 648.49
+          },
+          "crop_bbox": {
+            "l": 390.27,
+            "t": 662.33,
+            "r": 401.87,
+            "b": 644.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "afternoon",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.27,
+            "t": 658.33,
+            "r": 397.87,
+            "b": 648.49
+          },
+          "crop_bbox": {
+            "l": 390.27,
+            "t": 662.33,
+            "r": 401.87,
+            "b": 644.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "of",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.27,
+            "t": 658.33,
+            "r": 397.87,
+            "b": 648.49
+          },
+          "crop_bbox": {
+            "l": 390.27,
+            "t": 662.33,
+            "r": 401.87,
+            "b": 644.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "January",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.27,
+            "t": 658.33,
+            "r": 397.87,
+            "b": 648.49
+          },
+          "crop_bbox": {
+            "l": 390.27,
+            "t": 662.33,
+            "r": 401.87,
+            "b": 644.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "26,",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.27,
+            "t": 658.33,
+            "r": 397.87,
+            "b": 648.49
+          },
+          "crop_bbox": {
+            "l": 390.27,
+            "t": 662.33,
+            "r": 401.87,
+            "b": 644.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "1979",
+          "gcv_text": "1979",
+          "page_no": 1,
+          "bbox": {
+            "l": 406.5,
+            "t": 658.33,
+            "r": 432.4,
+            "b": 647.77
+          },
+          "crop_bbox": {
+            "l": 402.5,
+            "t": 662.33,
+            "r": 436.4,
+            "b": 643.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "-",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 439.59,
+            "t": 657.37,
+            "r": 445.59,
+            "b": 647.29
+          },
+          "crop_bbox": {
+            "l": 435.59,
+            "t": 661.37,
+            "r": 449.59,
+            "b": 643.29
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "(i) Shri Ram Kinkar assumed the office of the\nMinister of State in the Ministry of Works and\nHousing and Supply and Rehabilitation.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(i)",
+          "gcv_text": "afternoon",
+          "page_no": 1,
+          "bbox": {
+            "l": 242.22,
+            "t": 662.17,
+            "r": 301.46,
+            "b": 650.65
+          },
+          "crop_bbox": {
+            "l": 238.22,
+            "t": 666.17,
+            "r": 305.46,
+            "b": 646.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Shri",
+          "gcv_text": "Shri",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.51,
+            "t": 639.6,
+            "r": 261.17,
+            "b": 630.0
+          },
+          "crop_bbox": {
+            "l": 231.51,
+            "t": 643.6,
+            "r": 265.17,
+            "b": 626.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Ram",
+          "gcv_text": "Ram",
+          "page_no": 1,
+          "bbox": {
+            "l": 268.12,
+            "t": 639.12,
+            "r": 288.27,
+            "b": 629.76
+          },
+          "crop_bbox": {
+            "l": 264.12,
+            "t": 643.12,
+            "r": 292.27,
+            "b": 625.76
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Kinkar",
+          "gcv_text": "Kinkar",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.02,
+            "t": 638.64,
+            "r": 333.35,
+            "b": 628.8
+          },
+          "crop_bbox": {
+            "l": 290.02,
+            "t": 642.64,
+            "r": 337.35,
+            "b": 624.8
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "assumed",
+          "gcv_text": "assumed",
+          "page_no": 1,
+          "bbox": {
+            "l": 340.31,
+            "t": 637.92,
+            "r": 385.87,
+            "b": 628.08
+          },
+          "crop_bbox": {
+            "l": 336.31,
+            "t": 641.92,
+            "r": 389.87,
+            "b": 624.08
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 393.07,
+            "t": 636.96,
+            "r": 412.26,
+            "b": 627.84
+          },
+          "crop_bbox": {
+            "l": 389.07,
+            "t": 640.96,
+            "r": 416.26,
+            "b": 623.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "office",
+          "gcv_text": "office",
+          "page_no": 1,
+          "bbox": {
+            "l": 419.45,
+            "t": 636.48,
+            "r": 458.06,
+            "b": 626.88
+          },
+          "crop_bbox": {
+            "l": 415.45,
+            "t": 640.48,
+            "r": 462.06,
+            "b": 622.88
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 465.26,
+            "t": 635.76,
+            "r": 477.97,
+            "b": 626.64
+          },
+          "crop_bbox": {
+            "l": 461.26,
+            "t": 639.76,
+            "r": 481.97,
+            "b": 622.64
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 484.68,
+            "t": 635.52,
+            "r": 503.15,
+            "b": 626.16
+          },
+          "crop_bbox": {
+            "l": 480.68,
+            "t": 639.52,
+            "r": 507.15,
+            "b": 622.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Minister",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.03,
+            "t": 628.32,
+            "r": 287.07,
+            "b": 617.75
+          },
+          "crop_bbox": {
+            "l": 231.03,
+            "t": 632.32,
+            "r": 291.07,
+            "b": 613.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.74,
+            "t": 627.12,
+            "r": 307.45,
+            "b": 617.27
+          },
+          "crop_bbox": {
+            "l": 290.74,
+            "t": 631.12,
+            "r": 311.45,
+            "b": 613.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "State",
+          "gcv_text": "State",
+          "page_no": 1,
+          "bbox": {
+            "l": 313.93,
+            "t": 626.88,
+            "r": 346.06,
+            "b": 616.79
+          },
+          "crop_bbox": {
+            "l": 309.93,
+            "t": 630.88,
+            "r": 350.06,
+            "b": 612.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 353.74,
+            "t": 625.92,
+            "r": 366.45,
+            "b": 616.31
+          },
+          "crop_bbox": {
+            "l": 349.74,
+            "t": 629.92,
+            "r": 370.45,
+            "b": 612.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 372.68,
+            "t": 625.68,
+            "r": 393.07,
+            "b": 615.59
+          },
+          "crop_bbox": {
+            "l": 368.68,
+            "t": 629.68,
+            "r": 397.07,
+            "b": 611.59
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "Ministry",
+          "gcv_text": "Ministry",
+          "page_no": 1,
+          "bbox": {
+            "l": 398.35,
+            "t": 625.2,
+            "r": 452.31,
+            "b": 614.87
+          },
+          "crop_bbox": {
+            "l": 394.35,
+            "t": 629.2,
+            "r": 456.31,
+            "b": 610.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 458.3,
+            "t": 624.24,
+            "r": 471.49,
+            "b": 614.39
+          },
+          "crop_bbox": {
+            "l": 454.3,
+            "t": 628.24,
+            "r": 475.49,
+            "b": 610.39
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "Works",
+          "gcv_text": "Works",
+          "page_no": 1,
+          "bbox": {
+            "l": 477.25,
+            "t": 623.76,
+            "r": 510.1,
+            "b": 613.43
+          },
+          "crop_bbox": {
+            "l": 473.25,
+            "t": 627.76,
+            "r": 514.1,
+            "b": 609.43
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 517.3,
+            "t": 623.04,
+            "r": 536.24,
+            "b": 613.19
+          },
+          "crop_bbox": {
+            "l": 513.3,
+            "t": 627.04,
+            "r": 540.24,
+            "b": 609.19
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "Housing",
+          "gcv_text": "Housing",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.03,
+            "t": 616.79,
+            "r": 280.59,
+            "b": 605.99
+          },
+          "crop_bbox": {
+            "l": 231.03,
+            "t": 620.79,
+            "r": 284.59,
+            "b": 601.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 287.55,
+            "t": 616.07,
+            "r": 306.01,
+            "b": 605.75
+          },
+          "crop_bbox": {
+            "l": 283.55,
+            "t": 620.07,
+            "r": 310.01,
+            "b": 601.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "Supply",
+          "gcv_text": "Supply",
+          "page_no": 1,
+          "bbox": {
+            "l": 313.69,
+            "t": 615.59,
+            "r": 353.5,
+            "b": 605.03
+          },
+          "crop_bbox": {
+            "l": 309.69,
+            "t": 619.59,
+            "r": 357.5,
+            "b": 601.03
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 359.49,
+            "t": 614.87,
+            "r": 378.92,
+            "b": 604.79
+          },
+          "crop_bbox": {
+            "l": 355.49,
+            "t": 618.87,
+            "r": 382.92,
+            "b": 600.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "Rehabilitation.",
+          "gcv_text": "Rehabilitation",
+          "page_no": 1,
+          "bbox": {
+            "l": 385.63,
+            "t": 614.63,
+            "r": 477.73,
+            "b": 603.35
+          },
+          "crop_bbox": {
+            "l": 381.02,
+            "t": 618.63,
+            "r": 482.34,
+            "b": 599.35
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "(ii) Shri Janeshwar Mishra assumed the office of\nthe Minister of State in the Ministry of Energy.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(ii)",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 477.97,
+            "t": 613.19,
+            "r": 481.56,
+            "b": 603.35
+          },
+          "crop_bbox": {
+            "l": 473.97,
+            "t": 617.19,
+            "r": 485.56,
+            "b": 599.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Shri",
+          "gcv_text": "Shri",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.03,
+            "t": 595.19,
+            "r": 260.21,
+            "b": 585.58
+          },
+          "crop_bbox": {
+            "l": 231.03,
+            "t": 599.19,
+            "r": 264.21,
+            "b": 581.58
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Janeshwar",
+          "gcv_text": "Janeshwar",
+          "page_no": 1,
+          "bbox": {
+            "l": 267.4,
+            "t": 594.71,
+            "r": 326.16,
+            "b": 584.38
+          },
+          "crop_bbox": {
+            "l": 263.4,
+            "t": 598.71,
+            "r": 330.16,
+            "b": 580.38
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Mishra",
+          "gcv_text": "Mishra",
+          "page_no": 1,
+          "bbox": {
+            "l": 332.63,
+            "t": 593.75,
+            "r": 371.96,
+            "b": 583.66
+          },
+          "crop_bbox": {
+            "l": 328.63,
+            "t": 597.75,
+            "r": 375.96,
+            "b": 579.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "assumed",
+          "gcv_text": "assumed",
+          "page_no": 1,
+          "bbox": {
+            "l": 378.68,
+            "t": 592.79,
+            "r": 424.49,
+            "b": 582.7
+          },
+          "crop_bbox": {
+            "l": 374.68,
+            "t": 596.79,
+            "r": 428.49,
+            "b": 578.7
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 431.68,
+            "t": 591.82,
+            "r": 450.63,
+            "b": 582.22
+          },
+          "crop_bbox": {
+            "l": 427.68,
+            "t": 595.82,
+            "r": 454.63,
+            "b": 578.22
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "office",
+          "gcv_text": "office",
+          "page_no": 1,
+          "bbox": {
+            "l": 458.06,
+            "t": 591.34,
+            "r": 496.43,
+            "b": 581.26
+          },
+          "crop_bbox": {
+            "l": 454.06,
+            "t": 595.34,
+            "r": 500.43,
+            "b": 577.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 503.63,
+            "t": 590.62,
+            "r": 515.62,
+            "b": 581.02
+          },
+          "crop_bbox": {
+            "l": 499.63,
+            "t": 594.62,
+            "r": 519.62,
+            "b": 577.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.03,
+            "t": 585.1,
+            "r": 253.49,
+            "b": 574.54
+          },
+          "crop_bbox": {
+            "l": 231.03,
+            "t": 589.1,
+            "r": 257.49,
+            "b": 570.54
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Minister",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 259.97,
+            "t": 584.62,
+            "r": 312.73,
+            "b": 573.34
+          },
+          "crop_bbox": {
+            "l": 255.97,
+            "t": 588.62,
+            "r": 316.73,
+            "b": 569.34
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 320.4,
+            "t": 583.18,
+            "r": 332.63,
+            "b": 573.1
+          },
+          "crop_bbox": {
+            "l": 316.4,
+            "t": 587.18,
+            "r": 336.63,
+            "b": 569.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "State",
+          "gcv_text": "State",
+          "page_no": 1,
+          "bbox": {
+            "l": 339.11,
+            "t": 582.7,
+            "r": 371.73,
+            "b": 571.9
+          },
+          "crop_bbox": {
+            "l": 335.11,
+            "t": 586.7,
+            "r": 375.73,
+            "b": 567.9
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 379.4,
+            "t": 581.74,
+            "r": 392.35,
+            "b": 571.66
+          },
+          "crop_bbox": {
+            "l": 375.4,
+            "t": 585.74,
+            "r": 396.35,
+            "b": 567.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 398.35,
+            "t": 581.5,
+            "r": 418.01,
+            "b": 570.94
+          },
+          "crop_bbox": {
+            "l": 394.35,
+            "t": 585.5,
+            "r": 422.01,
+            "b": 566.94
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "Ministry",
+          "gcv_text": "Ministry",
+          "page_no": 1,
+          "bbox": {
+            "l": 423.77,
+            "t": 580.78,
+            "r": 477.01,
+            "b": 569.74
+          },
+          "crop_bbox": {
+            "l": 419.77,
+            "t": 584.78,
+            "r": 481.01,
+            "b": 565.74
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 484.2,
+            "t": 579.58,
+            "r": 496.43,
+            "b": 569.26
+          },
+          "crop_bbox": {
+            "l": 480.2,
+            "t": 583.58,
+            "r": 500.43,
+            "b": 565.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "Energy.",
+          "gcv_text": "Energy",
+          "page_no": 1,
+          "bbox": {
+            "l": 502.67,
+            "t": 579.1,
+            "r": 542.72,
+            "b": 568.06
+          },
+          "crop_bbox": {
+            "l": 498.67,
+            "t": 583.1,
+            "r": 546.72,
+            "b": 564.06
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "(iii) Shri Jagbir Singh assumed the office of the\nMinister of State in the Ministry of Information\nand Broadcasting.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(iii)",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Shri",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Jagbir",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Singh",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "assumed",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "the",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "office",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "of",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.35,
+            "t": 564.98,
+            "r": 549.78,
+            "b": 531.3
+          },
+          "crop_bbox": {
+            "l": 178.68,
+            "t": 568.98,
+            "r": 567.45,
+            "b": 527.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.03,
+            "t": 585.1,
+            "r": 253.49,
+            "b": 574.54
+          },
+          "crop_bbox": {
+            "l": 231.03,
+            "t": 589.1,
+            "r": 257.49,
+            "b": 570.54
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Minister",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 259.97,
+            "t": 584.62,
+            "r": 312.73,
+            "b": 573.34
+          },
+          "crop_bbox": {
+            "l": 255.97,
+            "t": 588.62,
+            "r": 316.73,
+            "b": 569.34
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 320.4,
+            "t": 583.18,
+            "r": 332.63,
+            "b": 573.1
+          },
+          "crop_bbox": {
+            "l": 316.4,
+            "t": 587.18,
+            "r": 336.63,
+            "b": 569.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "State",
+          "gcv_text": "State",
+          "page_no": 1,
+          "bbox": {
+            "l": 339.11,
+            "t": 582.7,
+            "r": 371.73,
+            "b": 571.9
+          },
+          "crop_bbox": {
+            "l": 335.11,
+            "t": 586.7,
+            "r": 375.73,
+            "b": 567.9
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 379.4,
+            "t": 581.74,
+            "r": 392.35,
+            "b": 571.66
+          },
+          "crop_bbox": {
+            "l": 375.4,
+            "t": 585.74,
+            "r": 396.35,
+            "b": 567.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 398.35,
+            "t": 581.5,
+            "r": 418.01,
+            "b": 570.94
+          },
+          "crop_bbox": {
+            "l": 394.35,
+            "t": 585.5,
+            "r": 422.01,
+            "b": 566.94
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "Ministry",
+          "gcv_text": "Ministry",
+          "page_no": 1,
+          "bbox": {
+            "l": 423.77,
+            "t": 580.78,
+            "r": 477.01,
+            "b": 569.74
+          },
+          "crop_bbox": {
+            "l": 419.77,
+            "t": 584.78,
+            "r": 481.01,
+            "b": 565.74
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 484.2,
+            "t": 579.58,
+            "r": 496.43,
+            "b": 569.26
+          },
+          "crop_bbox": {
+            "l": 480.2,
+            "t": 583.58,
+            "r": 500.43,
+            "b": 565.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "Information",
+          "gcv_text": "Information",
+          "page_no": 1,
+          "bbox": {
+            "l": 477.01,
+            "t": 547.41,
+            "r": 548.47,
+            "b": 536.6
+          },
+          "crop_bbox": {
+            "l": 473.01,
+            "t": 551.41,
+            "r": 552.47,
+            "b": 532.6
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "and",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.63,
+            "t": 537.8,
+            "r": 342.71,
+            "b": 529.4
+          },
+          "crop_bbox": {
+            "l": 334.63,
+            "t": 541.8,
+            "r": 346.71,
+            "b": 525.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "Broadcasting.",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.63,
+            "t": 537.8,
+            "r": 342.71,
+            "b": 529.4
+          },
+          "crop_bbox": {
+            "l": 334.63,
+            "t": 541.8,
+            "r": 346.71,
+            "b": 525.4
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
+      "label": "paragraph",
+      "full_gt_text": "(iv) Shri Narsingh assumed the office of\nthe Minister of State in the Ministry of\nPetroleum, Chemicals and Fertilizers.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(iv)",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.63,
+            "t": 537.8,
+            "r": 342.71,
+            "b": 529.4
+          },
+          "crop_bbox": {
+            "l": 334.63,
+            "t": 541.8,
+            "r": 346.71,
+            "b": 525.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Shri",
+          "gcv_text": "Shri",
+          "page_no": 1,
+          "bbox": {
+            "l": 233.35,
+            "t": 518.6,
+            "r": 258.77,
+            "b": 508.99
+          },
+          "crop_bbox": {
+            "l": 229.35,
+            "t": 522.6,
+            "r": 262.77,
+            "b": 504.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Narsingh",
+          "gcv_text": "Narsingh",
+          "page_no": 1,
+          "bbox": {
+            "l": 266.44,
+            "t": 517.64,
+            "r": 318.0,
+            "b": 507.31
+          },
+          "crop_bbox": {
+            "l": 262.44,
+            "t": 521.64,
+            "r": 322.0,
+            "b": 503.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "assumed",
+          "gcv_text": "assumed",
+          "page_no": 1,
+          "bbox": {
+            "l": 333.11,
+            "t": 515.96,
+            "r": 378.92,
+            "b": 507.79
+          },
+          "crop_bbox": {
+            "l": 329.11,
+            "t": 519.96,
+            "r": 382.92,
+            "b": 503.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 386.35,
+            "t": 515.48,
+            "r": 405.54,
+            "b": 507.55
+          },
+          "crop_bbox": {
+            "l": 382.35,
+            "t": 519.48,
+            "r": 409.54,
+            "b": 503.55
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "office",
+          "gcv_text": "office",
+          "page_no": 1,
+          "bbox": {
+            "l": 413.21,
+            "t": 515.24,
+            "r": 451.83,
+            "b": 507.07
+          },
+          "crop_bbox": {
+            "l": 409.21,
+            "t": 519.24,
+            "r": 455.83,
+            "b": 503.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 458.78,
+            "t": 514.52,
+            "r": 471.25,
+            "b": 506.83
+          },
+          "crop_bbox": {
+            "l": 454.78,
+            "t": 518.52,
+            "r": 475.25,
+            "b": 502.83
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 233.11,
+            "t": 507.79,
+            "r": 252.77,
+            "b": 497.71
+          },
+          "crop_bbox": {
+            "l": 229.11,
+            "t": 511.79,
+            "r": 256.77,
+            "b": 493.71
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "Minister",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 258.77,
+            "t": 507.55,
+            "r": 311.29,
+            "b": 496.75
+          },
+          "crop_bbox": {
+            "l": 254.77,
+            "t": 511.55,
+            "r": 315.29,
+            "b": 492.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 318.96,
+            "t": 506.35,
+            "r": 330.96,
+            "b": 496.27
+          },
+          "crop_bbox": {
+            "l": 314.96,
+            "t": 510.35,
+            "r": 334.96,
+            "b": 492.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "State",
+          "gcv_text": "State",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.15,
+            "t": 506.11,
+            "r": 370.29,
+            "b": 495.79
+          },
+          "crop_bbox": {
+            "l": 334.15,
+            "t": 510.11,
+            "r": 374.29,
+            "b": 491.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 378.2,
+            "t": 505.15,
+            "r": 390.91,
+            "b": 495.31
+          },
+          "crop_bbox": {
+            "l": 374.2,
+            "t": 509.15,
+            "r": 394.91,
+            "b": 491.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 396.67,
+            "t": 504.91,
+            "r": 416.33,
+            "b": 494.59
+          },
+          "crop_bbox": {
+            "l": 392.67,
+            "t": 508.91,
+            "r": 420.33,
+            "b": 490.59
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "Ministry",
+          "gcv_text": "Ministry",
+          "page_no": 1,
+          "bbox": {
+            "l": 422.81,
+            "t": 504.43,
+            "r": 476.05,
+            "b": 493.87
+          },
+          "crop_bbox": {
+            "l": 418.81,
+            "t": 508.43,
+            "r": 480.05,
+            "b": 489.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 482.04,
+            "t": 503.47,
+            "r": 494.99,
+            "b": 493.39
+          },
+          "crop_bbox": {
+            "l": 478.04,
+            "t": 507.47,
+            "r": 498.99,
+            "b": 489.39
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "Petroleum,",
+          "gcv_text": "Petroleum",
+          "page_no": 1,
+          "bbox": {
+            "l": 233.83,
+            "t": 496.75,
+            "r": 292.1,
+            "b": 487.39
+          },
+          "crop_bbox": {
+            "l": 229.83,
+            "t": 500.75,
+            "r": 296.1,
+            "b": 483.39
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "Chemicals",
+          "gcv_text": "Chemicals",
+          "page_no": 1,
+          "bbox": {
+            "l": 304.81,
+            "t": 495.55,
+            "r": 363.57,
+            "b": 486.42
+          },
+          "crop_bbox": {
+            "l": 300.81,
+            "t": 499.55,
+            "r": 367.57,
+            "b": 482.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 370.29,
+            "t": 494.59,
+            "r": 389.95,
+            "b": 486.18
+          },
+          "crop_bbox": {
+            "l": 366.29,
+            "t": 498.59,
+            "r": 393.95,
+            "b": 482.18
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "Fertilizers.",
+          "gcv_text": "Fertilizers",
+          "page_no": 1,
+          "bbox": {
+            "l": 396.43,
+            "t": 494.35,
+            "r": 468.13,
+            "b": 484.98
+          },
+          "crop_bbox": {
+            "l": 392.43,
+            "t": 498.35,
+            "r": 472.13,
+            "b": 480.98
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "(K. Ramiah)\nfor Cabinet Secretary",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(K.",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 370.53,
+            "t": 445.37,
+            "r": 374.6,
+            "b": 436.97
+          },
+          "crop_bbox": {
+            "l": 366.53,
+            "t": 449.37,
+            "r": 378.6,
+            "b": 432.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Ramiah)",
+          "gcv_text": "K.",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.56,
+            "t": 445.37,
+            "r": 385.87,
+            "b": 436.73
+          },
+          "crop_bbox": {
+            "l": 371.56,
+            "t": 449.37,
+            "r": 389.87,
+            "b": 432.73
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 336.23,
+            "t": 434.33,
+            "r": 355.18,
+            "b": 425.44
+          },
+          "crop_bbox": {
+            "l": 332.23,
+            "t": 438.33,
+            "r": 359.18,
+            "b": 421.44
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Cabinet",
+          "gcv_text": "Cabinet",
+          "page_no": 1,
+          "bbox": {
+            "l": 362.61,
+            "t": 433.84,
+            "r": 407.22,
+            "b": 424.48
+          },
+          "crop_bbox": {
+            "l": 358.61,
+            "t": 437.84,
+            "r": 411.22,
+            "b": 420.48
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Secretary",
+          "gcv_text": "Secretary",
+          "page_no": 1,
+          "bbox": {
+            "l": 414.89,
+            "t": 432.88,
+            "r": 474.61,
+            "b": 423.04
+          },
+          "crop_bbox": {
+            "l": 410.89,
+            "t": 436.88,
+            "r": 478.61,
+            "b": 419.04
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/10": {
+      "self_ref": "#/texts/10",
+      "label": "paragraph",
+      "full_gt_text": "To",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "To",
+          "gcv_text": "To",
+          "page_no": 1,
+          "bbox": {
+            "l": 158.76,
+            "t": 420.88,
+            "r": 171.23,
+            "b": 413.44
+          },
+          "crop_bbox": {
+            "l": 154.76,
+            "t": 424.88,
+            "r": 175.23,
+            "b": 409.44
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/11": {
+      "self_ref": "#/texts/11",
+      "label": "paragraph",
+      "full_gt_text": "All Members of the Council of Ministers.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "All",
+          "gcv_text": "All",
+          "page_no": 1,
+          "bbox": {
+            "l": 204.09,
+            "t": 398.79,
+            "r": 222.8,
+            "b": 390.39
+          },
+          "crop_bbox": {
+            "l": 200.09,
+            "t": 402.79,
+            "r": 226.8,
+            "b": 386.39
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Members",
+          "gcv_text": "Members",
+          "page_no": 1,
+          "bbox": {
+            "l": 230.23,
+            "t": 398.31,
+            "r": 276.28,
+            "b": 389.43
+          },
+          "crop_bbox": {
+            "l": 226.23,
+            "t": 402.31,
+            "r": 280.28,
+            "b": 385.43
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 283.95,
+            "t": 397.11,
+            "r": 295.94,
+            "b": 388.95
+          },
+          "crop_bbox": {
+            "l": 279.95,
+            "t": 401.11,
+            "r": 299.94,
+            "b": 384.95
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 302.66,
+            "t": 396.87,
+            "r": 322.32,
+            "b": 388.47
+          },
+          "crop_bbox": {
+            "l": 298.66,
+            "t": 400.87,
+            "r": 326.32,
+            "b": 384.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Council",
+          "gcv_text": "Council",
+          "page_no": 1,
+          "bbox": {
+            "l": 329.28,
+            "t": 396.39,
+            "r": 374.12,
+            "b": 387.51
+          },
+          "crop_bbox": {
+            "l": 325.28,
+            "t": 400.39,
+            "r": 378.12,
+            "b": 383.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 382.04,
+            "t": 395.19,
+            "r": 394.51,
+            "b": 387.27
+          },
+          "crop_bbox": {
+            "l": 378.04,
+            "t": 399.19,
+            "r": 398.51,
+            "b": 383.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Ministers.",
+          "gcv_text": "Ministers",
+          "page_no": 1,
+          "bbox": {
+            "l": 400.74,
+            "t": 394.95,
+            "r": 459.26,
+            "b": 385.83
+          },
+          "crop_bbox": {
+            "l": 396.74,
+            "t": 398.95,
+            "r": 463.26,
+            "b": 381.83
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "Copy forwarded to the Deputy Chairman, Planning\nCommission/ All Members of the Planning Commission.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Copy",
+          "gcv_text": "Copy",
+          "page_no": 1,
+          "bbox": {
+            "l": 203.61,
+            "t": 370.94,
+            "r": 230.23,
+            "b": 360.62
+          },
+          "crop_bbox": {
+            "l": 199.61,
+            "t": 374.94,
+            "r": 234.23,
+            "b": 356.62
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "forwarded",
+          "gcv_text": "forwarded",
+          "page_no": 1,
+          "bbox": {
+            "l": 237.18,
+            "t": 370.22,
+            "r": 294.98,
+            "b": 359.42
+          },
+          "crop_bbox": {
+            "l": 233.18,
+            "t": 374.22,
+            "r": 298.98,
+            "b": 355.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 302.42,
+            "t": 369.02,
+            "r": 314.41,
+            "b": 358.94
+          },
+          "crop_bbox": {
+            "l": 298.42,
+            "t": 373.02,
+            "r": 318.41,
+            "b": 354.94
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 322.56,
+            "t": 368.54,
+            "r": 340.31,
+            "b": 358.46
+          },
+          "crop_bbox": {
+            "l": 318.56,
+            "t": 372.54,
+            "r": 344.31,
+            "b": 354.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Deputy",
+          "gcv_text": "Deputy",
+          "page_no": 1,
+          "bbox": {
+            "l": 347.98,
+            "t": 368.06,
+            "r": 387.79,
+            "b": 357.74
+          },
+          "crop_bbox": {
+            "l": 343.98,
+            "t": 372.06,
+            "r": 391.79,
+            "b": 353.74
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "Chairman,",
+          "gcv_text": "Chairman",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.27,
+            "t": 367.1,
+            "r": 446.55,
+            "b": 356.54
+          },
+          "crop_bbox": {
+            "l": 390.27,
+            "t": 371.1,
+            "r": 450.55,
+            "b": 352.54
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Planning",
+          "gcv_text": "Planning",
+          "page_no": 1,
+          "bbox": {
+            "l": 460.7,
+            "t": 365.9,
+            "r": 512.02,
+            "b": 355.09
+          },
+          "crop_bbox": {
+            "l": 456.7,
+            "t": 369.9,
+            "r": 516.02,
+            "b": 351.09
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "Commission/",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 158.27,
+            "t": 370.48,
+            "r": 512.29,
+            "b": 345.22
+          },
+          "crop_bbox": {
+            "l": 140.57,
+            "t": 374.48,
+            "r": 529.99,
+            "b": 341.22
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "All",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 158.27,
+            "t": 370.48,
+            "r": 512.29,
+            "b": 345.22
+          },
+          "crop_bbox": {
+            "l": 140.57,
+            "t": 374.48,
+            "r": 529.99,
+            "b": 341.22
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Members",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 158.27,
+            "t": 370.48,
+            "r": 512.29,
+            "b": 345.22
+          },
+          "crop_bbox": {
+            "l": 140.57,
+            "t": 374.48,
+            "r": 529.99,
+            "b": 341.22
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 315.61,
+            "t": 358.22,
+            "r": 328.56,
+            "b": 349.09
+          },
+          "crop_bbox": {
+            "l": 311.61,
+            "t": 362.22,
+            "r": 332.56,
+            "b": 345.09
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 335.03,
+            "t": 357.74,
+            "r": 354.22,
+            "b": 348.85
+          },
+          "crop_bbox": {
+            "l": 331.03,
+            "t": 361.74,
+            "r": 358.22,
+            "b": 344.85
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "Planning",
+          "gcv_text": "Planning",
+          "page_no": 1,
+          "bbox": {
+            "l": 361.89,
+            "t": 357.26,
+            "r": 412.73,
+            "b": 347.41
+          },
+          "crop_bbox": {
+            "l": 357.89,
+            "t": 361.26,
+            "r": 416.73,
+            "b": 343.41
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "Commission.",
+          "gcv_text": "Commission",
+          "page_no": 1,
+          "bbox": {
+            "l": 419.69,
+            "t": 356.3,
+            "r": 486.12,
+            "b": 346.21
+          },
+          "crop_bbox": {
+            "l": 415.69,
+            "t": 360.3,
+            "r": 490.12,
+            "b": 342.21
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/13": {
+      "self_ref": "#/texts/13",
+      "label": "paragraph",
+      "full_gt_text": "Copy forwarded to :-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Copy",
+          "gcv_text": "Copy",
+          "page_no": 1,
+          "bbox": {
+            "l": 157.32,
+            "t": 322.44,
+            "r": 183.22,
+            "b": 312.6
+          },
+          "crop_bbox": {
+            "l": 153.32,
+            "t": 326.44,
+            "r": 187.22,
+            "b": 308.6
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "forwarded",
+          "gcv_text": "forwarded",
+          "page_no": 1,
+          "bbox": {
+            "l": 190.18,
+            "t": 321.72,
+            "r": 248.22,
+            "b": 311.64
+          },
+          "crop_bbox": {
+            "l": 186.18,
+            "t": 325.72,
+            "r": 252.22,
+            "b": 307.64
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 255.41,
+            "t": 320.52,
+            "r": 268.36,
+            "b": 311.16
+          },
+          "crop_bbox": {
+            "l": 251.41,
+            "t": 324.52,
+            "r": 272.36,
+            "b": 307.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": ":-",
+          "gcv_text": ":",
+          "page_no": 1,
+          "bbox": {
+            "l": 277.0,
+            "t": 320.28,
+            "r": 280.35,
+            "b": 311.16
+          },
+          "crop_bbox": {
+            "l": 273.0,
+            "t": 324.28,
+            "r": 284.35,
+            "b": 307.16
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "Secretary to the President.\nSecretary to the Vice-President.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Secretary",
+          "gcv_text": "Secretary",
+          "page_no": 1,
+          "bbox": {
+            "l": 202.89,
+            "t": 305.16,
+            "r": 261.41,
+            "b": 295.07
+          },
+          "crop_bbox": {
+            "l": 198.89,
+            "t": 309.16,
+            "r": 265.41,
+            "b": 291.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 268.84,
+            "t": 303.96,
+            "r": 281.31,
+            "b": 294.83
+          },
+          "crop_bbox": {
+            "l": 264.84,
+            "t": 307.96,
+            "r": 285.31,
+            "b": 290.83
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 288.27,
+            "t": 303.72,
+            "r": 306.73,
+            "b": 294.35
+          },
+          "crop_bbox": {
+            "l": 284.27,
+            "t": 307.72,
+            "r": 310.73,
+            "b": 290.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "President.",
+          "gcv_text": "President",
+          "page_no": 1,
+          "bbox": {
+            "l": 315.61,
+            "t": 303.24,
+            "r": 372.68,
+            "b": 293.39
+          },
+          "crop_bbox": {
+            "l": 311.61,
+            "t": 307.24,
+            "r": 376.68,
+            "b": 289.39
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Secretary",
+          "gcv_text": "Secretary",
+          "page_no": 1,
+          "bbox": {
+            "l": 202.65,
+            "t": 294.59,
+            "r": 261.41,
+            "b": 284.27
+          },
+          "crop_bbox": {
+            "l": 198.65,
+            "t": 298.59,
+            "r": 265.41,
+            "b": 280.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 268.36,
+            "t": 293.39,
+            "r": 281.31,
+            "b": 284.03
+          },
+          "crop_bbox": {
+            "l": 264.36,
+            "t": 297.39,
+            "r": 285.31,
+            "b": 280.03
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 288.27,
+            "t": 293.15,
+            "r": 307.21,
+            "b": 283.79
+          },
+          "crop_bbox": {
+            "l": 284.27,
+            "t": 297.15,
+            "r": 311.21,
+            "b": 279.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "Vice-President.",
+          "gcv_text": "Vice",
+          "page_no": 1,
+          "bbox": {
+            "l": 313.93,
+            "t": 292.91,
+            "r": 340.07,
+            "b": 283.07
+          },
+          "crop_bbox": {
+            "l": 309.93,
+            "t": 296.91,
+            "r": 344.07,
+            "b": 279.07
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "Copy forwarded for information to:-\nPrincipal Secretary to the Prime Minister.\nJoint Secretary to the Prime Minister.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Copy",
+          "gcv_text": "Copy",
+          "page_no": 1,
+          "bbox": {
+            "l": 156.12,
+            "t": 268.18,
+            "r": 181.79,
+            "b": 258.1
+          },
+          "crop_bbox": {
+            "l": 152.12,
+            "t": 272.18,
+            "r": 185.79,
+            "b": 254.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "forwarded",
+          "gcv_text": "forwarded",
+          "page_no": 1,
+          "bbox": {
+            "l": 189.22,
+            "t": 267.7,
+            "r": 247.26,
+            "b": 257.14
+          },
+          "crop_bbox": {
+            "l": 185.22,
+            "t": 271.7,
+            "r": 251.26,
+            "b": 253.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 255.17,
+            "t": 266.5,
+            "r": 273.64,
+            "b": 256.9
+          },
+          "crop_bbox": {
+            "l": 251.17,
+            "t": 270.5,
+            "r": 277.64,
+            "b": 252.9
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "information",
+          "gcv_text": "information",
+          "page_no": 1,
+          "bbox": {
+            "l": 281.79,
+            "t": 266.26,
+            "r": 352.78,
+            "b": 255.46
+          },
+          "crop_bbox": {
+            "l": 277.79,
+            "t": 270.26,
+            "r": 356.78,
+            "b": 251.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "to:-",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 359.25,
+            "t": 264.82,
+            "r": 372.2,
+            "b": 255.22
+          },
+          "crop_bbox": {
+            "l": 355.25,
+            "t": 268.82,
+            "r": 376.2,
+            "b": 251.22
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "Principal",
+          "gcv_text": "Principal",
+          "page_no": 1,
+          "bbox": {
+            "l": 202.65,
+            "t": 250.9,
+            "r": 259.49,
+            "b": 241.29
+          },
+          "crop_bbox": {
+            "l": 198.65,
+            "t": 254.9,
+            "r": 263.49,
+            "b": 237.29
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Secretary",
+          "gcv_text": "Secretary",
+          "page_no": 1,
+          "bbox": {
+            "l": 267.64,
+            "t": 249.69,
+            "r": 326.4,
+            "b": 240.09
+          },
+          "crop_bbox": {
+            "l": 263.64,
+            "t": 253.69,
+            "r": 330.4,
+            "b": 236.09
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 333.35,
+            "t": 248.49,
+            "r": 345.1,
+            "b": 239.85
+          },
+          "crop_bbox": {
+            "l": 329.35,
+            "t": 252.49,
+            "r": 349.1,
+            "b": 235.85
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 352.54,
+            "t": 248.25,
+            "r": 371.73,
+            "b": 239.37
+          },
+          "crop_bbox": {
+            "l": 348.54,
+            "t": 252.25,
+            "r": 375.73,
+            "b": 235.37
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Prime",
+          "gcv_text": "Prime",
+          "page_no": 1,
+          "bbox": {
+            "l": 380.12,
+            "t": 247.77,
+            "r": 411.06,
+            "b": 238.65
+          },
+          "crop_bbox": {
+            "l": 376.12,
+            "t": 251.77,
+            "r": 415.06,
+            "b": 234.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "Minister.",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 417.05,
+            "t": 247.05,
+            "r": 470.05,
+            "b": 237.45
+          },
+          "crop_bbox": {
+            "l": 413.05,
+            "t": 251.05,
+            "r": 474.05,
+            "b": 233.45
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "Joint",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 470.53,
+            "t": 246.09,
+            "r": 474.13,
+            "b": 237.69
+          },
+          "crop_bbox": {
+            "l": 466.53,
+            "t": 250.09,
+            "r": 478.13,
+            "b": 233.69
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "Secretary",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 470.53,
+            "t": 246.09,
+            "r": 474.13,
+            "b": 237.69
+          },
+          "crop_bbox": {
+            "l": 466.53,
+            "t": 250.09,
+            "r": 478.13,
+            "b": 233.69
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 306.97,
+            "t": 238.41,
+            "r": 318.96,
+            "b": 229.05
+          },
+          "crop_bbox": {
+            "l": 302.97,
+            "t": 242.41,
+            "r": 322.96,
+            "b": 225.05
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 326.4,
+            "t": 238.17,
+            "r": 345.34,
+            "b": 228.57
+          },
+          "crop_bbox": {
+            "l": 322.4,
+            "t": 242.17,
+            "r": 349.34,
+            "b": 224.57
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "Prime",
+          "gcv_text": "Prime",
+          "page_no": 1,
+          "bbox": {
+            "l": 353.5,
+            "t": 237.45,
+            "r": 384.44,
+            "b": 227.85
+          },
+          "crop_bbox": {
+            "l": 349.5,
+            "t": 241.45,
+            "r": 388.44,
+            "b": 223.85
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "Minister.",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 391.39,
+            "t": 236.97,
+            "r": 442.95,
+            "b": 226.65
+          },
+          "crop_bbox": {
+            "l": 387.39,
+            "t": 240.97,
+            "r": 446.95,
+            "b": 222.65
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/16": {
+      "self_ref": "#/texts/16",
+      "label": "paragraph",
+      "full_gt_text": "(K. Ramiah)\nUnder Secretary to the Cabinet.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(K.",
+          "gcv_text": "Prime",
+          "page_no": 1,
+          "bbox": {
+            "l": 353.5,
+            "t": 237.45,
+            "r": 384.44,
+            "b": 227.85
+          },
+          "crop_bbox": {
+            "l": 349.5,
+            "t": 241.45,
+            "r": 388.44,
+            "b": 223.85
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Ramiah)",
+          "gcv_text": "Minister",
+          "page_no": 1,
+          "bbox": {
+            "l": 391.39,
+            "t": 236.97,
+            "r": 442.95,
+            "b": 226.65
+          },
+          "crop_bbox": {
+            "l": 387.39,
+            "t": 240.97,
+            "r": 446.95,
+            "b": 222.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Under",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 444.39,
+            "t": 235.77,
+            "r": 448.23,
+            "b": 226.65
+          },
+          "crop_bbox": {
+            "l": 440.39,
+            "t": 239.77,
+            "r": 452.23,
+            "b": 222.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Secretary",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 366.21,
+            "t": 193.99,
+            "r": 370.77,
+            "b": 185.35
+          },
+          "crop_bbox": {
+            "l": 362.21,
+            "t": 197.99,
+            "r": 374.77,
+            "b": 181.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "to",
+          "gcv_text": "K.",
+          "page_no": 1,
+          "bbox": {
+            "l": 371.25,
+            "t": 193.99,
+            "r": 381.32,
+            "b": 185.11
+          },
+          "crop_bbox": {
+            "l": 367.25,
+            "t": 197.99,
+            "r": 385.32,
+            "b": 181.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "the",
+          "gcv_text": "Ramiah",
+          "page_no": 1,
+          "bbox": {
+            "l": 390.91,
+            "t": 193.51,
+            "r": 430.0,
+            "b": 183.91
+          },
+          "crop_bbox": {
+            "l": 386.91,
+            "t": 197.51,
+            "r": 434.0,
+            "b": 179.91
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Cabinet.",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 431.44,
+            "t": 192.55,
+            "r": 436.0,
+            "b": 183.91
+          },
+          "crop_bbox": {
+            "l": 427.44,
+            "t": 196.55,
+            "r": 440.0,
+            "b": 179.91
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/17": {
+      "self_ref": "#/texts/17",
+      "label": "paragraph",
+      "full_gt_text": "JPS\n260 copies.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "JPS",
+          "gcv_text": "JPS",
+          "page_no": 1,
+          "bbox": {
+            "l": 154.69,
+            "t": 170.22,
+            "r": 173.87,
+            "b": 162.78
+          },
+          "crop_bbox": {
+            "l": 150.69,
+            "t": 174.22,
+            "r": 177.87,
+            "b": 158.78
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "260",
+          "gcv_text": "260",
+          "page_no": 1,
+          "bbox": {
+            "l": 160.2,
+            "t": 160.38,
+            "r": 181.07,
+            "b": 150.3
+          },
+          "crop_bbox": {
+            "l": 156.2,
+            "t": 164.38,
+            "r": 185.07,
+            "b": 146.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "copies.",
+          "gcv_text": "copies",
+          "page_no": 1,
+          "bbox": {
+            "l": 186.58,
+            "t": 158.7,
+            "r": 226.39,
+            "b": 147.66
+          },
+          "crop_bbox": {
+            "l": 182.58,
+            "t": 162.7,
+            "r": 230.39,
+            "b": 143.66
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/18": {
+      "self_ref": "#/texts/18",
+      "label": "paragraph",
+      "full_gt_text": "..... 2/-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": ".....",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 430.24,
+            "t": 181.75,
+            "r": 449.43,
+            "b": 172.39
+          },
+          "crop_bbox": {
+            "l": 426.24,
+            "t": 185.75,
+            "r": 453.43,
+            "b": 168.39
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "2/-",
+          "gcv_text": "Cabinet",
+          "page_no": 1,
+          "bbox": {
+            "l": 456.62,
+            "t": 181.27,
+            "r": 501.47,
+            "b": 171.67
+          },
+          "crop_bbox": {
+            "l": 452.62,
+            "t": 185.27,
+            "r": 505.47,
+            "b": 167.67
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

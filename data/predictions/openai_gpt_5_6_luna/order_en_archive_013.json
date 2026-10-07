@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_013",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        366.52,
+        136.4,
+        411.14,
+        136.4,
+        411.14,
+        589.4,
+        366.52,
+        589.4
+      ],
+      "text": "Copy forwarded to the Secretary to the Prime Minister/\nthe Private Secretary to the Prime Minister, for information."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        424.83,
+        143.98,
+        450.42,
+        143.98,
+        450.42,
+        213.87,
+        424.83,
+        213.87
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        189.81,
+        145.67,
+        311.19,
+        145.67,
+        311.19,
+        581.82,
+        189.81,
+        581.82
+      ],
+      "text": "The undersigned is directed to state that the\ndesignation of Shri A.M. Thomas, Minister of State in the\nMinistry of Defence will be as Minister of Defence Production\nin the Ministry of Defence."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        93.42,
+        160.82,
+        143.99,
+        160.82,
+        143.99,
+        487.52,
+        93.42,
+        487.52
+      ],
+      "text": "No.554/4/65-Cab.\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the 31st January 1966."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        253.47,
+        231.55,
+        305.24,
+        231.55,
+        305.24,
+        323.33,
+        253.47,
+        323.33
+      ],
+      "text": "(D.P. Chattopadhyaya)\nfor Cabinet Secretary"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        330.23,
+        261.86,
+        393.3,
+        261.86,
+        393.3,
+        586.03,
+        330.23,
+        586.03
+      ],
+      "text": "To\nAll Members of the Council of Ministers."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2425,
+      "total": 5719
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003249,
+      "batch": 0.001624
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.32485,
+      "batch": 0.162425,
+      "savings": 0.162425,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

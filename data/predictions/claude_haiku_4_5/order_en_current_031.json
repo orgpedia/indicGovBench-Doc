@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_current_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "(TO BE PUBLISHED IN THE GAZETTE OF INDIA, PART 1 SECTION 2)\n\nNo. K-11019/13/2025-US.I/II (ii)\nGovernment of India\nMinistry of Law & Justice\nDepartment of Justice\n(Appointments Division)\n\nJaisalmer House, 26, Man Singh Road,\nNew Delhi-110 011, Dated: 14th July, 2025."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "NOTIFICATION\n\nIn exercise of the power conferred by clause (1) of Article 222 of the Constitution of India, the President, after consultation with the Chief Justice of India, is pleased to transfer Shri Justice Aparesh Kumar Singh, Chief Justice of the Tripura High Court, to be Chief Justice of the Telangana High Court and direct him to assume charge of his office in the Telangana High Court."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        357.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        210.5,
+        357.0,
+        210.5
+      ],
+      "text": "(Jagannath/Srinivasan)\nJoint Secretary to the Government of India\nTele: 2338 3037"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        210.5,
+        595.0,
+        210.5,
+        595.0,
+        294.7,
+        0.0,
+        294.7
+      ],
+      "text": "To\n\nThe Manager,\nGovernment of India Press,\nMinto Road,\nNew Delhi."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 440,
+      "total": 2365
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.0033,
+      "batch": 0.00165
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.33,
+      "batch": 0.165,
+      "savings": 0.165,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

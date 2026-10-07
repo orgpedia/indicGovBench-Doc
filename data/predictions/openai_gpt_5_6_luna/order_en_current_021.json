@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_current_021",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        59.5,
+        35.36,
+        536.69,
+        35.36,
+        536.69,
+        47.15,
+        59.5,
+        47.15
+      ],
+      "text": "पश्चिम बंगाल　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　West Bengal"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        58.91,
+        54.73,
+        536.69,
+        54.73,
+        536.69,
+        716.54,
+        58.91,
+        716.54
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री  S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>150</td><td>पुष्पाPushpaM.Sc.</td><td>RR20121276Haryana</td><td>14/02/198324/12/2012</td><td colspan=\"2\">SRP, Howrah05/10/2024Level 13</td></tr><tr><td>151</td><td>जे मर्सीJ MercyM.Sc.</td><td>RR20121465Tamil Nadu</td><td>17/02/198103/09/2012</td><td colspan=\"2\">SRP, Sealdah15/03/2023Level 13</td></tr><tr><td>152</td><td>सौम्या रॉयSaumya RoyM.Sc.</td><td>RR20121585West Bengal</td><td>08/02/198703/09/2012</td><td colspan=\"2\">DCP, Holding charge as JtCP(I), SB, Kolkata04/04/2024Level 13</td></tr><tr><td>153</td><td>अंशुमान साहाAngshuman SahaB.Sc.</td><td>SPS20122851West Bengal</td><td>15/06/197911/12/2017</td><td colspan=\"2\">CO, Narayani Bn. CoochBehar, CO, SSF, Barrackpore11/08/2022Level 13</td></tr><tr><td>154</td><td>सैकत घोषSaikat GhoshB.Com</td><td>SPS20122841West Bengal</td><td>07/08/197611/12/2017</td><td colspan=\"2\">DC, Bhangar Divn., Kolkata01/02/2024Level 13</td></tr><tr><td>155</td><td>अर्नब बिस्वासArnab BiswasB.Tech</td><td>SPS20122842West Bengal</td><td>26/12/197811/12/2017</td><td colspan=\"2\">DC, Serampore, ChandannagarPC05/02/2024Level 11</td></tr><tr><td>156</td><td>तनमय सरकारTanm ay SarkarB.Sc.</td><td>SPS20122843West Bengal</td><td>11/12/197911/12/2017</td><td colspan=\"2\">DC, HQ, Siliguri PC19/02/2024Level 13</td></tr><tr><td colspan=\"6\">Allotment Year :　2013</td></tr><tr><td>157</td><td>प्रदीप कुमार यादवPradeep Kumar YadavMBBS</td><td>RR20131429Haryana</td><td>04/08/198523/12/2013</td><td colspan=\"2\">SP, Traffic, Uttar Dinajpur02/12/2025Level 12</td></tr><tr><td>158</td><td>अपाराजिता रायAparajita RaiLLB</td><td>RR20131359Sikkim</td><td>25/10/198502/09/2013</td><td colspan=\"2\">SS, IB, N Bengal, Siliguridesignated as SP Kalimp19/02/2024Level 12</td></tr><tr><td>159</td><td>इंदिरा मुखर्जीIndira MukherjeeBE</td><td>RR20131256West Bengal</td><td>29/12/198502/09/2013</td><td colspan=\"2\">DC, Central Division Kolkata04/02/2024Level 12</td></tr><tr><td>160</td><td>वाई रघुवंशीY RaghuvamshiBE</td><td>RR20131139Andhra Pradesh</td><td>08/04/198702/09/2013</td><td colspan=\"2\">SP, Jalpaiguri01/12/2025Level 12</td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        288.57,
+        742.64,
+        309.4,
+        742.64,
+        309.4,
+        757.8,
+        288.57,
+        757.8
+      ],
+      "text": "435"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 2607,
+      "total": 5897
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003429,
+      "batch": 0.001715
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.34295,
+      "batch": 0.171475,
+      "savings": 0.171475,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

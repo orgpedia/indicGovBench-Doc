@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_hi_current_016",
+  "total_words": 2,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "Page 1",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Page",
+          "gcv_text": "Page",
+          "page_no": 1,
+          "bbox": {
+            "l": 305.67,
+            "t": 34.44,
+            "r": 321.53,
+            "b": 26.53
+          },
+          "crop_bbox": {
+            "l": 301.67,
+            "t": 38.44,
+            "r": 325.53,
+            "b": 22.53
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "1",
+          "gcv_text": "1",
+          "page_no": 1,
+          "bbox": {
+            "l": 324.1,
+            "t": 34.44,
+            "r": 327.13,
+            "b": 27.29
+          },
+          "crop_bbox": {
+            "l": 320.1,
+            "t": 38.44,
+            "r": 331.13,
+            "b": 23.29
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

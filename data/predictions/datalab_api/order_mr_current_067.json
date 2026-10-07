@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_mr_current_067",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        543.6,
+        680.0,
+        587.5,
+        680.0,
+        587.5,
+        705.6,
+        543.6,
+        705.6
+      ],
+      "text": "Provisional\nFire NOC"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

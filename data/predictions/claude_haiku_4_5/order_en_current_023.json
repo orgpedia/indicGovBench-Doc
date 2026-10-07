@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_current_023",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "उत्तर प्रदेश\nUttar Pradesh"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td>436</td><td>सर्वश्री S/Shri\nरामटेके सुमित सुधाकर\nRamteke Sumit Sudhakar\nB.Tech</td><td>RR\n20221099\nMaharashtra</td><td>20/10/1993\n29/08/2022</td><td>ACP Police Commissionerate,\nKanpur Nagar\n01/01/2025\nLevel 10</td><td></td></tr><tr><td>437</td><td>भोसले विनायक गोपाल\nBhosale Vinayak Gopal\nB.A.</td><td>RR\n20221104\nMaharashtra</td><td>13/02/1988\n29/08/2022</td><td>ASP, Sitapur\n26/07/2025\nLevel 10</td><td></td></tr><tr><td>438</td><td>मनोज कुमार यादव\nManoj Kumar Yadav\nB.Sc. (Hons)</td><td>RR\n20221110\nUttar Pradesh</td><td>07/04/1996\n19/12/2022</td><td>ASP, Saharanpur\n01/09/2024\nLevel 10</td><td></td></tr><tr><td>439</td><td>माविस ताक\nMavis Tak\nB.A. (Hons)</td><td>RR\n20221112\nRajasthan</td><td>24/09/1996\n29/08/2022</td><td>ASP Banda\n26/07/2025\nLevel 10</td><td></td></tr><tr><td>440</td><td>ईशान सोनी\nIshan Soni\nMBBS</td><td>RR\n20221117\nRajasthan</td><td>30/04/1996\n29/08/2022</td><td>ACP (U/T) Police\nCommissionerate Varanasi\n01/09/2024\nLevel 10</td><td></td></tr><tr><td>441</td><td>आलोक कुमार\nAlok Kumar\nB.A. (Hons)</td><td>RR\n20221128\nUttar Pradesh</td><td>28/11/1994\n19/12/2022</td><td>ASP Sambhal\n17/03/2025\nLevel 10</td><td></td></tr><tr><td>442</td><td>गौतम राय\nGautam Rai\nB.Tech</td><td>RR\n20221195\nUttar Pradesh</td><td>26/02/1992\n13/11/2023</td><td>ASP Bijnor\n26/07/2025\nLevel 10</td><td></td></tr><tr><td>443</td><td>राजकुमार मीणा\nRajkumar Meena\nB.Tech</td><td>RR\n20221160\nRajasthan</td><td>22/07/1997\n29/08/2022</td><td>ACP Police Commissionerate\nPrayagraj\n01/09/2024\nLevel 10</td><td></td></tr><tr><td colspan=\"6\">Allotment Year : 2023</td></tr><tr><td>444</td><td>संचित शर्मा\nSanchi Sharma\nB. Tech</td><td>RR\n20231003\nMadhya Pradesh</td><td>01/01/2000\n13/11/2023</td><td>ASP (U/T) Unnao\n29/12/2025\nLevel 10</td><td></td></tr><tr><td>445</td><td>प्रशांत राज\nPrashant Raj\nB. Tech</td><td>RR\n20231006\nUttar Pradesh</td><td>07/07/1998\n01/08/2023</td><td>ASP Pratapgarh\n26/07/2025\nLevel 10</td><td></td></tr><tr><td>446</td><td>सिद्धार्थ के मिश्रा\nSiddharth K Misra\nB. Tech.</td><td>RR\n20231009\nUttar Pradesh</td><td>30/09/1996\n01/08/2023</td><td>ASP Muzaffar Nagar\n26/07/2025\nLevel 10</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        799.9,
+        595.0,
+        799.9,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "408"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 1434,
+      "total": 3359
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.007276,
+      "batch": 0.003638
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.7276,
+      "batch": 0.3638,
+      "savings": 0.3638,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

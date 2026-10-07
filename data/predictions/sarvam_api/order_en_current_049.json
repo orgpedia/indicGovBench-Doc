@@ -1,0 +1,202 @@
+{
+  "doc_id": "order_en_current_049",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        94.27,
+        79.99,
+        525.0,
+        79.99,
+        525.0,
+        120.89,
+        94.27,
+        120.89
+      ],
+      "text": "VIGILANCE PROFILE OF OFFICERS FOR WHOM VIGILANCE COMMENTS\nCELARANCE BEING SOUGHT\n(To be furnished and signed by the CVO or HOD)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        94.97,
+        134.12,
+        192.5,
+        134.12,
+        192.5,
+        146.55,
+        94.97,
+        146.55
+      ],
+      "text": "Name of the Officer"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        94.73,
+        160.38,
+        303.57,
+        160.38,
+        303.57,
+        214.11,
+        94.73,
+        214.11
+      ],
+      "text": "8. Whether the officer has been placed\non the \"Agreed List\" or \"List of\nOfficers of Doubtful Integrity\".\n(If yes, details to be given)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        93.8,
+        226.54,
+        311.73,
+        226.54,
+        311.73,
+        294.5,
+        93.8,
+        294.5
+      ],
+      "text": "9. Whether any allegation of misconduct involving vigilance angle was examined against the officer during the last 10 years and if so with what result (*)"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        94.73,
+        306.33,
+        324.33,
+        306.33,
+        324.33,
+        361.06,
+        94.73,
+        361.06
+      ],
+      "text": "10. Whether any punishment was awarded to\nthe officer during the last 10 years and\nif so, the date of imposition and details\nof the penalty (*)"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        94.03,
+        372.89,
+        338.57,
+        372.89,
+        338.57,
+        439.44,
+        94.03,
+        439.44
+      ],
+      "text": "11. Is any disciplinary / criminal proceedings or charge sheet pending against the officers, as on date. [If so, details to be furnished – including reference no., if any, of the Commission]"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        94.5,
+        453.28,
+        309.4,
+        453.28,
+        309.4,
+        493.37,
+        94.5,
+        493.37
+      ],
+      "text": "12. Is any action contemplated against the officer as on date [If so, details to be furnished (*)]"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        94.27,
+        505.4,
+        291.9,
+        505.4,
+        291.9,
+        559.73,
+        94.27,
+        559.73
+      ],
+      "text": "13. Whether any complaint with vigilance angle is pending against the officer [If so, details to be furnished]."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        132.07,
+        598.82,
+        171.03,
+        598.82,
+        171.03,
+        610.45,
+        132.07,
+        610.45
+      ],
+      "text": "DATE:"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        391.07,
+        599.22,
+        532.93,
+        599.22,
+        532.93,
+        611.25,
+        391.07,
+        611.25
+      ],
+      "text": "(NAME AND SIGNATURE)"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        92.63,
+        624.48,
+        534.1,
+        624.48,
+        534.1,
+        650.95,
+        92.63,
+        650.95
+      ],
+      "text": "(*) If vigilance clearance had been obtained from the Commission in the past, the information may be provided for the period thereafter."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

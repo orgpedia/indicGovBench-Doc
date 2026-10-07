@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_current_032",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "(TO BE PUBLISHED IN THE GAZETTE OF INDIA, PART 1 SECTION 2)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "No. K-13012/01/2024-US-I\nGovernment of India\nMinistry of Law & Justice\nDepartment of Justice\n(Appointments Division)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        210.5,
+        0.0,
+        210.5
+      ],
+      "text": "Jaisalmer House, 26, Man Singh Road,\nNew Delhi-110 011, dated 06th September, 2025."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        210.5,
+        595.0,
+        210.5,
+        595.0,
+        252.6,
+        0.0,
+        252.6
+      ],
+      "text": "NOTIFICATION"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        0.0,
+        252.6,
+        595.0,
+        252.6,
+        595.0,
+        421.0,
+        0.0,
+        421.0
+      ],
+      "text": "In exercise of the power conferred by clause (1) of Article 217 of the Constitution of India, the President is pleased to appoint S/Shri (i) Amitabh Kumar Rai and (ii) Rajiv Lochan Shukla, to be Judges of the Allahabad High Court with effect from the date they assume charge of their respective offices."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        357.0,
+        421.0,
+        595.0,
+        421.0,
+        595.0,
+        547.3,
+        357.0,
+        547.3
+      ],
+      "text": "(Jagannath Srinivasan)\nJoint Secretary to the Government of India\nTele: 2338 3037"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        0.0,
+        547.3,
+        595.0,
+        547.3,
+        595.0,
+        631.5,
+        0.0,
+        631.5
+      ],
+      "text": "To\n\nThe Manager,\nGovernment of India Press,\nMinto Road,\nNew Delhi."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 546,
+      "total": 2471
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003724,
+      "batch": 0.001862
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3724,
+      "batch": 0.1862,
+      "savings": 0.1862,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

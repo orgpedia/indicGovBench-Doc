@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_en_current_021",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        57.93,
+        31.43,
+        108.41,
+        31.43,
+        108.41,
+        44.66,
+        57.93,
+        44.66
+      ],
+      "text": "पश्चिम बंगाल"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        481.63,
+        31.43,
+        534.59,
+        31.43,
+        534.59,
+        44.66,
+        481.63,
+        44.66
+      ],
+      "text": "West Bengal"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        57.93,
+        47.97,
+        532.93,
+        47.97,
+        532.93,
+        674.1,
+        57.93,
+        674.1
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>150</td><td>पुष्पा Pushpa M.Sc.</td><td>RR 20121276 Haryana</td><td>14/02/1983 24/12/2012</td><td>SRP, Howrah 05/10/2024 Level 13</td><td></td></tr><tr><td>151</td><td>जे मर्सी J Mercy M.Sc.</td><td>RR 20121465 Tamil Nadu</td><td>17/02/1981 03/09/2012</td><td>SRP, Sealdah 15/03/2023 Level 13</td><td></td></tr><tr><td>152</td><td>सौम्य रॉय Saumya Roy M.Sc.</td><td>RR 20121585 West Bengal</td><td>08/02/1987 03/09/2012</td><td>DCP, Holding charge as Jt CP(I), SB, Kollata 04/04/2024 Level 13</td><td></td></tr><tr><td>153</td><td>अंशुमान साहा Angshuman Saha B.Sc.</td><td>SPS 20122851 West Bengal</td><td>15/06/1979 11/12/2017</td><td>CO, Narayani Bn. Cooch Behar, CO, SSF, Barrackpore 11/08/2022 Level 13</td><td></td></tr><tr><td>154</td><td>सैकत घोष Saikat Ghosh B.Com</td><td>SPS 20122841 West Bengal</td><td>07/08/1976 11/12/2017</td><td>DC, Bhangar Divn., Kolkata 01/02/2024 Level 13</td><td></td></tr><tr><td>155</td><td>अर्नब बिस्वास Arnab Biswas B.Tech</td><td>SPS 20122842 West Bengal</td><td>26/12/1978 11/12/2017</td><td>DC, Serampore, Chandannagar PC 05/02/2024 Level 11</td><td></td></tr><tr><td>156</td><td>तन्मय सरकार Tanmay Sarkar B.Sc.</td><td>SPS 20122843 West Bengal</td><td>11/12/1979 11/12/2017</td><td>DC, HQ, Siliguri PC 19/02/2024 Level 13</td><td></td></tr><tr><td>**Allotment Year : 2013**</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>157</td><td>प्रदीप कुमार यादव Pradeep Kumar Yadav MBBS</td><td>RR 20131429 Haryana</td><td>04/08/1985 23/12/2013</td><td>SP, Traffic, Uttar Dinajpur 02/12/2025 Level 12</td><td></td></tr><tr><td>158</td><td>अपराजिता राय Aparajita Rai LLB</td><td>RR 20131359 Sikkim</td><td>25/10/1985 02/09/2013</td><td>SS, IB, N Bengal, Siliguri designated as SP Kalimp 19/02/2024 Level 12</td><td></td></tr><tr><td>159</td><td>इंदिरा मुखर्जी Indira Mukherjee BE</td><td>RR 20131256 West Bengal</td><td>29/12/1985 02/09/2013</td><td>DC, Central Division Kolkata 04/02/2024 Level 12</td><td></td></tr><tr><td>160</td><td>वाई रघुवंशी Y Raghuvamshi BE</td><td>RR 20131139 Andhra Pradesh</td><td>08/04/1987 02/09/2013</td><td>SP, Jalpaiguri 01/12/2025 Level 12</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        287.98,
+        704.7,
+        306.19,
+        704.7,
+        306.19,
+        716.28,
+        287.98,
+        716.28
+      ],
+      "text": "435"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        254.07,
+        51.35,
+        337.57,
+        51.35,
+        337.57,
+        174.45,
+        254.07,
+        174.45
+      ],
+      "text": "यह छवि भारत के राष्ट्रीय प्रतीक, अशोक स्तंभ के एक भाग को दर्शाती है। इसमें चार शेर एक गोलाकार आधार पर खड़े हैं, जो एक रथ के पहिये का प्रतिनिधित्व करते हैं। यह प्रतीक भारत की एकता और शक्ति का प्रतीक है।"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        250.96,
+        176.85,
+        340.45,
+        176.85,
+        340.45,
+        198.92,
+        250.96,
+        198.92
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        145.63,
+        245.71,
+        448.89,
+        245.71,
+        448.89,
+        430.96,
+        145.63,
+        430.96
+      ],
+      "text": "सिविल लिस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        248.56,
+        486.87,
+        340.93,
+        486.87,
+        340.93,
+        585.73,
+        248.56,
+        585.73
+      ],
+      "text": "This image contains the emblem of the Government of India, which is the National Emblem. It is not related to the text provided."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        201.53,
+        590.29,
+        388.67,
+        590.29,
+        388.67,
+        630.84,
+        201.53,
+        630.84
+      ],
+      "text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        115.4,
+        661.31,
+        481.04,
+        661.31,
+        481.04,
+        788.73,
+        115.4,
+        788.73
+      ],
+      "text": "गृह मंत्रालय\nभारत सरकार\nMINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

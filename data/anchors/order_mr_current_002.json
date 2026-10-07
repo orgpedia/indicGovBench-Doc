@@ -1,0 +1,359 @@
+{
+  "doc_id": "order_mr_current_002",
+  "total_words": 16,
+  "pages": {
+    "1": {
+      "width": 612.0,
+      "height": 839.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "********************",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "********************",
+          "gcv_text": "***",
+          "page_no": 1,
+          "bbox": {
+            "l": 275.0,
+            "t": 199.0,
+            "r": 290.0,
+            "b": 194.0
+          },
+          "crop_bbox": {
+            "l": 271.0,
+            "t": 203.0,
+            "r": 294.0,
+            "b": 190.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "प्रपत्र-ब",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "प्रपत्र-ब",
+          "gcv_text": "प्रपत्र",
+          "page_no": 1,
+          "bbox": {
+            "l": 317.0,
+            "t": 751.0,
+            "r": 339.0,
+            "b": 743.0
+          },
+          "crop_bbox": {
+            "l": 313.0,
+            "t": 755.0,
+            "r": 343.0,
+            "b": 739.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "कर्जाच्या परतफेडीचे वेळापत्रक (Repayment Schedule)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "कर्जाच्या",
+          "gcv_text": "कर्जाच्या",
+          "page_no": 1,
+          "bbox": {
+            "l": 199.0,
+            "t": 718.0,
+            "r": 238.0,
+            "b": 703.0
+          },
+          "crop_bbox": {
+            "l": 195.0,
+            "t": 722.0,
+            "r": 242.0,
+            "b": 699.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "परतफेडीचे",
+          "gcv_text": "परतफेडीचे",
+          "page_no": 1,
+          "bbox": {
+            "l": 243.0,
+            "t": 717.0,
+            "r": 291.0,
+            "b": 702.0
+          },
+          "crop_bbox": {
+            "l": 239.0,
+            "t": 721.0,
+            "r": 295.0,
+            "b": 698.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "वेळापत्रक",
+          "gcv_text": "वेळापत्रक",
+          "page_no": 1,
+          "bbox": {
+            "l": 296.0,
+            "t": 716.0,
+            "r": 339.0,
+            "b": 701.0
+          },
+          "crop_bbox": {
+            "l": 292.0,
+            "t": 720.0,
+            "r": 343.0,
+            "b": 697.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "(Repayment",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 343.0,
+            "t": 716.0,
+            "r": 347.0,
+            "b": 702.0
+          },
+          "crop_bbox": {
+            "l": 339.0,
+            "t": 720.0,
+            "r": 351.0,
+            "b": 698.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Schedule)",
+          "gcv_text": "Repayment",
+          "page_no": 1,
+          "bbox": {
+            "l": 348.0,
+            "t": 716.0,
+            "r": 412.0,
+            "b": 701.0
+          },
+          "crop_bbox": {
+            "l": 344.0,
+            "t": 720.0,
+            "r": 416.0,
+            "b": 697.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "(रुपये कोटीत)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(रुपये",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 465.0,
+            "t": 714.0,
+            "r": 470.0,
+            "b": 700.0
+          },
+          "crop_bbox": {
+            "l": 461.0,
+            "t": 718.0,
+            "r": 474.0,
+            "b": 696.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "कोटीत)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 462.0,
+            "t": 697.0,
+            "r": 466.0,
+            "b": 684.0
+          },
+          "crop_bbox": {
+            "l": 458.0,
+            "t": 701.0,
+            "r": 470.0,
+            "b": 680.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "परतफेडीचे स्त्रोत (Sources of Repayment)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "परतफेडीचे",
+          "gcv_text": "परतफेडीचे",
+          "page_no": 1,
+          "bbox": {
+            "l": 226.0,
+            "t": 488.0,
+            "r": 276.0,
+            "b": 473.0
+          },
+          "crop_bbox": {
+            "l": 222.0,
+            "t": 492.0,
+            "r": 280.0,
+            "b": 469.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "स्त्रोत",
+          "gcv_text": "स्त्रोत",
+          "page_no": 1,
+          "bbox": {
+            "l": 279.0,
+            "t": 487.0,
+            "r": 304.0,
+            "b": 473.0
+          },
+          "crop_bbox": {
+            "l": 275.0,
+            "t": 491.0,
+            "r": 308.0,
+            "b": 469.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "(Sources",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 308.0,
+            "t": 486.0,
+            "r": 312.0,
+            "b": 473.0
+          },
+          "crop_bbox": {
+            "l": 304.0,
+            "t": 490.0,
+            "r": 316.0,
+            "b": 469.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 360.0,
+            "t": 485.0,
+            "r": 371.0,
+            "b": 471.0
+          },
+          "crop_bbox": {
+            "l": 356.0,
+            "t": 489.0,
+            "r": 375.0,
+            "b": 467.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Repayment)",
+          "gcv_text": "Repayment",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.0,
+            "t": 485.0,
+            "r": 439.0,
+            "b": 470.0
+          },
+          "crop_bbox": {
+            "l": 371.0,
+            "t": 489.0,
+            "r": 443.0,
+            "b": 466.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "(रुपये कोटीत)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(रुपये",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 467.0,
+            "t": 447.0,
+            "r": 472.0,
+            "b": 434.0
+          },
+          "crop_bbox": {
+            "l": 463.0,
+            "t": 451.0,
+            "r": 476.0,
+            "b": 430.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "कोटीत)",
+          "gcv_text": "रुपये",
+          "page_no": 1,
+          "bbox": {
+            "l": 469.0,
+            "t": 447.0,
+            "r": 491.0,
+            "b": 434.0
+          },
+          "crop_bbox": {
+            "l": 465.0,
+            "t": 451.0,
+            "r": 495.0,
+            "b": 430.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

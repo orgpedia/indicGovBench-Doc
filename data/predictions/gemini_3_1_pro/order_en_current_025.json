@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_current_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        61.28,
+        33.68,
+        98.77,
+        33.68,
+        98.77,
+        45.47,
+        61.28,
+        45.47
+      ],
+      "text": "तमिलनाडु"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        487.3,
+        35.36,
+        533.12,
+        35.36,
+        533.12,
+        43.78,
+        487.3,
+        43.78
+      ],
+      "text": "Tamil Nadu"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        61.28,
+        53.05,
+        471.24,
+        53.05,
+        471.24,
+        693.81,
+        61.28,
+        693.81
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>205</td><td>केलकर सुभ्रमण्य भालचंद्र\nKelkar Subhramanya\nBhalchandra\nBBM (Agri), M.A. (Political\nScience)</td><td>RR\n20201106\nMaharashtra</td><td>17/01/1993\n28/12/2020</td><td>DCP, South,Salem City\n21/06/2025\nLevel 11</td><td></td></tr><tr><td>206</td><td>कंभम सैमुअल प्रवीण गौतम\nKambham Samuel Praveen\nGowtham\nB.Tech.</td><td>RR\n20201124\nAndhra Pradesh</td><td>14/05/1996\n28/12/2020</td><td>DCP, North, Tiruppur City\n18/06/2025\nLevel 11</td><td></td></tr><tr><td>207</td><td>स्टालिन आर\nStalin R\nGraduate with Animal\nHusbandry &amp; Vet. Science</td><td>RR\n20201135\nTamil Nadu</td><td>14/05/1992\n10/10/2020</td><td>SP, Kanniyakumari District\n03/01/2025\nLevel 11</td><td></td></tr><tr><td>208</td><td>गरड करुण उद्धवराव\nGarad Karun Uddhavrao\nM.Tech. (Aero Space)</td><td>RR\n20201140\nMaharashtra</td><td>21/02/1987\n28/12/2020</td><td>SP, Tiruvarur District\n01/01/2025\nLevel 12</td><td></td></tr><tr><td>209</td><td>बलवीर सिंह\nBalveer Singh\nB.Tech.</td><td>RR\n20201147\nRajasthan</td><td>17/05/1984\n28/12/2020</td><td>ASP, Special Task Force,\nErode\n01/12/2025\nLevel 10</td><td></td></tr><tr><td></td><td></td><td>Allotment Year :</td><td>2021</td><td></td><td></td></tr><tr><td>210</td><td>शिव रमन एन यु\nSIVA RAMAN N U\nB.E.</td><td>RR\n20211110\nTamil Nadu</td><td>08/06/1995\n05/12/2021</td><td>DCP, North, Salem City\n05/03/2025\nLevel 11</td><td></td></tr><tr><td>211</td><td>प्रसन्नकुमार वी\nPRASSANNAKUMAR V\nMBBS</td><td>RR\n20211115\nPuducherry</td><td>23/10/1992\n28/03/2022</td><td>SP, Tirunelveli District\n01/01/2026\nLevel 11</td><td></td></tr><tr><td>212</td><td>शहनाज आई\nSHAHNAZ I\nB.Tech</td><td>RR\n20211043\nTamil Nadu</td><td>26/12/1993\n05/12/2021</td><td>SP-I Cyber Crimes Div\nChennai\n04/03/2025\nLevel 11</td><td></td></tr><tr><td>213</td><td>सिबिन पि\nSIBIN P\nB.Tech</td><td>RR\n20211069\nKerala</td><td>26/10/1996\n05/12/2021</td><td>SP, Chengalpattu District\n01/01/2026\nLevel 11</td><td></td></tr><tr><td>214</td><td>उधयाकुमार आर\nUTHAYAKUMAR R\nB.E.</td><td>RR\n20211094\nTamil Nadu</td><td>12/02/1992\n05/12/2021</td><td>DCP, Anna Nagar, Greater\nChennai Police\n01/01/2026\nLevel 11</td><td></td></tr><tr><td>215</td><td>रवींद्र कुमार गुप्ता\nRAVINDRA KUMAR\nGUPTA\nB.Tech</td><td>RR\n20211155\nUttar Pradesh</td><td>03/12/1997\n28/03/2022</td><td>ASP, Villupuram Sub-\nDivision, Villupuram District\n09/09/2024\nLevel 10</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        290.36,
+        714.86,
+        304.05,
+        714.86,
+        304.05,
+        723.28,
+        290.36,
+        723.28
+      ],
+      "text": "342"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 1433,
+      "total": 3038
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.009171,
+      "batch": 0.004586
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.917125,
+      "batch": 0.458563,
+      "savings": 0.458563,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

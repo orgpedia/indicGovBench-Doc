@@ -1,0 +1,145 @@
+{
+  "doc_id": "order_en_archive_005",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        263.58,
+        86.73,
+        392.7,
+        86.73,
+        392.7,
+        101.88,
+        263.58,
+        101.88
+      ],
+      "text": "CABINET SECRETARIAT"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        211.22,
+        113.67,
+        425.42,
+        113.67,
+        425.42,
+        128.83,
+        211.22,
+        128.83
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        211.22,
+        128.83,
+        305.83,
+        128.83,
+        305.83,
+        140.61,
+        211.22,
+        140.61
+      ],
+      "text": "AS ON 2.2.1983"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        264.77,
+        149.03,
+        408.77,
+        149.03,
+        408.77,
+        162.51,
+        264.77,
+        162.51
+      ],
+      "text": "MEMBERS OF THE CABINET."
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        65.45,
+        162.51,
+        569.41,
+        162.51,
+        569.41,
+        648.34,
+        65.45,
+        648.34
+      ],
+      "html": "<table><thead><tr><td>1.</td><td>Smt. Indira Gandhi</td><td>Prime Minister (All Ministries/ Departments not specified below).</td></tr><tr><td>2.</td><td>Shri Pranab Kumar Mukherjee</td><td>Minister of Finance.</td></tr><tr><td>3.</td><td>Shri P.V. Narasimha Rao</td><td>Minister of External Affairs.</td></tr><tr><td>4.</td><td>Shri P.C. Soti</td><td>Minister of Home Affairs.</td></tr><tr><td>5.</td><td>Shri Shiv Shankar</td><td>Minister of Energy.</td></tr><tr><td>6.</td><td>Shri R. Venkataraman</td><td>Minister of Defence.</td></tr><tr><td>7.</td><td>Shri A.B.K. Ghani Khan Chaudhuri</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri S.B. Chavan</td><td>Minister of Planning.</td></tr><tr><td>9.</td><td>Shri Jagannath Kaushal</td><td>Minister of Law, Justice and Company Affairs.</td></tr><tr><td>10.</td><td>Shri Veerendra Patil</td><td>Minister of Labour &amp; Rehabilitation.</td></tr><tr><td>11.</td><td>Shri K. Vijaya Bhaskara Reddy</td><td>Minister without portfolio (temporarily holding charge of the M/o Shipping and Transport).</td></tr><tr><td>12.</td><td>Shri Vasant Sathe</td><td>Minister of Chemicals and Fertilizers.</td></tr><tr><td>13.</td><td>Shri B. Shankaranand</td><td>Minister of Health &amp; Family Welfare.</td></tr><tr><td>14.</td><td>Shri A.P. Sharma</td><td>Minister of Communications.</td></tr><tr><td>15.</td><td>Shri Bhishma Narain Singh</td><td>Minister of Civil Supplies &amp; Supply.</td></tr><tr><td>16.</td><td>Rao Birendra Singh</td><td>Minister of Agriculture.</td></tr><tr><td>17.</td><td>Shri Buta Singh</td><td>Minister of Parliamentary Affairs, Sports and Works and Housing.</td></tr><tr><td>18.</td><td>Shri Vishwanath Pratap Singh</td><td>Minister of Commerce.</td></tr><tr><td>19.</td><td>Shri Narayan Datt Tiwari</td><td>Minister of Industry and Steel and Mines.</td></tr></thead><tbody></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        74.38,
+        669.39,
+        148.75,
+        669.39,
+        148.75,
+        694.65,
+        74.38,
+        694.65
+      ],
+      "text": "GBS\n150 Copies."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        487.9,
+        673.6,
+        531.34,
+        673.6,
+        531.34,
+        687.91,
+        487.9,
+        687.91
+      ],
+      "text": "...2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 1027,
+      "total": 3314
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.48
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

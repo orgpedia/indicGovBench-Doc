@@ -1,0 +1,238 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        89.84,
+        227.34,
+        102.34,
+        227.34,
+        102.34,
+        309.01,
+        89.84,
+        309.01
+      ],
+      "text": "NARULA ML"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        138.64,
+        229.02,
+        175.52,
+        229.02,
+        175.52,
+        684.55,
+        138.64,
+        684.55
+      ],
+      "text": "Copy forwarded to the Principal Private Secretary to the\nPrime Minister/the Private Secretary to the Prime Minister, for\ninformation."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        202.3,
+        229.87,
+        211.82,
+        229.87,
+        211.82,
+        245.02,
+        202.3,
+        245.02
+      ],
+      "text": "To"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        186.83,
+        282.07,
+        199.33,
+        282.07,
+        199.33,
+        568.35,
+        186.83,
+        568.35
+      ],
+      "text": "All Members of the Council of Ministers."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        293.33,
+        290.49,
+        354.02,
+        290.49,
+        354.02,
+        699.7,
+        293.33,
+        699.7
+      ],
+      "text": "The undersigned is directed to state that, with\neffect from the forenoon of February 16, 1963, the designation\nof Shri S. K. Dey will be \"Minister of Community Development\nand Cooperation\"."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        379.61,
+        313.22,
+        394.49,
+        313.22,
+        394.49,
+        548.98,
+        379.61,
+        548.98
+      ],
+      "text": "New Delhi, the 16th February 1963."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        399.84,
+        365.43,
+        453.39,
+        365.43,
+        453.39,
+        533.83,
+        399.84,
+        533.83
+      ],
+      "text": "No.55/4/CF-63\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        489.09,
+        389.0,
+        509.32,
+        389.0,
+        509.32,
+        447.94,
+        489.09,
+        447.94
+      ],
+      "text": "S. No. 77"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        206.46,
+        442.89,
+        233.84,
+        442.89,
+        233.84,
+        654.23,
+        206.46,
+        654.23
+      ],
+      "text": "(B. G. Rau)\nJoint Secretary to the Cabinet."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        245.14,
+        524.57,
+        268.35,
+        524.57,
+        268.35,
+        561.61,
+        245.14,
+        561.61
+      ],
+      "text": "Rsan"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        465.29,
+        564.98,
+        478.38,
+        564.98,
+        478.38,
+        631.5,
+        465.29,
+        631.5
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        111.27,
+        637.39,
+        122.57,
+        637.39,
+        122.57,
+        681.18,
+        111.27,
+        681.18
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        510.51,
+        638.24,
+        533.72,
+        638.24,
+        533.72,
+        680.34,
+        510.51,
+        680.34
+      ],
+      "text": "168-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 830,
+      "total": 2435
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000369,
+      "batch": 0.000185
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.036937,
+      "batch": 0.018469,
+      "savings": 0.018469,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

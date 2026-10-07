@@ -1,0 +1,222 @@
+{
+  "doc_id": "order_en_archive_020",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        119.0,
+        0.0,
+        119.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "S No 4(E)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        357.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        84.2,
+        357.0,
+        84.2
+      ],
+      "text": "MOST IMMEDIATE"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        178.5,
+        84.2,
+        535.5,
+        84.2,
+        535.5,
+        168.4,
+        178.5,
+        168.4
+      ],
+      "text": "No.55/1/1/91-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        178.5,
+        168.4,
+        535.5,
+        168.4,
+        535.5,
+        235.76,
+        178.5,
+        235.76
+      ],
+      "text": "New Delhi, the 24th June, 1991\n3 Headtha, 1913(S)."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        119.0,
+        252.6,
+        565.25,
+        252.6,
+        565.25,
+        378.9,
+        119.0,
+        378.9
+      ],
+      "text": "The undersigned is directed to state that the Ministers as shown in the Annexure have relinquished their respective office with effect from 21st June, 1991."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        238.0,
+        378.9,
+        535.5,
+        378.9,
+        535.5,
+        463.1,
+        238.0,
+        463.1
+      ],
+      "text": "(V.R. Srinivasan)\nfor Cabinet Secretary.\nTele : 3015802"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        119.0,
+        463.1,
+        535.5,
+        463.1,
+        535.5,
+        547.3,
+        119.0,
+        547.3
+      ],
+      "text": "To\n\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        119.0,
+        589.4,
+        565.25,
+        589.4,
+        565.25,
+        673.6,
+        119.0,
+        673.6
+      ],
+      "text": "Copy forwarded for information to :-\n\nSecretary to the President.\nSecretary to the Vice-President."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        238.0,
+        673.6,
+        535.5,
+        673.6,
+        535.5,
+        757.8,
+        238.0,
+        757.8
+      ],
+      "text": "(V.R. Srinivasan)\nDeputy Secretary to the Cabinet."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        119.0,
+        757.8,
+        565.25,
+        757.8,
+        565.25,
+        842.0,
+        119.0,
+        842.0
+      ],
+      "text": "Copy also forwarded for information to:-\n\nSecretary to the Prime Minister.\nSpecial Secretary to the Prime Minister.\nAdditional Secretary to the Prime Minister."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        238.0,
+        799.9,
+        535.5,
+        799.9,
+        535.5,
+        842.0,
+        238.0,
+        842.0
+      ],
+      "text": "(V.R. Srinivasan)\nDeputy Secretary to the Cabinet."
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        0.0,
+        799.9,
+        119.0,
+        799.9,
+        119.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "300 Copies."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1910,
+      "output": 771,
+      "total": 2681
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004612,
+      "batch": 0.002306
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4612,
+      "batch": 0.2306,
+      "savings": 0.2306,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

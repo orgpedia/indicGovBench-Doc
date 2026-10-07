@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_en_current_027",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        55.93,
+        31.15,
+        535.5,
+        31.15,
+        535.5,
+        721.59,
+        55.93,
+        721.59
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr><tr><td>महाराष्ट्र</td><td>सर्वश्री S/Shri</td><td>Allotment Year : 1993</td><td>Allotment Year : 1994</td><td>Allotment Year : 1995</td><td>Maharashtra</td></tr></thead><tbody><tr><td>7</td><td>अर्चना ल्यागीArchana TyagiM.A., M.Phil.(Eco.)</td><td>RR19931008Uttar Pradesh</td><td>01/08/196705/09/1993</td><td>DGP, M.S.P.H. &amp; W. Corp.10/10/2024Level 16</td><td>PPMDS-2020PMMS-2009</td></tr><tr><td>8</td><td>प्रभात कुमारPrabhat KumarB.Tech. (Elec.)</td><td>RR19931021Bihar</td><td>21/10/196706/09/1993</td><td>Director of Civil Defence09/05/2025Level 16</td><td>PPMDS-2021PMMS-2012</td></tr><tr><td>9</td><td>प्रशांत एस बुरडेPrashant S BurdeB.E. Tech.</td><td>RR19931068Maharashtra</td><td>15/09/196606/09/1993</td><td>DGP, Railways, M.S. Mumbai14/05/2025Level 16</td><td></td></tr><tr><td>10</td><td>अशुतोष के डुम्बरेAshutosh K DumbareB.E.(Produ. Engg.)</td><td>RR19941045Maharashtra</td><td>03/07/196803/09/1995</td><td>CP, Thane City,21/12/2023Level 15</td><td>PPM-2021 IPM-2010</td></tr><tr><td>11</td><td>देवेन भारतीDeven BharatiM.A. (Geog.)</td><td>RR19941049Bihar</td><td>14/08/196804/09/1994</td><td>CP, Mumbai30/04/2025Level 15</td><td>PPM-2023 IPM-2010</td></tr><tr><td>12</td><td>अनुप कुमार सिंहAnup Kumar SinghM.Sc., M.Phil, L.L.B</td><td>RR19941055Uttar Pradesh</td><td>25/12/196804/09/1994</td><td>Principal Secy, H.D. (Special),Mantralaya, Mumbai27/04/2023Level 15</td><td>PPM-2023 IPM-2014</td></tr><tr><td>13</td><td>विनीत अग्रवालVineet AgarwalM.Tech.</td><td>RR19941056Uttar Pradesh</td><td>20/10/196804/09/1994</td><td>ADG. &amp; Chief Vigilanceofficer, MHADA, Mumbai02/03/2023Level 15</td><td>MSM-2011</td></tr><tr><td>14</td><td>रामानंद सुनील भरमाRamanand Sunil BharmaM.Tech.(Process Engg.)</td><td>RR19941076Maharashtra</td><td>19/11/196804/09/1994</td><td>ADGP, CID &amp; , M.S.,Pune.14/05/2025Level 15</td><td>MSM-2012</td></tr><tr><td>15</td><td>विनय कुमार चौबेVinoy Kumar ChoubeyM.Tech.(Mech.Engg.)</td><td>RR19951010Bihar</td><td>14/08/196904/09/1996</td><td>CP, Pimpri Chinchwad.14/12/2022Level 15</td><td>PSM-2023 MSM-2012</td></tr><tr><td>16</td><td>अमितेश कुमारAmitesh KumarB.A.(Hons)Eco.</td><td>RR19951018Bihar</td><td>26/09/197205/09/1996</td><td>CP, Pune City01/02/2024Level 15</td><td>MSM-2012</td></tr><tr><td>17</td><td>नवल बजाजNaval BajajM.Sc.</td><td>RR19951034Delhi</td><td>07/03/196904/09/1995</td><td>Addl. DGP, A.T.S.M.S.,Mumbai20/06/2024Level 15</td><td>PSM-2023 MSM-2012</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 1723,
+      "total": 4010
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.81
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

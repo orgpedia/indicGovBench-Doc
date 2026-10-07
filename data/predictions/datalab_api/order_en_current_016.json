@@ -1,0 +1,202 @@
+{
+  "doc_id": "order_en_current_016",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        45.9,
+        67.0,
+        365.2,
+        67.0,
+        365.2,
+        90.8,
+        45.9,
+        90.8
+      ],
+      "text": "TO BE FILLED BY THE CADRE CONTROLLING AUTHORITY"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        44.7,
+        106.7,
+        179.5,
+        106.7,
+        179.5,
+        123.7,
+        44.7,
+        123.7
+      ],
+      "text": "NAME OF THE OFFICER:"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        43.6,
+        132.8,
+        96.7,
+        132.8,
+        96.7,
+        148.1,
+        43.6,
+        148.1
+      ],
+      "text": "SERVICE :"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        260.6,
+        138.4,
+        304.8,
+        138.4,
+        304.8,
+        153.2,
+        260.6,
+        153.2
+      ],
+      "text": "CADRE :"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        43.1,
+        158.9,
+        86.7,
+        158.9,
+        86.7,
+        174.2,
+        43.1,
+        174.2
+      ],
+      "text": "BATCH:"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        259.5,
+        164.5,
+        331.1,
+        164.5,
+        331.1,
+        179.9,
+        259.5,
+        179.9
+      ],
+      "text": "Date of Birth:"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        33.0,
+        197.5,
+        311.5,
+        197.5,
+        311.5,
+        538.4,
+        33.0,
+        538.4
+      ],
+      "text": "1. Whether any disciplinary proceedings have been initiated against the officer during his career, so far. If yes, details thereof\n2. Whether any complaint including that of corruption, against the officer, which in view of the State Government/ Cadre Controlling Authority may have a direct bearing/relevance on the vigilance status/ Integrity of the officer as on date, is pending against the officer . If so, details thereof.\n3. Whether any preliminary inquiry or any other vigilance related matter is pending against the officer. If so, full facts of the pending matter.\n4. Whether any criminal proceedings were registered against the officer during his career so far. If so, the details/present status and the final outcome thereof.`\n5. Whether the name of the officer appears in the Agreed List."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        255.0,
+        568.0,
+        525.7,
+        568.0,
+        525.7,
+        588.9,
+        255.0,
+        588.9
+      ],
+      "text": "Signature of the officer certifying the proforma"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        318.2,
+        598.6,
+        352.3,
+        598.6,
+        352.3,
+        612.8,
+        318.2,
+        612.8
+      ],
+      "text": "Name"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        317.6,
+        628.1,
+        383.6,
+        628.1,
+        383.6,
+        644.0,
+        317.6,
+        644.0
+      ],
+      "text": "Designation"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        317.1,
+        657.6,
+        353.4,
+        657.6,
+        353.4,
+        672.4,
+        317.1,
+        672.4
+      ],
+      "text": "Stamp"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

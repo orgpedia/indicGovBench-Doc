@@ -1,0 +1,61 @@
+{
+  "doc_id": "order_hi_archive_007",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        83.07,
+        98.46,
+        495.83,
+        98.46,
+        495.83,
+        177.53,
+        83.07,
+        177.53
+      ],
+      "text": "गा 0073900 (7), 9 6 7, Lo\nकिए: संग गरम के असर a प्रति (ंए-) में ो fo fF ए आतं"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        84.0,
+        234.92,
+        496.77,
+        234.92,
+        496.77,
+        302.52,
+        84.0,
+        302.52
+      ],
+      "text": "प्रो TR फि TO अत 03 था |) दे अति TR मरी\nSA A A a Fr लोग ew fv किणां"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

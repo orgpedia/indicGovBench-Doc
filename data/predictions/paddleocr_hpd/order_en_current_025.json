@@ -1,0 +1,97 @@
+{
+  "doc_id": "order_en_current_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        59.5,
+        32.0,
+        99.37,
+        32.0,
+        99.37,
+        44.63,
+        59.5,
+        44.63
+      ],
+      "text": "तीमलनग"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        486.71,
+        33.68,
+        534.31,
+        33.68,
+        534.31,
+        42.94,
+        486.71,
+        42.94
+      ],
+      "text": "Tamil Nadu"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        57.72,
+        47.15,
+        537.28,
+        47.15,
+        537.28,
+        696.33,
+        57.72,
+        696.33
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr><tr><td></td><td colspan=\"5\">स्वीय S/Shri</td></tr><tr><td>205</td><td>केलकर गुम्मप्रमाण मालत्व्रा Kelkar SubramanyaBhalchandraBBM (Agri), M.A. (Political Science)</td><td>RR20201106Maharashtra</td><td>17/01/199328/12/2020</td><td>DCP, South,Salem City21/06/2025Level 11</td><td></td></tr><tr><td>206</td><td>क्रम्मां संज्ञाल प्रयोग गीत्म Kambham Samuel PraveenGowthamB.Tech.</td><td>RR20201124Andhra Pradesh</td><td>14/05/199628/12/2020</td><td>DCP, North, Tiruppur City18/06/2025Level 11</td><td></td></tr><tr><td>207</td><td>स्तीलिन औरStalin RGraduate with Animal Husbandry &amp; Vet. Science</td><td>RR20201135Tamil Nadu</td><td>14/05/199210/10/2020</td><td>SP, Kanniyakumari District03/01/2025Level 11</td><td></td></tr><tr><td>208</td><td>गर्ण कर्यू उद्धरांचGarad Karun UdhavraoM.Tech. (Aero Space)</td><td>RR20201140Maharashtra</td><td>21/02/198728/12/2020</td><td>SP, Tiruvarur District01/01/2025Level 12</td><td></td></tr><tr><td>209</td><td>वल्तीरी रिलहBalveer SinghB.Tech.</td><td>RR20201147Rajasthan</td><td>17/05/198428/12/2020</td><td>ASP, Special Task Force, Erode01/12/2025Level 10</td><td></td></tr><tr><td colspan=\"6\">Allotment Year: 2021</td></tr><tr><td>210</td><td>विव नाम एनुgSIVA RAMAN N UB.E.</td><td>RR20211110Tamil Nadu</td><td>08/06/199505/12/2021</td><td>DCP, North, Salem City05/03/2025Level 11</td><td></td></tr><tr><td>211</td><td>प्रसंज्ञामार दीPRASSANNAKUMAR VMBBS</td><td>RR20211115Puducherry</td><td>23/10/199228/03/2022</td><td>SP, Tirunelveli District01/01/2026Level 11</td><td></td></tr><tr><td>212</td><td>यहानाज अर्थSHAHNAZ I B.Tech</td><td>RR20211043Tamil Nadu</td><td>26/12/199305/12/2021</td><td>SP-I Cyber Crimes DivChennai04/03/2025Level 11</td><td></td></tr><tr><td>213</td><td>रीलिन दिंSIBIN PB.Tech</td><td>RR20211069Kerala</td><td>26/10/199605/12/2021</td><td>SP, Chengalpattu District01/01/2026Level 11</td><td></td></tr><tr><td>214</td><td>उप्याद्यक्मार औरUTHAYAKUMAR R B.E.</td><td>RR20211094Tamil Nadu</td><td>12/02/199205/12/2021</td><td>DCP, Anna Nagar, GreaterChennai Police01/01/2026Level 11</td><td></td></tr><tr><td>215</td><td>स्वीय कमार युत्तलRAVINDRA KUMARGUPTAB.Tech</td><td>RR20211155Uttar Pradesh</td><td>03/12/199728/03/2022</td><td>ASP, Villupuram Sub-Division, Villupuram District09/09/2024Level 10</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        289.17,
+        714.86,
+        304.64,
+        714.86,
+        304.64,
+        724.12,
+        289.17,
+        724.12
+      ],
+      "text": "342"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1808,
+      "output": 1493,
+      "total": 3301
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.28
+    },
+    "native_costs": {
+      "realtime": 0.003758,
+      "batch": 0.001879
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.375822,
+      "batch": 0.187911,
+      "savings": 0.187911,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

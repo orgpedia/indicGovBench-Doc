@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        107.1,
+        229.87,
+        513.49,
+        229.87,
+        513.49,
+        245.86,
+        107.1,
+        245.86
+      ],
+      "text": "संभाग में माह की स्थिति में अनुबंध की कंडिका 3 (सी) के कुल लंबित प्रकरणों का विवरण"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        47.01,
+        243.34,
+        500.39,
+        243.34,
+        500.39,
+        256.81,
+        47.01,
+        256.81
+      ],
+      "text": "संभाग\nमण्डल\nपरिक्षेत्र"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        516.46,
+        255.97,
+        568.82,
+        255.97,
+        568.82,
+        267.76,
+        516.46,
+        267.76
+      ],
+      "text": "(राशि लाखों में)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        43.43,
+        267.76,
+        575.37,
+        267.76,
+        575.37,
+        406.69,
+        43.43,
+        406.69
+      ],
+      "html": "<table><thead><tr><td>स.\nक्र.</td><td>कार्य का\nनाम</td><td>अनुबंध\nक्रमांक</td><td>अनुमानित\nलागत</td><td>निविदा\nदर</td><td>निविदा\nलागत</td><td>ठेकेदार\nद्वारा\nकिया\nकार्य</td><td>शेष\nकार्य</td><td>शेष\nकार्य\nकी\nनिविदा\nदर</td><td>शेष\nकार्य की\nनिविदा\nलागत</td><td>मूल\nठेकेदार से\nवसूली\nयोग्य\nराशि</td><td>संभाग में\nठेकेदार\nके नाम\nसे\nउपलब्ध\nराशि</td><td>ठेकेदार\nसे की\nगई\nवसूली\nकी\nराशि</td><td>शेष\nवसूली\nयोग्य\nराशि</td><td>शेष वसूली\nहेतु दर्ज\nRRC\nप्रकरण का\nक्रमांक एवं\nदिनांक</td><td>यदि\nRRC\nजारी\nनहीं हुई\nहै तो\nकारण</td><td>रिमा\nर्क</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        435.54,
+        443.73,
+        521.82,
+        443.73,
+        521.82,
+        492.57,
+        435.54,
+        492.57
+      ],
+      "text": "कार्यपालन यंत्री\nलोक निर्माण विभाग\nसंभाग\nजिला"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        332.01,
+        793.16,
+        353.43,
+        793.16,
+        353.43,
+        813.37,
+        332.01,
+        813.37
+      ],
+      "text": "12"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 838,
+      "total": 2443
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.006196,
+      "batch": 0.003098
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.619625,
+      "batch": 0.309813,
+      "savings": 0.309813,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

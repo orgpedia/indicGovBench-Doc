@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_036",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        404.6,
+        21.89,
+        546.21,
+        21.89,
+        546.21,
+        49.68,
+        404.6,
+        49.68
+      ],
+      "text": "ANNEXURE-B 26"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        183.26,
+        58.94,
+        455.77,
+        58.94,
+        455.77,
+        97.67,
+        183.26,
+        97.67
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTERS SWORN - IN\nAT 10-45 A.M. ON MONDAY, 14 JANUARY, 1980.\nIN RASHTRAPATI BHAVAN."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        264.18,
+        107.78,
+        411.14,
+        107.78,
+        411.14,
+        121.25,
+        264.18,
+        121.25
+      ],
+      "text": "MEMBERS OF THE CABINET"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        91.03,
+        138.09,
+        545.02,
+        138.09,
+        545.02,
+        525.41,
+        91.03,
+        525.41
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shrimati Indira Gandhi</td><td>...</td><td>Prime Minister/All Ministries/Departments not specificallyallotted.</td></tr><tr><td>2.</td><td>Rao Birendra Singh</td><td>...</td><td>Minister of Agriculture.</td></tr><tr><td>3.</td><td>Shri B. Shankaranand</td><td>...</td><td>Minister of Education.</td></tr><tr><td>4.</td><td>Shri A. B. A. Ghani Khan(Choudhury)</td><td>...</td><td>Minister of Energy andIrrigation</td></tr><tr><td>5.</td><td>Shri P. V. Narasimha Rao</td><td>...</td><td>Minister of External Affairs</td></tr><tr><td>6.</td><td>Shri R. Venkataraman</td><td>...</td><td>Minister of Finance.</td></tr><tr><td>7.</td><td>Shri V. C. Shukla</td><td>...</td><td>Minister of Information andBroadcasting.</td></tr><tr><td>8.</td><td>Giani Zail Singh</td><td>...</td><td>Minister of Home Affairs</td></tr><tr><td>9.</td><td>Shri Shiv Shankar</td><td>...</td><td>Minister of Law, Justice andCompany Affairs.</td></tr><tr><td>10.</td><td>Shri Kamlapati Tripathi</td><td>...</td><td>Minister of Railways</td></tr><tr><td>11.</td><td>Shri A. P. Sharma</td><td>...</td><td>Minister of Shipping andTransport</td></tr><tr><td>12.</td><td>Shri J. B. Patnaik</td><td>...</td><td>Minister of Tourism andCivil Aviation.</td></tr><tr><td>13.</td><td>Shri P. C. Sethi</td><td>...</td><td>Minister of Works and Housing</td></tr><tr><td>14.</td><td>Shri Bishambhar Nath Pande</td><td>...</td><td>Minister of ParliamentaryAffairs.</td></tr><tr><td>15.</td><td>Shri Pranab Mukherjee</td><td>...</td><td>Minister of Commerce.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        257.04,
+        530.46,
+        385.56,
+        530.46,
+        385.56,
+        545.62,
+        257.04,
+        545.62
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        91.63,
+        551.51,
+        552.16,
+        551.51,
+        552.16,
+        778.85,
+        91.63,
+        778.85
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri R. V. Swaminathan</td><td>...</td><td>Minister of State in theMinistry of Agriculture.</td></tr><tr><td>2.</td><td>Shri Jagannath Kaushal</td><td>...</td><td>Minister of State in theMinistry of Finance.</td></tr><tr><td>3.</td><td>Shri Nihar Ranjan Laskar</td><td>...</td><td>Minister of State in theMinistry of Health.</td></tr><tr><td>4.</td><td>Shri R. Venkatasubbaiah</td><td>...</td><td>Minister of State in theMinistry of/Affairs. &lt; Home</td></tr><tr><td>5.</td><td>Shri Yogendra Makwana</td><td>...</td><td>Minister of State in theMinistry of Home Affairs.</td></tr><tr><td>6.</td><td>Shri C. K. Jaffer Sharief</td><td>...</td><td>Minister of State in theMinistry of Railways.</td></tr><tr><td>7.</td><td>Shri Arvind Netam</td><td>...</td><td>Minister of State in theMinistry of Tourism and CivilAviation.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 3319,
+      "total": 6609
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.020707,
+      "batch": 0.010354
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 2.07075,
+      "batch": 1.035375,
+      "savings": 1.035375,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

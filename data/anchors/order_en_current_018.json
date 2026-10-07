@@ -1,0 +1,326 @@
+{
+  "doc_id": "order_en_current_018",
+  "total_words": 15,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "परिशिष्ट-4",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "परिशिष्ट-4",
+          "gcv_text": "परिशिष्ट",
+          "page_no": 1,
+          "bbox": {
+            "l": 255.79,
+            "t": 765.17,
+            "r": 320.03,
+            "b": 746.92
+          },
+          "crop_bbox": {
+            "l": 251.79,
+            "t": 769.17,
+            "r": 324.03,
+            "b": 742.92
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "APPENDIX – IV",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "APPENDIX",
+          "gcv_text": "APPENDIX",
+          "page_no": 1,
+          "bbox": {
+            "l": 407.05,
+            "t": 720.99,
+            "r": 488.8,
+            "b": 710.19
+          },
+          "crop_bbox": {
+            "l": 402.96,
+            "t": 724.99,
+            "r": 492.89,
+            "b": 706.19
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "–",
+          "gcv_text": "–",
+          "page_no": 1,
+          "bbox": {
+            "l": 492.88,
+            "t": 720.99,
+            "r": 502.23,
+            "b": 710.19
+          },
+          "crop_bbox": {
+            "l": 488.88,
+            "t": 724.99,
+            "r": 506.23,
+            "b": 706.19
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "IV",
+          "gcv_text": "IV",
+          "page_no": 1,
+          "bbox": {
+            "l": 505.34,
+            "t": 720.99,
+            "r": 522.36,
+            "b": 710.19
+          },
+          "crop_bbox": {
+            "l": 501.34,
+            "t": 724.99,
+            "r": 526.36,
+            "b": 706.19
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "वेतनमान 01-01-2016 से लागू\nPAY SCALES WITH EFFECT FROM 01.01.2016",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "वेतनमान",
+          "gcv_text": "वेतनमान",
+          "page_no": 1,
+          "bbox": {
+            "l": 290.55,
+            "t": 677.54,
+            "r": 347.84,
+            "b": 660.01
+          },
+          "crop_bbox": {
+            "l": 286.55,
+            "t": 681.54,
+            "r": 351.84,
+            "b": 656.01
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "01-01-2016",
+          "gcv_text": "01-01-2016",
+          "page_no": 1,
+          "bbox": {
+            "l": 358.87,
+            "t": 676.58,
+            "r": 464.59,
+            "b": 658.33
+          },
+          "crop_bbox": {
+            "l": 353.58,
+            "t": 680.58,
+            "r": 469.88,
+            "b": 654.33
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "से",
+          "gcv_text": "से",
+          "page_no": 1,
+          "bbox": {
+            "l": 476.58,
+            "t": 674.9,
+            "r": 487.36,
+            "b": 658.09
+          },
+          "crop_bbox": {
+            "l": 472.58,
+            "t": 678.9,
+            "r": 491.36,
+            "b": 654.09
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "लागू",
+          "gcv_text": "लागू",
+          "page_no": 1,
+          "bbox": {
+            "l": 494.32,
+            "t": 674.66,
+            "r": 525.96,
+            "b": 657.61
+          },
+          "crop_bbox": {
+            "l": 490.32,
+            "t": 678.66,
+            "r": 529.96,
+            "b": 653.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "PAY",
+          "gcv_text": "PAY",
+          "page_no": 1,
+          "bbox": {
+            "l": 239.01,
+            "t": 645.13,
+            "r": 264.9,
+            "b": 635.52
+          },
+          "crop_bbox": {
+            "l": 235.01,
+            "t": 649.13,
+            "r": 268.9,
+            "b": 631.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "SCALES",
+          "gcv_text": "SCALES",
+          "page_no": 1,
+          "bbox": {
+            "l": 269.21,
+            "t": 645.13,
+            "r": 321.47,
+            "b": 635.52
+          },
+          "crop_bbox": {
+            "l": 265.21,
+            "t": 649.13,
+            "r": 325.47,
+            "b": 631.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "WITH",
+          "gcv_text": "WITH",
+          "page_no": 1,
+          "bbox": {
+            "l": 325.07,
+            "t": 645.13,
+            "r": 357.43,
+            "b": 635.52
+          },
+          "crop_bbox": {
+            "l": 321.07,
+            "t": 649.13,
+            "r": 361.43,
+            "b": 631.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "EFFECT",
+          "gcv_text": "EFFECT",
+          "page_no": 1,
+          "bbox": {
+            "l": 362.71,
+            "t": 645.13,
+            "r": 412.09,
+            "b": 635.52
+          },
+          "crop_bbox": {
+            "l": 358.71,
+            "t": 649.13,
+            "r": 416.09,
+            "b": 631.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "FROM",
+          "gcv_text": "FROM",
+          "page_no": 1,
+          "bbox": {
+            "l": 416.64,
+            "t": 645.13,
+            "r": 453.8,
+            "b": 635.52
+          },
+          "crop_bbox": {
+            "l": 412.64,
+            "t": 649.13,
+            "r": 457.8,
+            "b": 631.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "01.01.2016",
+          "gcv_text": "01.01.2016",
+          "page_no": 1,
+          "bbox": {
+            "l": 458.12,
+            "t": 645.13,
+            "r": 522.6,
+            "b": 635.52
+          },
+          "crop_bbox": {
+            "l": 454.12,
+            "t": 649.13,
+            "r": 526.6,
+            "b": 631.52
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "505",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "505",
+          "gcv_text": "505",
+          "page_no": 1,
+          "bbox": {
+            "l": 289.11,
+            "t": 87.63,
+            "r": 304.93,
+            "b": 81.15
+          },
+          "crop_bbox": {
+            "l": 285.11,
+            "t": 91.63,
+            "r": 308.93,
+            "b": 77.15
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

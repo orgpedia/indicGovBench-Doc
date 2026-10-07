@@ -1,0 +1,245 @@
+/**
+ * layout.css — High-Throughput Fixed Viewport Shell
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Fixed outer viewport (§3.7) */
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 1. Global Header */
+#global-header {
+  height: var(--header-height);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.brand-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-badge {
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--bg-surface-elevated);
+  color: var(--border-focus);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+/* 2. Audit Command Row (§3.1 & §3.7) */
+#command-row {
+  height: var(--command-row-height);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  flex-shrink: 0;
+  z-index: 15;
+}
+
+.nav-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.view-tabs {
+  display: flex;
+  background: var(--bg-app);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  border: 1px solid var(--border-subtle);
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background: var(--bg-surface-elevated);
+  color: var(--text-main);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-shortcut {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: var(--text-muted);
+}
+
+/* 3. Main Workspace Area */
+#workspace-area {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Three-Pane Overview Layout (§4.1) */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overview-grid.gd-only {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+/* Two-Pane Focused Editing Layout (Words, Tables, Blocks) */
+.editing-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Individual Pane Shell */
+.pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-pane);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.pane:last-child {
+  border-right: none;
+}
+
+.pane-header {
+  height: 38px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  flex-shrink: 0;
+}
+
+.pane-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pane-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px;
+  position: relative;
+}
+
+/* Document Canvas Image Pane */
+.canvas-pane-body {
+  padding: 0;
+  display: block;
+  background-color: #050811;
+  overflow-y: auto;
+  overflow-x: auto;
+  user-select: none;
+}
+
+.image-canvas-wrapper {
+  position: relative;
+  transform-origin: top left;
+  transition: transform 0.05s ease-out;
+}
+
+.doc-image {
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+
+.bbox-svg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}

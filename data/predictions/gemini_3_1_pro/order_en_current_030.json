@@ -1,0 +1,158 @@
+{
+  "doc_id": "order_en_current_030",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        72.59,
+        107.78,
+        521.82,
+        107.78,
+        521.82,
+        121.25,
+        72.59,
+        121.25
+      ],
+      "text": "(TO BE PUBLISHED IN THE GAZETTE OF INDIA, PART 1 SECTION 2)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        215.39,
+        138.93,
+        378.42,
+        138.93,
+        378.42,
+        215.55,
+        215.39,
+        215.55
+      ],
+      "text": "No. K-13032/01/2026-US.I/II\nGovernment of India\nMinistry of Law and Justice\nDepartment of Justice\n(Appointments Division)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        292.74,
+        235.76,
+        527.76,
+        235.76,
+        527.76,
+        263.55,
+        292.74,
+        263.55
+      ],
+      "text": "Jaisalmer House, 26, Man Singh Road,\nNew Delhi-110 011, dated 27th May, 2026."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        244.54,
+        296.38,
+        348.07,
+        296.38,
+        348.07,
+        307.33,
+        244.54,
+        307.33
+      ],
+      "text": "NOTIFICATION"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        64.86,
+        343.54,
+        528.36,
+        343.54,
+        528.36,
+        404.16,
+        64.86,
+        404.16
+      ],
+      "text": "Shri Justice Alok Kumar Verma has tendered his resignation from the office of\nJudge, Uttarakhand High Court, in pursuance of proviso (a) to clause (1) of Article\n217 of the Constitution, with effect from 30.04.2026."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        296.31,
+        463.1,
+        529.55,
+        463.1,
+        529.55,
+        505.2,
+        296.31,
+        505.2
+      ],
+      "text": "(Jagannath Srinivasan)\nJoint Secretary to the Government of India\nTele: 2338 3037"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        63.66,
+        572.56,
+        79.73,
+        572.56,
+        79.73,
+        582.66,
+        63.66,
+        582.66
+      ],
+      "text": "To"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        64.26,
+        603.71,
+        214.79,
+        603.71,
+        214.79,
+        647.5,
+        64.26,
+        647.5
+      ],
+      "text": "The Manager,\nGovernment of India Press,\nMinto Road, New Delhi."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 640,
+      "total": 2245
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.005206,
+      "batch": 0.002603
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.520625,
+      "batch": 0.260313,
+      "savings": 0.260313,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

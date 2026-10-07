@@ -1,0 +1,46 @@
+{
+  "doc_id": "order_en_archive_013",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "No.553/40/USA\n\nIMPORTED LIST\n\nGOVERNMENT OF INDIA\n(Department of Cabinet Affairs)\nTen Darbar, the Blast January 1963\n\nMe undersigned directed to state that the Prime Minister's Ministry of State in the Ministry of Defence Production\n\nDulphorn\n(D.P.Chopra)\nGallant Secretary\n\nTo All Members of the Council of Ministers.\n\nCopy forwarded to the Prime Minister/\nto the Prime Minister's Information\n\nP.T.O"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 196,
+      "total": 2121
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002324,
+      "batch": 0.001162
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.2324,
+      "batch": 0.1162,
+      "savings": 0.1162,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

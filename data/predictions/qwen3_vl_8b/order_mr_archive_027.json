@@ -1,0 +1,32 @@
+{
+  "doc_id": "order_mr_archive_027",
+  "blocks": [],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1826,
+      "output": 8000,
+      "total": 9826
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 3.76
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

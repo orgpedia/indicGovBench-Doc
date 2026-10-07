@@ -1,0 +1,25 @@
+{
+  "doc_id": "order_mr_current_024",
+  "blocks": [],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

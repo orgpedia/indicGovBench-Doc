@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_en_archive_007",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        206.3,
+        23.3,
+        370.8,
+        23.3,
+        370.8,
+        52.2,
+        206.3,
+        52.2
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS\n(as on 18.12.2011)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        490.4,
+        21.0,
+        532.4,
+        21.0,
+        532.4,
+        42.0,
+        490.4,
+        42.0
+      ],
+      "text": "265"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        233.2,
+        54.5,
+        346.7,
+        54.5,
+        346.7,
+        69.8,
+        233.2,
+        69.8
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        98.4,
+        65.2,
+        535.7,
+        65.2,
+        535.7,
+        735.9,
+        98.4,
+        735.9
+      ],
+      "text": "1. Dr. Manmohan Singh Prime Minister and also in-charge of the Ministries/Departments not specifically allocated to the charge of any Minister viz.:(i) Ministry of Personnel, Public Grievances and Pensions;\n(ii) Ministry of Planning;\n(iii) Department of Atomic Energy; and\n(iv) Department of Space.\n2. Shri Pranab Mukherjee Minister of Finance.\n3. Shri Sharad Pawar Minister of Agriculture and Minister of Food Processing Industries.\n4. Shri A.K. Antony Minister of Defence.\n5. Shri P. Chidambaram Minister of Home Affairs.\n6. Shri S.M. Krishna Minister of External Affairs.\n7. Shri Virbhadra Singh Minister of Micro, Small and Medium Enterprises.\n8. Shri Vilasrao Deshmukh Minister of Science and Technology and Minister of Earth Sciences.\n9. Shri Ghulam Nabi Azad Minister of Health and Family Welfare.\n10. Shri Sushilkumar Shinde Minister of Power.\n11. Shri M. Veerappa Moily Minister of Corporate Affairs.\n12. Dr. Farooq Abdullah Minister of New and Renewable Energy.\n13. Shri S. Jaipal Reddy Minister of Petroleum and Natural Gas.\n14. Shri Kamal Nath Minister of Urban Development.\n15. Shri Ajit Singh Minister of Civil Aviation.\n16. Shri Vayalar Ravi Minister of Overseas Indian Affairs.\n17. Smt. Ambika Soni Minister of Information and Broadcasting.\n18. Shri Mallikarjun Kharge Minister of Labour and Employment.\n19. Shri Kapil Sibal Minister of Human Resource Development and Minister of Communications and Information Technology.\n20. Shri Anand Sharma Minister of Commerce and Industry and Minister of Textiles.\n21. Shri C.P. Joshi Minister of Road Transport and Highways.\n22. Kumari Selja Minister of Housing and Urban Poverty Alleviation and Minister of Culture."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

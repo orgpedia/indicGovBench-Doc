@@ -1,0 +1,65 @@
+{
+  "doc_id": "order_en_archive_008",
+  "total_words": 2,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "28",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "28",
+          "gcv_text": "28",
+          "page_no": 1,
+          "bbox": {
+            "l": 564.77,
+            "t": 811.49,
+            "r": 582.28,
+            "b": 795.4
+          },
+          "crop_bbox": {
+            "l": 560.77,
+            "t": 815.49,
+            "r": 586.28,
+            "b": 791.4
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "1",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "1",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 518.84,
+            "t": 50.52,
+            "r": 524.79,
+            "b": 36.21
+          },
+          "crop_bbox": {
+            "l": 514.84,
+            "t": 54.52,
+            "r": 528.79,
+            "b": 32.21
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

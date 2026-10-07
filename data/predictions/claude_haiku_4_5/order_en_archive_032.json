@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_archive_032",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        421.0,
+        0.0,
+        421.0
+      ],
+      "text": "20 Shri Sontosh Mohan Dev\n21 Prof. Saif-ud-din Soz\n22 Shri Raghuvansh Prasad Singh\n23 Shri Priyaranjan Dasmunsi\n24 Shri Mani Shankar Aiyar\n25 Smt. Meira Kumar\n26 Shri Murli Deora\n27 Smt. Ambika Soni\n28 Shri A. Raja\n29 Shri Kapil Sibal\n30 Shri Prem Chand Gupta"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        297.5,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        421.0,
+        297.5,
+        421.0
+      ],
+      "text": "Minister of Heavy Industries & Public Enterprises.\nMinister of Water Resources.\nMinister of Rural Development.\nMinister without Portfolio.\nMinister of Panchayati Raj and Minister of Development of North Eastern Region.\nMinister of Social Justice & Empowerment.\nMinister of Petroleum & Natural Gas.\nMinister of Tourism and Minister of Culture.\nMinister of Communications and Information Technology.\nMinister of Science & Technology and Minister of Earth Sciences.\nMinister of Corporate Affairs."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        421.0,
+        595.0,
+        421.0,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "MINISTERS OF STATE (INDEPENDENT CHARGE)\n1 Smt. Renuka Chowdhury\n2 Shri Subodh Kant Sahay\n3 Shri Vilas Muttemwar\n4 Kumari Selja\n5 Shri Praful Patel\n6 Shri G.K. Vasan\n7 Dr. M.S. Gill\n8 Smt. Panabaka Lakshmi"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        297.5,
+        421.0,
+        595.0,
+        421.0,
+        595.0,
+        842.0,
+        297.5,
+        842.0
+      ],
+      "text": "Minister of State (Independent Charge) of the Ministry of Women & Child Development.\nMinister of State (Independent Charge) of the Ministry of Food Processing Industries.\nMinister of State (Independent Charge) of the Ministry of New and Renewable Energy.\nMinister of State (Independent Charge) of the Ministry of Housing and Urban Poverty Alleviation.\nMinister of State (Independent Charge) of the Ministry of Civil Aviation.\nMinister of State (Independent Charge) of the Ministry of Statistics & Programme Implementation and Minister of State (Independent Charge) of the Ministry of Labour & Employment.\nMinister of State (Independent Charge) of the Ministry of Youth Affairs & Sports.\nMinister of State (Independent Charge) of the Ministry of Health & Family Welfare."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1924,
+      "output": 734,
+      "total": 2658
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004475,
+      "batch": 0.002238
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.44752,
+      "batch": 0.22376,
+      "savings": 0.22376,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

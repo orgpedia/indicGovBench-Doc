@@ -1,0 +1,77 @@
+{
+  "doc_id": "order_en_archive_014",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        436.96,
+        132.77,
+        443.19,
+        132.77,
+        443.19,
+        158.46,
+        436.96,
+        158.46
+      ],
+      "text": "ae\nShana"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        430.96,
+        140.93,
+        432.64,
+        140.93,
+        432.64,
+        142.85,
+        430.96,
+        142.85
+      ],
+      "text": "-"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        108.16,
+        652.81,
+        111.76,
+        652.81,
+        111.76,
+        660.73,
+        108.16,
+        660.73
+      ],
+      "text": "a"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "doc_id": "order_en_current_015",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        39.87,
+        27.79,
+        520.03,
+        27.79,
+        520.03,
+        214.71,
+        39.87,
+        214.71
+      ],
+      "html": "<table><thead><tr><td>Sl. No.</td><td>Type of Posting</td><td>(i) Level/Pay Scale(ii) Designation</td><td>MinistryDepartmentOfficePlace</td><td>Field of experience acquired during the posting (Major &amp; Minor)</td><td>Tenure From &amp; Tenure To</td></tr></thead><tbody><tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        45.22,
+        231.55,
+        296.9,
+        231.55,
+        296.9,
+        249.23,
+        45.22,
+        249.23
+      ],
+      "text": "The information furnished above by me is correct."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        473.62,
+        266.07,
+        533.12,
+        266.07,
+        533.12,
+        278.7,
+        473.62,
+        278.7
+      ],
+      "text": "(Signature)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        157.68,
+        308.17,
+        415.9,
+        308.17,
+        415.9,
+        325.01,
+        157.68,
+        325.01
+      ],
+      "text": "To be filled by the Cadre Controlling Authority."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        41.06,
+        325.01,
+        530.74,
+        325.01,
+        530.74,
+        356.17,
+        41.06,
+        356.17
+      ],
+      "text": "(This should be filled by the competent authority of State Govt. / Cadre Controlling Authority as\nprescribed in the letter)"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        41.06,
+        380.58,
+        399.84,
+        380.58,
+        399.84,
+        400.79,
+        41.06,
+        400.79
+      ],
+      "text": "It is certified that the above information given is correct as per record."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        253.47,
+        426.05,
+        317.73,
+        426.05,
+        317.73,
+        519.51,
+        253.47,
+        519.51
+      ],
+      "text": "Signature:\n\nName:\n\nDesignation:"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        33.32,
+        560.77,
+        227.29,
+        560.77,
+        227.29,
+        575.93,
+        33.32,
+        575.93
+      ],
+      "text": "48. Vigilance Experience Details"
+    },
+    {
+      "id": 8,
+      "type": "table",
+      "order": 8,
+      "poly": [
+        27.37,
+        598.66,
+        516.46,
+        598.66,
+        516.46,
+        718.23,
+        27.37,
+        718.23
+      ],
+      "html": "<table><thead><tr><td>S.No.</td><td>Type of Posting (Cadre/Centre)</td><td>Level/Pay scale Designation</td><td>Ministry Department Office Place</td><td>Details of Experience in vigilance/disciplinary matters</td><td>Tenure fromTenure to</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        31.54,
+        731.7,
+        283.81,
+        731.7,
+        283.81,
+        746.85,
+        31.54,
+        746.85
+      ],
+      "text": "The information furnished above by me is correct."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        459.94,
+        813.37,
+        518.84,
+        813.37,
+        518.84,
+        826.0,
+        459.94,
+        826.0
+      ],
+      "text": "(Signature)"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 704,
+      "total": 2309
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000442,
+      "batch": 0.000221
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.04421,
+      "batch": 0.022105,
+      "savings": 0.022105,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

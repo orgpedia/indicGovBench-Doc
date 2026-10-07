@@ -1,0 +1,129 @@
+{
+  "doc_id": "order_en_current_018",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        254.66,
+        75.78,
+        339.15,
+        75.78,
+        339.15,
+        96.83,
+        254.66,
+        96.83
+      ],
+      "text": "परिशिष्ट-4"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        405.79,
+        116.2,
+        522.41,
+        116.2,
+        522.41,
+        133.88,
+        405.79,
+        133.88
+      ],
+      "text": "APPENDIX – IV"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        287.38,
+        162.51,
+        525.98,
+        162.51,
+        525.98,
+        185.24,
+        287.38,
+        185.24
+      ],
+      "text": "वेतनमान 01-01-2016 से लागू"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        235.62,
+        191.98,
+        522.41,
+        191.98,
+        522.41,
+        209.66,
+        235.62,
+        209.66
+      ],
+      "text": "PAY SCALES WITH EFFECT FROM 01.01.2016"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        93.42,
+        262.7,
+        499.8,
+        262.7,
+        499.8,
+        544.77,
+        93.42,
+        544.77
+      ],
+      "html": "<table><thead><tr><td>RANK</td><td>TIME – SCALE</td><td>Entry Level</td><td>Level</td></tr></thead><tbody><tr><td>SP</td><td>Junior Scale</td><td>Rs. 56,100</td><td>10</td></tr><tr><td></td><td>Senior Scale</td><td>Rs. 67,700</td><td>11</td></tr><tr><td></td><td>Junior Administrative Grade</td><td>Rs. 78,800</td><td>12</td></tr><tr><td></td><td>Selection Grade</td><td>Rs. 1,18,500</td><td>13</td></tr><tr><td>DIG</td><td>Super-time Scale</td><td>Rs. 1,31,100</td><td>13A</td></tr><tr><td>IG</td><td>Super-time Scale</td><td>Rs. 1,44,200</td><td>14</td></tr><tr><td>ADG</td><td>Above Super-time Scale</td><td>Rs.1,82,200</td><td>15</td></tr><tr><td>DG</td><td>Above Super-time Scale</td><td>Rs.2,05,400</td><td>16</td></tr><tr><td></td><td></td><td>Rs. 2,25,000</td><td>17</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        288.57,
+        752.75,
+        305.24,
+        752.75,
+        305.24,
+        762.85,
+        288.57,
+        762.85
+      ],
+      "text": "505"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 724,
+      "total": 3011
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.34
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "- 2 -"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "MINISTER OF STATE (INDEPENDENT CHARGE)."
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        336.8,
+        0.0,
+        336.8
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Harmohan Dhawan</td><td>Minister of State (Independent Charge) of the Ministry of Civil Aviation.</td></tr><tr><td>2.</td><td>Shrimati Maneka Gandhi</td><td>Minister of State (Independent Charge) of the Ministry of Environment &amp; Forests.</td></tr><tr><td>3.</td><td>Dr. Sanjay Singh</td><td>Minister of State (Independent Charge) of the Ministry of Communications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        336.8,
+        595.0,
+        336.8,
+        595.0,
+        421.0,
+        0.0,
+        421.0
+      ],
+      "text": "-----"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        0.0,
+        421.0,
+        595.0,
+        421.0,
+        595.0,
+        463.1,
+        0.0,
+        463.1
+      ],
+      "text": "MINISTER OF STATE"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        0.0,
+        463.1,
+        595.0,
+        463.1,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Babanrao Dhakane</td><td>Minister of State in the Ministry of Energy.</td></tr><tr><td>2.</td><td>Shri Bhakta Charan Das</td><td>Minister of State in the Ministry of Railways.</td></tr><tr><td>3.</td><td>Shri Kamal Morarka</td><td>Minister of State in the Prime Minister&#x27;s Office.</td></tr><tr><td>4.</td><td>Shri Lalit Vijay Singh</td><td>Minister of State in the Ministry of Defence.</td></tr><tr><td>5.</td><td>Shri Ram Bahadur Singh</td><td>Minister of State in the Department of Rural Development in the Ministry of Agriculture.</td></tr><tr><td>6.</td><td>Shri Ramji Lal Suman</td><td>Minister of State in the Ministry of Labour and Minister of State in the Ministry of Welfare.</td></tr><tr><td>7.</td><td>Shri Subodh Kant Sahay</td><td>Minister of State in the Ministry of Home Affairs and Minister of State in the Ministry of Information and Broadcasting.</td></tr></tbody></table>"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        0.0,
+        799.9,
+        595.0,
+        799.9,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "...3"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1910,
+      "output": 770,
+      "total": 2680
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004608,
+      "batch": 0.002304
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4608,
+      "batch": 0.2304,
+      "savings": 0.2304,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

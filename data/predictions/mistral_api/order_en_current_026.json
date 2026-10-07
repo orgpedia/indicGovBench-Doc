@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_en_current_026",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        58.76,
+        31.43,
+        100.96,
+        31.43,
+        100.96,
+        45.49,
+        58.76,
+        45.49
+      ],
+      "text": "तमिलनाडु"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        484.11,
+        32.26,
+        534.59,
+        32.26,
+        534.59,
+        43.84,
+        484.11,
+        43.84
+      ],
+      "text": "Tamil Nadu"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        57.1,
+        47.97,
+        532.93,
+        47.97,
+        532.93,
+        711.32,
+        57.1,
+        711.32
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>**Allotment Year : 2019**</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>194</td><td>श्रेया गुप्ता Shreya Gupta B.A. (Hons.)</td><td>RR 20191050 Delhi</td><td>20/05/1992 26/08/2019</td><td>On Central Deputation 07/08/2025 Level 12</td><td></td></tr><tr><td>195</td><td>अभिषेक गुप्ता Abhishek Gupta LLB</td><td>RR 20191061 Punjab</td><td>11/06/1993 26/08/2019</td><td>SP, Pudukottai District 04/01/2025 Level 11</td><td></td></tr><tr><td>196</td><td>यादव गिरीश अशोक Yadav Girish Ashok B. Tech.</td><td>RR 20191064 Maharashtra</td><td>12/07/1995 16/12/2019</td><td>SP, Tiruppur District 02/01/2025 Level 11</td><td></td></tr><tr><td>197</td><td>गौतम गोयल Gautam Goyal M.Sc.</td><td>RR 20191065 Haryana</td><td>10/09/1992 26/08/2019</td><td>SP, Salem District 14/08/2024 Level 11</td><td></td></tr><tr><td>198</td><td>अरविन्द बी के Arvind B K B.E.</td><td>RR 20191076 Tamil Nadu</td><td>03/11/1992 16/12/2019</td><td>SP, Madurai District 01/03/2024 Level 11</td><td></td></tr><tr><td>199</td><td>अरुण कबीलान ऐ के Arun Kabilan A K B. Tech</td><td>RR 20191092 Tamil Nadu</td><td>15/09/1995 16/12/2019</td><td>AIGP, HQ, O/o the DGP &amp; HoPF, Chennai 27/06/2025 Level 11</td><td></td></tr><tr><td>200</td><td>बूंदा एस Brinda S M.A.</td><td>RR 20191106 Karnataka</td><td>10/08/1992 26/08/2019</td><td>SP, Commandant, Regimental Centre, Avadi 10/03/2025 Level 11</td><td></td></tr><tr><td>201</td><td>अयमान जमाल Ayman Jamal B.Sc.</td><td>RR 20191109 Uttar Pradesh</td><td>15/08/1988 26/08/2019</td><td>SP, Ranipet District 21/07/2025 Level 11</td><td></td></tr><tr><td>**Allotment Year : 2020**</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>202</td><td>रघुपति बी. Ragupathi B. B.E.</td><td>RR 20201070 Tamil Nadu</td><td>03/05/1991 28/12/2020</td><td>SP, Aide-de-camp Hon&#x27;ble Govr TN Raj Bhj Bhavan 07/01/2025 Level 11</td><td></td></tr><tr><td>203</td><td>विवेकानंद शुक्ला Vivekananda Shukla B.Sc.(Physics)</td><td>RR 20201095 Bihar</td><td>16/08/1996 28/12/2020</td><td>SP, Thiruvallur District 17/07/2025 Level 11</td><td></td></tr><tr><td>204</td><td>मधु कुमारी Madhu Kumari Master in Social Work</td><td>RR 20201104 Bihar</td><td>07/01/1988 10/10/2020</td><td>SP, Comdt ,Tamil Nadu Special Police,VI BN Madurai 01/01/2025 Level 11</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        287.98,
+        726.2,
+        306.19,
+        726.2,
+        306.19,
+        738.61,
+        287.98,
+        738.61
+      ],
+      "text": "341"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

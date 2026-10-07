@@ -1,0 +1,106 @@
+{
+  "doc_id": "order_mr_current_082",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        439.64,
+        89.99,
+        946.3,
+        89.99,
+        946.3,
+        1511.75,
+        439.64,
+        1511.75
+      ],
+      "html": "<table><thead><tr><td>राष्ट्रीय आरोग्य संस्थान दि. २५ जून २०१५, परिपूर्ण मनुष्यबळाची सवर्णे निवृत्त माहिती संबंधित नाव - FIMO</td></tr></thead><tbody><tr><td>अ.क्र</td><td>NHM Type (SD/PM)</td><td>FMR No</td><td>संवर्गाचा क्रमांक</td><td>संवर्गाचे नाव</td><td>कार्यक्रमाचे नाव</td><td>जिल्हा</td><td>तहसील</td><td>कामकाजाचे ठिकाण</td><td>अधिकारी व कर्मचाराचे नाव</td><td>जन्म तारीख</td><td>दि. २५ जून २०१५ पर्यंत</td><td>संबंधित पदवीकरण (Contract)</td><td>पदवीकरणाचे नाव</td><td>सद्यस्थिती</td><td>दि. २५ जून २०१५ रोजी पर्यंत</td></tr><tr><td>Surname</td><td>Name</td><td>Middle Name</td><td>दिवस</td><td>महिने</td><td>वर्ष</td><td>महिने</td><td>दिवस</td><td>महिने</td><td>वर्ष</td><td>महिने</td><td>दिवस</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr><tr><td>1</td><td>Service Delivery</td><td>U.S.L.S.L.I</td><td>5</td><td>FTMO</td><td>NUHM</td><td>Nagpur MC</td><td>Nagpur</td><td>UPHC SHANTI NAGAR</td><td>KATORE</td><td>PRAJAKTA</td><td>VASANTRAO</td><td>12</td><td>12</td><td>1980</td><td>45</td><td>6</td><td>13</td><td>Interview</td><td>FTMO</td><td>16</td><td>8</td><td>2014</td></tr><tr><td>2</td><td>Service Delivery</td><td>U.S.L.S.L.I</td><td>5</td><td>FTMO</td><td>NUHM</td><td>Nagpur MC</td><td>Nagpur</td><td>UPHC FUTALA</td><td>YAWALKAR</td><td>RENUKA</td><td>LINESH</td><td>1</td><td>5</td><td>1974</td><td>52</td><td>1</td><td>24</td><td>Interview</td><td>FTMO</td><td>16</td><td>8</td><td>2014</td></tr><tr><td>3</td><td>Service Delivery</td><td>U.S.L.S.L.I</td><td>5</td><td>FTMO</td><td>NUHM</td><td>Nagpur MC</td><td>Nagpur</td><td>UPHC NARA</td><td>MUJAWAR</td><td>SHANA</td><td>RAFIQ</td><td>28</td><td>10</td><td>1981</td><td>44</td><td>7</td><td>28</td><td>Interview</td><td>FTMO</td><td>20</td><td>8</td><td>2014</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        178.15,
+        147.25,
+        295.82,
+        147.25,
+        295.82,
+        304.31,
+        178.15,
+        304.31
+      ],
+      "text": "डॉ. अश्विनी विक्रम\nशहर कार्यक्रम समन्वयक\nरामपुरम, म.म.पा.मायपुर"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        178.15,
+        418.84,
+        284.38,
+        418.84,
+        284.38,
+        598.81,
+        178.15,
+        598.81
+      ],
+      "text": "डॉ. शाला साव\nमाता व बाल संशोधन अधिकारी\nम.म.पा.मायपुर"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        178.15,
+        976.75,
+        272.94,
+        976.75,
+        272.94,
+        1141.99,
+        178.15,
+        1141.99
+      ],
+      "text": "डॉ. दीपक सोनकर\nवैद्यकीय आरोग्य अधिकारी\nम.म.पा.मायपुर"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        740.37,
+        1583.74,
+        1096.66,
+        1583.74,
+        1096.66,
+        1616.46,
+        740.37,
+        1616.46
+      ],
+      "text": "Scanned with OKEN Scanner"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

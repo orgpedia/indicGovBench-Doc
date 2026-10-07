@@ -1,0 +1,125 @@
+{
+  "doc_id": "order_mr_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        22.07,
+        233.72,
+        184.5,
+        233.72,
+        184.5,
+        272.35,
+        22.07,
+        272.35
+      ],
+      "text": "isthe अ अ कने\nalan anal,"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        56.38,
+        355.13,
+        139.63,
+        355.13,
+        139.63,
+        371.69,
+        56.38,
+        371.69
+      ],
+      "text": "श्री.अ.श.मु.म.भाई"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        170.34,
+        367.13,
+        491.59,
+        367.13,
+        491.59,
+        382.25,
+        170.34,
+        382.25
+      ],
+      "text": "५७९/१९९० | खुला | खुला १ | २०/११/२००३ | २७/१०/२००३"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        19.19,
+        466.23,
+        571.01,
+        466.23,
+        571.01,
+        634.44,
+        19.19,
+        634.44
+      ],
+      "text": "र ल\na dd id i A\n=\nCo"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        48.94,
+        634.68,
+        569.81,
+        634.68,
+        569.81,
+        671.39,
+        48.94,
+        671.39
+      ],
+      "text": "il I A"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        20.15,
+        739.3,
+        49.18,
+        739.3,
+        49.18,
+        771.69,
+        20.15,
+        771.69
+      ],
+      "text": "E"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

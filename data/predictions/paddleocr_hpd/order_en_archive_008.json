@@ -1,0 +1,145 @@
+{
+  "doc_id": "order_en_archive_008",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        564.65,
+        27.79,
+        583.1,
+        27.79,
+        583.1,
+        47.99,
+        564.65,
+        47.99
+      ],
+      "text": "23"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        207.65,
+        33.68,
+        404.6,
+        33.68,
+        404.6,
+        50.52,
+        207.65,
+        50.52
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        253.47,
+        50.52,
+        359.38,
+        50.52,
+        359.38,
+        64.83,
+        253.47,
+        64.83
+      ],
+      "text": "(as on 09.11.2014)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        67.23,
+        65.68,
+        555.73,
+        65.68,
+        555.73,
+        201.24,
+        67.23,
+        201.24
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>Shri Narendra Modi</td><td>Prime Minister and also in-charge of: Ministry of Personnel, Public Grievances and Pensions; Department of Atomic Energy; Department of Space; and All important policy issues and all other portfolios not allocated to any Minister.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        242.16,
+        202.08,
+        366.52,
+        202.08,
+        366.52,
+        217.24,
+        242.16,
+        217.24
+      ],
+      "html": "<table><thead></thead><tbody></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        63.66,
+        218.92,
+        552.75,
+        218.92,
+        552.75,
+        788.11,
+        63.66,
+        788.11
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Raj Nath Singh</td><td>Minister of Home Affairs.</td></tr><tr><td>2.</td><td>Smt. Sushma Swaraj</td><td>Minister of External Affairs; andMinister of Overseas Indian Affairs.</td></tr><tr><td>3.</td><td>Shri Arun Jaitley</td><td>Minister of Finance;Minister of Corporate Affairs; andMinister of Information and Broadcasting.</td></tr><tr><td>4.</td><td>Shri M. Venkaiah Naidu</td><td>Minister of Urban Development;Minister of Housing and Urban Poverty Alleviation; andMinister of Parliamentary Affairs.</td></tr><tr><td>5.</td><td>Shri Nitin Jairam Gadkari</td><td>Minister of Road Transport and Highways; and Minister of Shipping.</td></tr><tr><td>6.</td><td>Shri Manohar Parrikar</td><td>Minister of Defence.</td></tr><tr><td>7.</td><td>Shri Suresh Prabhu</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri D.V. Sadananda Gowda</td><td>Minister of Law and Justice.</td></tr><tr><td>9.</td><td>Sushri Uma Bharati</td><td>Minister of Water Resources, River Development and Ganga Rejuvenation.</td></tr><tr><td>10.</td><td>Dr. Najma A. Heptulla</td><td>Minister of Minority Affairs.</td></tr><tr><td>11.</td><td>Shri Ramvilas Paswan</td><td>Minister of Consumer Affairs, Food and Public Distribution.</td></tr><tr><td>12.</td><td>Shri Kalraj Mishra</td><td>Minister of Micro, Small and Medium Enterprises.</td></tr><tr><td>13.</td><td>Smt. Maneka Sanjay Gandhi</td><td>Minister of Women and Child Development.</td></tr><tr><td>14.</td><td>Shri Ananthkumar</td><td>Minister of Chemicals and Fertilizers.</td></tr><tr><td>15.</td><td>Shri Ravi Shankar Prasad</td><td>Minister of Communications and Information Technology.</td></tr></tbody></table>"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        518.25,
+        792.32,
+        525.38,
+        792.32,
+        525.38,
+        802.43,
+        518.25,
+        802.43
+      ],
+      "text": "1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1808,
+      "output": 842,
+      "total": 2650
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.16
+    },
+    "native_costs": {
+      "realtime": 0.003758,
+      "batch": 0.001879
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.375822,
+      "batch": 0.187911,
+      "savings": 0.187911,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        59.5,
+        42.1,
+        535.5,
+        42.1,
+        535.5,
+        126.3,
+        59.5,
+        126.3
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        29.75,
+        126.3,
+        565.25,
+        126.3,
+        565.25,
+        799.9,
+        29.75,
+        799.9
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1. Dr. Henry Austin</td><td>Minister of State in the Ministry of Commerce and Civil Supplies.</td></tr><tr><td>2. Shri Bedabrata Barua</td><td>Minister of State in the Ministry of External Affairs.</td></tr><tr><td>3. Smt. Rashida Haque</td><td>Minister of State in the Ministry of Education and Culture.</td></tr><tr><td>4. Shri V. Kishore Chandra S. Deo</td><td>Minister of State in the Ministry of Steel, Mines and Coal.</td></tr><tr><td>5. Shri K. Gopai</td><td>Minister of State for Parliamentary Affairs to be also the Minister of State in the Ministry of Finance.</td></tr><tr><td>6. Shri M.V. Krishnappa</td><td>Minister of State in the Ministry of Agriculture and Irrigation.</td></tr><tr><td>7. Shri Dhanik Lal Mandal</td><td>Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>8. Shri Nathuram Mirdha</td><td>Minister of State in the Ministry of Finance.</td></tr><tr><td>9. Shri Baneshwar Mishra</td><td>Minister of State of Shipping and Transport.</td></tr><tr><td>10. Shri Narasingh</td><td>Minister of State in the Ministry of Communications.</td></tr><tr><td>11. Shri B. Rachaiah</td><td>Minister of State in the Ministry of Industry.</td></tr><tr><td>12. Shri Saugata Roy</td><td>Minister of State in the Ministry of Petroleum, Chemicals and Fertilizers.</td></tr><tr><td>13. Shri P.M. Sayeed</td><td>Minister of State in the Ministry of Steel, Mines and Coal.</td></tr><tr><td>14. Shri T.S. Shrangare</td><td>Minister of State in the Ministry of Communications.</td></tr><tr><td>15. Shri Bhanu Pratap Singh</td><td>Minister of State of Rural Reconstruction.</td></tr><tr><td>16. Shri Jagbir Singh</td><td>Minister of State in the Ministry of Defence.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 682,
+      "total": 2607
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004268,
+      "batch": 0.002134
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4268,
+      "batch": 0.2134,
+      "savings": 0.2134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

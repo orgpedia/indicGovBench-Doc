@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_en_archive_005",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        529.55,
+        14.31,
+        561.68,
+        14.31,
+        561.68,
+        37.89,
+        529.55,
+        37.89
+      ],
+      "text": "98"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        213.6,
+        87.57,
+        401.03,
+        87.57,
+        401.03,
+        149.88,
+        213.6,
+        149.88
+      ],
+      "text": "CABINET SECRETARIAT\nLIST OF THE COUNCIL OF MINISTERS\nAS OF 2.2.1983"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        74.38,
+        154.09,
+        520.62,
+        154.09,
+        520.62,
+        706.44,
+        74.38,
+        706.44
+      ],
+      "html": "<table><thead><tr><td colspan=\"2\">MEMBERS OF THE CABINET</td></tr></thead><tbody><tr><td>1.</td><td>Smt. Indira Gandhi</td><td>Prime Minister (All Ministries/Departments not specified below).</td></tr><tr><td>2.</td><td>Shri Pranab Kumar Mukherjee</td><td>Minister of Finance.</td></tr><tr><td>3.</td><td>Shri P.V. Narasimha Rao</td><td>Minister of External Affairs.</td></tr><tr><td>4.</td><td>Shri P.C. Sethi</td><td>Minister of Home Affairs.</td></tr><tr><td>5.</td><td>Shri Shiv Shankar</td><td>Minister of Energy.</td></tr><tr><td>6.</td><td>Shri R. Venkataraman</td><td>Minister of Defence.</td></tr><tr><td>7.</td><td>Shri A.B.A. Ghani KhanChoudhuri</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri S.B. Chavan</td><td>Minister of Planning.</td></tr><tr><td>9.</td><td>Shri Jagannath Kaushal</td><td>Minister of Law,Justice andCompany Affairs.</td></tr><tr><td>10.</td><td>Shri Veerendra Patil</td><td>Minister of Labour &amp; Rehabilitation.</td></tr><tr><td>11.</td><td>Shri K. Vijaya Bhaskara Reddy</td><td>Minister without portfolio (temporarily holding charge of the M/oShipping and Transport).</td></tr><tr><td>12.</td><td>Shri Vasant Sathe</td><td>Minister of Chemicals and Fertilizers.</td></tr><tr><td>13.</td><td>Shri B. Shankaranand</td><td>Minister of Health &amp; Family Welfare.</td></tr><tr><td>14.</td><td>Shri A.P. Sharma</td><td>Minister of Communications.</td></tr><tr><td>15.</td><td>Shri Bhishma Narain Singh</td><td>Minister of Civil Supplies &amp; Supply.</td></tr><tr><td>16.</td><td>Rao Birendra Singh</td><td>Minister of Agriculture.</td></tr><tr><td>17.</td><td>Shri Buta Singh</td><td>Minister of Parliamentary Affairs,Sports and Works and Housing.</td></tr><tr><td>18.</td><td>Shri Vishwanath Pratap Singh</td><td>Minister of Commerce.</td></tr><tr><td>19.</td><td>Shri Narayan Dutt Tiwari</td><td>Minister of Industry and Steeland Mines.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        77.35,
+        712.33,
+        149.94,
+        712.33,
+        149.94,
+        740.96,
+        77.35,
+        740.96
+      ],
+      "text": "GBS\n150 Copies."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        496.82,
+        717.38,
+        543.83,
+        717.38,
+        543.83,
+        736.75,
+        496.82,
+        736.75
+      ],
+      "text": "- 2 -"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 1935,
+      "total": 5225
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002757,
+      "batch": 0.001379
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.27575,
+      "batch": 0.137875,
+      "savings": 0.137875,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

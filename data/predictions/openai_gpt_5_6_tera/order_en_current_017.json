@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        252.88,
+        178.5,
+        339.15,
+        178.5,
+        339.15,
+        197.03,
+        252.88,
+        197.03
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        149.34,
+        247.55,
+        447.44,
+        247.55,
+        447.44,
+        424.37,
+        149.34,
+        424.37
+      ],
+      "text": "सिविल लिस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        274.89,
+        525.41,
+        321.9,
+        525.41,
+        321.9,
+        555.72,
+        274.89,
+        555.72
+      ],
+      "text": "IPS"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        203.49,
+        590.24,
+        392.7,
+        590.24,
+        392.7,
+        628.13,
+        203.49,
+        628.13
+      ],
+      "text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        117.22,
+        662.65,
+        477.79,
+        662.65,
+        477.79,
+        784.74,
+        117.22,
+        784.74
+      ],
+      "text": "गृह मंत्रालय\nभारत सरकार\nMINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 754,
+      "total": 4044
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.007883,
+      "batch": 0.003941
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.78825,
+      "batch": 0.394125,
+      "savings": 0.394125,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

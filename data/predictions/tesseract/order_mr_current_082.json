@@ -1,0 +1,93 @@
+{
+  "doc_id": "order_mr_current_082",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        654.17,
+        101.27,
+        851.67,
+        101.27,
+        851.67,
+        1496.29,
+        654.17,
+        1496.29
+      ],
+      "text": "अधिकारी व कर्मचाऱ्यांचे नाव जन्म तारीख २३०२६ TS\nwart RS\noe FMR No जिल्हा | तहसील [wore ठिकाण\nGant a नाव\nual)\nMiddle Name महिने | दिवस Tae Lo\n3.1 2 1 9 ll a | Tg 1-8 & जुई... व 43 [ 44 1 48 [| 4 | 47"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        179.74,
+        150.95,
+        222.94,
+        150.95,
+        222.94,
+        1131.28,
+        179.74,
+        1131.28
+      ],
+      "text": "शहर कार्यक्रम व्यवस्थापक माता ब बाल संगोपन अधिकारी वैदयकीय आरोग्य अधिकारी\nयु ,्मंः म.न.पा. म.ल.पा.लागपूर"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        749.2,
+        1587.96,
+        863.19,
+        1587.96,
+        863.19,
+        1621.08,
+        749.2,
+        1621.08
+      ],
+      "text": "Ge Scann"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        865.11,
+        1595.16,
+        1093.32,
+        1595.16,
+        1093.32,
+        1613.88,
+        865.11,
+        1613.88
+      ],
+      "text": "ed with OKEN Scanner"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

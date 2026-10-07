@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_archive_015",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "No. 55/1/1/79-Cab.\nMOST IMMEDIATE\nGOVERNMENT OF INDIA(BHARAT SARKAR)\nCABINET SECRETARIAT(MANTRIMANDAL SACHIVAYA)\nNEW DELHI, 30 July, 1979.\n8 Sravana, 1901(S)."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "The President, on the advice of the Prime Minister,\nhas allocated the business of the Government to Ministers\nin the manner indicated below:-"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        799.9,
+        0.0,
+        799.9
+      ],
+      "text": "/1. Shri Y.B. Chavan, to be Deputy Prime Minister\n and Cabinet Minister in charge of the Ministry of\n Home Affairs;\n\n/2. Shri H.N. Bahuguna, to be Cabinet Minister in\n charge of the Ministry of Finance;\n\n/3. Shri Brahm Parkash, to be Cabinet Minister in\n charge of the Ministry of Agriculture & Irrigation;\n\n/4. Shri Hitendra Desai, to be Cabinet Minister in\n charge of the Ministry of Commerce & Civil\n Supplies;\n\n/5. Shri Purushottam Kaushik, to be Cabinet Minister\n in charge of the Ministry of Information and\n Broadcasting;\n\n/6. Shri Ram Kinkar, to be Cabinet Minister in charge\n of the Ministry of Works, Housing, Supply and\n Rehabilitation;\n\n/7. Shri H.R. Khanna, to be Cabinet Minister in\n charge of the Ministry of Law, Justice & Company\n Affairs;\n\n/8. Shri S.N. Mishra, to be Cabinet Minister in\n charge of the Ministry of External Affairs;\n\n/9. Shri K.C. Pant, to be Cabinet Minister in charge\n of the Ministry of Energy;\n\n/10. Shri T.A. Pai, to be Cabinet Minister in charge\n of the Ministry of Petroleum, Chemicals and\n Fertilizers; also, for the present, to be in\n charge of the Ministry of Railway;\n\n/11. Shri Biju Patnaik, to be Cabinet Minister in\n charge of the Ministry of Steel, Mines & Coal;\n\n/12. Shri Mohamed Shafi Quresani, to be Cabinet Minister\n in charge of the Ministry of Labour;\n\n/13. Shri Rabi Ray, to be Cabinet Minister in charge\n of the Ministry of Health and Family Welfare;\n\n/14. Shri K. Brahmananda Reddi, to be Cabinet Minister\n in charge of the Ministry of Industry;\n\nP.K.T.\n500 Copies.\n ...2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 802,
+      "total": 2727
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004748,
+      "batch": 0.002374
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4748,
+      "batch": 0.2374,
+      "savings": 0.2374,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

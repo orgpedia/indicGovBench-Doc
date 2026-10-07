@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "MOST IMMEDIATE\n\nNo. 55/1/1/84-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)\n\nNew Delhi, 31st December, 1984.\n10 Pausa, 1906 (S)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "Subject :- Swearing-in ceremony.\n\n***\n\nThe undersigned is directed to say that the\nCouncil of Ministers as shown in Annexure 'A' have relinquished\ntheir respective offices with effect from the 31st December,\n1984."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        210.5,
+        0.0,
+        210.5
+      ],
+      "text": "2. Shri Rajiv Gandhi has been sworn-in as the Prime\nMinister by the President at 5-15 P.M. today, 31st December,\n1984, in the Rashtrapati Bhavan. Other Ministers sworn-in\nby the President at 5-15 P.M. today, the 31st December, 1984\nare shown at Annexure 'B'."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        210.5,
+        595.0,
+        210.5,
+        595.0,
+        294.7,
+        0.0,
+        294.7
+      ],
+      "text": "3. Ministry of Home Affairs may kindly take such\naction as may be considered necessary regarding issue of\nGazette Notification, etc."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        357.0,
+        294.7,
+        595.0,
+        294.7,
+        595.0,
+        336.8,
+        357.0,
+        336.8
+      ],
+      "text": "(K. Ramiah)\nDirector"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        0.0,
+        336.8,
+        595.0,
+        336.8,
+        595.0,
+        378.9,
+        0.0,
+        378.9
+      ],
+      "text": "To\n\nMinistry of Home Affairs,\n(Shri S. Narayanaswamy - Additional Secretary)\n\n*****"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        0.0,
+        378.9,
+        595.0,
+        378.9,
+        595.0,
+        463.1,
+        0.0,
+        463.1
+      ],
+      "text": "Copy forwarded for information to :-\n1. Lok Sabha Secretariat\n(Shri S.C. Kashyap, Secretary-General)\n\n2. Rajya Sabha Secretariat\n(Shri Sudershan Agarwal, Secretary-General)\n\n(K. Ramiah)\nDirector\n\n*****"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 725,
+      "total": 2650
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.00444,
+      "batch": 0.00222
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.444,
+      "batch": 0.222,
+      "savings": 0.222,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

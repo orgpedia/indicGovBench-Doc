@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_008",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        564.65,
+        32.84,
+        583.1,
+        32.84,
+        583.1,
+        51.36,
+        564.65,
+        51.36
+      ],
+      "text": "28"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        208.84,
+        36.21,
+        405.2,
+        36.21,
+        405.2,
+        63.99,
+        208.84,
+        63.99
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS\n(as on 09.11.2014)"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        67.23,
+        66.52,
+        554.54,
+        66.52,
+        554.54,
+        207.97,
+        67.23,
+        207.97
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>Shri Narendra Modi</td><td>Prime Minister and also in-charge of:Ministry of Personnel, Public Grievances and Pensions;Department of Atomic Energy;Department of Space; andAll important policy issues and all other portfolios notallocated to any Minister.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        160.06,
+        79.15,
+        572.39,
+        79.15,
+        572.39,
+        771.27,
+        160.06,
+        771.27
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Raj Nath Singh</td><td>Minister of Home Affairs.</td></tr><tr><td>2.</td><td>Smt. Sushma Swaraj</td><td>Minister of External Affairs; andMinister of Overseas Indian Affairs.</td></tr><tr><td>3.</td><td>Shri Arun Jaitley</td><td>Minister of Finance;Minister of Corporate Affairs; andMinister of Information and Broadcasting.</td></tr><tr><td>4.</td><td>Shri M. Venkaiah Naidu</td><td>Minister of Urban Development;Minister of Housing and Urban PovertyAlleviation; andMinister of Parliamentary Affairs.</td></tr><tr><td>5.</td><td>Shri Nitin Jairam Gadkari</td><td>Minister of Road Transport and Highways;and Minister of Shipping.</td></tr><tr><td>6.</td><td>Shri Manohar Parrikar</td><td>Minister of Defence.</td></tr><tr><td>7.</td><td>Shri Suresh Prabhu</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri D.V. SadanandaGowda</td><td>Minister of Law and Justice.</td></tr><tr><td>9.</td><td>Sushri Uma Bharti</td><td>Minister of Water Resources, RiverDevelopment and Ganga Rejuvenation.</td></tr><tr><td>10.</td><td>Dr. Najma A. Heptulla</td><td>Minister of Minority Affairs.</td></tr><tr><td>11.</td><td>Shri Ramvilas Paswan</td><td>Minister of Consumer Affairs, Food and PublicDistribution.</td></tr><tr><td>12.</td><td>Shri Kalraj Mishra</td><td>Minister of Micro, Small and MediumEnterprises.</td></tr><tr><td>13.</td><td>Smt. Maneka SanjayGandhi</td><td>Minister of Women and Child Development.</td></tr><tr><td>14.</td><td>Shri Ananthkumar</td><td>Minister of Chemicals and Fertilizers.</td></tr><tr><td>15.</td><td>Shri Ravi Shankar Prasad</td><td>Minister of Communications and InformationTechnology.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        242.76,
+        208.82,
+        371.88,
+        208.82,
+        371.88,
+        223.13,
+        242.76,
+        223.13
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        519.43,
+        818.42,
+        527.76,
+        818.42,
+        527.76,
+        830.21,
+        519.43,
+        830.21
+      ],
+      "text": "1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 1643,
+      "total": 4937
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002466,
+      "batch": 0.001233
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.24665,
+      "batch": 0.123325,
+      "savings": 0.123325,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

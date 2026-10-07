@@ -1,0 +1,79 @@
+/**
+ * tokens.css — IndicGovBench Design System Tokens
+ */
+:root {
+  /* Colors - Functional & Brand */
+  --bg-app: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-elevated: #334155;
+  --bg-pane: #090d16;
+  --bg-card: #1e293b;
+  --bg-card-hover: #283548;
+  --bg-input: #0f172a;
+  
+  /* Text */
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-inverse: #0f172a;
+
+  /* Borders */
+  --border-subtle: #334155;
+  --border-strong: #475569;
+  --border-focus: #38bdf8;
+
+  /* Semantic Diff Colors (§3.5 in specs) */
+  --diff-raw-bg: transparent;
+  --diff-raw-text: #f8fafc;
+  --diff-subs-bg: rgba(245, 158, 11, 0.25);
+  --diff-subs-border: #f59e0b;
+  --diff-subs-text: #fbbf24;
+  --diff-missing-bg: rgba(239, 68, 68, 0.25);
+  --diff-missing-border: #ef4444;
+  --diff-missing-text: #f87171;
+  --diff-extra-bg: rgba(168, 85, 247, 0.25);
+  --diff-extra-border: #a855f7;
+  --diff-extra-text: #c084fc;
+  --diff-matched-bg: rgba(34, 197, 94, 0.2);
+  --diff-matched-border: #22c55e;
+  --diff-matched-text: #4ade80;
+
+  /* Bounding Box Overlay Colors */
+  --bbox-gt-stroke: #38bdf8;
+  --bbox-gt-fill: rgba(56, 189, 248, 0.15);
+  --bbox-table-stroke: #10b981;
+  --bbox-table-fill: rgba(16, 185, 129, 0.16);
+  --bbox-gt-active: #f59e0b;
+  --bbox-selected-stroke: #f59e0b;
+  --bbox-selected-fill: rgba(245, 158, 11, 0.28);
+  --bbox-pred-stroke: #f97316;
+  --bbox-pred-fill: rgba(249, 115, 22, 0.15);
+  --bbox-word-stroke: #facc15;
+  --bbox-word-fill: rgba(250, 204, 21, 0.18);
+
+  /* Status Chips */
+  --status-saved-bg: rgba(34, 197, 94, 0.2);
+  --status-saved-text: #4ade80;
+  --status-stale-bg: rgba(245, 158, 11, 0.25);
+  --status-stale-text: #fbbf24;
+  --status-saving-bg: rgba(56, 189, 248, 0.2);
+  --status-saving-text: #38bdf8;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-indic: "Nirmala UI", "Mukta", "Yantramanav", "Gargi", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Sizing & Spacing */
+  --header-height: 48px;
+  --command-row-height: 44px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}

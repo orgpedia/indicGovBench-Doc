@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        162.75,
+        121.94,
+        431.38,
+        121.94,
+        431.38,
+        135.22,
+        162.75,
+        135.22
+      ],
+      "text": "MINISTER OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        71.75,
+        165.91,
+        530.25,
+        165.91,
+        530.25,
+        311.91,
+        71.75,
+        311.91
+      ],
+      "text": "1. Shri Harmohan Dhawan Minister of State (Independent Charge) of the Ministry of Civil Aviation.\n2. Shrimati Maneka Gandhi Minister of State (Independent Charge) of the Ministry of Environment & Forests.\n3. Dr. Sanjay Singh Minister of State (Independent Charge) of the Ministry of Communications."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        240.62,
+        376.62,
+        362.25,
+        376.62,
+        362.25,
+        389.06,
+        240.62,
+        389.06
+      ],
+      "text": "MINISTER OF STATE"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        71.75,
+        419.76,
+        530.25,
+        419.76,
+        530.25,
+        742.45,
+        71.75,
+        742.45
+      ],
+      "text": "1. Shri Babanrao Dhakane Minister of State in the Ministry of Energy.\n2. Shri Bhakta Charan Das Minister of State in the Ministry of Railways.\n3. Shri Kamal Morarka Minister of State in the Prime Minister's Office.\n4. Shri Lalit Vijay Singh Minister of State in the Ministry of Defence.\n5. Shri Ram Bahadur Singh Minister of State in the Department of Rural Development in the Ministry of Agriculture.\n6. Shri Ramji Lal Suman Minister of State in the Ministry of Labour and Minister of State in the Ministry of Welfare.\n7. Shri Subodh Kant Sahay Minister of State in the Ministry of Home Affairs and Minister of State in the Ministry of Information and Broadcasting."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        423.5,
+        796.37,
+        452.38,
+        796.37,
+        452.38,
+        807.16,
+        423.5,
+        807.16
+      ],
+      "text": "...3"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        65.62,
+        809.65,
+        126.88,
+        809.65,
+        126.88,
+        825.41,
+        65.62,
+        825.41
+      ],
+      "text": "300 Copies"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

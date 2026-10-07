@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_current_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "No. K-13012/01/2024-US-I Dated: 06.09.2025."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        84.2,
+        0.0,
+        84.2
+      ],
+      "text": "Copy to:-"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        84.2,
+        595.0,
+        84.2,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "1. S/Shri (i) Amitabh Kumar Rai and (ii) Rajiv Lochan Shukla,\n Advocates through the Registrar General, Allahabad High Court,\n Prayagraj.\n2. The Secretary to Governor, Uttar Pradesh, Lucknow.\n3. The Secretary to Chief Minister, Uttar Pradesh, Lucknow.\n4. The Secretary to the Chief Justice, Allahabad High Court, Prayagraj.\n5. The Chief Secretary, Uttar Pradesh, Lucknow.\n6. The Registrar General, Aliahabad High Court, Prayagraj.\n7. The Accountant General, Uttar Pradesh, Lucknow.\n8. The President's Secretariat, (CA.II Section), Rashtrapati Bhawan,\n New Delhi.\n9. PS to Principal Secretary to the Prime Minister, PM's Office, South\n Block, New Delhi.\n10. Registrar (Conf.), c/o Chief Justice of India, 07, Krishna Menon Marg,\n New Delhi.\n11. PS to MoS(L&J)/ PPS to Secretary (Justice).\n12. Technical Director, NIC, Department of Justice, with a request to\n upload on the notification website of the Department\n (www.doj.gov.in)."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        416.5,
+        757.8,
+        595.0,
+        757.8,
+        595.0,
+        842.0,
+        416.5,
+        842.0
+      ],
+      "text": "(Prem Chand)\nUnder Secretary (Appointments-I)\nTele: 2338 2978"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 588,
+      "total": 2513
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003892,
+      "batch": 0.001946
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3892,
+      "batch": 0.1946,
+      "savings": 0.1946,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_mr_current_085",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        96.66,
+        72.84,
+        531.33,
+        72.84,
+        531.33,
+        778.39,
+        96.66,
+        778.39
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>विज्ञापन तिथि</td><td>विषय व विज्ञापन का संक्षिप्त विवरण</td><td>विषय</td><td>प्रशासकीय आदेश के हित में</td><td>प्रशासक अधिकारी</td><td>प्रस्तावक अधिकारी</td></tr></thead><tbody><tr><td>१९६</td><td>दि.०४.०७.२०००</td><td>विषय :- ROHAN &amp; ATUL ENTERPRISES द्वारा ग्राम पंचायत मुख्यालय ग्राम पंचायत ... द्वारा ... धाम २४० मीटर ... धान ... निर्माण कार्य ...</td><td>ROHAN &amp; ATUL ENTERPRISESमोना ग्राम पंचायत ...</td><td>दि.०४.०७.२०००... ग्राम पंचायत ...</td><td>हस्तलिखित</td><td>ROHAN &amp; ATUL ENTERPRISESमोना ग्राम पंचायत ...</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        66.42,
+        246.48,
+        93.69,
+        246.48,
+        93.69,
+        648.8,
+        66.42,
+        648.8
+      ],
+      "text": "ग्राम पंचायत हिन्डोला हाट, मुंशी, जि. पु. (सवायजपुर)"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3219,
+      "output": 1764,
+      "total": 4983
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002569,
+      "batch": 0.001284
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.256875,
+      "batch": 0.128437,
+      "savings": 0.128437,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

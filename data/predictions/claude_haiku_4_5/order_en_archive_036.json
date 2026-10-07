@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_036",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        476.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        476.0,
+        42.1
+      ],
+      "text": "ANNEXURE B"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTERS SWORN IN\nAT 10-45 A.M. ON MONDAY, 14 JANUARY, 1980,\nIN THE RASHTRAPATI BHAVAN."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        168.4,
+        0.0,
+        168.4
+      ],
+      "text": "MEMBERS OF THE CABINET"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        0.0,
+        168.4,
+        595.0,
+        168.4,
+        595.0,
+        589.4,
+        0.0,
+        589.4
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Sarvepalli Radhakrishnan Gandhi</td><td>Prime Minister/All Ministries/ Departments not specified below.</td></tr><tr><td>2.</td><td>Shri M Pranab Mukherjee</td><td>Minister of Agriculture.</td></tr><tr><td>3.</td><td>Shri Y. B. Chavan</td><td>Minister of Education.</td></tr><tr><td>4.</td><td>Shri A. A. Charan Lal Charan</td><td>Minister of Energy and Irrigation.</td></tr><tr><td>5.</td><td>Shri P. V. Narasimha Rao</td><td>Minister of External Affairs</td></tr><tr><td>6.</td><td>Shri S. Venkataraman</td><td>Minister of Finance.</td></tr><tr><td>7.</td><td>Shri V. Sathe</td><td>Minister of Information and Broadcasting.</td></tr><tr><td>8.</td><td>Giani Zail Singh</td><td>Minister of Home Affairs</td></tr><tr><td>9.</td><td>Shri Edv Shankar</td><td>Minister of Industries and Company Affairs.</td></tr><tr><td>10.</td><td>Shri Daljit Tripathi</td><td>Minister of Railways</td></tr><tr><td>11.</td><td>Shri A.P. Sharma</td><td>Minister of Shipping and Transport</td></tr><tr><td>12.</td><td>Shri J. B. Patnaik</td><td>Minister of Tourism and Civil Aviation.</td></tr><tr><td>13.</td><td>Shri P.C. Sethi</td><td>Minister of Steel and Housing</td></tr><tr><td>14.</td><td>Shri Dadan Nath Singh</td><td>Minister of Parliamentary Affairs.</td></tr><tr><td>15.</td><td>Shri Pranab Mukherjee</td><td>Minister of Commerce</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        0.0,
+        589.4,
+        595.0,
+        589.4,
+        595.0,
+        631.5,
+        0.0,
+        631.5
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        0.0,
+        631.5,
+        595.0,
+        631.5,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri P. V. Deshmukhtan</td><td>Minister of State in the Ministry of Agriculture.</td></tr><tr><td>2.</td><td>Shri Jagannath Panagte</td><td>Minister of State in the Ministry of Finance.</td></tr><tr><td>3.</td><td>Shri Bihar Ranjan Joshi</td><td>Minister of State in the Ministry of Health.</td></tr><tr><td>4.</td><td>Shri P. Venkatasubiah</td><td>Minister of State in the Ministry of Labour.</td></tr><tr><td>5.</td><td>Shri Yogendra Makwana</td><td>Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>6.</td><td>Shri S. Jaipal Reddy</td><td>Minister of State in the Ministry of Railways.</td></tr><tr><td>7.</td><td>Shri Kartik Oram</td><td>Minister of State in the Ministry of Tourism and Civil Aviation.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 1154,
+      "total": 3079
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.006156,
+      "batch": 0.003078
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.6156,
+      "batch": 0.3078,
+      "savings": 0.3078,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

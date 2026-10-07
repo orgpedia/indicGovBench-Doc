@@ -1,0 +1,77 @@
+{
+  "doc_id": "order_mr_archive_038",
+  "total_words": 3,
+  "pages": {
+    "1": {
+      "width": 469.0,
+      "height": 834.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "- २ -",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "-",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 42.0,
+            "t": 448.0,
+            "r": 44.0,
+            "b": 444.0
+          },
+          "crop_bbox": {
+            "l": 38.0,
+            "t": 452.0,
+            "r": 48.0,
+            "b": 440.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "२",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 33.0,
+            "t": 460.5,
+            "r": 53.0,
+            "b": 402.5
+          },
+          "crop_bbox": {
+            "l": 29.0,
+            "t": 464.5,
+            "r": 57.0,
+            "b": 398.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "-",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 33.0,
+            "t": 460.5,
+            "r": 53.0,
+            "b": 402.5
+          },
+          "crop_bbox": {
+            "l": 29.0,
+            "t": 464.5,
+            "r": 57.0,
+            "b": 398.5
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

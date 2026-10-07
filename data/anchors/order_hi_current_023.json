@@ -1,0 +1,364 @@
+{
+  "doc_id": "order_hi_current_023",
+  "total_words": 17,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "A",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "A",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 261.99,
+            "t": 111.58,
+            "r": 311.9,
+            "b": 80.62
+          },
+          "crop_bbox": {
+            "l": 257.99,
+            "t": 115.58,
+            "r": 315.9,
+            "b": 76.62
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "DGP HQRS UP LKW",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "DGP",
+          "gcv_text": "DGP",
+          "page_no": 1,
+          "bbox": {
+            "l": 91.41,
+            "t": 98.14,
+            "r": 114.2,
+            "b": 86.62
+          },
+          "crop_bbox": {
+            "l": 87.41,
+            "t": 102.14,
+            "r": 118.2,
+            "b": 82.62
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "HQRS",
+          "gcv_text": "HQRS",
+          "page_no": 1,
+          "bbox": {
+            "l": 118.28,
+            "t": 98.86,
+            "r": 148.51,
+            "b": 87.1
+          },
+          "crop_bbox": {
+            "l": 114.28,
+            "t": 102.86,
+            "r": 152.51,
+            "b": 83.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "UP",
+          "gcv_text": "UP",
+          "page_no": 1,
+          "bbox": {
+            "l": 152.83,
+            "t": 99.1,
+            "r": 167.46,
+            "b": 87.82
+          },
+          "crop_bbox": {
+            "l": 148.83,
+            "t": 103.1,
+            "r": 171.46,
+            "b": 83.82
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "LKW",
+          "gcv_text": "LKW",
+          "page_no": 1,
+          "bbox": {
+            "l": 171.78,
+            "t": 99.82,
+            "r": 195.77,
+            "b": 88.3
+          },
+          "crop_bbox": {
+            "l": 167.78,
+            "t": 103.82,
+            "r": 199.77,
+            "b": 84.3
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "This image contains a barcode and no readable text.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "This",
+          "gcv_text": "DGP",
+          "page_no": 1,
+          "bbox": {
+            "l": 91.41,
+            "t": 98.14,
+            "r": 114.2,
+            "b": 86.62
+          },
+          "crop_bbox": {
+            "l": 87.41,
+            "t": 102.14,
+            "r": 118.2,
+            "b": 82.62
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "image",
+          "gcv_text": "HQRS",
+          "page_no": 1,
+          "bbox": {
+            "l": 118.28,
+            "t": 98.86,
+            "r": 148.51,
+            "b": 87.1
+          },
+          "crop_bbox": {
+            "l": 114.28,
+            "t": 102.86,
+            "r": 152.51,
+            "b": 83.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "contains",
+          "gcv_text": "UP",
+          "page_no": 1,
+          "bbox": {
+            "l": 152.83,
+            "t": 99.1,
+            "r": 167.46,
+            "b": 87.82
+          },
+          "crop_bbox": {
+            "l": 148.83,
+            "t": 103.1,
+            "r": 171.46,
+            "b": 83.82
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "a",
+          "gcv_text": "LKW",
+          "page_no": 1,
+          "bbox": {
+            "l": 171.78,
+            "t": 99.82,
+            "r": 195.77,
+            "b": 88.3
+          },
+          "crop_bbox": {
+            "l": 167.78,
+            "t": 103.82,
+            "r": 199.77,
+            "b": 84.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "barcode",
+          "gcv_text": "DG",
+          "page_no": 1,
+          "bbox": {
+            "l": 80.61,
+            "t": 53.99,
+            "r": 89.25,
+            "b": 41.51
+          },
+          "crop_bbox": {
+            "l": 76.61,
+            "t": 57.99,
+            "r": 93.25,
+            "b": 37.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "and",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 87.81,
+            "t": 53.75,
+            "r": 92.13,
+            "b": 41.75
+          },
+          "crop_bbox": {
+            "l": 83.81,
+            "t": 57.75,
+            "r": 96.13,
+            "b": 37.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "no",
+          "gcv_text": "IV",
+          "page_no": 1,
+          "bbox": {
+            "l": 89.97,
+            "t": 54.23,
+            "r": 97.41,
+            "b": 41.75
+          },
+          "crop_bbox": {
+            "l": 85.97,
+            "t": 58.23,
+            "r": 101.41,
+            "b": 37.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "readable",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 95.97,
+            "t": 53.99,
+            "r": 100.29,
+            "b": 41.99
+          },
+          "crop_bbox": {
+            "l": 91.97,
+            "t": 57.99,
+            "r": 104.29,
+            "b": 37.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "text.",
+          "gcv_text": "STHA-",
+          "page_no": 1,
+          "bbox": {
+            "l": 98.37,
+            "t": 54.71,
+            "r": 118.52,
+            "b": 41.99
+          },
+          "crop_bbox": {
+            "l": 94.37,
+            "t": 58.71,
+            "r": 122.52,
+            "b": 37.99
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "DG-IV-STHA-(380)/2026/478 DT 30-05-2026",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "DG-IV-STHA-(380)/2026/478",
+          "gcv_text": "DG",
+          "page_no": 1,
+          "bbox": {
+            "l": 80.61,
+            "t": 53.99,
+            "r": 89.25,
+            "b": 41.51
+          },
+          "crop_bbox": {
+            "l": 76.61,
+            "t": 57.99,
+            "r": 93.25,
+            "b": 37.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "DT",
+          "gcv_text": "DT",
+          "page_no": 1,
+          "bbox": {
+            "l": 161.47,
+            "t": 55.91,
+            "r": 169.38,
+            "b": 43.67
+          },
+          "crop_bbox": {
+            "l": 157.47,
+            "t": 59.91,
+            "r": 173.38,
+            "b": 39.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "30-05-2026",
+          "gcv_text": "30-05-2026",
+          "page_no": 1,
+          "bbox": {
+            "l": 170.58,
+            "t": 56.63,
+            "r": 203.45,
+            "b": 43.67
+          },
+          "crop_bbox": {
+            "l": 166.58,
+            "t": 60.63,
+            "r": 207.45,
+            "b": 39.67
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "doc_id": "order_hi_archive_012",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        66.27,
+        60.71,
+        442.63,
+        60.71,
+        442.63,
+        97.69,
+        66.27,
+        97.69
+      ],
+      "text": "TWiT पीएचक्यू-ए,/ ET my ry CT / fms £99)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        70.93,
+        146.67,
+        457.8,
+        146.67,
+        457.8,
+        179.57,
+        70.93,
+        179.57
+      ],
+      "text": "'.. निम्नांकित mm fafa उप अपीक्षक पुलिस पद के अधिकारियों\nTER प्रशासकीय आधार पर उनके नाम"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        254.57,
+        160.44,
+        538.53,
+        160.44,
+        538.53,
+        188.24,
+        254.57,
+        188.24
+      ],
+      "text": "के WER\nके सम्मुख अंकित स्थान पर तुरन्त प्रभाव से किये जाते हैं:-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

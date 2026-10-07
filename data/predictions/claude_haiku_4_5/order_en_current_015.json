@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_current_015",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        41.65,
+        42.1,
+        553.35,
+        42.1,
+        553.35,
+        235.76,
+        41.65,
+        235.76
+      ],
+      "html": "<table><thead><tr><td>Sl. No.</td><td>Type of Posting</td><td>(i) Level/Pay Scale (ii) Designation</td><td>Ministry Department Office Place</td><td>Field of experience acquired during the posting (Major &amp; Minor)</td><td>Tenure From &amp; Tenure To</td></tr></thead><tbody><tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        41.65,
+        244.18,
+        553.35,
+        244.18,
+        553.35,
+        269.44,
+        41.65,
+        269.44
+      ],
+      "text": "The information furnished above by me is correct."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        476.0,
+        269.44,
+        553.35,
+        269.44,
+        553.35,
+        294.7,
+        476.0,
+        294.7
+      ],
+      "text": "(Signature)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        41.65,
+        303.12,
+        553.35,
+        303.12,
+        553.35,
+        336.8,
+        41.65,
+        336.8
+      ],
+      "text": "To be filled by the Cadre Controlling Authority.\n(This should be filled by the competent authority of State Govt. / Cadre Controlling Authority as prescribed in the letter)"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        41.65,
+        345.22,
+        553.35,
+        345.22,
+        553.35,
+        378.9,
+        41.65,
+        378.9
+      ],
+      "text": "It is certified that the above information given is correct as per record."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        41.65,
+        387.32,
+        553.35,
+        387.32,
+        553.35,
+        421.0,
+        41.65,
+        421.0
+      ],
+      "text": "Signature:\n\nName:\n\nDesignation:"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        29.75,
+        437.84,
+        178.5,
+        437.84,
+        178.5,
+        471.52,
+        29.75,
+        471.52
+      ],
+      "text": "48. Vigilance Experience Details"
+    },
+    {
+      "id": 7,
+      "type": "table",
+      "order": 7,
+      "poly": [
+        41.65,
+        479.94,
+        553.35,
+        479.94,
+        553.35,
+        673.6,
+        41.65,
+        673.6
+      ],
+      "html": "<table><thead><tr><td>S.No.</td><td>Type of Posting (Cadre/Centre)</td><td>Level/Pay scale Designation</td><td>Ministry Department Office Place</td><td>Details of Experience in vigilance/disciplinary matters</td><td>Tenure from Tenure to</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        41.65,
+        682.02,
+        553.35,
+        682.02,
+        553.35,
+        707.28,
+        41.65,
+        707.28
+      ],
+      "text": "The information furnished above by me is correct."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        476.0,
+        707.28,
+        553.35,
+        707.28,
+        553.35,
+        732.54,
+        476.0,
+        732.54
+      ],
+      "text": "(Signature)"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 802,
+      "total": 2727
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004748,
+      "batch": 0.002374
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4748,
+      "batch": 0.2374,
+      "savings": 0.2374,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

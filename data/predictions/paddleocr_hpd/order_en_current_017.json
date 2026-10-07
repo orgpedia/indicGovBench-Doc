@@ -1,0 +1,129 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        252.28,
+        178.5,
+        339.15,
+        178.5,
+        339.15,
+        197.03,
+        252.28,
+        197.03
+      ],
+      "text": "सलमेग जयते"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        148.75,
+        245.86,
+        446.85,
+        245.86,
+        446.85,
+        426.89,
+        148.75,
+        426.89
+      ],
+      "text": "सीविल विस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        203.49,
+        591.08,
+        387.35,
+        591.08,
+        387.35,
+        627.29,
+        203.49,
+        627.29
+      ],
+      "text": "भारतीय फलस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        233.84,
+        663.5,
+        355.81,
+        663.5,
+        355.81,
+        692.12,
+        233.84,
+        692.12
+      ],
+      "text": "गहु मेजालय"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        227.29,
+        696.33,
+        361.16,
+        696.33,
+        361.16,
+        719.07,
+        227.29,
+        719.07
+      ],
+      "text": "भारत सरकार"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        117.22,
+        726.65,
+        479.57,
+        726.65,
+        479.57,
+        783.9,
+        117.22,
+        783.9
+      ],
+      "text": "MINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1808,
+      "output": 276,
+      "total": 2084
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.05
+    },
+    "native_costs": {
+      "realtime": 0.003758,
+      "batch": 0.001879
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.375822,
+      "batch": 0.187911,
+      "savings": 0.187911,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

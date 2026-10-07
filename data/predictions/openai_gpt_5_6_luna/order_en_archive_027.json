@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_en_archive_027",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        211.22,
+        39.57,
+        499.2,
+        39.57,
+        499.2,
+        64.83,
+        211.22,
+        64.83
+      ],
+      "text": "List of Ministers appointed on 15th August 1947"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        86.27,
+        70.73,
+        577.15,
+        70.73,
+        577.15,
+        489.2,
+        86.27,
+        489.2
+      ],
+      "html": "<table><thead><tr><td>No.</td><td>Name of Minister</td><td>Portfolio (Cabinet)</td><td>Date of appointment</td></tr></thead><tbody><tr><td>1.</td><td>Shri Jawaharlal Nehru</td><td>Prime MinisterMinister of External Affairs,Commonwealth Relations andScientific Research.</td><td>15-8-47</td></tr><tr><td>2.</td><td>Sardar Vallabhbhai Patel.</td><td>Deputy Prime MinisterMinister for Home, Information &amp;Broadcasting and States.</td><td>-do-</td></tr><tr><td>3.</td><td>Dr. Rajendra Prasad,</td><td>Food &amp; Agriculture.</td><td>-do-</td></tr><tr><td>4.</td><td>Maulana Abul Kalam Azad,</td><td>Education.</td><td>-do-</td></tr><tr><td>5.</td><td>Dr. John Matthai.</td><td>Transport.</td><td>-do-</td></tr><tr><td>6.</td><td>Sardar Baldev Singh,</td><td>Defence.</td><td>-do-</td></tr><tr><td>7.</td><td>Shri Jagjivan Ram,</td><td>Labour.</td><td>-do-</td></tr><tr><td>8.</td><td>Dr. C.H. Bhabha.</td><td>Commerce.</td><td>-do-</td></tr><tr><td>9.</td><td>Shri Rafi Ahmed Kidwai,</td><td>Communications.</td><td>-do-</td></tr><tr><td>10.</td><td>Rajkumari Amrit Kaur.</td><td>Health.</td><td>-do-</td></tr><tr><td>11.</td><td>Dr. B.R. Ambedkar.</td><td>Law</td><td>-do-</td></tr><tr><td>12.</td><td>Shri R.K. ShanmukhamChetty.</td><td>Finance.</td><td>-do-</td></tr><tr><td>13.</td><td>Dr. Shyama Pd. Mukherjee</td><td>Industry &amp; Supply.</td><td>-do-</td></tr><tr><td>14.</td><td>Shri N.V. Gadgil.</td><td>Works, Mines &amp; Power.</td><td>-do-</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 1725,
+      "total": 5019
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002548,
+      "batch": 0.001274
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.25485,
+      "batch": 0.127425,
+      "savings": 0.127425,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

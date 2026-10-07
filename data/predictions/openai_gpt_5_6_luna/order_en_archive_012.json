@@ -1,0 +1,238 @@
+{
+  "doc_id": "order_en_archive_012",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        218.96,
+        32.84,
+        475.41,
+        32.84,
+        475.41,
+        106.93,
+        218.96,
+        106.93
+      ],
+      "text": "No. 55/4/CF-66(i)(i)\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\n\nNew Delhi, the 15th January 1966."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        415.9,
+        40.42,
+        464.69,
+        40.42,
+        464.69,
+        53.89,
+        415.9,
+        53.89
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        136.85,
+        120.41,
+        205.27,
+        120.41,
+        205.27,
+        659.29,
+        136.85,
+        659.29
+      ],
+      "text": "The undersigned is directed to state that the following\nMinister and Deputy Minister were appointed with effect from\nthe forenoon of January 11, 1966:-"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        248.11,
+        159.98,
+        462.31,
+        159.98,
+        462.31,
+        191.98,
+        248.11,
+        191.98
+      ],
+      "text": "MEMBER OF THE CABINET\n\nShri Asoke Kumar Sen --- Minister of Law and Social\n Security."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        248.71,
+        207.97,
+        449.82,
+        207.97,
+        449.82,
+        249.23,
+        248.71,
+        249.23
+      ],
+      "text": "DEPUTY MINISTER\n\nShri S.V. Rameswamy --- Deputy Minister in the\n Ministry of Commerce."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        332.01,
+        268.6,
+        456.37,
+        268.6,
+        456.37,
+        309.01,
+        332.01,
+        309.01
+      ],
+      "text": "(D.P. Chopra)\nfor Cabinet Secretary."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        130.31,
+        309.01,
+        390.92,
+        309.01,
+        390.92,
+        341.01,
+        130.31,
+        341.01
+      ],
+      "text": "To\n\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        130.9,
+        349.43,
+        479.57,
+        349.43,
+        479.57,
+        664.34,
+        130.9,
+        664.34
+      ],
+      "text": "Copy forwarded to the Secretary to the Prime Minister/\nthe Private Secretary to the Prime Minister, for information.\n\nCopy forwarded to the Secretary to the President/the\nPrivate Secretary to the Vice-President, for information."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        337.36,
+        415.11,
+        484.92,
+        415.11,
+        484.92,
+        460.57,
+        337.36,
+        460.57
+      ],
+      "text": "(D.P. Chopra)\nUnder Secretary to the Cabinet."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        125.55,
+        461.42,
+        471.84,
+        461.42,
+        471.84,
+        500.99,
+        125.55,
+        500.99
+      ],
+      "text": "Copy forwarded to all Secretaries/Special Secretaries/\nAdditional Secretaries to the Government of India/Chairman,\nRailway Board/Secretary, Election Commission, for information."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        124.35,
+        503.52,
+        462.31,
+        503.52,
+        462.31,
+        536.35,
+        124.35,
+        536.35
+      ],
+      "text": "Copy forwarded to all Ministries of the Government of\nIndia/Lok Sabha Secretariat/Rajya Sabha Secretariat, for\ninformation."
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        333.2,
+        551.51,
+        482.55,
+        551.51,
+        482.55,
+        592.77,
+        333.2,
+        592.77
+      ],
+      "text": "(D.P. Chopra)\nUnder Secretary to the Cabinet."
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        118.41,
+        601.19,
+        207.06,
+        601.19,
+        207.06,
+        617.19,
+        118.41,
+        617.19
+      ],
+      "text": "MANOCHAN"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2144,
+      "total": 5438
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002968,
+      "batch": 0.001484
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.29675,
+      "batch": 0.148375,
+      "savings": 0.148375,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

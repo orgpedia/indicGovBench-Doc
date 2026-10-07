@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_006",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        463.5,
+        26.1,
+        485.52,
+        26.1,
+        485.52,
+        33.68,
+        463.5,
+        33.68
+      ],
+      "text": "181"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        265.97,
+        89.25,
+        377.23,
+        89.25,
+        377.23,
+        99.36,
+        265.97,
+        99.36
+      ],
+      "text": "CABINET SECRETARIAT"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        166.6,
+        117.88,
+        470.65,
+        117.88,
+        470.65,
+        128.83,
+        166.6,
+        128.83
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS AS ON 6TH AUGUST, 1990."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        271.92,
+        166.72,
+        371.28,
+        166.72,
+        371.28,
+        176.82,
+        271.92,
+        176.82
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        132.09,
+        206.29,
+        511.7,
+        206.29,
+        511.7,
+        749.38,
+        132.09,
+        749.38
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Vishwanath Pratap Singh</td><td>Prime Minister and also incharge of the Ministries/ Departments of Defence; Personnel; Public Grievances and Pensions; Science &amp; Technology; Atomic Energy; Electronics; Ocean Development; Space and other subjects not allocated to any other Cabinet Minister or Minister of State (Independent charge).</td></tr><tr><td>2.</td><td>Prof. Madhu Dandavate</td><td>Minister of Finance.</td></tr><tr><td>3.</td><td>Shri Mufti Mohammad Sayeed</td><td>Minister of Home Affairs.</td></tr><tr><td>4.</td><td>Shri Ajit Singh</td><td>Minister of Industry.</td></tr><tr><td>5.</td><td>Shri Arun Kumar Nehru</td><td>Minister of Commerce and Tourism.</td></tr><tr><td>6.</td><td>Shri I.K. Gujral</td><td>Minister of External Affairs.</td></tr><tr><td>7.</td><td>Shri George Fernandes</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri Sharad Yadav</td><td>Minister of Textiles with additional charge of the Ministry of Food Processing Industries.</td></tr><tr><td>9.</td><td>Shri Arif Mohd. Khan</td><td>Minister of Energy with additional charge of the Ministry of Civil Aviation.</td></tr><tr><td>10.</td><td>Shri M.S. Gurupadaswamy</td><td>Minister of Petroleum and Chemicals.</td></tr><tr><td>11.</td><td>Shri K.P. Unnikrishnan</td><td>Minister of Surface Transport.</td></tr><tr><td>12.</td><td>Shri Dinesh Goswami</td><td>Minister of Steel and Mines with additional charge of the Ministry of Law and Justice.</td></tr><tr><td>13.</td><td>Shri Murasoli Maran</td><td>Minister of Urban Development.</td></tr><tr><td>14.</td><td>Shri Nathu Ram Mirdha</td><td>Minister of Food and Civil Supplies.</td></tr><tr><td>15.</td><td>Shri Nilamani Routray</td><td>Minister of Environment and Forests.</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        421.85,
+        759.48,
+        450.42,
+        759.48,
+        450.42,
+        769.59,
+        421.85,
+        769.59
+      ],
+      "text": "2/-.."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 5370,
+      "output": 1097,
+      "total": 6467
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.032565,
+      "batch": 0.016282
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.2565,
+      "batch": 1.62825,
+      "savings": 1.62825,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

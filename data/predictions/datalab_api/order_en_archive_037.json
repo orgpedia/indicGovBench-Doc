@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        162.9,
+        120.8,
+        431.5,
+        120.8,
+        431.5,
+        132.7,
+        162.9,
+        132.7
+      ],
+      "text": "MINISTER OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        71.9,
+        164.9,
+        530.7,
+        164.9,
+        530.7,
+        309.5,
+        71.9,
+        309.5
+      ],
+      "text": "1.Shri Harmohan DhawanMinister of State (Independent Charge) of the Ministry of Civil Aviation.2.Shrimati Maneka GandhiMinister of State (Independent Charge) of the Ministry of Environment & Forests.3.Dr. Sanjay SinghMinister of State (Independent Charge) of the Ministry of Communications."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        282.2,
+        333.4,
+        318.2,
+        333.4,
+        318.2,
+        340.1,
+        282.2,
+        340.1
+      ],
+      "text": "-----"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        239.7,
+        375.4,
+        362.3,
+        375.4,
+        362.3,
+        387.8,
+        239.7,
+        387.8
+      ],
+      "text": "MINISTER OF STATE"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        71.9,
+        421.0,
+        530.7,
+        421.0,
+        530.7,
+        740.9,
+        71.9,
+        740.9
+      ],
+      "text": "1.Shri Babanrao DhakaneMinister of State in the Ministry of Energy.2.Shri Bhakta Charan DasMinister of State in the Ministry of Railways.3.Shri Kamal MorarkaMinister of State in the Prime Minister's Office.4.Shri Lalit Vijay SinghMinister of State in the Ministry of Defence.5.Shri Ram Bahadur SinghMinister of State in the Department of Rural Development in the Ministry of Agriculture.6.Shri Ramji Lal SumanMinister of State in the Ministry of Labour and Minister of State in the Ministry of Welfare.7.Shri Subodh Kant SahayMinister of State in the Ministry of Home Affairs and Minister of State in the Ministry of Information and Broadcasting."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        282.2,
+        764.2,
+        318.2,
+        764.2,
+        318.2,
+        771.0,
+        282.2,
+        771.0
+      ],
+      "text": "-----"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

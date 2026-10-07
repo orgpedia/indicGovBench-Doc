@@ -1,0 +1,497 @@
+{
+  "doc_id": "order_en_current_017",
+  "total_words": 24,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "सत्यमेव जयते",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "सत्यमेव",
+          "gcv_text": "सत्यमेव",
+          "page_no": 1,
+          "bbox": {
+            "l": 254.07,
+            "t": 663.95,
+            "r": 300.62,
+            "b": 646.92
+          },
+          "crop_bbox": {
+            "l": 250.07,
+            "t": 667.95,
+            "r": 304.62,
+            "b": 642.92
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "जयते",
+          "gcv_text": "जयते",
+          "page_no": 1,
+          "bbox": {
+            "l": 304.7,
+            "t": 664.19,
+            "r": 336.85,
+            "b": 647.16
+          },
+          "crop_bbox": {
+            "l": 300.7,
+            "t": 668.19,
+            "r": 340.85,
+            "b": 643.16
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "सिविल लिस्ट\nCIVIL LIST\n2026",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "सिविल",
+          "gcv_text": "सिविल",
+          "page_no": 1,
+          "bbox": {
+            "l": 144.43,
+            "t": 593.41,
+            "r": 297.5,
+            "b": 534.86
+          },
+          "crop_bbox": {
+            "l": 136.78,
+            "t": 597.41,
+            "r": 305.15,
+            "b": 530.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "लिस्ट",
+          "gcv_text": "लिस्ट",
+          "page_no": 1,
+          "bbox": {
+            "l": 330.37,
+            "t": 593.41,
+            "r": 447.45,
+            "b": 534.86
+          },
+          "crop_bbox": {
+            "l": 324.52,
+            "t": 597.41,
+            "r": 453.3,
+            "b": 530.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "CIVIL",
+          "gcv_text": "CIVIL",
+          "page_no": 1,
+          "bbox": {
+            "l": 149.23,
+            "t": 517.34,
+            "r": 304.7,
+            "b": 480.15
+          },
+          "crop_bbox": {
+            "l": 141.46,
+            "t": 521.34,
+            "r": 312.47,
+            "b": 476.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "LIST",
+          "gcv_text": "LIST",
+          "page_no": 1,
+          "bbox": {
+            "l": 327.01,
+            "t": 517.34,
+            "r": 445.05,
+            "b": 480.15
+          },
+          "crop_bbox": {
+            "l": 321.11,
+            "t": 521.34,
+            "r": 450.95,
+            "b": 476.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "2026",
+          "gcv_text": "2026",
+          "page_no": 1,
+          "bbox": {
+            "l": 226.72,
+            "t": 459.51,
+            "r": 365.64,
+            "b": 419.68
+          },
+          "crop_bbox": {
+            "l": 219.77,
+            "t": 463.51,
+            "r": 372.59,
+            "b": 415.68
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "भारतीय",
+          "gcv_text": "भारतीय",
+          "page_no": 1,
+          "bbox": {
+            "l": 237.76,
+            "t": 250.75,
+            "r": 280.23,
+            "b": 233.96
+          },
+          "crop_bbox": {
+            "l": 233.76,
+            "t": 254.75,
+            "r": 284.23,
+            "b": 229.96
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "पुलिस",
+          "gcv_text": "पुलिस",
+          "page_no": 1,
+          "bbox": {
+            "l": 286.46,
+            "t": 250.27,
+            "r": 318.61,
+            "b": 233.72
+          },
+          "crop_bbox": {
+            "l": 282.46,
+            "t": 254.27,
+            "r": 322.61,
+            "b": 229.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "सेवा",
+          "gcv_text": "सेवा",
+          "page_no": 1,
+          "bbox": {
+            "l": 326.05,
+            "t": 250.03,
+            "r": 348.36,
+            "b": 233.48
+          },
+          "crop_bbox": {
+            "l": 322.05,
+            "t": 254.03,
+            "r": 352.36,
+            "b": 229.48
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "INDIAN",
+          "gcv_text": "INDIAN",
+          "page_no": 1,
+          "bbox": {
+            "l": 205.61,
+            "t": 228.2,
+            "r": 259.11,
+            "b": 217.16
+          },
+          "crop_bbox": {
+            "l": 201.61,
+            "t": 232.2,
+            "r": 263.11,
+            "b": 213.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "POLICE",
+          "gcv_text": "POLICE",
+          "page_no": 1,
+          "bbox": {
+            "l": 265.11,
+            "t": 228.2,
+            "r": 318.85,
+            "b": 217.16
+          },
+          "crop_bbox": {
+            "l": 261.11,
+            "t": 232.2,
+            "r": 322.85,
+            "b": 213.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "SERVICE",
+          "gcv_text": "SERVICE",
+          "page_no": 1,
+          "bbox": {
+            "l": 323.17,
+            "t": 228.2,
+            "r": 385.55,
+            "b": 217.16
+          },
+          "crop_bbox": {
+            "l": 319.17,
+            "t": 232.2,
+            "r": 389.55,
+            "b": 213.16
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "गृह मंत्रालय\nभारत सरकार\nMINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "गृह",
+          "gcv_text": "गृह",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.6,
+            "t": 177.09,
+            "r": 269.19,
+            "b": 149.97
+          },
+          "crop_bbox": {
+            "l": 231.6,
+            "t": 181.09,
+            "r": 273.19,
+            "b": 145.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "मंत्रालय",
+          "gcv_text": "मंत्रालय",
+          "page_no": 1,
+          "bbox": {
+            "l": 281.91,
+            "t": 183.33,
+            "r": 354.36,
+            "b": 153.09
+          },
+          "crop_bbox": {
+            "l": 277.91,
+            "t": 187.33,
+            "r": 358.36,
+            "b": 149.09
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "भारत",
+          "gcv_text": "भारत",
+          "page_no": 1,
+          "bbox": {
+            "l": 227.44,
+            "t": 142.29,
+            "r": 280.23,
+            "b": 125.5
+          },
+          "crop_bbox": {
+            "l": 223.44,
+            "t": 146.29,
+            "r": 284.23,
+            "b": 121.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "सरकार",
+          "gcv_text": "सरकार",
+          "page_no": 1,
+          "bbox": {
+            "l": 291.02,
+            "t": 142.29,
+            "r": 359.16,
+            "b": 125.5
+          },
+          "crop_bbox": {
+            "l": 287.02,
+            "t": 146.29,
+            "r": 363.16,
+            "b": 121.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "MINISTRY",
+          "gcv_text": "MINISTRY",
+          "page_no": 1,
+          "bbox": {
+            "l": 119.0,
+            "t": 110.86,
+            "r": 241.84,
+            "b": 93.1
+          },
+          "crop_bbox": {
+            "l": 112.86,
+            "t": 114.86,
+            "r": 247.98,
+            "b": 89.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "OF",
+          "gcv_text": "OF",
+          "page_no": 1,
+          "bbox": {
+            "l": 250.96,
+            "t": 110.86,
+            "r": 283.58,
+            "b": 93.1
+          },
+          "crop_bbox": {
+            "l": 246.96,
+            "t": 114.86,
+            "r": 287.58,
+            "b": 89.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "HOME",
+          "gcv_text": "HOME",
+          "page_no": 1,
+          "bbox": {
+            "l": 292.22,
+            "t": 110.86,
+            "r": 368.28,
+            "b": 93.1
+          },
+          "crop_bbox": {
+            "l": 288.22,
+            "t": 114.86,
+            "r": 372.28,
+            "b": 89.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "AFFAIRS",
+          "gcv_text": "AFFAIRS",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.47,
+            "t": 110.86,
+            "r": 477.92,
+            "b": 93.1
+          },
+          "crop_bbox": {
+            "l": 370.35,
+            "t": 114.86,
+            "r": 483.04,
+            "b": 89.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "GOVERNMENT",
+          "gcv_text": "GOVERNMENT",
+          "page_no": 1,
+          "bbox": {
+            "l": 151.63,
+            "t": 78.94,
+            "r": 330.85,
+            "b": 61.19
+          },
+          "crop_bbox": {
+            "l": 142.67,
+            "t": 82.94,
+            "r": 339.81,
+            "b": 57.19
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "OF",
+          "gcv_text": "OF",
+          "page_no": 1,
+          "bbox": {
+            "l": 339.49,
+            "t": 78.94,
+            "r": 370.68,
+            "b": 61.19
+          },
+          "crop_bbox": {
+            "l": 335.49,
+            "t": 82.94,
+            "r": 374.68,
+            "b": 57.19
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "INDIA",
+          "gcv_text": "INDIA",
+          "page_no": 1,
+          "bbox": {
+            "l": 380.03,
+            "t": 78.94,
+            "r": 450.33,
+            "b": 61.19
+          },
+          "crop_bbox": {
+            "l": 376.03,
+            "t": 82.94,
+            "r": 454.33,
+            "b": 57.19
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

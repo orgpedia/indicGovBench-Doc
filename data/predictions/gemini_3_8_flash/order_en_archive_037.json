@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        541.45,
+        28.63,
+        556.92,
+        28.63,
+        556.92,
+        43.78,
+        541.45,
+        43.78
+      ],
+      "text": "35"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        283.81,
+        58.1,
+        319.52,
+        58.1,
+        319.52,
+        67.36,
+        283.81,
+        67.36
+      ],
+      "text": "-2-"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        165.41,
+        123.77,
+        431.38,
+        123.77,
+        431.38,
+        134.72,
+        165.41,
+        134.72
+      ],
+      "text": "MINISTER OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        74.97,
+        167.56,
+        528.36,
+        167.56,
+        528.36,
+        201.24,
+        74.97,
+        201.24
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Harmohan Dhawan</td><td>Minister of State (Independent Charge) of the Ministry of Civil Aviation.</td></tr><tr><td>2.</td><td>Shrimati Maneka Gandhi</td><td>Minister of State (Independent Charge) of the Ministry of Environment &amp; Forests.</td></tr><tr><td>3.</td><td>Dr. Sanjay Singh</td><td>Minister of State (Independent Charge) of the Ministry of Communications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        283.81,
+        335.96,
+        318.33,
+        335.96,
+        318.33,
+        341.01,
+        283.81,
+        341.01
+      ],
+      "text": "-----"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        242.76,
+        378.06,
+        361.76,
+        378.06,
+        361.76,
+        388.16,
+        242.76,
+        388.16
+      ],
+      "text": "MINISTER OF STATE"
+    },
+    {
+      "id": 6,
+      "type": "table",
+      "order": 6,
+      "poly": [
+        74.97,
+        422.68,
+        529.55,
+        422.68,
+        529.55,
+        742.64,
+        74.97,
+        742.64
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Babanrao Dhakane</td><td>Minister of State in the Ministry of Energy.</td></tr><tr><td>2.</td><td>Shri Bhakta Charan Das</td><td>Minister of State in the Ministry of Railways.</td></tr><tr><td>3.</td><td>Shri Kamal Morarka</td><td>Minister of State in the Prime Minister&#x27;s Office.</td></tr><tr><td>4.</td><td>Shri Lalit Vijay Singh</td><td>Minister of State in the Ministry of Defence.</td></tr><tr><td>5.</td><td>Shri Ram Bahadur Singh</td><td>Minister of State in the Department of Rural Development in the Ministry of Agriculture.</td></tr><tr><td>6.</td><td>Shri Ramji Lal Suman</td><td>Minister of State in the Ministry of Labour and Minister of State in the Ministry of Welfare.</td></tr><tr><td>7.</td><td>Shri Subodh Kant Sahay</td><td>Minister of State in the Ministry of Home Affairs and Minister of State in the Ministry of Information and Broadcasting.</td></tr></tbody></table>"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        283.81,
+        767.9,
+        318.33,
+        767.9,
+        318.33,
+        772.11,
+        283.81,
+        772.11
+      ],
+      "text": "-----"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        425.42,
+        799.06,
+        451.01,
+        799.06,
+        451.01,
+        807.48,
+        425.42,
+        807.48
+      ],
+      "text": "...3"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        66.64,
+        811.69,
+        126.14,
+        811.69,
+        126.14,
+        826.0,
+        66.64,
+        826.0
+      ],
+      "text": "300 Copies"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1593,
+      "output": 716,
+      "total": 2309
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000446,
+      "batch": 0.000223
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.04457,
+      "batch": 0.022285,
+      "savings": 0.022285,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

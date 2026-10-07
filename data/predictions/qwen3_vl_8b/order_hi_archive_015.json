@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_hi_archive_015",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        117.81,
+        82.52,
+        477.79,
+        82.52,
+        477.79,
+        99.36,
+        117.81,
+        99.36
+      ],
+      "text": "निरीक्षणालय द्वारा संस्तुत सामान्य अभिलेखों की बोर्डिंग हेतु निर्धारित समय/प्रविधि"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 4195,
+      "output": 8000,
+      "total": 12195
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 3.76
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

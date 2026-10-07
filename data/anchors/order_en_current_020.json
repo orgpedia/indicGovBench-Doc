@@ -1,0 +1,129 @@
+{
+  "doc_id": "order_en_current_020",
+  "total_words": 5,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "पश्चिम बंगाल",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "पश्चिम",
+          "gcv_text": "पश्चिम",
+          "page_no": 1,
+          "bbox": {
+            "l": 61.18,
+            "t": 809.12,
+            "r": 83.25,
+            "b": 799.04
+          },
+          "crop_bbox": {
+            "l": 57.18,
+            "t": 813.12,
+            "r": 87.25,
+            "b": 795.04
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "बंगाल",
+          "gcv_text": "बंगाल",
+          "page_no": 1,
+          "bbox": {
+            "l": 85.41,
+            "t": 808.88,
+            "r": 107.0,
+            "b": 798.8
+          },
+          "crop_bbox": {
+            "l": 81.41,
+            "t": 812.88,
+            "r": 111.0,
+            "b": 794.8
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "West Bengal",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "West",
+          "gcv_text": "West",
+          "page_no": 1,
+          "bbox": {
+            "l": 485.12,
+            "t": 807.44,
+            "r": 504.55,
+            "b": 799.52
+          },
+          "crop_bbox": {
+            "l": 481.12,
+            "t": 811.44,
+            "r": 508.55,
+            "b": 795.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Bengal",
+          "gcv_text": "Bengal",
+          "page_no": 1,
+          "bbox": {
+            "l": 506.71,
+            "t": 806.72,
+            "r": 533.82,
+            "b": 798.56
+          },
+          "crop_bbox": {
+            "l": 502.71,
+            "t": 810.72,
+            "r": 537.82,
+            "b": 794.56
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "450",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "450",
+          "gcv_text": "450",
+          "page_no": 1,
+          "bbox": {
+            "l": 290.06,
+            "t": 148.81,
+            "r": 304.22,
+            "b": 143.29
+          },
+          "crop_bbox": {
+            "l": 286.06,
+            "t": 152.81,
+            "r": 308.22,
+            "b": 139.29
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

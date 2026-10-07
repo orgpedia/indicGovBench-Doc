@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        70.54,
+        124.85,
+        544.38,
+        124.85,
+        544.38,
+        661.93,
+        70.54,
+        661.93
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>8.No. 43</td></tr><tr><td>59 IMMEDIATE DATENO. 55/4/CF-64(1)GOVERNMENT OF INDIACABINET SECRETARIAT(Department of Cabinet Affairs)New Delhi, the 9th June 1964.The undersigned is directed to state that the Members assumed office with effect from the forenoon of Tuesday, June 9,of the new Council of Ministers shown in the enclosed list for all members of the Council of Ministers.Copy with a copy of the enclosure forwarded to the Principal Private Secretary to the Prime Minister/P.T.O.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

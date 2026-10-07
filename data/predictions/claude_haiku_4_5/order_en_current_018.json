@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_en_current_018",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        208.25,
+        33.68,
+        386.75,
+        33.68,
+        386.75,
+        75.78,
+        208.25,
+        75.78
+      ],
+      "text": "परिशिष्ट-4"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        416.5,
+        75.78,
+        565.25,
+        75.78,
+        565.25,
+        109.46,
+        416.5,
+        109.46
+      ],
+      "text": "APPENDIX – IV"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        148.75,
+        109.46,
+        565.25,
+        109.46,
+        565.25,
+        151.56,
+        148.75,
+        151.56
+      ],
+      "text": "वेतनमान 01-01-2016 से लागू\nPAY SCALES WITH EFFECT FROM 01.01.2016"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        59.5,
+        168.4,
+        565.25,
+        168.4,
+        565.25,
+        757.8,
+        59.5,
+        757.8
+      ],
+      "html": "<table><thead><tr><td>RANK</td><td>TIME – SCALE</td><td>Entry level</td><td>Level</td></tr></thead><tbody><tr><td rowspan=\"4\">SP</td><td>Junior Scale</td><td>Rs. 56,100</td><td>10</td></tr><tr><td>Senior Scale</td><td>Rs. 67,700</td><td>11</td></tr><tr><td>Junior Administrative Grade</td><td>Rs. 78,800</td><td>12</td></tr><tr><td>Selection Grade</td><td>Rs. 1,18,500</td><td>13</td></tr><tr><td>DIG</td><td>Super-time Scale</td><td>Rs. 1,31,100</td><td>13A</td></tr><tr><td>IG</td><td>Super-time Scale</td><td>Rs. 1,44,200</td><td>14</td></tr><tr><td>ADG</td><td>Above Super-time Scale</td><td>Rs.1,82,200</td><td>15</td></tr><tr><td rowspan=\"2\">DG</td><td rowspan=\"2\">Above Super-time Scale</td><td>Rs.2,05,400</td><td>16</td></tr><tr><td>Rs. 2,25,000</td><td>17</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        267.75,
+        799.9,
+        327.25,
+        799.9,
+        327.25,
+        825.16,
+        267.75,
+        825.16
+      ],
+      "text": "505"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 628,
+      "total": 2553
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004052,
+      "batch": 0.002026
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4052,
+      "batch": 0.2026,
+      "savings": 0.2026,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

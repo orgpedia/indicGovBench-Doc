@@ -1,0 +1,154 @@
+{
+  "doc_id": "order_en_current_049",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        306.6,
+        69.21,
+        322.89,
+        69.21,
+        322.89,
+        79.09,
+        306.6,
+        79.09
+      ],
+      "text": "-2-"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        93.9,
+        80.74,
+        535.6,
+        80.74,
+        535.6,
+        106.28,
+        93.9,
+        106.28
+      ],
+      "text": "VIGILANCE PROFILE OF OFFICERS FOR WHOM VIGILANCE COMMENTS / CELARANCE BEING SOUGHT"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        195.46,
+        107.93,
+        433.08,
+        107.93,
+        433.08,
+        120.29,
+        195.46,
+        120.29
+      ],
+      "text": "(To be furnished and signed by the CVO or HOD)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        93.9,
+        133.47,
+        192.58,
+        133.47,
+        192.58,
+        145.83,
+        93.9,
+        145.83
+      ],
+      "text": "Name of the Officer"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        93.9,
+        159.01,
+        343.01,
+        159.01,
+        343.01,
+        558.59,
+        93.9,
+        558.59
+      ],
+      "text": "8. Whether the officer has been placed on the \"Agreed List\" or \"List of Officers of Doubtful Integrity\". (If yes, details to be given)\n9. Whether any allegation of misconduct involving vigilance angle was examined against the officer during the last 10 years and if so with what result \\((^{*})\\)\n10. Whether any punishment was awarded to the officer during the last 10 years and if so, the date of imposition and details of the penalty \\((^{*})\\)\n11. Is any disciplinary / criminal proceedings or charge sheet pending against the officers, as on date. [If so, details to be furnished - including reference no., if any, of the Commission]\n12. Is any action contemplated against the officer as on date [If so, details to be furnished (*)\n13. Whether any complaint with vigilance angle is pending against the officer [If so, details to be furnished]."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        133.18,
+        597.31,
+        170.55,
+        597.31,
+        170.55,
+        609.67,
+        133.18,
+        609.67
+      ],
+      "text": "DATE:"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        390.92,
+        597.31,
+        532.72,
+        597.31,
+        532.72,
+        611.32,
+        390.92,
+        611.32
+      ],
+      "text": "(NAME AND SIGNATURE)"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        91.02,
+        623.67,
+        533.68,
+        623.67,
+        533.68,
+        650.04,
+        91.02,
+        650.04
+      ],
+      "text": "(*) If vigilance clearance had been obtained from the Commission in the past, the information may be provided for the period thereafter."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

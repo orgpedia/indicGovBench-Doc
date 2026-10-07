@@ -1,0 +1,3835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndicGovBench-Orders: Annotation Guidelines, Data Format &amp; Metrics Specification</title>
+<link rel="stylesheet" href="css/tokens.css">
+<style>
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --border: #e2e8f0;
+    --border-dark: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --accent-dark: #1d4ed8;
+    --green-bg: #dcfce7;
+    --green-text: #166534;
+    --amber-bg: #fef3c7;
+    --amber-text: #92400e;
+    --red-bg: #fee2e2;
+    --red-text: #991b1b;
+    --purple-bg: #f3e8ff;
+    --purple-text: #6b21a8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Top Global Header */
+  #global-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 40;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .brand-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .brand-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: #f1f5f9;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-nav {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--border);
+    background: #ffffff;
+    color: var(--text-primary);
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .btn-nav:hover {
+    background: var(--bg-page);
+    border-color: var(--border-dark);
+  }
+  .btn-nav-primary {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+  }
+  .btn-nav-primary:hover {
+    background: #1e293b;
+    color: #ffffff;
+  }
+
+  /* Two-column layout */
+  .layout-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Left Sidebar TOC */
+  #toc-sidebar {
+    width: 320px;
+    background: #ffffff;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  .toc-header {
+    padding: 14px 18px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .toc-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .toc-search input {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 12.5px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .toc-search input:focus {
+    border-color: var(--accent);
+  }
+  .toc-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 14px 24px;
+    font-size: 13px;
+  }
+  .toc-content ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .toc-content ul ul {
+    padding-left: 14px;
+    border-left: 1px solid #f1f5f9;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .toc-content li {
+    margin-bottom: 3px;
+  }
+  .toc-content a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    transition: all 0.1s ease;
+  }
+  .toc-content a:hover {
+    color: var(--accent);
+    background: var(--accent-light);
+  }
+  .toc-content a.active {
+    color: var(--accent);
+    background: var(--accent-light);
+    font-weight: 700;
+  }
+
+  /* Main Reader Area */
+  #main-reader {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--bg-page);
+    scroll-behavior: smooth;
+    padding: 24px 32px 60px;
+  }
+  .reader-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px 48px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+
+  /* Fast Jump Pills */
+  .fast-jump-bar {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .fast-jump-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .fast-jump-pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: #ffffff;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .fast-jump-pill:hover {
+    background: var(--accent-light);
+    border-color: #bfdbfe;
+  }
+
+  /* Annotator's Cheat Sheet Card */
+  .cheat-sheet-card {
+    background: #f0f7ff;
+    border: 1.5px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-bottom: 32px;
+  }
+  .cheat-sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbeafe;
+  }
+  .cheat-sheet-header h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1e40af;
+  }
+  .cheat-sheet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 860px) { .cheat-sheet-grid { grid-template-columns: 1fr; } }
+  .cheat-sheet-col {
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+  }
+  .cheat-sheet-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cheat-sheet-col ul, .cheat-sheet-col ol {
+    padding-left: 18px;
+    margin-top: 4px;
+    color: #334155;
+    line-height: 1.5;
+  }
+  .cheat-sheet-col li {
+    margin-bottom: 4px;
+  }
+
+  /* Badge Styles */
+  .badge { font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+  .badge-target { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+  .badge-excluded { background: var(--purple-bg); color: var(--purple-text); border: 1px solid #e9d5ff; }
+  .badge-uncertain { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #fde68a; }
+
+  /* RFC 2119 Badges */
+  .rfc-badge {
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    letter-spacing: 0.3px;
+  }
+  .rfc-must { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .rfc-must-not { background: #7f1d1d; color: #ffffff; }
+  .rfc-should { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+  .rfc-should-not { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .rfc-may { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+
+  /* Markdown Typography & Structure */
+  .reader-content h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+  .reader-content h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-top: 36px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  .reader-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+  .reader-content h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .reader-content p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #334155;
+    margin-bottom: 12px;
+  }
+  .reader-content ul, .reader-content ol {
+    padding-left: 24px;
+    margin-bottom: 14px;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .reader-content li {
+    margin-bottom: 6px;
+  }
+  .reader-content hr {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 28px 0;
+  }
+  .reader-content strong {
+    color: #0f172a;
+    font-weight: 700;
+  }
+  .reader-content em {
+    color: #334155;
+  }
+
+  /* Tables */
+  .reader-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 13px;
+    background: #ffffff;
+    border-top: 2px solid var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+  }
+  .reader-content th {
+    background: #f8fafc;
+    border-bottom: 1.5px solid var(--border-dark);
+    padding: 9px 12px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--text-primary);
+  }
+  .reader-content td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: #334155;
+  }
+  .reader-content tr:last-child td {
+    border-bottom: none;
+  }
+  .reader-content tr:hover td {
+    background: #f8fafc;
+  }
+
+  /* Code & Syntax */
+  .reader-content code {
+    font-family: "SFMono-Regular", Consolas, Menlo, Monaco, monospace;
+    font-size: 12.5px;
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+  .code-block-wrapper {
+    position: relative;
+    margin: 14px 0 20px;
+  }
+  .reader-content pre {
+    background: #0f172a;
+    color: #f8fafc;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    font-size: 12.5px;
+    line-height: 1.55;
+    font-family: "SFMono-Regular", Consolas, Menlo, Monaco, monospace;
+  }
+  .reader-content pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+  }
+  .btn-copy-code {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 3px 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-copy-code:hover {
+    background: #334155;
+    color: #ffffff;
+  }
+
+  /* Worked Example Figure Card */
+  .protocol-figure-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 24px 0 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .figure-header {
+    background: #f8fafc;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .figure-badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1e40af;
+    background: #dbeafe;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .figure-img-container {
+    padding: 16px;
+    text-align: center;
+    background: #f1f5f9;
+    cursor: zoom-in;
+    position: relative;
+  }
+  .annotated-doc-image {
+    max-width: 100%;
+    max-height: 640px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+  }
+  .annotated-doc-image:hover {
+    transform: scale(1.008);
+  }
+  .figure-overlay-hint {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .figure-caption {
+    padding: 16px 20px;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.6;
+  }
+  .figure-caption ul {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+  .figure-caption li {
+    margin-bottom: 4px;
+  }
+
+  /* Lightbox Modal */
+  #lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.85);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #lightbox-modal.active {
+    display: flex;
+  }
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  .btn-close-lightbox {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Back to top button */
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 32px;
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    transition: opacity 0.2s;
+  }
+  #btn-back-to-top.visible { display: flex; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="global-header">
+  <div class="brand-group">
+    <a href="/" class="brand-title">
+      <span>🏛️ IndicGovBench-Orders</span>
+    </a>
+    <span class="brand-badge">Annotation Protocol &amp; Metrics Spec (v0.9)</span>
+  </div>
+  <div class="header-actions">
+    <a href="/" class="btn-nav">← Benchmark Leaderboard</a>
+    <a href="/metrics" target="_blank" class="btn-nav">🔬 Metrics Demo ↗</a>
+    <a href="/?provider=gemini_3_1_pro" class="btn-nav btn-nav-primary">Audit Workspace →</a>
+  </div>
+</header>
+
+<!-- Main Layout -->
+<div class="layout-body">
+  <!-- Left TOC Sidebar -->
+  <aside id="toc-sidebar">
+    <div class="toc-header">
+      <div class="toc-title">Table of Contents</div>
+      <div class="toc-search">
+        <input type="text" id="tocFilterInput" placeholder="Filter sections (e.g., table, stamp)..." onkeyup="filterToc()">
+      </div>
+    </div>
+    <div class="toc-content" id="tocContainer">
+      <div class="toc">
+<ul>
+<li><a href="#indian-government-document-benchmark">Indian Government Document Benchmark</a><ul>
+<li><a href="#data-format-annotation-guidelines-and-metrics-specification">Data Format, Annotation Guidelines, and Metrics Specification</a></li>
+<li><a href="#1-conventions">1. Conventions</a></li>
+<li><a href="#2-metric-suite">2. Metric Suite</a><ul>
+<li><a href="#21-naming-rationale">2.1 Naming rationale</a></li>
+<li><a href="#22-mandatory-diagnostics">2.2 Mandatory diagnostics</a></li>
+<li><a href="#23-relation-to-anls">2.3 Relation to ANLS</a></li>
+<li><a href="#24-explicitly-deferred">2.4 Explicitly deferred</a></li>
+</ul>
+</li>
+<li><a href="#3-page-image-specification">3. Page Image Specification</a></li>
+<li><a href="#4-corpus">4. Corpus</a><ul>
+<li><a href="#41-composition">4.1 Composition</a></li>
+<li><a href="#42-consequences-of-the-single-page-design">4.2 Consequences of the single-page design</a></li>
+<li><a href="#43-stratification">4.3 Stratification</a></li>
+<li><a href="#44-statistical-reporting">4.4 Statistical reporting</a></li>
+<li><a href="#45-contamination">4.5 Contamination</a></li>
+</ul>
+</li>
+<li><a href="#5-reference-ground-truth-schema">5. Reference (Ground Truth) Schema</a><ul>
+<li><a href="#51-page-record">5.1 Page record</a></li>
+<li><a href="#52-block-record">5.2 Block record</a></li>
+<li><a href="#53-content-field-constraints">5.3 Content field constraints</a></li>
+<li><a href="#54-reading-order">5.4 Reading order</a></li>
+<li><a href="#55-geometry">5.5 Geometry</a></li>
+<li><a href="#56-text-content-rules">5.6 Text content rules</a></li>
+<li><a href="#57-merge-groups-truncated-paragraphs">5.7 Merge groups (truncated paragraphs)</a></li>
+</ul>
+</li>
+<li><a href="#6-annotation-guidelines">6. Annotation Guidelines</a><ul>
+<li><a href="#61-the-governing-question">6.1 The governing question</a></li>
+<li><a href="#62-decision-procedure">6.2 Decision procedure</a></li>
+<li><a href="#63-block-segmentation-where-the-boundaries-go">6.3 Block segmentation — where the boundaries go</a><ul>
+<li><a href="#631-the-mental-model">6.3.1 The mental model</a></li>
+<li><a href="#632-precedence">6.3.2 Precedence</a></li>
+<li><a href="#633-the-split-triggers">6.3.3 The split triggers</a></li>
+<li><a href="#634-what-does-not-split">6.3.4 What does not split</a></li>
+<li><a href="#635-tiebreak">6.3.5 Tiebreak</a></li>
+<li><a href="#636-presentation-is-not-transcribed">6.3.6 Presentation is not transcribed</a></li>
+<li><a href="#637-boilerplate-and-variable-content-do-not-share-a-block">6.3.7 Boilerplate and variable content do not share a block</a></li>
+<li><a href="#638-worked-segmentation">6.3.8 Worked segmentation</a></li>
+</ul>
+</li>
+<li><a href="#64-documentary-roles-closed-list">6.4 Documentary roles (closed list)</a></li>
+<li><a href="#65-target-content-that-belongs-to-the-document">6.5 target — content that belongs to the document</a></li>
+<li><a href="#66-uncertain-legible-content-failures-only">6.6 uncertain — legible-content failures only</a></li>
+<li><a href="#67-reason-vocabulary">6.7 reason vocabulary</a></li>
+<li><a href="#68-stamps-and-seals">6.8 Stamps and seals</a></li>
+<li><a href="#69-handwritten-text">6.9 Handwritten text</a></li>
+<li><a href="#610-signatures">6.10 Signatures</a></li>
+<li><a href="#611-page-numbers-headers-and-footers">6.11 Page numbers, headers and footers</a></li>
+<li><a href="#612-struck-through-and-corrected-text">6.12 Struck-through and corrected text</a></li>
+<li><a href="#613-neighbouring-documents-and-scan-artifacts">6.13 Neighbouring documents and scan artifacts</a></li>
+<li><a href="#614-occlusion">6.14 Occlusion</a></li>
+<li><a href="#615-assigning-reading-order">6.15 Assigning reading order</a></li>
+<li><a href="#616-annotation-quality-control">6.16 Annotation quality control</a></li>
+</ul>
+</li>
+<li><a href="#7-table-html">7. Table HTML</a><ul>
+<li><a href="#71-permitted-markup">7.1 Permitted markup</a></li>
+<li><a href="#72-canonical-serialization">7.2 Canonical serialization</a></li>
+<li><a href="#73-grid-validity">7.3 Grid validity</a></li>
+<li><a href="#74-header-rows">7.4 Header rows</a></li>
+<li><a href="#75-prediction-html-normalization">7.5 Prediction HTML normalization</a></li>
+<li><a href="#76-what-is-a-table-and-where-its-edges-are">7.6 What is a table, and where its edges are</a></li>
+<li><a href="#77-visually-merged-cells">7.7 Visually merged cells</a></li>
+</ul>
+</li>
+<li><a href="#8-text-normalization-profiles">8. Text Normalization Profiles</a><ul>
+<li><a href="#81-character-unit">8.1 Character unit</a></li>
+<li><a href="#82-profile-raw">8.2 Profile raw</a></li>
+<li><a href="#83-profile-norm">8.3 Profile norm</a></li>
+<li><a href="#84-eyelash-reph-unification">8.4 Eyelash reph unification</a></li>
+<li><a href="#85-what-normalization-does-not-do">8.5 What normalization does not do</a></li>
+</ul>
+</li>
+<li><a href="#9-matching">9. Matching</a><ul>
+<li><a href="#91-prediction-formats">9.1 Prediction formats</a><ul>
+<li><a href="#911-block-json-full-scoring">9.1.1 Block JSON — full scoring</a></li>
+<li><a href="#912-markdown-e2ened-only">9.1.2 Markdown — e2eNED only</a></li>
+<li><a href="#913-submission-protocol-and-prompt-disclosure">9.1.3 Submission protocol and prompt disclosure</a></li>
+</ul>
+</li>
+<li><a href="#92-overlap-functions">9.2 Overlap functions</a></li>
+<li><a href="#93-algorithm">9.3 Algorithm</a></li>
+<li><a href="#931-why-adjacency-is-a-diagnostic-not-a-filter">9.3.1 Why adjacency is a diagnostic, not a filter</a></li>
+<li><a href="#94-type-mismatch">9.4 Type mismatch</a></li>
+<li><a href="#95-table-to-table-matching">9.5 Table-to-table matching</a></li>
+<li><a href="#96-markdown-ingest">9.6 Markdown ingest</a></li>
+</ul>
+</li>
+<li><a href="#10-metric-12-textcer">10. Metric 1–2: textCER</a><ul>
+<li><a href="#101-definition">10.1 Definition</a></li>
+<li><a href="#102-scored-units">10.2 Scored units</a></li>
+<li><a href="#103-table-cell-derivation">10.3 Table cell derivation</a></li>
+<li><a href="#104-reported-breakdown">10.4 Reported breakdown</a></li>
+</ul>
+</li>
+<li><a href="#11-metric-34-e2ened">11. Metric 3–4: e2eNED</a><ul>
+<li><a href="#111-definition">11.1 Definition</a></li>
+<li><a href="#112-serializer">11.2 Serializer</a></li>
+<li><a href="#113-known-properties">11.3 Known properties</a></li>
+</ul>
+</li>
+<li><a href="#12-metric-56-teds-and-teds-s">12. Metric 5–6: TEDS and TEDS-S</a><ul>
+<li><a href="#121-definition">12.1 Definition</a></li>
+<li><a href="#122-reference-implementation">12.2 Reference implementation</a></li>
+<li><a href="#123-consequences-for-this-specification">12.3 Consequences for this specification</a></li>
+</ul>
+</li>
+<li><a href="#13-edge-cases">13. Edge Cases</a></li>
+<li><a href="#14-validation-rules">14. Validation Rules</a></li>
+<li><a href="#15-data-provenance">15. Data Provenance</a><ul>
+<li><a href="#151-working-assumption">15.1 Working assumption</a></li>
+<li><a href="#152-two-points-to-confirm-per-source">15.2 Two points to confirm per source</a></li>
+<li><a href="#153-recommended-regardless">15.3 Recommended regardless</a></li>
+</ul>
+</li>
+<li><a href="#16-leaderboard-score">16. Leaderboard Score</a><ul>
+<li><a href="#161-definition">16.1 Definition</a></li>
+<li><a href="#162-why-these-two-metrics">16.2 Why these two metrics</a></li>
+<li><a href="#163-weighting">16.3 Weighting</a></li>
+<li><a href="#164-publication-rules">16.4 Publication rules</a></li>
+</ul>
+</li>
+<li><a href="#17-cost-reporting">17. Cost Reporting</a><ul>
+<li><a href="#171-why-there-is-no-price-performance-ratio">17.1 Why there is no price-performance ratio</a></li>
+<li><a href="#172-what-is-published">17.2 What is published</a></li>
+<li><a href="#173-disclosure-requirements">17.3 Disclosure requirements</a></li>
+<li><a href="#174-caveats-carried-with-every-cost-figure">17.4 Caveats carried with every cost figure</a></li>
+</ul>
+</li>
+<li><a href="#18-open-items">18. Open Items</a><ul>
+<li><a href="#181-teds-for-markdown-submissions-decide-before-announcing">18.1 TEDS for markdown submissions — decide before announcing</a></li>
+<li><a href="#182-table-cell-alignment-coupling-pilot-measurement">18.2 Table cell alignment coupling — pilot measurement</a></li>
+<li><a href="#183-matching-thresholds-and-the-splitmerge-joiner-pilot-measurement">18.3 Matching thresholds and the split/merge joiner — pilot measurement</a></li>
+<li><a href="#184-private-split-for-contamination-control-decide-before-collection">18.4 Private split for contamination control — decide before collection</a></li>
+<li><a href="#185-segmentation-granularity-logic-driven-vs-typography-driven-pilot-measurement">18.5 Segmentation granularity: logic-driven vs typography-driven — pilot measurement</a></li>
+<li><a href="#186-running-headers-and-footers-as-target-pilot-check">18.6 Running headers and footers as target — pilot check</a></li>
+<li><a href="#187-stamp-reading-order-position-pilot-check">18.7 Stamp reading-order position — pilot check</a></li>
+<li><a href="#188-closed-in-earlier-versions">18.8 Closed in earlier versions</a></li>
+</ul>
+</li>
+<li><a href="#19-relation-to-prior-work">19. Relation to Prior Work</a><ul>
+<li><a href="#191-omnidocbench">19.1 OmniDocBench</a></li>
+<li><a href="#192-indic-ocr-benchmarks">19.2 Indic OCR benchmarks</a></li>
+<li><a href="#193-what-is-new-here">19.3 What is new here</a></li>
+</ul>
+</li>
+<li><a href="#20-json-schema">20. JSON Schema</a></li>
+<li><a href="#21-worked-examples">21. Worked Examples</a><ul>
+<li><a href="#211-schema-mechanics">21.1 Schema mechanics</a></li>
+<li><a href="#212-full-page-segmentation">21.2 Full page segmentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </div>
+  </aside>
+
+  <!-- Reader Body -->
+  <main id="main-reader">
+    <div class="reader-inner">
+
+      <!-- Fast Jump Bar -->
+      <div class="fast-jump-bar">
+        <span class="fast-jump-label">⚡ Fast Jump:</span>
+        <a class="fast-jump-pill" href="#6-annotation-guidelines">📌 §6. Annotation Rules</a>
+        <a class="fast-jump-pill" href="#638-worked-segmentation">📸 §6.3.8 Worked Example</a>
+        <a class="fast-jump-pill" href="#7-table-html">📊 §7. Table HTML</a>
+        <a class="fast-jump-pill" href="#8-text-normalization-profiles">🧮 §8. Normalization</a>
+        <a class="fast-jump-pill" href="#9-matching">📐 §9. Matching &amp; IoU</a>
+        <a class="fast-jump-pill" href="#10-metric-12-textcer">🎯 §10-12. Metrics</a>
+        <a class="fast-jump-pill" href="#20-json-schema">⚙️ §20. Schema</a>
+      </div>
+
+      <!-- Annotator's Cheat Sheet Card -->
+      <div class="cheat-sheet-card">
+        <div class="cheat-sheet-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:22px;">⚡</span>
+            <div>
+              <h3 style="margin:0; font-size:15px; font-weight:800; color:#1e40af;">Annotator's Quick Reference &amp; Golden Rules</h3>
+              <div style="font-size:12px; color:#3b82f6;">Executive summary of the core principles defined in §6 and §7</div>
+            </div>
+          </div>
+          <span class="badge" style="background:#dbeafe; color:#1e40af; font-size:11px; font-weight:700;">Cheat Sheet</span>
+        </div>
+        <div class="cheat-sheet-grid">
+          <div class="cheat-sheet-col">
+            <h4>🧠 1. The Mental Model (§6.3.1)</h4>
+            <p><strong>The Amendment Test:</strong> <em>"If the issuing office reissued this order tomorrow with an amendment, which parts could change independently?"</em></p>
+            <ul>
+              <li><strong>Boilerplate vs. Variable (§6.3.7):</strong> Office letterhead vs. outward number &amp; date <strong>never</strong> share a block!</li>
+              <li><strong>Paragraph Boundaries (§6.3.3):</strong> Each numbered clause, resolution, or paragraph is a separate block.</li>
+            </ul>
+          </div>
+          <div class="cheat-sheet-col">
+            <h4>🎯 2. The 3 Block Scopes (§6.5–6.7)</h4>
+            <ul>
+              <li><span class="badge badge-target">target</span>: Document content to transcribe (body paragraphs, headings, table contents).</li>
+              <li><span class="badge badge-excluded">excluded</span>: Non-content regions: official rubber stamps, handwritten signatures, seals, index tabs, scanner artifacts. (Suppressed during OCR error scoring).</li>
+              <li><span class="badge badge-uncertain">uncertain</span>: Illegible text even under maximum zoom. (Excluded from scoring).</li>
+            </ul>
+          </div>
+          <div class="cheat-sheet-col">
+            <h4>✂️ 3. The 6 Split Triggers (§6.3.3)</h4>
+            <ol>
+              <li><strong>Blank vertical space:</strong> &ge; 1.5&times; normal line spacing.</li>
+              <li><strong>Alignment shift:</strong> Left-aligned &rarr; Centered &rarr; Right-aligned.</li>
+              <li><strong>Documentary role change:</strong> Subject, Reference, Resolution, Signatory.</li>
+              <li><strong>Column boundary:</strong> Separate multi-column strips into individual cells.</li>
+              <li><strong>Paragraph boundary:</strong> Numbered items, bullet points, hanging indents.</li>
+              <li><strong>Enclosures / Distribution list:</strong> Each cited addressee is its own block.</li>
+            </ol>
+          </div>
+          <div class="cheat-sheet-col">
+            <h4>📊 4. Tables vs. Text (§7.6)</h4>
+            <ul>
+              <li><strong>Visual Grid Requirement:</strong> Only structured rows &amp; columns with explicit or implied cell boundaries.</li>
+              <li><strong>Free-floating forms are text:</strong> Key-value pairs across a page without a grid are annotated as text blocks.</li>
+              <li><strong>Canonical HTML:</strong> Annotated with valid <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>colspan</code>, <code>rowspan</code>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Specification Markdown Content -->
+      <article class="reader-content">
+        <h1 id="indian-government-document-benchmark">Indian Government Document Benchmark</h1>
+<h2 id="data-format-annotation-guidelines-and-metrics-specification">Data Format, Annotation Guidelines, and Metrics Specification</h2>
+<p><strong>Version:</strong> 0.9 (draft — not yet frozen)
+<strong>Status:</strong> For pilot annotation and reference scorer implementation</p>
+<p><strong>Changes since 0.8:</strong> block segmentation substantially reworked after review against ten
+further government pages — the amendment test added as the stated mental model with explicit
+precedence (§6.3.1–6.3.2); the enumeration trigger removed and folded into spatial discontinuity
+(§6.3.3); a paragraph-boundary trigger added; documentary role replaced by a closed list (§6.4);
+the label/value and boilerplate/variable rules stated (§6.3.4, §6.3.7); presentation-is-not-
+transcribed consolidated (§6.3.6). Table identification, the frame test for banner rows, leader
+columns and merged cells added (§7.6–7.7). Strikethrough handling extended to table cells and
+U+0336 explicitly rejected (§6.12, with a <code>struck</code> flag in §5.2). Orientation established before
+reading order (§6.15). <code>IGDB-Score</code> added for leaderboard sorting (§16) and cost reporting added
+(§17). Rotation added to stratification (§4.3); rectangular <code>poly</code> allowed (§5.5); diagnostic
+interpretation guidance added (§2.2).</p>
+<p><strong>Changes since 0.7:</strong> block segmentation rules added as §6.3, with the six split triggers and a
+fully segmented worked page; <code>reproduction_stamp</code> added to the <code>reason</code> vocabulary; column
+banding clarified as local rather than page-wide (§6.14); §19 split into schema mechanics and a
+full-page segmentation example. Sections §6.3–§6.14 renumbered to §6.4–§6.15.</p>
+<p><strong>Changes since 0.6:</strong> fixed the matching algorithm — split and merge recovery no longer require
+a prior primary match, which had made matching 1:1 in practice and produced <code>textCER ≈ 2.0</code> on
+pages whose only fault was segmentation granularity (§9.3); adjacency examined and deliberately
+rejected as a filter, added as a diagnostic (§9.3.1); <code>merge_groups</code> added for multi-column
+truncated paragraphs (§5.7); block match rate and non-contiguous group rate added to the
+mandatory diagnostics (§2.2).</p>
+<p><strong>Changes since 0.5:</strong> mandatory degeneracy and distribution diagnostics added (§2.2) after
+published Indic OCR results showed unbounded edit-distance metrics failing on VLM repetition
+loops; ANLS correspondence stated (§2.3); script-difficulty framing added to stratification
+(§4.3); contamination mitigations made concrete (§4.5, §18.4); submission manifest and prompt
+disclosure required (§9.1.3); relation to prior work recorded (§17).</p>
+<p><strong>Changes since 0.4:</strong> TEDS implementation behaviour documented and confirmed (§12.2–12.3);
+§18.1 closed as a result.</p>
+<p><strong>Changes since 0.3:</strong> annotation guidelines folded in as §6, adapted from the original rules
+document with the internal conflicts resolved; corpus specification added as §4; multi-page
+table handling removed (single-page corpus); <code>reason</code> promoted from free text to a controlled
+vocabulary; <code>figure</code> blocks are now always <code>excluded</code>; data provenance recorded as §15.</p>
+<hr />
+<h2 id="1-conventions">1. Conventions</h2>
+<p>The key words <span class="rfc-badge rfc-must">MUST</span>, <span class="rfc-badge rfc-must-not">MUST NOT</span>, <span class="rfc-badge rfc-should">SHOULD</span>, <span class="rfc-badge rfc-should-not">SHOULD NOT</span>, and <span class="rfc-badge rfc-may">MAY</span> are used as
+defined in RFC 2119.</p>
+<p>Any behaviour not specified in this document is a defect in this document, not a decision
+left to the implementer. Two independent implementations of the scorer MUST produce
+bit-identical results on the same reference set and prediction set.</p>
+<hr />
+<h2 id="2-metric-suite">2. Metric Suite</h2>
+<p>The benchmark publishes exactly six headline numbers. Nothing else appears on the leaderboard.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Unit</th>
+<th>Range</th>
+<th>Direction</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>textCER_raw</code></td>
+<td>character error rate</td>
+<td>0 → ∞</td>
+<td>lower better</td>
+<td>text blocks + table cells</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>textCER_norm</code></td>
+<td>character error rate</td>
+<td>0 → ∞</td>
+<td>lower better</td>
+<td>text blocks + table cells</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>e2eNED_raw</code></td>
+<td>normalized edit distance</td>
+<td>0 → 1</td>
+<td>lower better</td>
+<td>whole page, incl. reading order</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>e2eNED_norm</code></td>
+<td>normalized edit distance</td>
+<td>0 → 1</td>
+<td>lower better</td>
+<td>whole page, incl. reading order</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>TEDS</code></td>
+<td>tree edit distance similarity</td>
+<td>0 → 1</td>
+<td>higher better</td>
+<td>tables, structure + cell content</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>TEDS-S</code></td>
+<td>tree edit distance similarity</td>
+<td>0 → 1</td>
+<td>higher better</td>
+<td>tables, structure only</td>
+</tr>
+</tbody>
+</table>
+<p><code>raw</code> and <code>norm</code> refer to the two text normalization profiles defined in §8. They differ
+<strong>only</strong> in whitespace and invisible-character handling.</p>
+<p>Not every submission format is scored on every metric — see §9.1 for the coverage matrix.</p>
+<h3 id="21-naming-rationale">2.1 Naming rationale</h3>
+<p><code>textCER</code> is a true micro-averaged character error rate (§10) and is therefore named CER.
+<code>e2eNED</code> is length-normalized and bounded, and is therefore <strong>not</strong> named CER — publishing a
+bounded normalized distance under a "CER" label invites incorrect comparison against CER
+figures in the OCR literature.</p>
+<h3 id="22-mandatory-diagnostics">2.2 Mandatory diagnostics</h3>
+<p>The six headline numbers are published alongside four diagnostics. These are not leaderboard
+metrics and do not rank systems, but publishing results without them is misleading.</p>
+<table>
+<thead>
+<tr>
+<th>Diagnostic</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Degeneracy rate</strong></td>
+<td>Fraction of scored units (§10.2) whose per-unit normalized distance equals 1.0 <em>and</em> whose prediction is longer than 2× the reference. Detects repetition loops.</td>
+</tr>
+<tr>
+<td><strong>Overflow rate</strong></td>
+<td>Fraction of pages whose per-page <code>textCER</code> exceeds 1.0.</td>
+</tr>
+<tr>
+<td><strong>Length ratio</strong></td>
+<td>Median and 95th percentile of <code>len(S(pred)) / len(S(ref))</code> across pages.</td>
+</tr>
+<tr>
+<td><strong>Per-page distribution</strong></td>
+<td>Median and interquartile range of per-page <code>e2eNED</code>, not only the mean.</td>
+</tr>
+<tr>
+<td><strong>Block match rate</strong></td>
+<td>Fraction of reference target blocks that end up in a matched group (§9.3).</td>
+</tr>
+<tr>
+<td><strong>Non-contiguous group rate</strong></td>
+<td>Fraction of matched groups whose members are non-contiguous in <code>order</code>. A reading-order signal, not a penalty — see §9.3.1.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading the diagnostics together.</strong> Low <code>e2eNED</code> with high <code>textCER</code> and a low block match
+rate indicates a <strong>localization</strong> failure, not a recognition failure: the system read the text
+correctly but placed its boxes badly, so matching failed and the residue rule of §10.1 charged
+both sides. In that case <code>e2eNED</code> is the honest reading of the system's text quality. The two
+metrics are deliberately built to differ this way — <code>textCER</code> depends on geometry, <code>e2eNED</code> does
+not — and the pair is only diagnostic because of it.</p>
+<p><strong>Block match rate is the matcher's own health check.</strong> A page whose text is largely correct but
+whose segmentation granularity differs from the reference will, if matching misbehaves, produce
+zero matched groups — every reference block a deletion and every prediction an insertion, giving
+<code>textCER ≈ 2.0</code> on good OCR. That failure is indistinguishable from genuinely bad recognition in
+the headline number alone. A match rate of zero on a page with substantial text on both sides
+points at the matcher, not the system under test, and <span class="rfc-badge rfc-must">MUST</span> be surfaced rather than buried.</p>
+<p><strong>Why this is required.</strong> <code>textCER</code> is unbounded above (§10.1), and VLM-based systems on Indic
+script are known to emit repetition loops that run to the maximum sequence length. Published
+Indic OCR results show this is not an edge case: one evaluated system produced WER above 1.0 on
+roughly a third of examples, and another recorded an average Malayalam WER of 25 with a standard
+deviation over 200, driven by a handful of runaway pages. On a 250-page corpus a single such
+page moves the pooled numerator visibly, and the aggregate gives no indication that it happened.</p>
+<p>Reporting the median instead is <strong>not</strong> an adequate substitute — it hides the degeneracy rather
+than surfacing it. The diagnostics above are designed to make it visible while leaving the
+headline metric's penalty intact: a system that hallucinates should pay for it, and the reader
+should be able to see that this is what happened.</p>
+<h3 id="23-relation-to-anls">2.3 Relation to ANLS</h3>
+<p><code>e2eNED</code> is the bounded companion to <code>textCER</code> and belongs to the same family as ANLS (Average
+Normalized Levenshtein Similarity), which recent Indic OCR benchmarks adopt as their primary
+metric for exactly the robustness reason above. The correspondence is <code>ANLS ≈ 1 − e2eNED</code>,
+computed at page level here rather than per instance. Stating this explicitly lets readers place
+these results against the Indic OCR literature without re-deriving the relationship.</p>
+<h3 id="24-explicitly-deferred">2.4 Explicitly deferred</h3>
+<p>Word error rate, reading-order edit distance, contamination rate, formula recognition,
+layout detection mAP, and any composite "overall" score are <strong>out of scope for v1.0</strong>. They
+may be added later as clearly-labelled supplementary metrics. No composite score will replace
+the six headline numbers.</p>
+<hr />
+<h2 id="3-page-image-specification">3. Page Image Specification</h2>
+<ul>
+<li>Each page is a single raster image. Format <span class="rfc-badge rfc-must">MUST</span> be PNG (lossless).</li>
+<li>Rasterization <span class="rfc-badge rfc-must">MUST</span> be at 300 DPI where the source is a PDF. Where the source is already
+  a raster scan, the native resolution is used and recorded.</li>
+<li>Images <span class="rfc-badge rfc-must-not">MUST NOT</span> be deskewed, denoised, binarized, cropped, or rotated during dataset
+  preparation. All geometry in the reference set is expressed in the coordinate space of the
+  distributed image.</li>
+<li>Coordinate origin is the <strong>top-left</strong> pixel, x increasing rightward, y increasing downward.
+  Coordinates are floats in pixel units.</li>
+<li>Exactly one JSON record per page image.</li>
+</ul>
+<hr />
+<h2 id="4-corpus">4. Corpus</h2>
+<h3 id="41-composition">4.1 Composition</h3>
+<ul>
+<li>Approximately <strong>250 single-page images</strong>. Target: 250.</li>
+<li>The corpus is <strong>single-page by construction</strong>. There are no multi-page documents and no
+  document-level grouping. Every image is annotated, scored, and reported independently.</li>
+<li>The entire corpus is <strong>evaluation-only</strong>. There is no training split.</li>
+</ul>
+<h3 id="42-consequences-of-the-single-page-design">4.2 Consequences of the single-page design</h3>
+<p>A page may still contain a table that was physically truncated by the page boundary in the
+source document. Such a table is annotated exactly as it appears on this image:</p>
+<ul>
+<li>transcribe the rows that are visible; do not reconstruct rows that are not;</li>
+<li>if the table's header rows fall on a page not in the corpus, the table has no header on this
+  page and is annotated with an empty <code>&lt;thead&gt;&lt;/thead&gt;</code> (§7.5);</li>
+<li>a row cut in half by the page edge is annotated if its text is legible, and marked
+  <code>uncertain</code> if it is not.</li>
+</ul>
+<p>Cross-page table reconstruction is not a task in this benchmark and no metric measures it.</p>
+<h3 id="43-stratification">4.3 Stratification</h3>
+<p>Strata are declared before annotation begins and recorded per page in a separate manifest (not
+in the page records, which carry no metadata by design). At minimum:</p>
+<ul>
+<li>language;</li>
+<li>script;</li>
+<li>document type;</li>
+<li>degradation level;</li>
+<li><strong>page orientation</strong> — at minimum a flag for pages scanned rotated by 90° or 180°.</li>
+</ul>
+<p>Orientation is recorded because it is a distinct failure mode: some systems auto-rotate, some
+read bottom-up, some produce garbage. Without the flag, a poor score on a rotated page cannot be
+attributed to rotation rather than recognition. At 250 pages it can be carried as a binary flag
+even where it will not support a separately reported stratum.</p>
+<p><strong>With 250 pages, strata must be coarse.</strong> A stratum <span class="rfc-badge rfc-should-not">SHOULD NOT</span> be reported separately
+unless it contains at least 30 pages, and cross-tabulations (language × degradation, say) will
+not support conclusions at this corpus size. Plan for four to six reportable strata, not twenty.</p>
+<p><strong>Script difficulty is a deliberate choice, not an accident.</strong> Published Indic OCR results
+rank script difficulty consistently: Marathi is the easiest of the major Indic scripts for
+current systems by a wide margin, followed by Tamil, Bengali, Kannada, Punjabi and Hindi, with
+Odia and Malayalam far harder — the gap between best and worst spans roughly an order of
+magnitude in character error. A Marathi- and Hindi-dominant government corpus therefore samples
+from the <strong>easy end</strong> of that distribution, and its difficulty will come from degradation,
+layout, stamps and reading order rather than from script complexity.</p>
+<p>That is a legitimate and well-motivated choice for this benchmark — those are the axes nobody
+else measures. It must be <strong>stated</strong> rather than left implicit, and if any claim is to be made
+about Indic script coverage generally, the corpus should deliberately include some Malayalam or
+Odia government documents to span the range.</p>
+<p><code>TEDS</code> and <code>TEDS-S</code> average over <strong>tables, not pages</strong>. The number of pages containing tables is
+therefore a separate design parameter from corpus size, and must be tracked explicitly during
+collection. A table count in the low tens will give a visibly unstable <code>TEDS</code>.</p>
+<h3 id="44-statistical-reporting">4.4 Statistical reporting</h3>
+<p>At n = 250, differences between systems can easily fall inside sampling noise. All six headline
+metrics <span class="rfc-badge rfc-must">MUST</span> be published with <strong>bootstrap 95% confidence intervals</strong>: resample pages with
+replacement, 1000 draws, recomputing the metric from scratch on each draw. For <code>textCER</code> this
+means recomputing the pooled numerator and denominator per draw, not resampling per-page rates.</p>
+<p>Leaderboard rankings <span class="rfc-badge rfc-must-not">MUST NOT</span> be presented as meaningful where confidence intervals overlap.</p>
+<h3 id="45-contamination">4.5 Contamination</h3>
+<p>Indian government documents are widely available on the public web and are plausibly present in
+the training data of the VLM-based systems this benchmark evaluates. A fully public corpus is
+not held out in any meaningful sense, and this <span class="rfc-badge rfc-must">MUST</span> be stated alongside results.</p>
+<p>Two mitigations, in increasing order of cost:</p>
+<ol>
+<li>
+<p><strong>Private split.</strong> Collect beyond the 250-page target and withhold roughly 20% of pages,
+   never published. Systems are scored on both; a large gap between public and private scores
+   indicates fitting to the released set. This is cheap, requires no infrastructure, and is the
+   recommended option for v1.0. See §18.4.</p>
+</li>
+<li>
+<p><strong>Online evaluation.</strong> A submission API that streams test images one at a time and receives
+   results, with the online set a superset of the offline set. Prior Indic benchmark
+   infrastructure has used exactly this design to detect overfitting by comparing a method's
+   online and offline accuracy. It is the stronger mitigation but requires hosting and a
+   submission protocol, and is out of scope for v1.0.</p>
+</li>
+</ol>
+<p>Whichever is chosen, the dataset card <span class="rfc-badge rfc-must">MUST</span> record the collection date and source portals, so
+that later readers can reason about which model generations could have seen the material.</p>
+<hr />
+<h2 id="5-reference-ground-truth-schema">5. Reference (Ground Truth) Schema</h2>
+<h3 id="51-page-record">5.1 Page record</h3>
+<pre><code class="language-json">{
+  &quot;page_id&quot;: &quot;MH-000123-p01&quot;,
+  &quot;image&quot;: {
+    &quot;path&quot;: &quot;images/MH-000123-p01.png&quot;,
+    &quot;width&quot;: 2480,
+    &quot;height&quot;: 3508
+  },
+  &quot;blocks&quot;: [ ... ],
+  &quot;merge_groups&quot;: [ ... ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>page_id</code></td>
+<td>string</td>
+<td>yes</td>
+<td>Globally unique. Stable across dataset versions.</td>
+</tr>
+<tr>
+<td><code>image.path</code></td>
+<td>string</td>
+<td>yes</td>
+<td>Path relative to dataset root.</td>
+</tr>
+<tr>
+<td><code>image.width</code></td>
+<td>integer</td>
+<td>yes</td>
+<td>Pixels. Must equal actual image width.</td>
+</tr>
+<tr>
+<td><code>image.height</code></td>
+<td>integer</td>
+<td>yes</td>
+<td>Pixels. Must equal actual image height.</td>
+</tr>
+<tr>
+<td><code>blocks</code></td>
+<td>array</td>
+<td>yes</td>
+<td>May be empty; see §13 item 4.</td>
+</tr>
+<tr>
+<td><code>merge_groups</code></td>
+<td>array</td>
+<td>no</td>
+<td>Truncated-paragraph declarations, §5.7. Omit or <code>[]</code> when none.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-block-record">5.2 Block record</h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 0,
+  &quot;type&quot;: &quot;text&quot;,
+  &quot;scope&quot;: &quot;target&quot;,
+  &quot;order&quot;: 0,
+  &quot;poly&quot;: [136.0, 781.0, 940.0, 781.0, 940.0, 806.0, 136.0, 806.0],
+  &quot;text&quot;: &quot;महाराष्ट्र शासन&quot;,
+  &quot;html&quot;: null,
+  &quot;reason&quot;: null
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>integer</td>
+<td>yes</td>
+<td>Unique within the page. Not required to be dense or ordered.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>enum</td>
+<td>yes</td>
+<td><code>text</code> | <code>table</code> | <code>figure</code></td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>enum</td>
+<td>yes</td>
+<td><code>target</code> | <code>excluded</code> | <code>uncertain</code></td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>integer | null</td>
+<td>yes</td>
+<td>Reading-order index. See §5.4.</td>
+</tr>
+<tr>
+<td><code>poly</code></td>
+<td>array[8] float</td>
+<td>yes</td>
+<td>Quadrilateral. See §5.5.</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>string | null</td>
+<td>conditional</td>
+<td>See §5.3.</td>
+</tr>
+<tr>
+<td><code>html</code></td>
+<td>string | null</td>
+<td>conditional</td>
+<td>See §5.3 and §7.</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>enum | null</td>
+<td>conditional</td>
+<td>Controlled vocabulary, §6.7. Never scored in v1.0.</td>
+</tr>
+<tr>
+<td><code>struck</code></td>
+<td>boolean</td>
+<td>no</td>
+<td>True where the block's text is struck through. Never scored. See §6.12.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-content-field-constraints">5.3 Content field constraints</h3>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th><code>scope</code></th>
+<th><code>text</code></th>
+<th><code>html</code></th>
+<th><code>order</code></th>
+<th><code>reason</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td><code>target</code></td>
+<td><strong>required</strong>, non-empty</td>
+<td><code>null</code></td>
+<td>integer</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td><code>excluded</code></td>
+<td><strong>required</strong>, non-empty</td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td><code>uncertain</code></td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td><code>target</code></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+<td>integer</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td><code>excluded</code></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td><code>uncertain</code></td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td><code>figure</code></td>
+<td><code>excluded</code></td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><code>null</code></td>
+<td><strong>required</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>figure</code> blocks are always <code>excluded</code>.</strong> A figure contributes no characters to any metric, so
+<code>target</code> and <code>excluded</code> would be indistinguishable in scoring except in one respect: an
+<code>excluded</code> region suppresses predictions that land on it (§9.3 step 2), which is the behaviour
+we want for photographs, signatures and graphical seals. Marking them <code>target</code> would leave a
+system penalized for emitting text over a signature. There is therefore no reason for a <code>target</code>
+figure to exist, and the combination is prohibited.</p>
+<p>Where a figure contains embedded text that <em>is</em> part of the document — labels on a map, text
+inside a diagram — that text is annotated as separate <code>text</code> blocks with <code>scope: "target"</code>. The
+suppression rule in §9.3 has a guard that prevents those from being discarded.</p>
+<p><strong>Rationale for annotating <code>excluded</code> content.</strong> Excluded text and tables are transcribed even
+though they are never scored in v1.0. This costs little at annotation time and is a
+prerequisite for the contamination metric planned for a later version. Once a page is frozen
+without it, retrofitting means re-opening every page.</p>
+<p><code>uncertain</code> blocks carry no content by definition — an annotator who could transcribe the
+region would not have marked it uncertain. Annotators <span class="rfc-badge rfc-must-not">MUST NOT</span> guess.</p>
+<h3 id="54-reading-order">5.4 Reading order</h3>
+<ul>
+<li><code>order</code> <span class="rfc-badge rfc-must">MUST</span> be a non-negative integer for every block with <code>scope: "target"</code>.</li>
+<li><code>order</code> values across <code>target</code> blocks <span class="rfc-badge rfc-must">MUST</span> be dense and unique: exactly
+  <code>0, 1, ..., n-1</code> where <code>n</code> is the number of target blocks.</li>
+<li><code>order</code> <span class="rfc-badge rfc-must">MUST</span> be <code>null</code> for every block with <code>scope</code> of <code>excluded</code> or <code>uncertain</code>, and
+  therefore for every <code>figure</code> block.</li>
+</ul>
+<p>The rules for <em>assigning</em> reading order are in §6.14.</p>
+<h3 id="55-geometry">5.5 Geometry</h3>
+<p><code>poly</code> is a flat array of eight floats: <code>[x1, y1, x2, y2, x3, y3, x4, y4]</code>, listing the four
+corners of a quadrilateral in <strong>clockwise order beginning at the corner that is topmost-then-
+leftmost in the page coordinate frame</strong>. This convention is unambiguous for skewed and rotated
+content, unlike "top-left corner", which is undefined once the box is rotated past 45°.</p>
+<ul>
+<li>Quadrilaterals, not axis-aligned rectangles, because government scans are routinely skewed.</li>
+<li>A quadrilateral <strong>may</strong> be an axis-aligned rectangle expressed as its four corners. Rotation is
+  not required, and a system whose geometry is rectangular (classical OCR engines, most layout
+  detectors) is fully compliant. On strongly skewed pages a rectangle is looser than the text it
+  bounds, which may cost a match at the 0.5 thresholds of §9.3.</li>
+<li>All coordinates <span class="rfc-badge rfc-must">MUST</span> lie within <code>[0, width] × [0, height]</code>.</li>
+<li>Blocks <span class="rfc-badge rfc-may">MAY</span> overlap. Overlap is expected and legitimate — a rubber stamp lands on top of
+  body text, an endorsement is written across a printed paragraph. All overlap computations in
+  §9 operate on the convex quadrilateral as given.</li>
+</ul>
+<h3 id="56-text-content-rules">5.6 Text content rules</h3>
+<p>These rules govern what goes into the <code>text</code> field. They are normative because they change the
+reference string and therefore the score.</p>
+<ol>
+<li><strong>Unicode.</strong> All <code>text</code> and <code>html</code> values <span class="rfc-badge rfc-must">MUST</span> be stored in NFC. Files failing this
+   check are rejected at validation time (§14); the scorer <span class="rfc-badge rfc-must-not">MUST NOT</span> silently normalize a
+   malformed reference set.</li>
+<li><strong>Hard line breaks within a block</strong> are preserved as <code>\n</code> (U+000A). No other line-break
+   character (<code>\r</code>, U+2028, U+2029) may appear.</li>
+<li><strong>Line-break hyphenation.</strong> Where a word is split across lines and the hyphen exists solely
+   because of the line break, the hyphen <strong>and</strong> the newline are removed and the word is
+   joined: printed <code>ग्राम-</code> / <code>पंचायत</code> is stored as <code>ग्रामपंचायत</code>. A hyphen that is part of the
+   word is preserved.</li>
+<li><strong>Line breaks inside a word without a hyphen</strong> (common in Indic typesetting) are removed and
+   the word joined with no inserted whitespace.</li>
+<li><strong>Spacing</strong> is transcribed as it appears. No normalization is performed at annotation time;
+   the <code>norm</code> profile handles spacing at scoring time.</li>
+<li>Tab characters <span class="rfc-badge rfc-must-not">MUST NOT</span> appear. Use spaces.</li>
+<li><strong>Transcribe what is printed, not what was intended.</strong> Spelling errors, wrong dates,
+   grammatical mistakes and inconsistent spellings in the source document are reproduced
+   exactly. The reference records the document, not a corrected version of it.</li>
+</ol>
+<h3 id="57-merge-groups-truncated-paragraphs">5.7 Merge groups (truncated paragraphs)</h3>
+<p>A single logical paragraph is sometimes split by layout into two or more spatially separate
+regions — most commonly where a paragraph runs off the bottom of one column and continues at the
+top of the next. The two halves are one unit of text but cannot be one block, because they are
+not one region.</p>
+<p><code>merge_groups</code> declares this at annotation time:</p>
+<pre><code class="language-json">&quot;merge_groups&quot;: [
+  { &quot;blocks&quot;: [4, 9], &quot;join&quot;: &quot;space&quot; },
+  { &quot;blocks&quot;: [12, 15], &quot;join&quot;: &quot;none&quot; }
+]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blocks</code></td>
+<td>array of integer</td>
+<td>Block <code>id</code>s, listed in reading order. Minimum 2.</td>
+</tr>
+<tr>
+<td><code>join</code></td>
+<td>enum</td>
+<td><code>"space"</code> (default) or <code>"none"</code> — how the fragments are concatenated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why the annotator declares the joiner.</strong> Where the break falls between words, the halves join
+with a space. Where a word itself is split across the column break, they join with nothing. The
+annotator can see which case applies; the scorer cannot infer it. Recording the truth is better
+than guessing, and it removes this case from the joiner question of §18.3.</p>
+<p><strong>Constraints</strong> (enforced by §14):</p>
+<ul>
+<li>every member block <span class="rfc-badge rfc-must">MUST</span> have <code>scope: "target"</code> and <code>type: "text"</code>;</li>
+<li>members <span class="rfc-badge rfc-must">MUST</span> be listed in ascending <code>order</code>, and their <code>order</code> values need <strong>not</strong> be
+  contiguous — a caption or a stamp may legitimately sit between the two halves;</li>
+<li>a block <span class="rfc-badge rfc-must-not">MUST NOT</span> appear in more than one merge group;</li>
+<li>tables are not mergeable in v1.0 (the corpus is single-page, §4.2).</li>
+</ul>
+<p><strong>Effect on the metrics.</strong> Matching (§9) operates on individual blocks throughout — geometry is
+per-region and merge groups have no bounding box. Grouping is applied afterwards, at scoring
+time:</p>
+<ul>
+<li><strong><code>textCER</code> (§10.2):</strong> a merge group is <strong>one</strong> scored unit. Its reference text is the members'
+  text concatenated per <code>join</code>; its predicted text is the concatenation of everything matched to
+  any member, in ascending prediction <code>order</code>.</li>
+<li><strong><code>e2eNED</code> (§11.2):</strong> the serializer emits <strong>one</strong> unit for the group, at the position of the
+  member with the lowest <code>order</code>. Other members emit nothing.</li>
+<li>Members remain independent for validation and for the geometry checks of §14.</li>
+</ul>
+<p>Merge groups are expected to be rare and are optional. A page with no multi-column paragraph
+truncation omits the field entirely.</p>
+<hr />
+<h2 id="6-annotation-guidelines">6. Annotation Guidelines</h2>
+<p>This section governs how an annotator assigns <code>type</code>, <code>scope</code>, <code>reason</code> and <code>order</code>. It is
+adapted from the project's original rules document, with the conflicts in that document
+resolved and every rule mapped onto the three-value schema of §5.</p>
+<h3 id="61-the-governing-question">6.1 The governing question</h3>
+<blockquote>
+<p><strong>Is this legible textual information that belongs to the target government document?</strong></p>
+</blockquote>
+<p>Classification is by <strong>documentary role</strong>, not by rendering method. Annotators <span class="rfc-badge rfc-must-not">MUST NOT</span>
+apply rules of the form "handwriting is excluded" or "stamps are excluded". A handwritten date
+that forms part of the order is target content; a printed sticker from an unrelated file is not.</p>
+<h3 id="62-decision-procedure">6.2 Decision procedure</h3>
+<p>Apply in order. First match wins.</p>
+<pre><code>1. Is the region non-textual — photograph, illustration, emblematic seal,
+   signature stroke, decorative rule, barcode, QR code?
+      → type: figure, scope: excluded, reason per §6.7
+
+2. Is it a table?
+      → type: table; continue to step 4 for scope
+
+3. Otherwise it is text; continue to step 4
+
+4. Can you read it reliably?
+      NO  → scope: uncertain, text: null, reason: illegible
+      YES → continue to step 5
+
+5. Does it belong to the target document (§6.5)?
+      YES     → scope: target
+      NO      → scope: excluded, reason per §6.7
+      UNSURE  → scope: excluded, reason: unassignable
+</code></pre>
+<p><strong>The <code>uncertain</code> / <code>excluded</code> split is about legibility, not about belonging.</strong> The original
+rules document used <code>UNCERTAIN</code> for both "I cannot read this" and "I cannot tell whose document
+this is". The schema forces these apart, because <code>uncertain</code> blocks carry no text. Legible text
+whose ownership you cannot establish goes to <code>excluded</code> with <code>reason: "unassignable"</code>, and its
+text <strong>is</strong> transcribed. Both behave identically as don't-care regions in scoring.</p>
+<h3 id="63-block-segmentation-where-the-boundaries-go">6.3 Block segmentation — where the boundaries go</h3>
+<p>The rules above decide <em>what</em> a region is. This section decides <em>where its edges are</em>. Without
+it, two annotators following this document could produce twelve blocks on a page or forty, and
+both would be compliant.</p>
+<h4 id="631-the-mental-model">6.3.1 The mental model</h4>
+<p>Two tests, in this order.</p>
+<p><strong>1. The physical test.</strong> A separate object laid onto the page is a separate block — a rubber
+stamp, a seal, a sticker, an adjacent page. These are distinct <em>acts</em>: someone pressed a stamp
+onto paper that already carried text.</p>
+<p><strong>2. The logical test (the "amendment test").</strong> Within one object, a block is the <strong>smallest
+unit that could be independently amended, cited, or struck out</strong>.</p>
+<p>The amendment test is the one that resolves most hard cases, and it suits government documents
+because they genuinely <em>are</em> amended and cited by clause. Ask: if a corrigendum were issued,
+what is the smallest thing it would replace?</p>
+<ul>
+<li>A numbered condition is replaced whole → one block per condition.</li>
+<li>An eight-line paragraph is replaced whole → one block, length notwithstanding. Line 4 of a
+  paragraph is not a thing anyone cites.</li>
+</ul>
+<p>Length is irrelevant. Independent citability is the whole question.</p>
+<h4 id="632-precedence">6.3.2 Precedence</h4>
+<p>Three levels, applied strictly in order:</p>
+<pre><code>1. A trigger in §6.3.3 fires                  → SPLIT
+2. No trigger fires, but the amendment test
+   discriminates                              → follow the amendment test
+3. Neither discriminates                      → §6.3.5 tiebreak
+</code></pre>
+<p><strong>Exhaust the amendment test before reaching the tiebreak.</strong> The common annotator error is to
+reach level 3 on a case the amendment test could have settled at level 2 — see §6.3.4, which
+exists because this error is easy to make and consequential.</p>
+<h4 id="633-the-split-triggers">6.3.3 The split triggers</h4>
+<p>Moving through the page in reading order, a new block begins when any of these changes:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Trigger</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Scope</strong> — target / excluded / uncertain</td>
+<td>Structural. An illegible line inside an otherwise readable paragraph forces a split, because scope cannot vary within a block.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Type</strong> — text / table / figure</td>
+<td>Structural.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Documentary role</strong> — see the closed list in §6.4</td>
+<td>Roles occupy different positions in the reading order.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Physical artifact</strong> — a separate object laid onto the page: stamp impression, seal, sticker, label</td>
+<td>Separate artifacts overlap text and must be independently addressable for scope and suppression.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Spatial discontinuity</strong> — a different column band, a ruled separator crossed, or a vertical gap noticeably larger than the surrounding line spacing</td>
+<td>Prevents a block from spanning a layout boundary, and is what separates list items that are visibly set apart.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Paragraph boundary</strong> — first-line indentation, or a blank line, marking the start of a new paragraph</td>
+<td>Catches paragraph breaks that carry no large vertical gap. Without it, consecutive operative statements merge into one block.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>There is no enumeration trigger.</strong> An earlier draft split every numbered or bulleted item into
+its own block. That rule was justified by provider behaviour, and provider behaviour does not
+support it: providers segment on <strong>whitespace</strong>, not on ordinals. A bulleted list set tightly
+within a column is emitted as one block; a numbered list with generous inter-item spacing is
+emitted per item; a sixteen-item numbered list set with ordinary line spacing is emitted as one
+block. Trigger 5 already describes this correctly, so ordinals are transcribed as ordinary text
+(§6.3.6) and carry no structural meaning.</p>
+<p>Checked against the corpus: Grampanchayat conditions १–७ and municipal conditions १–४ have clear
+inter-item gaps and still split under trigger 5. Grampanchayat slogan bullets and the sixteen
+tightly-set PCMC conditions merge, which matches observed provider output in both cases.</p>
+<h4 id="634-what-does-not-split">6.3.4 What does <em>not</em> split</h4>
+<ul>
+<li><strong>Wrapped lines of one paragraph.</strong> Line wrapping is a typographic artifact.</li>
+<li><strong>A printed label and its value</strong> — <code>दिनांक :</code> and the date, <code>जावक क्र.</code> and the number,
+  <code>विषय :-</code> and the subject text. Trigger 4 concerns separate physical <em>objects</em>, not a change
+  of ink: a printed label with a handwritten value is one block.</li>
+<li><strong>A label on its own line and the value beneath it.</strong> <code>प्रति,</code> joins its address block;
+  <code>प्रत :-</code> joins its distribution list; <code>वाचा -</code> joins its references. A label's line position
+  is not a trigger. A label that looks like a heading is still a label — it introduces a value
+  rather than naming a section.</li>
+<li><strong>A name and the designation printed beneath it</strong> — same role, no discontinuity.</li>
+<li><strong>Multi-line items</strong> within a list that trigger 5 has split — one block per item, however many
+  lines the item runs to.</li>
+<li><strong>Presentation changes.</strong> Bold, italic, underline and font changes are not triggers. The
+  schema carries no formatting, so a typographic emphasis cannot imply a structural boundary.</li>
+</ul>
+<h4 id="635-tiebreak">6.3.5 Tiebreak</h4>
+<p>Where neither a trigger nor the amendment test discriminates, <strong>follow prevailing provider
+convention</strong>, which in practice means the finer of the two candidate segmentations.</p>
+<p>The reasoning is asymmetric and worth stating, because it is not obvious:</p>
+<ul>
+<li><strong><code>textCER</code> is protected either way.</strong> Containment grouping (§9.3 steps 4–5) absorbs
+  granularity differences in both directions — a coarse reference against fine predictions, or
+  the reverse, both recover.</li>
+<li><strong><code>e2eNED</code> has no matcher at all.</strong> Both sides pass through the serializer independently and
+  are compared as flat strings, so block boundaries become <code>\n\n</code> separators in that string. A
+  granularity mismatch costs on every page, for every provider, permanently.</li>
+</ul>
+<p>So the choice minimises expected disagreement across the provider population. Most providers
+segment finely; a reference at the coarse end disagrees with the majority.</p>
+<p>This is a tiebreak, <strong>not</strong> an instruction to copy providers. The triggers still govern, and a
+provider that merges two clearly separate column bands is simply wrong. See §18.5, which asks
+the pilot to measure how much this choice is actually worth.</p>
+<h4 id="636-presentation-is-not-transcribed">6.3.6 Presentation is not transcribed</h4>
+<p>The <code>text</code> field records content, not how it was set. The following are <strong>omitted</strong> from <code>text</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Omitted</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decorative bullet glyphs</td>
+<td><code>•</code>, <code>-</code>, <code>*</code> and similar, where they only mark a list item</td>
+</tr>
+<tr>
+<td>Leader characters</td>
+<td>The dashes or dot runs typewriters use to fill the gap between a name and its value. These are <strong>not</strong> a table column — a column whose every cell is identical carries no information (§6.3.7).</td>
+</tr>
+<tr>
+<td>Bold, italic, underline, font changes</td>
+<td>No schema field exists for them</td>
+</tr>
+<tr>
+<td>Strikethrough</td>
+<td>Recorded in the optional <code>struck</code> flag instead (§6.12)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ordinal labels are transcribed</strong> — <code>१.</code>, <code>2.</code>, <code>(a)</code>, <code>iii)</code> are text, not decoration. The
+distinction is that an ordinal is a handle the document created so the item can be cited; a
+bullet glyph is an ornament.</p>
+<p>The prediction normalizer strips leading bullet glyphs and leader runs from predicted block text
+before scoring, for the same reason §9.6 strips markdown list markers.</p>
+<h4 id="637-boilerplate-and-variable-content-do-not-share-a-block">6.3.7 Boilerplate and variable content do not share a block</h4>
+<p>Apply the amendment test <strong>within</strong> a candidate block, line by line, not only at its edges.</p>
+<p>Letterheads mix content that never changes with content that changes per document. A date, a
+reference or file number, an outward number — these are what a reissue would alter, while the
+department name and address are boilerplate. They are therefore separate blocks even where no
+trigger fires and the lines sit in an even vertical rhythm.</p>
+<p>Worked: a six-line centred letterhead reading department / sub-department / GR number / street
+address / city / date is <strong>four</strong> blocks — issuer, reference number, address, date — not one.
+Grouping them on "even centred rhythm" is a typographic observation, not a structural one.</p>
+<p>This pattern recurs on nearly every government page and is the single most common source of
+under-segmentation.</p>
+<h4 id="638-worked-segmentation">6.3.8 Worked segmentation</h4>
+<p>The page below is segmented under these rules. It is reproduced here because segmentation is
+easier to convey by example than by prose; the rules above are the tiebreaker, not the primary
+teaching device.</p>
+
+<figure class="protocol-figure-card" id="worked-segmentation-figure">
+  <div class="figure-header">
+    <span class="figure-badge">📸 Worked Annotation Example (§6.3.8)</span>
+    <span style="font-size:12px; color:#6b7280;">Grampanchayat NOC Certificate · Full Page Ground Truth</span>
+  </div>
+  <div class="figure-img-container" onclick="openImageLightbox('blocks_annotated.webp')" title="Click to view full-resolution diagram">
+    <img alt="Annotated block segmentation of a Grampanchayat NOC certificate" src="blocks_annotated.webp" class="annotated-doc-image" />
+    <div class="figure-overlay-hint">
+      <span>🔍 Click to expand full-resolution visual diagram</span>
+    </div>
+  </div>
+  <figcaption class="figure-caption">
+    <strong>Figure 6.1:</strong> Complete Ground-Truth Block Segmentation of a multi-language Grampanchayat Certificate under the v0.9 specification. Key illustrated principles:
+    <ul>
+      <li><strong>Legitimate Bounding-Box Overlap:</strong> Endorsements &amp; rubber stamps across body text preserve underlying target text.</li>
+      <li><strong>Excluded Scope:</strong> Over 1/3 of the physical page (seals, signatures, registration numbers, index tabs, borders) is marked <code>excluded</code> to prevent false-positive insertion penalties.</li>
+      <li><strong>Local 3-Column Officer Banding:</strong> Signatory blocks form a local horizontal strip where each officer's designation stays bound to their name.</li>
+      <li><strong>Boilerplate vs. Variable Separation:</strong> Outward dispatch number and date separate cleanly from the fixed printed letterhead.</li>
+    </ul>
+  </figcaption>
+</figure>
+
+<p>Points it illustrates that prose does not convey well:</p>
+<ol>
+<li><strong>Overlap is normal.</strong> Four legitimate overlaps occur here — the upper and lower <em>Certified
+   True Copy</em> endorsements across body text, the notary's name block across the opening
+   paragraph, and the Grampanchayat rubber stamp across the footer. This is why §5.5 permits
+   overlap and why the suppression rule in §9.3 step 2 carries a target-IoU guard: without it,
+   body text lying under a stamp would be discarded as don't-care.</li>
+<li><strong>Excluded material is a large fraction of the page</strong> — over a third of blocks, and more by
+   area, once page edges, index tabs and the scan artifact are counted. If don't-care suppression
+   misbehaves, predictions over these regions flood <code>textCER</code> as insertions.</li>
+<li><strong>The officer band</strong> is a local three-column strip inside an otherwise single-column page, and
+   each name stays with its designation. See §6.15 rule 1 on local banding.</li>
+<li><strong>The outward number and the date</strong> separate from the letterhead under §6.3.7 — they are what
+   a reissue would change, while the office name and address are boilerplate.</li>
+<li><strong>Only one block is <code>uncertain</code></strong> — the outward number beneath the office seal. Whether it is
+   legible at full resolution is exactly the call the double-annotation sample of §6.16 exists to
+   calibrate.</li>
+</ol>
+<p>Two calls on this page are close enough to be worth adjudicating before it is treated as settled:
+the notary seal is excluded wholesale including its registration number and expiry date, because
+those are engraved in the die rather than written across it (§6.8); and the footer is read as two
+bands rather than strictly top-to-bottom across the full width (§6.15).</p>
+<p><strong>Note:</strong> this figure was produced against the v0.8 rules. Under §6.3.3 as revised, a reader
+should expect the masthead and footer groupings to differ slightly from the drawing. It is
+retained for the overlap, scope and banding points above, which are unchanged, and is due for
+regeneration alongside the pilot.</p>
+<h3 id="64-documentary-roles-closed-list">6.4 Documentary roles (closed list)</h3>
+<p>Trigger 3 refers to this list. It is <strong>closed</strong>: two adjacent regions that map to the same entry
+do <strong>not</strong> split on trigger 3.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>issuing_authority</code></td>
+<td>Letterhead, department, scheme identification, office address</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td>Document number, file number, outward/inward number, GR number</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>Date of issue or receipt</td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>Title, subject line, <code>विषय</code>, and the statement of what the document is about. May appear as a centred title, a right-aligned block, or an inline <code>विषय :-</code> — the role is the same in all three.</td>
+</tr>
+<tr>
+<td><code>addressee</code></td>
+<td><code>प्रति</code>, and the name and address of whom the document is directed to</td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td>Running prose, including preamble and operative paragraphs</td>
+</tr>
+<tr>
+<td><code>list_item</code></td>
+<td>One item of a list that trigger 5 has split</td>
+</tr>
+<tr>
+<td><code>endorsement</code></td>
+<td>Attestation, certification, inward/dispatch marking, officer's remark</td>
+</tr>
+<tr>
+<td><code>signature_block</code></td>
+<td>Name, designation, office appearing with a signature</td>
+</tr>
+<tr>
+<td><code>annexure_header</code></td>
+<td>Heading introducing a schedule, annexure or table</td>
+</tr>
+<tr>
+<td><code>distribution_list</code></td>
+<td><code>प्रत</code>, copy-to lists</td>
+</tr>
+<tr>
+<td><code>running_header</code></td>
+<td>A short reference line repeating on each page of a multi-page document</td>
+</tr>
+<tr>
+<td><code>page_footer</code></td>
+<td>The document's own pagination and continuation marks — <code>पृष्ठ ३ पैकी २</code>, <code>Page 1 of 4</code>, <code>....3/-</code></td>
+</tr>
+</tbody>
+</table>
+<p>The list is closed because an open-ended "role" test is unfalsifiable: an annotator can assert a
+role change to justify almost any split. Every under- and over-segmentation error found while
+drafting this document was of that form.</p>
+<p><strong>Running headers and page footers are <code>target</code>.</strong> This is a deliberate divergence from the
+OmniDocBench convention, which classes headers, footers and page numbers as <code>abandon</code> and
+excludes them from recognition scoring. On a single-page corpus of standalone certificates and
+orders, a running header carries the document's own reference number and is real content a
+system should read. Providers trained toward the OmniDocBench convention may omit them
+systematically; §18.6 asks the pilot to check.</p>
+<h3 id="65-target-content-that-belongs-to-the-document">6.5 <code>target</code> — content that belongs to the document</h3>
+<p>Includes, regardless of how it was rendered:</p>
+<ul>
+<li>printed and typed body text, headings, subject lines;</li>
+<li>dates, order numbers, reference numbers, file numbers;</li>
+<li>names, designations, addresses;</li>
+<li>tables and their titles;</li>
+<li>annexures, schedules, enclosures;</li>
+<li>footnotes and references;</li>
+<li>handwritten information forming part of the document (§6.8);</li>
+<li>endorsement and administrative stamp text (§6.7);</li>
+<li>certification and attestation text;</li>
+<li>struck-through and corrected text (§6.12);</li>
+<li>page numbers and running headers printed as part of the original document (§6.11).</li>
+</ul>
+<h3 id="66-uncertain-legible-content-failures-only">6.6 <code>uncertain</code> — legible-content failures only</h3>
+<ul>
+<li>illegible handwriting;</li>
+<li>stamp or seal text too degraded to read;</li>
+<li>text obscured by an overlying sticker, stamp or ink blot;</li>
+<li>text cut off at the page edge beyond legibility;</li>
+<li>ambiguous marks that may or may not be characters.</li>
+</ul>
+<p>Annotators <span class="rfc-badge rfc-must-not">MUST NOT</span> guess, reconstruct from context, or infer from a template. If you are
+transcribing what you expect rather than what you see, the region is <code>uncertain</code>.</p>
+<h3 id="67-reason-vocabulary">6.7 <code>reason</code> vocabulary</h3>
+<p><code>reason</code> is a controlled vocabulary, not free text, so that excluded material can be sliced when
+the contamination metric is added.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Applies to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>neighboring_document</code></td>
+<td>An adjoining, unrelated document captured in the same scan</td>
+</tr>
+<tr>
+<td><code>adjacent_page_edge</code></td>
+<td>A sliver of another page visible at the image boundary</td>
+</tr>
+<tr>
+<td><code>unrelated_sticker</code></td>
+<td>Sticky notes, labels, index tabs not part of the document</td>
+</tr>
+<tr>
+<td><code>unrelated_handwriting</code></td>
+<td>Personal reminders, calculations, test writing, operator notes</td>
+</tr>
+<tr>
+<td><code>scanner_page_number</code></td>
+<td>Pagination added by the scanning or filing process</td>
+</tr>
+<tr>
+<td><code>scanner_artifact</code></td>
+<td>Skew shadows, black borders, fingers, calibration marks, scanner watermarks</td>
+</tr>
+<tr>
+<td><code>reproduction_stamp</code></td>
+<td>Marks added when the document was copied rather than issued — <code>COLOUR XEROX</code>, copy-shop <code>DUPLICATE</code> overprints. Distinct from an officer's <em>Certified True Copy</em> attestation, which is an endorsement and is <code>target</code> (§6.8).</td>
+</tr>
+<tr>
+<td><code>bleed_through</code></td>
+<td>Text showing through from the reverse of the sheet, or from an underlying sheet</td>
+</tr>
+<tr>
+<td><code>pure_signature</code></td>
+<td>A signature stroke with no readable name</td>
+</tr>
+<tr>
+<td><code>graphical_seal</code></td>
+<td>An emblematic authority seal (§6.8)</td>
+</tr>
+<tr>
+<td><code>illustration</code></td>
+<td>Photographs, diagrams, logos, decorative graphics</td>
+</tr>
+<tr>
+<td><code>barcode</code></td>
+<td>Barcodes, QR codes, machine-readable marks</td>
+</tr>
+<tr>
+<td><code>random_mark</code></td>
+<td>Stray ink, doodles, smudges, punch holes</td>
+</tr>
+<tr>
+<td><code>unassignable</code></td>
+<td>Legible, but its relationship to the document cannot be established</td>
+</tr>
+<tr>
+<td><code>illegible</code></td>
+<td><strong><code>uncertain</code> blocks only</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="68-stamps-and-seals">6.8 Stamps and seals</h3>
+<p>The original rules document said both that a stamp containing legible text is included and that
+a circular seal's inner text is not automatically a target. Office seals contain legible office
+names, so those two rules conflict. The conflict is resolved by <strong>stamp type</strong>, which an
+annotator can judge from appearance alone rather than from a semantic argument:</p>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Appearance</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Endorsement / administrative stamp</strong></td>
+<td>Usually rectangular; inked; carries a date, inward or dispatch number, "received", "certified true copy", "attested", or an office name in plain lettering</td>
+<td><code>target</code>. Transcribe <strong>all</strong> legible text, including the office name.</td>
+</tr>
+<tr>
+<td><strong>Emblematic seal</strong></td>
+<td>Circular or oval; state emblem, crest, deity or figure; text arranged around a ring; often embossed, dry-stamped or overlapping other content</td>
+<td><code>figure</code>, <code>excluded</code>, <code>reason: "graphical_seal"</code> — even where the ring text is legible.</td>
+</tr>
+</tbody>
+</table>
+<p>Where instance-specific writing has been added across an emblematic seal — a date, initials, a
+number — that writing is annotated as a <strong>separate</strong> <code>text</code> block with <code>scope: "target"</code>. The
+seal region stays excluded; the writing on it does not. Text engraved into the seal die itself,
+including a registration number or expiry date, stays with the seal.</p>
+<p>A rectangular office stamp whose text duplicates the letterhead is still <code>target</code>. The
+duplication is correct: it is a separate physical act and a system should read it.</p>
+<h3 id="69-handwritten-text">6.9 Handwritten text</h3>
+<p>Handwriting is <strong>not</strong> automatically excluded. Include as <code>target</code> where it forms part of the
+document:</p>
+<ul>
+<li>dates, order and reference numbers;</li>
+<li>approvals, sanctions, initials accompanying a decision;</li>
+<li>official instructions and routing notes (<code>शेरा</code>, "Please put up", "Approved");</li>
+<li>corrections and interlineations;</li>
+<li>endorsements and marginal notes made by an officer.</li>
+</ul>
+<p>Exclude as <code>unrelated_handwriting</code> where it is clearly not part of the record: personal
+reminders, arithmetic scratch work, pen tests, notes by scanning staff, doodles.</p>
+<p>Where you can see handwriting but cannot read it → <code>uncertain</code>.</p>
+<h3 id="610-signatures">6.10 Signatures</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The signature stroke itself</td>
+<td><code>figure</code>, <code>excluded</code>, <code>reason: "pure_signature"</code></td>
+</tr>
+<tr>
+<td>Name adjacent to the signature, <strong>printed or handwritten</strong></td>
+<td><code>target</code>, if legible</td>
+</tr>
+<tr>
+<td>Designation, office, department below the signature</td>
+<td><code>target</code>, if legible</td>
+</tr>
+<tr>
+<td>An illegible name</td>
+<td><code>uncertain</code> — never guess</td>
+</tr>
+</tbody>
+</table>
+<p>The original document said "printed name/designation near signature" in one place and "readable
+text associated with the signature" in another. The rule here is the second: <strong>legibility
+decides, not rendering method.</strong></p>
+<h3 id="611-page-numbers-headers-and-footers">6.11 Page numbers, headers and footers</h3>
+<ul>
+<li>Page numbers, folio numbers, continuation marks (<code>....3/-</code>), running headers and footers
+  <strong>printed as part of the original document</strong> → <code>target</code>, with role <code>page_footer</code> or
+  <code>running_header</code> (§6.4).</li>
+<li>Pagination added afterwards by the scanning, filing or registry process — bates stamps,
+  handwritten folio numbers applied to the file, digital footers added by scanning software
+  → <code>excluded</code>, <code>reason: "scanner_page_number"</code>.</li>
+<li>Where you cannot tell which it is → <code>excluded</code>, <code>reason: "unassignable"</code>.</li>
+</ul>
+<p>Handwriting is a strong but not decisive signal: a handwritten number in the top corner of a
+filed page is almost always registry pagination, while a handwritten date in the body is almost
+always document content.</p>
+<h3 id="612-struck-through-and-corrected-text">6.12 Struck-through and corrected text</h3>
+<ul>
+<li><strong>Struck-through text that remains legible</strong> → <code>target</code>, transcribed as it reads.</li>
+<li><strong>A correction written over or beside struck text</strong> → both are <code>target</code>: transcribe the struck
+  original in its own block and the correction in its own block, each at its position in the
+  reading order.</li>
+<li>Where overwriting has made either reading illegible → that block is <code>uncertain</code>.</li>
+</ul>
+<p><strong>Inside a table cell</strong> there is no block to split into, so a cell containing both a struck
+original and a handwritten correction holds <strong>both</strong>, in the order they appear on the page —
+reading position first, then the struck value. Where one is legible and the other is not,
+transcribe what can be read; mark the cell <code>uncertain</code> only when neither can be.</p>
+<p><strong>Strikethrough is never marked in the text itself.</strong> Do not use U+0336 COMBINING LONG STROKE
+OVERLAY or any other in-text marking. It would double the character count of every struck
+passage — <code>textCER</code> counts code points — and essentially no OCR system emits it, so every
+provider would take an insertion per character. It also interleaves a combining mark into
+Devanagari clusters that already carry viramas, matras and nukta, which the normalization rules
+of §8.2–8.4 were not designed for.</p>
+<p>Where the information matters, record it in the optional <code>struck</code> boolean on the block (§5.2).
+It is never scored. Strikethrough inside table cells is not recorded at all in v1.0.</p>
+<h3 id="613-neighbouring-documents-and-scan-artifacts">6.13 Neighbouring documents and scan artifacts</h3>
+<p>Text from an adjoining document, an adjacent page visible at the image edge, bleed-through from
+the reverse of the sheet, and scanner artifacts are all <code>excluded</code> with the appropriate reason.
+They are still transcribed where legible (§5.3).</p>
+<p>A system is not required to detect or return any of this material, and is not penalized for
+ignoring it. Predictions landing on these regions are discarded rather than scored (§9.3).</p>
+<h3 id="614-occlusion">6.14 Occlusion</h3>
+<p>Where a sticker, stamp or blot covers target text:</p>
+<ul>
+<li>annotate the overlying object per §6.8 or §6.7;</li>
+<li>annotate the covered text as <code>uncertain</code> if it cannot be read;</li>
+<li><strong>never</strong> reconstruct the covered text from a template, a duplicate page, or context.</li>
+</ul>
+<h3 id="615-assigning-reading-order">6.15 Assigning reading order</h3>
+<p>Order is assigned over <code>target</code> blocks only.</p>
+<p><strong>Step 0 — establish orientation.</strong> Determine which way up the document is before anything else.
+Pages are sometimes scanned rotated by 90° or 180°, and §3 forbids rotating the image during
+preparation. Reading order is assigned <strong>in the document's own frame</strong>; <code>poly</code> coordinates
+remain in the image's frame. A page scanned upside down therefore has an <code>order</code> sequence that
+runs bottom-to-top in image coordinates, and that is correct. Record the rotation in the corpus
+manifest (§4.3).</p>
+<p>Then apply, in sequence:</p>
+<ol>
+<li><strong>Column detection.</strong> Divide the page into column bands. Read each band completely before
+   moving to the next; bands are ordered left to right for left-to-right scripts and right to
+   left for right-to-left scripts.</li>
+</ol>
+<p><strong>Banding is local, not page-wide.</strong> A page that is single-column overall frequently contains
+   a horizontal strip that is locally multi-column — an officer band carrying three names across
+   the letterhead, a two-column slogan strip, or a two-column footer of signature blocks. Such a
+   strip is banded within its own vertical extent, and banding resumes as single-column above and
+   below it. Reading a local multi-column strip as full-width lines is a common and consequential
+   annotator error.</p>
+<ol>
+<li>
+<p><strong>Within a band</strong>, order top to bottom. Where two blocks overlap vertically, the one whose
+   leading edge is further toward the start of the line comes first.</p>
+</li>
+<li>
+<p><strong>Bilingual parallel columns</strong> (Hindi and English side by side): the column in the document's
+   primary language is read completely first, then the secondary column. The primary language is
+   recorded in the corpus manifest.</p>
+</li>
+<li>
+<p><strong>Stamps and endorsements</strong> are read at the point where they sit spatially, not appended to
+   the end. A stamp that overlaps a paragraph orders by its own leading edge under rule 2, with
+   no special case.</p>
+</li>
+</ol>
+<p>The alternative — ordering stamps last, on the grounds that they were applied after the
+   document was composed — is rejected deliberately. <code>e2eNED</code> has no matcher, so reading order is
+   a bet on what providers produce, and providers order geometrically because they are performing
+   layout analysis rather than document semantics. Spatial ordering is also checkable, where
+   "is this an endorsement or part of the body" is a judgment; and it degrades gracefully, since
+   a misjudged stamp still lands roughly in the right place.</p>
+<ol>
+<li><strong>Tables</strong> occupy one position in the reading order as a single block. Their title, being a
+   separate <code>text</code> block where it sits outside the table frame (§7.6), sits immediately before
+   them.</li>
+</ol>
+<p>Where the geometry is genuinely ambiguous, the annotator's recorded order is canonical by
+definition. There is no appeal to a "natural" order beyond these rules.</p>
+<h3 id="616-annotation-quality-control">6.16 Annotation quality control</h3>
+<p>Because the reference set defines the metric, annotation quality is benchmark quality.</p>
+<ol>
+<li>Annotators <span class="rfc-badge rfc-must">MUST</span> be fluent readers of the script and language they annotate.</li>
+<li>Every page is annotated once, then reviewed by a second annotator for scope assignment.</li>
+<li>A sample of at least <strong>20% of pages</strong> is independently double-annotated end to end.</li>
+<li>On that sample, report:</li>
+<li><strong>character-level agreement</strong> on target text (computed as <code>textCER</code> of one annotator's
+     output against the other's);</li>
+<li><strong>Cohen's κ</strong> on <code>scope</code> labels over matched regions;</li>
+<li><strong>region-level agreement</strong> on block boundaries at IoU ≥ 0.5.</li>
+<li>Disagreements are adjudicated by a third annotator, whose decision is recorded.</li>
+<li>The reference set is frozen only after the validation suite of §14 passes with no errors.</li>
+</ol>
+<p><strong>The character-level agreement figure sets the floor for the benchmark.</strong> If two annotators
+disagree at 2% CER, differences between systems below 2% <code>textCER</code> are not measurable and
+<span class="rfc-badge rfc-must-not">MUST NOT</span> be presented as rankings. This number is published alongside the results, and it
+also defines the usability gate used in cost reporting (§19.2).</p>
+<p>Priority for the double-annotation sample, based on the cases that proved hardest while drafting
+these rules: pages with emblematic seals carrying legible ring text; struck-and-renumbered table
+columns; local multi-column strips; and letterheads where the boilerplate/variable split of
+§6.3.7 applies.</p>
+<h2 id="7-table-html">7. Table HTML</h2>
+<p>The <code>html</code> field is the <strong>single source of truth</strong> for both table structure and cell content.
+Cells are never annotated separately; the cell grid is derived from the HTML (§10.3). One source
+of truth, no drift.</p>
+<h3 id="71-permitted-markup">7.1 Permitted markup</h3>
+<p>Only the following elements: <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>.
+Only the following attributes: <code>rowspan</code>, <code>colspan</code> (integer values ≥ 1).</p>
+<p><strong>Prohibited:</strong> <code>&lt;th&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>,
+<code>&lt;span&gt;</code>, <code>&lt;p&gt;</code>, CSS classes, styles, ids, nested <code>&lt;table&gt;</code>.</p>
+<ul>
+<li><strong>No <code>&lt;th&gt;</code>.</strong> Header cells are <code>&lt;td&gt;</code> elements inside <code>&lt;thead&gt;</code>. The header/data distinction
+  is carried entirely by the <code>&lt;thead&gt;</code> / <code>&lt;tbody&gt;</code> wrapper. See §7.4 — it is a metric-correctness
+  requirement, not a style preference.</li>
+<li><strong>No <code>&lt;caption&gt;</code>.</strong> A table's title is annotated as an ordinary <code>text</code> block in the page
+  reading order. Placing it inside the table would both change the TEDS tree and double-count
+  its characters against <code>textCER</code>.</li>
+<li><strong>No <code>&lt;br&gt;</code>.</strong> Line breaks inside a cell are stored as <code>\n</code> in the cell's text content, per
+  §5.6 rule 2.</li>
+<li><strong>No nested tables.</strong> A visually nested table is annotated as a single flat grid.</li>
+</ul>
+<h3 id="72-canonical-serialization">7.2 Canonical serialization</h3>
+<p>The reference <code>html</code> string <span class="rfc-badge rfc-must">MUST</span> be canonically serialized:</p>
+<ul>
+<li>no whitespace between tags;</li>
+<li>every cell is <code>&lt;td&gt;</code>; <code>&lt;th&gt;</code> never appears;</li>
+<li>attributes in the order <code>rowspan</code>, then <code>colspan</code>;</li>
+<li>attribute values double-quoted;</li>
+<li><code>rowspan="1"</code> / <code>colspan="1"</code> omitted;</li>
+<li><code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> always written explicitly, never implied;</li>
+<li>a table with no header rows has an empty-but-present <code>&lt;thead&gt;&lt;/thead&gt;</code>;</li>
+<li>cell text HTML-escaped for <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code> only.</li>
+</ul>
+<p>The scorer canonicalizes prediction HTML with the same function before use. Canonicalization is
+part of the reference implementation and is normative.</p>
+<h3 id="73-grid-validity">7.3 Grid validity</h3>
+<p>After expanding all <code>rowspan</code> / <code>colspan</code>, the table <span class="rfc-badge rfc-must">MUST</span> form a dense rectangular matrix:
+every grid position covered exactly once, no gaps, no double coverage, no span extending past
+the grid boundary. Invalid grids are rejected at validation time.</p>
+<h3 id="74-header-rows">7.4 Header rows</h3>
+<p>All rows above the first data row that identify the columns belong in <code>&lt;thead&gt;</code>, including
+multi-level headers and numeric column-index rows. All remaining rows belong in <code>&lt;tbody&gt;</code>.
+Every cell in both sections is a <code>&lt;td&gt;</code>.</p>
+<p><strong>Why <code>&lt;td&gt;</code> and not <code>&lt;th&gt;</code>.</strong> The official TEDS implementation gates cell-content comparison on
+the node tag being <code>td</code>. Its cost function returns <code>1.0</code> when tags or spans differ, then compares
+content <strong>only if</strong> <code>node.tag == 'td'</code>, and otherwise returns <code>0.0</code>. Two <code>&lt;th&gt;</code> nodes with
+matching spans and completely different text therefore cost nothing: <strong>their text is never
+compared</strong>. A system could emit arbitrary garbage in every header cell and still score full
+marks. Since multi-level headers and column-index rows are among the things this benchmark most
+wants to measure, encoding them in a tag the metric skips would be a silent failure on exactly
+the cells that matter. The full cost function is in §12.2.</p>
+<p>Encoding the distinction in the <code>&lt;thead&gt;</code> / <code>&lt;tbody&gt;</code> wrapper is lossless under the header
+definition above — header rows are contiguous and appear only at the top, so the wrapper carries
+the same information <code>&lt;th&gt;</code> would. It is also scored: every HTML tag becomes a tree node, so
+moving a header row into the body changes the tree. And it keeps the table numbers comparable to
+the published table-recognition literature.</p>
+<p>A secondary benefit: some systems emit <code>&lt;th&gt;</code> in the first column of body rows (stub or row
+headers), a real pattern in Indian government tables. Under this encoding the question never
+arises — those are body cells and become <code>&lt;td&gt;</code> in <code>&lt;tbody&gt;</code>.</p>
+<h3 id="75-prediction-html-normalization">7.5 Prediction HTML normalization</h3>
+<p>Predicted table HTML is normalized to the canonical encoding before any metric is computed.
+This is normative and lives in the reference implementation.</p>
+<pre><code>1. Structural mapping
+   - existing &lt;thead&gt; / &lt;tbody&gt;            → honoured as given
+   - no &lt;thead&gt;, but a contiguous run of
+     leading rows whose cells are all &lt;th&gt; → wrap that run in &lt;thead&gt;
+   - no header signal of any kind          → empty &lt;thead&gt;&lt;/thead&gt;, all rows in &lt;tbody&gt;
+
+2. Cell mapping
+   - every &lt;th&gt;                            → &lt;td&gt;
+
+3. Markup reduction
+   - &lt;caption&gt;                             → discarded
+   - &lt;br&gt;                                  → &quot;\n&quot; in cell text
+   - &lt;b&gt;, &lt;i&gt;, &lt;span&gt;, &lt;p&gt;, &lt;font&gt;, etc.   → unwrapped, inner text kept
+   - nested &lt;table&gt;                        → flattened into the parent grid
+   - class / style / id / any other attr   → dropped
+   - &lt;tfoot&gt;                               → rows appended to &lt;tbody&gt;
+   - &lt;colgroup&gt;, &lt;col&gt;                     → discarded
+
+4. Canonical serialization per §7.2
+</code></pre>
+<p><strong>GFM pipe tables</strong> (from §9.1.2 submissions) map as follows before step 4:</p>
+<pre><code>   - row above the |---|---| delimiter     → single &lt;thead&gt; row
+   - all other rows                        → &lt;tbody&gt;
+   - no delimiter row present              → empty &lt;thead&gt;&lt;/thead&gt;, all rows in &lt;tbody&gt;
+   - alignment markers (:---, :---:, ---:) → discarded
+</code></pre>
+<p>Markdown tables cannot express <code>rowspan</code> or <code>colspan</code> at all. A markdown-emitting system
+therefore cannot represent multi-level headers or merged cells, and will lose structural credit
+against any reference table that has them. This is a real capability difference and is left
+visible rather than compensated for.</p>
+<p>Predictions are normalized, never rejected. A malformed grid that cannot be expanded into a
+dense matrix (§7.3) scores <code>TEDS = 0</code> for that table and has all its cells treated as
+insertions in <code>textCER</code>; it does not abort the run.</p>
+<p>Note that a system emitting no <code>&lt;thead&gt;</code> and no <code>&lt;th&gt;</code> anywhere receives an empty <code>&lt;thead&gt;</code>, and
+will therefore lose the header portion of the TEDS tree against any reference table that has
+headers. This is correct: failing to identify headers is a failure the benchmark should show.</p>
+<hr />
+<h3 id="76-what-is-a-table-and-where-its-edges-are">7.6 What is a table, and where its edges are</h3>
+<p><strong>Is this region a table at all?</strong> Aligned text is a table only where it has <strong>ruled lines, a
+header row, or three or more columns forming a clear grid</strong>. Two aligned rows inside a running
+numbered list — label, figure, unit, verb — are prose that happens to be typeset with alignment,
+and are annotated as <code>text</code>.</p>
+<p>This matters more than it appears. A predicted <code>table</code> against a reference <code>text</code> block does not
+match (§9.4): both fall to residue and the <code>textCER</code> cost is large. Where a page is borderline,
+check what providers actually emit before fixing the reference.</p>
+<p><strong>Is a given line inside the table or above it?</strong> The <strong>frame decides</strong>:</p>
+<ul>
+<li>A full-width line <strong>enclosed by the table's outer border</strong> is a <code>&lt;thead&gt;</code> row carrying a single
+  cell with <code>colspan</code> equal to the column count.</li>
+<li>A line <strong>above the border</strong> is a separate <code>text</code> block with role <code>annexure_header</code> (§6.4).</li>
+<li>Where the table has <strong>no border at all</strong>, a centred or underlined line separated from the first
+  row by a clear gap is a separate <code>text</code> block.</li>
+</ul>
+<p>The frame test is used in preference to asking whether the line "reads like a title", because
+that is a judgment two annotators will answer differently. A banner row often is not a title at
+all: a pay-scale line applying to every row below it is data, and removing it from the table
+would strip the rows of the scale they depend on.</p>
+<p>A table may therefore have several header rows — for example a banner row, a second banner row,
+a column-name row and a numeric column-index row, giving four rows in <code>&lt;thead&gt;</code>.</p>
+<p><strong>Leader characters are not a column.</strong> A dash or dot run separating a name from its value is
+punctuation (§6.3.6). A column whose every cell holds the same value carries no information and
+is not a column: a serial / name / dash / portfolio layout is <strong>three</strong> columns, not four, and
+the leader is omitted entirely rather than attached to either neighbour.</p>
+<h3 id="77-visually-merged-cells">7.7 Visually merged cells</h3>
+<p>Where a cell visibly spans several rows or columns — the ruling runs only across the other
+columns, with no internal lines — it is encoded with <code>rowspan</code> or <code>colspan</code>, <strong>not</strong> as one
+populated cell followed by empty ones.</p>
+<p>Empty cells would assert that <em>n</em> separate cells exist with <em>n−1</em> of them blank, which is not
+what the page shows. This is also a scored distinction: <code>rowspan</code> and <code>colspan</code> are part of the
+TEDS cost function (§12.2), and a mismatch costs the full <code>1.0</code>.</p>
+<p>Span counts are easy to get wrong where several groups run together. The grid-density check of
+§7.3 catches a wrong count, so run the validator on any page with deep merges.</p>
+<hr />
+<h2 id="8-text-normalization-profiles">8. Text Normalization Profiles</h2>
+<p>All normalization is applied <strong>per text unit</strong> — per text block, or per table cell — and
+<strong>never</strong> to a concatenated string. Applying whitespace collapsing to a joined page string
+would destroy block separators and table markup.</p>
+<h3 id="81-character-unit">8.1 Character unit</h3>
+<p>The primary character unit is the <strong>Unicode code point</strong>, after NFC. This matches OmniDocBench,
+matches the OCR literature, and is what <code>len()</code> and standard edit-distance libraries operate on.</p>
+<p>An <strong>optional secondary</strong> variant computes the same metrics over extended grapheme clusters
+(Unicode UAX #29, e.g. <code>regex.findall(r'\X', s)</code>). For Indic scripts the two diverge
+substantially — a dropped virama is one code point but changes the akshara entirely — and
+reporting both is diagnostically useful. Grapheme-cluster variants are labelled <code>*_gc</code> and are
+not headline numbers.</p>
+<h3 id="82-profile-raw">8.2 Profile <code>raw</code></h3>
+<pre><code>raw(s):
+  1. s = unicodedata.normalize(&quot;NFC&quot;, s)
+</code></pre>
+<p>That is all. Spacing, line breaks and invisible characters are scored as they appear.</p>
+<p><strong>NFC is applied in the <code>raw</code> profile, not only in <code>norm</code>.</strong> This is not optional for Indic
+text. Devanagari nukta letters (ऱ U+0931, ज़ U+095B, ड़ U+095C …) are Unicode composition
+exclusions, so NFC <em>decomposes</em> them into base + U+093C. If normalization were applied to only
+one side, or to neither consistently, the reference and a correct prediction would disagree on
+character count for extremely common Marathi words. Both sides go through NFC in every profile.</p>
+<h3 id="83-profile-norm">8.3 Profile <code>norm</code></h3>
+<pre><code>norm(s):
+  1. s = unicodedata.normalize(&quot;NFC&quot;, s)
+  2. s = s.replace(&quot;\u200C&quot;, &quot;&quot;).replace(&quot;\u200D&quot;, &quot;&quot;)   # ZWNJ, ZWJ
+  3. s = unify_eyelash_reph(s)                            # see 8.4
+  4. s = re.sub(r&quot;\s+&quot;, &quot; &quot;, s)                           # collapse all whitespace runs
+  5. s = s.strip()
+</code></pre>
+<p>Order matters and is normative. Step 4 uses the Unicode <code>\s</code> class and collapses newlines,
+multiple spaces, and any other whitespace to a single U+0020.</p>
+<h3 id="84-eyelash-reph-unification">8.4 Eyelash reph unification</h3>
+<p>Marathi's eyelash reph has two encodings in common circulation which are <strong>not</strong> canonically
+equivalent, so NFC will not unify them:</p>
+<ul>
+<li><code>U+0931</code> (ऱ) + <code>U+094D</code> — which NFC further decomposes to <code>U+0930 U+093C U+094D</code></li>
+<li><code>U+0930 U+094D U+200D</code> (र + virama + ZWJ)</li>
+</ul>
+<p>Both render identically and are the same grapheme to any reader. In the <code>norm</code> profile they are
+unified to the single form <code>U+0930 U+093C U+094D</code>. In the <code>raw</code> profile they are <strong>not</strong>
+unified and will score as a difference.</p>
+<p>The reference implementation ships a table of such script-specific equivalences with a test
+suite of paired strings. Additions to that table are a versioned change to this specification.</p>
+<h3 id="85-what-normalization-does-not-do">8.5 What normalization does <em>not</em> do</h3>
+<p>Neither profile performs: case folding (irrelevant for most target scripts, and meaningful for
+Latin-script content in these documents), digit transliteration (Devanagari १२३ ≠ ASCII 123 —
+this distinction is the point of an OCR metric), punctuation folding, spelling correction,
+transliteration, or any semantic normalization.</p>
+<hr />
+<h2 id="9-matching">9. Matching</h2>
+<p>Matching converts a prediction into a set of <code>(reference_unit, predicted_unit)</code> pairs. It runs
+once per page and its output feeds all six metrics. Following the OmniDocBench approach,
+matching is geometric, with explicit handling of don't-care regions and of split/merge cases.</p>
+<h3 id="91-prediction-formats">9.1 Prediction formats</h3>
+<p>There are two accepted submission formats. They differ in which metrics they can be scored on.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th><code>textCER</code></th>
+<th><code>e2eNED</code></th>
+<th><code>TEDS</code> / <code>TEDS-S</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Block JSON</strong> (§9.1.1)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>Markdown</strong> (§9.1.2)</td>
+<td>❌</td>
+<td>✅</td>
+<td>see §18.2</td>
+</tr>
+</tbody>
+</table>
+<p>The leaderboard <span class="rfc-badge rfc-must">MUST</span> show which format each system submitted, and <span class="rfc-badge rfc-must-not">MUST NOT</span> present a
+markdown submission's <code>e2eNED</code> in a way that implies it was scored on the full suite.</p>
+<h4 id="911-block-json-full-scoring">9.1.1 Block JSON — full scoring</h4>
+<p>Identical to §5.2, with <code>scope</code> and <code>reason</code> removed:</p>
+<pre><code class="language-json">{
+  &quot;page_id&quot;: &quot;MH-000123-p01&quot;,
+  &quot;blocks&quot;: [
+    { &quot;id&quot;: 0, &quot;type&quot;: &quot;text&quot;, &quot;order&quot;: 0,
+      &quot;poly&quot;: [136.0, 781.0, 940.0, 781.0, 940.0, 806.0, 136.0, 806.0],
+      &quot;text&quot;: &quot;महाराष्ट्र शासन&quot;, &quot;html&quot;: null }
+  ]
+}
+</code></pre>
+<ul>
+<li><code>poly</code> is <strong>required</strong> on every predicted block.</li>
+<li><code>order</code> is required and must be dense and unique across predicted blocks.</li>
+<li><code>type</code>, <code>text</code> / <code>html</code> constraints follow §5.3 for <code>scope: "target"</code>.</li>
+<li>Prediction HTML is normalized per §7.5 and canonicalized per §7.2 before use.</li>
+</ul>
+<h4 id="912-markdown-e2ened-only">9.1.2 Markdown — <code>e2eNED</code> only</h4>
+<p>One markdown document per page, keyed by <code>page_id</code>. Markdown carries no geometry, so the
+matching of §9.3 cannot run and <code>textCER</code> is not computed for these submissions. <code>e2eNED</code> needs
+no geometry and is computed in full.</p>
+<p>Markdown is <strong>parsed into blocks and then serialized by <code>S</code></strong> (§11.2) — it is never compared as
+a raw string against the reference. Comparing raw markdown would mean scoring heading markers,
+bullet styles and emphasis syntax as recognition errors, which is exactly what the shared
+serializer exists to prevent. The ingest is specified in §9.6.</p>
+<p>Note that markdown submissions cannot express the <code>excluded</code> / <code>uncertain</code> distinction, so
+don't-care suppression (§9.3 step 2) never applies to them. This costs them nothing relative to
+JSON submitters on <code>e2eNED</code>, because that metric cannot express don't-care semantics for anyone
+(§11.3).</p>
+<h4 id="913-submission-protocol-and-prompt-disclosure">9.1.3 Submission protocol and prompt disclosure</h4>
+<p>For prompted systems — any VLM or API-based model — the prompt materially determines output
+completeness, ordering and format. Two submissions produced under different prompts are not
+comparable, and a benchmark that does not fix or record the prompt is measuring prompt
+engineering alongside recognition.</p>
+<p>Every submission <span class="rfc-badge rfc-must">MUST</span> therefore be accompanied by a manifest recording:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>system_name</code>, <code>version</code></td>
+<td>Model identifier and version or checkpoint date</td>
+</tr>
+<tr>
+<td><code>submission_format</code></td>
+<td><code>block_json</code> or <code>markdown</code> (§9.1)</td>
+</tr>
+<tr>
+<td><code>prompt</code></td>
+<td>The <strong>exact</strong> prompt string, verbatim. <code>null</code> for non-prompted systems.</td>
+</tr>
+<tr>
+<td><code>image_preprocessing</code></td>
+<td>Any resizing, deskewing, binarization, or tiling applied before inference</td>
+</tr>
+<tr>
+<td><code>decoding_params</code></td>
+<td>Temperature, max tokens, and any repetition penalty</td>
+</tr>
+<tr>
+<td><code>postprocessing</code></td>
+<td>Any rule-based cleanup applied to raw model output</td>
+</tr>
+<tr>
+<td><code>cost_per_page</code>, <code>latency_per_page</code></td>
+<td>Optional but encouraged; median values</td>
+</tr>
+</tbody>
+</table>
+<p>The benchmark publishes a <strong>reference prompt</strong> with the reference implementation. Submitters MAY
+use their own and MUST disclose it; the leaderboard marks which submissions used the reference
+prompt so that the two groups can be read separately.</p>
+<p><code>max_tokens</code> and any repetition penalty are recorded specifically because they interact with the
+degeneracy diagnostic of §2.2: a system that loops to its token limit will show a high degeneracy
+rate, and the reader needs to know what that limit was.</p>
+<h3 id="92-overlap-functions">9.2 Overlap functions</h3>
+<p>Two different overlap measures are used, deliberately:</p>
+<pre><code>IoU(a, b)         = area(a ∩ b) / area(a ∪ b)
+containment(p, r) = area(p ∩ r) / area(p)        # how much of prediction p lies inside r
+</code></pre>
+<p>Don't-care suppression uses <strong>containment</strong>, not IoU. A single predicted text line falling
+inside a large excluded neighbouring-document region has near-zero IoU with it but containment
+close to 1. Using IoU here would fail to suppress exactly the case the mechanism exists for.</p>
+<h3 id="93-algorithm">9.3 Algorithm</h3>
+<pre><code>INPUT:  GT blocks, PRED blocks
+OUTPUT: matched groups, unmatched GT, unmatched PRED
+
+1. PARTITION GT
+   TARGET   = { g ∈ GT : g.scope == &quot;target&quot; }
+   DONTCARE = { g ∈ GT : g.scope ∈ {&quot;excluded&quot;, &quot;uncertain&quot;} }
+
+2. SUPPRESS DON'T-CARE PREDICTIONS
+   For each p ∈ PRED:
+     if max over r ∈ DONTCARE of containment(p, r) ≥ 0.5
+        and max over g ∈ TARGET of IoU(p, g) &lt; 0.5:
+       discard p entirely — neither rewarded nor penalized.
+   The second condition prevents discarding a prediction that genuinely matches a target
+   block which happens to sit underneath an overlapping stamp, seal or endorsement.
+
+3. PRIMARY MATCHING  (1:1)
+   Compute IoU for all (g, p) pairs where g ∈ TARGET, p ∈ surviving PRED, type matches.
+   Retain pairs with IoU ≥ 0.5.
+   Solve as maximum-weight bipartite matching (Hungarian) on IoU.
+   Each resulting pair seeds a group {g} × {p}.
+   Determinism: where weights tie, break by ascending (g.id, p.id).
+
+4. SPLIT RECOVERY  (one GT block → several predicted blocks)
+   For each p not yet in any group:
+     find g ∈ TARGET maximizing containment(p, g), requiring containment ≥ 0.5
+     and matching type.
+     If found, add p to g's group — CREATING the group if g has no group yet.
+   Each group's predicted text is concatenated in ascending p.order, joined with &quot; &quot;.
+
+5. MERGE RECOVERY  (several GT blocks → one predicted block)
+   For each g ∈ TARGET not yet in any group:
+     find p maximizing containment(g, p), requiring containment ≥ 0.5 and matching type,
+     where p is a group ANCHOR — that is, p was matched in step 3, or p is unassigned.
+     A p that was absorbed into another group in step 4 is not a candidate.
+     If found, add g to p's group — CREATING the group if p has no group yet.
+   Each group's reference text is concatenated in ascending g.order, joined with &quot; &quot;.
+
+6. RESIDUE
+   g ∈ TARGET in no group  → deletion: scored against an empty prediction.
+   p in no group           → insertion: scored against an empty reference.
+</code></pre>
+<p>Thresholds <code>0.5</code> for IoU and <code>0.5</code> for containment are normative for v1.0 and versioned with
+this specification.</p>
+<p><strong>Steps 4 and 5 do not require a prior primary match.</strong> This is the critical property. A group
+may be created from scratch by containment alone, with no step-3 seed. Requiring an existing
+match would make the algorithm 1:1 in practice regardless of intent, because the case these
+steps exist for is precisely the case where no primary match can form.</p>
+<p>Worked illustration. A reference masthead block of roughly 368 × 50 px is segmented by a
+provider into six line-level blocks of roughly 79 × 18 px each, all nested inside it:</p>
+<ul>
+<li><code>IoU</code> for any one fragment ≈ 1,422 / 18,400 ≈ <strong>0.077</strong> — far below the 0.5 primary threshold,
+  and no fragment can ever clear it, since clearing 0.5 would require an overlap of ~9,200 px².</li>
+<li><code>containment(p, g)</code> = 1,422 / 1,422 = <strong>1.00</strong> — an unambiguous signal.</li>
+</ul>
+<p>Step 3 produces nothing here. Step 4 must therefore be able to act on the containment signal
+without a seed, or all six fragments and the reference block fall to residue — producing an edit
+distance of <code>len(ref) + len(pred)</code> and a <code>textCER</code> near 2.0 on a page whose text is largely
+correct.</p>
+<p><strong>Relation to OmniDocBench.</strong> The published Adjacency Search Match runs the same two stages:
+high-similarity 1:1 pairing first, then a subset test over what remains, followed by merging.
+Its second stage likewise has no precondition that the first stage succeeded. The only
+substantive difference is the input signal — that algorithm matches on text similarity because
+its predictions are markdown carrying no geometry, whereas predictions here carry <code>poly</code> (§9.1.1)
+and containment is available directly. Containment is the geometric analogue of that subset
+test.</p>
+<h3 id="931-why-adjacency-is-a-diagnostic-not-a-filter">9.3.1 Why adjacency is a diagnostic, not a filter</h3>
+<p>OmniDocBench merges <em>adjacent</em> paragraphs, and adjacency is load-bearing there: with text
+similarity as the only signal, nothing else prevents merging two unrelated paragraphs from
+opposite ends of a page.</p>
+<p>This specification deliberately <strong>does not</strong> impose an adjacency constraint, because geometry
+already supplies that guarantee — blocks grouped in steps 4 and 5 are contained in one another,
+so they are spatially coherent by construction. Adding adjacency on top would actively harm two
+cases this benchmark cares about:</p>
+<ol>
+<li><strong>Multi-column layouts.</strong> Where a provider reads the right column before the left, every
+   fragment remains correctly contained in its reference block, but the fragments are no longer
+   contiguous in the provider's global <code>order</code> — they interleave with the other column. An
+   adjacency filter would split those groups apart and drive <code>textCER</code> toward the same false
+   negative this algorithm exists to prevent.</li>
+<li><strong>Metric separation.</strong> <code>textCER</code> measures recognition; <code>e2eNED</code> measures recognition together
+   with reading order (§11.3). Making <code>textCER</code> order-sensitive would penalize an ordering error
+   twice and destroy the diagnostic value of reading the pair together.</li>
+</ol>
+<p>Adjacency is instead recorded as a <strong>diagnostic</strong>: the scorer reports the fraction of groups
+whose members are non-contiguous in <code>order</code> (§2.2). A high rate is a reading-order signal, and
+it points the reader at <code>e2eNED</code>, which is where the penalty properly falls.</p>
+<h3 id="94-type-mismatch">9.4 Type mismatch</h3>
+<p>A predicted <code>table</code> overlapping a reference <code>text</code> block (or vice versa) does <strong>not</strong> match.
+The reference block becomes a deletion and the prediction an insertion. Type confusion is a
+real failure and is scored as one.</p>
+<h3 id="95-table-to-table-matching">9.5 Table-to-table matching</h3>
+<p>Tables match by the same procedure. Split/merge recovery (steps 4–5) does <strong>not</strong> apply to
+tables: a reference table matches at most one predicted table and vice versa. An unmatched
+reference table scores <code>TEDS = 0</code> and all of its cells become deletions in <code>textCER</code>.</p>
+<h3 id="96-markdown-ingest">9.6 Markdown ingest</h3>
+<p>Applies to §9.1.2 submissions only. The parse is normative and lives in the reference
+implementation. Input is treated as CommonMark with GFM tables; the parser <span class="rfc-badge rfc-must">MUST</span> be pinned by
+name and version in the scorer output.</p>
+<p><strong>Block segmentation.</strong> Each top-level markdown block becomes one prediction block, in document
+order. <code>order</code> is assigned by document order, starting at 0. <code>poly</code> is absent.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown construct</th>
+<th>Becomes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATX heading (<code># …</code>) or setext heading</td>
+<td><code>text</code> block, markers stripped</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td><code>text</code> block</td>
+</tr>
+<tr>
+<td>List</td>
+<td>one <code>text</code> block <strong>per item</strong>, markers (<code>-</code>, <code>*</code>, <code>+</code>, <code>1.</code>, <code>1)</code>) stripped</td>
+</tr>
+<tr>
+<td>Blockquote</td>
+<td><code>text</code> block, <code>&gt;</code> stripped, contents processed normally</td>
+</tr>
+<tr>
+<td>GFM pipe table</td>
+<td><code>table</code> block, converted per §7.5</td>
+</tr>
+<tr>
+<td>Raw <code>&lt;table&gt;</code> HTML</td>
+<td><code>table</code> block, normalized per §7.5</td>
+</tr>
+<tr>
+<td>Fenced or indented code block</td>
+<td><code>text</code> block, fences and indentation stripped</td>
+</tr>
+<tr>
+<td>Thematic break (<code>---</code>, <code>***</code>)</td>
+<td>discarded</td>
+</tr>
+<tr>
+<td>Image (<code>![alt](url)</code>)</td>
+<td>discarded — reference <code>figure</code> blocks emit nothing (§11.2)</td>
+</tr>
+<tr>
+<td>HTML comment</td>
+<td>discarded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Inline syntax stripping</strong>, applied to every text block:</p>
+<pre><code>emphasis / strong / strikethrough   **x** __x__ *x* _x_ ~~x~~   → x
+inline code                          `x`                        → x
+link                                 [text](url)                → text
+reference link                       [text][ref]                → text
+autolink                             &lt;https://…&gt;                → the URL text
+footnote marker                      [^1]                       → discarded
+escaped character                    \*                         → *
+HTML entity                          &amp;amp;                      → &amp;
+residual inline HTML tag             &lt;b&gt;x&lt;/b&gt;                   → x
+</code></pre>
+<p>Stripping is applied <strong>before</strong> the normalization profile of §8, and before <code>S</code>.</p>
+<p><strong>Line breaks.</strong> A hard break (two trailing spaces, or <code>\</code>) becomes <code>\n</code>. A soft wrap inside a
+paragraph becomes a single space — markdown soft wraps carry no information about the source
+document's line breaks, so preserving them would be inventing evidence. This makes
+<code>e2eNED_raw</code> systematically harsher on markdown submissions wherever the reference preserves
+intra-block newlines; <code>e2eNED_norm</code>, which collapses whitespace, is the fairer comparison for
+these systems and should be the one quoted.</p>
+<p><strong>Math.</strong> <code>$…$</code> and <code>$$…$$</code> delimiters are stripped and the inner content kept verbatim. There
+is no formula track in v1.0 (§2.2) and the reference transcribes formulae as plain text, so a
+LaTeX-emitting system will not align with the reference here. This is a known limitation, not a
+scoring bug, and it is an argument for adding a formula category in a later version.</p>
+<p><strong>Known lossiness.</strong> The parse cannot recover block boundaries a system merged or split. Under
+<code>e2eNED</code> this only affects the <code>\n\n</code> separators between blocks, so the damage is bounded and
+symmetrical. It is the reason markdown submissions are not scored on <code>textCER</code>, where block
+boundaries determine the matching.</p>
+<hr />
+<h2 id="10-metric-12-textcer">10. Metric 1–2: <code>textCER</code></h2>
+<h3 id="101-definition">10.1 Definition</h3>
+<p>A <strong>true micro-averaged character error rate</strong>, pooled over all scored units on all pages of
+the evaluation set:</p>
+<pre><code>                Σ  levenshtein( ref_i , pred_i )
+                 i
+textCER  =   ─────────────────────────────────────
+                Σ  len( ref_i )
+                 i
+</code></pre>
+<ul>
+<li><code>i</code> ranges over every scored unit (§10.2) on every page in the split.</li>
+<li><code>levenshtein</code> is unit-cost Levenshtein distance (substitution = deletion = insertion = 1)
+  over the character units of §8.1.</li>
+<li>Both <code>ref_i</code> and <code>pred_i</code> are passed through the same normalization profile first.</li>
+<li>Unmatched reference units contribute <code>levenshtein(ref, "") = len(ref)</code> to the numerator and
+  <code>len(ref)</code> to the denominator.</li>
+<li>Unmatched predictions contribute <code>levenshtein("", pred) = len(pred)</code> to the numerator and
+  <strong>0</strong> to the denominator. This is standard CER behaviour and is why <code>textCER</code> is unbounded
+  above: a system that hallucinates freely can exceed 1.0. This is intended.</li>
+<li>Aggregation is <strong>corpus-level micro</strong>: one numerator sum and one denominator sum across the
+  whole corpus. Per-page CERs are never averaged.</li>
+</ul>
+<h3 id="102-scored-units">10.2 Scored units</h3>
+<table>
+<thead>
+<tr>
+<th>Reference block</th>
+<th>Contributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type: text</code>, <code>scope: target</code></td>
+<td>one unit: the block's <code>text</code></td>
+</tr>
+<tr>
+<td><code>type: table</code>, <code>scope: target</code></td>
+<td>one unit <strong>per cell</strong>, per §10.3</td>
+</tr>
+<tr>
+<td><code>type: figure</code></td>
+<td>nothing</td>
+</tr>
+<tr>
+<td><code>scope: excluded</code> or <code>uncertain</code></td>
+<td>nothing</td>
+</tr>
+</tbody>
+</table>
+<p>After split/merge recovery (§9.3 steps 4–5), a group counts as <strong>one</strong> unit, with concatenated
+reference text and concatenated predicted text.</p>
+<p>A declared merge group (§5.7) likewise counts as <strong>one</strong> unit: its reference text is its member
+blocks' text concatenated per the group's <code>join</code>, and its predicted text is everything matched to
+any member, concatenated in ascending prediction <code>order</code>.</p>
+<h3 id="103-table-cell-derivation">10.3 Table cell derivation</h3>
+<ol>
+<li>Parse the canonical <code>html</code>.</li>
+<li>Expand <code>rowspan</code> / <code>colspan</code> into a dense <code>R × C</code> occupancy matrix.</li>
+<li>A spanning cell contributes <strong>exactly one</strong> unit, anchored at its top-left grid position.
+   It is not repeated across the positions it covers.</li>
+<li>Cells are keyed by their anchor <code>(row, col)</code>.</li>
+<li>Reference and predicted cells are aligned by identical <code>(row, col)</code> key.</li>
+<li>A reference cell with no predicted counterpart at that key is a deletion; a predicted cell
+   with no reference counterpart is an insertion.</li>
+<li>Empty cells are units with <code>len == 0</code>. They contribute nothing to the denominator, and a
+   prediction that invents text in an empty cell contributes that text to the numerator only.</li>
+</ol>
+<blockquote>
+<p><strong>⚠ Known property.</strong> Aligning cells by <code>(row, col)</code> means a structural error — a missed
+column, a mis-parsed span — shifts every downstream cell and inflates <code>textCER</code> even when
+character recognition was perfect. <code>textCER</code> is therefore not fully independent of structure.
+The alternative (concatenating all cell text in row-major order and computing one CER per
+table) is structure-robust but discards cell boundaries. See §18.2.</p>
+</blockquote>
+<h3 id="104-reported-breakdown">10.4 Reported breakdown</h3>
+<p>Alongside the two headline numbers, the scorer emits the same micro-CER computed over text
+blocks only and over table cells only. These are diagnostic, not headline: a page with one large
+table otherwise swamps the prose score with no way to see it.</p>
+<hr />
+<h2 id="11-metric-34-e2ened">11. Metric 3–4: <code>e2eNED</code></h2>
+<h3 id="111-definition">11.1 Definition</h3>
+<pre><code>                    levenshtein( S(ref_page) , S(pred_page) )
+e2eNED_page  =   ──────────────────────────────────────────────
+                  max( len(S(ref_page)) , len(S(pred_page)) )
+</code></pre>
+<p>where <code>S</code> is the serializer of §11.2. Bounded in <code>[0, 1]</code>.</p>
+<p>Corpus aggregation is the <strong>arithmetic mean of per-page values</strong>. Unlike <code>textCER</code>, this is a
+macro average: <code>e2eNED</code> is a per-page normalized quantity and pooling its numerators and
+denominators would silently reweight pages by length.</p>
+<h3 id="112-serializer">11.2 Serializer</h3>
+<p>The same function <code>S</code> is applied to the reference blocks and to the prediction blocks. Systems
+submitting block JSON do <strong>not</strong> submit markdown; markdown submissions are parsed to blocks
+first (§9.6). Either way, both sides of the comparison are produced by <code>S</code>. This is deliberate:
+it makes <code>e2eNED</code> a measure of content and reading order, and stops it being a measure of whose
+markdown dialect matches ours.</p>
+<pre><code>S(page):
+  units = []
+  for b in sorted(page.blocks, key = b.order):        # target blocks only, for reference
+      if b.type == &quot;text&quot;:   units.append( profile(b.text) )
+      elif b.type == &quot;table&quot;: units.append( canonical_html(b.html) )
+      elif b.type == &quot;figure&quot;: continue                # emits nothing
+  return &quot;\n\n&quot;.join(units)
+</code></pre>
+<ul>
+<li>A declared merge group (§5.7) emits <strong>one</strong> unit, at the position of its lowest-<code>order</code> member;
+  its other members emit nothing. Applies to the reference only — predictions carry no merge
+  groups.</li>
+<li>Table content enters <code>S</code> as canonical HTML (§7.2), identically on both sides.</li>
+<li>The normalization profile is applied to <strong>text block content only</strong>, before joining. It is
+  not applied to the HTML, and not to the joined string. The <code>\n\n</code> separators are therefore
+  preserved in both profiles.</li>
+<li>The reference uses target blocks only. The prediction uses all its blocks, minus those
+  suppressed by §9.3 step 2.</li>
+</ul>
+<h3 id="113-known-properties">11.3 Known properties</h3>
+<ul>
+<li><code>e2eNED</code> conflates character recognition with reading order by construction. A single
+  transposed block produces a large distance. This is the intended behaviour of an end-to-end
+  metric and is why <code>textCER</code> is reported alongside it; the pair, read together, separates the
+  two failure modes. A dedicated reading-order metric is deferred (§2.2).</li>
+<li><code>e2eNED</code> is a flat string comparison and therefore <strong>cannot</strong> express don't-care semantics.
+  Excluded and uncertain content is absent from the reference, so a system that correctly reads
+  a degraded stamp is penalized here even though §9.3 step 2 protects it in <code>textCER</code>. This is
+  a documented limitation, not a defect to be patched at scoring time.</li>
+</ul>
+<hr />
+<h2 id="12-metric-56-teds-and-teds-s">12. Metric 5–6: <code>TEDS</code> and <code>TEDS-S</code></h2>
+<h3 id="121-definition">12.1 Definition</h3>
+<p>Standard Tree-Edit-Distance-based Similarity (Zhong et al., PubTabNet):</p>
+<pre><code>TEDS(T_ref, T_pred) = 1 − EditDist(T_ref, T_pred) / max(|T_ref|, |T_pred|)
+</code></pre>
+<p>Tables are converted to trees from the canonical HTML. <code>TEDS</code> scores structure and cell content
+together; <code>TEDS-S</code> (structure-only) scores the tree with all cell content removed.</p>
+<ul>
+<li>Cell content in <code>TEDS</code> is compared under the <strong><code>norm</code></strong> profile. A raw-profile TEDS is not
+  published; whitespace-exact comparison inside a tree edit distance compounds two sources of
+  strictness with no diagnostic gain.</li>
+<li>Aggregation is the arithmetic mean over all reference tables in the corpus.</li>
+<li>An unmatched reference table scores <code>TEDS = 0</code> and <code>TEDS-S = 0</code>.</li>
+<li>A predicted table matching no reference table does <strong>not</strong> enter the TEDS average; it is
+  already penalized through <code>textCER</code> (its cells are insertions) and <code>e2eNED</code>.</li>
+</ul>
+<h3 id="122-reference-implementation">12.2 Reference implementation</h3>
+<p>The official IBM TEDS implementation (Zhong et al., 2020) over the APTED engine (Pawlik &amp;
+Augsten, 2015/2016) is normative. The scorer records the library and version used. This is the
+same implementation used by OmniDocBench, Docling and PubTabNet, which is what keeps the numbers
+comparable.</p>
+<p><strong>Tree construction.</strong> Every HTML tag becomes a node in an N-ary tree. <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code>
+are therefore <strong>distinct nodes</strong>, and header placement is scored: moving a header row into the
+body changes the tree and costs edit operations. Cell nodes carry <code>tag</code>, <code>colspan</code>, <code>rowspan</code>,
+and <code>content</code> as a sequence of character tokens.</p>
+<p><strong>Node cost function</strong> (<code>CustomConfig.rename</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tag</code> differs, <strong>or</strong> <code>colspan</code> differs, <strong>or</strong> <code>rowspan</code> differs</td>
+<td><code>1.0</code></td>
+</tr>
+<tr>
+<td>tags and spans match, node tag is <code>td</code>, and either side has content</td>
+<td><code>levenshtein(C₁, C₂) / max(|C₁|, |C₂|)</code></td>
+</tr>
+<tr>
+<td>otherwise — structural nodes, or two empty cells</td>
+<td><code>0.0</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final score.</strong> <code>TEDS = 1 − APTED(T_pred, T_ref) / max(|V_pred|, |V_ref|)</code>, where <code>|V|</code> is the
+total node count of each tree.</p>
+<p><strong>Variants.</strong> <code>TEDS</code> uses <code>structure_only=False</code> (structure and cell text). <code>TEDS-S</code> uses
+<code>structure_only=True</code>, which drops cell content entirely and scores tags, spans and tree shape.</p>
+<h3 id="123-consequences-for-this-specification">12.3 Consequences for this specification</h3>
+<p>These follow directly from the cost function above and are the reason for several encoding
+decisions elsewhere in this document.</p>
+<ol>
+<li>
+<p><strong>The <code>&lt;td&gt;</code>-only encoding is a correctness requirement, not a preference.</strong> Content
+   comparison is gated on <code>node.tag == 'td'</code>. Two <code>&lt;th&gt;</code> nodes with matching spans and entirely
+   different text fall through to the final <code>return 0.0</code> — their content is never compared. Had
+   headers been encoded as <code>&lt;th&gt;</code>, a system could emit arbitrary garbage in every header cell and
+   lose nothing. See §7.4.</p>
+</li>
+<li>
+<p><strong>Cell content MUST be normalized before tree construction.</strong> APTED performs no Unicode
+   normalization of its own; it compares the character tokens it is given. The <code>norm</code> profile
+   (§8.3) is therefore applied to every cell's text at tree-construction time, on both sides.
+   Without this, the Devanagari nukta and eyelash-reph issues of §8.2 and §8.4 surface inside
+   TEDS exactly as they would in <code>textCER</code>.</p>
+</li>
+<li>
+<p><strong>Cell content is compared as code points</strong>, consistent with the primary character unit of
+   §8.1. A grapheme-cluster TEDS would require patching the content comparison and is not
+   planned for v1.0.</p>
+</li>
+<li>
+<p><strong>Normalizing prediction <code>&lt;th&gt;</code> to <code>&lt;td&gt;</code> (§7.5) helps submitters rather than penalizing
+   them.</strong> Without that step, a system emitting <code>&lt;th&gt;</code> header cells against a <code>&lt;td&gt;</code> reference
+   would hit the tag-mismatch branch and score the full <code>1.0</code> on every header cell regardless of
+   how accurately it read them.</p>
+</li>
+<li>
+<p><strong>Always writing <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> explicitly (§7.2) keeps node counts symmetric.</strong>
+   <code>|V|</code> appears in the denominator, so a wrapper tag present on one side and implied on the
+   other would shift the score for a reason unrelated to recognition. Canonicalizing both sides
+   removes that.</p>
+</li>
+<li>
+<p><strong>A structural error and wholly-wrong cell text cost the same <code>1.0</code>.</strong> A wrong <code>colspan</code> is
+   penalized identically to a cell whose text shares no characters with the reference. This is
+   inherent to TEDS and is not adjusted; <code>TEDS-S</code> is reported alongside precisely so the two can
+   be told apart.</p>
+</li>
+<li>
+<p><strong>Two empty cells cost <code>0.0</code></strong>, consistent with the empty-cell rule in §7 and with §10.3
+   item 7.</p>
+</li>
+<li>
+<p>The implementation wraps each table in <code>&lt;html&gt;&lt;body&gt;…&lt;/body&gt;&lt;/html&gt;</code> before parsing. Both
+   sides are wrapped identically, so this affects <code>|V|</code> uniformly and not the ranking.</p>
+</li>
+</ol>
+<hr />
+<h2 id="13-edge-cases">13. Edge Cases</h2>
+<ol>
+<li><strong>Both reference and prediction units empty</strong> → distance 0, contributes 0/0; unit is skipped.</li>
+<li><strong>Reference unit empty, prediction non-empty</strong> → contributes <code>len(pred)</code> to the numerator,
+   0 to the denominator.</li>
+<li><strong>Reference unit non-empty, prediction empty</strong> → contributes <code>len(ref)</code> to both.</li>
+<li><strong>Page with no target blocks</strong> → contributes nothing to the <code>textCER</code> sums. For <code>e2eNED</code>,
+   <code>S(ref) = ""</code>; if <code>S(pred) = ""</code> the page scores 0.0, otherwise 1.0.</li>
+<li><strong>Page with no tables</strong> → contributes nothing to the TEDS average.</li>
+<li><strong>Prediction file missing a page present in the reference</strong> → treated as a prediction with
+   zero blocks. It is never skipped.</li>
+<li><strong>Prediction containing a <code>page_id</code> absent from the reference</strong> → ignored, with a warning.</li>
+<li><strong>Duplicate <code>page_id</code></strong> in either file → hard error.</li>
+</ol>
+<hr />
+<h2 id="14-validation-rules">14. Validation Rules</h2>
+<p>Every reference file <span class="rfc-badge rfc-must">MUST</span> pass all of these before being admitted to the frozen set. The
+validator is part of the reference implementation.</p>
+<p><strong>Schema</strong>
+- All required fields present, correct types.
+- <code>id</code> unique within page.
+- <code>type</code>, <code>scope</code>, <code>reason</code> within their enums.</p>
+<p><strong>Scope and type</strong>
+- Every <code>figure</code> block has <code>scope: "excluded"</code>.
+- Every <code>excluded</code> and <code>uncertain</code> block has a non-null <code>reason</code>.
+- Every <code>target</code> block has <code>reason: null</code>.
+- <code>reason: "illegible"</code> appears only on <code>uncertain</code> blocks.</p>
+<p><strong>Content</strong>
+- Content-field constraints of §5.3 satisfied exactly.
+- All strings already in NFC (checked, never silently fixed).
+- No tab characters; no <code>\r</code>, U+2028, U+2029.
+- No text block with <code>scope: "target"</code> has empty or whitespace-only <code>text</code>.</p>
+<p><strong>Reading order</strong>
+- <code>order</code> dense, unique, <code>0 … n−1</code> across target blocks.
+- <code>order</code> is <code>null</code> for all non-target blocks.</p>
+<p><strong>Geometry</strong>
+- <code>poly</code> has exactly 8 finite floats, within page bounds.
+- Quadrilateral is non-self-intersecting and has positive area.
+- Corner ordering follows §5.5.</p>
+<p><strong>Tables</strong>
+- <code>html</code> parses; uses only permitted elements and attributes.
+- No <code>&lt;th&gt;</code> anywhere; every cell is <code>&lt;td&gt;</code>.
+- Both <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> present, in that order, exactly once each.
+- No <code>&lt;caption&gt;</code>, <code>&lt;br&gt;</code>, or nested <code>&lt;table&gt;</code>.
+- Span expansion yields a dense rectangular grid with no gaps or double coverage.
+- <code>html</code> is byte-identical to its own canonical serialization (§7.2).</p>
+<p><strong>Merge groups</strong>
+- Every referenced block <code>id</code> exists on the page.
+- Every member has <code>scope: "target"</code> and <code>type: "text"</code>.
+- Members listed in strictly ascending <code>order</code>.
+- At least 2 members; no block in more than one group.
+- <code>join</code> is <code>"space"</code> or <code>"none"</code>.</p>
+<p><strong>Cross-checks</strong>
+- <code>image.width</code> / <code>image.height</code> equal the actual PNG dimensions.
+- Round-trip: serialize the page with <code>S</code>, re-parse, confirm identity.
+- Every <code>page_id</code> appears in the corpus manifest with its stratum labels (§4.3).</p>
+<p><strong>Warnings (not errors)</strong>
+- Two <code>target</code> blocks overlapping above IoU 0.5 — legitimate for stamps over text, but worth
+  an annotator's second look.
+- A <code>target</code> block wholly contained within an <code>excluded</code> block.
+- A page with more than 20% of its area under <code>uncertain</code> blocks.</p>
+<hr />
+<h2 id="15-data-provenance">15. Data Provenance</h2>
+<p>Every page carries, in the corpus manifest, its source URL, retrieval date, and originating
+authority.</p>
+<h3 id="151-working-assumption">15.1 Working assumption</h3>
+<p>The project's working position is that the source documents are Government of India or State
+Government publications and are freely redistributable.</p>
+<h3 id="152-two-points-to-confirm-per-source">15.2 Two points to confirm per source</h3>
+<p>This position is recorded here rather than assumed silently, because both halves of it have
+non-obvious answers under Indian law and the cost of correcting course after collection is
+re-collection.</p>
+<ol>
+<li>
+<p><strong>Copyright is not automatic public domain.</strong> Under the Copyright Act 1957, copyright in a
+   "Government work" vests in the Government (s.17(d)) for a term of sixty years (s.28).
+   Government publications are therefore protected by default rather than free by default.
+   The Government Open Data License – India (GODL-India) is the usual permissive grant, but it
+   is applied to specific portals and datasets, not to all government output. Confirm the
+   licence or terms of use of each source portal, and record it in the manifest.</p>
+</li>
+<li>
+<p><strong>Personal data is a separate question from copyright.</strong> These documents contain names, dates
+   of birth, addresses, designations and — in seniority lists — caste category. The Digital
+   Personal Data Protection Act 2023 exempts personal data made publicly available under a legal
+   obligation to publish, which plausibly covers gazette notifications and statutory seniority
+   lists. Confirm that the specific documents collected fall within that exemption rather than
+   inferring it from their being on a government website.</p>
+</li>
+</ol>
+<h3 id="153-recommended-regardless">15.3 Recommended regardless</h3>
+<ul>
+<li>Record per-page provenance in the manifest, including licence or terms-of-use reference.</li>
+<li>Publish a takedown contact and process alongside the dataset.</li>
+<li>State in the dataset card that pages contain personal data and describe its nature.</li>
+</ul>
+<hr />
+<h2 id="16-leaderboard-score">16. Leaderboard Score</h2>
+<p>A single ordering is needed so the leaderboard has a default sort. That is the <strong>only</strong> purpose
+of this score; it is not a quality judgment and it does not replace the six headline metrics.</p>
+<h3 id="161-definition">16.1 Definition</h3>
+<pre><code>IGDB-Score = 0.5 × (1 − e2eNED_norm) × 100  +  0.5 × TEDS × 100
+</code></pre>
+<p>Computed at <strong>corpus level</strong>: take the two published aggregates and combine them. There is no
+per-page composite, so pages without tables need no special handling.</p>
+<h3 id="162-why-these-two-metrics">16.2 Why these two metrics</h3>
+<p><code>textCER</code> is deliberately excluded. It measures largely what <code>e2eNED</code> measures — recognition
+quality — so including it would double-weight text against structure. Its value is diagnostic:
+read beside <code>e2eNED</code>, the pair separates recognition failure from reading-order and localization
+failure (§2.2). Averaging them destroys exactly that.</p>
+<p><code>e2eNED</code> and <code>TEDS</code> are both bounded in <code>[0, 1]</code> and both macro-averaged over their natural unit,
+so they compose cleanly. <code>textCER</code> is unbounded above (§10.1), which would make <code>1 − textCER</code>
+negative for a hallucinating system and the composite meaningless.</p>
+<h3 id="163-weighting">16.3 Weighting</h3>
+<p>The 0.5 / 0.5 split is a <strong>stated convention</strong>, not a finding. It asserts that structure matters
+as much as text, which over-weights tables relative to their share of content in a corpus where
+most pages are prose.</p>
+<p>Weighting by the share of pages containing tables was considered and rejected. Corpus-derived
+weights make the leaderboard unstable in a way that cannot be explained to a reader: adding table
+pages in a later version shifts every system's score with no system having changed. It is also
+self-defeating, since table parsing is among the hardest things this benchmark measures, and
+down-weighting it to its page share would leave the sort driven almost entirely by text.</p>
+<p>The concern is handled by <strong>disclosure instead of weighting</strong>. <code>IGDB-Score</code> is always published
+with both components beside it and with the number of table-bearing pages and the number of
+tables, so a reader who weighs the two differently can use the components directly.</p>
+<h3 id="164-publication-rules">16.4 Publication rules</h3>
+<ul>
+<li>Published <strong>below</strong> the six headline metrics, never above them.</li>
+<li><strong>Never</strong> published alone — both components always appear alongside.</li>
+<li>Named <code>IGDB-Score</code>, never "Overall". OmniDocBench publishes
+  <code>Overall = ((1 − Text Edit) × 100 + Table TEDS + Formula CDM) / 3</code>, a three-component mean
+  including a formula track this benchmark does not have, over a text component that is
+  macro-averaged NED rather than micro CER. The two numbers are not comparable and must not share
+  a name.</li>
+<li>Two component leaderboards — sort by text quality, sort by table quality — <span class="rfc-badge rfc-should">SHOULD</span> also be
+  offered, since they give a reader the ordering they actually want without the composite having
+  to carry a judgment it cannot support.</li>
+</ul>
+<hr />
+<h2 id="17-cost-reporting">17. Cost Reporting</h2>
+<p>Government digitization runs to millions of pages, where a threefold price difference outweighs
+a one-point quality difference. Cost is therefore published as a first-class result — but as a
+<strong>separate table</strong>, never as a ratio against quality.</p>
+<h3 id="171-why-there-is-no-price-performance-ratio">17.1 Why there is no price-performance ratio</h3>
+<p>TPC-H publishes <code>Price/kQphH</code> because QphH is a ratio-scale quantity: 2,000 queries per hour is
+genuinely twice 1,000, so dollars-per-query means something.</p>
+<p>None of this benchmark's metrics are ratio-scale in that sense. <code>textCER</code> is an error rate, so
+dividing by it inverts the sense and diverges near zero. <code>TEDS</code> is bounded but not proportional —
+a table at 0.45 is unusable, not half-usable — so <code>$/TEDS</code> would be a number with no
+interpretation. No composite of price and quality is published.</p>
+<h3 id="172-what-is-published">17.2 What is published</h3>
+<table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cost per 1,000 pages</strong></td>
+<td><strong>Measured on this corpus</strong>, not quoted from a rate card. Token-priced systems vary several-fold between a dense seniority list and a sparse certificate, so a list price says nothing about the real document mix.</td>
+</tr>
+<tr>
+<td><strong>Cost per usable page</strong></td>
+<td><code>total corpus cost / pages passing the usability gate</code></td>
+</tr>
+<tr>
+<td><strong>Effective cost</strong> <em>(optional)</em></td>
+<td><code>cost per page + (fail rate × human correction cost per page)</code>, published at two or three assumed correction rates so readers can pick their own</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The usability gate</strong> is defined from the corpus rather than chosen: a page is usable when the
+system's <code>e2eNED</code> against the reference is <strong>no worse than the inter-annotator agreement band
+published under §6.16</strong>. That is, the output falls within the range two human annotators differ
+by, so a reviewer correcting it would be making changes another annotator might also have made.</p>
+<p>This gate cannot be set until the double-annotation run produces that number, so cost reporting
+follows the pilot.</p>
+<p>Measuring cost on the corpus has a useful side effect: a system that loops to its token limit —
+the degeneracy failure of §2.2 — pays for every one of those tokens, so the failure appears in
+the cost figure as well as the quality figure.</p>
+<h3 id="173-disclosure-requirements">17.3 Disclosure requirements</h3>
+<p>Without these the numbers are not comparable:</p>
+<ul>
+<li><strong>Pricing date</strong>, and a reference to the published rate card in force on that date.</li>
+<li><strong>Basis</strong> — API list price, negotiated rate, or self-hosted. Results on different bases are
+  never cross-compared.</li>
+<li><strong>Self-hosted systems report GPU-seconds per page</strong> plus the hardware, in a separate track from
+  API costs. Converting to currency needs a utilization assumption that cannot be audited.</li>
+<li>Everything already required by the submission manifest of §9.1.3.</li>
+</ul>
+<h3 id="174-caveats-carried-with-every-cost-figure">17.4 Caveats carried with every cost figure</h3>
+<ul>
+<li>Cost is representative only of a document mix like this corpus. At 250 pages with coarse
+  strata it is a reasonable estimate for pages of these kinds and a poor one for anything else.</li>
+<li>Prices move. The cost table is <strong>versioned separately</strong> from the quality results so it can be
+  refreshed without re-running any system.</li>
+</ul>
+<hr />
+<h2 id="18-open-items">18. Open Items</h2>
+<p>Three items remain. One needs a decision before announcing; two are pilot measurements.</p>
+<h3 id="181-teds-for-markdown-submissions-decide-before-announcing">18.1 TEDS for markdown submissions — <em>decide before announcing</em></h3>
+<p>Markdown submissions are scored on <code>e2eNED</code> and not on <code>textCER</code> (§9.1.2). Whether they are
+scored on <code>TEDS</code> is undecided, because table-to-table matching (§9.5) uses geometry that
+markdown does not carry.</p>
+<p>The available fallback is <strong>ordinal matching</strong>: pair the <em>k</em>-th predicted table with the <em>k</em>-th
+reference table in reading order. On a page with one or two tables this is almost always right.
+The objection is that it is a second matching algorithm with different failure modes — a system
+that misses one table on a three-table page has every subsequent table mismatched — so <code>TEDS</code>
+would not mean quite the same thing across submission formats.</p>
+<p>Options: (a) do not publish <code>TEDS</code> for markdown submissions; (b) publish it via ordinal matching
+in a separate, clearly-labelled column. <strong>Recommendation: (a) for v1.0.</strong></p>
+<h3 id="182-table-cell-alignment-coupling-pilot-measurement">18.2 Table cell alignment coupling — <em>pilot measurement</em></h3>
+<p>§10.3 aligns cells by <code>(row, col)</code>, which couples <code>textCER</code> to structural correctness. Two
+alternatives exist:</p>
+<ul>
+<li>one CER per table over row-major concatenated cell text — structure-robust, but discards cell
+  boundaries;</li>
+<li>reuse of the APTED alignment already computed for TEDS (§12.2) to establish cell
+  correspondence — better matched to the structure, but couples two metrics that are otherwise
+  independent, so a change to the TEDS configuration would silently move <code>textCER</code>.</li>
+</ul>
+<p><strong>Resolution:</strong> compute the <code>(row, col)</code> and row-major variants on the pilot set and inspect how
+far they diverge. If divergence is small, keep the simpler <code>(row, col)</code> rule and leave the APTED
+option unused.</p>
+<h3 id="183-matching-thresholds-and-the-splitmerge-joiner-pilot-measurement">18.3 Matching thresholds and the split/merge joiner — <em>pilot measurement</em></h3>
+<p>Two numbers in §9.3 are inherited defaults rather than measured ones:</p>
+<ul>
+<li><strong>IoU 0.5 and containment 0.5.</strong> Sweep both from 0.3 to 0.7 on the pilot set and check the
+  stability of each metric. Freeze the values that sit in a flat region of the curve.</li>
+<li><strong>The <code>" "</code> joiner</strong> used in split and merge recovery (§9.3 steps 4–5). For Devanagari and
+  other Indic scripts, whether a space belongs at a block boundary is not always obvious, and the
+  choice systematically shifts <code>textCER_raw</code>. Measure the delta against joining with <code>""</code>. If it
+  is material, consider excluding split/merge groups from <code>textCER_raw</code> and scoring them only
+  under <code>norm</code>.</li>
+</ul>
+<p>Note this applies only to groups formed <em>geometrically</em> at scoring time. Declared merge groups
+  (§5.7) carry an annotator-supplied <code>join</code> and are not affected — the annotator can see whether
+  the column break falls mid-word.</p>
+<h3 id="184-private-split-for-contamination-control-decide-before-collection">18.4 Private split for contamination control — <em>decide before collection</em></h3>
+<p>§4.5 recommends withholding roughly 20% of pages as a never-published private split. This must
+be decided <strong>before collection</strong>, not after, because it changes the collection target: 250 public
+pages plus a private slice means collecting around 310, not 250.</p>
+<p>The trade-off is that a smaller public set weakens the per-stratum floor of §4.3 — at 200 public
+pages, four reportable strata is already the practical ceiling. Options: (a) collect ~310 and
+hold back 60; (b) keep 250 total, hold back 50, and accept three reportable strata; (c) no
+private split, and state contamination as an unmitigated limitation.</p>
+<p><strong>Recommendation: (a).</strong> The marginal annotation cost is modest relative to what the private
+split buys, and government sources are unlikely to be the bottleneck.</p>
+<h3 id="185-segmentation-granularity-logic-driven-vs-typography-driven-pilot-measurement">18.5 Segmentation granularity: logic-driven vs typography-driven — <em>pilot measurement</em></h3>
+<p>§6.3.3 removed the enumeration trigger and §6.3.5 sets the tiebreak toward provider convention.
+Together these make reference granularity depend on typesetting rather than on document logic:
+the same list, set two ways, segments two ways. That is philosophically unsatisfying even if the
+scoring argument holds.</p>
+<p><strong>Resolution:</strong> annotate one list-heavy page both ways — logic-driven (one block per numbered
+clause regardless of spacing) and typography-driven (per §6.3.3) — run several providers, and
+measure the <code>e2eNED</code> and <code>textCER</code> deltas. If the difference is small, revert to logic-driven
+splits and stop tracking provider behaviour.</p>
+<h3 id="186-running-headers-and-footers-as-target-pilot-check">18.6 Running headers and footers as <code>target</code> — <em>pilot check</em></h3>
+<p>§6.4 classes them as <code>target</code>, diverging from the OmniDocBench <code>abandon</code> convention. Providers
+trained toward that convention may omit them systematically, which would appear as a consistent
+deletion on every multi-page-source document.</p>
+<p><strong>Resolution:</strong> check provider output on pages carrying a running header. If omission is
+near-universal the divergence is still defensible, but it should be called out in the results
+rather than left for readers to discover.</p>
+<h3 id="187-stamp-reading-order-position-pilot-check">18.7 Stamp reading-order position — <em>pilot check</em></h3>
+<p>§6.15 rule 4 orders stamps spatially, on the reasoning that providers order geometrically. That
+reasoning is an expectation, not a measurement.</p>
+<p><strong>Resolution:</strong> on a stamped page, record where each provider places the endorsement in its block
+order. If providers scatter, the rule matters less than assumed and the choice can be settled on
+annotator-agreement grounds alone.</p>
+<h3 id="188-closed-in-earlier-versions">18.8 Closed in earlier versions</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEDS tree structure</td>
+<td>Confirmed: every HTML tag is a node, so <code>&lt;thead&gt;</code> / <code>&lt;tbody&gt;</code> are distinct and header placement is scored (§12.2).</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code> vs <code>&lt;td&gt;</code> encoding</td>
+<td>Confirmed against the official cost function: content comparison is gated on <code>tag == 'td'</code>. Reference and normalized predictions use <code>&lt;td&gt;</code> throughout (§7.4, §12.3).</td>
+</tr>
+<tr>
+<td>Multi-page tables</td>
+<td>Corpus is single-page by construction (§4.1–4.2). No cross-page reconstruction task.</td>
+</tr>
+<tr>
+<td>Corpus size</td>
+<td>~250 pages, evaluation-only, with bootstrap CIs and a 30-page floor per reported stratum (§4).</td>
+</tr>
+<tr>
+<td>Legal, PII, licensing</td>
+<td>Working assumption recorded with two confirmation points (§15).</td>
+</tr>
+<tr>
+<td>Annotation guidelines</td>
+<td>Folded in as §6, with the stamp/seal, signature, and page-number conflicts resolved.</td>
+</tr>
+<tr>
+<td>Predictions without geometry</td>
+<td>Markdown accepted for <code>e2eNED</code> only, via the ingest of §9.6.</td>
+</tr>
+<tr>
+<td>Matching fails on segmentation granularity</td>
+<td>Steps 4–5 no longer require a prior primary match (§9.3).</td>
+</tr>
+<tr>
+<td>Enumeration as a split trigger</td>
+<td>Removed; providers segment on whitespace, which trigger 5 already describes (§6.3.3).</td>
+</tr>
+<tr>
+<td>Documentary role as an open-ended test</td>
+<td>Replaced by the closed role list of §6.4.</td>
+</tr>
+<tr>
+<td>Composite metric</td>
+<td><code>IGDB-Score</code> (§16), for leaderboard sorting only.</td>
+</tr>
+<tr>
+<td>Price-performance ratio</td>
+<td>Rejected; cost published as a separate table (§17.1).</td>
+</tr>
+<tr>
+<td>Matching fails on segmentation-granularity differences</td>
+<td>Steps 4–5 no longer require a prior primary match, so groups form from containment alone (§9.3). Block match rate added as a diagnostic (§2.2).</td>
+</tr>
+<tr>
+<td>Multi-column truncated paragraphs</td>
+<td><code>merge_groups</code> declared at annotation time (§5.7).</td>
+</tr>
+<tr>
+<td>Adjacency constraint on groups</td>
+<td>Deliberately not adopted — it would break multi-column pages and double-penalize reading-order error. Recorded as a diagnostic instead (§9.3.1).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="19-relation-to-prior-work">19. Relation to Prior Work</h2>
+<p>Recorded here so the benchmark's contribution can be stated precisely, and so that design
+choices inherited from elsewhere are traceable.</p>
+<h3 id="191-omnidocbench">19.1 OmniDocBench</h3>
+<p>The direct ancestor. Supplies the page-level document-parsing task framing, the geometric
+matching approach (§9), the don't-care region concept implemented here as <code>scope</code>, and the
+metric suite (normalized edit distance, TEDS). It is English- and Chinese-centric, with no Indic
+coverage and no handling of the degradation, stamping and endorsement phenomena that dominate
+Indian government scans.</p>
+<h3 id="192-indic-ocr-benchmarks">19.2 Indic OCR benchmarks</h3>
+<p>Recent Indic VLM benchmarks cover 10 Indic languages for OCR, but evaluate <strong>plain page-level
+text</strong> on clean, human-verified literary scans — no tables, no layout, no reading order, no
+document structure. Their contribution to this specification is empirical rather than
+structural: the demonstration that unbounded edit-distance metrics fail on VLM repetition loops
+(§2.2), the resulting move to bounded ANLS-family metrics (§2.3), the published cross-script
+difficulty ordering (§4.3), and the practice of disclosing the exact OCR prompt (§9.1.3).</p>
+<p>Earlier Indic benchmarking infrastructure contributes the task decomposition of
+language × modality × purpose, and the online-evaluation design for detecting overfitting to a
+released test set (§4.5). That work also observed that CER and WER alone do not adequately
+represent Indic script recognition — a concern this specification addresses through the
+grapheme-cluster variant (§8.1) and the script-specific equivalence handling of §8.4, rather
+than by inventing a new metric.</p>
+<h3 id="193-what-is-new-here">19.3 What is new here</h3>
+<ul>
+<li>Indic script document <strong>structure</strong> evaluation — tables, reading order, layout — which neither
+  the OmniDocBench line of work nor the Indic OCR line currently covers.</li>
+<li>The <code>target</code> / <code>excluded</code> / <code>uncertain</code> scope model applied to real administrative scans:
+  neighbouring documents, endorsement stamps, emblematic seals, signatures, registry pagination.</li>
+<li>Script-specific normalization made explicit and testable — nukta composition exclusions,
+  eyelash reph, ZWJ/ZWNJ — rather than left to whatever the scorer's default string handling does.</li>
+</ul>
+<hr />
+<h2 id="20-json-schema">20. JSON Schema</h2>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
+  &quot;$id&quot;: &quot;https://example.org/igdb/page.schema.json&quot;,
+  &quot;title&quot;: &quot;IGDB Page Annotation&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;required&quot;: [&quot;page_id&quot;, &quot;image&quot;, &quot;blocks&quot;],
+  &quot;additionalProperties&quot;: false,
+  &quot;properties&quot;: {
+    &quot;page_id&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1 },
+    &quot;image&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;path&quot;, &quot;width&quot;, &quot;height&quot;],
+      &quot;additionalProperties&quot;: false,
+      &quot;properties&quot;: {
+        &quot;path&quot;:   { &quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1 },
+        &quot;width&quot;:  { &quot;type&quot;: &quot;integer&quot;, &quot;exclusiveMinimum&quot;: 0 },
+        &quot;height&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;exclusiveMinimum&quot;: 0 }
+      }
+    },
+    &quot;blocks&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;$ref&quot;: &quot;#/$defs/block&quot; }
+    },
+    &quot;merge_groups&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: { &quot;$ref&quot;: &quot;#/$defs/merge_group&quot; }
+    }
+  },
+  &quot;$defs&quot;: {
+    &quot;merge_group&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;blocks&quot;],
+      &quot;additionalProperties&quot;: false,
+      &quot;properties&quot;: {
+        &quot;blocks&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0 },
+          &quot;minItems&quot;: 2,
+          &quot;uniqueItems&quot;: true
+        },
+        &quot;join&quot;: { &quot;enum&quot;: [&quot;space&quot;, &quot;none&quot;], &quot;default&quot;: &quot;space&quot; }
+      }
+    },
+    &quot;block&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [&quot;id&quot;, &quot;type&quot;, &quot;scope&quot;, &quot;order&quot;, &quot;poly&quot;],
+      &quot;additionalProperties&quot;: false,
+      &quot;properties&quot;: {
+        &quot;id&quot;:     { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 0 },
+        &quot;type&quot;:   { &quot;enum&quot;: [&quot;text&quot;, &quot;table&quot;, &quot;figure&quot;] },
+        &quot;scope&quot;:  { &quot;enum&quot;: [&quot;target&quot;, &quot;excluded&quot;, &quot;uncertain&quot;] },
+        &quot;order&quot;:  { &quot;type&quot;: [&quot;integer&quot;, &quot;null&quot;], &quot;minimum&quot;: 0 },
+        &quot;poly&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: { &quot;type&quot;: &quot;number&quot; },
+          &quot;minItems&quot;: 8,
+          &quot;maxItems&quot;: 8
+        },
+        &quot;text&quot;:   { &quot;type&quot;: [&quot;string&quot;, &quot;null&quot;] },
+        &quot;html&quot;:   { &quot;type&quot;: [&quot;string&quot;, &quot;null&quot;] },
+        &quot;struck&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+        &quot;reason&quot;: {
+          &quot;type&quot;: [&quot;string&quot;, &quot;null&quot;],
+          &quot;enum&quot;: [
+            &quot;neighboring_document&quot;, &quot;adjacent_page_edge&quot;, &quot;unrelated_sticker&quot;,
+            &quot;unrelated_handwriting&quot;, &quot;scanner_page_number&quot;, &quot;scanner_artifact&quot;,
+            &quot;bleed_through&quot;, &quot;pure_signature&quot;, &quot;graphical_seal&quot;, &quot;illustration&quot;,
+            &quot;reproduction_stamp&quot;,
+            &quot;barcode&quot;, &quot;random_mark&quot;, &quot;unassignable&quot;, &quot;illegible&quot;, null
+          ]
+        }
+      },
+      &quot;allOf&quot;: [
+        {
+          &quot;if&quot;:   { &quot;properties&quot;: { &quot;type&quot;: { &quot;const&quot;: &quot;figure&quot; } },
+                    &quot;required&quot;: [&quot;type&quot;] },
+          &quot;then&quot;: { &quot;properties&quot;: { &quot;scope&quot;: { &quot;const&quot;: &quot;excluded&quot; },
+                                    &quot;text&quot;:  { &quot;type&quot;: &quot;null&quot; },
+                                    &quot;html&quot;:  { &quot;type&quot;: &quot;null&quot; } } }
+        },
+        {
+          &quot;if&quot;:   { &quot;properties&quot;: { &quot;type&quot;: { &quot;const&quot;: &quot;text&quot; },
+                                    &quot;scope&quot;: { &quot;enum&quot;: [&quot;target&quot;, &quot;excluded&quot;] } },
+                    &quot;required&quot;: [&quot;type&quot;, &quot;scope&quot;] },
+          &quot;then&quot;: { &quot;properties&quot;: { &quot;text&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1 },
+                                    &quot;html&quot;: { &quot;type&quot;: &quot;null&quot; } },
+                    &quot;required&quot;: [&quot;text&quot;] }
+        },
+        {
+          &quot;if&quot;:   { &quot;properties&quot;: { &quot;type&quot;: { &quot;const&quot;: &quot;table&quot; },
+                                    &quot;scope&quot;: { &quot;enum&quot;: [&quot;target&quot;, &quot;excluded&quot;] } },
+                    &quot;required&quot;: [&quot;type&quot;, &quot;scope&quot;] },
+          &quot;then&quot;: { &quot;properties&quot;: { &quot;html&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1 },
+                                    &quot;text&quot;: { &quot;type&quot;: &quot;null&quot; } },
+                    &quot;required&quot;: [&quot;html&quot;] }
+        },
+        {
+          &quot;if&quot;:   { &quot;properties&quot;: { &quot;scope&quot;: { &quot;const&quot;: &quot;uncertain&quot; } },
+                    &quot;required&quot;: [&quot;scope&quot;] },
+          &quot;then&quot;: { &quot;properties&quot;: { &quot;text&quot;:  { &quot;type&quot;: &quot;null&quot; },
+                                    &quot;html&quot;:  { &quot;type&quot;: &quot;null&quot; },
+                                    &quot;order&quot;: { &quot;type&quot;: &quot;null&quot; } } }
+        },
+        {
+          &quot;if&quot;:   { &quot;properties&quot;: { &quot;scope&quot;: { &quot;const&quot;: &quot;target&quot; } },
+                    &quot;required&quot;: [&quot;scope&quot;] },
+          &quot;then&quot;: { &quot;properties&quot;: { &quot;order&quot;:  { &quot;type&quot;: &quot;integer&quot; },
+                                    &quot;reason&quot;: { &quot;type&quot;: &quot;null&quot; } } }
+        },
+        {
+          &quot;if&quot;:   { &quot;properties&quot;: { &quot;scope&quot;: { &quot;const&quot;: &quot;excluded&quot; } },
+                    &quot;required&quot;: [&quot;scope&quot;] },
+          &quot;then&quot;: { &quot;properties&quot;: { &quot;order&quot;:  { &quot;type&quot;: &quot;null&quot; },
+                                    &quot;reason&quot;: { &quot;type&quot;: &quot;string&quot; } },
+                    &quot;required&quot;: [&quot;reason&quot;] }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<p>Constraints not expressible in JSON Schema — reading-order density, NFC, HTML canonical form,
+grid density, geometry bounds, <code>reason: "illegible"</code> being restricted to <code>uncertain</code> — are
+enforced by the validator of §14.</p>
+<hr />
+<h2 id="21-worked-examples">21. Worked Examples</h2>
+<h3 id="211-schema-mechanics">21.1 Schema mechanics</h3>
+<p>A short synthetic page, showing how the fields interact:</p>
+<pre><code class="language-json">{
+  &quot;page_id&quot;: &quot;MH-000123-p01&quot;,
+  &quot;image&quot;: { &quot;path&quot;: &quot;images/MH-000123-p01.png&quot;, &quot;width&quot;: 2480, &quot;height&quot;: 3508 },
+  &quot;blocks&quot;: [
+    { &quot;id&quot;: 0, &quot;type&quot;: &quot;text&quot;, &quot;scope&quot;: &quot;target&quot;, &quot;order&quot;: 0,
+      &quot;poly&quot;: [820, 180, 1660, 180, 1660, 250, 820, 250],
+      &quot;text&quot;: &quot;महाराष्ट्र शासन&quot;, &quot;html&quot;: null, &quot;reason&quot;: null },
+
+    { &quot;id&quot;: 1, &quot;type&quot;: &quot;text&quot;, &quot;scope&quot;: &quot;target&quot;, &quot;order&quot;: 1,
+      &quot;poly&quot;: [1900, 300, 2360, 300, 2360, 470, 1900, 470],
+      &quot;text&quot;: &quot;प्राप्त दिनांक २३/०६/२०२५\nआवक क्र. १२३४५&quot;, &quot;html&quot;: null, &quot;reason&quot;: null },
+
+    { &quot;id&quot;: 2, &quot;type&quot;: &quot;text&quot;, &quot;scope&quot;: &quot;target&quot;, &quot;order&quot;: 2,
+      &quot;poly&quot;: [200, 620, 2200, 620, 2200, 700, 200, 700],
+      &quot;text&quot;: &quot;महाराष्ट्र वित्त व लेखा सेवा गट-अ (कनिष्ठ) संवर्गातील अधिकाऱ्यांची अंतिम ज्येष्ठता सूची&quot;,
+      &quot;html&quot;: null, &quot;reason&quot;: null },
+
+    { &quot;id&quot;: 3, &quot;type&quot;: &quot;table&quot;, &quot;scope&quot;: &quot;target&quot;, &quot;order&quot;: 3,
+      &quot;poly&quot;: [200, 740, 2300, 740, 2300, 2400, 200, 2400],
+      &quot;text&quot;: null,
+      &quot;html&quot;: &quot;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;td rowspan=\&quot;2\&quot;&gt;अनु. क्र.&lt;/td&gt;&lt;td colspan=\&quot;2\&quot;&gt;विभागीय परीक्षा उत्तीर्ण होण्याचे वर्ष&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;भाग-१&lt;/td&gt;&lt;td&gt;भाग-२&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;१&lt;/td&gt;&lt;td&gt;२&lt;/td&gt;&lt;td&gt;३&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;१&lt;/td&gt;&lt;td&gt;२०१८&lt;/td&gt;&lt;td&gt;२०१९&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&quot;,
+      &quot;reason&quot;: null },
+
+    { &quot;id&quot;: 4, &quot;type&quot;: &quot;text&quot;, &quot;scope&quot;: &quot;target&quot;, &quot;order&quot;: 4,
+      &quot;poly&quot;: [1750, 2500, 2300, 2500, 2300, 2580, 1750, 2580],
+      &quot;text&quot;: &quot;रमेश पाटील&quot;, &quot;html&quot;: null, &quot;reason&quot;: null },
+
+    { &quot;id&quot;: 5, &quot;type&quot;: &quot;figure&quot;, &quot;scope&quot;: &quot;excluded&quot;, &quot;order&quot;: null,
+      &quot;poly&quot;: [1800, 2600, 2100, 2600, 2100, 2900, 1800, 2900],
+      &quot;text&quot;: null, &quot;html&quot;: null, &quot;reason&quot;: &quot;pure_signature&quot; },
+
+    { &quot;id&quot;: 6, &quot;type&quot;: &quot;figure&quot;, &quot;scope&quot;: &quot;excluded&quot;, &quot;order&quot;: null,
+      &quot;poly&quot;: [1400, 2600, 1750, 2600, 1750, 2950, 1400, 2950],
+      &quot;text&quot;: null, &quot;html&quot;: null, &quot;reason&quot;: &quot;graphical_seal&quot; },
+
+    { &quot;id&quot;: 7, &quot;type&quot;: &quot;text&quot;, &quot;scope&quot;: &quot;excluded&quot;, &quot;order&quot;: null,
+      &quot;poly&quot;: [0, 1200, 90, 1200, 90, 1800, 0, 1800],
+      &quot;text&quot;: &quot;1137 1138&quot;, &quot;html&quot;: null, &quot;reason&quot;: &quot;neighboring_document&quot; },
+
+    { &quot;id&quot;: 8, &quot;type&quot;: &quot;text&quot;, &quot;scope&quot;: &quot;uncertain&quot;, &quot;order&quot;: null,
+      &quot;poly&quot;: [1500, 2950, 2000, 2950, 2000, 3080, 1500, 3080],
+      &quot;text&quot;: null, &quot;html&quot;: null, &quot;reason&quot;: &quot;illegible&quot; }
+  ]
+}
+</code></pre>
+<p>Notes on the example:</p>
+<ul>
+<li><strong>Block 1</strong> is an endorsement stamp — rectangular, carrying an inward number and a received
+  date — so it is <code>target</code> and fully transcribed (§6.7). It keeps its internal <code>\n</code>: under <code>raw</code>
+  that newline is a scored character; under <code>norm</code> it collapses to a space.</li>
+<li><strong>Block 2</strong> is the table's title, a plain <code>text</code> block in the reading order, <strong>not</strong> a
+  <code>&lt;caption&gt;</code> inside block 3.</li>
+<li><strong>Block 3</strong>'s header spans three rows inside <code>&lt;thead&gt;</code> — the two-level header and the numeric
+  column-index row <code>१ २ ३</code> — all encoded as <code>&lt;td&gt;</code>, per §7.4. Three header rows and one data row
+  expand to a dense 4 × 3 grid.</li>
+<li><strong>Block 4</strong> is the name below the signature. It is <code>target</code> whether printed or handwritten,
+  provided it is legible (§6.9).</li>
+<li><strong>Block 5</strong> is the signature stroke; <strong>block 6</strong> is a circular departmental seal. Both are
+  <code>figure</code> / <code>excluded</code>, per §6.7 and §6.9 — the seal even though its ring text may be readable.</li>
+<li><strong>Block 7</strong> carries transcribed text despite being excluded. It is scored by nothing in v1.0;
+  it exists so the contamination metric can be added later (§5.3).</li>
+<li><strong>Block 8</strong> has no text and <code>reason: "illegible"</code> — the only block type that may carry that
+  reason.</li>
+<li>Blocks 5–8 have <code>order: null</code> and do not appear in <code>S(ref)</code>.</li>
+</ul>
+<h3 id="212-full-page-segmentation">21.2 Full page segmentation</h3>
+<p>The Grampanchayat NOC certificate of §6.3.4, segmented under the split triggers. Reading order
+runs over the 27 <code>target</code> blocks only; <code>excluded</code> and <code>uncertain</code> blocks carry <code>order: null</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">id</th>
+<th>Label</th>
+<th>type</th>
+<th>scope</th>
+<th style="text-align: right;">order</th>
+<th>reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Shivaji portrait</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>illustration</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Motto line</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Masthead title</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">1</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Address + <code>स्थापना १९५६</code></td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">2</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Deity illustration</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>illustration</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Gramsevak name + designation</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">3</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Upsarpanch name + designation</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">4</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Sarpanch name + designation</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">5</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td><code>जावक क्र.</code> label</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">6</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Outward number under seal</td>
+<td>text</td>
+<td>uncertain</td>
+<td style="text-align: right;">—</td>
+<td><code>illegible</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>Grampanchayat round seal</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>graphical_seal</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td><code>दिनांक : १५।१०।२०१९</code></td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">7</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td><em>Certified True Copy / Attested</em> (upper)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">8</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>Notary signature (upper)</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>pure_signature</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td><code>DKA / ADVOCATE &amp; NOTARY / GOVT. OF INDIA</code></td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">9</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td><code>दाखला</code> heading</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">10</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>Opening paragraph (2 lines)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">11</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>Numbered item १ (3 lines)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">12</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>Numbered item २</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">13</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>Numbered item ३</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">14</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td>Numbered item ४</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">15</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td>Numbered item ९</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">16</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td>Numbered item ६ (2 lines)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">17</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td>Numbered item ७ (2 lines)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">18</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td>Notary circular seal</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>graphical_seal</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td>Closing line</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">19</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td><em>Certified True Copy / Attested</em> (lower)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">20</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td><code>ठिकाण – अंबडवेट</code></td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">21</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td><code>तारीख –</code> (value blank)</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">22</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td>Notary signature (lower)</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>pure_signature</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">31</td>
+<td><code>SATISH I. DHOKA / ADVOCATE &amp; NOTARY / …</code></td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">23</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">32</td>
+<td><code>COLOUR XEROX</code></td>
+<td>text</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>reproduction_stamp</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">33</td>
+<td><code>ग्रामसेवक / ग्रामपंचायत कार्यालय अंबडवेट</code></td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">24</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">34</td>
+<td>Sarpanch signature</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>pure_signature</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">35</td>
+<td><code>सरपंच</code> printed label</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">25</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">36</td>
+<td>Grampanchayat rubber stamp</td>
+<td>text</td>
+<td>target</td>
+<td style="text-align: right;">26</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">37</td>
+<td>Handwritten folio <code>26</code></td>
+<td>text</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>scanner_page_number</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">38</td>
+<td>Handwritten folio <code>29</code></td>
+<td>text</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>scanner_page_number</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">39</td>
+<td>Index tab (top right)</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>unrelated_sticker</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">40</td>
+<td>Adjacent page edge (right)</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>adjacent_page_edge</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">41</td>
+<td>Index tab — <em>Water Assurance Certificate</em></td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>unrelated_sticker</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">42</td>
+<td>Index tab — <em>Provisional Fire NOC</em></td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>unrelated_sticker</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">43</td>
+<td>Punch hole / margin mark</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>random_mark</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">44</td>
+<td>Punch hole / margin mark</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>random_mark</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">45</td>
+<td>Scan bed artifact (bottom)</td>
+<td>figure</td>
+<td>excluded</td>
+<td style="text-align: right;">—</td>
+<td><code>scanner_artifact</code></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li><strong>Blocks 9 and 10 split on trigger 1.</strong> The printed <code>जावक क्र.</code> label is legible and target; the
+  number written beneath the seal is not, so it cannot share a block.</li>
+<li><strong>Blocks 12 and 36 do not split on rendering.</strong> Block 12 combines a printed label with a
+  handwritten date; block 36 is a rubber-stamp impression carrying office text. Both are single
+  blocks, because trigger 4 concerns separate physical objects, not changes of ink.</li>
+<li><strong>Block 22 is transcribed as printed.</strong> The numeral appears to read <code>९</code> where sequence would
+  suggest <code>५</code>. §5.6 rule 7 governs: the reference records the document, not a corrected version.</li>
+<li><strong>Blocks 27 and 32 are both stamps, with opposite scope.</strong> The officer's attestation is an
+  endorsement and is target; the copy-shop mark is a reproduction artifact and is excluded.</li>
+<li><strong>Footer order (23 → 26)</strong> follows local banding: the left and centre band is completed before
+  the right-hand sarpanch band, rather than reading strictly top-to-bottom across the full width.</li>
+</ul>
+      </article>
+
+    </div>
+  </main>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" onclick="closeImageLightbox()">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <button class="btn-close-lightbox" onclick="closeImageLightbox()">&times;</button>
+    <img src="blocks_annotated.webp" alt="Full Resolution Bounding Box Segmentation" class="lightbox-img" id="lightboxImg">
+    <div style="font-size:12px; color:var(--text-muted); margin-top:8px; text-align:center;">
+      Annotated block segmentation of Grampanchayat NOC certificate (Full resolution 310KB WebP reference)
+    </div>
+  </div>
+</div>
+
+<!-- Back to top button -->
+<button id="btn-back-to-top" onclick="scrollToTop()" title="Back to top">&uarr;</button>
+
+<script>
+function filterToc() {
+  const query = document.getElementById('tocFilterInput').value.toLowerCase();
+  const items = document.querySelectorAll('.toc-content li');
+  items.forEach(li => {
+    const text = li.textContent.toLowerCase();
+    if (text.includes(query)) {
+      li.style.display = '';
+    } else {
+      li.style.display = 'none';
+    }
+  });
+}
+
+function openImageLightbox(src) {
+  const modal = document.getElementById('lightbox-modal');
+  if (modal) modal.classList.add('active');
+}
+
+function closeImageLightbox() {
+  const modal = document.getElementById('lightbox-modal');
+  if (modal) modal.classList.remove('active');
+}
+
+function scrollToTop() {
+  document.getElementById('main-reader').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Scrollspy and Back to Top Visibility
+const reader = document.getElementById('main-reader');
+const backToTop = document.getElementById('btn-back-to-top');
+
+reader.addEventListener('scroll', () => {
+  if (reader.scrollTop > 300) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+// Wrap code blocks with copy buttons
+document.querySelectorAll('pre code').forEach((codeBlock) => {
+  const pre = codeBlock.parentNode;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'code-block-wrapper';
+  pre.parentNode.insertBefore(wrapper, pre);
+  wrapper.appendChild(pre);
+
+  const copyBtn = document.createElement('button');
+  copyBtn.className = 'btn-copy-code';
+  copyBtn.textContent = 'Copy';
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => { copyBtn.textContent = 'Copy'; }, 2000);
+    });
+  });
+  wrapper.appendChild(copyBtn);
+});
+</script>
+</body>
+</html>

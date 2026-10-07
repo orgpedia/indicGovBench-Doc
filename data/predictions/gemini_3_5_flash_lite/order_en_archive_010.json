@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_archive_010",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        407.58,
+        39.57,
+        528.36,
+        39.57,
+        528.36,
+        53.05,
+        407.58,
+        53.05
+      ],
+      "text": "IMMEDIATE 13"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        215.39,
+        90.94,
+        413.52,
+        90.94,
+        413.52,
+        132.19,
+        215.39,
+        132.19
+      ],
+      "text": "No.245/C.F/48.\nGOVERNMENT OF INDIA.\nCABINET SECRETARIAT.\nNew Delhi, the 6th December, 1948."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        244.54,
+        166.72,
+        349.26,
+        166.72,
+        349.26,
+        178.5,
+        244.54,
+        178.5
+      ],
+      "text": "OFFICE MEMORANDUM."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        141.01,
+        195.34,
+        526.58,
+        195.34,
+        526.58,
+        250.92,
+        141.01,
+        250.92
+      ],
+      "text": "The undersigned is directed to circulate for the information\nof all Ministries of the Government of India a copy of the minutes\nrecorded by the Prime Minister relating to -"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        164.82,
+        264.39,
+        531.34,
+        264.39,
+        531.34,
+        309.86,
+        164.82,
+        309.86
+      ],
+      "text": "(1) The appointment of Shri R.R.Diwakar, Member of the\nConstituent Assembly, as Minister of State for\nInformation and Broadcasting with effect from the\n7th December, 1948."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        166.6,
+        312.38,
+        533.72,
+        312.38,
+        533.72,
+        356.17,
+        166.6,
+        356.17
+      ],
+      "text": "(2) The appointment of Dr. Balkrishan V.Keskar, Member of the\nConstituent Assembly, as Deputy Minister with effect\nfrom the 7th December, 1948. He will be attached to\nthe Ministry of External Affairs & Commonwealth Relations."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        326.66,
+        376.37,
+        499.2,
+        376.37,
+        499.2,
+        432.79,
+        326.66,
+        432.79
+      ],
+      "text": "(E.C.Donoghue)\nfor Joint Secretary to the Cabinet."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        142.2,
+        453.0,
+        442.08,
+        453.0,
+        442.08,
+        483.31,
+        142.2,
+        483.31
+      ],
+      "text": "To\nAll Secretaries to the Government of India."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        144.59,
+        531.3,
+        536.1,
+        531.3,
+        536.1,
+        562.46,
+        144.59,
+        562.46
+      ],
+      "text": "Copy with a copy of the enclosures forwarded to the\nSecretary and Military Secretary to the Governor-General/the\nPrincipal Private Secretary to the Prime Minister, for information."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        310.0,
+        583.51,
+        490.28,
+        583.51,
+        490.28,
+        637.39,
+        310.0,
+        637.39
+      ],
+      "text": "E.C.Donoghue\n(E.C. Donoghue)\nUnder Secretary to the Cabinet."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 706,
+      "total": 2311
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000332,
+      "batch": 0.000166
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.033217,
+      "batch": 0.016609,
+      "savings": 0.016609,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

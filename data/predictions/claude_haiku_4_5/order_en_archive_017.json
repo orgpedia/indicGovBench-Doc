@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_en_archive_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "MOST IMMEDIATE\n\nNo. 55/1/1/80(2)-CS\nGOVERNMENT OF INDIA(BHARAT SARKAR)\nCABINET SECRETARIAT(MANTHIMANDAL SAO'IVALAYA)\n\nNEW DELHI, 9 June, 1980\n19 Jyaistha, 1902(S)."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "The undersigned is directed to say that w.e.f. the afternoon of the 8th June, 1980:-\n\n(i) Shri V.C. Shukla assumed the office of the Minister of Civil Supplies;\n\n(ii) Shri N.D. Tewari assumed the office of the Minister of Planning;\n\n(iii) Shri Kedar Pande assumed the office of the Minister of Irrigation;\n\n(iv) Shri Dalbir Singh assumed the office of the Minister of State in the Ministry of Petroleum & Chemicals;\n\n(v) Shri T. Anjiah assumed the office of the Minister of State in the Ministry of Labour;\n\n(vi) Shri Buta Singh assumed the office of the Minister of State in the Ministry of Shipping & Transport;\n\n(vii) Shri Chandul Chandrakar assumed the office of the Minister of State in the Ministry of Tourism & Civil Aviation;\n\n(viii)Shri Vikram Mahajan assumed the office of the Minister of State in the Ministry of Energy;\n\n(ix) Smt. Ram Dulari Sinha assumed the office of the Minister of State in the Ministry of Information & Broadcasting;\n\n(x) Shri Mallikarjun assumed the office of the Deputy Minister in the Ministry of Railways;\n\n(xi) Shri P. Venkata Reddy assumed the office of the Deputy Minister in the Ministry of Industry;\n\n(xii) Shri Mohammad Usman Arif assumed the office of the Deputy Minister in the Ministry of Works & Housing;\n\n(xiii)Shri Maganbhai Barot assumed the office of the Deputy Minister in the Ministry of Finance;\n\n(xiv)Shri Vijay N. Patil assumed the office of the Deputy Minister in the Departments of Science & Technology and Space; and\n\nVI\n200 copies.\n\n...2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 665,
+      "total": 2590
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.0042,
+      "batch": 0.0021
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.42,
+      "batch": 0.21,
+      "savings": 0.21,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

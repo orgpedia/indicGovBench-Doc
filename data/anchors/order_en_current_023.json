@@ -1,0 +1,129 @@
+{
+  "doc_id": "order_en_current_023",
+  "total_words": 5,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "उत्तर प्रदेश",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "उत्तर",
+          "gcv_text": "उत्तर",
+          "page_no": 1,
+          "bbox": {
+            "l": 60.22,
+            "t": 808.4,
+            "r": 79.17,
+            "b": 798.08
+          },
+          "crop_bbox": {
+            "l": 56.22,
+            "t": 812.4,
+            "r": 83.17,
+            "b": 794.08
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "प्रदेश",
+          "gcv_text": "प्रदेश",
+          "page_no": 1,
+          "bbox": {
+            "l": 80.85,
+            "t": 809.12,
+            "r": 100.77,
+            "b": 798.8
+          },
+          "crop_bbox": {
+            "l": 76.85,
+            "t": 813.12,
+            "r": 104.77,
+            "b": 794.8
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "Uttar Pradesh",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Uttar",
+          "gcv_text": "Uttar",
+          "page_no": 1,
+          "bbox": {
+            "l": 478.88,
+            "t": 806.0,
+            "r": 499.51,
+            "b": 800.24
+          },
+          "crop_bbox": {
+            "l": 474.88,
+            "t": 810.0,
+            "r": 503.51,
+            "b": 796.24
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Pradesh",
+          "gcv_text": "Pradesh",
+          "page_no": 1,
+          "bbox": {
+            "l": 501.91,
+            "t": 806.0,
+            "r": 533.58,
+            "b": 800.24
+          },
+          "crop_bbox": {
+            "l": 497.91,
+            "t": 810.0,
+            "r": 537.58,
+            "b": 796.24
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "408",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "408",
+          "gcv_text": "408",
+          "page_no": 1,
+          "bbox": {
+            "l": 289.82,
+            "t": 133.69,
+            "r": 303.5,
+            "b": 127.69
+          },
+          "crop_bbox": {
+            "l": 285.82,
+            "t": 137.69,
+            "r": 307.5,
+            "b": 123.69
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

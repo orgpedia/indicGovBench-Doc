@@ -1,0 +1,218 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        490.4,
+        374.5,
+        508.3,
+        374.5,
+        508.3,
+        433.5,
+        490.4,
+        433.5
+      ],
+      "text": "S.No. 77"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        511.7,
+        639.4,
+        532.4,
+        639.4,
+        532.4,
+        668.9,
+        511.7,
+        668.9
+      ],
+      "text": "168"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        463.6,
+        559.4,
+        478.7,
+        559.4,
+        478.7,
+        631.5,
+        463.6,
+        631.5
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        401.5,
+        369.9,
+        454.6,
+        369.9,
+        454.6,
+        538.4,
+        401.5,
+        538.4
+      ],
+      "text": "No. 55/4/CF-63\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        377.5,
+        298.4,
+        395.4,
+        298.4,
+        395.4,
+        551.5,
+        377.5,
+        551.5
+      ],
+      "text": "New Delhi, the 16th February 1963."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        267.3,
+        227.0,
+        354.0,
+        227.0,
+        354.0,
+        682.0,
+        267.3,
+        682.0
+      ],
+      "text": "The undersigned is directed to state that, with effect from the forenoon of February 16, 1963, the designation of Shri S.K. Dey will be \"Minister of Community Development and Cooperation\"."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        243.8,
+        522.0,
+        267.3,
+        522.0,
+        267.3,
+        564.0,
+        243.8,
+        564.0
+      ],
+      "text": "K.S. Das"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        199.1,
+        227.0,
+        234.9,
+        227.0,
+        234.9,
+        656.5,
+        199.1,
+        656.5
+      ],
+      "text": "To\n(B.G. Rau)\nJoint Secretary to the Cabinet."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        181.2,
+        277.5,
+        199.1,
+        277.5,
+        199.1,
+        568.0,
+        181.2,
+        568.0
+      ],
+      "text": "All Members of the Council of Ministers."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        136.4,
+        223.0,
+        175.0,
+        223.0,
+        175.0,
+        686.0,
+        136.4,
+        686.0
+      ],
+      "text": "Copy forwarded to the Principal Private Secretary to the Prime Minister/the Private Secretary to the Prime Minister, for information."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        109.6,
+        609.9,
+        124.7,
+        609.9,
+        124.7,
+        660.4,
+        109.6,
+        660.4
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        86.1,
+        223.0,
+        104.0,
+        223.0,
+        104.0,
+        311.5,
+        86.1,
+        311.5
+      ],
+      "text": "*NAPULA M.*"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

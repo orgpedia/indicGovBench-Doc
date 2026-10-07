@@ -1,0 +1,238 @@
+{
+  "doc_id": "order_en_current_016",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        416.5,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        416.5,
+        42.1
+      ],
+      "text": "ANNEXURE – II"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        84.2,
+        0.0,
+        84.2
+      ],
+      "text": "TO BE FILLED BY THE CADRE CONTROLLING AUTHORITY"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        84.2,
+        238.0,
+        84.2,
+        238.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "NAME OF THE OFFICER:"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        238.0,
+        84.2,
+        416.5,
+        84.2,
+        416.5,
+        126.3,
+        238.0,
+        126.3
+      ],
+      "text": "SERVICE :"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        416.5,
+        84.2,
+        595.0,
+        84.2,
+        595.0,
+        126.3,
+        416.5,
+        126.3
+      ],
+      "text": "CADRE :"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        0.0,
+        126.3,
+        238.0,
+        126.3,
+        238.0,
+        168.4,
+        0.0,
+        168.4
+      ],
+      "text": "BATCH:"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        416.5,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        168.4,
+        416.5,
+        168.4
+      ],
+      "text": "Date of Birth:"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        0.0,
+        168.4,
+        595.0,
+        168.4,
+        595.0,
+        294.7,
+        0.0,
+        294.7
+      ],
+      "text": "1. Whether any disciplinary proceedings have been initiated against the officer during his career, so far. If yes, details thereof"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        0.0,
+        294.7,
+        595.0,
+        294.7,
+        595.0,
+        463.1,
+        0.0,
+        463.1
+      ],
+      "text": "2. Whether any complaint including that of corruption, against the officer, which in view of the State Government/ Cadre Controlling Authority may have a direct bearing/relevance on the vigilance status/ Integrity of the officer as on date, is pending against the officer . If so, details thereof."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        0.0,
+        463.1,
+        595.0,
+        463.1,
+        595.0,
+        589.4,
+        0.0,
+        589.4
+      ],
+      "text": "3. Whether any preliminary inquiry or any other vigilance related matter is pending against the officer. If so, full facts of the pending matter."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        0.0,
+        589.4,
+        595.0,
+        589.4,
+        595.0,
+        715.7,
+        0.0,
+        715.7
+      ],
+      "text": "4. Whether any criminal proceedings were registered against the officer during his career so far. If so, the details/present status and the final out come thereof.'"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        0.0,
+        715.7,
+        595.0,
+        715.7,
+        595.0,
+        799.9,
+        0.0,
+        799.9
+      ],
+      "text": "5. Whether the name of the officer appears in the Agreed List."
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        0.0,
+        799.9,
+        595.0,
+        799.9,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "Signature of the officer certifying the proforma\n\nName\n\nDesignation\n\nStamp"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 788,
+      "total": 2713
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004692,
+      "batch": 0.002346
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4692,
+      "batch": 0.2346,
+      "savings": 0.2346,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

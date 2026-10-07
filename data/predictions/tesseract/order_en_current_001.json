@@ -1,0 +1,141 @@
+{
+  "doc_id": "order_en_current_001",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        30.8,
+        32.91,
+        196.88,
+        32.91,
+        196.88,
+        58.51,
+        30.8,
+        58.51
+      ],
+      "text": "_ FHonfarafa\n2. Wve arse Rvafarea, sr"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        455.01,
+        40.13,
+        572.6,
+        40.13,
+        572.6,
+        64.95,
+        455.01,
+        64.95
+      ],
+      "text": "AHH, 9%\nRAJ BHAWAN, LUCKNOW"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        38.75,
+        68.13,
+        176.83,
+        68.13,
+        176.83,
+        92.57,
+        38.75,
+        92.57
+      ],
+      "text": "CHANCELLOR\nDR. BHIMRAO AMBEDKAR UNIVERSITY\nAGRA"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        119.94,
+        151.18,
+        546.96,
+        151.18,
+        546.96,
+        189.28,
+        119.94,
+        189.28
+      ],
+      "text": "No. E- 387 Gs. Dated: May J/ [-£/,2013\nORDER"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        120.39,
+        224.89,
+        549.31,
+        224.89,
+        549.31,
+        396.94,
+        120.39,
+        396.94
+      ],
+      "text": "1. The applicant Dr. Nirmal Agarwal, Reader, Kishori Raman Girls P.G.\nCollege, Mathura, has moved her representation dated 30.03.2012 and\nthe rejoinder representation dated 04.07.2012 u/s 68 of the UP State\nUniversities Act, 1973 (in short the 'Act') against the order dated\n03.03.2012 issued by the Registrar of Dr. Bhim Rao Ambedkar\nUniversity, Agra (in short the 'University') in compliance with the\ndecision dated 29.02.2012 of the Vice-Chancellor of the University\nwhereby the applicant named above was debarred from the\nexaminership of the University for the next ten years."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        119.49,
+        405.31,
+        549.76,
+        405.31,
+        549.76,
+        737.78,
+        119.49,
+        737.78
+      ],
+      "text": "2. The common facts emerging from the aforesaid representations of the\napplicant Dr. Nirmal Agarwal and the comments dated 22.01.2013 and\n06.05.2013 submitted thereon by the Registrar and the Vice-Chancellor\nof the University are that the applicant Dr. Nirmal Agarwal and two\nother Lecturers namely Dr. Nagendra Kumar and Dr. Raj Kumar Singh\nwere appointed as external examiners for the B.Ed. Examination for the\nacademic session 2010-11 of the Excellent Degree College, Fatehpur\nSikri Road, Laramada, Agra, affiliated to the University. Total 150\nmarks were allocated for evaluation of the examinees by the three\nexternal examiners named above and none of the examinees had failed\nin the external examination. Total 25 examinees had failed in internal\nexamination. An external examiner does not have any role in the matter\nof internal examination of the examinees. Some of the failed examinees\nmade complaints to the University by alleging therein that the said\nexternal examiners, acting in collusion with the College administration,\ndeclared certain examinees failed as they did not fulfill the demand of\nillicit money of the College administration and of the said external"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        153.54,
+        746.16,
+        547.85,
+        746.16,
+        547.85,
+        759.05,
+        153.54,
+        759.05
+      ],
+      "text": "examiners, some of the examinees were shown absent despite being"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

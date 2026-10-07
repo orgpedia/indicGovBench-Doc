@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        18.9,
+        13.5,
+        544.6,
+        13.5,
+        544.6,
+        842.0,
+        18.9,
+        842.0
+      ],
+      "html": "<table><thead><tr><td colspan=\"2\">MINISTER OF STATE (INDEPENDENT CHARGE)</td></tr></thead><tbody><tr><td>1.</td><td>Shri Harmohan Dhawan Minister of State (Independent Charge) of the Ministry of Civil Aviation.</td></tr><tr><td>2.</td><td>Shrimati Maneka Gandhi Minister of State (Independent Charge) of the Ministry of Environment &amp; Forests.</td></tr><tr><td>3.</td><td>Dr. Sanjay Singh Minister of State (Independent Charge) of the Ministry of Communications.</td></tr><tr><td colspan=\"2\">-----</td></tr><tr><td colspan=\"2\">MINISTER OF STATE</td></tr><tr><td>1.</td><td>Shri Babanrao Dhakane Minister of State in the Ministry of Energy.</td></tr><tr><td>2.</td><td>Shri Bhakta Charan Das Minister of State in the Ministry of Railways.</td></tr><tr><td>3.</td><td>Shri Kamal Morarka Minister of State in the Prime Minister&#x27;s Office.</td></tr><tr><td>4.</td><td>Shri Lalit Vijay Singh Minister of State in the Ministry of Defence.</td></tr><tr><td>5.</td><td>Shri Ram Bahadur Singh Minister of State in the Department of Rural Development in the Ministry of Agriculture.</td></tr><tr><td>6.</td><td>Shri Ramji Lal Suman Minister of State in the Ministry of Labour and Minister of State in the Ministry of Welfare.</td></tr><tr><td>7.</td><td>Shri Subodh Kant Sahay Minister of State in the Ministry of Home Affairs and Minister of State in the Ministry of Information and Broadcasting.</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        539.23,
+        26.33,
+        558.37,
+        26.33,
+        558.37,
+        43.59,
+        539.23,
+        43.59
+      ],
+      "text": "35"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

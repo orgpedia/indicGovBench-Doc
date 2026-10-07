@@ -1,0 +1,241 @@
+{
+  "doc_id": "order_hi_current_019",
+  "document": {
+    "pdf_path": "documents/order_hi_current_019.pdf"
+  },
+  "image": {
+    "path": "images/order_hi_current_019.png",
+    "width": 595,
+    "height": 842
+  },
+  "blocks": [
+    {
+      "id": 2,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        405.0740939301323,
+        610.8465393893497,
+        479.36,
+        610.8465393893497,
+        479.36,
+        644.52,
+        405.0740939301323,
+        644.52
+      ],
+      "text": "[SIGNATURE]",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        150.91,
+        649.8,
+        274.71,
+        649.8,
+        274.71,
+        674.03,
+        150.91,
+        674.03
+      ],
+      "text": "The provided image contains a barcode, which is a machine-readable optical label consisting of a series of vertical black bars of varying widths on a white background. It does not contain any text or mathematical expressions to transcribe.",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
+      "id": 0,
+      "type": "table",
+      "scope": "target",
+      "order": 0,
+      "poly": [
+        69.1,
+        44.15,
+        539.58,
+        44.15,
+        539.58,
+        585.01,
+        69.1,
+        585.01
+      ],
+      "text": null,
+      "html": "<table><thead><tr><td>क्र० सं०</td><td>पद</td><td>पीएनओ</td><td>कर्मी का नाम</td><td>गृहजनपद</td><td>कहां से</td><td>कहॉ  को</td></tr></thead><tbody><tr><td>35</td><td>HCCP</td><td>152560852</td><td>बलजीत सिंह</td><td>कानपुर देहात</td><td>MBA</td><td>GRP HQ LKW</td></tr><tr><td>36</td><td>HCCP</td><td>062340087</td><td>कृष्न कुमार</td><td>कानपुर देहात</td><td>MBA</td><td>GRP HQ LKW</td></tr><tr><td>37</td><td>CONST</td><td>192201403</td><td>पवन</td><td>झांसी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>38</td><td>CONST</td><td>182200739</td><td>प्रकाश मिश्रा</td><td>प्रतापगढ</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>39</td><td>CONST</td><td>182201107</td><td>संदीप यादव</td><td>गाजीपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>40</td><td>CONST</td><td>182201048</td><td>मनीष यादव</td><td>प्रतापगढ</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>41</td><td>CONST</td><td>182201312</td><td>नन्दलाल राम</td><td>गाजीपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>42</td><td>CONST</td><td>182201110</td><td>विकास यादव</td><td>गाजीपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>43</td><td>CONST</td><td>182200250</td><td>अजीत यादव</td><td>गाजीपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>44</td><td>CONST</td><td>152440411</td><td>कमल किशोर</td><td>महोबा</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>45</td><td>CONST</td><td>162440401</td><td>प्रशान्त कुमार</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>46</td><td>CONST</td><td>162392568</td><td>धर्मेन्द्र कुमार</td><td>झांसी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>47</td><td>CONST</td><td>162200124</td><td>जितेन्द्र सिंह</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>48</td><td>CONST</td><td>192341918</td><td>विवेक कुमार</td><td>कानपुर नगर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>49</td><td>CONST</td><td>192200716</td><td>संदीप विश्वकर्मा</td><td>झांसी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>50</td><td>CONST</td><td>162440674</td><td>धर्मेन्द्र कुमार सोनकर</td><td>कौशाम्बी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>51</td><td>CONST</td><td>192200266</td><td>राघवेन्द्र सिंह</td><td>झांसी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>52</td><td>CONST</td><td>162521391</td><td>अशोक कुमार पाल</td><td>मिर्जापुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>53</td><td>CONST</td><td>162441446</td><td>सुरेन्द्र सिंह यादव</td><td>कौशाम्बी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>54</td><td>CONST</td><td>162341023</td><td>वेद प्रकाश</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>55</td><td>CONST</td><td>162612602</td><td>नागेन्द्र कुमार</td><td>प्रतापगढ</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>56</td><td>CONST</td><td>162521333</td><td>चन्द्रेश कुमार यादव</td><td>मिर्जापुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>57</td><td>CONST</td><td>162521320</td><td>सुरेन्द कुमार</td><td>मिर्जापुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>58</td><td>CONST</td><td>162341339</td><td>कुलभूषण</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>59</td><td>HCCP</td><td>112270083</td><td>देवेन्द्र सिंह</td><td>आगरा</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>60</td><td>HCCP</td><td>112039107</td><td>देवेन्द्र सिंह</td><td>झांसी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>61</td><td>CONST</td><td>162440603</td><td>मोहम्मद यामीन</td><td>कौशाम्बी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>62</td><td>HCCP</td><td>112452836</td><td>धीरेन्द्र</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>63</td><td>CONST</td><td>162341818</td><td>अजीत पाल</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>64</td><td>CONST</td><td>162381564</td><td>राजीव कुमार सरोज</td><td>जौनपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>65</td><td>HCCP</td><td>062680266</td><td>अतुलेश सचान</td><td>कानपुर नगर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>66</td><td>HCCP</td><td>062031950</td><td>मोहम्मद लारेब</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>67</td><td>CONST</td><td>162341065</td><td>रामबाबू</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>68</td><td>HCCP</td><td>062560157</td><td>रामकिशोर</td><td>झांसी</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>69</td><td>CONST</td><td>162341791</td><td>प्रदीप कुमार</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr><tr><td>70</td><td>HCCP</td><td>112451673</td><td>खूबचन्द्र</td><td>हमीरपुर</td><td>CKT</td><td>GRP HQ LKW</td></tr></tbody></table>",
+      "reason": null
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "scope": "target",
+      "order": 1,
+      "poly": [
+        73.9,
+        591.01,
+        536.5676960330406,
+        591.01,
+        536.5676960330406,
+        633.22717489777,
+        73.9,
+        633.22717489777
+      ],
+      "text": "उपरोक्त कर्मियों के नाम के वर्तनी में यदि कोई त्रुटि हो तो उसके पीएनओ के आधार पर अनुपालन\nसुनिश्चित कराये यदि पीएनओ के आधार पर नाम में भिन्नता हो तो प्रकरण तत्काल इस मुख्यालय को संदर्भित",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "scope": "target",
+      "order": 2,
+      "poly": [
+        153.55,
+        631.56,
+        263.91,
+        631.56,
+        263.91,
+        646.92,
+        153.55,
+        646.92
+      ],
+      "text": "DGP HQRS UP LKW",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "scope": "target",
+      "order": 3,
+      "poly": [
+        143.47,
+        675.71,
+        268.71,
+        675.71,
+        268.71,
+        691.31,
+        143.47,
+        691.31
+      ],
+      "text": "DG-IV-STHA-457/2026/556 DT 12-06-2026",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "scope": "target",
+      "order": 4,
+      "poly": [
+        397.07,
+        642.6,
+        454.17,
+        642.6,
+        454.17,
+        657.0,
+        397.07,
+        657.0
+      ],
+      "text": "(राहुल मिश्रा)",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "scope": "target",
+      "order": 5,
+      "poly": [
+        364.2,
+        656.76,
+        498.31,
+        656.76,
+        498.31,
+        669.71,
+        364.2,
+        669.71
+      ],
+      "text": "अपर पुलिस अधीक्षक, स्थापना",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "scope": "target",
+      "order": 6,
+      "poly": [
+        332.29,
+        669.95,
+        517.03,
+        669.95,
+        517.03,
+        684.59,
+        332.29,
+        684.59
+      ],
+      "text": "कृते पुलिस उपमहानिरीक्षक, कार्मिक / स्थापना",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "scope": "target",
+      "order": 7,
+      "poly": [
+        390.11,
+        684.83,
+        460.65,
+        684.83,
+        460.65,
+        697.31,
+        390.11,
+        697.31
+      ],
+      "text": "उ०प्र० लखनऊ।",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "scope": "target",
+      "order": 8,
+      "poly": [
+        81.81,
+        700.43,
+        529.74,
+        700.43,
+        529.74,
+        719.62,
+        81.81,
+        719.62
+      ],
+      "text": "मुख्यालय पुलिस महानिदेशक, उत्तर प्रदेश, लखनऊ।",
+      "html": null,
+      "reason": null
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "scope": "target",
+      "order": 9,
+      "poly": [
+        73.66,
+        719.14,
+        519.43,
+        719.14,
+        519.43,
+        749.86,
+        73.66,
+        749.86
+      ],
+      "text": "चतुर्थ तल, (द्वितीय टावर), पुलिस मुख्यालय, सेक्टर-7, गोमतीनगरविस्तार, उ०प्र० लखनऊ-226002\nसंख्या: डीजी-चार-स्था0-457-2026/556 दिनांकःजून 12 ,2026",
+      "html": null,
+      "reason": null
+    }
+  ]
+}

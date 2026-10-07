@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_mr_current_048",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        187.14,
+        45.14,
+        555.89,
+        45.14,
+        555.89,
+        814.87,
+        187.14,
+        814.87
+      ],
+      "html": "<table><thead><tr><td rowspan=\"2\">अ.क्र.तपशील</td><td>प्रस्ताव</td><td>जागा मालकाचे नाव व पत्ता</td><td>सि.स.नं./ / ताळुस्याचे नाव</td><td>वास्तुविशारदाचे नाव व</td><td>दाखल दिनांक</td><td>सुधारित/</td></tr><tr><td></td><td></td><td></td><td>स.नं. / ताळुस्याचे नाव</td><td>प्रस्ता, भौशीक तपशील</td><td>नवीन/सुधारित</td></tr></thead><tbody><tr><td>१</td><td>२</td><td>राहिस</td><td>मे. हायस्कूल ऑडिट्जेज</td><td>मौल सुस ता.</td><td>४</td><td>५</td></tr><tr><td></td><td>३</td><td>मुळशी तर्फे</td><td>मुळशी स.नं. ४५/२</td><td>मुळशी</td><td>६</td><td>६.अ</td></tr><tr><td></td><td></td><td>ह. मुंड्या</td><td>हे. मुंड्या</td><td>सुधारित</td><td>७</td><td>८</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

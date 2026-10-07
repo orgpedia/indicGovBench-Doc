@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        123.16,
+        149.03,
+        136.85,
+        149.03,
+        136.85,
+        217.24,
+        123.16,
+        217.24
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        130.31,
+        149.88,
+        199.92,
+        149.88,
+        199.92,
+        489.2,
+        130.31,
+        489.2
+      ],
+      "text": "No. 55/4/CHF-64(i)\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the--9th June 1964."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        217.77,
+        152.4,
+        274.3,
+        152.4,
+        274.3,
+        539.72,
+        217.77,
+        539.72
+      ],
+      "text": "The undersigned is directed to state that the Members\nof the new Council of Ministers shown in the enclosed list\nassumed office with effect from the forenoon of Tuesday, June 9,\n1964."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        423.64,
+        152.4,
+        437.32,
+        152.4,
+        437.32,
+        210.5,
+        423.64,
+        210.5
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        292.14,
+        207.97,
+        342.72,
+        207.97,
+        342.72,
+        340.17,
+        292.14,
+        340.17
+      ],
+      "text": "(D.P. Chopra)\nfor Cabinet Secretary."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        324.28,
+        255.97,
+        411.14,
+        255.97,
+        411.14,
+        596.98,
+        324.28,
+        596.98
+      ],
+      "text": "To.\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        370.09,
+        359.53,
+        449.23,
+        359.53,
+        449.23,
+        603.71,
+        370.09,
+        603.71
+      ],
+      "text": "Copy with a copy of the enclosure forwarded to the\nPrincipal Private Secretary to the Prime Minister/the Private\nSecretary to the Prime Minister, for information."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 3178,
+      "total": 6472
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.020007,
+      "batch": 0.010004
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 2.00075,
+      "batch": 1.000375,
+      "savings": 1.000375,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

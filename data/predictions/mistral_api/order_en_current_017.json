@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        254.05,
+        53.76,
+        335.15,
+        53.76,
+        335.15,
+        177.0,
+        254.05,
+        177.0
+      ],
+      "text": "!img-0.jpeg"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        249.92,
+        178.66,
+        339.29,
+        178.66,
+        339.29,
+        198.51,
+        249.92,
+        198.51
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        145.65,
+        247.31,
+        447.7,
+        247.31,
+        447.7,
+        426.79,
+        145.65,
+        426.79
+      ],
+      "text": "सिविल लिस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        249.92,
+        490.48,
+        337.64,
+        490.48,
+        337.64,
+        587.25,
+        249.92,
+        587.25
+      ],
+      "text": "!img-1.jpeg"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        202.75,
+        589.73,
+        386.46,
+        589.73,
+        386.46,
+        626.95,
+        202.75,
+        626.95
+      ],
+      "text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        115.86,
+        660.04,
+        479.14,
+        660.04,
+        479.14,
+        783.28,
+        115.86,
+        783.28
+      ],
+      "text": "गृह मंत्रालय\nभारत सरकार\nMINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

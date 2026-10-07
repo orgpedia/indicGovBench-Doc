@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_current_023",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        61.28,
+        34.52,
+        100.56,
+        34.52,
+        100.56,
+        44.63,
+        61.28,
+        44.63
+      ],
+      "text": "उत्तर प्रदेश"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        478.38,
+        35.36,
+        532.52,
+        35.36,
+        532.52,
+        42.1,
+        478.38,
+        42.1
+      ],
+      "text": "Uttar Pradesh"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        58.31,
+        48.84,
+        534.9,
+        48.84,
+        534.9,
+        64.83,
+        58.31,
+        64.83
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>436</td><td>रामटेके सुमित सुधाकरRamteke Sumit SudhakarB.Tech</td><td>RR20221099Maharashtra</td><td>20/10/199329/08/2022</td><td>ACP Police Commissionerate,Kanpur Nagar01/01/2025Level 10</td><td></td></tr><tr><td>437</td><td>भोसले विनायक गोपालBhosale Vinayak GopalB.A.</td><td>RR20221104Maharashtra</td><td>13/02/198829/08/2022</td><td>ASP, Sitapur26/07/2025Level 10</td><td></td></tr><tr><td>438</td><td>मनोज कुमार यादवManoj Kumar YadavB.Sc. (Hons)</td><td>RR20221110Uttar Pradesh</td><td>07/04/199619/12/2022</td><td>ASP, Saharanpur01/09/2024Level 10</td><td></td></tr><tr><td>439</td><td>माविस टाकMavis TakB.A. (Hons)</td><td>RR20221112Rajasthan</td><td>24/09/199629/08/2022</td><td>ASP Banda26/07/2025Level 10</td><td></td></tr><tr><td>440</td><td>ईशान सोनीIshan SoniMBBS</td><td>RR20221117Rajasthan</td><td>30/04/199629/08/2022</td><td>ACP (U/T) PoliceCommissionerate Varanasi01/09/2024Level 10</td><td></td></tr><tr><td>441</td><td>आलोक कुमारAlok KumarB.A. (Hons)</td><td>RR20221128Uttar Pradesh</td><td>28/11/199419/12/2022</td><td>ASP Sambhal17/03/2025Level 10</td><td></td></tr><tr><td>442</td><td>गौतम रायGautam RaiB.Tech</td><td>RR20221195Uttar Pradesh</td><td>26/02/199213/11/2023</td><td>ASP Bijnor26/07/2025Level 10</td><td></td></tr><tr><td>443</td><td>राजकुमार मीणाRajkumar MeenaB.Tech</td><td>RR20221160Rajasthan</td><td>22/07/199729/08/2022</td><td>ACP Police CommissioneratePrayagraj01/09/2024Level 10</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        250.5,
+        516.99,
+        342.12,
+        516.99,
+        342.12,
+        525.41,
+        250.5,
+        525.41
+      ],
+      "text": "Allotment Year : 2023"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        58.31,
+        531.3,
+        415.9,
+        531.3,
+        415.9,
+        676.97,
+        58.31,
+        676.97
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>444</td><td>संचित शर्माSanchit SharmaB. Tech</td><td>RR20231003Madhya Pradesh</td><td>01/01/200013/11/2023</td><td>ASP (U/T) Unnao29/12/2025Level 10</td></tr><tr><td>445</td><td>प्रशांत राजPrashant RajB. Tech</td><td>RR20231006Uttar Pradesh</td><td>07/07/199801/08/2023</td><td>ASP Pratapgarh26/07/2025Level 10</td></tr><tr><td>446</td><td>सिद्धार्थ के मिश्राSiddharth K MisraB. Tech.</td><td>RR20231009Uttar Pradesh</td><td>30/09/199601/08/2023</td><td>ASP Muzaffar Nagar26/07/2025Level 10</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        289.76,
+        707.28,
+        304.05,
+        707.28,
+        304.05,
+        715.7,
+        289.76,
+        715.7
+      ],
+      "text": "408"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 1482,
+      "total": 3087
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000565,
+      "batch": 0.000282
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.056497,
+      "batch": 0.028249,
+      "savings": 0.028249,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

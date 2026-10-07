@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_hi_current_067",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        89.25,
+        8.42,
+        507.53,
+        8.42,
+        507.53,
+        28.63,
+        89.25,
+        28.63
+      ],
+      "text": "कायालय मुख्य अभियन्ता, सार्वजनिक निर्माण विभाग राजस्थान, जयपुर"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2340,
+      "output": 8000,
+      "total": 10340
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 3.76
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

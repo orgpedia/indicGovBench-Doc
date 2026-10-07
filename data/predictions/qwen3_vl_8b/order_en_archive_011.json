@@ -1,0 +1,273 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        87.46,
+        225.66,
+        104.12,
+        225.66,
+        104.12,
+        309.86,
+        87.46,
+        309.86
+      ],
+      "text": "NARULA ML"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        108.88,
+        225.66,
+        123.76,
+        225.66,
+        123.76,
+        423.53,
+        108.88,
+        423.53
+      ],
+      "text": "Information."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        146.97,
+        225.66,
+        161.84,
+        225.66,
+        161.84,
+        685.39,
+        146.97,
+        685.39
+      ],
+      "text": "Copy forwarded to the Principal Private Secretary to the Prime Minister/the Private Secretary to the Prime Minister, for"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        182.66,
+        225.66,
+        197.54,
+        225.66,
+        197.54,
+        568.35,
+        182.66,
+        568.35
+      ],
+      "text": "ALL Members of the Council of Ministers."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        212.41,
+        225.66,
+        227.29,
+        225.66,
+        227.29,
+        653.39,
+        212.41,
+        653.39
+      ],
+      "text": "Joint Secretary to the Cabinet. (B.G. Rau)"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        271.92,
+        225.66,
+        286.79,
+        225.66,
+        286.79,
+        667.71,
+        271.92,
+        667.71
+      ],
+      "text": "of Shri S.K. Day will be \"Minister of Community Development"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        301.67,
+        225.66,
+        316.54,
+        225.66,
+        316.54,
+        679.49,
+        301.67,
+        679.49
+      ],
+      "text": "effect from the forenoon of February 16, 1963, the designation"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        331.42,
+        225.66,
+        346.29,
+        225.66,
+        346.29,
+        618.87,
+        331.42,
+        618.87
+      ],
+      "text": "The undersigned is directed to state that, with"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        361.16,
+        225.66,
+        376.04,
+        225.66,
+        376.04,
+        517.83,
+        361.16,
+        517.83
+      ],
+      "text": "New Delhi, the 16th February 1963."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        390.92,
+        225.66,
+        405.79,
+        225.66,
+        405.79,
+        534.67,
+        390.92,
+        534.67
+      ],
+      "text": "(Department of Cabinet Affairs)"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        420.66,
+        225.66,
+        435.54,
+        225.66,
+        435.54,
+        492.57,
+        420.66,
+        492.57
+      ],
+      "text": "CABINET SECRETARIAT\nGOVERNMENT OF INDIA"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        450.42,
+        225.66,
+        465.29,
+        225.66,
+        465.29,
+        628.97,
+        450.42,
+        628.97
+      ],
+      "text": "No. 55/4/CF-63\nIMMEDIATE"
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        480.17,
+        370.48,
+        509.91,
+        370.48,
+        509.91,
+        443.73,
+        480.17,
+        443.73
+      ],
+      "text": "S.No.77"
+    },
+    {
+      "id": 13,
+      "type": "text",
+      "order": 13,
+      "poly": [
+        108.88,
+        616.34,
+        123.76,
+        616.34,
+        123.76,
+        685.39,
+        108.88,
+        685.39
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 14,
+      "type": "text",
+      "order": 14,
+      "poly": [
+        509.91,
+        637.39,
+        539.66,
+        637.39,
+        539.66,
+        685.39,
+        509.91,
+        685.39
+      ],
+      "text": "-168-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 862,
+      "total": 3149
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.41
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

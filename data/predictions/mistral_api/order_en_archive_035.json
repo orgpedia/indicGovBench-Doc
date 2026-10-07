@@ -1,0 +1,74 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        209.9,
+        71.96,
+        333.03,
+        71.96,
+        333.03,
+        88.5,
+        209.9,
+        88.5
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        290.89,
+        80.23,
+        555.33,
+        80.23,
+        555.33,
+        607.1,
+        290.89,
+        607.1
+      ],
+      "text": "Minister of State in the Ministry of Commerce and Civil Supplies.\nMinister of State in the Ministry of External Affairs.\nMinister of State in the Ministry of Education and Culture.\nMinister of State in the Ministry of Steel, Mines and Coal.\nMinister of State for Parliamentary Affairs to be also the Minister of State in the Ministry of Finance.\nMinister of State in the Ministry of Agriculture and Irrigation.\nMinister of State in the Ministry of Home Affairs.\nMinister of State in the Ministry of Finance.\nMinister of State of Shipping and Transport.\nMinister of State in the Ministry of Communications.\nMinister of State in the Ministry of Industry.\nMinister of State in the Ministry of Petroleum, Chemicals and Fertilizers.\nMinister of State in the Ministry of Steel, Mines and Coal.\nMinister of State in the Ministry of Communications.\nMinister of State of Rural Reconstruction.\nMinister of State in the Ministry of Defence."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        68.59,
+        96.77,
+        266.1,
+        96.77,
+        266.1,
+        607.1,
+        68.59,
+        607.1
+      ],
+      "text": "1. Dr. Henry Austin\n2. Shri Bedabrata Barua\n3. Smt. Rashida Haque Chaudhury\n4. Shri V. Kishore Chandra S. Don\n5. Shri K. Gopal\n6. Shri M.V. Krishnappa\n7. Shri Dhanik Lal Mandal\n8. Shri Nathuram Mirtha\n9. Shri Daneshwar Mishra\n10. Shri Narsingh\n11. Shri B. Rachaiah\n12. Shri Saugata Roy\n13. Shri P.M. Sayeed\n14. Shri T.S. Shrangare\n15. Shri Bhanu Pratap Singh\n16. Shri Daqbir Singh"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

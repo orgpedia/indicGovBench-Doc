@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_en_archive_006",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        44.62,
+        0.0,
+        555.41,
+        0.0,
+        555.41,
+        775.01,
+        44.62,
+        775.01
+      ],
+      "text": "यह छवि एक मुद्रित दस्तावेज़ को दर्शाती है जिसमें कैबिनेट सचिव के लिए 6 अगस्त, 1990 तक कैबिनेट मंत्रियों की सूची है। सूची में विभिन्न मंत्रियों के नाम और उनके संबंधित मंत्रालय शामिल हैं।"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

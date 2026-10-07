@@ -1,0 +1,96 @@
+{
+  "doc_id": "order_hi_current_043",
+  "total_words": 4,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "Page 2 of 4",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Page",
+          "gcv_text": "Page",
+          "page_no": 1,
+          "bbox": {
+            "l": 482.87,
+            "t": 100.47,
+            "r": 503.86,
+            "b": 91.4
+          },
+          "crop_bbox": {
+            "l": 478.87,
+            "t": 104.47,
+            "r": 507.86,
+            "b": 87.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "2",
+          "gcv_text": "2",
+          "page_no": 1,
+          "bbox": {
+            "l": 505.34,
+            "t": 100.72,
+            "r": 510.78,
+            "b": 92.14
+          },
+          "crop_bbox": {
+            "l": 501.34,
+            "t": 104.72,
+            "r": 514.78,
+            "b": 88.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 513.49,
+            "t": 100.96,
+            "r": 523.62,
+            "b": 92.14
+          },
+          "crop_bbox": {
+            "l": 509.49,
+            "t": 104.96,
+            "r": 527.62,
+            "b": 88.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "4",
+          "gcv_text": "4",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.62,
+            "t": 101.21,
+            "r": 530.04,
+            "b": 92.63
+          },
+          "crop_bbox": {
+            "l": 519.62,
+            "t": 105.21,
+            "r": 534.04,
+            "b": 88.63
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

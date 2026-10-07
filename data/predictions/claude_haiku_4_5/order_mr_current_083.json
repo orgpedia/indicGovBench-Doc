@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_mr_current_083",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        55.65,
+        82.05,
+        445.2,
+        82.05,
+        445.2,
+        410.25,
+        55.65,
+        410.25
+      ],
+      "text": "ಸಿದ್ಧಾರ್ಥ ಪ್ರಕಾಶನ\n\nಸಿದ್ಧಾರ್ಥ ಪ್ರಕಾಶನ\n\nಸಿದ್ಧಾರ್ಥ ಪ್ರಕಾಶನ"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        111.3,
+        164.1,
+        389.55,
+        164.1,
+        389.55,
+        492.3,
+        111.3,
+        492.3
+      ],
+      "text": "ಸಿದ್ಧಾರ್ಥ ಪ್ರಕಾಶನ\nಸಿದ್ಧಾರ್ಥ ಪ್ರಕಾಶನ\nಸಿದ್ಧಾರ್ಥ ಪ್ರಕಾಶನ"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        389.55,
+        410.25,
+        1113.0,
+        410.25,
+        1113.0,
+        1558.95,
+        389.55,
+        1558.95
+      ],
+      "html": "<table><thead><tr><td>ಕ್ರ</td><td>ಹೆಸರು</td><td>ಪದವಿ</td><td>ವಿಷಯ</td><td>ಸಂಸ್ಥೆ</td><td>ವರ್ಷ</td><td>ಅನುಭವ</td><td>ಪ್ರಕಾಶನ</td><td>ಪುರಸ್ಕಾರ</td><td>ಇತರೆ</td></tr></thead><tbody><tr><td>1</td><td>ಡಾ. ಸುಮಿತ್ರ</td><td>ಪಿ.ಎಚ್.ಡಿ</td><td>ಕನ್ನಡ</td><td>ಕರ್ನಾಟಕ ವಿಶ್ವವಿದ್ಯಾಲಯ</td><td>2010</td><td>15</td><td>25</td><td>3</td><td>ಸದಸ್ಯ</td></tr><tr><td>2</td><td>ಡಾ. ರಾಜೇಶ್</td><td>ಪಿ.ಎಚ್.ಡಿ</td><td>ಸಂಸ್ಕೃತ</td><td>ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ</td><td>2012</td><td>12</td><td>18</td><td>2</td><td>ಸದಸ್ಯ</td></tr><tr><td>3</td><td>ಡಾ. ಪ್ರಿಯಾ</td><td>ಪಿ.ಎಚ್.ಡಿ</td><td>ಇತಿಹಾಸ</td><td>ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ</td><td>2011</td><td>13</td><td>20</td><td>2</td><td>ಸದಸ್ಯ</td></tr><tr><td>4</td><td>ಡಾ. ವಿಜಯ</td><td>ಪಿ.ಎಚ್.ಡಿ</td><td>ವಿಜ್ಞಾನ</td><td>ಐಐಟಿ ಬೆಂಗಳೂರು</td><td>2009</td><td>16</td><td>30</td><td>5</td><td>ಸದಸ್ಯ</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1910,
+      "output": 1172,
+      "total": 3082
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.006216,
+      "batch": 0.003108
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.6216,
+      "batch": 0.3108,
+      "savings": 0.3108,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

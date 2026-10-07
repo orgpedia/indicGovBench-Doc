@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_mr_current_082",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        161.38,
+        91.9,
+        887.06,
+        91.9,
+        887.06,
+        858.24,
+        161.38,
+        858.24
+      ],
+      "html": "<table><thead><tr><td>अ.क्र</td><td>NHM\nType\n(SD/PM)</td><td>FMR No</td><td>संवर्गाचा\nक्रमांक</td><td>संवर्गाचे\nनाव</td><td>कार्हक्रमा\nचे नाव</td><td>जिल्हा</td><td>तहसील</td><td>कामाकजाचे ठिकाण</td><td>Surname</td><td>Name</td><td>Middle Name</td><td>दिवस</td><td>महिने</td><td>वर्ष</td><td>वर्ष</td><td>महिने</td><td>दिवस</td></tr></thead><tbody><tr><td>1</td><td>Service\nDelivery</td><td>U.8.1.8.1.1</td><td>5</td><td>FTMO</td><td>NUHM</td><td>Nagpur\nMC</td><td>Nagpur</td><td>UPHC SHANTI\nNAGAR</td><td>KATORE</td><td>PRAJAKTA</td><td>VASANTRAO</td><td>12</td><td>12</td><td>1980</td><td>45</td><td>6</td><td>13</td></tr><tr><td>2</td><td>Service\nDelivery</td><td>U.8.1.8.1.1</td><td>5</td><td>FTMO</td><td>NUHM</td><td>Nagpur\nMC</td><td>Nagpur</td><td>UPHC FUTALA</td><td>YAWALKAR</td><td>RENUKA</td><td>LINESH</td><td>1</td><td>5</td><td>1974</td><td>52</td><td>1</td><td>24</td></tr><tr><td>3</td><td>Service\nDelivery</td><td>U.8.1.8.1.1</td><td>5</td><td>FTMO</td><td>NUHM</td><td>Nagpur\nMC</td><td>Nagpur</td><td>UPHC NARA</td><td>MUJAWAR</td><td>SHAMA</td><td>RAFIQ</td><td>28</td><td>10</td><td>1981</td><td>44</td><td>7</td><td>28</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        881.5,
+        162.46,
+        938.26,
+        162.46,
+        938.26,
+        894.35,
+        881.5,
+        894.35
+      ],
+      "text": "राष्ट्रीय आरोग्य अभियान\nदि. २१ जुन २०२८ पर्यतची मनुष्यबळाची संवर्ग निहाय माहिती\nसंवर्गाचे नाव - FTMO"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        181.42,
+        183.79,
+        218.15,
+        183.79,
+        218.15,
+        298.66,
+        181.42,
+        298.66
+      ],
+      "text": "डॉ. ऑरिसनी निकम\nशहरा कार्यक्रम व्यवस्थापक\nएनयुएचएम,म.न.पा.नागपूर"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        182.53,
+        462.76,
+        215.92,
+        462.76,
+        215.92,
+        557.94,
+        182.53,
+        557.94
+      ],
+      "text": "डॉ. संरसला लाड\nमाता व बाल संगोपन अधिकारी\nम.न.पा.नागपूर"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        159.16,
+        997.73,
+        217.03,
+        997.73,
+        217.03,
+        1133.93,
+        159.16,
+        1133.93
+      ],
+      "text": "डॉ.दीपक सेलोतकर\nवैद्यकीय आरोग्य अधिकारी\nम.न.पा.नागपूर"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1593,
+      "output": 765,
+      "total": 2358
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000349,
+      "batch": 0.000174
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.034897,
+      "batch": 0.017449,
+      "savings": 0.017449,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

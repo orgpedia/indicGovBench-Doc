@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_en_archive_027",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        211.82,
+        37.05,
+        496.23,
+        37.05,
+        496.23,
+        65.68,
+        211.82,
+        65.68
+      ],
+      "text": "List of Ministers appointment on and after\n15th August 1947."
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        76.16,
+        65.68,
+        584.29,
+        65.68,
+        584.29,
+        483.31,
+        76.16,
+        483.31
+      ],
+      "html": "<table><thead><tr><td>No.</td><td>Name of Minister</td><td>Portfolio (Cabinet)</td><td>Date of appointment.</td></tr></thead><tbody><tr><td>1.</td><td>Shri Jawaharlal Nehru</td><td>Prime Minister\nMinister of External Affairs,\nCommonwealth Relations and\nScientific Research.</td><td>15-8-47</td></tr><tr><td>2.</td><td>Sardar Vallabhbhai Patel.</td><td>Deputy Prime Minister\nMinister, Home, Information &amp;\nBroadcasting and States.</td><td>-do-</td></tr><tr><td>3.</td><td>Dr. Rajendra Prasad.</td><td>Food &amp; Agriculture.</td><td>-do-</td></tr><tr><td>4.</td><td>Maulana Abul Kalam Azad.</td><td>Education.</td><td>-do-</td></tr><tr><td>5.</td><td>Dr. John Matthai.</td><td>Transport.</td><td>-do-</td></tr><tr><td>6.</td><td>Sardar Baldev Singh.</td><td>Defence.</td><td>-do-</td></tr><tr><td>7.</td><td>Shri Jagjivan Ram.</td><td>Labour.</td><td>-do-</td></tr><tr><td>8.</td><td>Dr. C.H. Bhabha.</td><td>Commerce.</td><td>-do-</td></tr><tr><td>9.</td><td>Shri Rafi Ahmed Kidwai.</td><td>Communications.</td><td>-do-</td></tr><tr><td>10.</td><td>Rajkumari Amrit Kaur.</td><td>Health.</td><td>-do-</td></tr><tr><td>11.</td><td>Dr. B.R. Ambedkar.</td><td>Law</td><td>-do-</td></tr><tr><td>12.</td><td>Shri R.K. Shanmukham\nChetty.</td><td>Finance.</td><td>-do-</td></tr><tr><td>13.</td><td>Dr. Shyama Pd. Mukherjee.</td><td>Industry &amp; Supply.</td><td>-do-</td></tr><tr><td>14.</td><td>Shri N.V. Gadgil.</td><td>Works, Mines &amp; Power.</td><td>-do-</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 518,
+      "total": 2123
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000368,
+      "batch": 0.000184
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.03677,
+      "batch": 0.018385,
+      "savings": 0.018385,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

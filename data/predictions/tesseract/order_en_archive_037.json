@@ -1,0 +1,61 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        22.4,
+        123.92,
+        536.2,
+        123.92,
+        536.2,
+        709.45,
+        22.4,
+        709.45
+      ],
+      "text": "MINISTER OF STATE (INDEPENDENT CHARGE)\n»\n|\n1. Shri Harmohan Dhawan Minister of State (Independent |\nCharge) of the Ministry of\nCivil Aviation.\n2. Shrimati Maneka Gandhi Minister of State (Independent |\nSharpe) of the Ministry of\nEnvironment & Forests.\n3. Dr. Sanjay Singh Minister of State (Independent\n7 Charge) of the Ministry of\nCommunications.\nJ 1\n['}\nMINISTER OF STATE\n1. Shri Babanrao Dhakane Minister of State in the\ni of Energy.\n& 2 Shri Bhakta Charan Das Minister of: State in the\nMinistry of Railways.\n3; Shri Kamal Morarka Minister of State in the Prime\nMinister's Office.\n4. Shri Lalit Vijay Singh Minister of ‘State in the\nMinistry of Defence. *\n5. Shri Ram Bahadur Singh Minister of State in the\nDepartment of Rural\nDevelopment in the Ministry of\nAgriculture.\n> 6 Shri Ramji Lal Suman Minister of State in the\n. Ministry of Labour and\nMinister of State in the\nVD Ministry of Welfare.\n7. Shri Subodh Kant Sahay Minister of State in the\nMinistry of Home Affairs and"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        319.9,
+        710.78,
+        532.47,
+        710.78,
+        532.47,
+        741.76,
+        319.9,
+        741.76
+      ],
+      "text": "ister of State in the\nistry of Information and\nBroadcasting."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

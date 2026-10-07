@@ -1,0 +1,218 @@
+{
+  "doc_id": "order_en_current_016",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        455.53,
+        41.36,
+        542.18,
+        41.36,
+        542.18,
+        57.07,
+        455.53,
+        57.07
+      ],
+      "text": "ANNEXURE - II"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        47.86,
+        70.3,
+        364.76,
+        70.3,
+        364.76,
+        91.81,
+        47.86,
+        91.81
+      ],
+      "text": "TO BE FILLED BY THE CADRE CONTROLLING AUTHORITY"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        46.21,
+        109.18,
+        179.08,
+        109.18,
+        179.08,
+        125.72,
+        46.21,
+        125.72
+      ],
+      "text": "NAME OF THE OFFICER:"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        46.21,
+        135.65,
+        97.38,
+        135.65,
+        97.38,
+        149.71,
+        46.21,
+        149.71
+      ],
+      "text": "SERVICE :"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        261.6,
+        141.44,
+        305.34,
+        141.44,
+        305.34,
+        154.67,
+        261.6,
+        154.67
+      ],
+      "text": "CADRE :"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        45.39,
+        162.11,
+        86.65,
+        162.11,
+        86.65,
+        175.35,
+        45.39,
+        175.35
+      ],
+      "text": "BATCH:"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        260.78,
+        167.9,
+        330.92,
+        167.9,
+        330.92,
+        181.96,
+        260.78,
+        181.96
+      ],
+      "text": "Date of Birth:"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        35.49,
+        201.82,
+        311.12,
+        201.82,
+        311.12,
+        539.28,
+        35.49,
+        539.28
+      ],
+      "text": "1. Whether any disciplinary proceedings have been initiated against the officer during his career, so far. If yes, details thereof\n2. Whether any complaint including that of corruption, against the officer, which in view of the State Government/ Cadre Controlling Authority may have a direct bearing/relevance on the vigilance status/ Integrity of the officer as on date, is pending against the officer. If so, details thereof.\n3. Whether any preliminary inquiry or any other vigilance related matter is pending against the officer. If so, full facts of the pending matter.\n4. Whether any criminal proceedings were registered against the officer during his career so far. If so, the details/present status and the final out come thereof.\n5. Whether the name of the officer appears in the Agreed List."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        255.83,
+        571.53,
+        524.85,
+        571.53,
+        524.85,
+        589.73,
+        255.83,
+        589.73
+      ],
+      "text": "Signature of the officer certifying the proforma"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        320.19,
+        602.14,
+        352.38,
+        602.14,
+        352.38,
+        614.54,
+        320.19,
+        614.54
+      ],
+      "text": "Name"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        319.37,
+        631.09,
+        383.74,
+        631.09,
+        383.74,
+        645.97,
+        319.37,
+        645.97
+      ],
+      "text": "Designation"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        318.54,
+        660.86,
+        354.03,
+        660.86,
+        354.03,
+        674.1,
+        318.54,
+        674.1
+      ],
+      "text": "Stamp"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "doc_id": "order_mr_current_048",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        181.47,
+        47.99,
+        556.33,
+        47.99,
+        556.33,
+        812.53,
+        181.47,
+        812.53
+      ],
+      "html": "<table><thead><tr><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td></tr></thead><tbody><tr><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td></tr><tr><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td><td>अन्य अनुदान</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        17.85,
+        430.26,
+        23.8,
+        430.26,
+        23.8,
+        437.84,
+        17.85,
+        437.84
+      ],
+      "text": "1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 596,
+      "total": 2883
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.28
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

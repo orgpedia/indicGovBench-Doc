@@ -1,0 +1,110 @@
+{
+  "doc_id": "order_mr_current_082",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        439.64,
+        78.77,
+        1023.96,
+        78.77,
+        1023.96,
+        119.79,
+        439.64,
+        119.79
+      ],
+      "text": "वित्तीय वर्ष २०२४\nराष्ट्रीय स्वास्थ्य मिशन, महाराष्ट्र शासन"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        442.97,
+        88.61,
+        1027.3,
+        88.61,
+        1027.3,
+        1517.93,
+        442.97,
+        1517.93
+      ],
+      "html": "<table><thead><tr><td>अ. क्र.</td><td>NHM Type(ISD/Plan)</td><td>FMR No</td><td>स्वीकृतपद</td><td>नियोजितपद</td><td>कर्मचारीका नाम</td><td>जिल्हा</td><td>तालुका</td><td>कार्यस्थळाचे ठिकाण</td><td colspan=\"3\">अधिकारी व कर्मचारीचे नाव</td><td colspan=\"3\">जन्म तारीख</td><td colspan=\"3\">उम्र</td><td>सम्पर्क क्रमांक(Contact No.)</td><td>बँक खातेक्रमांक</td><td colspan=\"3\">शैक्षणिक पात्रता</td><td>मासिक वेतन</td><td>एकूण मानधन</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>Surname</td><td>Name</td><td>Middle Name</td><td>दिन</td><td>माह</td><td>वर्ष</td><td>दिन</td><td>माह</td><td>वर्ष</td><td>13</td><td>14</td><td>रु.</td><td>दि.</td><td>वर्ष</td><td>15</td><td>16</td><td>17</td></tr></thead><tbody><tr><td>1</td><td>ServiceDelivery</td><td>U.S.1.3.1.1</td><td>5</td><td>FTMO</td><td>NUBIN</td><td>NagpurNIC</td><td>Nagpur</td><td>UPHC SHANTINAGAR</td><td>KATORE</td><td>PRAVANKTA</td><td>VASANTTILAO</td><td>12</td><td>12</td><td>1980</td><td>45</td><td>6</td><td>13</td><td>Incentive</td><td>FTMO</td><td>16</td><td>8</td><td>2014</td><td>600000</td><td>99971</td></tr><tr><td>2</td><td>ServiceDelivery</td><td>U.S.1.3.1.1</td><td>5</td><td>FTMO</td><td>NUBIN</td><td>NagpurNIC</td><td>Nagpur</td><td>UPHC KATOLNAGAR</td><td>YAVALAKAR</td><td>RENUNKA</td><td>LINESH</td><td>1</td><td>5</td><td>1974</td><td>52</td><td>1</td><td>24</td><td>Incentive</td><td>FTMO</td><td>16</td><td>8</td><td>2014</td><td>600000</td><td>104970</td></tr><tr><td>3</td><td>ServiceDelivery</td><td>U.S.1.3.1.1</td><td>5</td><td>FTMO</td><td>NUBIN</td><td>NagpurNIC</td><td>Nagpur</td><td>UPHC NAVA... NAKA</td><td>MULIYAWAR</td><td>SILVANA</td><td>RAFIQ</td><td>28</td><td>10</td><td>1981</td><td>44</td><td>7</td><td>28</td><td>Incentive</td><td>FTMO</td><td>20</td><td>8</td><td>2014</td><td>600000</td><td>104970</td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        178.08,
+        147.69,
+        317.2,
+        147.69,
+        317.2,
+        336.4,
+        178.08,
+        336.4
+      ],
+      "text": "वैद्यकीय अधिकारी\nप्राथमिक आरोग्य केंद्र\nनागपूर महानगरपालिका"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        178.08,
+        393.84,
+        317.2,
+        393.84,
+        317.2,
+        582.55,
+        178.08,
+        582.55
+      ],
+      "text": "वैद्यकीय अधिकारी\nनागरी आरोग्य केंद्र\nनागपूर महानगरपालिका"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        178.08,
+        943.57,
+        317.2,
+        943.57,
+        317.2,
+        1124.09,
+        178.08,
+        1124.09
+      ],
+      "text": "वैद्यकीय अधिकारी\nएकात्मिक नागरी आरोग्य केंद्र\nनागपूर महानगरपालिका"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3269,
+      "output": 2658,
+      "total": 5927
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003475,
+      "batch": 0.001738
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.347525,
+      "batch": 0.173763,
+      "savings": 0.173763,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

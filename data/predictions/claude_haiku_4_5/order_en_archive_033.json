@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_archive_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        29.75,
+        16.84,
+        565.25,
+        16.84,
+        565.25,
+        84.2,
+        29.75,
+        84.2
+      ],
+      "text": "20. Shri Pattabhi Raman Ran - Minister of State in the Ministry of Finance.\n\n21. Shri R.C. Rath - Minister of State in the Ministry of Chemicals & Fertilizers.\n\n22. Shri N.K.P. Salve - Minister of State (Independent charge) of the Ministry of Information and Broadcasting.\n\n23. Shri G.K. Jaffer Sharief - Minister of State in the Ministry of Railways.\n\n24. Shri Chandra Shekhar Singh - Minister of State in the Ministry of Energy.\n\n25. Shri Dalbir Singh - Minister of State in the Department of Coal in the Ministry of Energy.\n\n26. Shri Virbhadra Singh - Minister of State in the Ministry of Industry.\n\n27. Smt. Rem Dulari Sinha - Minister of State in the Ministry of Industry and Steel & Mines.\n\n28. Shri P. Venkatasubbaiah - Minister of State in the Ministry of Home Affairs."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        29.75,
+        84.2,
+        565.25,
+        84.2,
+        565.25,
+        126.3,
+        29.75,
+        126.3
+      ],
+      "text": "DEPUTY MINISTERS"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        29.75,
+        126.3,
+        565.25,
+        126.3,
+        565.25,
+        799.9,
+        29.75,
+        799.9
+      ],
+      "text": "1. Shri Mohammad Usman Arif - Deputy Minister in the Ministry of Civil Supplies.\n\n2. Shri Ghulam Nabi Azad - Deputy Minister in the Ministry of Law, Justice and Company Affairs.\n\n3. Shri Ashok Gahlot - Deputy Minister in the Ministry of Tourism.\n\n4. Miss. Kumudhen M. Joshi - Deputy Minister in the Ministry of Health and Family Welfare.\n\n5. Shri Mellikarjun - Deputy Minister in the Ministry of Information and Broadcasting in addition to his office as Deputy Minister in the Department of Parliamentary Affairs.\n\n6. Shri Vijay N. Patil - Deputy Minister in the Ministry of Communications."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 562,
+      "total": 2487
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003788,
+      "batch": 0.001894
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3788,
+      "batch": 0.1894,
+      "savings": 0.1894,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

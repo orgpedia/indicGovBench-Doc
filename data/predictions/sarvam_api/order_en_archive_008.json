@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_archive_008",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        564.29,
+        27.39,
+        583.96,
+        27.39,
+        583.96,
+        50.21,
+        564.29,
+        50.21
+      ],
+      "text": "ಬ"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        205.85,
+        32.91,
+        406.18,
+        32.91,
+        406.18,
+        66.78,
+        205.85,
+        66.78
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS\n(as on 09.11.2014)"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        66.7,
+        64.62,
+        554.69,
+        64.62,
+        554.69,
+        200.59,
+        66.7,
+        200.59
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>Shri Narendra Modi</td><td>Prime Minister and also in-charge of:Ministry of Personnel, Public Grievances and Pensions;Department of Atomic Energy;Department of Space; andAll important policy issues and all other portfolios not allocated to any Minister.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        240.88,
+        200.59,
+        369.0,
+        200.59,
+        369.0,
+        218.85,
+        240.88,
+        218.85
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        57.1,
+        220.05,
+        551.09,
+        220.05,
+        551.09,
+        783.86,
+        57.1,
+        783.86
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Raj Nath Singh</td><td>Minister of Home Affairs.</td></tr><tr><td>2.</td><td>Smt. Sushma Swaraj</td><td>Minister of External Affairs; andMinister of Overseas Indian Affairs.</td></tr><tr><td>3.</td><td>Shri Arun Jaitley</td><td>Minister of Finance;Minister of Corporate Affairs; andMinister of Information and Broadcasting.</td></tr><tr><td>4.</td><td>Shri M. Venkaiah Naidu</td><td>Minister of Urban Development;Minister of Housing and Urban PovertyAlleviation; andMinister of Parliamentary Affairs.</td></tr><tr><td>5.</td><td>Shri Nitin Jairam Gadkari</td><td>Minister of Road Transport and Highways;and Minister of Shipping.</td></tr><tr><td>6.</td><td>Shri Manohar Parrikar</td><td>Minister of Defence.</td></tr><tr><td>7.</td><td>Shri Suresh Prabhu</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri D.V. SadanandaGowda</td><td>Minister of Law and Justice.</td></tr><tr><td>9.</td><td>Sushri Uma Bharati</td><td>Minister of Water Resources, RiverDevelopment and Ganga Rejuvenation.</td></tr><tr><td>10.</td><td>Dr. Najma A. Heptulla</td><td>Minister of Minority Affairs.</td></tr><tr><td>11.</td><td>Shri Ramvilas Paswan</td><td>Minister of Consumer Affairs, Food and PublicDistribution.</td></tr><tr><td>12.</td><td>Shri Kalraj Mishra</td><td>Minister of Micro, Small and MediumEnterprises.</td></tr><tr><td>13.</td><td>Smt. Maneka SanjayGandhi</td><td>Minister of Women and Child Development.</td></tr><tr><td>14.</td><td>Shri Ananthkumar</td><td>Minister of Chemicals and Fertilizers.</td></tr><tr><td>15.</td><td>Shri Ravi Shankar Prasad</td><td>Minister of Communications and InformationTechnology.</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        518.23,
+        792.27,
+        525.42,
+        792.27,
+        525.42,
+        803.32,
+        518.23,
+        803.32
+      ],
+      "text": "1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        536.1,
+        24.42,
+        562.87,
+        24.42,
+        562.87,
+        43.78,
+        536.1,
+        43.78
+      ],
+      "text": "100"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        277.27,
+        70.73,
+        319.52,
+        70.73,
+        319.52,
+        85.04,
+        277.27,
+        85.04
+      ],
+      "text": ": 3 :"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        97.58,
+        90.09,
+        547.4,
+        90.09,
+        547.4,
+        421.0,
+        97.58,
+        421.0
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>20.</td><td>Shri Pattabhi Rama Rao</td><td>- Minister of State in the Ministry ofFinance.</td></tr><tr><td>21.</td><td>Shri R.C. Rath</td><td>- Minister of State in the Ministryof Chemicals &amp; Fertilizers.</td></tr><tr><td>22.</td><td>Shri N. K.P. Salve</td><td>- Minister of State (Independentcharge) of the Ministry of Infor-mation and Broadcasting.</td></tr><tr><td>23.</td><td>Shri C.K. Jaffer Sharief</td><td>- Minister of State in the Ministry ofRailways.</td></tr><tr><td>24.</td><td>Shri Chandra ShekharSingh</td><td>- Minister of State in the Ministry ofEnergy.</td></tr><tr><td>25.</td><td>Shri Dalbir Singh</td><td>- Minister of State in the Departmentof Coal in the Ministry of Energy.</td></tr><tr><td>26.</td><td>Shri Virbhadra Singh</td><td>- Minister of State in the Ministry ofIndustry.</td></tr><tr><td>27.</td><td>Smt. Ram Dulari Sinha</td><td>- Minister of State in the Ministriesof Industry and Steel &amp; Mines.</td></tr><tr><td>28.</td><td>Shri P. Venkatasubbiah</td><td>- Minister of State in the Ministry ofHome Affairs.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        279.06,
+        420.16,
+        301.07,
+        420.16,
+        301.07,
+        428.58,
+        279.06,
+        428.58
+      ],
+      "text": "---"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        97.58,
+        438.68,
+        540.26,
+        438.68,
+        540.26,
+        687.91,
+        97.58,
+        687.91
+      ],
+      "html": "<table><thead><tr><td colspan=\"3\">DEPUTY MINISTERS</td></tr></thead><tbody><tr><td>1.</td><td>Shri Mohammed Usman Arif</td><td>- Deputy Minister in the Ministry ofCivil Supplies.</td></tr><tr><td>2.</td><td>Shri Ghulam Nabi Azad</td><td>- Deputy Minister in the Ministry ofLaw, Justice and Company Affairs.</td></tr><tr><td>3.</td><td>Shri Ashok Gahlot</td><td>- Deputy Minister in the Ministry ofTourism.</td></tr><tr><td>4.</td><td>Miss. Kumudben M. Joshi</td><td>- Deputy Minister in the Ministry ofHealth and Family Welfare.</td></tr><tr><td>5.</td><td>Shri Mallikarjun</td><td>- Deputy Minister in the Ministry ofInformation and Broadcasting inaddition to his office as DeputyMinister in the Department of Par-liamentary Affairs.</td></tr><tr><td>6.</td><td>Shri Vijay N. Patil</td><td>- Deputy Minister in the Ministry ofCommunications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        468.27,
+        690.44,
+        522.41,
+        690.44,
+        522.41,
+        704.75,
+        468.27,
+        704.75
+      ],
+      "text": "... 4 ..."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 2443,
+      "total": 5733
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.016328,
+      "batch": 0.008164
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.63275,
+      "batch": 0.816375,
+      "savings": 0.816375,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

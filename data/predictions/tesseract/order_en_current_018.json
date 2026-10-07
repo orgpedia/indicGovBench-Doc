@@ -1,0 +1,173 @@
+{
+  "doc_id": "order_en_current_018",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        407.05,
+        120.77,
+        522.6,
+        120.77,
+        522.6,
+        132.05,
+        407.05,
+        132.05
+      ],
+      "text": "APPENDIX — IV"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        289.11,
+        166.62,
+        523.56,
+        166.62,
+        523.56,
+        181.75,
+        289.11,
+        181.75
+      ],
+      "text": "ddA 01-01-2016 & oT"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        239.73,
+        196.63,
+        522.36,
+        196.63,
+        522.36,
+        206.48,
+        239.73,
+        206.48
+      ],
+      "text": "PAY SCALES WITH EFFECT FROM 01.01.2016"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        113.39,
+        274.9,
+        478.97,
+        274.9,
+        478.97,
+        395.91,
+        113.39,
+        395.91
+      ],
+      "text": "RANK TIME — SCALE Entry Level Level\nSP Junior Scale Rs. 56,100 10\nSenior Scale Rs. 67,700 11\nJunior Administrative Grade Rs. 78,800 12\nSelection Grade Rs. 1,18,500 13"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        114.59,
+        414.64,
+        474.66,
+        414.64,
+        474.66,
+        500.35,
+        114.59,
+        500.35
+      ],
+      "text": "DIG Super-time Scale Rs. 1,31,100 13A\nIG Super-time Scale Rs. 1,44,200 14\nADG Above Super-time Scale Rs.1,82,200 15\n. 16"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        119.62,
+        498.67,
+        396.99,
+        498.67,
+        396.99,
+        508.27,
+        119.62,
+        508.27
+      ],
+      "text": "DG Above Super-time Scale Rs.2,05,400"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        460.99,
+        521.0,
+        470.82,
+        521.0,
+        470.82,
+        527.96,
+        460.99,
+        527.96
+      ],
+      "text": "17"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        344.01,
+        527.0,
+        398.18,
+        527.0,
+        398.18,
+        535.64,
+        344.01,
+        535.64
+      ],
+      "text": "Rs. 2,25,000"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        289.59,
+        754.13,
+        305.17,
+        754.13,
+        305.17,
+        761.33,
+        289.59,
+        761.33
+      ],
+      "text": "505"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "doc_id": "order_en_archive_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        43.67,
+        26.41,
+        556.61,
+        26.41,
+        556.61,
+        750.29,
+        43.67,
+        750.29
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>20. Shri Fattabhi Rama Rao</td><td>- Minister of State in the Ministry of Finance.</td></tr><tr><td>21. Shri R.C. Rath</td><td>- Minister of State in the Ministry of Chemicals &amp; Fertilizers.</td></tr><tr><td>22. Shri N.K.P. Selva</td><td>- Minister of State (Independent charge) of the Ministry of Information and Broadcasting.</td></tr><tr><td>23. Shri C. K. Jaffar Sharif</td><td>- Minister of State in the Ministry of Railways.</td></tr><tr><td>24. Shri Chandra ShekharSingh</td><td>- Minister of State in the Ministry of Energy.</td></tr><tr><td>25. Shri Dalbir Singh</td><td>- Minister of State in the Department of Coal in the Ministry of Energy.</td></tr><tr><td>26. Shri Virbhadra Singh</td><td>- Minister of State in the Ministry of Industry.</td></tr><tr><td>27. Smt. Ram Dulari Sinha</td><td>- Minister of State in the Ministry of Industry and Steel &amp; Mines.</td></tr><tr><td>28. Shri P. Venkatasubbaiah</td><td>- Minister of State in the Ministry of Home Affairs.</td></tr><tr><td colspan=\"2\">DEPUTY MINISTERS</td></tr><tr><td>1. Shri Mohammed Usman Arif</td><td>Deputy Minister in the Ministry of Civil Supplies.</td></tr><tr><td>2. Shri Ghulam Nabi Azad</td><td>Deputy Minister in the Ministry of Law, Justice and Company Affairs.</td></tr><tr><td>3. Shri Ashok Gehlot</td><td>Deputy Minister in the Ministry of Tourism.</td></tr><tr><td>4. Miss. Kumubhen M. Joshi</td><td>Deputy Minister in the Ministry of Health and Family Welfare.</td></tr><tr><td>5. Shri Mellikarjun</td><td>Deputy Minister in the Ministry of Information and Broadcasting in addition to his office as Deputy Minister in the Department of Parliamentary Affairs.</td></tr><tr><td>6. Shri Vijay N. Patil</td><td>Deputy Minister in the Ministry of Communications.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.75,
+      "batch": 0.75
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 0.75,
+      "batch": 0.75,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_archive_026",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        476.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        476.0,
+        42.1
+      ],
+      "text": "MOST IMMEDIATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        178.5,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        101.04,
+        178.5,
+        101.04
+      ],
+      "text": "No.1/34/1/2016-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        357.0,
+        101.04,
+        595.0,
+        101.04,
+        595.0,
+        151.56,
+        357.0,
+        151.56
+      ],
+      "text": "New Delhi, the 5th July, 2016"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        168.4,
+        595.0,
+        168.4,
+        595.0,
+        210.5,
+        0.0,
+        210.5
+      ],
+      "text": "The undersigned is directed to say that with effect from the 5th July, 2016:"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        0.0,
+        210.5,
+        595.0,
+        210.5,
+        595.0,
+        336.8,
+        0.0,
+        336.8
+      ],
+      "text": "1. Shri Arun Jaitley, relinquished the charge of the office of the Minister of Information and Broadcasting. He will continue to hold the charge of the office of the Minister of Finance; and Minister of Corporate Affairs."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        0.0,
+        336.8,
+        595.0,
+        336.8,
+        595.0,
+        463.1,
+        0.0,
+        463.1
+      ],
+      "text": "2. Shri M. Venkaiah Naidu relinquished the charge of the office of the Minister of Parliamentary Affairs, and assumed the charge of the office of the Minister of Information and Broadcasting. He will continue to hold the charge of the office of the Minister of Urban Development; and Minister of Housing and Urban Poverty Alleviation."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        0.0,
+        463.1,
+        595.0,
+        463.1,
+        595.0,
+        589.4,
+        0.0,
+        589.4
+      ],
+      "text": "3. Shri D.V. Sadananda Gowda relinquished the charge of the office of the Minister of Law and Justice, and assumed the charge of the office of the Minister of Statistics and Programme Implementation."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        0.0,
+        589.4,
+        595.0,
+        589.4,
+        595.0,
+        673.6,
+        0.0,
+        673.6
+      ],
+      "text": "4. Shri Ananthkumar, Minister of Chemicals and Fertilizers also assumed the charge of the office of the Minister of Parliamentary Affairs."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        0.0,
+        673.6,
+        595.0,
+        673.6,
+        595.0,
+        774.64,
+        0.0,
+        774.64
+      ],
+      "text": "5. Shri Ravi Shankar Prasad relinquished the charge of the office of the Minister of Communications and Information Technology. He assumed the charge of the office of the Minister of Law and Justice; and Minister of Electronics and Information Technology."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        0.0,
+        774.64,
+        595.0,
+        774.64,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "6. Shri Narendra Singh Tomar relinquished the charge of the office of the Minister of Mines and Minister of Steel and assumed the charge of the office of the Minister of Rural Development, Minister of Panchayati Raj; and Minister of Drinking Water and Sanitation."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1924,
+      "output": 846,
+      "total": 2770
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004923,
+      "batch": 0.002462
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.49232,
+      "batch": 0.24616,
+      "savings": 0.24616,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

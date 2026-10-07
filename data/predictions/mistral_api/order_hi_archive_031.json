@@ -1,0 +1,154 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        105.19,
+        223.87,
+        516.1,
+        223.87,
+        516.1,
+        241.98,
+        105.19,
+        241.98
+      ],
+      "text": "संभाव में माह ______ की स्थिति में अनुबंध की कंडिका 3 (डी) के कुल लंबित प्रकारों का विवरण"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        44.38,
+        240.34,
+        147.93,
+        240.34,
+        147.93,
+        254.33,
+        44.38,
+        254.33
+      ],
+      "text": "संभाग ______"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        284.35,
+        240.34,
+        404.34,
+        240.34,
+        404.34,
+        254.33,
+        284.35,
+        254.33
+      ],
+      "text": "मण्डल ______"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        470.9,
+        240.34,
+        569.52,
+        240.34,
+        569.52,
+        254.33,
+        470.9,
+        254.33
+      ],
+      "text": "परिक्षेत्र ______"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        512.82,
+        252.68,
+        569.52,
+        252.68,
+        569.52,
+        267.5,
+        512.82,
+        267.5
+      ],
+      "text": "(राशि लाखों में)"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        41.09,
+        265.85,
+        574.45,
+        265.85,
+        574.45,
+        404.13,
+        41.09,
+        404.13
+      ],
+      "html": "<table><thead><tr><td>स. क्र.</td><td>कार्य का नाम</td><td>अनुबंध क्रमांक</td><td>अनुमानित लागत</td><td>निविदा दर</td><td>निविदा लागत</td><td>ठेकेदार द्वारा किया कार्य</td><td>शेष कार्य</td><td>शेष कार्य की निविदा दर</td><td>शेष कार्य की निविदा लागत</td><td>मूल ठेकेदार से वसूली योग्य राशि</td><td>संभाग में ठेकेदार के नाम से उपलब्ध राशि</td><td>ठेकेदार से की गई वसूली की राशि</td><td>शेष वसूली योग्य राशि</td><td>शेष वसूली हेतु दर्ज RRC प्रकरण का क्रमांक एवं दिनांक</td><td>कुल RRC की गई वसूली की राशि</td><td>राशि</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        432.28,
+        439.52,
+        516.1,
+        439.52,
+        516.1,
+        489.73,
+        432.28,
+        489.73
+      ],
+      "text": "कार्यपालन मंत्री\nलोक निर्माण विभाग\nसंभाग ______\nजिला ______"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        330.37,
+        790.97,
+        354.21,
+        790.97,
+        354.21,
+        811.55,
+        330.37,
+        811.55
+      ],
+      "text": "12"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

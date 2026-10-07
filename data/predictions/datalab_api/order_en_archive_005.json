@@ -1,0 +1,106 @@
+{
+  "doc_id": "order_en_archive_005",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        264.5,
+        85.7,
+        393.1,
+        85.7,
+        393.1,
+        99.9,
+        264.5,
+        99.9
+      ],
+      "text": "CABINET SECRETARIAT"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        211.4,
+        112.3,
+        425.6,
+        112.3,
+        425.6,
+        137.9,
+        211.4,
+        137.9
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTERS\nAS ON 2.2.1983"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        265.1,
+        147.0,
+        418.8,
+        147.0,
+        418.8,
+        160.6,
+        265.1,
+        160.6
+      ],
+      "text": "MEMBERS OF THE CABINET"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        50.3,
+        164.5,
+        569.8,
+        164.5,
+        569.8,
+        641.1,
+        50.3,
+        641.1
+      ],
+      "text": "1.\nSmt. Indira Gandhi\n-\nPrime Minister (All Ministries/ Departments not specified below).\n2.\nShri Pranab Kumar Mukherjee\n-\nMinister of Finance.\n3.\nShri P.V. Narasimha Rao\n-\nMinister of External Affairs.\n4.\nShri P.C. Sethi.\n-\nMinister of Home Affairs.\n5.\nShri Shiv Shankar\n-\nMinister of Energy.\n6.\nShri R. Venkataraman\n-\nMinister of Defence.\n7.\nShri A.B.K. Ghani Khan\nChaudhuri\n-\nMinister of Railways.\n8.\nShri S.B. Chavan\n-\nMinister of Planning.\n9.\nShri Jagannath Kaushal\n-\nMinister of Law, Justice and Company Affairs.\n10.\nShri Veerendra Patil\n-\nMinister of Labour & Rehabilitation.\n11.\nShri K. Vijaya Bhaskara Reddy\n-\nMinister without portfolio (temporarily holding charge of the M/o Shipping and Transport).\n12.\nShri Vasant Satho\n-\nMinister of Chemicals and Fertilizers.\n13.\nShri B. Shankaranand\n-\nMinister of Health & Family Welfare.\n14.\nShri A.P. Sharma\n-\nMinister of Communications.\n15.\nShri Bishma Narain Singh\n-\nMinister of Civil Supplies & Supply.\n16.\nRao Birendra Singh\n-\nMinister of Agriculture.\n17.\nShri Buta Singh\n-\nMinister of Parliamentary Affairs, Sports and Works and Housing.\n18.\nShri Vishwanath Pratap Singh\n-\nMinister of Commerce.\n19.\nShri Narayan Datt Tiwari\n-\nMinister of Industry and Steel and Mines."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        74.9,
+        668.9,
+        149.9,
+        668.9,
+        149.9,
+        692.8,
+        74.9,
+        692.8
+      ],
+      "text": "*GBS*\n150 Copies."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

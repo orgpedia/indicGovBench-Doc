@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        479.57,
+        33.68,
+        511.7,
+        33.68,
+        511.7,
+        48.84,
+        479.57,
+        48.84
+      ],
+      "text": "100"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        285.0,
+        72.41,
+        306.43,
+        72.41,
+        306.43,
+        85.88,
+        285.0,
+        85.88
+      ],
+      "text": ": 3 :"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        98.18,
+        95.15,
+        543.83,
+        95.15,
+        543.83,
+        418.47,
+        98.18,
+        418.47
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>20. Shri Pattabhi Rama Rao</td><td>- Minister of State in the Ministry of Finance.</td></tr><tr><td>21. Shri R.C. Rath</td><td>- Minister of State in the Ministry of Chemicals &amp; Fertilizers.</td></tr><tr><td>22. Shri N.K.P. Salve</td><td>- Minister of State (Independent charge) of the Ministry of Information and Broadcasting.</td></tr><tr><td>23. Shri C.K. Jaffar Shariof</td><td>- Minister of State in the Ministry of Railways.</td></tr><tr><td>24. Shri Chandra Shekhar Singh</td><td>- Minister of State in the Ministry of Energy.</td></tr><tr><td>25. Shri Dalbir Singh</td><td>- Minister of State in the Department of Coal in the Ministry of Energy.</td></tr><tr><td>26. Shri Virbhadra Singh</td><td>- Minister of State in the Ministry of Industry.</td></tr><tr><td>27. Smt. Ram Dulari Sinha</td><td>- Minister of State in the Ministries of Industry and Steel &amp; Mines.</td></tr><tr><td>28. Shri P. Venkatasubbaiah</td><td>- Minister of State in the Ministry of Home Affairs.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        254.66,
+        437.84,
+        358.78,
+        437.84,
+        358.78,
+        453.0,
+        254.66,
+        453.0
+      ],
+      "text": "DEPUTY MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        98.18,
+        459.73,
+        523.6,
+        459.73,
+        523.6,
+        688.76,
+        98.18,
+        688.76
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1. Shri Mohammed Usman Arif</td><td>- Deputy Minister in the Ministry of Civil Supplies.</td></tr><tr><td>2. Shri Ghulam Nabi Azad</td><td>- Deputy Minister in the Ministry of Law, Justice and Company Affairs.</td></tr><tr><td>3. Shri Ashok Gehlot</td><td>- Deputy Minister in the Ministry of Tourism.</td></tr><tr><td>4. Miss. Kumubhen M. Joshi</td><td>- Deputy Minister in the Ministry of Health and Family Welfare.</td></tr><tr><td>5. Shri Mallikarjun</td><td>- Deputy Minister in the Ministry of Information and Broadcasting in addition to his office as Deputy Minister in the Department of Parliamentary Affairs.</td></tr><tr><td>6. Shri Vijay N. Patil</td><td>- Deputy Minister in the Ministry of Communications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        491.47,
+        686.23,
+        512.89,
+        686.23,
+        512.89,
+        698.86,
+        491.47,
+        698.86
+      ],
+      "text": ".. 4 .."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 5370,
+      "output": 1048,
+      "total": 6418
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03183,
+      "batch": 0.015915
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.183,
+      "batch": 1.5915,
+      "savings": 1.5915,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "doc_id": "order_en_archive_037",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        540.26,
+        26.94,
+        555.73,
+        26.94,
+        555.73,
+        42.1,
+        540.26,
+        42.1
+      ],
+      "text": "35"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        284.41,
+        58.94,
+        318.92,
+        58.94,
+        318.92,
+        67.36,
+        284.41,
+        67.36
+      ],
+      "text": "- 2 -"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        166.01,
+        123.77,
+        430.78,
+        123.77,
+        430.78,
+        133.04,
+        166.01,
+        133.04
+      ],
+      "text": "MINISTER OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        74.38,
+        168.4,
+        528.36,
+        168.4,
+        528.36,
+        312.38,
+        74.38,
+        312.38
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Harmohan Dhawan</td><td>Minister of State (Independent\nCharge) of the Ministry of\nCivil Aviation.</td></tr><tr><td>2.</td><td>Shrimati Maneka Gandhi</td><td>Minister of State (Independent\nCharge) of the Ministry of\nEnvironment &amp; Forests.</td></tr><tr><td>3.</td><td>Dr. Sanjay Singh</td><td>Minister of State (Independent\nCharge) of the Ministry of\nCommunications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        242.76,
+        378.9,
+        360.57,
+        378.9,
+        360.57,
+        388.16,
+        242.76,
+        388.16
+      ],
+      "text": "MINISTER OF STATE"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        74.38,
+        421.84,
+        528.96,
+        421.84,
+        528.96,
+        742.64,
+        74.38,
+        742.64
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Babanrao Dhakane</td><td>Minister of State in the\nMinistry of Energy.</td></tr><tr><td>2.</td><td>Shri Bhakta Charan Das</td><td>Minister of State in the\nMinistry of Railways.</td></tr><tr><td>3.</td><td>Shri Kamal Morarka</td><td>Minister of State in the Prime\nMinister&#x27;s Office.</td></tr><tr><td>4.</td><td>Shri Lalit Vijay Singh</td><td>Minister of State in the\nMinistry of Defence.</td></tr><tr><td>5.</td><td>Shri Ram Bahadur Singh</td><td>Minister of State in the\nDepartment\nof\nRural\nDevelopment in the Ministry of\nAgriculture.</td></tr><tr><td>6.</td><td>Shri Ramji Lal Suman</td><td>Minister of State in the\nMinistry of Labour and\nMinister of State in the\nMinistry of Welfare.</td></tr><tr><td>7.</td><td>Shri Subodh Kant Sahay</td><td>Minister of State in the\nMinistry of Home Affairs and\nMinister of State in the\nMinistry of Information and\nBroadcasting.</td></tr></tbody></table>"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        426.02,
+        798.22,
+        451.01,
+        798.22,
+        451.01,
+        806.64,
+        426.02,
+        806.64
+      ],
+      "text": "...3"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        66.64,
+        812.53,
+        125.55,
+        812.53,
+        125.55,
+        825.16,
+        66.64,
+        825.16
+      ],
+      "text": "300 Copies"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1593,
+      "output": 816,
+      "total": 2409
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.006071,
+      "batch": 0.003036
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.607125,
+      "batch": 0.303563,
+      "savings": 0.303563,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

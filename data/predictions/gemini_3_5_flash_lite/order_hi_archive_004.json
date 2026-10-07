@@ -1,0 +1,46 @@
+{
+  "doc_id": "order_hi_archive_004",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        524.79,
+        85.04,
+        552.75,
+        85.04,
+        552.75,
+        101.04,
+        524.79,
+        101.04
+      ],
+      "text": "36"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 57,
+      "total": 1662
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000137,
+      "batch": 6.9e-05
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.013747,
+      "batch": 0.006874,
+      "savings": 0.006874,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

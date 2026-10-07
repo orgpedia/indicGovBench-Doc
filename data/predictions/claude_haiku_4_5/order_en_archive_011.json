@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        267.75,
+        168.4,
+        505.75,
+        168.4,
+        505.75,
+        210.5,
+        267.75,
+        210.5
+      ],
+      "text": "IMPERIAL WAR"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        267.75,
+        210.5,
+        505.75,
+        210.5,
+        505.75,
+        252.6,
+        267.75,
+        252.6
+      ],
+      "text": "MUSEUM"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        29.75,
+        252.6,
+        505.75,
+        252.6,
+        505.75,
+        294.7,
+        29.75,
+        294.7
+      ],
+      "text": "G.D.P. 1556/43\nCAPITAIN SPARLING, A.F.C.\nCAPITAIN SPARLING, A.F.C.\nIf you care to call at the Imperial War Museum, 1962."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        29.75,
+        294.7,
+        505.75,
+        294.7,
+        505.75,
+        378.9,
+        29.75,
+        378.9
+      ],
+      "text": "In the undercarriage of the left-hand leg of the Fokker D.VIII, 1962."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        29.75,
+        378.9,
+        505.75,
+        378.9,
+        505.75,
+        463.1,
+        29.75,
+        463.1
+      ],
+      "text": "The aircraft is a Fokker D.VIII, which was captured intact during the final stages of the First World War. It is now on display at the Imperial War Museum."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        29.75,
+        463.1,
+        505.75,
+        463.1,
+        505.75,
+        547.3,
+        29.75,
+        547.3
+      ],
+      "text": "To All Members of the Council of Aero-Engines,\n\nDear Sir,\n\nAll Members of the Council of Aero-Engines are requested to the Particulars referred to the Cable."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        29.75,
+        547.3,
+        505.75,
+        547.3,
+        505.75,
+        631.5,
+        29.75,
+        631.5
+      ],
+      "text": "The time allowed for the Particulars referred to the Cable is to be observed by the Particulars referred to the Cable."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        29.75,
+        631.5,
+        505.75,
+        631.5,
+        505.75,
+        715.7,
+        29.75,
+        715.7
+      ],
+      "text": "CIRCULAR"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        29.75,
+        715.7,
+        505.75,
+        715.7,
+        505.75,
+        799.9,
+        29.75,
+        799.9
+      ],
+      "text": "CIRCULAR"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        29.75,
+        799.9,
+        505.75,
+        799.9,
+        505.75,
+        842.0,
+        29.75,
+        842.0
+      ],
+      "text": "F.T.O."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 630,
+      "total": 2555
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.00406,
+      "batch": 0.00203
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.406,
+      "batch": 0.203,
+      "savings": 0.203,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

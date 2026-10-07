@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_archive_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        202.3,
+        42.94,
+        550.38,
+        42.94,
+        550.38,
+        146.51,
+        202.3,
+        146.51
+      ],
+      "text": "MOST IMMEDIATE\n\nNo. 55/1/80(2)-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)\n\nNEW DELHI, 9 June, 1980\n19 Jyaistha, 1902(S)."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        85.08,
+        149.03,
+        555.73,
+        149.03,
+        555.73,
+        725.8,
+        85.08,
+        725.8
+      ],
+      "text": "-----\n\nThe undersigned is directed to say that w.e.f. the afternoon\nof the 8th June, 1980:-\n\n(i) Shri V. C. Shukla assumed the office of the Minister of\n Civil Supplies;\n\n(ii) Shri N.D. Tewari assumed the office of the Minister of\n Planning;\n\n(iii) Shri Kedar Pande assumed the office of the Minister of\n Irrigation;\n\n(iv) Shri Dalbir Singh assumed the office of the Minister\n of State in the Ministry of Petroleum & Chemicals;\n\n(v) Shri N. Anjiah assumed the office of the Minister of\n State in the Ministry of Labour;\n\n(vi) Shri Buta Singh assumed the office of the Minister\n of State in the Ministry of Shipping & Transport;\n\n(vii) Shri Chandulal Chandrakar assumed the office of\n the Minister of State in the Ministry of Tourism\n & Civil Aviation;\n\n(viii) Shri Vikram Mahajan assumed the office of the\n Minister of State in the Ministry of Energy;\n\n(ix) Smt. Ram Dulari Sinha assumed the office of the\n Minister of State in the Ministry of Information &\n Broadcasting;\n\n(x) Shri Mallikarjun assumed the office of the Deputy\n Minister in the Ministry of Railways;\n\n(xi) Shri P. Venkata Reddy assumed the office of the\n Deputy Minister in the Ministry of Industry;\n\n(xii) Shri Mohammad Usman Arif assumed the office of\n the Deputy Minister in the Ministry of Works &\n Housing;\n\n(xiii) Shri Manubhai Barot assumed the office of the\n Deputy Minister in the Ministry of Finance;\n\n(xiv) Shri Vijay N. Patil assumed the office of the\n Deputy Minister in the Departments of Science &\n Technology and Space; and"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        80.92,
+        725.8,
+        500.39,
+        725.8,
+        500.39,
+        749.38,
+        80.92,
+        749.38
+      ],
+      "text": "VKR\n200 copies. ...2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2137,
+      "total": 5431
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002961,
+      "batch": 0.00148
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.29605,
+      "batch": 0.148025,
+      "savings": 0.148025,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

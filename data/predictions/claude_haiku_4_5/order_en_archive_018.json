@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_018",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        446.25,
+        12.63,
+        535.5,
+        12.63,
+        535.5,
+        29.47,
+        446.25,
+        29.47
+      ],
+      "text": "6/2\n1988"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        357.0,
+        16.84,
+        535.5,
+        16.84,
+        535.5,
+        33.68,
+        357.0,
+        33.68
+      ],
+      "text": "MOST IMMEDIATE"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        59.5,
+        37.89,
+        535.5,
+        37.89,
+        535.5,
+        63.15,
+        59.5,
+        63.15
+      ],
+      "text": "No. 55/1/1/88-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        119.0,
+        71.57,
+        535.5,
+        71.57,
+        535.5,
+        96.83,
+        119.0,
+        96.83
+      ],
+      "text": "NEW DELHI, the 25th June,1988.\n4 Asadha, 1910 (S)."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        59.5,
+        109.46,
+        535.5,
+        109.46,
+        535.5,
+        134.72,
+        59.5,
+        134.72
+      ],
+      "text": "The undersigned is directed to say that with effect from\n25th June, 1988 -"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        59.5,
+        143.14,
+        535.5,
+        143.14,
+        535.5,
+        799.9,
+        59.5,
+        799.9
+      ],
+      "text": "(1) Shri Narayan Dutt Tiwari relinquished the office of\n the Minister of Finance and Minister of Commerce.\n\n(2) Prime Minister relinquished the office of Minister of\n External Affairs.\n\n(3) Shri P.V. Narasimha Rao relinquished the office of\n Minister of Human Resource Development and assumed\n the office of Minister of External Affairs.\n\n(4) Shri P. Shiv Shanker relinquished the office of\n Minister of Planning and Minister of Programme\n Implementation and assumed the office of Minister\n of Human Resource Development.\n\n(5) Shri Vasant Sathe, Minister of Energy relinquished the\n office of Minister of Communications.\n\n(6) Shri Bindeahwari Dubey relinquished the office of\n Minister of Law and Justice and assumed the office\n of Minister of Labour.\n\n(7) Shri Dinesh Singh relinquished the office of Minister\n of Water Resources and assumed the office of\n Minister of Commerce.\n\n(8) Smt. Mohsina Kidwai, Minister of Urban Development\n relinquished the office of Minister of Tourism.\n\n(9) Shri Moti Lal Vora, Minister of Health & Family\n Welfare relinquished the office of Minister of\n Civil Aviation.\n\n(10) Shri Z.R. Ansari relinquished the office of the\n Minister of State (Independent charge) of the\n Ministry of Environment & Forests and assumed the\n office of Minister of Environment & Forests.\n\n(11) Shri Jagdish Tytler relinquished the office of\n Minister of State (Independent charge) of the\n Ministry of Labour and assumed the office of\n Minister of State (Independent charge) of the\n Ministry of Food Processing Industries.\n\n(12) Shri Shiv Raj Patil relinquished the office of\n Minister of State in the Department of Defence\n Production and Supplies in the Ministry of Defence\n and assumed the office of Minister of State\n (Independent charge) of the Ministry of Civil\n Aviation and Tourism."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        59.5,
+        791.48,
+        119.0,
+        791.48,
+        119.0,
+        808.32,
+        59.5,
+        808.32
+      ],
+      "text": "...2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 986,
+      "total": 2911
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.005484,
+      "batch": 0.002742
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.5484,
+      "batch": 0.2742,
+      "savings": 0.2742,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "doc_id": "order_en_archive_010",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "No.245/C.F/48.\nGOVERNMENT OF INDIA.\nCABINET SECRETARIAT.\nNew Delhi, the 6th December, 1948.\n----"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        406.98,
+        38.73,
+        530.14,
+        38.73,
+        530.14,
+        53.89,
+        406.98,
+        53.89
+      ],
+      "text": "IMMEDIATE. 13"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        245.14,
+        169.24,
+        357.59,
+        169.24,
+        357.59,
+        183.56,
+        245.14,
+        183.56
+      ],
+      "text": "OFFICE MEMORANDUM."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        141.01,
+        201.24,
+        515.87,
+        201.24,
+        515.87,
+        254.28,
+        141.01,
+        254.28
+      ],
+      "text": "The undersigned is directed to circulate for the information\nof all Ministries of the Government of India a copy of the minutes\nrecorded by the Prime Minister relating to -"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        163.62,
+        269.44,
+        498.61,
+        269.44,
+        498.61,
+        309.01,
+        163.62,
+        309.01
+      ],
+      "text": "(1) The appointment of Shri R.R.Diwakar, Member of the\n Constituent Assembly, as Minister of State for\n Information and Broadcasting with effect from the\n 7th December, 1948."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        163.62,
+        318.28,
+        521.82,
+        318.28,
+        521.82,
+        360.38,
+        163.62,
+        360.38
+      ],
+      "text": "(2) The appointment of Dr.Balkrishan V.Keskar, Member of the\n Constituent Assembly, as Deputy Minister with effect\n from the 7th December, 1948. He will be attached to\n the Ministry of External Affairs & Commonwealth Relations."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        324.87,
+        533.83,
+        499.8,
+        533.83,
+        499.8,
+        607.08,
+        324.87,
+        607.08
+      ],
+      "text": "(E.C.Donoghue)\nfor Joint Secretary to the Cabinet."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        309.4,
+        584.35,
+        501.58,
+        584.35,
+        501.58,
+        642.45,
+        309.4,
+        642.45
+      ],
+      "text": "(E.C.Donoghue)\nUnder Secretary to the Cabinet."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        142.2,
+        643.29,
+        445.06,
+        643.29,
+        445.06,
+        686.23,
+        142.2,
+        686.23
+      ],
+      "text": "To\n\n All Secretaries to the Government of India."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        309.4,
+        714.86,
+        329.04,
+        714.86,
+        329.04,
+        724.12,
+        309.4,
+        724.12
+      ],
+      "text": "----"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        143.39,
+        758.64,
+        530.14,
+        758.64,
+        530.14,
+        793.16,
+        143.39,
+        793.16
+      ],
+      "text": "Copy with a copy of the enclosures forwarded to the\nSecretary and Military Secretary to the Governor-General/the\nPrincipal Private Secretary to the Prime Minister, for information."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 1690,
+      "total": 4984
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002514,
+      "batch": 0.001257
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.25135,
+      "batch": 0.125675,
+      "savings": 0.125675,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

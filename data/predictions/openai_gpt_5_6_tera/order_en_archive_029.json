@@ -1,0 +1,222 @@
+{
+  "doc_id": "order_en_archive_029",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        265.97,
+        10.1,
+        351.05,
+        10.1,
+        351.05,
+        61.47,
+        265.97,
+        61.47
+      ],
+      "text": "32.96"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        520.62,
+        10.1,
+        577.75,
+        10.1,
+        577.75,
+        51.36,
+        520.62,
+        51.36
+      ],
+      "text": "86\n114"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        405.79,
+        35.36,
+        469.46,
+        35.36,
+        469.46,
+        48.84,
+        405.79,
+        48.84
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        139.23,
+        74.1,
+        532.52,
+        74.1,
+        532.52,
+        126.3,
+        139.23,
+        126.3
+      ],
+      "text": "No. 55/1/1/77-CP\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT(MANTRIMANDAL SACHIVALAYA)\nDepartment of Cabinet Affairs(Mantrimandal Karya Vibhag)"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        313.56,
+        143.98,
+        529.55,
+        143.98,
+        529.55,
+        168.4,
+        313.56,
+        168.4
+      ],
+      "text": "New Delhi, 24 March, 1977.\n3 Chaitra, 1899(S)."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        327.25,
+        186.08,
+        345.1,
+        186.08,
+        345.1,
+        195.34,
+        327.25,
+        195.34
+      ],
+      "text": "..."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        140.42,
+        217.24,
+        535.5,
+        217.24,
+        535.5,
+        268.6,
+        140.42,
+        268.6
+      ],
+      "text": "1. The undersigned is directed to say that the Members\nof the Council of Ministers shown in the attached list\nrelinquished charge of their respective portfolios, with\neffect from the afternoon of March 24, 1977."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        139.82,
+        278.7,
+        545.02,
+        278.7,
+        545.02,
+        339.33,
+        139.82,
+        339.33
+      ],
+      "text": "2. Shri Morarji R. Desai has been sworn in as Prime\nMinister by the Acting President at 3-30 P.M. today,\n24 March, 1977. The Ministry of Home Affairs may kindly\ntake such action as may be considered necessary regarding\nissue of Gazette notifications, etc."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        282.62,
+        385.64,
+        503.96,
+        385.64,
+        503.96,
+        415.95,
+        282.62,
+        415.95
+      ],
+      "text": "(K. Ramiah)\nUnder Secretary to the Cabinet"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        143.99,
+        437.84,
+        467.67,
+        437.84,
+        467.67,
+        495.94,
+        143.99,
+        495.94
+      ],
+      "text": "To\n\nMinistry of Home Affairs\n(Shri K.R. Prabhu - Additional Secretary)\nS. S. Sidhu"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        145.18,
+        520.36,
+        539.07,
+        520.36,
+        539.07,
+        559.93,
+        145.18,
+        559.93
+      ],
+      "text": "Copy with a copy of the enclosure, forwarded to\nthe Secretary-General, Lok Sabha Secretariat/Secretary-\nGeneral, Rajya Sabha Secretariat, for information."
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        280.25,
+        591.08,
+        507.53,
+        591.08,
+        507.53,
+        628.97,
+        280.25,
+        628.97
+      ],
+      "text": "(K. Ramiah)\nUnder Secretary to the Cabinet."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3244,
+      "output": 1517,
+      "total": 4761
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.01164,
+      "batch": 0.00582
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.164,
+      "batch": 0.582,
+      "savings": 0.582,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

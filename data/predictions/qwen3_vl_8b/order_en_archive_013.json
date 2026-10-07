@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_en_archive_013",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        59.5,
+        84.2,
+        535.5,
+        84.2,
+        535.5,
+        698.86,
+        59.5,
+        698.86
+      ],
+      "text": "IMMEDIATE\n\nNo. 55/4/CF-56\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the 31st January 1966.\n\nThe undersigned is directed to state that the\ndesignation of Shri A.M. Thomas, Minister of State in the\nMinistry of Defence will be as Minister of Defence Production\nin the Ministry of Defence.\n\nD. P. Chopra)\nfor Cabinet Secretary.\n\nTo\nAll Members of the Council of Ministers.\n\nCopy forwarded to the Secretary to the Prime Minister/\nthe Private Secretary to the Prime Minister, for information.\n\nP.T.O."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 206,
+      "total": 2493
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.1
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

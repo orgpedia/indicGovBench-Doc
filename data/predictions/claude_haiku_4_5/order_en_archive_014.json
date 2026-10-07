@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_en_archive_014",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "IMMEDIATE\n\nNo.55/1/71-CF\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\n\nNew Delhi, the 3rd May 1971,\n13th Vaisakha 1893."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "The undersigned is directed to state that with effect from the afternoon of May 2, 1971,\n\n1. Shri Uma Shankar Dikshit assumed the office of Minister of Works and Housing;\n\n2. Shri H.M. Bahuguna assumed the office of Minister (of State) of Communications;\n\n3. Prof. D.P. Chattopadhyaya assumed the office of Minister of State in the Ministry of Health and Family Planning;\n\n4. Shri Niti Raj Singh Chaudhury relinquished the office of Minister of State in the Ministry of Petroleum, Chemicals and Non-Ferrous Metals and assumed the office of Minister of State in the Ministry of Law and Justice;\n\n5. Shri D.R. Chavan relinquished the office of Minister of State in the Ministry of Petroleum, Chemicals and Ferrous Metals and assumed the office of Minister(of State) of Supply;\n\n6. Shri Mohan Dharia assumed the office of Minister of State in the Ministry of Planning;\n\n7. Shri K.R. Ganesh relinquished the office of Deputy Minister in the Ministry of Finance and assumed the office of Minister of State in the Ministry of Finance;\n\n8. Shri I.K. Gujral relinquished the office of Minister of Works, Housing and Urban Development and assumed the office of Minister of State in the Ministry of Works and Housing;\n\n9. Shri Shah Nawaz Khan assumed the office of Minister of State in the Ministry of Steel and Mines;\n\n10. Dr.(Smt) Sarojini Mahishi relinquished the office of Deputy Minister in the Ministry of Tourism & Civil Aviation and assumed the office of Minister of State in the Ministry of Tourism & Civil Aviation;\n\n11. Shri Charanyam Bhai Oza assumed the office of Minister of State in the Ministry of Industrial Development;\n\n12. Shri Prakashanand D. Sethi relinquished the office of Minister of State (Defence Production) in the Ministry of Defence and assumed the office of Minister of Petroleum and Chemicals;\n\n13. Shri V.C. Shukla relinquished the office of Minister of State in the Ministry of Finance and assumed the office of Minister of State(Defence Production) in the Ministry of Defence."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 722,
+      "total": 2647
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004428,
+      "batch": 0.002214
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4428,
+      "batch": 0.2214,
+      "savings": 0.2214,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

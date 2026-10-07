@@ -1,0 +1,113 @@
+{
+  "doc_id": "order_en_archive_004",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        329.04,
+        65.68,
+        558.11,
+        65.68,
+        558.11,
+        220.6,
+        329.04,
+        220.6
+      ],
+      "text": "or the other administrative ground or on\nthe ground that the necessary material\nfor placement before the Committees is\nnot ready. the requirement of convening\nregular meetings of the Committee\nshould be dispensed with only after a\ncertificate has been issued by the\nappointing authority that there are no\nvacancies to be filled by promotion or no\nofficers are due for promotion /\nconfirmation during the year in question."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        330.23,
+        229.87,
+        564.06,
+        229.87,
+        564.06,
+        547.3,
+        330.23,
+        547.3
+      ],
+      "text": "It is essential that the number of\nvacancies in respect of which a panel is to\nbe prepared should be estimated as\naccurately as possible for this purpose,\nthe vacancies to be taken into account\nshould be the clear vacancies arising in a\ngrade due to death, retirement,\nresignation, promotions and deputation.\nAs regards vacancies arising out of\ndeputation only those cases of\ndeputation for periods exceeding 3 years\nshould be taken into account taking due\nnote of the number of deputation likely\nto return to the cadre. Purely short term\nvacancies created as a result of the\nofficers proceeding on leave, training or\non deputation for a short-term period\ne.t.c. should not be taken into account for\nthe purpose of preparation of a panel.\nIn cases where there has been delay in\nholding the Committee meetings for a\nyear or more, vacancies should be\nindicated year-wise separately."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        121.38,
+        234.92,
+        280.84,
+        234.92,
+        280.84,
+        265.23,
+        121.38,
+        265.23
+      ],
+      "text": "3. DETERMINATION OF VACANCIES"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        330.23,
+        555.72,
+        570.01,
+        555.72,
+        570.01,
+        735.07,
+        330.23,
+        735.07
+      ],
+      "text": "The proposals should be completed\nand submitted to the Committee well in\ntime. No proposal for holding a\nCommittee should be sent until and\nunless at least 90% of the ACRs (up-to\ndate and complete) are available. Every\neffort should be made to keep the ACR\ndossiers, up-to-date lest this aspect is\nadvanced as the reason for not holding\nthe Committee meetings in time. the\nofficer referred in para 2 should also be\nresponsible for monitoring the completion\nof the ACR dossiers."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        127.92,
+        562.46,
+        288.57,
+        562.46,
+        288.57,
+        617.19,
+        127.92,
+        617.19
+      ],
+      "text": "4. PAPERS TO BE PUT UP FOR\nCONSIDERATION BY\nCOMMITTEES"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2471,
+      "output": 666,
+      "total": 3137
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.31
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_hi_current_039",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "पु.क्रमांक 4/2/0038/2026-PLAN-19(PWD)\nप्रतिलिपि:\n\n1. निज सचिव, प्रमुख सचिव, लोक निर्माण विभाग, मंत्रालय, भोपाल (म.प्.)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        84.2,
+        0.0,
+        84.2
+      ],
+      "text": "भोपाल, दिनांक20-06-2026\n\nउप सचिव, म.प्र. शासन\nलोक निर्माण विभाग"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        799.9,
+        595.0,
+        799.9,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "1/1106718/2026"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 291,
+      "total": 2216
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002704,
+      "batch": 0.001352
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.2704,
+      "batch": 0.1352,
+      "savings": 0.1352,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

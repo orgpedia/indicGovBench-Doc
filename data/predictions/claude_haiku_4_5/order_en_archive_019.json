@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_019",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "SNO.2(I)\n\n(IS)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "MOST IMMEDIATE\n\nNo.55/1/1/91-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)\n\nNew Delhi, the 21st February, 1991\n2 Phalguna, 1912(S)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        378.9,
+        0.0,
+        378.9
+      ],
+      "text": "The undersigned is directed to say that with effect from 20th February, 1991 -\n\n(i) Shri Vidya Charan Shukla has relinquished the office of the Minister of External Affairs.\n\n(ii) Shri Shakeelur Rehman has relinquished the office of the Minister of Health & Family Welfare.\n\n(iii) Shri Basavaraj Patil has relinquished the office of the Minister of State in the Ministry of Steel and Mines.\n\n(iv) Shri Bhagey Gobardhan has relinquished the office of the Minister of State in the Ministry of Human Resource Development.\n\n(v) Shri Sarwar Hussain has relinquished the office of the Minister of State in the Ministry of Food and Civil Supplies."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        378.9,
+        595.0,
+        378.9,
+        595.0,
+        463.1,
+        0.0,
+        463.1
+      ],
+      "text": "(V.R. Srinivasan)\nfor Cabinet Secretary\nTele : 3015802"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        0.0,
+        463.1,
+        595.0,
+        463.1,
+        595.0,
+        547.3,
+        0.0,
+        547.3
+      ],
+      "text": "To\n\nAll Members of the Council of Ministers.\n\n-----\n\nCopy forwarded to Deputy Chairman and all members of the Planning Commission for information.\n\n-----\n\nCopy forwarded for information to:-\n\nSecretary to the Prime Minister.\nSpecial Secretary to the Prime Minister.\nAdditional Secretary to the Prime Minister.\n\n-----\n\nCopy also forwarded to:-\n\nSecretary to the President.\nSecretary to the Vice-President."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        0.0,
+        547.3,
+        595.0,
+        547.3,
+        595.0,
+        631.5,
+        0.0,
+        631.5
+      ],
+      "text": "(V.R. Srinivasan)\nDeputy Secretary to the Cabinet.\n\n-----\n\n3rd Capon\n\n...2"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1942,
+      "output": 745,
+      "total": 2687
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004534,
+      "batch": 0.002267
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.45336,
+      "batch": 0.22668,
+      "savings": 0.22668,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

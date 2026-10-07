@@ -1,0 +1,113 @@
+{
+  "doc_id": "order_en_archive_008",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        207.06,
+        33.68,
+        405.79,
+        33.68,
+        405.79,
+        50.52,
+        207.06,
+        50.52
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        254.06,
+        52.2,
+        357.0,
+        52.2,
+        357.0,
+        63.15,
+        254.06,
+        63.15
+      ],
+      "text": "(as on 09.11.2014)"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        66.64,
+        66.52,
+        553.35,
+        66.52,
+        553.35,
+        199.55,
+        66.64,
+        199.55
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>Shri Narendra Modi</td><td>Prime Minister and also in-charge of: Ministry of Personnel, Public Grievances and Pensions; Department of Atomic Energy; Department of Space; and All important policy issues and all other portfolios not allocated to any Minister.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        240.98,
+        202.08,
+        366.52,
+        202.08,
+        366.52,
+        216.39,
+        240.98,
+        216.39
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        56.52,
+        218.92,
+        552.16,
+        218.92,
+        552.16,
+        788.95,
+        56.52,
+        788.95
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Raj Nath Singh</td><td>Minister of Home Affairs.</td></tr><tr><td>2.</td><td>Smt. Sushma Swaraj</td><td>Minister of External Affairs; and Minister of Overseas Indian Affairs.</td></tr><tr><td>3.</td><td>Shri Arun Jaitley</td><td>Minister of Finance; Minister of Corporate Affairs; and Minister of Information and Broadcasting.</td></tr><tr><td>4.</td><td>Shri M. Venkaiah Naidu</td><td>Minister of Urban Development; Minister of Housing and Urban Poverty Alleviation; and Minister of Parliamentary Affairs.</td></tr><tr><td>5.</td><td>Shri Nitin Jairam Gadkari</td><td>Minister of Road Transport and Highways; and Minister of Shipping.</td></tr><tr><td>6.</td><td>Shri Manohar Parrikar</td><td>Minister of Defence.</td></tr><tr><td>7.</td><td>Shri Suresh Prabhu</td><td>Minister of Railways.</td></tr><tr><td>8.</td><td>Shri D.V. Sadananda Gowda</td><td>Minister of Law and Justice.</td></tr><tr><td>9.</td><td>Sushri Uma Bharati</td><td>Minister of Water Resources, River Development and Ganga Rejuvenation.</td></tr><tr><td>10.</td><td>Dr. Najma A. Heptulla</td><td>Minister of Minority Affairs.</td></tr><tr><td>11.</td><td>Shri Ramvilas Paswan</td><td>Minister of Consumer Affairs, Food and Public Distribution.</td></tr><tr><td>12.</td><td>Shri Kalraj Mishra</td><td>Minister of Micro, Small and Medium Enterprises.</td></tr><tr><td>13.</td><td>Smt. Maneka Sanjay Gandhi</td><td>Minister of Women and Child Development.</td></tr><tr><td>14.</td><td>Shri Ananthkumar</td><td>Minister of Chemicals and Fertilizers.</td></tr><tr><td>15.</td><td>Shri Ravi Shankar Prasad</td><td>Minister of Communications and Information Technology.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 889,
+      "total": 3176
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.42
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        324.48,
+        168.3,
+        435.76,
+        168.3,
+        435.76,
+        208.4,
+        324.48,
+        208.4
+      ],
+      "text": "=tes ype\nPinos Hod Coai"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        326.88,
+        204.56,
+        479.17,
+        204.56,
+        479.17,
+        245.13,
+        326.88,
+        245.13
+      ],
+      "text": "ne a\nFo 40 ne also Anis\nbe in. vhe Winisery of F."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        284.43,
+        239.61,
+        291.62,
+        239.61,
+        291.62,
+        320.52,
+        284.43,
+        320.52
+      ],
+      "text": "Ed"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        291.38,
+        244.65,
+        476.29,
+        244.65,
+        476.29,
+        302.51,
+        291.38,
+        302.51
+      ],
+      "text": "Hine of stane in th\nAga fAieyliture and Irrigat om\ndi ator ef Stato in kh"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        290.9,
+        270.82,
+        294.98,
+        270.82,
+        294.98,
+        276.1,
+        290.9,
+        276.1
+      ],
+      "text": "i"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        382.04,
+        428.8,
+        531.21,
+        428.8,
+        531.21,
+        475.38,
+        382.04,
+        475.38
+      ],
+      "text": "Sats ot s an"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

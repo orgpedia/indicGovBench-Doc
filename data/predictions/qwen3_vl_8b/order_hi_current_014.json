@@ -1,0 +1,65 @@
+{
+  "doc_id": "order_hi_current_014",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        509.32,
+        40.42,
+        558.11,
+        40.42,
+        558.11,
+        54.73,
+        509.32,
+        54.73
+      ],
+      "text": "234-B"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        339.15,
+        47.99,
+        427.21,
+        47.99,
+        427.21,
+        70.73,
+        339.15,
+        70.73
+      ],
+      "text": "116 OCT 2023"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 8000,
+      "total": 10287
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 3.76
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

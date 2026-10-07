@@ -1,0 +1,222 @@
+{
+  "doc_id": "order_en_current_030",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        61.88,
+        14.31,
+        533.12,
+        14.31,
+        533.12,
+        29.47,
+        61.88,
+        29.47
+      ],
+      "text": "(TO BE PUBLISHED IN THE GAZETTE OF INDIA, PART 1 SECTION 2)"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        196.35,
+        33.68,
+        398.65,
+        33.68,
+        398.65,
+        46.31,
+        196.35,
+        46.31
+      ],
+      "text": "No. K-13032/01/2026-US.I/II"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        202.3,
+        47.15,
+        392.7,
+        47.15,
+        392.7,
+        58.94,
+        202.3,
+        58.94
+      ],
+      "text": "Government of India"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        184.45,
+        59.78,
+        410.55,
+        59.78,
+        410.55,
+        71.57,
+        184.45,
+        71.57
+      ],
+      "text": "Ministry of Law and Justice"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        196.35,
+        72.41,
+        398.65,
+        72.41,
+        398.65,
+        84.2,
+        196.35,
+        84.2
+      ],
+      "text": "Department of Justice"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        202.3,
+        85.04,
+        392.7,
+        85.04,
+        392.7,
+        96.83,
+        202.3,
+        96.83
+      ],
+      "text": "(Appointments Division)"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        166.6,
+        113.67,
+        428.4,
+        113.67,
+        428.4,
+        138.93,
+        166.6,
+        138.93
+      ],
+      "text": "Jaisalmer House, 26, Man Singh Road,\nNew Delhi-110 011, dated 27th May, 2026."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        226.1,
+        155.77,
+        368.9,
+        155.77,
+        368.9,
+        176.82,
+        226.1,
+        176.82
+      ],
+      "text": "NOTIFICATION"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        44.62,
+        197.87,
+        550.38,
+        197.87,
+        550.38,
+        319.96,
+        44.62,
+        319.96
+      ],
+      "text": "Shri Justice Alok Kumar Verma has tendered his resignation from the office of Judge, Uttarakhand High Court, in pursuance of proviso (a) to clause (1) of Article 217 of the Constitution, with effect from 30.04.2026."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        327.25,
+        345.22,
+        535.5,
+        345.22,
+        535.5,
+        374.69,
+        327.25,
+        374.69
+      ],
+      "text": "(Jagannath Srinivasan)\nJoint Secretary to the Government of India\nTele: 2338 3037"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        44.62,
+        412.58,
+        119.0,
+        412.58,
+        119.0,
+        429.42,
+        44.62,
+        429.42
+      ],
+      "text": "To"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        44.62,
+        437.84,
+        238.0,
+        437.84,
+        238.0,
+        505.2,
+        44.62,
+        505.2
+      ],
+      "text": "The Manager,\nGovernment of India Press,\nMinto Road, New Delhi."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 703,
+      "total": 2628
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004352,
+      "batch": 0.002176
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4352,
+      "batch": 0.2176,
+      "savings": 0.2176,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

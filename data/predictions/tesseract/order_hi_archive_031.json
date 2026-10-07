@@ -1,0 +1,93 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        391.48,
+        185.18,
+        396.07,
+        185.18,
+        396.07,
+        190.29,
+        391.48,
+        190.29
+      ],
+      "text": "कि"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        474.37,
+        215.54,
+        481.51,
+        215.54,
+        481.51,
+        217.83,
+        474.37,
+        217.83
+      ],
+      "text": "-"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        106.86,
+        224.98,
+        514.66,
+        224.98,
+        514.66,
+        255.07,
+        106.86,
+        255.07
+      ],
+      "text": "संभाग में माह :............ की सििर्ति मैं अनुबंध की-कंडिका 3 (सी) के कुल लंबित प्रकरणों का Ree\nमण्डल ."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        333.08,
+        794.3,
+        352.97,
+        794.3,
+        352.97,
+        810.63,
+        333.08,
+        810.63
+      ],
+      "text": "श2"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

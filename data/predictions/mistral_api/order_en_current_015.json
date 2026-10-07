@@ -1,0 +1,234 @@
+{
+  "doc_id": "order_en_current_015",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        38.79,
+        25.64,
+        514.95,
+        25.64,
+        514.95,
+        212.57,
+        38.79,
+        212.57
+      ],
+      "html": "<table><thead><tr><td>Sl. No.</td><td>Type of Posting</td><td>(i) Level/Pay Scale (ii) Designation</td><td>Ministry Department Office Place</td><td>Field of experience acquired during the posting (Major &amp; Minor)</td><td>Tenure From &amp; Tenure To</td></tr></thead><tbody><tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        41.26,
+        226.63,
+        298.74,
+        226.63,
+        298.74,
+        246.48,
+        41.26,
+        246.48
+      ],
+      "text": "The information furnished above by me is correct."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        469.56,
+        261.37,
+        533.93,
+        261.37,
+        533.93,
+        276.26,
+        469.56,
+        276.26
+      ],
+      "text": "(Signature)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        154.32,
+        304.38,
+        416.75,
+        304.38,
+        416.75,
+        325.06,
+        154.32,
+        325.06
+      ],
+      "text": "To be filled by the Cadre Controlling Authority."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        37.96,
+        321.75,
+        532.28,
+        321.75,
+        532.28,
+        354.0,
+        37.96,
+        354.0
+      ],
+      "text": "(This should be filled by the competent authority of State Govt. / Cadre Controlling Authority as prescribed in the letter)"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        36.31,
+        377.16,
+        400.24,
+        377.16,
+        400.24,
+        400.32,
+        36.31,
+        400.32
+      ],
+      "text": "It is certified that the above information given is correct as per record."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        251.7,
+        421.83,
+        308.64,
+        421.83,
+        308.64,
+        436.72,
+        251.7,
+        436.72
+      ],
+      "text": "Signature:"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        250.87,
+        461.53,
+        288.01,
+        461.53,
+        288.01,
+        476.42,
+        250.87,
+        476.42
+      ],
+      "text": "Name:"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        249.22,
+        502.06,
+        318.54,
+        502.06,
+        318.54,
+        517.77,
+        249.22,
+        517.77
+      ],
+      "text": "Designation:"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        32.18,
+        557.47,
+        228.59,
+        557.47,
+        228.59,
+        574.84,
+        32.18,
+        574.84
+      ],
+      "text": "48. Vigilance Experience Details"
+    },
+    {
+      "id": 10,
+      "type": "table",
+      "order": 10,
+      "poly": [
+        23.93,
+        594.69,
+        511.65,
+        594.69,
+        511.65,
+        716.28,
+        23.93,
+        716.28
+      ],
+      "html": "<table><thead><tr><td>S.No.</td><td>Type of Posting (Cadre/Centre)</td><td>Level/Pay scale Designation</td><td>Ministry Department Office Place</td><td>Details of Experience in vigilance/disciplinary matters</td><td>Tenure from Tenure to</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        28.06,
+        727.86,
+        285.53,
+        727.86,
+        285.53,
+        746.06,
+        28.06,
+        746.06
+      ],
+      "text": "The information furnished above by me is correct."
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        455.53,
+        808.92,
+        519.9,
+        808.92,
+        519.9,
+        824.63,
+        455.53,
+        824.63
+      ],
+      "text": "(Signature)"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

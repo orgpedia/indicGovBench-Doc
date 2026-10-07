@@ -1,0 +1,206 @@
+{
+  "doc_id": "order_en_archive_030",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        321.3,
+        16.84,
+        446.25,
+        16.84,
+        446.25,
+        50.52,
+        321.3,
+        50.52
+      ],
+      "text": "MOST IMMEDIATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        166.6,
+        50.52,
+        446.25,
+        50.52,
+        446.25,
+        101.04,
+        166.6,
+        101.04
+      ],
+      "text": "GOVERNMENT OF INDIA(SHARAD SARKAR)\nCABINET SECRETARIAT(NARYALHARDAL SACHIVALAYA)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        166.6,
+        101.04,
+        446.25,
+        101.04,
+        446.25,
+        151.56,
+        166.6,
+        151.56
+      ],
+      "text": "New Delhi, 14 January, 1980.\n24 Pausa, 1901(S)."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        166.6,
+        151.56,
+        446.25,
+        151.56,
+        446.25,
+        185.24,
+        166.6,
+        185.24
+      ],
+      "text": "Subject:- Swearing-in ceremony -"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        166.6,
+        185.24,
+        446.25,
+        185.24,
+        446.25,
+        269.44,
+        166.6,
+        269.44
+      ],
+      "text": "The undersigned is directed to say that the\nCouncil of Ministers as shown in Annexure 'A' have\ntheir respective offices with effect from\nthe forenoon of 14th January, 1980."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        166.6,
+        269.44,
+        446.25,
+        269.44,
+        446.25,
+        353.64,
+        166.6,
+        353.64
+      ],
+      "text": "2. Smt. Indira Gandhi has been sworn-in as the\nPrime Minister by the President at 10-45 A.M. today,\n14th January, 1980, in the Rashtrapati Bhavan. Other\nMinisters sworn-in by the President at 10-45 A.M. today,\n14th January, 1980 are shown at Annexure 'B'."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        166.6,
+        353.64,
+        446.25,
+        353.64,
+        446.25,
+        421.0,
+        166.6,
+        421.0
+      ],
+      "text": "3. Ministry of Home Affairs may kindly take\nsuch action as may be considered necessary regarding\nIssue of Gazette Notifications, etc."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        166.6,
+        421.0,
+        446.25,
+        421.0,
+        446.25,
+        471.52,
+        166.6,
+        471.52
+      ],
+      "text": "(S. Iyengar)\nDeputy Secretary to the Cabinet."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        166.6,
+        471.52,
+        446.25,
+        471.52,
+        446.25,
+        522.04,
+        166.6,
+        522.04
+      ],
+      "text": "To\n\nMinistry of Home Affairs\n(Shri B.G. Deshmukh - Additional Secretary)"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        166.6,
+        522.04,
+        446.25,
+        522.04,
+        446.25,
+        589.4,
+        166.6,
+        589.4
+      ],
+      "text": "Copy forwarded for information to:-\n(i) Lok Sabha Secretariat\n (Shri A.S. Aithy - Secretary)\n(ii) Rajya Sabha Secretariat\n (Shri S.S. Shaloram - Secretary-General)"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        166.6,
+        589.4,
+        446.25,
+        589.4,
+        446.25,
+        639.92,
+        166.6,
+        639.92
+      ],
+      "text": "(S. Iyengar)\nDeputy Secretary to the Cabinet."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 845,
+      "total": 2770
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.00492,
+      "batch": 0.00246
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.492,
+      "batch": 0.246,
+      "savings": 0.246,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

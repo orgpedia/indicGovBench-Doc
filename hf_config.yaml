@@ -1,0 +1,22 @@
+# Hugging Face Dataset Configuration for indicGovBench-Doc
+# Mirrors the robust dataset sync contract from mahgetNewGRs
+
+hf:
+  dataset_repo_id: Orgpedia/indicGovBench-Doc
+  dataset_repo_url: https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc
+  local_lfs_root: LFS/indicGovBench-Doc
+  upload_large_folder_mode: auto
+  upload_large_folder_threshold: 100
+  targets:
+    - name: pdfs
+      local_relpath: pdfs
+      remote_prefix: pdfs
+      symlink_source: data/pdfs
+    - name: images
+      local_relpath: images
+      remote_prefix: images
+      symlink_source: data/images
+    - name: raw_responses
+      local_relpath: raw_responses
+      remote_prefix: raw_responses
+      symlink_source: data/raw_responses

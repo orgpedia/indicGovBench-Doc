@@ -1,0 +1,65 @@
+{
+  "doc_id": "order_en_archive_027",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        210.63,
+        35.36,
+        496.82,
+        35.36,
+        496.82,
+        65.68,
+        210.63,
+        65.68
+      ],
+      "html": "<table><thead></thead><tbody></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        88.06,
+        67.36,
+        583.1,
+        67.36,
+        583.1,
+        484.99,
+        88.06,
+        484.99
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>No.</td><td>Name of Minister</td><td>Portfolio (Cabinet)</td><td>Date of appointment.</td></tr><tr><td>1.</td><td>Shri Jawaharlal Nehru</td><td>Prime MinisterMinister of External Affairs,Commonwealth Relations andScientific Research.</td><td>15-8-47</td></tr><tr><td>2.</td><td>Sardar Vallabhhai Patel.</td><td>Deputy Prime MinisterMinister, Home, Information &amp; Broadcasting and States.</td><td>-do-</td></tr><tr><td>3.</td><td>Dr. Rajendra Prasad.</td><td>Food &amp; Agriculture.</td><td>-do-</td></tr><tr><td>4.</td><td>Mulana Abul Kalam Amed.</td><td>Education.</td><td>-do-</td></tr><tr><td>5.</td><td>Dr. John Matthal. √</td><td>Transport.</td><td>-do-</td></tr><tr><td>6.</td><td>Sardar Baldev Singh. √</td><td>Defence.</td><td>-do-</td></tr><tr><td>7.</td><td>Shri Jaglivan Ram.</td><td>Labour.</td><td>-do-</td></tr><tr><td>8.</td><td>Dr. C.H. Bhabha. √</td><td>Commerce.</td><td>-do-</td></tr><tr><td>9.</td><td>Shri Rafi Ahmed Kidwai.</td><td>Communications.</td><td>-do-</td></tr><tr><td>10.</td><td>Rajkumari Amrit Kaur. √</td><td>Health.</td><td>-do-</td></tr><tr><td>11.</td><td>Dr. B.R. Ambedkar. √</td><td>Law.</td><td>-do-</td></tr><tr><td>12.</td><td>Shri R.K. Shanmukham Chetty.</td><td>Finance.</td><td>-do-</td></tr><tr><td>13.</td><td>Dr. Shyama Pd. Mukherjee. √</td><td>Industry &amp; Supply.</td><td>-do-</td></tr><tr><td>14.</td><td>Shri N.V. Gadgil. √</td><td>Works, Mines &amp; Power.</td><td>-do-</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1808,
+      "output": 663,
+      "total": 2471
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.13
+    },
+    "native_costs": {
+      "realtime": 0.003758,
+      "batch": 0.001879
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.375822,
+      "batch": 0.187911,
+      "savings": 0.187911,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

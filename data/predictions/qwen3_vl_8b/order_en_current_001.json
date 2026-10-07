@@ -1,0 +1,145 @@
+{
+  "doc_id": "order_en_current_001",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        37.48,
+        31.15,
+        198.14,
+        31.15,
+        198.14,
+        93.46,
+        37.48,
+        93.46
+      ],
+      "text": "कुलाधिपति\nडॉ. भीमराव अम्बेडकर विश्वविद्यालय, आगरा\nCHANCELLOR\nDR. BHIMRAO AMBEDKAR UNIVERSITY\nAGRA"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        453.39,
+        37.05,
+        572.99,
+        37.05,
+        572.99,
+        65.68,
+        453.39,
+        65.68
+      ],
+      "text": "राजभवन, लखनऊ\nRAJ BHAWAN, LUCKNOW"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        432.56,
+        86.73,
+        572.99,
+        86.73,
+        572.99,
+        97.67,
+        432.56,
+        97.67
+      ],
+      "text": "Dated...................20.................."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        117.22,
+        148.19,
+        547.4,
+        148.19,
+        547.4,
+        168.4,
+        117.22,
+        168.4
+      ],
+      "text": "No. E- 4388 /G.S. Dated: May 11/06/, 2013"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        305.24,
+        175.98,
+        362.95,
+        175.98,
+        362.95,
+        190.29,
+        305.24,
+        190.29
+      ],
+      "text": "ORDER"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        117.22,
+        220.6,
+        549.19,
+        220.6,
+        549.19,
+        397.42,
+        117.22,
+        397.42
+      ],
+      "text": "1. The applicant Dr. Nirmal Agarwal, Reader, Kishori Raman Girls P.G. College, Mathura, has moved her representation dated 30.03.2012 and the rejoinder representation dated 04.07.2012 u/s 68 of the UP State Universities Act, 1973 (in short the 'Act') against the order dated 03.03.2012 issued by the Registrar of Dr. Bhim Rao Ambedkar University, Agra (in short the 'University') in compliance with the decision dated 29.02.2012 of the Vice-Chancellor of the University whereby the applicant named above was debarred from the examinership of the University for the next ten years."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        117.22,
+        401.63,
+        549.19,
+        401.63,
+        549.19,
+        758.64,
+        117.22,
+        758.64
+      ],
+      "text": "2. The common facts emerging from the aforesaid representations of the applicant Dr. Nirmal Agarwal and the comments dated 22.01.2013 and 06.05.2013 submitted thereon by the Registrar and the Vice-Chancellor of the University are that the applicant Dr. Nirmal Agarwal and two other Lecturers namely Dr. Nagendra Kumar and Dr. Raj Kumar Singh were appointed as external examiners for the B.Ed. Examination for the academic session 2010-11 of the Excellent Degree College, Fatehpur Sikri Road, Laramada, Agra, affiliated to the University. Total 150 marks were allocated for evaluation of the examinees by the three external examiners named above and none of the examinees had failed in the external examination. Total 25 examinees had failed in internal examination. An external examiner does not have any role in the matter of internal examination of the examinees. Some of the failed examinees made complaints to the University by alleging therein that the said external examiners, acting in collusion with the College administration, declared certain examinees failed as they did not fulfill the demand of illicit money of the College administration and of the said external examiners, some of the examinees were shown absent despite being"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 10806,
+      "output": 888,
+      "total": 11694
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.42
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_mr_current_048",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        166.6,
+        67.36,
+        595.0,
+        67.36,
+        595.0,
+        842.0,
+        166.6,
+        842.0
+      ],
+      "html": "<table><thead><tr><td>번호</td><td>성명</td><td>직급</td><td>주요 경력</td></tr></thead><tbody><tr><td>1</td><td>이순신</td><td>대장</td><td>해전 승리, 임진왜란 격퇴</td></tr><tr><td>2</td><td>을지문덕</td><td>장군</td><td>살수대첩 승리</td></tr><tr><td>3</td><td>강감찬</td><td>장군</td><td>귀주대첩 승리</td></tr><tr><td>4</td><td>김유신</td><td>장군</td><td>삼국통일 전쟁</td></tr><tr><td>5</td><td>계백</td><td>장군</td><td>황산벌 전투</td></tr><tr><td>6</td><td>서희</td><td>외교관</td><td>거란의 서희 담판</td></tr><tr><td>7</td><td>정몽주</td><td>학자</td><td>고려 충신</td></tr><tr><td>8</td><td>세종대왕</td><td>왕</td><td>한글 창제, 과학 발전</td></tr><tr><td>9</td><td>장보고</td><td>장군</td><td>해상 무역 활동</td></tr><tr><td>10</td><td>신사임당</td><td>예술가</td><td>회화, 자수 예술</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        166.6,
+        67.36,
+        595.0,
+        67.36,
+        595.0,
+        168.4,
+        166.6,
+        168.4
+      ],
+      "text": "한국 역사 인물 목록"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 554,
+      "total": 2479
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003756,
+      "batch": 0.001878
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3756,
+      "batch": 0.1878,
+      "savings": 0.1878,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

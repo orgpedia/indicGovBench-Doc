@@ -1,0 +1,6701 @@
+{
+  "doc_id": "order_en_current_048",
+  "total_words": 345,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "!img-0.jpeg",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "!img-0.jpeg",
+          "gcv_text": "सतर्कता",
+          "page_no": 1,
+          "bbox": {
+            "l": 469.09,
+            "t": 794.96,
+            "r": 505.23,
+            "b": 782.45
+          },
+          "crop_bbox": {
+            "l": 465.09,
+            "t": 798.96,
+            "r": 509.23,
+            "b": 778.45
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "Telegraphic Address :\n\"SATARKTA: New Delhi",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Telegraphic",
+          "gcv_text": "Telegraphic",
+          "page_no": 1,
+          "bbox": {
+            "l": 55.23,
+            "t": 790.0,
+            "r": 105.23,
+            "b": 781.46
+          },
+          "crop_bbox": {
+            "l": 51.23,
+            "t": 794.0,
+            "r": 109.23,
+            "b": 777.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Address",
+          "gcv_text": "Address",
+          "page_no": 1,
+          "bbox": {
+            "l": 107.95,
+            "t": 789.8,
+            "r": 143.41,
+            "b": 781.26
+          },
+          "crop_bbox": {
+            "l": 103.95,
+            "t": 793.8,
+            "r": 147.41,
+            "b": 777.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": ":",
+          "gcv_text": ":",
+          "page_no": 1,
+          "bbox": {
+            "l": 145.68,
+            "t": 789.4,
+            "r": 148.86,
+            "b": 781.26
+          },
+          "crop_bbox": {
+            "l": 141.68,
+            "t": 793.4,
+            "r": 152.86,
+            "b": 777.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "\"SATARKTA:",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 52.03,
+            "t": 792.37,
+            "r": 167.43,
+            "b": 769.21
+          },
+          "crop_bbox": {
+            "l": 46.26,
+            "t": 796.37,
+            "r": 173.2,
+            "b": 765.21
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "New",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 52.03,
+            "t": 792.37,
+            "r": 167.43,
+            "b": 769.21
+          },
+          "crop_bbox": {
+            "l": 46.26,
+            "t": 796.37,
+            "r": 173.2,
+            "b": 765.21
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "Delhi",
+          "gcv_text": "Delhi",
+          "page_no": 1,
+          "bbox": {
+            "l": 142.73,
+            "t": 778.68,
+            "r": 166.59,
+            "b": 771.34
+          },
+          "crop_bbox": {
+            "l": 138.73,
+            "t": 782.68,
+            "r": 170.59,
+            "b": 767.34
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "E-Mail Address\ncenvigil@nic.in",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "E-Mail",
+          "gcv_text": "\"",
+          "page_no": 1,
+          "bbox": {
+            "l": 54.77,
+            "t": 779.28,
+            "r": 59.77,
+            "b": 772.13
+          },
+          "crop_bbox": {
+            "l": 50.77,
+            "t": 783.28,
+            "r": 63.77,
+            "b": 768.13
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Address",
+          "gcv_text": "Address",
+          "page_no": 1,
+          "bbox": {
+            "l": 87.73,
+            "t": 763.0,
+            "r": 122.95,
+            "b": 755.46
+          },
+          "crop_bbox": {
+            "l": 83.73,
+            "t": 767.0,
+            "r": 126.95,
+            "b": 751.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "cenvigil@nic.in",
+          "gcv_text": "cenvigil@nic.in",
+          "page_no": 1,
+          "bbox": {
+            "l": 54.77,
+            "t": 753.08,
+            "r": 123.18,
+            "b": 743.95
+          },
+          "crop_bbox": {
+            "l": 50.77,
+            "t": 757.08,
+            "r": 127.18,
+            "b": 739.95
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "सत्यमेव जयते",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "सत्यमेव",
+          "gcv_text": "सत्यमेव",
+          "page_no": 1,
+          "bbox": {
+            "l": 286.59,
+            "t": 752.48,
+            "r": 310.45,
+            "b": 744.54
+          },
+          "crop_bbox": {
+            "l": 282.59,
+            "t": 756.48,
+            "r": 314.45,
+            "b": 740.54
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "जयते",
+          "gcv_text": "जयते",
+          "page_no": 1,
+          "bbox": {
+            "l": 313.41,
+            "t": 752.08,
+            "r": 331.36,
+            "b": 744.34
+          },
+          "crop_bbox": {
+            "l": 309.41,
+            "t": 756.08,
+            "r": 335.36,
+            "b": 740.34
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "Website\nwww.evc.nic.in",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Website",
+          "gcv_text": "Website",
+          "page_no": 1,
+          "bbox": {
+            "l": 55.0,
+            "t": 735.61,
+            "r": 89.55,
+            "b": 728.46
+          },
+          "crop_bbox": {
+            "l": 51.0,
+            "t": 739.61,
+            "r": 93.55,
+            "b": 724.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "www.evc.nic.in",
+          "gcv_text": "www.cvc.nic.in",
+          "page_no": 1,
+          "bbox": {
+            "l": 54.77,
+            "t": 724.49,
+            "r": 122.05,
+            "b": 718.14
+          },
+          "crop_bbox": {
+            "l": 50.77,
+            "t": 728.49,
+            "r": 126.05,
+            "b": 714.14
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "केन्द्रीय सतर्कता आयोग\nCENTRAL VIGILANCE COMMISSION",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "केन्द्रीय",
+          "gcv_text": "केन्द्रीय",
+          "page_no": 1,
+          "bbox": {
+            "l": 235.45,
+            "t": 732.43,
+            "r": 278.41,
+            "b": 719.13
+          },
+          "crop_bbox": {
+            "l": 231.45,
+            "t": 736.43,
+            "r": 282.41,
+            "b": 715.13
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "सतर्कता",
+          "gcv_text": "सतर्कता",
+          "page_no": 1,
+          "bbox": {
+            "l": 284.77,
+            "t": 731.84,
+            "r": 335.68,
+            "b": 718.54
+          },
+          "crop_bbox": {
+            "l": 280.77,
+            "t": 735.84,
+            "r": 339.68,
+            "b": 714.54
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "आयोग",
+          "gcv_text": "आयोग",
+          "page_no": 1,
+          "bbox": {
+            "l": 340.68,
+            "t": 731.24,
+            "r": 383.18,
+            "b": 718.14
+          },
+          "crop_bbox": {
+            "l": 336.68,
+            "t": 735.24,
+            "r": 387.18,
+            "b": 714.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "CENTRAL",
+          "gcv_text": "CENTRAL",
+          "page_no": 1,
+          "bbox": {
+            "l": 216.82,
+            "t": 717.74,
+            "r": 267.05,
+            "b": 705.83
+          },
+          "crop_bbox": {
+            "l": 212.82,
+            "t": 721.74,
+            "r": 271.05,
+            "b": 701.83
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "VIGILANCE",
+          "gcv_text": "VIGILANCE",
+          "page_no": 1,
+          "bbox": {
+            "l": 268.18,
+            "t": 718.14,
+            "r": 328.86,
+            "b": 706.23
+          },
+          "crop_bbox": {
+            "l": 264.18,
+            "t": 722.14,
+            "r": 332.86,
+            "b": 702.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "COMMISSION",
+          "gcv_text": "COMMISSION",
+          "page_no": 1,
+          "bbox": {
+            "l": 332.73,
+            "t": 718.54,
+            "r": 401.82,
+            "b": 706.63
+          },
+          "crop_bbox": {
+            "l": 328.73,
+            "t": 722.54,
+            "r": 405.82,
+            "b": 702.63
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "सतर्कता भवन, जी.पी.ओ. कॉम्प्लेक्स,\nब्लॉक-ए, आई.एन.ए., नई दिल्ली-110023\nSatarkta Bhawan, G.P.O. Complex,\nBlock A, INA, New Delhi-110023",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "सतर्कता",
+          "gcv_text": "सतर्कता",
+          "page_no": 1,
+          "bbox": {
+            "l": 407.73,
+            "t": 718.74,
+            "r": 436.82,
+            "b": 707.03
+          },
+          "crop_bbox": {
+            "l": 403.73,
+            "t": 722.74,
+            "r": 440.82,
+            "b": 703.03
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "भवन,",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 427.5,
+            "t": 707.22,
+            "r": 433.64,
+            "b": 697.9
+          },
+          "crop_bbox": {
+            "l": 423.5,
+            "t": 711.22,
+            "r": 437.64,
+            "b": 693.9
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "जी.पी.ओ.",
+          "gcv_text": "जी.पी.ओ.",
+          "page_no": 1,
+          "bbox": {
+            "l": 464.77,
+            "t": 719.13,
+            "r": 497.05,
+            "b": 707.42
+          },
+          "crop_bbox": {
+            "l": 460.77,
+            "t": 723.13,
+            "r": 501.05,
+            "b": 703.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "कॉम्प्लेक्स,",
+          "gcv_text": "कॉम्पलैक्स",
+          "page_no": 1,
+          "bbox": {
+            "l": 501.14,
+            "t": 719.33,
+            "r": 538.86,
+            "b": 707.82
+          },
+          "crop_bbox": {
+            "l": 497.14,
+            "t": 723.33,
+            "r": 542.86,
+            "b": 703.82
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "ब्लॉक-ए,",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 537.95,
+            "t": 719.33,
+            "r": 540.45,
+            "b": 708.02
+          },
+          "crop_bbox": {
+            "l": 533.95,
+            "t": 723.33,
+            "r": 544.45,
+            "b": 704.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "आई.एन.ए.,",
+          "gcv_text": "Satarkta",
+          "page_no": 1,
+          "bbox": {
+            "l": 407.5,
+            "t": 694.72,
+            "r": 441.14,
+            "b": 685.59
+          },
+          "crop_bbox": {
+            "l": 403.5,
+            "t": 698.72,
+            "r": 445.14,
+            "b": 681.59
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "नई",
+          "gcv_text": "नई",
+          "page_no": 1,
+          "bbox": {
+            "l": 490.0,
+            "t": 706.03,
+            "r": 502.05,
+            "b": 696.51
+          },
+          "crop_bbox": {
+            "l": 486.0,
+            "t": 710.03,
+            "r": 506.05,
+            "b": 692.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "दिल्ली-110023",
+          "gcv_text": "दिल्ली",
+          "page_no": 1,
+          "bbox": {
+            "l": 505.68,
+            "t": 705.64,
+            "r": 528.41,
+            "b": 696.11
+          },
+          "crop_bbox": {
+            "l": 501.68,
+            "t": 709.64,
+            "r": 532.41,
+            "b": 692.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "Satarkta",
+          "gcv_text": "-110023",
+          "page_no": 1,
+          "bbox": {
+            "l": 528.64,
+            "t": 705.24,
+            "r": 562.05,
+            "b": 695.31
+          },
+          "crop_bbox": {
+            "l": 524.64,
+            "t": 709.24,
+            "r": 566.05,
+            "b": 691.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Bhawan,",
+          "gcv_text": "Block",
+          "page_no": 1,
+          "bbox": {
+            "l": 407.27,
+            "t": 683.01,
+            "r": 432.5,
+            "b": 675.47
+          },
+          "crop_bbox": {
+            "l": 403.27,
+            "t": 687.01,
+            "r": 436.5,
+            "b": 671.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "G.P.O.",
+          "gcv_text": "G.P.O.",
+          "page_no": 1,
+          "bbox": {
+            "l": 481.82,
+            "t": 693.13,
+            "r": 508.18,
+            "b": 684.0
+          },
+          "crop_bbox": {
+            "l": 477.82,
+            "t": 697.13,
+            "r": 512.18,
+            "b": 680.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "Complex,",
+          "gcv_text": "Delhi",
+          "page_no": 1,
+          "bbox": {
+            "l": 490.91,
+            "t": 682.02,
+            "r": 513.86,
+            "b": 674.47
+          },
+          "crop_bbox": {
+            "l": 486.91,
+            "t": 686.02,
+            "r": 517.86,
+            "b": 670.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "Block",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 514.09,
+            "t": 681.62,
+            "r": 517.5,
+            "b": 674.47
+          },
+          "crop_bbox": {
+            "l": 510.09,
+            "t": 685.62,
+            "r": 521.5,
+            "b": 670.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "A,",
+          "gcv_text": "Complex",
+          "page_no": 1,
+          "bbox": {
+            "l": 511.14,
+            "t": 692.54,
+            "r": 547.95,
+            "b": 683.41
+          },
+          "crop_bbox": {
+            "l": 507.14,
+            "t": 696.54,
+            "r": 551.95,
+            "b": 679.41
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "INA,",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 548.41,
+            "t": 691.74,
+            "r": 550.68,
+            "b": 683.41
+          },
+          "crop_bbox": {
+            "l": 544.41,
+            "t": 695.74,
+            "r": 554.68,
+            "b": 679.41
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "New",
+          "gcv_text": "110023",
+          "page_no": 1,
+          "bbox": {
+            "l": 517.95,
+            "t": 681.62,
+            "r": 546.82,
+            "b": 673.88
+          },
+          "crop_bbox": {
+            "l": 513.95,
+            "t": 685.62,
+            "r": 550.82,
+            "b": 669.88
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "Delhi-110023",
+          "gcv_text": "./No",
+          "page_no": 1,
+          "bbox": {
+            "l": 412.5,
+            "t": 665.94,
+            "r": 437.95,
+            "b": 656.61
+          },
+          "crop_bbox": {
+            "l": 408.5,
+            "t": 669.94,
+            "r": 441.95,
+            "b": 652.61
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "EPABX\n24600200",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "EPABX",
+          "gcv_text": "EPABX",
+          "page_no": 1,
+          "bbox": {
+            "l": 54.77,
+            "t": 710.8,
+            "r": 88.41,
+            "b": 703.65
+          },
+          "crop_bbox": {
+            "l": 50.77,
+            "t": 714.8,
+            "r": 92.41,
+            "b": 699.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "24600200",
+          "gcv_text": "24600200",
+          "page_no": 1,
+          "bbox": {
+            "l": 54.55,
+            "t": 700.28,
+            "r": 97.5,
+            "b": 693.33
+          },
+          "crop_bbox": {
+            "l": 50.55,
+            "t": 704.28,
+            "r": 101.5,
+            "b": 689.33
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
+      "label": "paragraph",
+      "full_gt_text": "फैक्स / Fax : 24651186",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "फैक्स",
+          "gcv_text": "24600200",
+          "page_no": 1,
+          "bbox": {
+            "l": 54.55,
+            "t": 700.28,
+            "r": 97.5,
+            "b": 693.33
+          },
+          "crop_bbox": {
+            "l": 50.55,
+            "t": 704.28,
+            "r": 101.5,
+            "b": 689.33
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "/",
+          "gcv_text": "/",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.82,
+            "t": 684.2,
+            "r": 84.09,
+            "b": 676.06
+          },
+          "crop_bbox": {
+            "l": 72.82,
+            "t": 688.2,
+            "r": 88.09,
+            "b": 672.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Fax",
+          "gcv_text": "Fax",
+          "page_no": 1,
+          "bbox": {
+            "l": 84.32,
+            "t": 684.2,
+            "r": 101.82,
+            "b": 675.86
+          },
+          "crop_bbox": {
+            "l": 80.32,
+            "t": 688.2,
+            "r": 105.82,
+            "b": 671.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": ":",
+          "gcv_text": ":",
+          "page_no": 1,
+          "bbox": {
+            "l": 102.95,
+            "t": 683.8,
+            "r": 107.05,
+            "b": 675.86
+          },
+          "crop_bbox": {
+            "l": 98.95,
+            "t": 687.8,
+            "r": 111.05,
+            "b": 671.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "24651186",
+          "gcv_text": "24651186",
+          "page_no": 1,
+          "bbox": {
+            "l": 108.64,
+            "t": 683.8,
+            "r": 152.05,
+            "b": 674.87
+          },
+          "crop_bbox": {
+            "l": 104.64,
+            "t": 687.8,
+            "r": 156.05,
+            "b": 670.87
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "सं./No. No. 021-AIS-6(7)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "सं./No.",
+          "gcv_text": "Block",
+          "page_no": 1,
+          "bbox": {
+            "l": 407.27,
+            "t": 683.01,
+            "r": 432.5,
+            "b": 675.47
+          },
+          "crop_bbox": {
+            "l": 403.27,
+            "t": 687.01,
+            "r": 436.5,
+            "b": 671.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "No.",
+          "gcv_text": "No.",
+          "page_no": 1,
+          "bbox": {
+            "l": 457.05,
+            "t": 666.73,
+            "r": 472.05,
+            "b": 657.8
+          },
+          "crop_bbox": {
+            "l": 453.05,
+            "t": 670.73,
+            "r": 476.05,
+            "b": 653.8
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "021-AIS-6(7)",
+          "gcv_text": "021",
+          "page_no": 1,
+          "bbox": {
+            "l": 473.64,
+            "t": 667.13,
+            "r": 490.23,
+            "b": 658.2
+          },
+          "crop_bbox": {
+            "l": 469.64,
+            "t": 671.13,
+            "r": 494.23,
+            "b": 654.2
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/10": {
+      "self_ref": "#/texts/10",
+      "label": "paragraph",
+      "full_gt_text": "दिनांक / Dated. 16-03-2022",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "दिनांक",
+          "gcv_text": "./No",
+          "page_no": 1,
+          "bbox": {
+            "l": 412.5,
+            "t": 665.94,
+            "r": 437.95,
+            "b": 656.61
+          },
+          "crop_bbox": {
+            "l": 408.5,
+            "t": 669.94,
+            "r": 441.95,
+            "b": 652.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "/",
+          "gcv_text": "/",
+          "page_no": 1,
+          "bbox": {
+            "l": 436.59,
+            "t": 645.89,
+            "r": 443.64,
+            "b": 637.55
+          },
+          "crop_bbox": {
+            "l": 432.59,
+            "t": 649.89,
+            "r": 447.64,
+            "b": 633.55
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Dated.",
+          "gcv_text": "Dated..16-03-2022",
+          "page_no": 1,
+          "bbox": {
+            "l": 448.18,
+            "t": 645.69,
+            "r": 525.91,
+            "b": 636.16
+          },
+          "crop_bbox": {
+            "l": 444.18,
+            "t": 649.69,
+            "r": 529.91,
+            "b": 632.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "16-03-2022",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 526.59,
+            "t": 644.7,
+            "r": 528.86,
+            "b": 636.36
+          },
+          "crop_bbox": {
+            "l": 522.59,
+            "t": 648.7,
+            "r": 532.86,
+            "b": 632.36
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/11": {
+      "self_ref": "#/texts/11",
+      "label": "paragraph",
+      "full_gt_text": "OFFICE MEMORANDUM",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "OFFICE",
+          "gcv_text": "OFFICE",
+          "page_no": 1,
+          "bbox": {
+            "l": 262.27,
+            "t": 612.74,
+            "r": 292.05,
+            "b": 606.59
+          },
+          "crop_bbox": {
+            "l": 258.27,
+            "t": 616.74,
+            "r": 296.05,
+            "b": 602.59
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "MEMORANDUM",
+          "gcv_text": "MEMORANDUM",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.77,
+            "t": 612.74,
+            "r": 363.18,
+            "b": 606.59
+          },
+          "crop_bbox": {
+            "l": 290.77,
+            "t": 616.74,
+            "r": 367.18,
+            "b": 602.59
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "***",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "***",
+          "gcv_text": "*****",
+          "page_no": 1,
+          "bbox": {
+            "l": 300.45,
+            "t": 591.11,
+            "r": 325.0,
+            "b": 587.14
+          },
+          "crop_bbox": {
+            "l": 296.45,
+            "t": 595.11,
+            "r": 329.0,
+            "b": 583.14
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/13": {
+      "self_ref": "#/texts/13",
+      "label": "paragraph",
+      "full_gt_text": "Subject:- Confirmation on timely submission of Annual Immovable Property Return (AIPR) in the proposals seeking input of the Commission on vigilance status of officers for empanelment- reg.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Subject:-",
+          "gcv_text": "*****",
+          "page_no": 1,
+          "bbox": {
+            "l": 300.45,
+            "t": 591.11,
+            "r": 325.0,
+            "b": 587.14
+          },
+          "crop_bbox": {
+            "l": 296.45,
+            "t": 595.11,
+            "r": 329.0,
+            "b": 583.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Confirmation",
+          "gcv_text": "Confirmation",
+          "page_no": 1,
+          "bbox": {
+            "l": 142.5,
+            "t": 579.99,
+            "r": 198.18,
+            "b": 571.46
+          },
+          "crop_bbox": {
+            "l": 138.5,
+            "t": 583.99,
+            "r": 202.18,
+            "b": 567.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 201.59,
+            "t": 579.79,
+            "r": 211.82,
+            "b": 571.65
+          },
+          "crop_bbox": {
+            "l": 197.59,
+            "t": 583.79,
+            "r": 215.82,
+            "b": 567.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "timely",
+          "gcv_text": "timely",
+          "page_no": 1,
+          "bbox": {
+            "l": 214.55,
+            "t": 579.79,
+            "r": 242.27,
+            "b": 571.46
+          },
+          "crop_bbox": {
+            "l": 210.55,
+            "t": 583.79,
+            "r": 246.27,
+            "b": 567.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "submission",
+          "gcv_text": "submission",
+          "page_no": 1,
+          "bbox": {
+            "l": 244.32,
+            "t": 579.59,
+            "r": 291.36,
+            "b": 571.26
+          },
+          "crop_bbox": {
+            "l": 240.32,
+            "t": 583.59,
+            "r": 295.36,
+            "b": 567.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 296.59,
+            "t": 579.4,
+            "r": 306.59,
+            "b": 571.26
+          },
+          "crop_bbox": {
+            "l": 292.59,
+            "t": 583.4,
+            "r": 310.59,
+            "b": 567.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Annual",
+          "gcv_text": "Annual",
+          "page_no": 1,
+          "bbox": {
+            "l": 310.23,
+            "t": 579.4,
+            "r": 340.23,
+            "b": 570.86
+          },
+          "crop_bbox": {
+            "l": 306.23,
+            "t": 583.4,
+            "r": 344.23,
+            "b": 566.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "Immovable",
+          "gcv_text": "Immovable",
+          "page_no": 1,
+          "bbox": {
+            "l": 346.14,
+            "t": 579.4,
+            "r": 393.64,
+            "b": 570.86
+          },
+          "crop_bbox": {
+            "l": 342.14,
+            "t": 583.4,
+            "r": 397.64,
+            "b": 566.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "Property",
+          "gcv_text": "Property",
+          "page_no": 1,
+          "bbox": {
+            "l": 399.09,
+            "t": 579.2,
+            "r": 436.82,
+            "b": 570.66
+          },
+          "crop_bbox": {
+            "l": 395.09,
+            "t": 583.2,
+            "r": 440.82,
+            "b": 566.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Return",
+          "gcv_text": "Return",
+          "page_no": 1,
+          "bbox": {
+            "l": 441.82,
+            "t": 579.0,
+            "r": 470.0,
+            "b": 570.66
+          },
+          "crop_bbox": {
+            "l": 437.82,
+            "t": 583.0,
+            "r": 474.0,
+            "b": 566.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "(AIPR)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 473.18,
+            "t": 578.8,
+            "r": 475.91,
+            "b": 570.66
+          },
+          "crop_bbox": {
+            "l": 469.18,
+            "t": 582.8,
+            "r": 479.91,
+            "b": 566.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 501.59,
+            "t": 578.6,
+            "r": 509.32,
+            "b": 570.46
+          },
+          "crop_bbox": {
+            "l": 497.59,
+            "t": 582.6,
+            "r": 513.32,
+            "b": 566.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 511.82,
+            "t": 578.6,
+            "r": 525.91,
+            "b": 570.46
+          },
+          "crop_bbox": {
+            "l": 507.82,
+            "t": 582.6,
+            "r": 529.91,
+            "b": 566.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "proposals",
+          "gcv_text": "proposals",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.45,
+            "t": 567.29,
+            "r": 141.82,
+            "b": 558.75
+          },
+          "crop_bbox": {
+            "l": 96.45,
+            "t": 571.29,
+            "r": 145.82,
+            "b": 554.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "seeking",
+          "gcv_text": "seeking",
+          "page_no": 1,
+          "bbox": {
+            "l": 143.41,
+            "t": 567.09,
+            "r": 175.23,
+            "b": 558.55
+          },
+          "crop_bbox": {
+            "l": 139.41,
+            "t": 571.09,
+            "r": 179.23,
+            "b": 554.55
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "input",
+          "gcv_text": "input",
+          "page_no": 1,
+          "bbox": {
+            "l": 177.5,
+            "t": 566.89,
+            "r": 200.0,
+            "b": 558.75
+          },
+          "crop_bbox": {
+            "l": 173.5,
+            "t": 570.89,
+            "r": 204.0,
+            "b": 554.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 202.27,
+            "t": 566.89,
+            "r": 211.82,
+            "b": 558.75
+          },
+          "crop_bbox": {
+            "l": 198.27,
+            "t": 570.89,
+            "r": 215.82,
+            "b": 554.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 212.95,
+            "t": 566.89,
+            "r": 227.05,
+            "b": 558.75
+          },
+          "crop_bbox": {
+            "l": 208.95,
+            "t": 570.89,
+            "r": 231.05,
+            "b": 554.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "Commission",
+          "gcv_text": "Commission",
+          "page_no": 1,
+          "bbox": {
+            "l": 230.0,
+            "t": 566.89,
+            "r": 280.91,
+            "b": 558.36
+          },
+          "crop_bbox": {
+            "l": 226.0,
+            "t": 570.89,
+            "r": 284.91,
+            "b": 554.36
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 283.86,
+            "t": 566.69,
+            "r": 294.55,
+            "b": 558.36
+          },
+          "crop_bbox": {
+            "l": 279.86,
+            "t": 570.69,
+            "r": 298.55,
+            "b": 554.36
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "vigilance",
+          "gcv_text": "vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 296.36,
+            "t": 566.69,
+            "r": 333.18,
+            "b": 558.16
+          },
+          "crop_bbox": {
+            "l": 292.36,
+            "t": 570.69,
+            "r": 337.18,
+            "b": 554.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "status",
+          "gcv_text": "status",
+          "page_no": 1,
+          "bbox": {
+            "l": 335.91,
+            "t": 566.49,
+            "r": 360.91,
+            "b": 558.16
+          },
+          "crop_bbox": {
+            "l": 331.91,
+            "t": 570.49,
+            "r": 364.91,
+            "b": 554.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 363.64,
+            "t": 566.3,
+            "r": 372.95,
+            "b": 558.16
+          },
+          "crop_bbox": {
+            "l": 359.64,
+            "t": 570.3,
+            "r": 376.95,
+            "b": 554.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
+          "gt_text": "officers",
+          "gcv_text": "officers",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.0,
+            "t": 566.3,
+            "r": 406.14,
+            "b": 558.16
+          },
+          "crop_bbox": {
+            "l": 371.0,
+            "t": 570.3,
+            "r": 410.14,
+            "b": 554.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 24,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 408.41,
+            "t": 566.3,
+            "r": 421.14,
+            "b": 557.96
+          },
+          "crop_bbox": {
+            "l": 404.41,
+            "t": 570.3,
+            "r": 425.14,
+            "b": 553.96
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 25,
+          "gt_text": "empanelment-",
+          "gcv_text": "empanelment",
+          "page_no": 1,
+          "bbox": {
+            "l": 422.95,
+            "t": 566.3,
+            "r": 483.64,
+            "b": 557.76
+          },
+          "crop_bbox": {
+            "l": 418.95,
+            "t": 570.3,
+            "r": 487.64,
+            "b": 553.76
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
+          "gt_text": "reg.",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 482.27,
+            "t": 565.9,
+            "r": 488.41,
+            "b": 557.76
+          },
+          "crop_bbox": {
+            "l": 478.27,
+            "t": 569.9,
+            "r": 492.41,
+            "b": 553.76
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "***",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "***",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 283.86,
+            "t": 566.69,
+            "r": 294.55,
+            "b": 558.36
+          },
+          "crop_bbox": {
+            "l": 279.86,
+            "t": 570.69,
+            "r": 298.55,
+            "b": 554.36
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "Department of Personnel & Training's OM No. 11012/11/2007-Estt.A dated 27.09.2011 (copy enclosed) conveys the decision of the Govt of India that members of Central Civil Services/Posts who fail to submit Annual Immovable Property Returns of the relevant year within the prescribed time limit, would be denied vigilance clearance and they will not be considered for empanelment for senior level posts in Government of India. It has inserted sub-para 2(f) which reads as under, in the Department of Personnel & Trainings earlier OM No. 11012/11/2007-Estt.A dated 14.12.2007:",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Department",
+          "gcv_text": "Department",
+          "page_no": 1,
+          "bbox": {
+            "l": 134.32,
+            "t": 524.41,
+            "r": 185.45,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 130.32,
+            "t": 528.41,
+            "r": 189.45,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 190.23,
+            "t": 524.41,
+            "r": 200.45,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 186.23,
+            "t": 528.41,
+            "r": 204.45,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Personnel",
+          "gcv_text": "Personnel",
+          "page_no": 1,
+          "bbox": {
+            "l": 204.32,
+            "t": 524.41,
+            "r": 246.82,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 200.32,
+            "t": 528.41,
+            "r": 250.82,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "&",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 251.36,
+            "t": 524.41,
+            "r": 258.64,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 247.36,
+            "t": 528.41,
+            "r": 262.64,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Training's",
+          "gcv_text": "Training's",
+          "page_no": 1,
+          "bbox": {
+            "l": 263.64,
+            "t": 524.41,
+            "r": 305.0,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 259.64,
+            "t": 528.41,
+            "r": 309.0,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "OM",
+          "gcv_text": "OM",
+          "page_no": 1,
+          "bbox": {
+            "l": 309.32,
+            "t": 524.41,
+            "r": 324.32,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 305.32,
+            "t": 528.41,
+            "r": 328.32,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "No.",
+          "gcv_text": "No.",
+          "page_no": 1,
+          "bbox": {
+            "l": 331.14,
+            "t": 524.41,
+            "r": 345.23,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 327.14,
+            "t": 528.41,
+            "r": 349.23,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "11012/11/2007-Estt.A",
+          "gcv_text": "11012",
+          "page_no": 1,
+          "bbox": {
+            "l": 350.45,
+            "t": 524.41,
+            "r": 376.14,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 346.45,
+            "t": 528.41,
+            "r": 380.14,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "dated",
+          "gcv_text": "dated",
+          "page_no": 1,
+          "bbox": {
+            "l": 449.09,
+            "t": 524.41,
+            "r": 473.41,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 445.09,
+            "t": 528.41,
+            "r": 477.41,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "27.09.2011",
+          "gcv_text": "27.09.2011",
+          "page_no": 1,
+          "bbox": {
+            "l": 479.09,
+            "t": 524.41,
+            "r": 526.14,
+            "b": 516.87
+          },
+          "crop_bbox": {
+            "l": 475.09,
+            "t": 528.41,
+            "r": 530.14,
+            "b": 512.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "(copy",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.45,
+            "t": 511.91,
+            "r": 103.41,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 96.45,
+            "t": 515.91,
+            "r": 107.41,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "enclosed)",
+          "gcv_text": "copy",
+          "page_no": 1,
+          "bbox": {
+            "l": 103.41,
+            "t": 511.91,
+            "r": 124.09,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 99.41,
+            "t": 515.91,
+            "r": 128.09,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "conveys",
+          "gcv_text": "conveys",
+          "page_no": 1,
+          "bbox": {
+            "l": 177.05,
+            "t": 511.91,
+            "r": 211.36,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 173.05,
+            "t": 515.91,
+            "r": 215.36,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 217.27,
+            "t": 511.91,
+            "r": 232.05,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 213.27,
+            "t": 515.91,
+            "r": 236.05,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "decision",
+          "gcv_text": "decision",
+          "page_no": 1,
+          "bbox": {
+            "l": 239.09,
+            "t": 511.91,
+            "r": 272.95,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 235.09,
+            "t": 515.91,
+            "r": 276.95,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 280.23,
+            "t": 511.91,
+            "r": 289.77,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 276.23,
+            "t": 515.91,
+            "r": 293.77,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.77,
+            "t": 511.91,
+            "r": 309.32,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 290.77,
+            "t": 515.91,
+            "r": 313.32,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "Govt",
+          "gcv_text": "Govt",
+          "page_no": 1,
+          "bbox": {
+            "l": 315.91,
+            "t": 511.91,
+            "r": 336.36,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 311.91,
+            "t": 515.91,
+            "r": 340.36,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 342.73,
+            "t": 511.91,
+            "r": 352.05,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 338.73,
+            "t": 515.91,
+            "r": 356.05,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "India",
+          "gcv_text": "India",
+          "page_no": 1,
+          "bbox": {
+            "l": 357.5,
+            "t": 511.91,
+            "r": 378.64,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 353.5,
+            "t": 515.91,
+            "r": 382.64,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "that",
+          "gcv_text": "that",
+          "page_no": 1,
+          "bbox": {
+            "l": 385.0,
+            "t": 511.91,
+            "r": 402.95,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 381.0,
+            "t": 515.91,
+            "r": 406.95,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "members",
+          "gcv_text": "members",
+          "page_no": 1,
+          "bbox": {
+            "l": 409.32,
+            "t": 511.91,
+            "r": 450.0,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 405.32,
+            "t": 515.91,
+            "r": 454.0,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 456.14,
+            "t": 511.91,
+            "r": 466.36,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 452.14,
+            "t": 515.91,
+            "r": 470.36,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
+          "gt_text": "Central",
+          "gcv_text": "Central",
+          "page_no": 1,
+          "bbox": {
+            "l": 471.36,
+            "t": 511.91,
+            "r": 502.95,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 467.36,
+            "t": 515.91,
+            "r": 506.95,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 24,
+          "gt_text": "Civil",
+          "gcv_text": "Civil",
+          "page_no": 1,
+          "bbox": {
+            "l": 508.41,
+            "t": 511.91,
+            "r": 526.36,
+            "b": 504.17
+          },
+          "crop_bbox": {
+            "l": 504.41,
+            "t": 515.91,
+            "r": 530.36,
+            "b": 500.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 25,
+          "gt_text": "Services/Posts",
+          "gcv_text": "Services",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.77,
+            "t": 500.2,
+            "r": 134.55,
+            "b": 491.66
+          },
+          "crop_bbox": {
+            "l": 95.77,
+            "t": 504.2,
+            "r": 138.55,
+            "b": 487.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
+          "gt_text": "who",
+          "gcv_text": "who",
+          "page_no": 1,
+          "bbox": {
+            "l": 163.41,
+            "t": 499.8,
+            "r": 182.95,
+            "b": 491.66
+          },
+          "crop_bbox": {
+            "l": 159.41,
+            "t": 503.8,
+            "r": 186.95,
+            "b": 487.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 27,
+          "gt_text": "fail",
+          "gcv_text": "fail",
+          "page_no": 1,
+          "bbox": {
+            "l": 185.91,
+            "t": 499.8,
+            "r": 199.55,
+            "b": 491.66
+          },
+          "crop_bbox": {
+            "l": 181.91,
+            "t": 503.8,
+            "r": 203.55,
+            "b": 487.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 28,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 202.5,
+            "t": 499.8,
+            "r": 211.82,
+            "b": 491.66
+          },
+          "crop_bbox": {
+            "l": 198.5,
+            "t": 503.8,
+            "r": 215.82,
+            "b": 487.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 29,
+          "gt_text": "submit",
+          "gcv_text": "submit",
+          "page_no": 1,
+          "bbox": {
+            "l": 215.0,
+            "t": 499.6,
+            "r": 245.23,
+            "b": 491.27
+          },
+          "crop_bbox": {
+            "l": 211.0,
+            "t": 503.6,
+            "r": 249.23,
+            "b": 487.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 30,
+          "gt_text": "Annual",
+          "gcv_text": "Annual",
+          "page_no": 1,
+          "bbox": {
+            "l": 247.5,
+            "t": 499.6,
+            "r": 277.95,
+            "b": 491.07
+          },
+          "crop_bbox": {
+            "l": 243.5,
+            "t": 503.6,
+            "r": 281.95,
+            "b": 487.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 31,
+          "gt_text": "Immovable",
+          "gcv_text": "Immovable",
+          "page_no": 1,
+          "bbox": {
+            "l": 281.36,
+            "t": 499.6,
+            "r": 328.41,
+            "b": 491.07
+          },
+          "crop_bbox": {
+            "l": 277.36,
+            "t": 503.6,
+            "r": 332.41,
+            "b": 487.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 32,
+          "gt_text": "Property",
+          "gcv_text": "Property",
+          "page_no": 1,
+          "bbox": {
+            "l": 332.05,
+            "t": 499.4,
+            "r": 369.55,
+            "b": 490.87
+          },
+          "crop_bbox": {
+            "l": 328.05,
+            "t": 503.4,
+            "r": 373.55,
+            "b": 486.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 33,
+          "gt_text": "Returns",
+          "gcv_text": "Returns",
+          "page_no": 1,
+          "bbox": {
+            "l": 372.73,
+            "t": 499.21,
+            "r": 405.23,
+            "b": 490.67
+          },
+          "crop_bbox": {
+            "l": 368.73,
+            "t": 503.21,
+            "r": 409.23,
+            "b": 486.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 34,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 408.86,
+            "t": 499.01,
+            "r": 418.18,
+            "b": 490.87
+          },
+          "crop_bbox": {
+            "l": 404.86,
+            "t": 503.01,
+            "r": 422.18,
+            "b": 486.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 35,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 420.68,
+            "t": 499.01,
+            "r": 435.23,
+            "b": 490.87
+          },
+          "crop_bbox": {
+            "l": 416.68,
+            "t": 503.01,
+            "r": 439.23,
+            "b": 486.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 36,
+          "gt_text": "relevant",
+          "gcv_text": "relevant",
+          "page_no": 1,
+          "bbox": {
+            "l": 439.09,
+            "t": 499.01,
+            "r": 474.55,
+            "b": 490.47
+          },
+          "crop_bbox": {
+            "l": 435.09,
+            "t": 503.01,
+            "r": 478.55,
+            "b": 486.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 37,
+          "gt_text": "year",
+          "gcv_text": "year",
+          "page_no": 1,
+          "bbox": {
+            "l": 477.05,
+            "t": 498.81,
+            "r": 496.82,
+            "b": 490.47
+          },
+          "crop_bbox": {
+            "l": 473.05,
+            "t": 502.81,
+            "r": 500.82,
+            "b": 486.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 38,
+          "gt_text": "within",
+          "gcv_text": "within",
+          "page_no": 1,
+          "bbox": {
+            "l": 499.09,
+            "t": 498.61,
+            "r": 525.91,
+            "b": 490.47
+          },
+          "crop_bbox": {
+            "l": 495.09,
+            "t": 502.61,
+            "r": 529.91,
+            "b": 486.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 39,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.0,
+            "t": 486.5,
+            "r": 114.32,
+            "b": 478.96
+          },
+          "crop_bbox": {
+            "l": 96.0,
+            "t": 490.5,
+            "r": 118.32,
+            "b": 474.96
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 40,
+          "gt_text": "prescribed",
+          "gcv_text": "prescribed",
+          "page_no": 1,
+          "bbox": {
+            "l": 117.95,
+            "t": 486.7,
+            "r": 161.82,
+            "b": 478.76
+          },
+          "crop_bbox": {
+            "l": 113.95,
+            "t": 490.7,
+            "r": 165.82,
+            "b": 474.76
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 41,
+          "gt_text": "time",
+          "gcv_text": "time",
+          "page_no": 1,
+          "bbox": {
+            "l": 164.77,
+            "t": 486.3,
+            "r": 184.32,
+            "b": 478.76
+          },
+          "crop_bbox": {
+            "l": 160.77,
+            "t": 490.3,
+            "r": 188.32,
+            "b": 474.76
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 42,
+          "gt_text": "limit,",
+          "gcv_text": "limit",
+          "page_no": 1,
+          "bbox": {
+            "l": 188.41,
+            "t": 486.3,
+            "r": 207.73,
+            "b": 478.76
+          },
+          "crop_bbox": {
+            "l": 184.41,
+            "t": 490.3,
+            "r": 211.73,
+            "b": 474.76
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 43,
+          "gt_text": "would",
+          "gcv_text": "would",
+          "page_no": 1,
+          "bbox": {
+            "l": 212.95,
+            "t": 486.3,
+            "r": 239.09,
+            "b": 478.56
+          },
+          "crop_bbox": {
+            "l": 208.95,
+            "t": 490.3,
+            "r": 243.09,
+            "b": 474.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 44,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 242.95,
+            "t": 486.11,
+            "r": 253.41,
+            "b": 478.56
+          },
+          "crop_bbox": {
+            "l": 238.95,
+            "t": 490.11,
+            "r": 257.41,
+            "b": 474.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 45,
+          "gt_text": "denied",
+          "gcv_text": "denied",
+          "page_no": 1,
+          "bbox": {
+            "l": 256.82,
+            "t": 486.11,
+            "r": 285.45,
+            "b": 478.36
+          },
+          "crop_bbox": {
+            "l": 252.82,
+            "t": 490.11,
+            "r": 289.45,
+            "b": 474.36
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 46,
+          "gt_text": "vigilance",
+          "gcv_text": "vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 288.86,
+            "t": 486.11,
+            "r": 325.68,
+            "b": 478.17
+          },
+          "crop_bbox": {
+            "l": 284.86,
+            "t": 490.11,
+            "r": 329.68,
+            "b": 474.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 47,
+          "gt_text": "clearance",
+          "gcv_text": "clearance",
+          "page_no": 1,
+          "bbox": {
+            "l": 329.09,
+            "t": 485.91,
+            "r": 369.32,
+            "b": 477.97
+          },
+          "crop_bbox": {
+            "l": 325.09,
+            "t": 489.91,
+            "r": 373.32,
+            "b": 473.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 48,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 372.73,
+            "t": 485.71,
+            "r": 387.95,
+            "b": 478.17
+          },
+          "crop_bbox": {
+            "l": 368.73,
+            "t": 489.71,
+            "r": 391.95,
+            "b": 474.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 49,
+          "gt_text": "they",
+          "gcv_text": "they",
+          "page_no": 1,
+          "bbox": {
+            "l": 391.59,
+            "t": 485.51,
+            "r": 410.91,
+            "b": 477.97
+          },
+          "crop_bbox": {
+            "l": 387.59,
+            "t": 489.51,
+            "r": 414.91,
+            "b": 473.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 50,
+          "gt_text": "will",
+          "gcv_text": "will",
+          "page_no": 1,
+          "bbox": {
+            "l": 413.64,
+            "t": 485.51,
+            "r": 429.09,
+            "b": 477.97
+          },
+          "crop_bbox": {
+            "l": 409.64,
+            "t": 489.51,
+            "r": 433.09,
+            "b": 473.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 51,
+          "gt_text": "not",
+          "gcv_text": "not",
+          "page_no": 1,
+          "bbox": {
+            "l": 432.73,
+            "t": 485.51,
+            "r": 446.82,
+            "b": 477.97
+          },
+          "crop_bbox": {
+            "l": 428.73,
+            "t": 489.51,
+            "r": 450.82,
+            "b": 473.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 52,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 450.0,
+            "t": 485.31,
+            "r": 460.45,
+            "b": 477.77
+          },
+          "crop_bbox": {
+            "l": 446.0,
+            "t": 489.31,
+            "r": 464.45,
+            "b": 473.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 53,
+          "gt_text": "considered",
+          "gcv_text": "considered",
+          "page_no": 1,
+          "bbox": {
+            "l": 463.86,
+            "t": 485.51,
+            "r": 509.77,
+            "b": 477.57
+          },
+          "crop_bbox": {
+            "l": 459.86,
+            "t": 489.51,
+            "r": 513.77,
+            "b": 473.57
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 54,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 513.18,
+            "t": 485.11,
+            "r": 527.05,
+            "b": 477.57
+          },
+          "crop_bbox": {
+            "l": 509.18,
+            "t": 489.11,
+            "r": 531.05,
+            "b": 473.57
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 55,
+          "gt_text": "empanelment",
+          "gcv_text": "empanelment",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.23,
+            "t": 473.2,
+            "r": 159.55,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 96.23,
+            "t": 477.2,
+            "r": 163.55,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 56,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 160.91,
+            "t": 473.2,
+            "r": 174.32,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 156.91,
+            "t": 477.2,
+            "r": 178.32,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 57,
+          "gt_text": "senior",
+          "gcv_text": "senior",
+          "page_no": 1,
+          "bbox": {
+            "l": 176.59,
+            "t": 473.2,
+            "r": 203.18,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 172.59,
+            "t": 477.2,
+            "r": 207.18,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 58,
+          "gt_text": "level",
+          "gcv_text": "level",
+          "page_no": 1,
+          "bbox": {
+            "l": 204.77,
+            "t": 473.2,
+            "r": 225.23,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 200.77,
+            "t": 477.2,
+            "r": 229.23,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 59,
+          "gt_text": "posts",
+          "gcv_text": "posts",
+          "page_no": 1,
+          "bbox": {
+            "l": 227.95,
+            "t": 473.2,
+            "r": 250.45,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 223.95,
+            "t": 477.2,
+            "r": 254.45,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 60,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 252.95,
+            "t": 473.2,
+            "r": 260.45,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 248.95,
+            "t": 477.2,
+            "r": 264.45,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 61,
+          "gt_text": "Government",
+          "gcv_text": "Government",
+          "page_no": 1,
+          "bbox": {
+            "l": 262.73,
+            "t": 473.2,
+            "r": 316.36,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 258.73,
+            "t": 477.2,
+            "r": 320.36,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 62,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 318.64,
+            "t": 473.2,
+            "r": 328.41,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 314.64,
+            "t": 477.2,
+            "r": 332.41,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 63,
+          "gt_text": "India.",
+          "gcv_text": "India",
+          "page_no": 1,
+          "bbox": {
+            "l": 329.55,
+            "t": 473.2,
+            "r": 350.91,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 325.55,
+            "t": 477.2,
+            "r": 354.91,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 64,
+          "gt_text": "It",
+          "gcv_text": "It",
+          "page_no": 1,
+          "bbox": {
+            "l": 355.0,
+            "t": 473.2,
+            "r": 362.27,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 351.0,
+            "t": 477.2,
+            "r": 366.27,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 65,
+          "gt_text": "has",
+          "gcv_text": "has",
+          "page_no": 1,
+          "bbox": {
+            "l": 364.09,
+            "t": 473.2,
+            "r": 378.86,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 360.09,
+            "t": 477.2,
+            "r": 382.86,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 66,
+          "gt_text": "inserted",
+          "gcv_text": "inserted",
+          "page_no": 1,
+          "bbox": {
+            "l": 381.14,
+            "t": 473.2,
+            "r": 415.45,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 377.14,
+            "t": 477.2,
+            "r": 419.45,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 67,
+          "gt_text": "sub-para",
+          "gcv_text": "sub",
+          "page_no": 1,
+          "bbox": {
+            "l": 418.18,
+            "t": 473.2,
+            "r": 433.18,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 414.18,
+            "t": 477.2,
+            "r": 437.18,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 68,
+          "gt_text": "2(f)",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 433.64,
+            "t": 473.2,
+            "r": 436.82,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 429.64,
+            "t": 477.2,
+            "r": 440.82,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 69,
+          "gt_text": "which",
+          "gcv_text": "which",
+          "page_no": 1,
+          "bbox": {
+            "l": 475.23,
+            "t": 473.2,
+            "r": 500.68,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 471.23,
+            "t": 477.2,
+            "r": 504.68,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 70,
+          "gt_text": "reads",
+          "gcv_text": "reads",
+          "page_no": 1,
+          "bbox": {
+            "l": 503.18,
+            "t": 473.2,
+            "r": 525.91,
+            "b": 465.07
+          },
+          "crop_bbox": {
+            "l": 499.18,
+            "t": 477.2,
+            "r": 529.91,
+            "b": 461.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 71,
+          "gt_text": "as",
+          "gcv_text": "as",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.23,
+            "t": 460.3,
+            "r": 110.23,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 96.23,
+            "t": 464.3,
+            "r": 114.23,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 72,
+          "gt_text": "under,",
+          "gcv_text": "under",
+          "page_no": 1,
+          "bbox": {
+            "l": 112.95,
+            "t": 460.3,
+            "r": 138.18,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 108.95,
+            "t": 464.3,
+            "r": 142.18,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 73,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 143.41,
+            "t": 460.3,
+            "r": 150.91,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 139.41,
+            "t": 464.3,
+            "r": 154.91,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 74,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 154.09,
+            "t": 460.3,
+            "r": 168.64,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 150.09,
+            "t": 464.3,
+            "r": 172.64,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 75,
+          "gt_text": "Department",
+          "gcv_text": "Department",
+          "page_no": 1,
+          "bbox": {
+            "l": 172.27,
+            "t": 460.3,
+            "r": 223.41,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 168.27,
+            "t": 464.3,
+            "r": 227.41,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 76,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 227.05,
+            "t": 460.3,
+            "r": 236.59,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 223.05,
+            "t": 464.3,
+            "r": 240.59,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 77,
+          "gt_text": "Personnel",
+          "gcv_text": "Personnel",
+          "page_no": 1,
+          "bbox": {
+            "l": 239.32,
+            "t": 460.3,
+            "r": 280.91,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 235.32,
+            "t": 464.3,
+            "r": 284.91,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 78,
+          "gt_text": "&",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 284.09,
+            "t": 460.3,
+            "r": 291.59,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 280.09,
+            "t": 464.3,
+            "r": 295.59,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 79,
+          "gt_text": "Trainings",
+          "gcv_text": "Trainings",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.32,
+            "t": 460.3,
+            "r": 333.64,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 290.32,
+            "t": 464.3,
+            "r": 337.64,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 80,
+          "gt_text": "earlier",
+          "gcv_text": "earlier",
+          "page_no": 1,
+          "bbox": {
+            "l": 335.68,
+            "t": 460.3,
+            "r": 363.86,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 331.68,
+            "t": 464.3,
+            "r": 367.86,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 81,
+          "gt_text": "OM",
+          "gcv_text": "OM",
+          "page_no": 1,
+          "bbox": {
+            "l": 366.82,
+            "t": 460.3,
+            "r": 382.05,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 362.82,
+            "t": 464.3,
+            "r": 386.05,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 82,
+          "gt_text": "No.",
+          "gcv_text": "No.",
+          "page_no": 1,
+          "bbox": {
+            "l": 386.14,
+            "t": 460.3,
+            "r": 400.68,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 382.14,
+            "t": 464.3,
+            "r": 404.68,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 83,
+          "gt_text": "11012/11/2007-Estt.A",
+          "gcv_text": "11012",
+          "page_no": 1,
+          "bbox": {
+            "l": 404.09,
+            "t": 460.3,
+            "r": 430.45,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 400.09,
+            "t": 464.3,
+            "r": 434.45,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 84,
+          "gt_text": "dated",
+          "gcv_text": "dated",
+          "page_no": 1,
+          "bbox": {
+            "l": 501.14,
+            "t": 460.3,
+            "r": 525.68,
+            "b": 452.56
+          },
+          "crop_bbox": {
+            "l": 497.14,
+            "t": 464.3,
+            "r": 529.68,
+            "b": 448.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 85,
+          "gt_text": "14.12.2007:",
+          "gcv_text": "14.12.2007",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.45,
+            "t": 447.99,
+            "r": 146.82,
+            "b": 441.64
+          },
+          "crop_bbox": {
+            "l": 96.45,
+            "t": 451.99,
+            "r": 150.82,
+            "b": 437.64
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/16": {
+      "self_ref": "#/texts/16",
+      "label": "paragraph",
+      "full_gt_text": "\"(f) Vigilance clearance shall be denied to an officer if he fails to submit his annual immovable property return of the previous year by 31st January of the following year, as required under Government of India decision under Rule 18 of the Central Civil Services (Conduct) Rule, 1964.\"",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "\"(f)",
+          "gcv_text": "14.12.2007",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.45,
+            "t": 447.99,
+            "r": 146.82,
+            "b": 441.64
+          },
+          "crop_bbox": {
+            "l": 96.45,
+            "t": 451.99,
+            "r": 150.82,
+            "b": 437.64
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Vigilance",
+          "gcv_text": "Vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 152.27,
+            "t": 427.35,
+            "r": 191.36,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 148.27,
+            "t": 431.35,
+            "r": 195.36,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "clearance",
+          "gcv_text": "clearance",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.59,
+            "t": 427.35,
+            "r": 237.5,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 192.59,
+            "t": 431.35,
+            "r": 241.5,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "shall",
+          "gcv_text": "shall",
+          "page_no": 1,
+          "bbox": {
+            "l": 242.73,
+            "t": 427.35,
+            "r": 262.27,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 238.73,
+            "t": 431.35,
+            "r": 266.27,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 267.27,
+            "t": 427.35,
+            "r": 278.18,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 263.27,
+            "t": 431.35,
+            "r": 282.18,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "denied",
+          "gcv_text": "denied",
+          "page_no": 1,
+          "bbox": {
+            "l": 283.64,
+            "t": 427.35,
+            "r": 312.27,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 279.64,
+            "t": 431.35,
+            "r": 316.27,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 317.5,
+            "t": 427.35,
+            "r": 326.82,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 313.5,
+            "t": 431.35,
+            "r": 330.82,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "an",
+          "gcv_text": "an",
+          "page_no": 1,
+          "bbox": {
+            "l": 332.05,
+            "t": 427.35,
+            "r": 342.27,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 328.05,
+            "t": 431.35,
+            "r": 346.27,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "officer",
+          "gcv_text": "officer",
+          "page_no": 1,
+          "bbox": {
+            "l": 347.73,
+            "t": 427.35,
+            "r": 375.91,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 343.73,
+            "t": 431.35,
+            "r": 379.91,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "if",
+          "gcv_text": "if",
+          "page_no": 1,
+          "bbox": {
+            "l": 380.68,
+            "t": 427.35,
+            "r": 388.41,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 376.68,
+            "t": 431.35,
+            "r": 392.41,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "he",
+          "gcv_text": "he",
+          "page_no": 1,
+          "bbox": {
+            "l": 392.27,
+            "t": 427.35,
+            "r": 402.05,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 388.27,
+            "t": 431.35,
+            "r": 406.05,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "fails",
+          "gcv_text": "fails",
+          "page_no": 1,
+          "bbox": {
+            "l": 407.73,
+            "t": 427.35,
+            "r": 425.68,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 403.73,
+            "t": 431.35,
+            "r": 429.68,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 430.45,
+            "t": 427.35,
+            "r": 439.77,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 426.45,
+            "t": 431.35,
+            "r": 443.77,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "submit",
+          "gcv_text": "submit",
+          "page_no": 1,
+          "bbox": {
+            "l": 445.0,
+            "t": 427.35,
+            "r": 474.55,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 441.0,
+            "t": 431.35,
+            "r": 478.55,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "his",
+          "gcv_text": "his",
+          "page_no": 1,
+          "bbox": {
+            "l": 480.0,
+            "t": 427.35,
+            "r": 491.82,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 476.0,
+            "t": 431.35,
+            "r": 495.82,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "annual",
+          "gcv_text": "annual",
+          "page_no": 1,
+          "bbox": {
+            "l": 496.82,
+            "t": 427.35,
+            "r": 525.68,
+            "b": 419.02
+          },
+          "crop_bbox": {
+            "l": 492.82,
+            "t": 431.35,
+            "r": 529.68,
+            "b": 415.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "immovable",
+          "gcv_text": "immovable",
+          "page_no": 1,
+          "bbox": {
+            "l": 133.86,
+            "t": 415.24,
+            "r": 180.68,
+            "b": 406.51
+          },
+          "crop_bbox": {
+            "l": 129.86,
+            "t": 419.24,
+            "r": 184.68,
+            "b": 402.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "property",
+          "gcv_text": "property",
+          "page_no": 1,
+          "bbox": {
+            "l": 185.0,
+            "t": 415.05,
+            "r": 222.5,
+            "b": 406.31
+          },
+          "crop_bbox": {
+            "l": 181.0,
+            "t": 419.05,
+            "r": 226.5,
+            "b": 402.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "return",
+          "gcv_text": "return",
+          "page_no": 1,
+          "bbox": {
+            "l": 225.68,
+            "t": 414.85,
+            "r": 252.27,
+            "b": 406.11
+          },
+          "crop_bbox": {
+            "l": 221.68,
+            "t": 418.85,
+            "r": 256.27,
+            "b": 402.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 256.14,
+            "t": 414.65,
+            "r": 266.36,
+            "b": 406.31
+          },
+          "crop_bbox": {
+            "l": 252.14,
+            "t": 418.65,
+            "r": 270.36,
+            "b": 402.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 268.41,
+            "t": 414.45,
+            "r": 282.73,
+            "b": 406.11
+          },
+          "crop_bbox": {
+            "l": 264.41,
+            "t": 418.45,
+            "r": 286.73,
+            "b": 402.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "previous",
+          "gcv_text": "previous",
+          "page_no": 1,
+          "bbox": {
+            "l": 287.05,
+            "t": 414.45,
+            "r": 322.73,
+            "b": 405.72
+          },
+          "crop_bbox": {
+            "l": 283.05,
+            "t": 418.45,
+            "r": 326.73,
+            "b": 401.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "year",
+          "gcv_text": "year",
+          "page_no": 1,
+          "bbox": {
+            "l": 326.14,
+            "t": 414.25,
+            "r": 346.14,
+            "b": 405.91
+          },
+          "crop_bbox": {
+            "l": 322.14,
+            "t": 418.25,
+            "r": 350.14,
+            "b": 401.91
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 349.32,
+            "t": 414.05,
+            "r": 359.55,
+            "b": 405.72
+          },
+          "crop_bbox": {
+            "l": 345.32,
+            "t": 418.05,
+            "r": 363.55,
+            "b": 401.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 24,
+          "gt_text": "31st",
+          "gcv_text": "31st",
+          "page_no": 1,
+          "bbox": {
+            "l": 363.18,
+            "t": 414.05,
+            "r": 379.09,
+            "b": 405.72
+          },
+          "crop_bbox": {
+            "l": 359.18,
+            "t": 418.05,
+            "r": 383.09,
+            "b": 401.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 25,
+          "gt_text": "January",
+          "gcv_text": "January",
+          "page_no": 1,
+          "bbox": {
+            "l": 381.36,
+            "t": 414.05,
+            "r": 415.0,
+            "b": 405.32
+          },
+          "crop_bbox": {
+            "l": 377.36,
+            "t": 418.05,
+            "r": 419.0,
+            "b": 401.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 418.41,
+            "t": 413.85,
+            "r": 428.18,
+            "b": 405.52
+          },
+          "crop_bbox": {
+            "l": 414.41,
+            "t": 417.85,
+            "r": 432.18,
+            "b": 401.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 27,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 430.68,
+            "t": 413.85,
+            "r": 445.23,
+            "b": 405.32
+          },
+          "crop_bbox": {
+            "l": 426.68,
+            "t": 417.85,
+            "r": 449.23,
+            "b": 401.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 28,
+          "gt_text": "following",
+          "gcv_text": "following",
+          "page_no": 1,
+          "bbox": {
+            "l": 448.64,
+            "t": 413.85,
+            "r": 488.41,
+            "b": 405.12
+          },
+          "crop_bbox": {
+            "l": 444.64,
+            "t": 417.85,
+            "r": 492.41,
+            "b": 401.12
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 29,
+          "gt_text": "year,",
+          "gcv_text": "year",
+          "page_no": 1,
+          "bbox": {
+            "l": 491.59,
+            "t": 413.46,
+            "r": 511.82,
+            "b": 405.12
+          },
+          "crop_bbox": {
+            "l": 487.59,
+            "t": 417.46,
+            "r": 515.82,
+            "b": 401.12
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 30,
+          "gt_text": "as",
+          "gcv_text": "as",
+          "page_no": 1,
+          "bbox": {
+            "l": 517.05,
+            "t": 413.46,
+            "r": 526.36,
+            "b": 404.92
+          },
+          "crop_bbox": {
+            "l": 513.05,
+            "t": 417.46,
+            "r": 530.36,
+            "b": 400.92
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 31,
+          "gt_text": "required",
+          "gcv_text": "required",
+          "page_no": 1,
+          "bbox": {
+            "l": 133.86,
+            "t": 400.95,
+            "r": 169.55,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 129.86,
+            "t": 404.95,
+            "r": 173.55,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 32,
+          "gt_text": "under",
+          "gcv_text": "under",
+          "page_no": 1,
+          "bbox": {
+            "l": 174.32,
+            "t": 400.95,
+            "r": 200.23,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 170.32,
+            "t": 404.95,
+            "r": 204.23,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 33,
+          "gt_text": "Government",
+          "gcv_text": "Government",
+          "page_no": 1,
+          "bbox": {
+            "l": 203.64,
+            "t": 400.95,
+            "r": 257.27,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 199.64,
+            "t": 404.95,
+            "r": 261.27,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 34,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 261.14,
+            "t": 400.95,
+            "r": 270.45,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 257.14,
+            "t": 404.95,
+            "r": 274.45,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 35,
+          "gt_text": "India",
+          "gcv_text": "India",
+          "page_no": 1,
+          "bbox": {
+            "l": 273.86,
+            "t": 400.95,
+            "r": 295.23,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 269.86,
+            "t": 404.95,
+            "r": 299.23,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 36,
+          "gt_text": "decision",
+          "gcv_text": "decision",
+          "page_no": 1,
+          "bbox": {
+            "l": 298.86,
+            "t": 400.95,
+            "r": 333.18,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 294.86,
+            "t": 404.95,
+            "r": 337.18,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 37,
+          "gt_text": "under",
+          "gcv_text": "under",
+          "page_no": 1,
+          "bbox": {
+            "l": 337.5,
+            "t": 400.95,
+            "r": 363.41,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 333.5,
+            "t": 404.95,
+            "r": 367.41,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 38,
+          "gt_text": "Rule",
+          "gcv_text": "Rule",
+          "page_no": 1,
+          "bbox": {
+            "l": 366.82,
+            "t": 400.95,
+            "r": 385.23,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 362.82,
+            "t": 404.95,
+            "r": 389.23,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 39,
+          "gt_text": "18",
+          "gcv_text": "18",
+          "page_no": 1,
+          "bbox": {
+            "l": 389.55,
+            "t": 400.95,
+            "r": 399.77,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 385.55,
+            "t": 404.95,
+            "r": 403.77,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 40,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 404.32,
+            "t": 400.95,
+            "r": 413.41,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 400.32,
+            "t": 404.95,
+            "r": 417.41,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 41,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 416.59,
+            "t": 400.95,
+            "r": 431.36,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 412.59,
+            "t": 404.95,
+            "r": 435.36,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 42,
+          "gt_text": "Central",
+          "gcv_text": "Central",
+          "page_no": 1,
+          "bbox": {
+            "l": 435.0,
+            "t": 400.95,
+            "r": 466.36,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 431.0,
+            "t": 404.95,
+            "r": 470.36,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 43,
+          "gt_text": "Civil",
+          "gcv_text": "Civil",
+          "page_no": 1,
+          "bbox": {
+            "l": 470.45,
+            "t": 400.95,
+            "r": 488.18,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 466.45,
+            "t": 404.95,
+            "r": 492.18,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 44,
+          "gt_text": "Services",
+          "gcv_text": "Services",
+          "page_no": 1,
+          "bbox": {
+            "l": 491.14,
+            "t": 400.95,
+            "r": 525.91,
+            "b": 393.61
+          },
+          "crop_bbox": {
+            "l": 487.14,
+            "t": 404.95,
+            "r": 529.91,
+            "b": 389.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 45,
+          "gt_text": "(Conduct)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 133.86,
+            "t": 388.25,
+            "r": 136.82,
+            "b": 380.51
+          },
+          "crop_bbox": {
+            "l": 129.86,
+            "t": 392.25,
+            "r": 140.82,
+            "b": 376.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 46,
+          "gt_text": "Rule,",
+          "gcv_text": "Conduct",
+          "page_no": 1,
+          "bbox": {
+            "l": 136.82,
+            "t": 388.65,
+            "r": 171.59,
+            "b": 380.51
+          },
+          "crop_bbox": {
+            "l": 132.82,
+            "t": 392.65,
+            "r": 175.59,
+            "b": 376.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 47,
+          "gt_text": "1964.\"",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 171.82,
+            "t": 388.65,
+            "r": 175.0,
+            "b": 380.9
+          },
+          "crop_bbox": {
+            "l": 167.82,
+            "t": 392.65,
+            "r": 179.0,
+            "b": 376.9
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/17": {
+      "self_ref": "#/texts/17",
+      "label": "paragraph",
+      "full_gt_text": "2. Similarly, as per Rule 16(2) of AIS (Conduct) Rules, 1968, officers are required to submit property return latest by \\(31^{\\text{st}}\\) January of each year, and Department of Personnel & Trainings has clarified that those who fail to submit the return on time will be denied vigilance clearance.\n3. It is thus evident that filing of AIPR on time is a mandatory pre-condition for grant of vigilance clearance. So far, the Commission has not been collecting information on AIPR filing while considering proposals for vigilance clearance, and screening to this effect is left to the concerned Ministry/Department/Organization. However, some proposals received by the Commission do contain information on AIPR filing by the concerned officers, and the same is taken in account while finalising input on their vigilance status.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "2.",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 133.86,
+            "t": 388.25,
+            "r": 136.82,
+            "b": 380.51
+          },
+          "crop_bbox": {
+            "l": 129.86,
+            "t": 392.25,
+            "r": 140.82,
+            "b": 376.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Similarly,",
+          "gcv_text": "Conduct",
+          "page_no": 1,
+          "bbox": {
+            "l": 136.82,
+            "t": 388.65,
+            "r": 171.59,
+            "b": 380.51
+          },
+          "crop_bbox": {
+            "l": 132.82,
+            "t": 392.65,
+            "r": 175.59,
+            "b": 376.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "as",
+          "gcv_text": "as",
+          "page_no": 1,
+          "bbox": {
+            "l": 176.36,
+            "t": 366.81,
+            "r": 185.91,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 172.36,
+            "t": 370.81,
+            "r": 189.91,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "per",
+          "gcv_text": "per",
+          "page_no": 1,
+          "bbox": {
+            "l": 189.55,
+            "t": 366.81,
+            "r": 204.09,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 185.55,
+            "t": 370.81,
+            "r": 208.09,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Rule",
+          "gcv_text": "Rule",
+          "page_no": 1,
+          "bbox": {
+            "l": 208.41,
+            "t": 366.81,
+            "r": 226.36,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 204.41,
+            "t": 370.81,
+            "r": 230.36,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "16(2)",
+          "gcv_text": "16",
+          "page_no": 1,
+          "bbox": {
+            "l": 230.91,
+            "t": 366.81,
+            "r": 241.14,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 226.91,
+            "t": 370.81,
+            "r": 245.14,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 256.82,
+            "t": 366.81,
+            "r": 266.36,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 252.82,
+            "t": 370.81,
+            "r": 270.36,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "AIS",
+          "gcv_text": "AIS",
+          "page_no": 1,
+          "bbox": {
+            "l": 269.32,
+            "t": 366.81,
+            "r": 282.73,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 265.32,
+            "t": 370.81,
+            "r": 286.73,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "(Conduct)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 287.27,
+            "t": 366.81,
+            "r": 290.23,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 283.27,
+            "t": 370.81,
+            "r": 294.23,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "Rules,",
+          "gcv_text": "Conduct",
+          "page_no": 1,
+          "bbox": {
+            "l": 290.68,
+            "t": 366.81,
+            "r": 325.23,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 286.68,
+            "t": 370.81,
+            "r": 329.23,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "1968,",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 325.45,
+            "t": 366.81,
+            "r": 328.41,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 321.45,
+            "t": 370.81,
+            "r": 332.41,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "officers",
+          "gcv_text": "officers",
+          "page_no": 1,
+          "bbox": {
+            "l": 389.77,
+            "t": 366.81,
+            "r": 421.36,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 385.77,
+            "t": 370.81,
+            "r": 425.36,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "are",
+          "gcv_text": "are",
+          "page_no": 1,
+          "bbox": {
+            "l": 425.23,
+            "t": 366.81,
+            "r": 439.09,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 421.23,
+            "t": 370.81,
+            "r": 443.09,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "required",
+          "gcv_text": "required",
+          "page_no": 1,
+          "bbox": {
+            "l": 443.64,
+            "t": 366.81,
+            "r": 479.55,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 439.64,
+            "t": 370.81,
+            "r": 483.55,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 482.95,
+            "t": 366.81,
+            "r": 492.73,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 478.95,
+            "t": 370.81,
+            "r": 496.73,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "submit",
+          "gcv_text": "submit",
+          "page_no": 1,
+          "bbox": {
+            "l": 496.14,
+            "t": 366.81,
+            "r": 525.68,
+            "b": 358.67
+          },
+          "crop_bbox": {
+            "l": 492.14,
+            "t": 370.81,
+            "r": 529.68,
+            "b": 354.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "property",
+          "gcv_text": "property",
+          "page_no": 1,
+          "bbox": {
+            "l": 100.0,
+            "t": 354.51,
+            "r": 137.05,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 96.0,
+            "t": 358.51,
+            "r": 141.05,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "return",
+          "gcv_text": "return",
+          "page_no": 1,
+          "bbox": {
+            "l": 139.77,
+            "t": 354.51,
+            "r": 166.59,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 135.77,
+            "t": 358.51,
+            "r": 170.59,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "latest",
+          "gcv_text": "latest",
+          "page_no": 1,
+          "bbox": {
+            "l": 170.0,
+            "t": 354.51,
+            "r": 193.86,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 166.0,
+            "t": 358.51,
+            "r": 197.86,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 197.5,
+            "t": 354.51,
+            "r": 208.18,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 193.5,
+            "t": 358.51,
+            "r": 212.18,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "\\(31^{\\text{st}}\\)",
+          "gcv_text": "31st",
+          "page_no": 1,
+          "bbox": {
+            "l": 211.14,
+            "t": 354.51,
+            "r": 227.05,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 207.14,
+            "t": 358.51,
+            "r": 231.05,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "January",
+          "gcv_text": "January",
+          "page_no": 1,
+          "bbox": {
+            "l": 229.32,
+            "t": 354.51,
+            "r": 263.41,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 225.32,
+            "t": 358.51,
+            "r": 267.41,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 266.14,
+            "t": 354.51,
+            "r": 276.14,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 262.14,
+            "t": 358.51,
+            "r": 280.14,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
+          "gt_text": "each",
+          "gcv_text": "each",
+          "page_no": 1,
+          "bbox": {
+            "l": 278.41,
+            "t": 354.51,
+            "r": 297.95,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 274.41,
+            "t": 358.51,
+            "r": 301.95,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 24,
+          "gt_text": "year,",
+          "gcv_text": "year",
+          "page_no": 1,
+          "bbox": {
+            "l": 301.59,
+            "t": 354.51,
+            "r": 320.68,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 297.59,
+            "t": 358.51,
+            "r": 324.68,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 25,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 326.14,
+            "t": 354.51,
+            "r": 341.59,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 322.14,
+            "t": 358.51,
+            "r": 345.59,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
+          "gt_text": "Department",
+          "gcv_text": "Department",
+          "page_no": 1,
+          "bbox": {
+            "l": 345.68,
+            "t": 354.51,
+            "r": 397.27,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 341.68,
+            "t": 358.51,
+            "r": 401.27,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 27,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 400.91,
+            "t": 354.51,
+            "r": 410.23,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 396.91,
+            "t": 358.51,
+            "r": 414.23,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 28,
+          "gt_text": "Personnel",
+          "gcv_text": "Personnel",
+          "page_no": 1,
+          "bbox": {
+            "l": 413.18,
+            "t": 354.51,
+            "r": 455.91,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 409.18,
+            "t": 358.51,
+            "r": 459.91,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 29,
+          "gt_text": "&",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 458.18,
+            "t": 354.51,
+            "r": 466.14,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 454.18,
+            "t": 358.51,
+            "r": 470.14,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 30,
+          "gt_text": "Trainings",
+          "gcv_text": "Trainings",
+          "page_no": 1,
+          "bbox": {
+            "l": 469.09,
+            "t": 354.51,
+            "r": 508.41,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 465.09,
+            "t": 358.51,
+            "r": 512.41,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 31,
+          "gt_text": "has",
+          "gcv_text": "has",
+          "page_no": 1,
+          "bbox": {
+            "l": 510.91,
+            "t": 354.51,
+            "r": 525.45,
+            "b": 345.77
+          },
+          "crop_bbox": {
+            "l": 506.91,
+            "t": 358.51,
+            "r": 529.45,
+            "b": 341.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 32,
+          "gt_text": "clarified",
+          "gcv_text": "clarified",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.77,
+            "t": 342.4,
+            "r": 132.95,
+            "b": 334.46
+          },
+          "crop_bbox": {
+            "l": 95.77,
+            "t": 346.4,
+            "r": 136.95,
+            "b": 330.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 33,
+          "gt_text": "that",
+          "gcv_text": "that",
+          "page_no": 1,
+          "bbox": {
+            "l": 135.45,
+            "t": 342.2,
+            "r": 153.18,
+            "b": 334.46
+          },
+          "crop_bbox": {
+            "l": 131.45,
+            "t": 346.2,
+            "r": 157.18,
+            "b": 330.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 34,
+          "gt_text": "those",
+          "gcv_text": "those",
+          "page_no": 1,
+          "bbox": {
+            "l": 155.23,
+            "t": 342.0,
+            "r": 178.86,
+            "b": 334.26
+          },
+          "crop_bbox": {
+            "l": 151.23,
+            "t": 346.0,
+            "r": 182.86,
+            "b": 330.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 35,
+          "gt_text": "who",
+          "gcv_text": "who",
+          "page_no": 1,
+          "bbox": {
+            "l": 181.14,
+            "t": 342.0,
+            "r": 199.77,
+            "b": 334.26
+          },
+          "crop_bbox": {
+            "l": 177.14,
+            "t": 346.0,
+            "r": 203.77,
+            "b": 330.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 36,
+          "gt_text": "fail",
+          "gcv_text": "fail",
+          "page_no": 1,
+          "bbox": {
+            "l": 202.27,
+            "t": 341.8,
+            "r": 215.68,
+            "b": 334.26
+          },
+          "crop_bbox": {
+            "l": 198.27,
+            "t": 345.8,
+            "r": 219.68,
+            "b": 330.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 37,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 217.5,
+            "t": 341.8,
+            "r": 226.59,
+            "b": 334.26
+          },
+          "crop_bbox": {
+            "l": 213.5,
+            "t": 345.8,
+            "r": 230.59,
+            "b": 330.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 38,
+          "gt_text": "submit",
+          "gcv_text": "submit",
+          "page_no": 1,
+          "bbox": {
+            "l": 229.32,
+            "t": 341.8,
+            "r": 258.86,
+            "b": 333.86
+          },
+          "crop_bbox": {
+            "l": 225.32,
+            "t": 345.8,
+            "r": 262.86,
+            "b": 329.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 39,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 260.23,
+            "t": 341.6,
+            "r": 275.0,
+            "b": 334.06
+          },
+          "crop_bbox": {
+            "l": 256.23,
+            "t": 345.6,
+            "r": 279.0,
+            "b": 330.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 40,
+          "gt_text": "return",
+          "gcv_text": "return",
+          "page_no": 1,
+          "bbox": {
+            "l": 276.82,
+            "t": 341.6,
+            "r": 303.86,
+            "b": 333.66
+          },
+          "crop_bbox": {
+            "l": 272.82,
+            "t": 345.6,
+            "r": 307.86,
+            "b": 329.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 41,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 305.91,
+            "t": 341.4,
+            "r": 316.59,
+            "b": 333.86
+          },
+          "crop_bbox": {
+            "l": 301.91,
+            "t": 345.4,
+            "r": 320.59,
+            "b": 329.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 42,
+          "gt_text": "time",
+          "gcv_text": "time",
+          "page_no": 1,
+          "bbox": {
+            "l": 319.09,
+            "t": 341.4,
+            "r": 338.41,
+            "b": 333.66
+          },
+          "crop_bbox": {
+            "l": 315.09,
+            "t": 345.4,
+            "r": 342.41,
+            "b": 329.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 43,
+          "gt_text": "will",
+          "gcv_text": "will",
+          "page_no": 1,
+          "bbox": {
+            "l": 340.45,
+            "t": 341.21,
+            "r": 355.91,
+            "b": 333.66
+          },
+          "crop_bbox": {
+            "l": 336.45,
+            "t": 345.21,
+            "r": 359.91,
+            "b": 329.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 44,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 357.95,
+            "t": 341.21,
+            "r": 368.64,
+            "b": 333.66
+          },
+          "crop_bbox": {
+            "l": 353.95,
+            "t": 345.21,
+            "r": 372.64,
+            "b": 329.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 45,
+          "gt_text": "denied",
+          "gcv_text": "denied",
+          "page_no": 1,
+          "bbox": {
+            "l": 370.68,
+            "t": 341.21,
+            "r": 399.32,
+            "b": 333.27
+          },
+          "crop_bbox": {
+            "l": 366.68,
+            "t": 345.21,
+            "r": 403.32,
+            "b": 329.27
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 46,
+          "gt_text": "vigilance",
+          "gcv_text": "vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 402.27,
+            "t": 341.01,
+            "r": 439.32,
+            "b": 333.07
+          },
+          "crop_bbox": {
+            "l": 398.27,
+            "t": 345.01,
+            "r": 443.32,
+            "b": 329.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 47,
+          "gt_text": "clearance.",
+          "gcv_text": "clearance",
+          "page_no": 1,
+          "bbox": {
+            "l": 441.36,
+            "t": 341.01,
+            "r": 482.27,
+            "b": 333.07
+          },
+          "crop_bbox": {
+            "l": 437.36,
+            "t": 345.01,
+            "r": 486.27,
+            "b": 329.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 48,
+          "gt_text": "3.",
+          "gcv_text": "3.",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.55,
+            "t": 320.56,
+            "r": 108.41,
+            "b": 314.61
+          },
+          "crop_bbox": {
+            "l": 95.55,
+            "t": 324.56,
+            "r": 112.41,
+            "b": 310.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 49,
+          "gt_text": "It",
+          "gcv_text": "It",
+          "page_no": 1,
+          "bbox": {
+            "l": 133.18,
+            "t": 321.56,
+            "r": 140.0,
+            "b": 313.02
+          },
+          "crop_bbox": {
+            "l": 129.18,
+            "t": 325.56,
+            "r": 144.0,
+            "b": 309.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 50,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 143.86,
+            "t": 321.56,
+            "r": 150.68,
+            "b": 313.02
+          },
+          "crop_bbox": {
+            "l": 139.86,
+            "t": 325.56,
+            "r": 154.68,
+            "b": 309.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 51,
+          "gt_text": "thus",
+          "gcv_text": "thus",
+          "page_no": 1,
+          "bbox": {
+            "l": 154.09,
+            "t": 321.56,
+            "r": 173.86,
+            "b": 313.02
+          },
+          "crop_bbox": {
+            "l": 150.09,
+            "t": 325.56,
+            "r": 177.86,
+            "b": 309.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 52,
+          "gt_text": "evident",
+          "gcv_text": "evident",
+          "page_no": 1,
+          "bbox": {
+            "l": 180.23,
+            "t": 321.56,
+            "r": 213.18,
+            "b": 312.62
+          },
+          "crop_bbox": {
+            "l": 176.23,
+            "t": 325.56,
+            "r": 217.18,
+            "b": 308.62
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 53,
+          "gt_text": "that",
+          "gcv_text": "that",
+          "page_no": 1,
+          "bbox": {
+            "l": 216.59,
+            "t": 321.36,
+            "r": 234.55,
+            "b": 312.82
+          },
+          "crop_bbox": {
+            "l": 212.59,
+            "t": 325.36,
+            "r": 238.55,
+            "b": 308.82
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 54,
+          "gt_text": "filing",
+          "gcv_text": "filing",
+          "page_no": 1,
+          "bbox": {
+            "l": 238.41,
+            "t": 321.16,
+            "r": 259.77,
+            "b": 312.62
+          },
+          "crop_bbox": {
+            "l": 234.41,
+            "t": 325.16,
+            "r": 263.77,
+            "b": 308.62
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 55,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 264.09,
+            "t": 321.16,
+            "r": 273.86,
+            "b": 312.62
+          },
+          "crop_bbox": {
+            "l": 260.09,
+            "t": 325.16,
+            "r": 277.86,
+            "b": 308.62
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 56,
+          "gt_text": "AIPR",
+          "gcv_text": "AIPR",
+          "page_no": 1,
+          "bbox": {
+            "l": 276.82,
+            "t": 321.16,
+            "r": 297.05,
+            "b": 312.43
+          },
+          "crop_bbox": {
+            "l": 272.82,
+            "t": 325.16,
+            "r": 301.05,
+            "b": 308.43
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 57,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 301.14,
+            "t": 320.96,
+            "r": 311.82,
+            "b": 312.43
+          },
+          "crop_bbox": {
+            "l": 297.14,
+            "t": 324.96,
+            "r": 315.82,
+            "b": 308.43
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 58,
+          "gt_text": "time",
+          "gcv_text": "time",
+          "page_no": 1,
+          "bbox": {
+            "l": 315.91,
+            "t": 320.96,
+            "r": 335.23,
+            "b": 312.23
+          },
+          "crop_bbox": {
+            "l": 311.91,
+            "t": 324.96,
+            "r": 339.23,
+            "b": 308.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 59,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 339.77,
+            "t": 320.76,
+            "r": 347.05,
+            "b": 312.23
+          },
+          "crop_bbox": {
+            "l": 335.77,
+            "t": 324.76,
+            "r": 351.05,
+            "b": 308.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 60,
+          "gt_text": "a",
+          "gcv_text": "a",
+          "page_no": 1,
+          "bbox": {
+            "l": 350.91,
+            "t": 320.76,
+            "r": 355.68,
+            "b": 312.23
+          },
+          "crop_bbox": {
+            "l": 346.91,
+            "t": 324.76,
+            "r": 359.68,
+            "b": 308.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 61,
+          "gt_text": "mandatory",
+          "gcv_text": "mandatory",
+          "page_no": 1,
+          "bbox": {
+            "l": 360.23,
+            "t": 320.76,
+            "r": 407.5,
+            "b": 311.83
+          },
+          "crop_bbox": {
+            "l": 356.23,
+            "t": 324.76,
+            "r": 411.5,
+            "b": 307.83
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 62,
+          "gt_text": "pre-condition",
+          "gcv_text": "pre",
+          "page_no": 1,
+          "bbox": {
+            "l": 411.36,
+            "t": 320.56,
+            "r": 425.91,
+            "b": 312.03
+          },
+          "crop_bbox": {
+            "l": 407.36,
+            "t": 324.56,
+            "r": 429.91,
+            "b": 308.03
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 63,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 472.95,
+            "t": 320.36,
+            "r": 486.82,
+            "b": 311.63
+          },
+          "crop_bbox": {
+            "l": 468.95,
+            "t": 324.36,
+            "r": 490.82,
+            "b": 307.63
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 64,
+          "gt_text": "grant",
+          "gcv_text": "grant",
+          "page_no": 1,
+          "bbox": {
+            "l": 489.77,
+            "t": 320.17,
+            "r": 513.18,
+            "b": 311.63
+          },
+          "crop_bbox": {
+            "l": 485.77,
+            "t": 324.17,
+            "r": 517.18,
+            "b": 307.63
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 65,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 516.14,
+            "t": 320.17,
+            "r": 526.82,
+            "b": 311.63
+          },
+          "crop_bbox": {
+            "l": 512.14,
+            "t": 324.17,
+            "r": 530.82,
+            "b": 307.63
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 66,
+          "gt_text": "vigilance",
+          "gcv_text": "vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.77,
+            "t": 307.66,
+            "r": 136.36,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 95.77,
+            "t": 311.66,
+            "r": 140.36,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 67,
+          "gt_text": "clearance.",
+          "gcv_text": "clearance",
+          "page_no": 1,
+          "bbox": {
+            "l": 139.09,
+            "t": 307.66,
+            "r": 180.0,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 135.09,
+            "t": 311.66,
+            "r": 184.0,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 68,
+          "gt_text": "So",
+          "gcv_text": "So",
+          "page_no": 1,
+          "bbox": {
+            "l": 184.77,
+            "t": 307.66,
+            "r": 195.45,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 180.77,
+            "t": 311.66,
+            "r": 199.45,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 69,
+          "gt_text": "far,",
+          "gcv_text": "far",
+          "page_no": 1,
+          "bbox": {
+            "l": 198.18,
+            "t": 307.66,
+            "r": 210.68,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 194.18,
+            "t": 311.66,
+            "r": 214.68,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 70,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 215.23,
+            "t": 307.66,
+            "r": 230.0,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 211.23,
+            "t": 311.66,
+            "r": 234.0,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 71,
+          "gt_text": "Commission",
+          "gcv_text": "Commission",
+          "page_no": 1,
+          "bbox": {
+            "l": 232.73,
+            "t": 307.66,
+            "r": 283.86,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 228.73,
+            "t": 311.66,
+            "r": 287.86,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 72,
+          "gt_text": "has",
+          "gcv_text": "has",
+          "page_no": 1,
+          "bbox": {
+            "l": 287.5,
+            "t": 307.66,
+            "r": 302.05,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 283.5,
+            "t": 311.66,
+            "r": 306.05,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 73,
+          "gt_text": "not",
+          "gcv_text": "not",
+          "page_no": 1,
+          "bbox": {
+            "l": 304.55,
+            "t": 307.66,
+            "r": 319.32,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 300.55,
+            "t": 311.66,
+            "r": 323.32,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 74,
+          "gt_text": "been",
+          "gcv_text": "been",
+          "page_no": 1,
+          "bbox": {
+            "l": 322.27,
+            "t": 307.66,
+            "r": 343.18,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 318.27,
+            "t": 311.66,
+            "r": 347.18,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 75,
+          "gt_text": "collecting",
+          "gcv_text": "collecting",
+          "page_no": 1,
+          "bbox": {
+            "l": 346.14,
+            "t": 307.66,
+            "r": 387.05,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 342.14,
+            "t": 311.66,
+            "r": 391.05,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 76,
+          "gt_text": "information",
+          "gcv_text": "information",
+          "page_no": 1,
+          "bbox": {
+            "l": 388.86,
+            "t": 307.66,
+            "r": 439.77,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 384.86,
+            "t": 311.66,
+            "r": 443.77,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 77,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 442.5,
+            "t": 307.66,
+            "r": 453.64,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 438.5,
+            "t": 311.66,
+            "r": 457.64,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 78,
+          "gt_text": "AIPR",
+          "gcv_text": "AIPR",
+          "page_no": 1,
+          "bbox": {
+            "l": 456.36,
+            "t": 307.66,
+            "r": 476.36,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 452.36,
+            "t": 311.66,
+            "r": 480.36,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 79,
+          "gt_text": "filing",
+          "gcv_text": "filing",
+          "page_no": 1,
+          "bbox": {
+            "l": 478.86,
+            "t": 307.66,
+            "r": 500.0,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 474.86,
+            "t": 311.66,
+            "r": 504.0,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 80,
+          "gt_text": "while",
+          "gcv_text": "while",
+          "page_no": 1,
+          "bbox": {
+            "l": 502.5,
+            "t": 307.66,
+            "r": 525.45,
+            "b": 299.32
+          },
+          "crop_bbox": {
+            "l": 498.5,
+            "t": 311.66,
+            "r": 529.45,
+            "b": 295.32
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 81,
+          "gt_text": "considering",
+          "gcv_text": "considering",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.77,
+            "t": 294.96,
+            "r": 148.18,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 95.77,
+            "t": 298.96,
+            "r": 152.18,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 82,
+          "gt_text": "proposals",
+          "gcv_text": "proposals",
+          "page_no": 1,
+          "bbox": {
+            "l": 151.59,
+            "t": 294.96,
+            "r": 192.73,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 147.59,
+            "t": 298.96,
+            "r": 196.73,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 83,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 196.36,
+            "t": 294.96,
+            "r": 209.32,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 192.36,
+            "t": 298.96,
+            "r": 213.32,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 84,
+          "gt_text": "vigilance",
+          "gcv_text": "vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 211.59,
+            "t": 294.96,
+            "r": 249.55,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 207.59,
+            "t": 298.96,
+            "r": 253.55,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 85,
+          "gt_text": "clearance,",
+          "gcv_text": "clearance",
+          "page_no": 1,
+          "bbox": {
+            "l": 252.95,
+            "t": 294.96,
+            "r": 293.86,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 248.95,
+            "t": 298.96,
+            "r": 297.86,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 86,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 299.32,
+            "t": 294.96,
+            "r": 315.0,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 295.32,
+            "t": 298.96,
+            "r": 319.0,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 87,
+          "gt_text": "screening",
+          "gcv_text": "screening",
+          "page_no": 1,
+          "bbox": {
+            "l": 318.64,
+            "t": 294.96,
+            "r": 359.55,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 314.64,
+            "t": 298.96,
+            "r": 363.55,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 88,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 362.27,
+            "t": 294.96,
+            "r": 371.59,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 358.27,
+            "t": 298.96,
+            "r": 375.59,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 89,
+          "gt_text": "this",
+          "gcv_text": "this",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.0,
+            "t": 294.96,
+            "r": 390.68,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 371.0,
+            "t": 298.96,
+            "r": 394.68,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 90,
+          "gt_text": "effect",
+          "gcv_text": "effect",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.32,
+            "t": 294.96,
+            "r": 419.32,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 390.32,
+            "t": 298.96,
+            "r": 423.32,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 91,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 422.95,
+            "t": 294.96,
+            "r": 429.09,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 418.95,
+            "t": 298.96,
+            "r": 433.09,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 92,
+          "gt_text": "left",
+          "gcv_text": "left",
+          "page_no": 1,
+          "bbox": {
+            "l": 432.95,
+            "t": 294.96,
+            "r": 447.05,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 428.95,
+            "t": 298.96,
+            "r": 451.05,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 93,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 450.23,
+            "t": 294.96,
+            "r": 459.55,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 446.23,
+            "t": 298.96,
+            "r": 463.55,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 94,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 462.73,
+            "t": 294.96,
+            "r": 478.18,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 458.73,
+            "t": 298.96,
+            "r": 482.18,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 95,
+          "gt_text": "concerned",
+          "gcv_text": "concerned",
+          "page_no": 1,
+          "bbox": {
+            "l": 481.14,
+            "t": 294.96,
+            "r": 525.23,
+            "b": 287.02
+          },
+          "crop_bbox": {
+            "l": 477.14,
+            "t": 298.96,
+            "r": 529.23,
+            "b": 283.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 96,
+          "gt_text": "Ministry/Department/Organization.",
+          "gcv_text": "Ministry",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.77,
+            "t": 282.06,
+            "r": 134.77,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 95.77,
+            "t": 286.06,
+            "r": 138.77,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 97,
+          "gt_text": "However,",
+          "gcv_text": "/",
+          "page_no": 1,
+          "bbox": {
+            "l": 134.32,
+            "t": 282.06,
+            "r": 138.86,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 130.32,
+            "t": 286.06,
+            "r": 142.86,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 98,
+          "gt_text": "some",
+          "gcv_text": "some",
+          "page_no": 1,
+          "bbox": {
+            "l": 302.73,
+            "t": 282.06,
+            "r": 325.91,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 298.73,
+            "t": 286.06,
+            "r": 329.91,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 99,
+          "gt_text": "proposals",
+          "gcv_text": "proposals",
+          "page_no": 1,
+          "bbox": {
+            "l": 331.59,
+            "t": 282.06,
+            "r": 372.73,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 327.59,
+            "t": 286.06,
+            "r": 376.73,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 100,
+          "gt_text": "received",
+          "gcv_text": "received",
+          "page_no": 1,
+          "bbox": {
+            "l": 378.86,
+            "t": 282.06,
+            "r": 414.55,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 374.86,
+            "t": 286.06,
+            "r": 418.55,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 101,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 421.14,
+            "t": 282.06,
+            "r": 432.73,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 417.14,
+            "t": 286.06,
+            "r": 436.73,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 102,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 436.59,
+            "t": 282.06,
+            "r": 451.14,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 432.59,
+            "t": 286.06,
+            "r": 455.14,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 103,
+          "gt_text": "Commission",
+          "gcv_text": "Commission",
+          "page_no": 1,
+          "bbox": {
+            "l": 456.59,
+            "t": 282.06,
+            "r": 508.18,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 452.59,
+            "t": 286.06,
+            "r": 512.18,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 104,
+          "gt_text": "do",
+          "gcv_text": "do",
+          "page_no": 1,
+          "bbox": {
+            "l": 513.64,
+            "t": 282.06,
+            "r": 525.68,
+            "b": 273.72
+          },
+          "crop_bbox": {
+            "l": 509.64,
+            "t": 286.06,
+            "r": 529.68,
+            "b": 269.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 105,
+          "gt_text": "contain",
+          "gcv_text": "contain",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.55,
+            "t": 269.35,
+            "r": 130.91,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 95.55,
+            "t": 273.35,
+            "r": 134.91,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 106,
+          "gt_text": "information",
+          "gcv_text": "information",
+          "page_no": 1,
+          "bbox": {
+            "l": 133.41,
+            "t": 269.35,
+            "r": 183.64,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 129.41,
+            "t": 273.35,
+            "r": 187.64,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 107,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 186.59,
+            "t": 269.35,
+            "r": 197.05,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 182.59,
+            "t": 273.35,
+            "r": 201.05,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 108,
+          "gt_text": "AIPR",
+          "gcv_text": "AIPR",
+          "page_no": 1,
+          "bbox": {
+            "l": 199.55,
+            "t": 269.35,
+            "r": 219.09,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 195.55,
+            "t": 273.35,
+            "r": 223.09,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 109,
+          "gt_text": "filing",
+          "gcv_text": "filing",
+          "page_no": 1,
+          "bbox": {
+            "l": 221.82,
+            "t": 269.35,
+            "r": 243.64,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 217.82,
+            "t": 273.35,
+            "r": 247.64,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 110,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 245.91,
+            "t": 269.35,
+            "r": 256.82,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 241.91,
+            "t": 273.35,
+            "r": 260.82,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 111,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 258.18,
+            "t": 269.35,
+            "r": 272.73,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 254.18,
+            "t": 273.35,
+            "r": 276.73,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 112,
+          "gt_text": "concerned",
+          "gcv_text": "concerned",
+          "page_no": 1,
+          "bbox": {
+            "l": 275.45,
+            "t": 269.35,
+            "r": 319.55,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 271.45,
+            "t": 273.35,
+            "r": 323.55,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 113,
+          "gt_text": "officers,",
+          "gcv_text": "officers",
+          "page_no": 1,
+          "bbox": {
+            "l": 322.95,
+            "t": 269.35,
+            "r": 354.09,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 318.95,
+            "t": 273.35,
+            "r": 358.09,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 114,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 359.32,
+            "t": 269.35,
+            "r": 374.77,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 355.32,
+            "t": 273.35,
+            "r": 378.77,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 115,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 377.5,
+            "t": 269.35,
+            "r": 391.82,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 373.5,
+            "t": 273.35,
+            "r": 395.82,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 116,
+          "gt_text": "same",
+          "gcv_text": "same",
+          "page_no": 1,
+          "bbox": {
+            "l": 394.77,
+            "t": 269.35,
+            "r": 417.5,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 390.77,
+            "t": 273.35,
+            "r": 421.5,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 117,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 419.55,
+            "t": 269.35,
+            "r": 427.05,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 415.55,
+            "t": 273.35,
+            "r": 431.05,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 118,
+          "gt_text": "taken",
+          "gcv_text": "taken",
+          "page_no": 1,
+          "bbox": {
+            "l": 428.86,
+            "t": 269.35,
+            "r": 452.73,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 424.86,
+            "t": 273.35,
+            "r": 456.73,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 119,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 455.45,
+            "t": 269.35,
+            "r": 463.41,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 451.45,
+            "t": 273.35,
+            "r": 467.41,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 120,
+          "gt_text": "account",
+          "gcv_text": "account",
+          "page_no": 1,
+          "bbox": {
+            "l": 465.68,
+            "t": 269.35,
+            "r": 500.68,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 461.68,
+            "t": 273.35,
+            "r": 504.68,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 121,
+          "gt_text": "while",
+          "gcv_text": "while",
+          "page_no": 1,
+          "bbox": {
+            "l": 502.27,
+            "t": 269.35,
+            "r": 525.91,
+            "b": 261.02
+          },
+          "crop_bbox": {
+            "l": 498.27,
+            "t": 273.35,
+            "r": 529.91,
+            "b": 257.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 122,
+          "gt_text": "finalising",
+          "gcv_text": "finalising",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.32,
+            "t": 256.65,
+            "r": 136.82,
+            "b": 249.31
+          },
+          "crop_bbox": {
+            "l": 95.32,
+            "t": 260.65,
+            "r": 140.82,
+            "b": 245.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 123,
+          "gt_text": "input",
+          "gcv_text": "input",
+          "page_no": 1,
+          "bbox": {
+            "l": 139.32,
+            "t": 256.65,
+            "r": 161.14,
+            "b": 249.31
+          },
+          "crop_bbox": {
+            "l": 135.32,
+            "t": 260.65,
+            "r": 165.14,
+            "b": 245.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 124,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 163.64,
+            "t": 256.65,
+            "r": 174.09,
+            "b": 249.31
+          },
+          "crop_bbox": {
+            "l": 159.64,
+            "t": 260.65,
+            "r": 178.09,
+            "b": 245.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 125,
+          "gt_text": "their",
+          "gcv_text": "their",
+          "page_no": 1,
+          "bbox": {
+            "l": 176.59,
+            "t": 256.65,
+            "r": 197.5,
+            "b": 249.31
+          },
+          "crop_bbox": {
+            "l": 172.59,
+            "t": 260.65,
+            "r": 201.5,
+            "b": 245.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 126,
+          "gt_text": "vigilance",
+          "gcv_text": "vigilance",
+          "page_no": 1,
+          "bbox": {
+            "l": 199.09,
+            "t": 256.65,
+            "r": 236.59,
+            "b": 249.31
+          },
+          "crop_bbox": {
+            "l": 195.09,
+            "t": 260.65,
+            "r": 240.59,
+            "b": 245.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 127,
+          "gt_text": "status.",
+          "gcv_text": "status",
+          "page_no": 1,
+          "bbox": {
+            "l": 238.86,
+            "t": 256.65,
+            "r": 264.55,
+            "b": 249.31
+          },
+          "crop_bbox": {
+            "l": 234.86,
+            "t": 260.65,
+            "r": 268.55,
+            "b": 245.31
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/18": {
+      "self_ref": "#/texts/18",
+      "label": "paragraph",
+      "full_gt_text": "Contd.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Contd.",
+          "gcv_text": "Contd",
+          "page_no": 1,
+          "bbox": {
+            "l": 497.73,
+            "t": 235.61,
+            "r": 522.5,
+            "b": 230.05
+          },
+          "crop_bbox": {
+            "l": 493.73,
+            "t": 239.61,
+            "r": 526.5,
+            "b": 226.05
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

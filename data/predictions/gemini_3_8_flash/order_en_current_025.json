@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_current_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        60.69,
+        32.84,
+        98.77,
+        32.84,
+        98.77,
+        44.63,
+        60.69,
+        44.63
+      ],
+      "text": "तमिलनाडु"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        487.9,
+        35.36,
+        533.12,
+        35.36,
+        533.12,
+        42.1,
+        487.9,
+        42.1
+      ],
+      "text": "Tamil Nadu"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        58.31,
+        47.99,
+        533.72,
+        47.99,
+        533.72,
+        703.91,
+        58.31,
+        703.91
+      ],
+      "html": "<table><thead></thead><tbody></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        289.76,
+        715.7,
+        304.05,
+        715.7,
+        304.05,
+        723.28,
+        289.76,
+        723.28
+      ],
+      "text": "342"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 1421,
+      "total": 3026
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000729,
+      "batch": 0.000364
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.07289,
+      "batch": 0.036445,
+      "savings": 0.036445,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

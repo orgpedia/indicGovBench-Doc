@@ -1,0 +1,74 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        209.7,
+        69.8,
+        329.4,
+        69.8,
+        329.4,
+        87.4,
+        209.7,
+        87.4
+      ],
+      "text": "25\n2\nMINISTERS OF STATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        67.1,
+        73.2,
+        555.3,
+        73.2,
+        555.3,
+        606.5,
+        67.1,
+        606.5
+      ],
+      "text": "1. Dr. Henry Austin ..... Minister of State in the Ministry of Commerce and Civil Supplies.\n2. Shri Bedabrata Barua ..... Minister of State in the Ministry of External Affairs.\n3. Smt. Rashida Haque Chaudhury ..... Minister of State in the Ministry of Education and Culture.\n4. Shri V. Kishore Chandra S. Das ..... Minister of State in the Ministry of Steel, Mines and Coal.\n5. Shri K. Copal ..... Minister of State for Parliamentary Affairs to be also the Minister of State in the Ministry of Finance.\n6. Shri M.V. Krishnappa ..... Minister of State in the Ministry of Agriculture and Irrigation.\n7. Shri Dhenik Lal Mandal ..... Minister of State in the Ministry of Home Affairs.\n8. Shri Nathuram Mirdha ..... Minister of State in the Ministry of Finance.\n9. Shri Janashwar Mishra ..... Minister of State of Shipping and Transport.\n10. Shri Narsingh ..... Minister of State in the Ministry of Communications.\n11. Shri B. Rechalah ..... Minister of State in the Ministry of Industry.\n12. Shri Saugeta Roy ..... Minister of State in the Ministry of Petroleum, Chemicals and Fertilizers.\n13. Shri P.M. Snyad ..... Minister of State in the Ministry of Steel, Mines and Coal.\n14. Shri T.S. Shrangare ..... Minister of State in the Ministry of Communications.\n15. Shri Bhanu Pratap Singh ..... Minister of State of Rural Reconstruction.\n16. Shri Jagbir Singh ..... Minister of State in the Ministry of Defence."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        96.7,
+        637.2,
+        161.1,
+        637.2,
+        161.1,
+        659.9,
+        96.7,
+        659.9
+      ],
+      "text": "60 copies"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003,
+      "batch": 0.003
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.3,
+      "batch": 0.3,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "doc_id": "order_hi_current_004",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        88.06,
+        94.3,
+        503.37,
+        94.3,
+        503.37,
+        584.35,
+        88.06,
+        584.35
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>क्र0</td><td>धारा</td><td>प्रथम पर्यवेक्षण</td><td>वारिष्ठ पर्यवेक्षण अधिकारी</td></tr><tr><td>01</td><td>धारा 113 आंतकवादी कृत्य Terrorist Act</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1605,
+      "output": 409,
+      "total": 2014
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.000243,
+      "batch": 0.000122
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.024307,
+      "batch": 0.012154,
+      "savings": 0.012154,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

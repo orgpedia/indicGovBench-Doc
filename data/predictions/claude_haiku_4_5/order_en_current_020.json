@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_current_020",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "पश्चिम बंगाल\nWest Bengal"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        799.9,
+        0.0,
+        799.9
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td>315</td><td>सर्वश्री S/Shri प्रणव जैन Pranav Jain B.Tech</td><td>RR 20251035 Delhi</td><td>21/05/1993 25/08/2025</td><td></td><td></td></tr><tr><td>316</td><td>सौम्या कृष्णन Sowmya Krishnan B.Sc.</td><td>RR 20251054 Kerala</td><td>24/10/1997 25/08/2025</td><td></td><td></td></tr><tr><td>317</td><td>वैभव सर्वेश पांडे Vaibhav Sarvesh Pandey B.Tech</td><td>RR 20251058 Uttar Pradesh</td><td>18/11/1995 25/08/2025</td><td></td><td></td></tr><tr><td>318</td><td>शुभम कौरव कौरव Shubham Kaurav B.Tech</td><td>RR 20251062 Madhya Pradesh</td><td>28/07/1998 25/08/2025</td><td></td><td></td></tr><tr><td>319</td><td>शुभम मिश्रा Shubham Mishra B.Tech</td><td>RR 20251064 Uttar Pradesh</td><td>11/04/1997 08/12/2025</td><td></td><td></td></tr><tr><td>320</td><td>आकाश कुमार राय Akash Kumar Rai B.Tech., M.A.</td><td>RR 20251065 Delhi</td><td>19/12/1996 15/09/2025</td><td></td><td></td></tr><tr><td>321</td><td>रवींद्र खोजा Ravindra Khoja B.Tech</td><td>RR 20251095 Rajasthan</td><td>01/07/1996 25/08/2025</td><td></td><td></td></tr><tr><td>322</td><td>शकील अहमद Shakeel Ahmed B.Tech</td><td>RR 20251098 Uttar Pradesh</td><td>18/06/1997 25/08/2025</td><td></td><td></td></tr><tr><td>323</td><td>दीपक चौधरी Deepak Choudhary B.Tech</td><td>RR 20251101 Rajasthan</td><td>08/02/1994 25/08/2025</td><td></td><td></td></tr><tr><td>324</td><td>अभिषील जैसवाल Abhisheel Jaiswal L.L.M.</td><td>RR 20251106 Madhya Pradesh</td><td>25/09/1997 25/08/2025</td><td></td><td></td></tr><tr><td>325</td><td>डोन बिरदेव सिद्धप्पा Done Birdev Siddhappa B.Tech</td><td>RR 20251112 Maharashtra</td><td>27/09/1998 08/12/2025</td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        799.9,
+        595.0,
+        799.9,
+        595.0,
+        842.0,
+        0.0,
+        842.0
+      ],
+      "text": "450"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1925,
+      "output": 1075,
+      "total": 3000
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.00584,
+      "batch": 0.00292
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.584,
+      "batch": 0.292,
+      "savings": 0.292,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

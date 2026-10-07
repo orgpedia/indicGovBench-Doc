@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        117.81,
+        146.51,
+        192.78,
+        146.51,
+        192.78,
+        505.2,
+        117.81,
+        505.2
+      ],
+      "text": "No. 55/4/CT-64(i)\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the 9th June 1964.\n-----"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        217.17,
+        159.98,
+        283.81,
+        159.98,
+        283.81,
+        594.45,
+        217.17,
+        594.45
+      ],
+      "text": "The undersigned is directed to state that the Members\nof the new Council of Ministers shown in the enclosed list\nassumed office with effect from the forenoon of Tuesday, June 9,\n1964."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        282.62,
+        245.86,
+        342.72,
+        245.86,
+        342.72,
+        630.66,
+        282.62,
+        630.66
+      ],
+      "text": "No. (D. P. Chopra\n for Cabinet Secretary."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        341.53,
+        341.85,
+        400.44,
+        341.85,
+        400.44,
+        635.71,
+        341.53,
+        635.71
+      ],
+      "text": "All Members of the Council of Ministers.\n-----"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        381.99,
+        359.53,
+        427.21,
+        359.53,
+        427.21,
+        649.18,
+        381.99,
+        649.18
+      ],
+      "text": "Copy with a copy of the enclosed to the\nPrincipal Private Secretary to the Prime Minister/the Private\nSecretary to the Prime Minister, for information.\n-----"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        423.04,
+        629.82,
+        452.2,
+        629.82,
+        452.2,
+        661.81,
+        423.04,
+        661.81
+      ],
+      "text": "P.T.O."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2441,
+      "total": 5735
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003265,
+      "batch": 0.001632
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.32645,
+      "batch": 0.163225,
+      "savings": 0.163225,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

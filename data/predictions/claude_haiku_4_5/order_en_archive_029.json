@@ -1,0 +1,174 @@
+{
+  "doc_id": "order_en_archive_029",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        0.0,
+        0.0,
+        595.0,
+        0.0,
+        595.0,
+        42.1,
+        0.0,
+        42.1
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        0.0,
+        42.1,
+        595.0,
+        42.1,
+        595.0,
+        126.3,
+        0.0,
+        126.3
+      ],
+      "text": "No. 55/1/1/77-CF\nGOVERNMENT OF INDIA(BHARAT SARKAR)\nCABINET SECRETARIAT(MANTHIMANDAL SACHIVALAYA)\nDepartment of Cabinet Affairs(Manthrimandal Karya Vibhag)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        0.0,
+        126.3,
+        595.0,
+        126.3,
+        595.0,
+        168.4,
+        0.0,
+        168.4
+      ],
+      "text": "New Delhi, 24 March, 1977.\nS. Uriire, 1999(S)."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        0.0,
+        168.4,
+        595.0,
+        168.4,
+        595.0,
+        294.7,
+        0.0,
+        294.7
+      ],
+      "text": "The undersigned is directed to say that the Members\nof the Council of Ministers shown in the attached list\nare relinquished charge of their respective portfolios with\neffect from the afternoon of March 24, 1977."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        0.0,
+        294.7,
+        595.0,
+        294.7,
+        595.0,
+        378.9,
+        0.0,
+        378.9
+      ],
+      "text": "2. Shri Morarji R. Desai has been sworn in as Prime\nMinister by the Acting President at 3-30 P.M. today,\n24 March, 1977. The Ministry of Home Affairs and kindly\ntake such action as may be considered necessary regarding\nissue of Gazette notifications, etc."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        0.0,
+        378.9,
+        595.0,
+        378.9,
+        595.0,
+        463.1,
+        0.0,
+        463.1
+      ],
+      "text": "S(K. Ramish)\nUnder Secretary to the Cabinet"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        0.0,
+        463.1,
+        595.0,
+        463.1,
+        595.0,
+        547.3,
+        0.0,
+        547.3
+      ],
+      "text": "To\n\nMinistry of Home Affairs\n(Shri K.R. Prabhu - Additional Secretary)\nS.S. Sydha"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        0.0,
+        547.3,
+        595.0,
+        547.3,
+        595.0,
+        631.5,
+        0.0,
+        631.5
+      ],
+      "text": "Copy with a copy of the enclosure, forwarded to\nthe Secretary-General, Lok Sabha Secretariat/Secretary-\nGeneral, Rajya Sabha Secretariat, for information."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        0.0,
+        631.5,
+        595.0,
+        631.5,
+        595.0,
+        715.7,
+        0.0,
+        715.7
+      ],
+      "text": "S(K. Ramish)\nUnder Secretary to the Cabinet."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1938,
+      "output": 729,
+      "total": 2667
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004466,
+      "batch": 0.002233
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.44664,
+      "batch": 0.22332,
+      "savings": 0.22332,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

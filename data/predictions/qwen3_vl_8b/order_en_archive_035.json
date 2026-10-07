@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_en_archive_035",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        64.26,
+        69.89,
+        545.62,
+        69.89,
+        545.62,
+        612.13,
+        64.26,
+        612.13
+      ],
+      "text": "MINISTERS OF STATE\n1. Dr. Henry Austin\nMinister of State in the Ministry of\nCommerce and Civil Supplies.\n2. Shri Bedabrata Barua\nMinister of State in the Ministry of\nExternal Affairs.\n3. Smt. Rashida Haque\nChaudhury\nMinister of State in the Ministry of\nEducation and Culture.\n4. Shri V. Kishore Chandra\nS. Deo\nMinister of State in the Ministry of\nSteel, Mines and Coal.\n5. Shri K. Gopal\nMinister of State for Parliamentary\nAffairs to be also the Minister of\nState in the Ministry of Finance.\n6. Shri M.V. Krishnappa\nMinister of State in the Ministry of\nAgriculture and Irrigation.\n7. Shri Dhanik Lal Mandal\nMinister of State in the Ministry of\nHome Affairs.\n8. Shri Nathuram Mircha\nMinister of State in the Ministry of\nFinance.\n9. Shri Janeshwar Mishra\nMinister of State of Shipping and\nTransport.\n10. Shri Narsingh\nMinister of State in the Ministry of\nCommunications.\n11. Shri B. Rechalah\nMinister of State in the Ministry of\nIndustry.\n12. Shri Saugata Roy\nMinister of State in the Ministry of\nPetroleum, Chemicals and Fertilizers.\n13. Shri P.M. Sayeed\nMinister of State in the Ministry of\nSteel, Mines and Coal.\n14. Shri T.S. Shrangare\nMinister of State in the Ministry of\nCommunications.\n15. Shri Bhanu Pratap Singh\nMinister of State of Rural Reconstruction.\n16. Shri Jagbir Singh\nMinister of State in the Ministry of\nDefence."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 459,
+      "total": 2746
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.22
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_en_current_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        58.76,
+        31.43,
+        100.96,
+        31.43,
+        100.96,
+        45.49,
+        58.76,
+        45.49
+      ],
+      "text": "तमिलनाडु"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        484.11,
+        31.43,
+        534.59,
+        31.43,
+        534.59,
+        43.84,
+        484.11,
+        43.84
+      ],
+      "text": "Tamil Nadu"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        57.1,
+        47.97,
+        532.93,
+        47.97,
+        532.93,
+        693.95,
+        57.1,
+        693.95
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>205</td><td>केलकर सुधमण्य भालचंद्र Kelkar Subhramanya Bhalchandra BBM (Agri), M.A. (Political Science)</td><td>RR 20201106 Maharashtra</td><td>17/01/1993 28/12/2020</td><td>DCP, South, Salem City 21/06/2025 Level 11</td><td></td></tr><tr><td>206</td><td>कंभम सैमुअल प्रवीण गौतम Kambham Samuel Praveen Gowtham B.Tech.</td><td>RR 20201124 Andhra Pradesh</td><td>14/05/1996 28/12/2020</td><td>DCP, North, Tiruppur City 18/06/2025 Level 11</td><td></td></tr><tr><td>207</td><td>स्टालिन आर Stalin R Graduate with Animal Husbandry &amp; Vet. Science</td><td>RR 20201135 Tamil Nadu</td><td>14/05/1992 10/10/2020</td><td>SP, Kanniyakumari District 03/01/2025 Level 11</td><td></td></tr><tr><td>208</td><td>गरड करुण उद्धवराव Garad Karun Uddhavrao M.Tech. (Aero Space)</td><td>RR 20201140 Maharashtra</td><td>21/02/1987 28/12/2020</td><td>SP, Tiruvarur District 01/01/2025 Level 12</td><td></td></tr><tr><td>209</td><td>बलवीर सिंह Balveer Singh B.Tech.</td><td>RR 20201147 Rajasthan</td><td>17/05/1984 28/12/2020</td><td>ASP, Special Task Force, Erode 01/12/2025 Level 10</td><td></td></tr><tr><td>**Allotment Year : 2021**</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>210</td><td>शिव रमन एन यु SIVA RAMAN N U B.E.</td><td>RR 20211110 Tamil Nadu</td><td>08/06/1995 05/12/2021</td><td>DCP, North, Salem City 05/03/2025 Level 11</td><td></td></tr><tr><td>211</td><td>प्रसन्नकुमार वी PRASSANNAKUMAR V MBBS</td><td>RR 20211115 Puducherry</td><td>23/10/1992 28/03/2022</td><td>SP, Tirunelveli District 01/01/2026 Level 11</td><td></td></tr><tr><td>212</td><td>शहनाज आई SHAHNAZ I B.Tech</td><td>RR 20211043 Tamil Nadu</td><td>26/12/1993 05/12/2021</td><td>SP-I Cyber Crimes Div Chennai 04/03/2025 Level 11</td><td></td></tr><tr><td>213</td><td>सिबिन पि SIBIN P B.Tech</td><td>RR 20211069 Kerala</td><td>26/10/1996 05/12/2021</td><td>SP, Chengalpattu District 01/01/2026 Level 11</td><td></td></tr><tr><td>214</td><td>उथयाकुमार आर UTHAYAKUMAR R B.E.</td><td>RR 20211094 Tamil Nadu</td><td>12/02/1992 05/12/2021</td><td>DCP, Anna Nagar, Greater Chennai Police 01/01/2026 Level 11</td><td></td></tr><tr><td>215</td><td>रवींद्र कुमार गुप्ता RAVINDRA KUMAR GUPTA B.Tech</td><td>RR 20211155 Uttar Pradesh</td><td>03/12/1997 28/03/2022</td><td>ASP, Villupuram Sub- Division, Villupuram District 09/09/2024 Level 10</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        287.98,
+        712.97,
+        306.19,
+        712.97,
+        306.19,
+        724.55,
+        287.98,
+        724.55
+      ],
+      "text": "342"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

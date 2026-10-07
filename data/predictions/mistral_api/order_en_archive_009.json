@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_en_archive_009",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        230.88,
+        24.81,
+        398.87,
+        24.81,
+        398.87,
+        37.22,
+        230.88,
+        37.22
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        270.61,
+        38.05,
+        359.98,
+        38.05,
+        359.98,
+        49.63,
+        270.61,
+        49.63
+      ],
+      "text": "(as on 11.12.2018)"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        92.68,
+        52.94,
+        545.35,
+        52.94,
+        545.35,
+        171.21,
+        92.68,
+        171.21
+      ],
+      "html": "<table><thead><tr><td>Shri Narendra Modi</td><td>Prime Minister and also in-charge of: Ministry of Personnel, Public Grievances and Pensions; Department of Atomic Energy; Department of Space; All important policy issues, and All other portfolios not allocated to any Minister.</td></tr></thead><tbody></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        261.5,
+        176.17,
+        368.25,
+        176.17,
+        368.25,
+        188.58,
+        261.5,
+        188.58
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        91.03,
+        191.89,
+        545.35,
+        191.89,
+        545.35,
+        729.51,
+        91.03,
+        729.51
+      ],
+      "html": "<table><thead><tr><td>1.</td><td>Shri Raj Nath Singh</td><td>Minister of Home Affairs.</td></tr></thead><tbody><tr><td>2.</td><td>Smt. Sushma Swaraj</td><td>Minister of External Affairs.</td></tr><tr><td>3.</td><td>Shri Arun Jaitley</td><td>Minister of Finance; and Minister of Corporate Affairs.</td></tr><tr><td>4.</td><td>Shri Nitin Jairam Gadkari</td><td>Minister of Road Transport and Highways; Minister of Shipping; and Minister of Water Resources, River Development and Ganga Rejuvenation.</td></tr><tr><td>5.</td><td>Shri Suresh Prabhu</td><td>Minister of Commerce and Industry; and Minister of Civil Aviation.</td></tr><tr><td>6.</td><td>Shri D.V. Sadananda Gowda</td><td>Minister of Statistics and Programme Implementation; and Minister of Chemicals and Fertilizers.</td></tr><tr><td>7.</td><td>Sushri Uma Bharati</td><td>Minister of Drinking Water and Sanitation.</td></tr><tr><td>8.</td><td>Shri Ramvilas Paswan</td><td>Minister of Consumer Affairs, Food and Public Distribution.</td></tr><tr><td>9.</td><td>Smt. Maneka Sanjay Gandhi</td><td>Minister of Women and Child Development.</td></tr><tr><td>10.</td><td>Shri Ravi Shankar Prasad</td><td>Minister of Law and Justice; and Minister of Electronics and Information Technology.</td></tr><tr><td>11.</td><td>Shri Jagat Prakash Nadda</td><td>Minister of Health and Family Welfare.</td></tr><tr><td>12.</td><td>Shri Anant Geete</td><td>Minister of Heavy Industries and Public Enterprises.</td></tr><tr><td>13.</td><td>Smt. Harsimrat Kaur Badal</td><td>Minister of Food Processing Industries.</td></tr><tr><td>14.</td><td>Shri Narendra Singh Tomar</td><td>Minister of Rural Development; Minister of Panchayati Raj; Minister of Mines; and Minister of Parliamentary Affairs.</td></tr><tr><td>15.</td><td>Shri Chaudhary Birender Singh</td><td>Minister of Steel.</td></tr><tr><td>16.</td><td>Shri Jual Oram</td><td>Minister of Tribal Affairs.</td></tr><tr><td>17.</td><td>Shri Radha Mohan Singh</td><td>Minister of Agriculture and Farmers Welfare.</td></tr><tr><td>18.</td><td>Shri Thaawar Chand Gehlot</td><td>Minister of Social Justice and Empowerment.</td></tr><tr><td>19.</td><td>Smt. Smriti Zubin Irani</td><td>Minister of Textiles.</td></tr><tr><td>20.</td><td>Dr. Harsh Vardhan</td><td>Minister of Science and Technology; Minister of Earth Sciences; and Minister of Environment, Forest and Climate Change.</td></tr><tr><td>21.</td><td>Shri Prakash Javadekar</td><td>Minister of Human Resource Development.</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        523.83,
+        730.34,
+        529.62,
+        730.34,
+        529.62,
+        741.09,
+        523.83,
+        741.09
+      ],
+      "text": "1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001,
+      "batch": 0.001
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.1,
+      "batch": 0.1,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

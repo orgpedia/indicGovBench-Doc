@@ -1,0 +1,145 @@
+{
+  "doc_id": "order_en_archive_004",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        529.55,
+        38.73,
+        556.92,
+        38.73,
+        556.92,
+        63.15,
+        529.55,
+        63.15
+      ],
+      "text": "94"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        327.25,
+        66.52,
+        558.11,
+        66.52,
+        558.11,
+        219.76,
+        327.25,
+        219.76
+      ],
+      "text": "or the other administrative ground or on the ground that the necessary material for placement before the Committees is not ready, the requirement of convening regular meetings of the Committee should be dispensed with only after a certificate has been issued by the appointing authority that there are no vacancies to be filled by promotion or no officers are due for promotion / confirmation during the year in question."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        329.63,
+        229.02,
+        565.25,
+        229.02,
+        565.25,
+        546.46,
+        329.63,
+        546.46
+      ],
+      "text": "It is essential that the number of vacancies in respect of which a panel is to be prepared should be estimated as accurately as possible for this purpose, the vacancies to be taken into account should be the clear vacancies arising in a grade due to death, retirement, resignation, promotions and deputation. As regards vacancies arising out of deputation only those cases of deputation for periods exceeding 3 years should be taken into account taking due note of the number of deputation likely to return to the cadre. Purely short term vacancies created as a result of the officers proceeding on leave, training or on deputation for a short-term period etc. should not be taken into account for the purpose of preparation of a panel. In cases where there has been delay in holding the Committee meetings for a year or more, vacancies should be indicated year-wise separately."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        120.19,
+        234.92,
+        316.54,
+        234.92,
+        316.54,
+        264.39,
+        120.19,
+        264.39
+      ],
+      "text": "3. DETERMINATION OF VACANCIES 3.1"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        337.36,
+        555.72,
+        571.2,
+        555.72,
+        571.2,
+        735.07,
+        337.36,
+        735.07
+      ],
+      "text": "The proposals should be completed and submitted to the Committee well in time. No proposal for holding a Committee should be sent until and unless at least 90% of the ACRs (up-to date and complete) are available. Every effort should be made to keep the ACR dossiers, up-to-date lest this aspect is advanced as the reason for not holding the Committee meetings in time, the officer referred in para 2 should also be responsible for monitoring the completion of the ACR dossiers."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        127.33,
+        560.77,
+        323.68,
+        560.77,
+        323.68,
+        617.19,
+        127.33,
+        617.19
+      ],
+      "text": "4. PAPERS TO BE PUT UP FOR CONSIDERATION BY COMMITTEES 4.1"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        223.12,
+        794.85,
+        375.44,
+        794.85,
+        375.44,
+        831.9,
+        223.12,
+        831.9
+      ],
+      "text": "[Non-Text]"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3344,
+      "output": 563,
+      "total": 3907
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.11
+    },
+    "native_costs": {
+      "realtime": 0.003758,
+      "batch": 0.001879
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.375822,
+      "batch": 0.187911,
+      "savings": 0.187911,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

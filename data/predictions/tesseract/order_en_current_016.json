@@ -1,0 +1,205 @@
+{
+  "doc_id": "order_en_current_016",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        459.42,
+        44.15,
+        540.15,
+        44.15,
+        540.15,
+        56.39,
+        459.42,
+        56.39
+      ],
+      "text": "ANNEXURE - JI"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        51.02,
+        72.71,
+        362.17,
+        72.71,
+        362.17,
+        91.42,
+        51.02,
+        91.42
+      ],
+      "text": "TO BE FILLED BY THE CADRE CONTROLLING AUTHORITY"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        49.82,
+        112.3,
+        177.73,
+        112.3,
+        177.73,
+        124.3,
+        49.82,
+        124.3
+      ],
+      "text": "NAME OF THE OFFICER;"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        47.43,
+        138.69,
+        329.6,
+        138.69,
+        329.6,
+        218.6,
+        47.43,
+        218.6
+      ],
+      "text": "SERVICE : CADRE;\nBATCH: ate of Birth:\ni Whether any disciplinary proceedings"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        81.44,
+        217.16,
+        293.67,
+        217.16,
+        293.67,
+        242.59,
+        81.44,
+        242.59
+      ],
+      "text": "have been initiated against the officer during\nhis career, so far. If yes, details thereof"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        45.51,
+        255.31,
+        310.2,
+        255.31,
+        310.2,
+        357.53,
+        45.51,
+        357.53
+      ],
+      "text": "2 Whether any complaint including that of\ncorruption, against the officer, which\nin view of the State Government/\nCadre Controlling Authority may have a\ndirect bearing/relevance on the vigilance status/\nIntegrity of the officer as on date,\nIs pending against the\nofficer. If so, details thereof."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        41.68,
+        372.17,
+        245.76,
+        372.17,
+        245.76,
+        424.48,
+        41.68,
+        424.48
+      ],
+      "text": "3 Whether any preliminary inquiry or\nany other vigilance related matter is\npending against the officer. If so,\nfull facts of the pending matter."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        39.76,
+        437.2,
+        256.3,
+        437.2,
+        256.3,
+        498.39,
+        39.76,
+        498.39
+      ],
+      "text": "4. Whether any criminal proceedings\nwere registered against the officer\nduring his career so far. If so, the\ndetails/present status and the final out\ncome thereof.’"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        37.85,
+        514.46,
+        221.81,
+        514.46,
+        221.81,
+        539.66,
+        37.85,
+        539.66
+      ],
+      "text": "5. Whether the name of the officer\nappears in the Agreed List."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        258.7,
+        573.73,
+        523.38,
+        573.73,
+        523.38,
+        644.52,
+        258.7,
+        644.52
+      ],
+      "text": "Signature of the officer certifying the proforma\nName\nDesignation"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        320.97,
+        663.23,
+        352.11,
+        663.23,
+        352.11,
+        673.55,
+        320.97,
+        673.55
+      ],
+      "text": "Stamp"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": {
+      "gpu_type": "CPU",
+      "gpu_seconds": null
+    },
+    "native_costs": {
+      "realtime": 0.000295,
+      "batch": 0.000147
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.029495,
+      "batch": 0.014747,
+      "savings": 0.014747,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

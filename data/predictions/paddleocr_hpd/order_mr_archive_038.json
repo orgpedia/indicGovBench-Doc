@@ -1,0 +1,49 @@
+{
+  "doc_id": "order_mr_archive_038",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        46.9,
+        27.52,
+        434.29,
+        27.52,
+        434.29,
+        826.49,
+        46.9,
+        826.49
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>3.</td><td>4.</td><td>5.</td></tr><tr><td>6.</td><td>7.</td><td>8.</td></tr><tr><td>7.</td><td>8.</td><td>9.</td></tr><tr><td>8.</td><td>9.</td><td>10.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2320,
+      "output": 117,
+      "total": 2437
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.02
+    },
+    "native_costs": {
+      "realtime": 0.003758,
+      "batch": 0.001879
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.375822,
+      "batch": 0.187911,
+      "savings": 0.187911,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

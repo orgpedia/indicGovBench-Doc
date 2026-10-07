@@ -1,0 +1,174 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        265.97,
+        205.45,
+        404.6,
+        205.45,
+        404.6,
+        589.4,
+        265.97,
+        589.4
+      ],
+      "text": "The undersigned is directed to state that, with\neffect from the forenoon of February 16, 1963, the designation\nof Shri S.K. Dey will be \"Minister of Community Development\nand Cooperation\"."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        130.9,
+        269.44,
+        202.3,
+        269.44,
+        202.3,
+        621.4,
+        130.9,
+        621.4
+      ],
+      "text": "Copy forwarded to the Principal Private Secretary to the\nPrime Minister, Private Secretary to the Prime Minister, for\ninformation."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        170.76,
+        274.49,
+        226.1,
+        274.49,
+        226.1,
+        584.35,
+        170.76,
+        584.35
+      ],
+      "text": "(B. G. Rai)\nJoint Secretary to the Cabinet."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        200.52,
+        274.49,
+        247.52,
+        274.49,
+        247.52,
+        534.67,
+        200.52,
+        534.67
+      ],
+      "text": "To\n\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        379.61,
+        316.59,
+        498.61,
+        316.59,
+        498.61,
+        471.52,
+        379.61,
+        471.52
+      ],
+      "text": "No.55/4/CF-63\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the 16th February 1963.\nIMMEDIATE"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        86.87,
+        330.06,
+        105.91,
+        330.06,
+        105.91,
+        434.47,
+        86.87,
+        434.47
+      ],
+      "text": "MANUAL"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        495.63,
+        337.64,
+        512.29,
+        337.64,
+        512.29,
+        368.8,
+        495.63,
+        368.8
+      ],
+      "text": "No 77"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        107.1,
+        556.56,
+        120.19,
+        556.56,
+        120.19,
+        629.82,
+        107.1,
+        629.82
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        508.72,
+        603.71,
+        524.2,
+        603.71,
+        524.2,
+        638.24,
+        508.72,
+        638.24
+      ],
+      "text": "168."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2549,
+      "total": 5843
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003373,
+      "batch": 0.001686
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.33725,
+      "batch": 0.168625,
+      "savings": 0.168625,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

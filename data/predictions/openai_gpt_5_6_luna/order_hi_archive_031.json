@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        45.22,
+        230.71,
+        571.2,
+        230.71,
+        571.2,
+        264.39,
+        45.22,
+        264.39
+      ],
+      "text": "संभाग के माह __________ की दिनांक में अनुबंध की कंडिका 3 (सी) के कुल लंबित प्रकरणों का विवरण\nसंभाग ____________________ मण्डल ____________________ परिक्षेत्र ____________________"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        43.43,
+        271.12,
+        576.55,
+        271.12,
+        576.55,
+        578.45,
+        43.43,
+        578.45
+      ],
+      "html": "<table><thead><tr><td>स. क्र.</td><td>कार्य का नाम</td><td>अनुबंध क्रमांक</td><td>अनुमानित लागत</td><td>निविदा दर</td><td>निविदा लागत</td><td>ठेकेदार द्वारा किया कार्य</td><td>शेष कार्य</td><td>शेष कार्य की निविदा दर</td><td>शेष कार्य की निविदा लागत</td><td>मूल ठेकेदार से वसूलनीय राशि</td><td>समायोजन में ठेकेदार के नाम से उपलब्ध राशि</td><td>ठेकेदार से की गई वसूली की राशि</td><td>शेष वसूली योग्य राशि</td><td>शेष वसूली हेतु ठेकेदार के RRC प्रकरण का क्रमांक एवं दिनांक</td><td>शेष वसूली की गई राशि</td><td>रिमार्क के</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        443.87,
+        449.63,
+        535.5,
+        449.63,
+        535.5,
+        497.62,
+        443.87,
+        497.62
+      ],
+      "text": "कार्यपालन यंत्री\nलोक निर्माण विभाग\nसंभाग ________________\nजिला ________________"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        331.42,
+        804.95,
+        356.4,
+        804.95,
+        356.4,
+        823.48,
+        331.42,
+        823.48
+      ],
+      "text": "12"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3290,
+      "output": 2439,
+      "total": 5729
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.003262,
+      "batch": 0.001631
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.32615,
+      "batch": 0.163075,
+      "savings": 0.163075,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

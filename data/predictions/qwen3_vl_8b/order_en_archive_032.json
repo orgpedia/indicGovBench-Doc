@@ -1,0 +1,193 @@
+{
+  "doc_id": "order_en_archive_032",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        46.41,
+        58.94,
+        467.08,
+        58.94,
+        467.08,
+        347.75,
+        46.41,
+        347.75
+      ],
+      "text": "20 Shri Sontosh Mohan Dev Minister of Heavy Industries & Public Enterprises.\n21 Prof. Saif-ud-din Soz Minister of Water Resources.\n22 Shri Raghuvansh Prasad Singh Minister of Rural Development.\n23 Shri Priyaranjan Dasmunsi Minister without Portfolio.\n24 Shri Mani Shankar Aiyar Minister of Panchayati Raj and Minister of Development of North Eastern Region.\n25 Smt. Meira Kumar Minister of Social Justice & Empowerment.\n26 Shri Murli Deora Minister of Petroleum & Natural Gas.\n27 Smt. Ambika Soni Minister of Tourism and Minister of Culture.\n28 Shri A. Raja Minister of Communications and Information Technology.\n29 Shri Kapil Sibal Minister of Science & Technology and Minister of Earth Sciences.\n30 Shri Prem Chand Gupta Minister of Corporate Affairs."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        112.45,
+        359.53,
+        369.5,
+        359.53,
+        369.5,
+        379.74,
+        112.45,
+        379.74
+      ],
+      "text": "MINISTERS OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        35.1,
+        389.0,
+        453.39,
+        389.0,
+        453.39,
+        425.21,
+        35.1,
+        425.21
+      ],
+      "text": "1 Smt. Renuka Chowdhury Minister of State (Independent Charge) of the Ministry of Women & Child Development."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        35.1,
+        425.21,
+        453.39,
+        425.21,
+        453.39,
+        460.57,
+        35.1,
+        460.57
+      ],
+      "text": "2 Shri Subodh Kant Sahay Minister of State (Independent Charge) of the Ministry of Food Processing Industries."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        35.1,
+        460.57,
+        453.39,
+        460.57,
+        453.39,
+        495.94,
+        35.1,
+        495.94
+      ],
+      "text": "3 Shri Vilas Muttemwar Minister of State (Independent Charge) of the Ministry of New and Renewable Energy."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        35.1,
+        504.36,
+        453.39,
+        504.36,
+        453.39,
+        547.3,
+        35.1,
+        547.3
+      ],
+      "text": "4 Kumari Selja Minister of State (Independent Charge) of the Ministry of Housing and Urban Poverty Alleviation."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        35.1,
+        547.3,
+        453.39,
+        547.3,
+        453.39,
+        582.66,
+        35.1,
+        582.66
+      ],
+      "text": "5 Shri Praful Patel Minister of State (Independent Charge) of the Ministry of Civil Aviation."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        35.1,
+        582.66,
+        453.39,
+        582.66,
+        453.39,
+        648.34,
+        35.1,
+        648.34
+      ],
+      "text": "6 Shri G.K. Vasan Minister of State (Independent Charge) of the Ministry of Statistics & Programme Implementation and Minister of State (Independent Charge) of the Ministry of Labour & Employment."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        35.1,
+        648.34,
+        453.39,
+        648.34,
+        453.39,
+        679.49,
+        35.1,
+        679.49
+      ],
+      "text": "7 Dr. M.S. Gill Minister of State (Independent Charge) of the Ministry of Youth Affairs & Sports."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        35.1,
+        679.49,
+        453.39,
+        679.49,
+        453.39,
+        706.44,
+        35.1,
+        706.44
+      ],
+      "text": "8 Smt. Panabaka Lakshmi Minister of State (Independent Charge) of the Ministry of Health & Family Welfare."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2682,
+      "output": 845,
+      "total": 3527
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 0.4
+    },
+    "native_costs": {
+      "realtime": 0.007427,
+      "batch": 0.003713
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.74268,
+      "batch": 0.37134,
+      "savings": 0.37134,
+      "batch_discount_pct": 50.0
+    }
+  }
+}
