@@ -4,26 +4,35 @@
 
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
-PY_EXEC ?= python3
+
+# Load local environment variables from .env if present
+-include .env
+export
+
+VENV_DIR ?= .venv
+VENV_PROMPT ?= indicGovBench-Doc
+PYTHON_VERSION ?= 3.12
+PY_EXEC ?= $(shell if [ -f $(VENV_DIR)/bin/python3 ]; then echo $(VENV_DIR)/bin/python3; elif [ -f $(VENV_DIR)/bin/python ]; then echo $(VENV_DIR)/bin/python; else echo python3; fi)
 
 HF_REPO_ID ?= Orgpedia/indicGovBench-Doc
 LFS_ROOT ?= LFS/indicGovBench-Doc
 WORKSPACE_DIR ?= workspace
 PORT ?= 9091
 
-.PHONY: help setup_links verify_data sync_hf_pull sync_hf_push export_hf_dataset \
-        init_db reset_db eval_all eval_doc leaderboard serve cf_export cf_deploy test lint
+.PHONY: help install import setup_links verify_data sync_hf_pull sync_hf_push export_parquet \
+        init_db reset_db eval_all eval_doc leaderboard serve cf_export cf_sync_db cf_deploy cf_fetch_reports \
+        metrics_tutorial metrics_tutorial_html metrics_tutorial_md test_metrics_tutorial test lint
 
 help:
 	@echo "IndicGovBench-Doc: Benchmark & Curation Studio"
 	@echo "Usage: make <command> [OPTIONS]"
 	@echo ""
-	@echo "📦 Data & Hugging Face Hub (Pattern from mahgetNewGRs):"
+	@echo "🚀 Setup & Installation:"
+	@echo "  make install            Set up Python .venv and install all dependencies (uv or pip)"
+	@echo "  make import             Import all dataset files from Hugging Face Hub (huggingface-cli)"
 	@echo "  make setup_links        Configure zero-copy symlinks to local LFS storage"
 	@echo "  make verify_data        Verify ground-truth annotations and symlink integrity"
-	@echo "  make sync_hf_pull       Pull heavy assets (PDFs/Images) from Hugging Face Hub"
-	@echo "  make sync_hf_push       Push local heavy assets from LFS/ to Hugging Face Hub"
-	@echo "  make export_hf_dataset  Generate Hugging Face Parquet tables and metadata card"
+	@echo "  make sync_hf_push       Push local heavy assets from LFS/ to Hugging Face Hub (huggingface-cli)"
 	@echo ""
 	@echo "🗄️ Database & Evaluation Engine:"
 	@echo "  make init_db            Ingest data/ into workspace/benchmark.db"
@@ -35,15 +44,51 @@ help:
 	@echo "🖥️ Web Application & Deployment:"
 	@echo "  make serve [PORT=9091]  Launch unified Curation Studio & Benchmark Hub"
 	@echo "  make cf_export          Export pruned SQLite database & WebP images for Cloudflare"
+	@echo "  make cf_sync_db         Seed Cloudflare D1 database with schema & pruned benchmark data"
 	@echo "  make cf_deploy          Deploy Worker + Static Assets to Cloudflare Edge"
+	@echo "  make cf_fetch_reports   Fetch user error reports from Cloudflare D1"
+	@echo ""
+	@echo "📊 Metrics Tutorial & Test Harness:"
+	@echo "  make metrics_tutorial   Run 23 test cases & compile interactive tutorial (web/studio/static/metrics.html)"
+	@echo "  make test_metrics_tutorial Run unit test suite over metric boundary assertions"
 	@echo ""
 	@echo "🛠️ Developer Tools:"
 	@echo "  make test               Run unit & integration tests"
 	@echo "  make lint               Check code style with ruff"
 
 # ----------------------------------------------------------------------
-# 1. Data & LFS Management Targets
+# 1. Setup, Data & LFS Management Targets
 # ----------------------------------------------------------------------
+
+install:
+	@echo "🔧 Setting up Python $(PYTHON_VERSION) virtual environment and dependencies..."
+	@if command -v uv >/dev/null 2>&1; then \
+		echo "⚡ Using uv with Python $(PYTHON_VERSION)..."; \
+		if [ ! -d $(VENV_DIR) ]; then uv venv --python $(PYTHON_VERSION) --prompt $(VENV_PROMPT) $(VENV_DIR); fi; \
+		uv pip install -e ".[dev]"; \
+	elif command -v python3.12 >/dev/null 2>&1; then \
+		echo "🐍 Using python3.12 venv..."; \
+		if [ ! -d $(VENV_DIR) ]; then python3.12 -m venv --prompt $(VENV_PROMPT) $(VENV_DIR); fi; \
+		$(VENV_DIR)/bin/pip install --upgrade pip; \
+		$(VENV_DIR)/bin/pip install -e ".[dev]"; \
+	elif [ -f $(HOME)/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3 ]; then \
+		echo "🐍 Using uv installed Python 3.12..."; \
+		if [ ! -d $(VENV_DIR) ]; then $(HOME)/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3 -m venv --prompt $(VENV_PROMPT) $(VENV_DIR); fi; \
+		$(VENV_DIR)/bin/pip install --upgrade pip; \
+		$(VENV_DIR)/bin/pip install -e ".[dev]"; \
+	else \
+		echo "🐍 Using system python3 venv..."; \
+		if [ ! -d $(VENV_DIR) ]; then python3 -m venv --prompt $(VENV_PROMPT) $(VENV_DIR); fi; \
+		$(VENV_DIR)/bin/pip install --upgrade pip; \
+		$(VENV_DIR)/bin/pip install -e ".[dev]"; \
+	fi
+	@if [ -f $(VENV_DIR)/bin/activate ]; then \
+		$(PY_EXEC) -c "import pathlib, re; p = pathlib.Path('$(VENV_DIR)/bin/activate'); p.write_text(re.sub(r'\(\.venv\)', '($(VENV_PROMPT))', p.read_text()))" 2>/dev/null || true; \
+	fi
+	@echo "🔗 Setting up local data symlinks..."
+	@$(MAKE) setup_links
+	@echo "✅ Installation complete! Virtual environment ready at $(VENV_DIR) (prompt: ($(VENV_PROMPT)))."
+	@echo "   Active Python: $$($(PY_EXEC) --version 2>/dev/null || echo $(PY_EXEC))"
 
 setup_links:
 	@echo "🔗 Setting up zero-copy symlinks for IndicGovBench-Doc..."
@@ -72,28 +117,44 @@ verify_data:
 	@echo "🔍 Auditing dataset files and symlinks..."
 	@PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.cli verify
 
-sync_hf_pull:
-	@echo "📥 Pulling dataset files from Hugging Face ($(HF_REPO_ID))..."
-	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.sync_hf_job \
-		--mode download \
-		--hf-repo-id $(HF_REPO_ID) \
-		--hf-repo-path $(LFS_ROOT) \
-		$(if $(PREFIX),--prefix $(PREFIX),)
-	@echo "✅ Download complete."
+import:
+	@echo "📥 Importing all dataset files from Hugging Face Hub ($(HF_REPO_ID))..."
+	@mkdir -p $(LFS_ROOT)
+	@if command -v huggingface-cli >/dev/null 2>&1; then \
+		huggingface-cli download $(HF_REPO_ID) --local-dir $(LFS_ROOT) --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
+	elif [ -f $(VENV_DIR)/bin/huggingface-cli ]; then \
+		$(VENV_DIR)/bin/huggingface-cli download $(HF_REPO_ID) --local-dir $(LFS_ROOT) --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
+	else \
+		PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.sync_hf_job \
+			--mode download \
+			--hf-repo-id $(HF_REPO_ID) \
+			--hf-repo-path $(LFS_ROOT) \
+			$(if $(HF_TOKEN),--hf-token $(HF_TOKEN),); \
+	fi
+	@$(MAKE) setup_links
+	@$(MAKE) verify_data
+	@echo "✅ Successfully imported HF dataset files into $(LFS_ROOT) and linked to data/."
+
+sync_hf_pull: import
 
 sync_hf_push:
-	@echo "📤 Uploading assets from $(LFS_ROOT) to Hugging Face ($(HF_REPO_ID))..."
-	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.sync_hf_job \
-		--mode upload \
-		--hf-repo-id $(HF_REPO_ID) \
-		--hf-repo-path $(LFS_ROOT) \
-		$(if $(PREFIX),--prefix $(PREFIX),)
+	@echo "📤 Uploading assets from $(LFS_ROOT) to Hugging Face Hub ($(HF_REPO_ID))..."
+	@if command -v huggingface-cli >/dev/null 2>&1; then \
+		huggingface-cli upload $(HF_REPO_ID) $(LFS_ROOT) . --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
+	elif [ -f $(VENV_DIR)/bin/huggingface-cli ]; then \
+		$(VENV_DIR)/bin/huggingface-cli upload $(HF_REPO_ID) $(LFS_ROOT) . --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
+	else \
+		PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.sync_hf_job \
+			--mode upload \
+			--hf-repo-id $(HF_REPO_ID) \
+			--hf-repo-path $(LFS_ROOT) \
+			$(if $(HF_TOKEN),--hf-token $(HF_TOKEN),); \
+	fi
 	@echo "✅ Upload complete."
 
-export_hf_dataset:
-	@echo "📦 Generating Hugging Face Parquet dataset tables and Dataset Card..."
+export_parquet:
+	@echo "📦 Generating Hugging Face Parquet dataset tables..."
 	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.export_parquet --out-dir $(LFS_ROOT)/data
-	@echo "✅ Parquet files generated in $(LFS_ROOT)/data."
 
 # ----------------------------------------------------------------------
 # 2. Database & Evaluation Targets
@@ -108,14 +169,14 @@ reset_db:
 	@$(MAKE) init_db
 
 eval_all:
-	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.engine --db-path $(WORKSPACE_DIR)/benchmark.db $(if $(PROVIDER),--provider $(PROVIDER),) $(if $(RUN),--run $(RUN),)
+	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.engine --all --db-path $(WORKSPACE_DIR)/benchmark.db $(if $(PROVIDER),--provider $(PROVIDER),) $(if $(RUN),--run $(RUN),)
 
 eval_doc:
 	@if [ -z "$(DOC)" ]; then echo "❌ Please specify DOC=<doc_id>"; exit 1; fi
 	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.engine --doc $(DOC) --db-path $(WORKSPACE_DIR)/benchmark.db $(if $(PROVIDER),--provider $(PROVIDER),)
 
 leaderboard:
-	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.bootstrap --db-path $(WORKSPACE_DIR)/benchmark.db $(if $(RUN),--run $(RUN),)
+	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.engine --leaderboard --db-path $(WORKSPACE_DIR)/benchmark.db $(if $(RUN),--run $(RUN),)
 
 serve:
 	@echo "🚀 Launching IndicGovBench Curation Studio on http://localhost:$(PORT)"
@@ -146,11 +207,29 @@ cf_fetch_reports:
 	@echo "✅ Saved reports to $(WORKSPACE_DIR)/user_reports.json"
 
 # ----------------------------------------------------------------------
-# 4. Developer Targets
+# 4. Metrics Verification & Tutorial Targets
+# ----------------------------------------------------------------------
+
+metrics_tutorial_html:
+	@echo "📊 Compiling interactive Metrics Tutorial HTML (web/studio/static/metrics.html)..."
+	PYTHONPATH=src:. $(PY_EXEC) metrics_tutorial/generate_html.py $(if $(CASE),--case $(CASE),--case all)
+
+metrics_tutorial_md:
+	@echo "📝 Compiling Metrics Tutorial Markdown report (metrics_tutorial/REPORT.md)..."
+	PYTHONPATH=src:. $(PY_EXEC) metrics_tutorial/generate_markdown.py $(if $(CASE),--case $(CASE),--case all)
+
+metrics_tutorial: metrics_tutorial_html metrics_tutorial_md
+	PYTHONPATH=src:. $(PY_EXEC) metrics_tutorial/cli.py $(if $(CASE),--case $(CASE),--case all)
+
+test_metrics_tutorial:
+	PYTHONPATH=src:. $(PY_EXEC) -m unittest tests/test_metrics_tutorial.py
+
+# ----------------------------------------------------------------------
+# 5. Developer Targets
 # ----------------------------------------------------------------------
 
 test:
-	PYTHONPATH=src pytest tests/ -v
+	PYTHONPATH=src:. $(PY_EXEC) -m pytest tests/ -v
 
 lint:
 	ruff check src/ tests/

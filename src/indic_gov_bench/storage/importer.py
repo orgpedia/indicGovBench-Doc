@@ -187,13 +187,23 @@ def import_benchmark_to_db(
                             and "has_stamp" not in manifest_entry
                         ):
                             manifest_entry["has_stamp"] = flags_d["stamp_seal"]
-                        if "has_photo" in flags_d and "has_photo" not in manifest_entry:
-                            manifest_entry["has_photo"] = flags_d["has_photo"]
                         if (
                             "handwritten" in flags_d
                             and "has_handwritten" not in manifest_entry
                         ):
                             manifest_entry["has_handwritten"] = flags_d["handwritten"]
+                        if (
+                            "full_page_table" in flags_d
+                            and "table_has_full_page" not in manifest_entry
+                        ):
+                            manifest_entry["table_has_full_page"] = flags_d["full_page_table"]
+                    if (
+                        "table_layout" in manifest_entry
+                        and "table_has_full_page" not in manifest_entry
+                    ):
+                        manifest_entry["table_has_full_page"] = (
+                            manifest_entry["table_layout"] == "full_page"
+                        )
                     if (
                         "table_has_row_span" in manifest_entry
                         and "table_has_merged_rows" not in manifest_entry
@@ -264,9 +274,7 @@ def import_benchmark_to_db(
                 else:
                     language = str(manifest_entry.get("language", "marathi")).lower()
 
-                scan_type = manifest_entry.get("scan_complexity") or manifest_entry.get(
-                    "scan_type"
-                )
+                scan_type = manifest_entry.get("scan_type")
                 source_url = manifest_entry.get("url") or manifest_entry.get(
                     "source_url"
                 )

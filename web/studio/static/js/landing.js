@@ -471,6 +471,20 @@ class LandingPage {
     const isHigherBetter = (metricKey === 'composite_score' || metricKey === 'TEDS');
     const isLogScale = (this.chartScale === 'log');
 
+    // Synchronize scale indicator labels in UI controls & subtitle
+    const scaleModeEl = document.getElementById('scale-current-mode');
+    const scaleLabelEl = document.getElementById('scale-label-display');
+    const subtitleScaleEl = document.getElementById('cost-axis-subtitle-scale');
+    const scaleToggleBtn = document.getElementById('btn-toggle-scale');
+    if (scaleModeEl) scaleModeEl.textContent = isLogScale ? 'Log' : 'Linear';
+    if (scaleLabelEl) scaleLabelEl.textContent = isLogScale ? 'Switch to Linear' : 'Switch to Log';
+    if (subtitleScaleEl) subtitleScaleEl.textContent = isLogScale ? 'Log Scale' : 'Linear Scale';
+    if (scaleToggleBtn) {
+      scaleToggleBtn.title = isLogScale
+        ? 'Currently Log Scale. Click to switch to Linear Scale.'
+        : 'Currently Linear Scale. Click to switch to Log Scale.';
+    }
+
     const width = 860;
     const height = 400;
     const margin = { top: 30, right: 110, bottom: 45, left: 60 };
@@ -806,7 +820,7 @@ class LandingPage {
         ${dotsHtml}
 
         <text x="${margin.left + plotW / 2}" y="${height - 8}" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle">
-          Processing Cost in Indian Rupees (₹ / Page) · Normalized Real-Time Equivalent (Batch × 2)
+          Processing Cost in Indian Rupees (₹ / Page, ${isLogScale ? 'Log Scale' : 'Linear Scale'}) · Normalized Real-Time Equivalent (Batch × 2)
         </text>
 
         <text x="-${margin.top + plotH / 2}" y="16" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle" transform="rotate(-90)">
@@ -995,13 +1009,9 @@ class LandingPage {
     }
 
     const scaleToggle = document.getElementById('btn-toggle-scale');
-    const scaleLabel = document.getElementById('scale-label-display');
     if (scaleToggle) {
       scaleToggle.addEventListener('click', () => {
         this.chartScale = this.chartScale === 'linear' ? 'log' : 'linear';
-        if (scaleLabel) {
-          scaleLabel.textContent = this.chartScale === 'linear' ? 'Linear Cost' : 'Log Cost';
-        }
         this.renderCostPerfPlot();
       });
     }

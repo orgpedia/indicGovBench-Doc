@@ -17,21 +17,19 @@ IndicGovBench-Doc is an open, reproducible evaluation benchmark for Optical Char
 git clone git@github.com:orgpedia/indicGovBench-Doc.git
 cd indicGovBench-Doc
 
-# Setup virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e ".[dev]"
+# Automated installation (creates .venv, installs dependencies via uv/pip, and configures symlinks)
+make install
 ```
 
-### 2. Configure Environment & Data
+### 2. Configure Environment & Import Dataset
 ```bash
-# Copy environment configuration
+# Copy environment configuration (optional API keys)
 cp env.example .env
 
-# Set up local symlinks to storage (zero-copy)
-make setup_links
+# Import all heavy dataset files (PDFs, Images, Raw responses) from Hugging Face Hub
+make import
 
-# Verify data availability
+# Verify dataset integrity
 make verify_data
 ```
 
@@ -111,14 +109,11 @@ Baseline performance on the IndicGovBench-Doc test set across 270 multi-lingual 
 Heavy assets (PDFs, 300 DPI PNG images, and raw vendor API response caches) synchronize directly with the Hugging Face Dataset Hub:
 
 ```bash
-# Pull heavy files from Hugging Face Hub (external users)
-make sync_hf_pull
+# Import heavy files from Hugging Face Hub (via huggingface-cli)
+make import
 
-# Push local LFS updates to Hugging Face Hub (maintainers)
+# Push local heavy files from LFS/ to Hugging Face Hub (via huggingface-cli)
 make sync_hf_push
-
-# Generate Parquet release table
-make export_hf_dataset
 ```
 
 ---

@@ -181,12 +181,23 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
                 self._serve_file(t_file, "application/javascript")
                 return
 
-        # 4. Metrics Interactive Report
-        if path in ("/metrics", "/metrics/", "/metrics_demo", "/metrics_demo/"):
-            m_report = self.repo_root / "metrics_demo" / "report.html"
-            if m_report.is_file():
-                self._serve_file(m_report, "text/html; charset=utf-8")
-                return
+        # 4. Metrics Interactive Tutorial
+        if path in (
+            "/metrics",
+            "/metrics/",
+            "/metrics_tutorial",
+            "/metrics_tutorial/",
+            "/metrics_demo",
+            "/metrics_demo/",
+        ):
+            for candidate in [
+                self.static_dir / "metrics.html",
+                self.repo_root / "metrics_tutorial" / "report.html",
+                self.repo_root / "metrics_demo" / "report.html",
+            ]:
+                if candidate.is_file():
+                    self._serve_file(candidate, "text/html; charset=utf-8")
+                    return
 
         # 4b. Annotation Protocol Specification
         if path in ("/protocol", "/protocol/", "/annotation_protocol", "/annotation_protocol/"):

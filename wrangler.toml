@@ -1,0 +1,14 @@
+name = "indicgovbench"
+main = "web/cloudflare/index.js"
+compatibility_date = "2024-09-23"
+
+# Modern Workers Static Assets (Free tier up to 100MB; bundle is ~84MB)
+[assets]
+directory = "workspace/cf_export/static"
+binding = "ASSETS"
+
+# Serverless Cloudflare D1 SQLite Database
+[[d1_databases]]
+binding = "DB"
+database_name = "indic_gov_bench_db"
+database_id = "ca9be8e3-c677-4a58-af89-2ba1f268da42"

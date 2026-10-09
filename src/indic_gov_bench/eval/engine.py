@@ -22,13 +22,13 @@ from indic_gov_bench.storage.db import (
     get_db_connection,
     init_schema,
 )
-from indic_gov_bench.eval.matcher import match_page_blocks
-from indic_gov_bench.eval.scorer import (
-    CorpusEvaluationResult,
-    PageEvaluationResult,
-    aggregate_corpus_evaluations,
-    score_page,
-)
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from indic_gov_bench.eval.scorer import (
+        CorpusEvaluationResult,
+        PageEvaluationResult,
+    )
 
 
 def _eval_worker(
@@ -37,8 +37,11 @@ def _eval_worker(
     gt_blocks: list[dict[str, Any]],
     pred_blocks: list[dict[str, Any]],
     gcv_words_map: dict[tuple[int, int], list[float]] | None = None,
-) -> PageEvaluationResult:
+) -> Any:
     """Worker function for parallel page evaluation."""
+    from indic_gov_bench.eval.matcher import match_page_blocks
+    from indic_gov_bench.eval.scorer import score_page
+
     matching_result = match_page_blocks(gt_blocks, pred_blocks)
     return score_page(
         doc_id,
@@ -302,7 +305,9 @@ def evaluate_corpus(
             )
 
     # 4. Aggregate corpus results with 1,000-draw bootstrap 95% CIs and economics
-    corpus_results: dict[str, CorpusEvaluationResult] = {}
+    from indic_gov_bench.eval.scorer import aggregate_corpus_evaluations
+
+    corpus_results: dict[str, Any] = {}
     provider_economics: dict[str, dict[str, Any]] = {}
 
     with db_session(db_path) as conn:
@@ -431,22 +436,34 @@ def evaluate_corpus(
 
 def print_leaderboard(run_id: str = "default", db_path: Path = DEFAULT_DB_PATH) -> None:
     """Prints a formatted leaderboard table from SQLite corpus_evaluations."""
-    with db_session(db_path) as conn:
-        cur = conn.execute(
-            """
-            SELECT provider, composite_score, textCER_norm, e2eNED_norm, TEDS, token_f1, num_docs,
-                   total_batch_cost_inr, cost_per_1k_inr, total_savings_inr, ci_95_json
-            FROM corpus_evaluations
-            WHERE run_id = ?
-            ORDER BY composite_score DESC
-            """,
-            (run_id,),
+    if not db_path.exists():
+        print(
+            f"⚠️ Database not found at '{db_path}'. Run 'make init_db && make eval_all' first."
         )
-        rows = cur.fetchall()
+        return
+
+    try:
+        with db_session(db_path) as conn:
+            cur = conn.execute(
+                """
+                SELECT provider, composite_score, textCER_norm, e2eNED_norm, TEDS, token_f1, num_docs,
+                       total_batch_cost_inr, cost_per_1k_inr, total_savings_inr, ci_95_json
+                FROM corpus_evaluations
+                WHERE run_id = ?
+                ORDER BY composite_score DESC
+                """,
+                (run_id,),
+            )
+            rows = cur.fetchall()
+    except Exception as err:
+        print(
+            f"⚠️ Could not query evaluations ({err}). Run 'make init_db && make eval_all' first."
+        )
+        return
 
     if not rows:
         print(
-            f"⚠️ No evaluation results found for run '{run_id}'. Run 'make -f Makefile3 eval_all' first."
+            f"⚠️ No evaluation results found for run '{run_id}'. Run 'make eval_all' first."
         )
         return
 

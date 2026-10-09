@@ -608,8 +608,9 @@ async function handleApiRequest(path, method, url, request, env) {
 
     const [ceRes, docsRes, peRes] = await db.batch([ceStmt, docsStmt, peStmt]);
 
-    // Group evaluations by doc_id -> provider
+    // Group evaluations by doc_id -> provider and compute exact page-level macro averages
     const peMap = {};
+    const peStatMap = {};
     for (const r of peRes.results || []) {
       if (!peMap[r.doc_id]) peMap[r.doc_id] = {};
       peMap[r.doc_id][r.provider] = {
@@ -620,6 +621,30 @@ async function handleApiRequest(path, method, url, request, env) {
         cost_batch_inr: r.cost_batch_inr,
         cost_realtime_inr: r.cost_realtime_inr,
       };
+
+      if (!peStatMap[r.provider]) {
+        peStatMap[r.provider] = {
+          count: 0,
+          sumComposite: 0,
+          sumTextCer: 0,
+          sumNed: 0,
+          sumTeds: 0,
+          countTeds: 0,
+          sumBatchCost: 0,
+          sumRtCost: 0,
+        };
+      }
+      const st = peStatMap[r.provider];
+      st.count++;
+      if (r.composite_score != null) st.sumComposite += r.composite_score;
+      if (r.textCER_norm != null) st.sumTextCer += r.textCER_norm;
+      if (r.e2eNED_norm != null) st.sumNed += r.e2eNED_norm;
+      if (r.TEDS != null) {
+        st.sumTeds += r.TEDS;
+        st.countTeds++;
+      }
+      if (r.cost_batch_inr != null) st.sumBatchCost += r.cost_batch_inr;
+      if (r.cost_realtime_inr != null) st.sumRtCost += r.cost_realtime_inr;
     }
 
     const providers = (ceRes.results || []).map((r) => {
@@ -630,46 +655,151 @@ async function handleApiRequest(path, method, url, request, env) {
         category: pId.includes("api") ? "proprietary" : "open_weights",
         tags: ["VLM"],
         color: "#6b7280",
+        supports_batching: false,
       };
+
+      const st = peStatMap[pId];
+      const avgComposite = (st && st.count > 0) ? (st.sumComposite / st.count) : r.composite_score;
+      const avgTextCer = (st && st.count > 0) ? (st.sumTextCer / st.count) : r.textCER_norm;
+      const avgNed = (st && st.count > 0) ? (st.sumNed / st.count) : r.e2eNED_norm;
+      const avgTeds = (st && st.countTeds > 0) ? (st.sumTeds / st.countTeds) : r.TEDS;
+      const avgBatchCost = (st && st.count > 0) ? (st.sumBatchCost / st.count) : r.avg_batch_cost_inr;
+      const avgRtCost = (st && st.count > 0) ? (st.sumRtCost / st.count) : r.avg_realtime_cost_inr;
+
       return {
         provider: pId,
         display_name: meta.display_name,
         org: meta.org,
         category: meta.category,
         tags: meta.tags || ["VLM"],
+        supports_batching: Boolean(meta.supports_batching),
         color: meta.color,
-        macro_composite: r.composite_score,
-        macro_textcer: r.textCER_norm,
-        macro_ned: r.e2eNED_norm,
-        macro_teds: r.TEDS,
-        avg_batch_cost: r.avg_batch_cost_inr,
-        avg_rt_cost: r.avg_realtime_cost_inr,
+        macro_composite: avgComposite,
+        macro_textcer: avgTextCer,
+        macro_ned: avgNed,
+        macro_teds: avgTeds,
+        avg_batch_cost_inr: avgBatchCost,
+        avg_realtime_cost_inr: avgRtCost,
+        baseline: {
+          composite_score: avgComposite,
+          textCER_norm: avgTextCer,
+          e2eNED_norm: avgNed,
+          TEDS: avgTeds,
+        },
+        corpus_baseline: {
+          composite_score: r.composite_score,
+          textCER_norm: r.textCER_norm,
+          e2eNED_norm: r.e2eNED_norm,
+          TEDS: r.TEDS,
+        },
         doc_count: r.num_docs,
       };
     });
 
     const documents = (docsRes.results || []).map((r) => {
       const meta = safeParseJson(r.meta_json, {});
+      const dId = r.doc_id;
+
+      // Language
+      let lang = r.language;
+      if (!lang) {
+        if (dId.includes("_mr_")) lang = "marathi";
+        else if (dId.includes("_hi_")) lang = "hindi";
+        else if (dId.includes("_en_")) lang = "english";
+        else lang = "marathi";
+      }
+      lang = lang.toLowerCase().trim();
+
+      // Horizon
+      let horiz = r.horizon || (dId.includes("_archive_") ? "archive" : "current");
+      horiz = horiz.toLowerCase().trim();
+
+      // Scans: Tilt & Dots
+      const scanTilt = Boolean(meta.scan_has_tilt);
+      const scanDots = Boolean(meta.scan_has_dots || meta.scan_has_noise_dots);
+
+      // Tables
+      const hasTbl = Boolean(r.has_tables || meta.has_tables);
+      let tblLayout = null;
+      let tblBorders = null;
+      const tblMerging = [];
+      let tblCellSize = null;
+
+      if (hasTbl) {
+        // Layout
+        if (typeof meta.table_has_full_page === "boolean") {
+          tblLayout = meta.table_has_full_page ? "full" : "half";
+        } else {
+          const rawLayout = (meta.table_layout || "").toLowerCase();
+          if (rawLayout.includes("full")) {
+            tblLayout = "full";
+          } else if (rawLayout.includes("half")) {
+            tblLayout = "half";
+          } else {
+            tblLayout = ((meta.table_count || 0) > 1) ? "full" : "half";
+          }
+        }
+
+        // Borders
+        const rowLines = Boolean(meta.table_row_has_lines || meta.table_has_lines);
+        const outerBorder = Boolean(meta.table_has_full_outer_border || meta.table_has_border_lines);
+        const topBottom = Boolean(meta.table_has_only_bottom_top_border);
+
+        if (rowLines && outerBorder) {
+          tblBorders = "both";
+        } else if (topBottom) {
+          tblBorders = "top_bottom";
+        } else {
+          tblBorders = "no_border";
+        }
+
+        // Merging
+        if (meta.table_has_merged_cols || meta.table_has_col_span) {
+          tblMerging.push("col_merge");
+        }
+        if (meta.table_has_merged_rows || meta.table_has_row_span) {
+          tblMerging.push("row_merge");
+        }
+        if (meta.table_has_multi_merged_cells) {
+          tblMerging.push("cells_merged");
+        }
+        if (tblMerging.length === 0) {
+          tblMerging.push("no_merge");
+        }
+
+        // Cell size
+        const multiLine = Boolean(meta.table_cell_has_multi_lines || meta.table_has_multi_lines);
+        tblCellSize = multiLine ? "multi_line" : "single_line";
+      }
+
       return {
-        doc_id: r.doc_id,
-        language: r.language || "marathi",
-        horizon: r.horizon || (r.doc_id.includes("_archive_") ? "archive" : "current"),
+        doc_id: dId,
+        language: lang,
+        horizon: horiz,
         department: r.department || "Other",
         scan_type: r.scan_type || "good",
-        has_tables: Boolean(r.has_tables),
+        scan_tilt: scanTilt,
+        scan_dots: scanDots,
+        has_tables: hasTbl,
         table_count: r.table_count || 0,
+        table_layout: tblLayout,
+        table_borders: tblBorders,
+        table_merging: tblMerging,
+        table_cell_size: tblCellSize,
         has_watermark: Boolean(r.has_watermark),
         rotation: r.rotation || 0,
         attributes: meta.attributes || {},
-        evaluations: peMap[r.doc_id] || {},
+        evaluations: peMap[dId] || {},
       };
     });
 
     return jsonResponse({
       run_id: runId,
       total_docs: documents.length,
+      total_documents: documents.length,
       providers,
       documents,
+      evaluations: peMap,
     });
   }
 

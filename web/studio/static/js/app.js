@@ -855,7 +855,7 @@ export class DashboardApp {
 
     // Table characteristics
     const hasTables = Boolean(meta.has_tables ?? (flags.has_table || doc.has_tables));
-    const tableLayout = meta.table_layout || (flags.full_page_table ? 'full_page' : 'half_page');
+    const tableHasFullPage = Boolean(meta.table_has_full_page ?? (meta.table_layout === 'full_page' || flags.full_page_table));
     const tableCount = meta.table_count ?? (hasTables ? 1 : 0);
     const tableRowHasLines = Boolean(meta.table_row_has_lines ?? meta.table_has_lines ?? true);
     const tableHasNoHeader = Boolean(meta.table_has_no_header ?? false);
@@ -870,22 +870,16 @@ export class DashboardApp {
     // Stamps, Signatures, Media & Typography
     const hasWatermark = Boolean(meta.has_watermark ?? doc.has_watermark ?? false);
     const hasLogo = Boolean(meta.has_logo ?? false);
-    const hasPhoto = Boolean(meta.has_photo ?? flags.has_photo ?? false);
     const hasSignature = Boolean(meta.has_signature ?? false);
     const signatureType = meta.signature_type || (hasSignature ? 'HAND-WRITTEN' : 'NONE');
     const hasStamp = Boolean(meta.has_stamp ?? flags.stamp_seal ?? false);
-    const stampHasData = Boolean(meta.stamp_has_data ?? false);
     const hasHandwritten = Boolean(meta.has_handwritten ?? flags.handwritten ?? false);
-    const hasHandwrittenNotes = Boolean(meta.has_handwritten_notes ?? false);
     const hasNonStandardFont = Boolean(meta.has_non_standard_font ?? false);
 
     // Scan Quality & Defect Matrix
     const rotation = Number(meta.rotation ?? doc.rotation ?? 0);
-    const scanComplexity = meta.scan_complexity || doc.scan_type || meta.scan_type || 'Medium / Moderate';
     const scanHasTilt = Boolean(meta.scan_has_tilt ?? false);
-    const scanHasLowRes = Boolean(meta.scan_has_low_resolution ?? (doc.scan_type === 'Bad' || meta.scan_type === 'Bad'));
     const scanHasWavy = Boolean(meta.scan_has_wavy_distortion ?? false);
-    const scanHasKeystone = Boolean(meta.scan_has_keystone ?? false);
     const scanHasDots = Boolean(meta.scan_has_dots ?? meta.scan_has_noise_dots ?? false);
     const scanHasDarkpatch = Boolean(meta.scan_has_darkpatch ?? meta.scan_has_dark_patch ?? meta.scan_has_shadows ?? false);
 
@@ -1023,23 +1017,18 @@ export class DashboardApp {
 
             <!-- Collapsible table details -->
             <div id="meta-table-details" style="display: ${hasTables ? 'flex' : 'none'}; flex-direction:column; gap:6px; margin-top:2px;">
-              <div class="meta-grid-2col" style="gap:6px;">
-                <div class="meta-field-group">
-                  <label class="meta-field-label">TABLE LAYOUT</label>
-                  <select class="meta-input" id="meta-table-layout">
-                    <option value="none" ${tableLayout === 'none' ? 'selected' : ''}>None</option>
-                    <option value="half_page" ${tableLayout === 'half_page' ? 'selected' : ''}>Half Page</option>
-                    <option value="full_page" ${tableLayout === 'full_page' ? 'selected' : ''}>Full Page</option>
-                    <option value="multi_page" ${tableLayout === 'multi_page' ? 'selected' : ''}>Multi Page</option>
-                  </select>
-                </div>
-                <div class="meta-field-group">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="meta-field-group" style="max-width:140px;">
                   <label class="meta-field-label">TABLE COUNT</label>
                   <input type="number" min="0" max="20" class="meta-input" id="meta-table-count" value="${tableCount}" />
                 </div>
               </div>
 
               <div class="meta-pill-group" id="table-flags-wrapper">
+                <label class="meta-pill-chip table-chip">
+                  <input type="checkbox" id="meta-table-has-full-page" ${tableHasFullPage ? 'checked' : ''}>
+                  <span class="meta-pill-text">📄 Full Page Table</span>
+                </label>
                 <label class="meta-pill-chip table-chip">
                   <input type="checkbox" id="meta-table-row-has-lines" ${tableRowHasLines ? 'checked' : ''}>
                   <span class="meta-pill-text">📏 Grid Lines</span>
@@ -1094,12 +1083,6 @@ export class DashboardApp {
                   <option value="180" ${rotation === 180 ? 'selected' : ''}>180° (Upside Down)</option>
                   <option value="270" ${rotation === 270 ? 'selected' : ''}>270° (Counter CW)</option>
                 </select>
-                <select class="meta-input" id="meta-scan-complexity" style="width:145px; height:24px; font-size:11px;">
-                  <option value="Low / Clean" ${scanComplexity.includes('Low') || scanComplexity === 'Good' ? 'selected' : ''}>Low / Clean</option>
-                  <option value="Medium / Moderate" ${scanComplexity.includes('Medium') || scanComplexity === 'Moderate' ? 'selected' : ''}>Medium / Moderate</option>
-                  <option value="High / Heavy Degradation" ${scanComplexity.includes('High') || scanComplexity === 'Bad' || scanComplexity === 'Heavy' ? 'selected' : ''}>High / Heavy Degradation</option>
-                  <option value="None (Digital)" ${scanComplexity.includes('Digital') || scanComplexity === 'None' ? 'selected' : ''}>None (Born-Digital)</option>
-                </select>
               </div>
             </div>
 
@@ -1109,16 +1092,8 @@ export class DashboardApp {
                 <span class="meta-pill-text">📐 Tilt</span>
               </label>
               <label class="meta-pill-chip defect-chip">
-                <input type="checkbox" id="meta-scan-low-res" ${scanHasLowRes ? 'checked' : ''}>
-                <span class="meta-pill-text">🔍 Low Res</span>
-              </label>
-              <label class="meta-pill-chip defect-chip">
                 <input type="checkbox" id="meta-scan-wavy" ${scanHasWavy ? 'checked' : ''}>
                 <span class="meta-pill-text">〰️ Wavy</span>
-              </label>
-              <label class="meta-pill-chip defect-chip">
-                <input type="checkbox" id="meta-scan-keystone" ${scanHasKeystone ? 'checked' : ''}>
-                <span class="meta-pill-text">⏢ Keystone</span>
               </label>
               <label class="meta-pill-chip defect-chip">
                 <input type="checkbox" id="meta-scan-dots" ${scanHasDots ? 'checked' : ''}>
@@ -1151,10 +1126,6 @@ export class DashboardApp {
                 <input type="checkbox" id="meta-has-stamp" ${hasStamp ? 'checked' : ''}>
                 <span class="meta-pill-text">💮 Stamp</span>
               </label>
-              <label class="meta-pill-chip stamp-chip">
-                <input type="checkbox" id="meta-stamp-has-data" ${stampHasData ? 'checked' : ''}>
-                <span class="meta-pill-text">📋 Stamp Data</span>
-              </label>
             </div>
 
             <div class="meta-pill-group" style="margin-top:2px;">
@@ -1167,16 +1138,8 @@ export class DashboardApp {
                 <span class="meta-pill-text">🏛️ Govt Logo</span>
               </label>
               <label class="meta-pill-chip stamp-chip">
-                <input type="checkbox" id="meta-has-photo" ${hasPhoto ? 'checked' : ''}>
-                <span class="meta-pill-text">🖼️ Photo</span>
-              </label>
-              <label class="meta-pill-chip stamp-chip">
                 <input type="checkbox" id="meta-has-handwritten" ${hasHandwritten ? 'checked' : ''}>
                 <span class="meta-pill-text">✍️ Handwritten Body</span>
-              </label>
-              <label class="meta-pill-chip stamp-chip">
-                <input type="checkbox" id="meta-has-handwritten-notes" ${hasHandwrittenNotes ? 'checked' : ''}>
-                <span class="meta-pill-text">📝 Margin Notes</span>
               </label>
               <label class="meta-pill-chip stamp-chip">
                 <input type="checkbox" id="meta-has-non-standard-font" ${hasNonStandardFont ? 'checked' : ''}>
@@ -1215,7 +1178,7 @@ export class DashboardApp {
     // Interactive reactive controls
     const hasTablesCb = modal.querySelector('#meta-has-tables');
     const tableCountInput = modal.querySelector('#meta-table-count');
-    const tableLayoutSelect = modal.querySelector('#meta-table-layout');
+    const tableFullPageCb = modal.querySelector('#meta-table-has-full-page');
     const tableDetailsEl = modal.querySelector('#meta-table-details');
     const tableSummaryEl = modal.querySelector('#meta-table-summary');
     
@@ -1226,10 +1189,18 @@ export class DashboardApp {
 
       if (isChecked) {
         if (parseInt(tableCountInput.value, 10) <= 0) tableCountInput.value = 1;
-        if (tableLayoutSelect.value === 'none') tableLayoutSelect.value = 'half_page';
       } else {
         tableCountInput.value = 0;
-        tableLayoutSelect.value = 'none';
+        if (tableFullPageCb) tableFullPageCb.checked = false;
+      }
+    });
+
+    tableFullPageCb?.addEventListener('change', (e) => {
+      if (e.target.checked && !hasTablesCb.checked) {
+        hasTablesCb.checked = true;
+        if (tableDetailsEl) tableDetailsEl.style.display = 'flex';
+        if (tableSummaryEl) tableSummaryEl.textContent = '';
+        if (parseInt(tableCountInput.value, 10) <= 0) tableCountInput.value = 1;
       }
     });
 
@@ -1239,9 +1210,9 @@ export class DashboardApp {
         hasTablesCb.checked = true;
         if (tableDetailsEl) tableDetailsEl.style.display = 'flex';
         if (tableSummaryEl) tableSummaryEl.textContent = '';
-        if (tableLayoutSelect.value === 'none') tableLayoutSelect.value = 'half_page';
       } else if (cnt <= 0 && hasTablesCb.checked) {
         hasTablesCb.checked = false;
+        if (tableFullPageCb) tableFullPageCb.checked = false;
         if (tableDetailsEl) tableDetailsEl.style.display = 'none';
         if (tableSummaryEl) tableSummaryEl.textContent = '(No tables)';
       }
@@ -1267,15 +1238,6 @@ export class DashboardApp {
     });
 
     const hasStampCb = modal.querySelector('#meta-has-stamp');
-    const stampDataCb = modal.querySelector('#meta-stamp-has-data');
-
-    stampDataCb?.addEventListener('change', (e) => {
-      if (e.target.checked) hasStampCb.checked = true;
-    });
-
-    hasStampCb?.addEventListener('change', (e) => {
-      if (!e.target.checked) stampDataCb.checked = false;
-    });
 
     // Keyboard handlers: Cmd+Enter / Ctrl+Enter saves, Escape cancels/closes
     modal.addEventListener('keydown', (e) => {
@@ -1321,7 +1283,7 @@ export class DashboardApp {
 
       // Table attributes
       const updatedHasTables = modal.querySelector('#meta-has-tables').checked;
-      const updatedTableLayout = modal.querySelector('#meta-table-layout').value;
+      const updatedTableHasFullPage = modal.querySelector('#meta-table-has-full-page').checked;
       const updatedTableCount = parseInt(modal.querySelector('#meta-table-count').value || '0', 10);
       const updatedTableRowHasLines = modal.querySelector('#meta-table-row-has-lines').checked;
       const updatedTableHasNoHeader = modal.querySelector('#meta-table-has-no-header').checked;
@@ -1336,22 +1298,16 @@ export class DashboardApp {
       // Stamps & Media
       const updatedHasWatermark = modal.querySelector('#meta-has-watermark').checked;
       const updatedHasLogo = modal.querySelector('#meta-has-logo').checked;
-      const updatedHasPhoto = modal.querySelector('#meta-has-photo').checked;
       const updatedHasSignature = modal.querySelector('#meta-has-signature').checked;
       const updatedSignatureType = modal.querySelector('#meta-signature-type').value;
       const updatedHasStamp = modal.querySelector('#meta-has-stamp').checked;
-      const updatedStampHasData = modal.querySelector('#meta-stamp-has-data').checked;
       const updatedHasHandwritten = modal.querySelector('#meta-has-handwritten').checked;
-      const updatedHasHandwrittenNotes = modal.querySelector('#meta-has-handwritten-notes').checked;
       const updatedHasNonStandardFont = modal.querySelector('#meta-has-non-standard-font').checked;
 
       // Scan & Defects
       const updatedRotation = parseInt(modal.querySelector('#meta-rotation').value || '0', 10);
-      const updatedScanComplexity = modal.querySelector('#meta-scan-complexity').value;
       const updatedScanHasTilt = modal.querySelector('#meta-scan-tilt').checked;
-      const updatedScanHasLowRes = modal.querySelector('#meta-scan-low-res').checked;
       const updatedScanHasWavy = modal.querySelector('#meta-scan-wavy').checked;
-      const updatedScanHasKeystone = modal.querySelector('#meta-scan-keystone').checked;
       const updatedScanHasDots = modal.querySelector('#meta-scan-dots').checked;
       const updatedScanHasDarkpatch = modal.querySelector('#meta-scan-darkpatch').checked;
 
@@ -1362,13 +1318,12 @@ export class DashboardApp {
       // Legacy flags dictionary for backend compatibility
       const updatedFlags = {
         has_table: updatedHasTables,
-        full_page_table: updatedTableLayout === 'full_page',
+        full_page_table: updatedTableHasFullPage,
         stamp_seal: updatedHasStamp,
-        has_photo: updatedHasPhoto,
         handwritten: updatedHasHandwritten,
       };
 
-      // Full 41-field structured metadata payload
+      // Full structured metadata payload
       const metaPayload = {
         doc_id: docId,
         doc_date: updatedDocDate,
@@ -1385,7 +1340,7 @@ export class DashboardApp {
         rotation: updatedRotation,
         has_watermark: updatedHasWatermark,
         has_tables: updatedHasTables,
-        table_layout: updatedTableLayout,
+        table_has_full_page: updatedTableHasFullPage,
         table_count: updatedTableCount,
         table_row_has_lines: updatedTableRowHasLines,
         table_has_lines: updatedTableRowHasLines,
@@ -1402,19 +1357,13 @@ export class DashboardApp {
         table_has_multi_lines: updatedTableCellHasMultiLines,
         table_has_multi_merged_cells: updatedTableHasMultiMergedCells,
         has_logo: updatedHasLogo,
-        has_photo: updatedHasPhoto,
         has_signature: updatedHasSignature,
         signature_type: updatedSignatureType,
         has_stamp: updatedHasStamp,
-        stamp_has_data: updatedStampHasData,
         has_handwritten: updatedHasHandwritten,
-        has_handwritten_notes: updatedHasHandwrittenNotes,
         has_non_standard_font: updatedHasNonStandardFont,
-        scan_complexity: updatedScanComplexity,
         scan_has_tilt: updatedScanHasTilt,
-        scan_has_low_resolution: updatedScanHasLowRes,
         scan_has_wavy_distortion: updatedScanHasWavy,
-        scan_has_keystone: updatedScanHasKeystone,
         scan_has_dots: updatedScanHasDots,
         scan_has_darkpatch: updatedScanHasDarkpatch,
         scan_has_noise_dots: updatedScanHasDots,
@@ -1438,7 +1387,6 @@ export class DashboardApp {
             horizon: updatedHorizon,
             department: updatedGovtDeptName,
             language: updatedLanguages.length ? updatedLanguages[0] : 'Marathi',
-            scan_type: updatedScanComplexity,
             source_url: updatedUrl,
             government: updatedGovtName,
             data_source: updatedDocType,
@@ -1458,7 +1406,6 @@ export class DashboardApp {
           doc.horizon = updatedHorizon;
           doc.department = updatedGovtDeptName;
           doc.language = updatedLanguages.length ? updatedLanguages[0] : 'Marathi';
-          doc.scan_type = updatedScanComplexity;
           doc.source_url = updatedUrl;
           doc.has_tables = updatedHasTables ? 1 : 0;
           doc.rotation = updatedRotation;

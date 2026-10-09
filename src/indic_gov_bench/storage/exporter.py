@@ -301,8 +301,12 @@ def export_db_to_json(
                 if d["table_count"] is not None
                 else meta.get("table_count", 0)
             )
-            table_layout = meta.get(
-                "table_layout", "none" if not has_tables else "half_page"
+            table_has_full_page = bool(
+                meta.get(
+                    "table_has_full_page",
+                    meta.get("table_layout") == "full_page"
+                    or flags.get("full_page_table", False),
+                )
             )
             table_row_has_lines = bool(
                 meta.get(
@@ -340,34 +344,18 @@ def export_db_to_json(
             )
 
             has_logo = bool(meta.get("has_logo", False))
-            has_photo = bool(meta.get("has_photo", flags.get("has_photo", False)))
             has_signature = bool(meta.get("has_signature", False))
             signature_type = meta.get(
                 "signature_type", "HAND-WRITTEN" if has_signature else "NONE"
             )
             has_stamp = bool(meta.get("has_stamp", flags.get("stamp_seal", False)))
-            stamp_has_data = bool(meta.get("stamp_has_data", False))
             has_handwritten = bool(
                 meta.get("has_handwritten", flags.get("handwritten", False))
             )
-            has_handwritten_notes = bool(meta.get("has_handwritten_notes", False))
             has_non_standard_font = bool(meta.get("has_non_standard_font", False))
 
-            scan_complexity = (
-                meta.get("scan_complexity")
-                or d["scan_type"]
-                or meta.get("scan_type")
-                or "Medium / Moderate"
-            )
             scan_has_tilt = bool(meta.get("scan_has_tilt", False))
-            scan_has_low_resolution = bool(
-                meta.get(
-                    "scan_has_low_resolution",
-                    d["scan_type"] == "Bad" if d["scan_type"] else False,
-                )
-            )
             scan_has_wavy_distortion = bool(meta.get("scan_has_wavy_distortion", False))
-            scan_has_keystone = bool(meta.get("scan_has_keystone", False))
             scan_has_dots = bool(
                 meta.get("scan_has_dots", meta.get("scan_has_noise_dots", False))
             )
@@ -409,7 +397,7 @@ def export_db_to_json(
                 "doc_source": doc_source,
                 "horizon": horizon,
                 "has_tables": has_tables,
-                "table_layout": table_layout,
+                "table_has_full_page": table_has_full_page,
                 "table_count": table_count,
                 "table_row_has_lines": table_row_has_lines,
                 "table_has_no_header": table_has_no_header,
@@ -421,21 +409,15 @@ def export_db_to_json(
                 "table_cell_has_multi_lines": table_cell_has_multi_lines,
                 "table_has_multi_merged_cells": table_has_multi_merged_cells,
                 "has_logo": has_logo,
-                "has_photo": has_photo,
                 "has_signature": has_signature,
                 "signature_type": signature_type,
                 "has_stamp": has_stamp,
-                "stamp_has_data": stamp_has_data,
                 "has_handwritten": has_handwritten,
-                "has_handwritten_notes": has_handwritten_notes,
                 "has_non_standard_font": has_non_standard_font,
                 "has_watermark": has_watermark,
                 "rotation": rotation,
-                "scan_complexity": scan_complexity,
                 "scan_has_tilt": scan_has_tilt,
-                "scan_has_low_resolution": scan_has_low_resolution,
                 "scan_has_wavy_distortion": scan_has_wavy_distortion,
-                "scan_has_keystone": scan_has_keystone,
                 "scan_has_dots": scan_has_dots,
                 "scan_has_darkpatch": scan_has_darkpatch,
                 "audit_status": audit_status,

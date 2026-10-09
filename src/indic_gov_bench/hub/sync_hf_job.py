@@ -74,13 +74,50 @@ def load_hf_config(config_path: Path | None = None) -> dict[str, Any]:
         return {}
 
 
+def _load_dotenv_if_available() -> None:
+    """Loads environment variables from .env file into os.environ if present."""
+    repo_root = Path(__file__).resolve().parents[3]
+    try:
+        from dotenv import load_dotenv
+        for candidate in [Path.cwd() / ".env", repo_root / ".env"]:
+            if candidate.is_file():
+                load_dotenv(candidate)
+                return
+    except ImportError:
+        pass
+
+    # Fallback minimal .env loader without external dependencies
+    for candidate in [Path.cwd() / ".env", repo_root / ".env"]:
+        if candidate.is_file():
+            try:
+                with open(candidate, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line or line.startswith("#"):
+                            continue
+                        if line.startswith("export "):
+                            line = line[len("export "):].strip()
+                        if "=" in line:
+                            k, v = line.split("=", 1)
+                            k = k.strip()
+                            v = v.strip("'\"")
+                            if k and k not in os.environ:
+                                os.environ[k] = v
+            except Exception:
+                pass
+
+
 def resolve_token(arg_token: str | None) -> str:
     """Resolves Hugging Face authentication token."""
     if arg_token and arg_token.strip():
         return arg_token.strip()
-    env_token = os.environ.get("HF_TOKEN", "").strip()
+
+    _load_dotenv_if_available()
+
+    env_token = (os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or "").strip()
     if env_token:
         return env_token
+
     try:
         from huggingface_hub import get_token
         cached = get_token()
@@ -88,6 +125,16 @@ def resolve_token(arg_token: str | None) -> str:
             return cached.strip()
     except Exception:
         pass
+
+    token_file = Path.home() / ".cache" / "huggingface" / "token"
+    if token_file.is_file():
+        try:
+            cached_token = token_file.read_text(encoding="utf-8").strip()
+            if cached_token:
+                return cached_token
+        except Exception:
+            pass
+
     return ""
 
 
@@ -191,6 +238,15 @@ def run_upload(config: SyncHFConfig) -> int:
         return len(files_to_upload)
 
     try:
+        try:
+            api.create_repo(
+                repo_id=config.hf_repo_id,
+                repo_type="dataset",
+                exist_ok=True,
+            )
+        except Exception:
+            pass
+
         if local_target.is_dir():
             api.upload_folder(
                 repo_id=config.hf_repo_id,

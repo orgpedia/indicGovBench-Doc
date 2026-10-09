@@ -1,0 +1,1 @@
+The images, pdfs and raw_responses are in the huggingface dataset (https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc)

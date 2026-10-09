@@ -76,15 +76,3 @@ def build_canonical_table_html(table_dict: dict[str, Any]) -> str:
 
     html_lines.append("</table>")
     return "\n".join(html_lines)
-
-
-def ensure_table_html_in_docling_dict(doc_dict: dict[str, Any]) -> dict[str, Any]:
-    """Ensures every table entry inside a Docling JSON dict contains a valid 'html' field."""
-    target_dict = doc_dict.get("docling_document", doc_dict)
-    tables = target_dict.get("tables", [])
-
-    for tbl in tables:
-        if not tbl.get("html") or "<table" not in tbl.get("html", "").lower():
-            tbl["html"] = build_canonical_table_html(tbl)
-
-    return doc_dict

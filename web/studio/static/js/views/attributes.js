@@ -141,7 +141,14 @@ export class AttributesView {
 
   computeSlice() {
     const allDocs = this.data?.documents || [];
-    const evaluations = this.data?.evaluations || {};
+    let evaluations = this.data?.evaluations;
+    if (!evaluations && Array.isArray(allDocs)) {
+      evaluations = {};
+      allDocs.forEach(d => {
+        if (d.evaluations) evaluations[d.doc_id] = d.evaluations;
+      });
+    }
+    evaluations = evaluations || {};
     const providers = this.data?.providers || [];
 
     const hasTableFilter = (
@@ -192,11 +199,58 @@ export class AttributesView {
     const sliceDocIds = new Set(sliceDocs.map(d => d.doc_id));
     const metric = this.chartMetric;
     const isHigherBetter = (metric === 'composite_score' || metric === 'TEDS');
+    const isFullSlice = (!hasTableFilter && sliceDocs.length === allDocs.length);
 
-    // 2. Compute performance stats for each provider
+    // 2. Compute dynamic baselines across allDocs for each provider
+    const providerBaselines = {};
+    providers.forEach(p => {
+      const pId = p.provider;
+      let sum = 0, count = 0;
+      let sumCer = 0, countCer = 0;
+      let sumNed = 0, countNed = 0;
+      let sumTeds = 0, countTeds = 0;
+      let sumCost = 0, countCost = 0;
+
+      allDocs.forEach(d => {
+        const ev = evaluations[d.doc_id]?.[pId];
+        if (ev) {
+          const val = ev[metric];
+          if (val !== null && val !== undefined) {
+            sum += val;
+            count++;
+          }
+          if (ev.textCER_norm !== null && ev.textCER_norm !== undefined) {
+            sumCer += ev.textCER_norm;
+            countCer++;
+          }
+          if (ev.e2eNED_norm !== null && ev.e2eNED_norm !== undefined) {
+            sumNed += ev.e2eNED_norm;
+            countNed++;
+          }
+          if (ev.TEDS !== null && ev.TEDS !== undefined) {
+            sumTeds += ev.TEDS;
+            countTeds++;
+          }
+          if (ev.cost_batch_inr !== null && ev.cost_batch_inr !== undefined) {
+            sumCost += ev.cost_batch_inr;
+            countCost++;
+          }
+        }
+      });
+
+      providerBaselines[pId] = {
+        score: count > 0 ? (sum / count) : (p.baseline?.[metric] ?? 0),
+        textCER_norm: countCer > 0 ? (sumCer / countCer) : (p.baseline?.textCER_norm ?? null),
+        e2eNED_norm: countNed > 0 ? (sumNed / countNed) : (p.baseline?.e2eNED_norm ?? null),
+        TEDS: countTeds > 0 ? (sumTeds / countTeds) : (p.baseline?.TEDS ?? null),
+        cost: countCost > 0 ? (sumCost / countCost) : (p.avg_batch_cost_inr || 0),
+      };
+    });
+
+    // 3. Compute performance stats for each provider
     const providerStats = providers.map(p => {
       const pId = p.provider;
-      const baseVal = p.baseline?.[metric] ?? 0;
+      const baseVal = providerBaselines[pId]?.score ?? (p.baseline?.[metric] ?? 0);
 
       // Calculate slice mean for this provider
       let sum = 0;
@@ -234,22 +288,22 @@ export class AttributesView {
       });
 
       const sliceVal = count > 0 ? (sum / count) : null;
-      let delta = (sliceVal !== null && baseVal !== null) ? (sliceVal - baseVal) : null;
+      let delta = isFullSlice ? 0 : ((sliceVal !== null && baseVal !== null) ? (sliceVal - baseVal) : null);
       if (delta !== null && Math.abs(delta) < 0.00005) delta = 0;
       
       const sliceCer = countCer > 0 ? (sumCer / countCer) : null;
-      const baseCer = p.baseline?.textCER_norm ?? null;
-      let deltaCer = (sliceCer !== null && baseCer !== null) ? (sliceCer - baseCer) : null;
+      const baseCer = providerBaselines[pId]?.textCER_norm ?? (p.baseline?.textCER_norm ?? null);
+      let deltaCer = isFullSlice ? 0 : ((sliceCer !== null && baseCer !== null) ? (sliceCer - baseCer) : null);
       if (deltaCer !== null && Math.abs(deltaCer) < 0.00005) deltaCer = 0;
 
       const sliceNed = countNed > 0 ? (sumNed / countNed) : null;
-      const baseNed = p.baseline?.e2eNED_norm ?? null;
-      let deltaNed = (sliceNed !== null && baseNed !== null) ? (sliceNed - baseNed) : null;
+      const baseNed = providerBaselines[pId]?.e2eNED_norm ?? (p.baseline?.e2eNED_norm ?? null);
+      let deltaNed = isFullSlice ? 0 : ((sliceNed !== null && baseNed !== null) ? (sliceNed - baseNed) : null);
       if (deltaNed !== null && Math.abs(deltaNed) < 0.00005) deltaNed = 0;
 
       const sliceTeds = countTeds > 0 ? (sumTeds / countTeds) : null;
-      const baseTeds = p.baseline?.TEDS ?? null;
-      let deltaTeds = (sliceTeds !== null && baseTeds !== null) ? (sliceTeds - baseTeds) : null;
+      const baseTeds = providerBaselines[pId]?.TEDS ?? (p.baseline?.TEDS ?? null);
+      let deltaTeds = isFullSlice ? 0 : ((sliceTeds !== null && baseTeds !== null) ? (sliceTeds - baseTeds) : null);
       if (deltaTeds !== null && Math.abs(deltaTeds) < 0.00005) deltaTeds = 0;
 
       // Dynamic Normalized Real-time cost (Batch * 2 for batch enabled)
@@ -269,7 +323,7 @@ export class AttributesView {
         sliceCost: sliceCost,
         plotCost: sliceCost,
         avg_batch_cost_inr: p.avg_batch_cost_inr,
-        baselineScore: baseVal,
+        baselineScore: isFullSlice ? (sliceVal ?? baseVal) : baseVal,
         sliceScore: sliceVal,
         delta: delta,
         baseCer, sliceCer, deltaCer,
@@ -280,11 +334,11 @@ export class AttributesView {
       };
     });
 
-    // 3. Overall KPI Highlights
+    // 4. Overall KPI Highlights
     const activeStats = providerStats.filter(p => p.isActive && p.sliceScore !== null);
     const avgBase = activeStats.length > 0 ? (activeStats.reduce((acc, p) => acc + p.baselineScore, 0) / activeStats.length) : 0;
     const avgSlice = activeStats.length > 0 ? (activeStats.reduce((acc, p) => acc + p.sliceScore, 0) / activeStats.length) : 0;
-    let netDelta = avgSlice - avgBase;
+    let netDelta = isFullSlice ? 0 : (avgSlice - avgBase);
     if (Math.abs(netDelta) < 0.00005) netDelta = 0;
 
     const sliceTableDocs = sliceDocs.filter(d => d.has_tables);
@@ -355,10 +409,10 @@ export class AttributesView {
     };
 
     const mergeCounts = {
-      no_merge: countDocs(d => d.has_tables && d.table_merging.includes('no_merge')),
-      col_merge: countDocs(d => d.has_tables && d.table_merging.includes('col_merge')),
-      cells_merged: countDocs(d => d.has_tables && d.table_merging.includes('cells_merged')),
-      row_merge: countDocs(d => d.has_tables && d.table_merging.includes('row_merge'))
+      no_merge: countDocs(d => d.has_tables && (d.table_merging || []).includes('no_merge')),
+      col_merge: countDocs(d => d.has_tables && (d.table_merging || []).includes('col_merge')),
+      cells_merged: countDocs(d => d.has_tables && (d.table_merging || []).includes('cells_merged')),
+      row_merge: countDocs(d => d.has_tables && (d.table_merging || []).includes('row_merge'))
     };
 
     const cellCounts = {

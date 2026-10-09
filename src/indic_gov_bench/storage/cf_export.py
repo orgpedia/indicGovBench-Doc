@@ -461,16 +461,22 @@ def bundle_static_assets(repo_root: Path, out_static_dir: Path) -> None:
         "attributes.html",
         "audit.html",
         "protocol.html",
+        "metrics.html",
         "blocks_annotated.webp",
     ]:
         src_f = src_static / item
         if src_f.is_file():
             shutil.copy2(src_f, out_static_dir / item)
 
-    # Also bundle metrics report if available
-    metrics_report = repo_root / "metrics_demo" / "report.html"
-    if metrics_report.is_file():
-        shutil.copy2(metrics_report, out_static_dir / "metrics.html")
+    # Also bundle metrics report if not already present
+    if not (out_static_dir / "metrics.html").is_file():
+        for m_cand in [
+            repo_root / "metrics_tutorial" / "report.html",
+            repo_root / "metrics_demo" / "report.html",
+        ]:
+            if m_cand.is_file():
+                shutil.copy2(m_cand, out_static_dir / "metrics.html")
+                break
 
     # Clean up old heavy PNG if present in export
     old_png = out_static_dir / "blocks_annotated.png"

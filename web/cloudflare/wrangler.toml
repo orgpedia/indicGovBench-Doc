@@ -1,10 +1,10 @@
 name = "indicgovbench"
-main = "worker/index.js"
+main = "index.js"
 compatibility_date = "2024-09-23"
 
 # Modern Workers Static Assets (Free tier up to 100MB; bundle is ~84MB)
 [assets]
-directory = "workspace/cf_export/static"
+directory = "../../workspace/cf_export/static"
 binding = "ASSETS"
 
 # Serverless Cloudflare D1 SQLite Database

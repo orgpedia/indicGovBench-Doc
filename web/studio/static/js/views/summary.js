@@ -19,7 +19,7 @@ export class SummaryView {
     this.categoryFilter = 'all';
     this.viewMode = 'table'; // 'table' | 'cards'
     this.chartMetric = 'composite_score';
-    this.chartScale = 'linear'; // 'linear' | 'log'
+    this.chartScale = 'log'; // 'log' | 'linear'
     this.showPareto = true;
     this.activeCostProviders = null;
   }
@@ -277,8 +277,8 @@ export class SummaryView {
                 </select>
               </div>
 
-              <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 8px;">
-                Scale: <strong>${this.chartScale === 'linear' ? 'Linear Cost' : 'Log Cost'}</strong>
+              <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 10px; font-weight:500; cursor:pointer;" title="Currently ${this.chartScale === 'linear' ? 'Linear' : 'Log'} Scale. Click to switch to ${this.chartScale === 'linear' ? 'Log' : 'Linear'} Scale.">
+                Scale: <strong>${this.chartScale === 'linear' ? 'Linear' : 'Log'}</strong> (<span>Switch to ${this.chartScale === 'linear' ? 'Log' : 'Linear'}</span>)
               </button>
 
               <button class="btn-tool" id="btn-cost-redraw-header" style="font-size:12px; padding:3px 10px; font-weight:600; cursor:pointer;" title="Redraw chart and autoscale axes to fit selected models">
@@ -487,8 +487,8 @@ export class SummaryView {
                   </tr>
                   <tr>
                     <td class="numeric" style="color:#6b7280; font-size:12px;">2</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_layout</code></td>
-                    <td class="numeric">119 / 270 <span style="color:#6b7280; font-size:12px;">(44.1%)</span></td>
+                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_full_page</code></td>
+                    <td class="numeric">64 / 270 <span style="color:#6b7280; font-size:12px;">(23.7%)</span></td>
                   </tr>
                   <tr>
                     <td class="numeric" style="color:#6b7280; font-size:12px;">3</td>
@@ -566,41 +566,26 @@ export class SummaryView {
                   </tr>
                   <tr>
                     <td class="numeric" style="color:#6b7280; font-size:12px;">14</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_photo</code></td>
-                    <td class="numeric">0 / 270 <span style="color:#6b7280; font-size:12px;">(0.0%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">15</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_signature</code></td>
                     <td class="numeric">100 / 270 <span style="color:#6b7280; font-size:12px;">(37.0%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">16</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">15</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">signature_type</code></td>
                     <td class="numeric">99 / 270 <span style="color:#6b7280; font-size:12px;">(36.7%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">17</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">16</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_stamp</code></td>
                     <td class="numeric">9 / 270 <span style="color:#6b7280; font-size:12px;">(3.3%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">18</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">stamp_has_data</code></td>
-                    <td class="numeric">1 / 270 <span style="color:#6b7280; font-size:12px;">(0.4%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">19</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">17</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_handwritten</code></td>
                     <td class="numeric">4 / 270 <span style="color:#6b7280; font-size:12px;">(1.5%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">20</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_handwritten_notes</code></td>
-                    <td class="numeric">0 / 270 <span style="color:#6b7280; font-size:12px;">(0.0%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">21</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">18</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_watermark</code></td>
                     <td class="numeric">6 / 270 <span style="color:#6b7280; font-size:12px;">(2.2%)</span></td>
                   </tr>
@@ -610,42 +595,27 @@ export class SummaryView {
                     <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">III. Capture Quality &amp; Degradations</td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">22</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">19</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">rotation</code></td>
                     <td class="numeric">0 / 270 <span style="color:#6b7280; font-size:12px;">(0.0%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">23</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_complexity</code></td>
-                    <td class="numeric">99 / 270 <span style="color:#6b7280; font-size:12px;">(36.7%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">24</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">20</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_tilt</code></td>
                     <td class="numeric">27 / 270 <span style="color:#6b7280; font-size:12px;">(10.0%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">25</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_low_resolution</code></td>
-                    <td class="numeric">88 / 270 <span style="color:#6b7280; font-size:12px;">(32.6%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">26</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">21</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_wavy_distortion</code></td>
                     <td class="numeric">22 / 270 <span style="color:#6b7280; font-size:12px;">(8.1%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">27</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_keystone</code></td>
-                    <td class="numeric">0 / 270 <span style="color:#6b7280; font-size:12px;">(0.0%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">28</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">22</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_dots</code></td>
                     <td class="numeric">105 / 270 <span style="color:#6b7280; font-size:12px;">(38.9%)</span></td>
                   </tr>
                   <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">29</td>
+                    <td class="numeric" style="color:#6b7280; font-size:12px;">23</td>
                     <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_darkpatch</code></td>
                     <td class="numeric">54 / 270 <span style="color:#6b7280; font-size:12px;">(20.0%)</span></td>
                   </tr>
@@ -1367,7 +1337,7 @@ export class SummaryView {
 
         <!-- Axis Labels -->
         <text x="${margin.left + plotW / 2}" y="${height - 8}" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle">
-          Processing Cost in Indian Rupees (₹ / Page) · Normalized Real-Time Equivalent (Batch × 2)
+          Processing Cost in Indian Rupees (₹ / Page, ${isLogScale ? 'Log Scale' : 'Linear Scale'}) · Normalized Real-Time Equivalent (Batch × 2)
         </text>
 
         <text x="-${margin.top + plotH / 2}" y="16" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle" transform="rotate(-90)">
@@ -1557,7 +1527,9 @@ export class SummaryView {
     if (scaleToggle) {
       scaleToggle.addEventListener('click', () => {
         this.chartScale = this.chartScale === 'linear' ? 'log' : 'linear';
-        scaleToggle.innerHTML = `Scale: <strong>${this.chartScale === 'linear' ? 'Linear Cost' : 'Log Cost'}</strong>`;
+        const isLinear = this.chartScale === 'linear';
+        scaleToggle.innerHTML = `Scale: <strong>${isLinear ? 'Linear' : 'Log'}</strong> (<span>Switch to ${isLinear ? 'Log' : 'Linear'}</span>)`;
+        scaleToggle.title = `Currently ${isLinear ? 'Linear' : 'Log'} Scale. Click to switch to ${isLinear ? 'Log' : 'Linear'} Scale.`;
         this.renderCostPerfPlot();
       });
     }

@@ -1002,7 +1002,7 @@ def save_doc_meta(
             updates.append("language = ?")
             params.append(lang_val.lower())
 
-        scan_val = scan_type or meta.get("scan_complexity") or meta.get("scan_type")
+        scan_val = scan_type or meta.get("scan_type")
         if scan_val is not None:
             updates.append("scan_type = ?")
             params.append(scan_val)
@@ -1181,10 +1181,9 @@ def get_metadata_coverage(
             "has_tables": compute_bool(
                 lambda r, m: bool(r.get("has_tables")) or bool(m.get("has_tables"))
             ),
-            "table_layout": compute_categorical(
-                lambda r, m: (
-                    m.get("table_layout")
-                    or ("none" if not r.get("has_tables") else "half_page")
+            "table_has_full_page": compute_bool(
+                lambda r, m: bool(
+                    m.get("table_has_full_page", m.get("table_layout") == "full_page")
                 )
             ),
             "table_count": compute_categorical(
@@ -1240,11 +1239,6 @@ def get_metadata_coverage(
             "rotation": compute_categorical(
                 lambda r, m: f"{int(m.get('rotation', r.get('rotation', 0) or 0))}°"
             ),
-            "scan_complexity": compute_categorical(
-                lambda r, m: (
-                    m.get("scan_complexity") or r.get("scan_type") or "Low / Clean"
-                )
-            ),
             "scan_has_tilt": compute_bool(lambda r, m: bool(m.get("scan_has_tilt"))),
             "scan_has_dots": compute_bool(
                 lambda r, m: bool(
@@ -1256,14 +1250,8 @@ def get_metadata_coverage(
                     m.get("scan_has_darkpatch") or m.get("scan_has_shadows")
                 )
             ),
-            "scan_has_low_resolution": compute_bool(
-                lambda r, m: bool(m.get("scan_has_low_resolution"))
-            ),
             "scan_has_wavy_distortion": compute_bool(
                 lambda r, m: bool(m.get("scan_has_wavy_distortion"))
-            ),
-            "scan_has_keystone": compute_bool(
-                lambda r, m: bool(m.get("scan_has_keystone"))
             ),
         }
 
@@ -1284,20 +1272,11 @@ def get_metadata_coverage(
                     m.get("has_stamp") or m.get("flags", {}).get("stamp_seal")
                 )
             ),
-            "stamp_has_data": compute_bool(lambda r, m: bool(m.get("stamp_has_data"))),
-            "has_photo": compute_bool(
-                lambda r, m: bool(
-                    m.get("has_photo") or m.get("flags", {}).get("has_photo")
-                )
-            ),
             "has_logo": compute_bool(lambda r, m: bool(m.get("has_logo"))),
             "has_handwritten": compute_bool(
                 lambda r, m: bool(
                     m.get("has_handwritten") or m.get("flags", {}).get("handwritten")
                 )
-            ),
-            "has_handwritten_notes": compute_bool(
-                lambda r, m: bool(m.get("has_handwritten_notes"))
             ),
             "has_non_standard_font": compute_bool(
                 lambda r, m: bool(m.get("has_non_standard_font"))
@@ -1509,13 +1488,16 @@ def get_attribute_explorer_data(
 
             if has_tbl:
                 # Layout
-                raw_layout = (m.get("table_layout") or "").lower()
-                if "full" in raw_layout:
-                    tbl_layout = "full"
-                elif "half" in raw_layout:
-                    tbl_layout = "half"
+                if "table_has_full_page" in m:
+                    tbl_layout = "full" if m["table_has_full_page"] else "half"
                 else:
-                    tbl_layout = "full" if (m.get("table_count", 0) or 0) > 1 else "half"
+                    raw_layout = (m.get("table_layout") or "").lower()
+                    if "full" in raw_layout:
+                        tbl_layout = "full"
+                    elif "half" in raw_layout:
+                        tbl_layout = "half"
+                    else:
+                        tbl_layout = "full" if (m.get("table_count", 0) or 0) > 1 else "half"
 
                 # Borders
                 row_lines = bool(m.get("table_row_has_lines", m.get("table_has_lines", False)))

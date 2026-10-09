@@ -119,7 +119,7 @@ class TestDb3(unittest.TestCase):
             "rotation": 90,
             "has_watermark": True,
             "has_tables": True,
-            "table_layout": "half_page",
+            "table_has_full_page": False,
             "table_count": 2,
             "table_row_has_lines": True,
             "table_has_no_header": False,
@@ -133,19 +133,13 @@ class TestDb3(unittest.TestCase):
             "table_cell_has_multi_lines": True,
             "table_has_multi_merged_cells": False,
             "has_logo": True,
-            "has_photo": False,
             "has_signature": True,
             "signature_type": "DIGITAL",
             "has_stamp": True,
-            "stamp_has_data": True,
             "has_handwritten": False,
-            "has_handwritten_notes": True,
             "has_non_standard_font": False,
-            "scan_complexity": "Low / Clean",
             "scan_has_tilt": False,
-            "scan_has_low_resolution": False,
             "scan_has_wavy_distortion": False,
-            "scan_has_keystone": False,
             "scan_has_dots": True,
             "scan_has_darkpatch": False,
             "audit_status": "verified",
@@ -179,6 +173,7 @@ class TestDb3(unittest.TestCase):
         self.assertEqual(matched_doc["languages"], ["Hindi", "English"])
         self.assertEqual(matched_doc["scripts"], ["Devanagari", "Latin"])
         self.assertEqual(matched_doc["table_row_has_lines"], True)
+        self.assertEqual(matched_doc["table_has_full_page"], False)
         self.assertEqual(matched_doc["table_has_full_outer_border"], True)
         self.assertEqual(matched_doc["table_has_only_bottom_top_border"], False)
         self.assertEqual(matched_doc["table_cell_has_multi_lines"], True)

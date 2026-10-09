@@ -50,6 +50,11 @@ def main() -> None:
     # 5. verify
     subparsers.add_parser("verify", help="Verify dataset and symlink integrity")
 
+    # 6. leaderboard
+    p_lb = subparsers.add_parser("leaderboard", help="Print aggregate leaderboard table")
+    p_lb.add_argument("--db-path", default="workspace/benchmark.db", help="SQLite database path")
+    p_lb.add_argument("--run", default="default", help="Run identifier")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -92,6 +97,10 @@ def main() -> None:
             print("❌ Error: Ground truth JSONs incomplete!")
             sys.exit(1)
         print("✅ Benchmark dataset verification passed!")
+
+    elif args.command == "leaderboard":
+        from indic_gov_bench.eval.engine import print_leaderboard
+        print_leaderboard(run_id=args.run, db_path=Path(args.db_path))
 
 
 if __name__ == "__main__":

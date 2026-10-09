@@ -36,14 +36,13 @@ license: cc-by-4.0
 task_categories:
   - document-question-answering
   - table-question-answering
-task_ids:
-  - document-layout-analysis
-  - visual-text-recognition
 tags:
   - indic-nlp
   - document-ai
   - ocr-benchmark
   - indian-government-documents
+  - document-layout-analysis
+  - visual-text-recognition
 size_categories:
   - n<1K
 configs:

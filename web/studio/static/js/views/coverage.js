@@ -167,7 +167,7 @@ export class MetadataCoverageView {
               { key: 'table_has_merged_cols', label: 'Merged Columns (colspan > 1)', icon: '↔️' },
               { key: 'table_has_multi_merged_cells', label: 'Multi-Dimensional Merged Cells', icon: '🧩' },
               { key: 'table_cell_has_multi_lines', label: 'Multi-Line Wrapping in Cells', icon: '📝' },
-              { key: 'table_layout', label: 'Table Layout Size (full_page vs half_page)', isCategorical: true, icon: '📏' },
+              { key: 'table_has_full_page', label: 'Full Page Table (Takes Full Page)', icon: '📄' },
               { key: 'table_count', label: 'Table Count per Document', isCategorical: true, icon: '🔢' },
             ]
           )}
@@ -184,11 +184,8 @@ export class MetadataCoverageView {
               { key: 'has_signature', label: 'Signed Documents', icon: '✍️' },
               { key: 'signature_type', label: 'Signature Format (DIGITAL vs MANUAL)', isCategorical: true, icon: '🔐' },
               { key: 'has_stamp', label: 'Official Rubber Stamps / Seals', icon: '🔴' },
-              { key: 'stamp_has_data', label: 'Stamps Containing Critical Data', icon: '📅' },
-              { key: 'has_photo', label: 'Affixed Photographs / ID Portraits', icon: '👤' },
               { key: 'has_logo', label: 'Government Emblems / Logos / Figures', icon: '🏛️' },
               { key: 'has_handwritten', label: 'Handwritten Pen Text / Signatures', icon: '✒️' },
-              { key: 'has_handwritten_notes', label: 'Handwritten Paragraphs / Marginalia', icon: '📜' },
               { key: 'has_non_standard_font', label: 'Non-Standard Legacy Fonts (ASCII)', icon: '🔤' },
             ]
           )}
@@ -205,13 +202,10 @@ export class MetadataCoverageView {
             'scans',
             [
               { key: 'rotation', label: 'Document Rotation Angle (0°, 90°, 180°, 270°)', isCategorical: true, icon: '🔄' },
-              { key: 'scan_complexity', label: 'Scan Quality Grading', isCategorical: true, icon: '⭐' },
               { key: 'scan_has_tilt', label: 'Skewed / Rotated Scans (Tilt)', icon: '📐' },
               { key: 'scan_has_dots', label: 'Salt-and-Pepper Noise / Ink Dots', icon: '✨' },
               { key: 'scan_has_darkpatch', label: 'Dark Patches / Toner Shadows', icon: '🌑' },
-              { key: 'scan_has_low_resolution', label: 'Low Resolution / Pixelated Text', icon: '📉' },
               { key: 'scan_has_wavy_distortion', label: 'Wavy Page / Binding Curvature', icon: '〰️' },
-              { key: 'scan_has_keystone', label: 'Perspective / Keystone Distortion', icon: '📐' },
             ]
           )}
 

@@ -39,7 +39,7 @@ class TestStudioPages(unittest.TestCase):
         # 7. Metrics Tutorial rename & log scale
         self.assertIn("Open Metrics Tutorial", index_html)
         self.assertNotIn("Open Metrics Demo Report", index_html)
-        self.assertNotIn("btn-toggle-scale", index_html)
+        self.assertIn("btn-toggle-scale", index_html)
 
         # 8. Attribute-wise exploration static cards
         self.assertNotIn("If you would like to study", index_html)
