@@ -113,6 +113,7 @@ GEMINI_SLUG_MODEL_MAP: dict[str, str] = {
 
 
 OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
+    "openai_gpt_6_1_sol": "gpt-6.1-sol",
     "openai_gpt_5_6_sol": "gpt-5.6-sol",
     "openai_gpt_5_6_terra": "gpt-5.6-terra",
     "openai_gpt_5_6_tera": "gpt-5.6-terra",
@@ -532,6 +533,7 @@ def estimate_openai_cost(
     # Pricing per 1M tokens ($/1M)
     # Reference: OpenAI API pricing
     PRICING_MAP = {
+        "gpt-6.1-sol": (2.50, 10.00),
         "gpt-5.6-sol": (2.50, 10.00),
         "gpt-5.6-terra": (1.25, 5.00),
         "gpt-5.6-luna": (0.25, 1.00),
@@ -617,7 +619,7 @@ def call_openai_api(
     }
 
     # Models that enforce default temperature (rejecting custom temperature values)
-    NO_TEMPERATURE_MODELS = ("gpt-5", "o1", "o3", "o4")
+    NO_TEMPERATURE_MODELS = ("gpt-5", "gpt-6", "o1", "o3", "o4")
     is_no_temp_model = any(m in model_name.lower() for m in NO_TEMPERATURE_MODELS)
 
     if reasoning_effort and reasoning_effort.lower() not in ("none", "default"):

@@ -8,6 +8,8 @@
  * - Concise, unadorned metric definitions, annotation protocols, and attribute exploration
  */
 
+import { renderAttributeExplorationHtml } from '../attribute_catalog.js';
+
 export class SummaryView {
   constructor(app) {
     this.app = app;
@@ -265,26 +267,30 @@ export class SummaryView {
               </div>
             </div>
 
-            <!-- Plot Controls -->
-            <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-              <div style="display:flex; align-items:center; gap:6px;">
-                <label for="plot-metric-select" style="font-size:12px; color:#4b5563;">Metric (Y-Axis):</label>
-                <select class="select-input" id="plot-metric-select" style="font-size:12px; padding:3px 8px;">
-                  <option value="composite_score" ${this.chartMetric === 'composite_score' ? 'selected' : ''}>Composite Quality Score (▲)</option>
-                  <option value="textCER_norm" ${this.chartMetric === 'textCER_norm' ? 'selected' : ''}>TextCER (▼)</option>
-                  <option value="e2eNED_norm" ${this.chartMetric === 'e2eNED_norm' ? 'selected' : ''}>e2eNED (▼)</option>
-                  <option value="TEDS" ${this.chartMetric === 'TEDS' ? 'selected' : ''}>TEDS Table Similarity (▲)</option>
-                </select>
-              </div>
+            <a href="pricing.html" class="btn-tool" id="btn-open-pricing-top" style="background:#111827; color:#ffffff; border:1px solid #111827; font-size:12px; padding:4px 12px; font-weight:500; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.06); flex-shrink:0;">
+              Pricing &amp; Implementation Details →
+            </a>
+          </div>
 
-              <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 10px; font-weight:500; cursor:pointer;" title="Currently ${this.chartScale === 'linear' ? 'Linear' : 'Log'} Scale. Click to switch to ${this.chartScale === 'linear' ? 'Log' : 'Linear'} Scale.">
-                Scale: <strong>${this.chartScale === 'linear' ? 'Linear' : 'Log'}</strong> (<span>Switch to ${this.chartScale === 'linear' ? 'Log' : 'Linear'}</span>)
-              </button>
-
-              <button class="btn-tool" id="btn-cost-redraw-header" style="font-size:12px; padding:3px 10px; font-weight:600; cursor:pointer;" title="Redraw chart and autoscale axes to fit selected models">
-                🔄 Redraw Chart
-              </button>
+          <!-- Plot Controls -->
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <label for="plot-metric-select" style="font-size:12px; color:#4b5563;">Metric (Y-Axis):</label>
+              <select class="select-input" id="plot-metric-select" style="font-size:12px; padding:3px 8px;">
+                <option value="composite_score" ${this.chartMetric === 'composite_score' ? 'selected' : ''}>Composite Quality Score (▲)</option>
+                <option value="textCER_norm" ${this.chartMetric === 'textCER_norm' ? 'selected' : ''}>TextCER (▼)</option>
+                <option value="e2eNED_norm" ${this.chartMetric === 'e2eNED_norm' ? 'selected' : ''}>e2eNED (▼)</option>
+                <option value="TEDS" ${this.chartMetric === 'TEDS' ? 'selected' : ''}>TEDS Table Similarity (▲)</option>
+              </select>
             </div>
+
+            <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 10px; font-weight:500; cursor:pointer;" title="Currently ${this.chartScale === 'linear' ? 'Linear' : 'Log'} Scale. Click to switch to ${this.chartScale === 'linear' ? 'Log' : 'Linear'} Scale.">
+              Scale: <strong>${this.chartScale === 'linear' ? 'Linear' : 'Log'}</strong> (<span>Switch to ${this.chartScale === 'linear' ? 'Log' : 'Linear'}</span>)
+            </button>
+
+            <button class="btn-tool" id="btn-cost-redraw-header" style="font-size:12px; padding:3px 10px; font-weight:600; cursor:pointer;" title="Redraw chart and autoscale axes to fit selected models">
+              🔄 Redraw Chart
+            </button>
           </div>
 
           <div class="cost-perf-container">
@@ -464,165 +470,7 @@ export class SummaryView {
             </button>
           </div>
 
-          <!-- 2-Column Side-by-Side Attribute Distribution Grid -->
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; align-items:start;">
-            <!-- Left Column: I. Table Content & Structural Elements -->
-            <div class="benchmark-table-wrapper">
-              <table class="benchmark-table">
-                <thead>
-                  <tr>
-                    <th style="width:36px; text-align:right;">#</th>
-                    <th>Attribute</th>
-                    <th class="numeric" style="width:130px;">Count (%)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="group-header-row" style="background:#f9fafb; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                    <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">I. Table Content &amp; Structural Elements</td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">1</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_tables</code></td>
-                    <td class="numeric">119 / 270 <span style="color:#6b7280; font-size:12px;">(44.1%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">2</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_full_page</code></td>
-                    <td class="numeric">64 / 270 <span style="color:#6b7280; font-size:12px;">(23.7%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">3</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_count</code></td>
-                    <td class="numeric">119 / 270 <span style="color:#6b7280; font-size:12px;">(44.1%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">4</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_row_has_lines</code></td>
-                    <td class="numeric">77 / 270 <span style="color:#6b7280; font-size:12px;">(28.5%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">5</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_no_header</code></td>
-                    <td class="numeric">26 / 270 <span style="color:#6b7280; font-size:12px;">(9.6%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">6</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_multi_row_header</code></td>
-                    <td class="numeric">23 / 270 <span style="color:#6b7280; font-size:12px;">(8.5%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">7</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_full_outer_border</code></td>
-                    <td class="numeric">77 / 270 <span style="color:#6b7280; font-size:12px;">(28.5%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">8</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_bottom_top_border</code></td>
-                    <td class="numeric">23 / 270 <span style="color:#6b7280; font-size:12px;">(8.5%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">9</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_merged_rows</code></td>
-                    <td class="numeric">10 / 270 <span style="color:#6b7280; font-size:12px;">(3.7%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">10</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_merged_cols</code></td>
-                    <td class="numeric">22 / 270 <span style="color:#6b7280; font-size:12px;">(8.1%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">11</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_multi_lines</code></td>
-                    <td class="numeric">104 / 270 <span style="color:#6b7280; font-size:12px;">(38.5%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">12</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_merged_cells</code></td>
-                    <td class="numeric">16 / 270 <span style="color:#6b7280; font-size:12px;">(5.9%)</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Right Column: II. Authentication Artifacts & III. Capture Quality -->
-            <div class="benchmark-table-wrapper">
-              <table class="benchmark-table">
-                <thead>
-                  <tr>
-                    <th style="width:36px; text-align:right;">#</th>
-                    <th>Attribute</th>
-                    <th class="numeric" style="width:130px;">Count (%)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- II. Authentication Artifacts -->
-                  <tr class="group-header-row" style="background:#f9fafb; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                    <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">II. Authentication Artifacts</td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">13</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_logo</code></td>
-                    <td class="numeric">24 / 270 <span style="color:#6b7280; font-size:12px;">(8.9%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">14</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_signature</code></td>
-                    <td class="numeric">100 / 270 <span style="color:#6b7280; font-size:12px;">(37.0%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">15</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">signature_type</code></td>
-                    <td class="numeric">99 / 270 <span style="color:#6b7280; font-size:12px;">(36.7%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">16</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_stamp</code></td>
-                    <td class="numeric">9 / 270 <span style="color:#6b7280; font-size:12px;">(3.3%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">17</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_handwritten</code></td>
-                    <td class="numeric">4 / 270 <span style="color:#6b7280; font-size:12px;">(1.5%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">18</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">has_watermark</code></td>
-                    <td class="numeric">6 / 270 <span style="color:#6b7280; font-size:12px;">(2.2%)</span></td>
-                  </tr>
-
-                  <!-- III. Capture Quality & Degradations -->
-                  <tr class="group-header-row" style="background:#f9fafb; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                    <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">III. Capture Quality &amp; Degradations</td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">19</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">rotation</code></td>
-                    <td class="numeric">0 / 270 <span style="color:#6b7280; font-size:12px;">(0.0%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">20</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_tilt</code></td>
-                    <td class="numeric">27 / 270 <span style="color:#6b7280; font-size:12px;">(10.0%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">21</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_wavy_distortion</code></td>
-                    <td class="numeric">22 / 270 <span style="color:#6b7280; font-size:12px;">(8.1%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">22</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_dots</code></td>
-                    <td class="numeric">105 / 270 <span style="color:#6b7280; font-size:12px;">(38.9%)</span></td>
-                  </tr>
-                  <tr>
-                    <td class="numeric" style="color:#6b7280; font-size:12px;">23</td>
-                    <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">scan_has_darkpatch</code></td>
-                    <td class="numeric">54 / 270 <span style="color:#6b7280; font-size:12px;">(20.0%)</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          ${renderAttributeExplorationHtml()}
 
           <div style="font-size:12px; color:#6b7280; margin-top:8px;">
             * Note: Distribution of document attributes across 270 verified ground-truth documents. Click <a href="attributes.html" style="color:#2563eb; font-weight:500; text-decoration:underline;">Explore Attributes →</a> to inspect comparative model performance across each attribute tier.
@@ -1337,7 +1185,7 @@ export class SummaryView {
 
         <!-- Axis Labels -->
         <text x="${margin.left + plotW / 2}" y="${height - 8}" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle">
-          Processing Cost in Indian Rupees (₹ / Page, ${isLogScale ? 'Log Scale' : 'Linear Scale'}) · Normalized Real-Time Equivalent (Batch × 2)
+          Processing Cost in Indian Rupees (₹ / Page, ${isLogScale ? 'Log Scale' : 'Linear Scale'})
         </text>
 
         <text x="-${margin.top + plotH / 2}" y="16" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle" transform="rotate(-90)">

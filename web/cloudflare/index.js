@@ -23,6 +23,7 @@ const JSON_HEADERS = {
 
 const PROVIDER_META_MAP = {
   gemini_3_1_pro: { display_name: "Gemini 3.1 Pro", org: "Google", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#2563eb" },
+  openai_gpt_6_1_sol: { display_name: "GPT-6.1 Sol", org: "OpenAI", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#059669" },
   openai_gpt_5_6_tera: { display_name: "GPT-5.6 Terra", org: "OpenAI", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#059669" },
   mistral_api: { display_name: "Mistral OCR", org: "Mistral AI", category: "proprietary", tags: ["Doc VLM", "Proprietary"], supports_batching: false, color: "#e11d48" },
   gemini_3_8_flash: { display_name: "Gemini 3.8 Flash", org: "Google", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#0284c7" },
@@ -108,6 +109,11 @@ export default {
       // Direct rewrite for /metrics and /metrics/
       if (path === "/metrics" || path === "/metrics/" || path === "/metrics_demo" || path === "/metrics_demo/") {
         return env.ASSETS.fetch(new Request(new URL("/metrics.html", request.url), request));
+      }
+
+      // Direct rewrite for /pricing and /pricing/
+      if (path === "/pricing" || path === "/pricing/") {
+        return env.ASSETS.fetch(new Request(new URL("/pricing.html", request.url), request));
       }
 
       // Query-based routing for landing page vs provider vs audit

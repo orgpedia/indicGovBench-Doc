@@ -39,6 +39,7 @@ def get_leaderboard(
         # Enriched provider metadata (high contrast print colors for white background)
         provider_meta_map = {
             "gemini_3_1_pro": {"display_name": "Gemini 3.1 Pro", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#2563eb"},
+            "openai_gpt_6_1_sol": {"display_name": "GPT-6.1 Sol", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
             "openai_gpt_5_6_tera": {"display_name": "GPT-5.6 Terra", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
             "mistral_api": {"display_name": "Mistral OCR", "org": "Mistral AI", "category": "proprietary", "tags": ["Doc VLM", "Proprietary"], "supports_batching": False, "color": "#e11d48"},
             "gemini_3_8_flash": {"display_name": "Gemini 3.8 Flash", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#0284c7"},
@@ -151,6 +152,30 @@ def get_leaderboard(
             "providers": providers,
             "strata": strata,
         }
+
+
+def get_pricing_manifest() -> dict[str, Any]:
+    """Returns all provider rate cards, provenance, and computation methodology."""
+    from indic_gov_bench.eval.pricing_registry import (
+        DEFAULT_USD_TO_INR,
+        PRICING_REGISTRY,
+        get_usd_to_inr_rate,
+    )
+
+    fx = get_usd_to_inr_rate()
+    providers = []
+    for slug, cfg in PRICING_REGISTRY.items():
+        p = dict(cfg)
+        p["slug"] = slug
+        providers.append(p)
+
+    return {
+        "status": "success",
+        "usd_to_inr_rate": fx,
+        "default_usd_to_inr": DEFAULT_USD_TO_INR,
+        "total_providers": len(providers),
+        "providers": providers,
+    }
 
 
 def get_documents_list(
@@ -1386,6 +1411,7 @@ def get_attribute_explorer_data(
 
         provider_meta_map = {
             "gemini_3_1_pro": {"display_name": "Gemini 3.1 Pro", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#2563eb"},
+            "openai_gpt_6_1_sol": {"display_name": "GPT-6.1 Sol", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
             "openai_gpt_5_6_tera": {"display_name": "GPT-5.6 Terra", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
             "mistral_api": {"display_name": "Mistral OCR", "org": "Mistral AI", "category": "proprietary", "tags": ["Doc VLM", "Proprietary"], "supports_batching": False, "color": "#e11d48"},
             "gemini_3_8_flash": {"display_name": "Gemini 3.8 Flash", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#0284c7"},

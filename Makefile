@@ -20,7 +20,9 @@ WORKSPACE_DIR ?= workspace
 PORT ?= 9091
 
 .PHONY: help install import setup_links verify_data sync_hf_pull sync_hf_push export_parquet \
-        init_db reset_db eval_all eval_doc leaderboard serve cf_export cf_sync_db cf_deploy cf_fetch_reports \
+        all_docs raw predictions images batch_status batch_wait batch_cancel batch_unpack \
+        init_db reset_db export_db eval_all eval_doc leaderboard serve cf_export cf_sync_db cf_deploy cf_fetch_reports \
+        check_pricing sync_pricing \
         metrics_tutorial metrics_tutorial_html metrics_tutorial_md test_metrics_tutorial test lint
 
 help:
@@ -34,12 +36,31 @@ help:
 	@echo "  make verify_data        Verify ground-truth annotations and symlink integrity"
 	@echo "  make sync_hf_push       Push local heavy assets from LFS/ to Hugging Face Hub (huggingface-cli)"
 	@echo ""
+	@echo "📦 Pipeline Execution & Document Generation:"
+	@echo "  make all_docs           Render images, query provider API & parse predictions"
+	@echo "                          Options: PROVIDER=<name> DOC=<doc_id> VERBOSE=1"
+	@echo "  make raw                Query external provider API (OpenAI, Gemini, Claude, etc.)"
+	@echo "                          Options: PROVIDER=<name> DOC=<doc_id> VERBOSE=1"
+	@echo "  make predictions        Parse raw responses into standard prediction JSON"
+	@echo "                          Options: PROVIDER=<name> DOC=<doc_id> VERBOSE=1"
+	@echo "  make batch_status       Display active cloud batch jobs and live completion progress"
+	@echo "                          Options: PROVIDER=<name>"
+	@echo "  make batch_wait         Wait for in-flight batch job to complete & auto-unpack"
+	@echo "                          Options: PROVIDER=<name>"
+	@echo "  make batch_unpack       Download & unpack completed batch results to disk"
+	@echo "                          Options: PROVIDER=<name> [BATCH_ID=<batch_id>]"
+	@echo ""
 	@echo "🗄️ Database & Evaluation Engine:"
 	@echo "  make init_db            Ingest data/ into workspace/benchmark.db"
 	@echo "  make reset_db           Drop SQLite DB and cleanly re-import from disk (<1s)"
+	@echo "  make export_db          Export benchmark.db back to git JSON & YAML files"
 	@echo "  make eval_all           Run parallel 6-metric evaluation across all providers"
 	@echo "  make eval_doc DOC=...   Instant single-document evaluation in memory (<20ms)"
 	@echo "  make leaderboard        Display aggregate leaderboard with bootstrap 95% CIs"
+	@echo ""
+	@echo "💰 Provider Pricing & Economics (models.dev):"
+	@echo "  make check_pricing      Audit local pricing registry rates against upstream models.dev"
+	@echo "  make sync_pricing       Sync models.dev rates into registry & update benchmark.db costs"
 	@echo ""
 	@echo "🖥️ Web Application & Deployment:"
 	@echo "  make serve [PORT=9091]  Launch unified Curation Studio & Benchmark Hub"
@@ -157,7 +178,25 @@ export_parquet:
 	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.export_parquet --out-dir $(LFS_ROOT)/data
 
 # ----------------------------------------------------------------------
-# 2. Database & Evaluation Targets
+# 2. Pipeline Execution & Provider Querying (delegating to IndicGovBench)
+# ----------------------------------------------------------------------
+
+all_docs raw predictions images:
+	@$(MAKE) -C ../indicGovBench $@ $(if $(DOC),DOC=$(DOC),) $(if $(DOC_ID),DOC_ID=$(DOC_ID),) $(if $(PROVIDER),PROVIDER=$(PROVIDER),) $(if $(BATCH),BATCH=$(BATCH),) $(if $(REALTIME),REALTIME=$(REALTIME),) $(if $(VERBOSE),VERBOSE=$(VERBOSE),)
+	@if [ -n "$(PROVIDER)" ] && [ -d ../indicGovBench/benchmark3/predictions/$(PROVIDER) ]; then \
+		mkdir -p data/predictions/$(PROVIDER); \
+		cp -f ../indicGovBench/benchmark3/predictions/$(PROVIDER)/* data/predictions/$(PROVIDER)/ 2>/dev/null || true; \
+	fi
+
+batch_status batch_wait batch_cancel batch_unpack:
+	@$(MAKE) -C ../indicGovBench $@ $(if $(PROVIDER),PROVIDER=$(PROVIDER),) $(if $(BATCH_ID),BATCH_ID=$(BATCH_ID),) $(if $(VERBOSE),VERBOSE=$(VERBOSE),)
+	@if [ -n "$(PROVIDER)" ] && [ -d ../indicGovBench/benchmark3/predictions/$(PROVIDER) ]; then \
+		mkdir -p data/predictions/$(PROVIDER); \
+		cp -f ../indicGovBench/benchmark3/predictions/$(PROVIDER)/* data/predictions/$(PROVIDER)/ 2>/dev/null || true; \
+	fi
+
+# ----------------------------------------------------------------------
+# 3. Database & Evaluation Targets
 # ----------------------------------------------------------------------
 
 init_db:
@@ -167,6 +206,12 @@ init_db:
 reset_db:
 	@rm -f $(WORKSPACE_DIR)/benchmark.db $(WORKSPACE_DIR)/benchmark.db-*
 	@$(MAKE) init_db
+
+export_db:
+	@echo "📦 Exporting benchmark.db SQLite tables to JSON & YAML files..."
+	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.storage.exporter \
+		--db-path $(if $(DB),$(DB),$(WORKSPACE_DIR)/benchmark.db) \
+		--output-dir $(if $(OUTPUT),$(OUTPUT),data)
 
 eval_all:
 	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.engine --all --db-path $(WORKSPACE_DIR)/benchmark.db $(if $(PROVIDER),--provider $(PROVIDER),) $(if $(RUN),--run $(RUN),)
@@ -183,7 +228,20 @@ serve:
 	PYTHONPATH=src:. $(PY_EXEC) -m web.studio.server --port $(PORT) --db $(WORKSPACE_DIR)/benchmark.db
 
 # ----------------------------------------------------------------------
-# 3. Cloudflare Edge Targets
+# 3. Provider Pricing & Economics Targets (models.dev)
+# ----------------------------------------------------------------------
+
+check_pricing:
+	@echo "🔍 Auditing provider rate cards against upstream models.dev..."
+	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.sync_pricing --check $(if $(FORCE),--force-fetch,) $(if $(FX),--fx-rate $(FX),)
+
+sync_pricing:
+	@echo "🔄 Synchronizing pricing registry and updating benchmark database..."
+	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.eval.sync_pricing --apply --update-db $(if $(FORCE),--force-fetch,) $(if $(FX),--fx-rate $(FX),)
+	@if [ -f $(WORKSPACE_DIR)/benchmark.db ]; then $(MAKE) leaderboard; fi
+
+# ----------------------------------------------------------------------
+# 4. Cloudflare Edge Targets
 # ----------------------------------------------------------------------
 
 cf_export:

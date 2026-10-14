@@ -8,13 +8,12 @@ from __future__ import annotations
 import argparse
 import json
 import mimetypes
-import os
-import sys
 from http import HTTPStatus
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from indic_gov_bench.storage.db import DEFAULT_DB_PATH
 from web.studio.api_handlers import (
     add_gt_block,
     delete_gt_block,
@@ -23,13 +22,13 @@ from web.studio.api_handlers import (
     get_documents_list,
     get_leaderboard,
     get_metadata_coverage,
+    get_pricing_manifest,
     reevaluate_document,
     reorder_gt_blocks,
     revert_gt_block,
     save_doc_meta,
     save_gt_block,
 )
-from indic_gov_bench.storage.db import DEFAULT_DB_PATH
 
 
 class Dashboard3Handler(SimpleHTTPRequestHandler):
@@ -70,6 +69,14 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
         query = parse_qs(parsed.query)
 
         # 1. API Endpoints
+        if path == "/api/pricing":
+            try:
+                res = get_pricing_manifest()
+                self._send_json(res)
+            except Exception as e:
+                self._send_error(str(e), status_code=500)
+            return
+
         if path == "/api/leaderboard":
             run_id = query.get("run", query.get("run_id", ["default"]))[0]
             try:
@@ -206,6 +213,13 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
                 self._serve_file(p_report, "text/html; charset=utf-8")
                 return
 
+        # 4c. Pricing & Implementation Details
+        if path in ("/pricing", "/pricing/", "/pricing.html"):
+            p_file = self.static_dir / "pricing.html"
+            if p_file.is_file():
+                self._serve_file(p_file, "text/html; charset=utf-8")
+                return
+
         # 5. Static Files / Specific Page Routing
         if path == "/" or path == "/index.html":
             if "doc" in query or "doc_id" in query:
@@ -213,7 +227,10 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
                 if audit_file.is_file():
                     self._serve_file(audit_file, "text/html; charset=utf-8")
                     return
-            elif "provider" in query and query.get("view", [""])[0] not in ("attributes", "coverage"):
+            elif "provider" in query and query.get("view", [""])[0] not in (
+                "attributes",
+                "coverage",
+            ):
                 prov_file = self.static_dir / "provider.html"
                 if prov_file.is_file():
                     self._serve_file(prov_file, "text/html; charset=utf-8")

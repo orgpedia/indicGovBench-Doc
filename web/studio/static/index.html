@@ -93,7 +93,7 @@
 
           <!-- Anchor Navigation Pills -->
           <div class="landing-nav-pills" style="margin-top:16px; border-top:1px solid #e5e7eb; padding-top:12px;">
-            <a class="landing-nav-pill" href="#section-strata">Dataset Strata</a>
+            <a class="landing-nav-pill" href="#section-strata">Dataset Statistics</a>
             <a class="landing-nav-pill" href="#section-results">Leaderboard</a>
             <a class="landing-nav-pill" href="#section-cost-perf">Cost vs Performance</a>
             <a class="landing-nav-pill" href="#section-metrics">Metrics</a>
@@ -103,68 +103,7 @@
         </div>
       </section>
 
-      <!-- 2. Details: Dataset Strata Table -->
-      <section class="landing-section" id="section-strata">
-        <div class="landing-section-header">
-          <div>
-            <div class="landing-section-title"><a href="#section-strata" class="section-title-link">Dataset Strata &amp; Distribution</a></div>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Distribution of verified benchmark documents across target languages and temporal horizons.
-            </div>
-          </div>
-        </div>
-
-        <div class="benchmark-table-wrapper" style="max-width:680px;">
-          <table class="benchmark-table">
-            <thead>
-              <tr>
-                <th style="width:200px;">Language</th>
-                <th class="numeric" style="width:160px;">Current (> Jan 2021)</th>
-                <th class="numeric" style="width:160px;">Archive (≤ Dec 2020)</th>
-                <th class="numeric" style="width:160px;">Total Documents</th>
-              </tr>
-            </thead>
-            <tbody id="strata-table-body">
-              <tr>
-                <td>Marathi (मराठी)</td>
-                <td class="numeric">69</td>
-                <td class="numeric">26</td>
-                <td class="numeric"><strong>95</strong></td>
-              </tr>
-              <tr>
-                <td>Hindi (हिन्दी)</td>
-                <td class="numeric">55</td>
-                <td class="numeric">27</td>
-                <td class="numeric"><strong>82</strong></td>
-              </tr>
-              <tr>
-                <td>English</td>
-                <td class="numeric">56</td>
-                <td class="numeric">37</td>
-                <td class="numeric"><strong>93</strong></td>
-              </tr>
-              <tr class="total-row">
-                <td><strong>Total Verified Corpus</strong></td>
-                <td class="numeric" id="strata-total-current"><strong>180</strong></td>
-                <td class="numeric" id="strata-total-archive"><strong>90</strong></td>
-                <td class="numeric" id="strata-total-all"><strong>270</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Strata Definitions & Legend -->
-        <div style="font-size:12.5px; color:#4b5563; line-height:1.6; max-width:800px;">
-          <div>
-            <strong style="color:#111827;">Current:</strong> Orders in last five years (> Jan 2021). Generated on computer using word processor, but all scanned.
-          </div>
-          <div>
-            <strong style="color:#111827;">Archive:</strong> Older historical orders. Includes typewriter prints, low-resolution legacy scans, along with older word processed documents.
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. Results: Benchmark Leaderboard Table -->
+      <!-- 2. Results: Benchmark Leaderboard Table -->
       <section class="landing-section" id="section-results">
         <div class="landing-section-header">
           <div>
@@ -205,36 +144,103 @@
         </div>
       </section>
 
+      <!-- 3. Details: Dataset Strata Table -->
+      <section class="landing-section" id="section-strata">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-strata" class="section-title-link">Dataset Breakdown by Language &amp; Era</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              Breakdown of verified documents across languages and time periods (recent vs. archive).
+            </div>
+          </div>
+        </div>
+
+        <div class="benchmark-table-wrapper" style="max-width:680px;">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th style="width:200px;">Language</th>
+                <th class="numeric" style="width:160px;">Current (> Jan 2021)</th>
+                <th class="numeric" style="width:160px;">Archive (≤ Dec 2020)</th>
+                <th class="numeric" style="width:160px;">Total Documents</th>
+              </tr>
+            </thead>
+            <tbody id="strata-table-body">
+              <tr>
+                <td>Marathi (मराठी)</td>
+                <td class="numeric">69</td>
+                <td class="numeric">26</td>
+                <td class="numeric"><strong>95</strong></td>
+              </tr>
+              <tr>
+                <td>Hindi (हिन्दी)</td>
+                <td class="numeric">55</td>
+                <td class="numeric">27</td>
+                <td class="numeric"><strong>82</strong></td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td class="numeric">56</td>
+                <td class="numeric">37</td>
+                <td class="numeric"><strong>93</strong></td>
+              </tr>
+              <tr class="total-row">
+                <td><strong>Total Verified Documents</strong></td>
+                <td class="numeric" id="strata-total-current"><strong>180</strong></td>
+                <td class="numeric" id="strata-total-archive"><strong>90</strong></td>
+                <td class="numeric" id="strata-total-all"><strong>270</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Strata Definitions & Legend -->
+        <div style="font-size:12.5px; color:#4b5563; line-height:1.6; max-width:800px;">
+          <div>
+            <strong style="color:#111827;">Current:</strong> Orders in last five years (> Jan 2021). Generated on computer using word processor, but all scanned.
+          </div>
+          <div>
+            <strong style="color:#111827;">Archive:</strong> Older historical orders. Includes typewriter prints, low-resolution legacy scans, along with older word processed documents.
+          </div>
+        </div>
+      </section>
+
+      
+
       <!-- 4. Cost vs Performance Scatter Plot -->
       <section class="landing-section" id="section-cost-perf">
         <div class="landing-section-header">
           <div>
-            <div class="landing-section-title"><a href="#section-cost-perf" class="section-title-link">Cost vs Performance Economics</a></div>
+            <div class="landing-section-title"><a href="#section-cost-perf" class="section-title-link">Cost vs Performance</a></div>
             <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Pareto-optimal trade-offs between transcription quality and processing cost (INR ₹/page, <span id="cost-axis-subtitle-scale">Log Scale</span>).
+              Compare transcription quality against processing cost (in ₹ per page, <span id="cost-axis-subtitle-scale">Log Scale</span>) to find the best models for your budget.
             </div>
           </div>
 
-          <!-- Plot Controls -->
-          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-            <div style="display:flex; align-items:center; gap:6px;">
-              <label for="plot-metric-select" style="font-size:12px; color:#4b5563;">Metric (Y-Axis):</label>
-              <select class="select-input" id="plot-metric-select" style="font-size:12px; padding:3px 8px;">
-                <option value="composite_score" selected>Composite Quality Score (▲)</option>
-                <option value="textCER_norm">TextCER (▼)</option>
-                <option value="e2eNED_norm">e2eNED (▼)</option>
-                <option value="TEDS">TEDS Table Similarity (▲)</option>
-              </select>
-            </div>
+          <a href="pricing.html" class="btn-tool" id="btn-open-pricing-top" style="background:#111827; color:#ffffff; border:1px solid #111827; font-size:12px; padding:4px 12px; font-weight:500; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.06); flex-shrink:0;">
+            Pricing &amp; Implementation Details →
+          </a>
+        </div>
 
-            <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 10px; font-weight:500; cursor:pointer;" title="Currently Log Scale. Click to switch to Linear Scale.">
-              Scale: <strong id="scale-current-mode">Log</strong> (<span id="scale-label-display">Switch to Linear</span>)
-            </button>
-
-            <button class="btn-tool" id="btn-cost-redraw-header" style="font-size:12px; padding:3px 10px; font-weight:600; cursor:pointer;" title="Redraw chart and autoscale axes to fit selected models">
-              🔄 Redraw Chart
-            </button>
+        <!-- Plot Controls -->
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <label for="plot-metric-select" style="font-size:12px; color:#4b5563;">Metric (Y-Axis):</label>
+            <select class="select-input" id="plot-metric-select" style="font-size:12px; padding:3px 8px;">
+              <option value="composite_score" selected>Composite Quality Score (▲)</option>
+              <option value="textCER_norm">TextCER (▼)</option>
+              <option value="e2eNED_norm">e2eNED (▼)</option>
+              <option value="TEDS">TEDS Table Similarity (▲)</option>
+            </select>
           </div>
+
+          <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 10px; font-weight:500; cursor:pointer;" title="Currently Log Scale. Click to switch to Linear Scale.">
+            Scale: <strong id="scale-current-mode">Log</strong> (<span id="scale-label-display">Switch to Linear</span>)
+          </button>
+
+          <button class="btn-tool" id="btn-cost-redraw-header" style="font-size:12px; padding:3px 10px; font-weight:600; cursor:pointer;" title="Redraw chart and autoscale axes to fit selected models">
+            🔄 Redraw Chart
+          </button>
         </div>
 
         <div class="cost-perf-container">
@@ -246,10 +252,7 @@
 
         <div style="display:flex; justify-content:space-between; align-items:center; font-size:11.5px; color:#6b7280; padding:0 4px; flex-wrap:wrap; gap:8px;">
           <div>
-            <em>Dashed curve traces the <strong>Pareto Frontier</strong> (most cost-efficient models for each quality tier). Hover over points for stats; click to open Provider Workspace.</em>
-          </div>
-          <div>
-            <strong style="color:#111827;">Fair Comparison:</strong> Batch-enabled models priced at 2× batch rate (normalized real-time equivalent).
+            <em>The dashed curve highlights the most cost-effective models (best quality at each price point). Hover over any point for details; click to view model results.</em>
           </div>
         </div>
 
@@ -286,7 +289,7 @@
           <div>
             <div class="landing-section-title"><a href="#section-metrics" class="section-title-link">Metric Definitions</a></div>
             <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Definitions, error formulations, and evaluation criteria for benchmark transcription and table extraction tasks.
+              How we score transcription accuracy, reading order, and table extraction.
             </div>
           </div>
           <a class="btn-tool" href="/metrics" target="_blank" style="text-decoration:none; font-size:12px; padding:4px 10px; display:inline-flex; align-items:center; gap:4px;">
@@ -295,7 +298,7 @@
         </div>
 
         <div style="font-size:13px; color:#4b5563; line-height:1.6;">
-          We evaluate models across character accuracy, reading order sequence, and structural table similarity. For concrete test cases, edge cases, and normalization walks, see the <a href="/metrics" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">Metrics Tutorial ↗</a>.
+          We evaluate models across character accuracy, reading order sequence, and structural table similarity. To see step-by-step examples, edge cases, and how text is cleaned before scoring, see the <a href="/metrics" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">Metrics Tutorial ↗</a>.
         </div>
 
         <div class="metric-def-grid">
@@ -305,7 +308,7 @@
               <span style="font-size:11px; color:#6b7280;">▲ Higher is better</span>
             </div>
             <div class="metric-def-desc">
-              Harmonic balanced index synthesizing structural table accuracy (TEDS), reading-order sequence accuracy (1 - e2eNED), and character-level accuracy (1 - TextCER).
+              An equal blend (1/3 each) of character accuracy (TextCER), reading order (e2eNED), and table accuracy (TEDS). Gives a single overall score from 0 to 1 (or 0–100%).
             </div>
           </div>
 
@@ -315,7 +318,7 @@
               <span style="font-size:11px; color:#6b7280;">▼ Lower is better</span>
             </div>
             <div class="metric-def-desc">
-              Normalized Levenshtein Character Error Rate on body text, measuring character insertions, deletions, and substitutions after Unicode NFC and Devanagari normalization.
+              Character error rate on document text (lower is better). Measures missing, extra, or misspelled characters after standardizing spelling and Unicode.
             </div>
           </div>
 
@@ -325,7 +328,7 @@
               <span style="font-size:11px; color:#6b7280;">▼ Lower is better</span>
             </div>
             <div class="metric-def-desc">
-              Full-document End-to-End Normalized Edit Distance computed over the sequence of text blocks in reading order, penalizing macro-layout swapping and skipped blocks.
+              Reading-order error rate (lower is better). Checks if the text flows in the right sequence across columns and sections, penalizing scrambled or skipped blocks.
             </div>
           </div>
 
@@ -335,7 +338,7 @@
               <span style="font-size:11px; color:#6b7280;">▲ Higher is better</span>
             </div>
             <div class="metric-def-desc">
-              Tree Edit Distance Based Similarity evaluating both table structure (merged rows/cols, nesting) and cell contents using the APTED tree-matching algorithm.
+              Table accuracy score (higher is better). Evaluates both the layout (rows, columns, merged cells) and the text inside each cell.
             </div>
           </div>
 
@@ -355,9 +358,9 @@
       <section class="landing-section" id="section-attributes">
         <div class="landing-section-header">
           <div>
-            <div class="landing-section-title"><a href="#section-attributes" class="section-title-link">Attribute wise Exploration</a></div>
+            <div class="landing-section-title"><a href="#section-attributes" class="section-title-link">Document Attributes &amp; Challenges</a></div>
             <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Performance variations across scan degradation, table complexity, and script difficulty.
+              How model accuracy holds up against poor scan quality, complex tables, stamps, and signatures.
             </div>
           </div>
           <a class="btn-tool" href="attributes.html" style="font-size:12px; padding:4px 10px; text-decoration:none;">
@@ -366,7 +369,7 @@
         </div>
 
         <!-- 2-Column Side-by-Side Attribute Distribution Grid -->
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; align-items:start;">
+        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; align-items:start;">
           <!-- Left Column: I. Table Content & Structural Elements -->
           <div class="benchmark-table-wrapper">
             <table class="benchmark-table">
@@ -398,18 +401,18 @@
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">4</td>
-                  <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_row_has_lines</code></td>
-                  <td class="numeric">77 / 270 <span style="color:#6b7280; font-size:12px;">(28.5%)</span></td>
-                </tr>
-                <tr>
-                  <td class="numeric" style="color:#6b7280; font-size:12px;">5</td>
                   <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_no_header</code></td>
                   <td class="numeric">26 / 270 <span style="color:#6b7280; font-size:12px;">(9.6%)</span></td>
                 </tr>
                 <tr>
-                  <td class="numeric" style="color:#6b7280; font-size:12px;">6</td>
+                  <td class="numeric" style="color:#6b7280; font-size:12px;">5</td>
                   <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_multi_row_header</code></td>
                   <td class="numeric">23 / 270 <span style="color:#6b7280; font-size:12px;">(8.5%)</span></td>
+                </tr>
+                <tr>
+                  <td class="numeric" style="color:#6b7280; font-size:12px;">6</td>
+                  <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_row_has_lines</code></td>
+                  <td class="numeric">77 / 270 <span style="color:#6b7280; font-size:12px;">(28.5%)</span></td>
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">7</td>
@@ -433,13 +436,13 @@
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">11</td>
-                  <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_multi_lines</code></td>
-                  <td class="numeric">104 / 270 <span style="color:#6b7280; font-size:12px;">(38.5%)</span></td>
+                  <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_merged_cells</code></td>
+                  <td class="numeric">16 / 270 <span style="color:#6b7280; font-size:12px;">(5.9%)</span></td>
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">12</td>
-                  <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_merged_cells</code></td>
-                  <td class="numeric">16 / 270 <span style="color:#6b7280; font-size:12px;">(5.9%)</span></td>
+                  <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">table_has_multi_lines</code></td>
+                  <td class="numeric">104 / 270 <span style="color:#6b7280; font-size:12px;">(38.5%)</span></td>
                 </tr>
               </tbody>
             </table>
@@ -458,7 +461,7 @@
               <tbody>
                 <!-- II. Authentication Artifacts -->
                 <tr class="group-header-row" style="background:#f9fafb; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                  <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">II. Authentication Artifacts</td>
+                  <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">II. Signatures, Stamps &amp; Logos</td>
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">13</td>
@@ -493,12 +496,12 @@
 
                 <!-- III. Capture Quality & Degradations -->
                 <tr class="group-header-row" style="background:#f9fafb; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                  <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">III. Capture Quality &amp; Degradations</td>
+                  <td colspan="3" style="padding:8px 12px; color:#111827; font-size:12.5px;">III. Scan Quality &amp; Imperfections</td>
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">19</td>
                   <td><code style="font-family:var(--font-mono); font-size:12.5px; color:#111827;">rotation</code></td>
-                  <td class="numeric">0 / 270 <span style="color:#6b7280; font-size:12px;">(0.0%)</span></td>
+                  <td class="numeric">10 / 270 <span style="color:#6b7280; font-size:12px;">(3.7%)</span></td>
                 </tr>
                 <tr>
                   <td class="numeric" style="color:#6b7280; font-size:12px;">20</td>
@@ -526,7 +529,7 @@
         </div>
 
         <div style="font-size:12px; color:#6b7280; margin-top:8px;">
-          * Note: Distribution of document attributes across 270 verified ground-truth documents. Click <a href="attributes.html" style="color:#2563eb; font-weight:500; text-decoration:underline;">Explore Attributes →</a> to inspect comparative model performance across each attribute tier.
+          * Note: Distribution of document attributes across 270 verified ground-truth documents. Click <a href="attributes.html" style="color:#2563eb; font-weight:500; text-decoration:underline;">Explore Attributes →</a> to see how models perform on each document challenge.
         </div>
       </section>
 
@@ -536,7 +539,7 @@
           <div>
             <div class="landing-section-title"><a href="#section-annotation" class="section-title-link">Annotation &amp; Protocol</a></div>
             <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Ground-truth curation methodology, normalization specifications, and call for collaborators.
+              How the dataset was verified, text cleaning rules, and how to get involved.
             </div>
           </div>
           <a class="btn-tool" href="/protocol" target="_blank" style="font-size:12px; padding:4px 10px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">
@@ -546,10 +549,10 @@
 
         <div class="info-callout-box">
           <div style="font-size:13.5px; line-height:1.6; color:#111827;">
-            Annotation was done using a modified version of the <a href="provider.html?run=default&provider=gemini_3_1_pro" style="color:#2563eb; font-weight:600; text-decoration:underline;">Audit Workspace UI</a>. We need help to annotate other documents, if you know languages other than these 3 (English, Hindi and Marathi)  please reach out to me. Thanks
+            Documents were labeled and verified using our interactive <a href="provider.html?run=default&provider=gemini_3_1_pro" style="color:#2563eb; font-weight:600; text-decoration:underline;">Audit Workspace UI</a>. We are expanding to more Indian languages—if you can help verify documents in languages beyond Hindi, Marathi, and English, we’d love to have your help!
           </div>
           <div style="font-size:13.5px; line-height:1.6; color:#4b5563; margin-top:6px;">
-            The protocol used for annotation can be read in full on our <a href="/protocol" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">Annotation Protocol &amp; Guidelines Specification page</a>. Also it is worth noting that the text obtained from the provider was normalized before comparison, the normalization tasks are detailed in <a href="/protocol#8-text-normalization-profiles" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">§8 Normalization Profiles</a>.
+            You can read our complete labeling guidelines on the <a href="/protocol" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">Annotation Protocol &amp; Guidelines Specification page</a>. To ensure fair evaluation across models, extracted text is standardized (cleaning up spacing and Unicode variations) before scoring; see <a href="/protocol#8-text-normalization-profiles" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">§8 Normalization Profiles</a> for details.
           </div>
 
           <!-- Call for Collaborators Card -->

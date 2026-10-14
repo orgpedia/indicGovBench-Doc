@@ -8,6 +8,8 @@
  * - Real HTML navigation links to provider.html and audit.html
  */
 
+import { renderAttributeExplorationHtml } from './attribute_catalog.js';
+
 class LandingPage {
   constructor() {
     const params = new URLSearchParams(window.location.search);
@@ -37,8 +39,16 @@ class LandingPage {
   }
 
   async init() {
+    this.hydrateAttributeExploration();
     this.bindStaticEvents();
     await this.fetchLeaderboard();
+  }
+
+  hydrateAttributeExploration() {
+    const grid = document.getElementById('attribute-exploration-grid');
+    if (grid) {
+      grid.outerHTML = renderAttributeExplorationHtml();
+    }
   }
 
   async fetchLeaderboard() {
@@ -820,7 +830,7 @@ class LandingPage {
         ${dotsHtml}
 
         <text x="${margin.left + plotW / 2}" y="${height - 8}" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle">
-          Processing Cost in Indian Rupees (₹ / Page, ${isLogScale ? 'Log Scale' : 'Linear Scale'}) · Normalized Real-Time Equivalent (Batch × 2)
+          Processing Cost in Indian Rupees (₹ / Page, ${isLogScale ? 'Log Scale' : 'Linear Scale'})
         </text>
 
         <text x="-${margin.top + plotH / 2}" y="16" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle" transform="rotate(-90)">

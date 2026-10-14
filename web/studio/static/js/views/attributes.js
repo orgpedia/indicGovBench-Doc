@@ -1026,7 +1026,7 @@ export class AttributesView {
 
         <!-- Axis Labels -->
         <text x="${margin.left + plotW / 2}" y="${height - 8}" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle">
-          Processing Cost in Indian Rupees (₹ / Page) · Normalized Real-Time Equivalent (Batch × 2)
+          Processing Cost in Indian Rupees (₹ / Page)
         </text>
         <text x="-${margin.top + plotH / 2}" y="16" fill="#374151" font-size="11.5px" font-weight="600" text-anchor="middle" transform="rotate(-90)">
           ${this.getMetricLabel()}

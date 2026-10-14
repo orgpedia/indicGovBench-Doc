@@ -42,41 +42,121 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "Gemini 3.8 Flash",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 0.10,
-        "output_rate_1m": 0.40,
+        "input_rate_1m": 0.75,
+        "output_rate_1m": 3.75,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "google/gemini-3.8-flash",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "gemini_3_5_flash_lite": {
         "name": "Gemini 3.5 Flash Lite",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 0.075,
-        "output_rate_1m": 0.30,
+        "input_rate_1m": 0.30,
+        "output_rate_1m": 2.50,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "google/gemini-3.5-flash-lite",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "gemini_3_1_pro": {
         "name": "Gemini 3.1 Pro",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 1.25,
-        "output_rate_1m": 5.00,
+        "input_rate_1m": 2.00,
+        "output_rate_1m": 12.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "google/gemini-3.1-pro-preview",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "gemini_2_5_flash": {
         "name": "Gemini 2.5 Flash",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 0.10,
-        "output_rate_1m": 0.40,
+        "input_rate_1m": 0.30,
+        "output_rate_1m": 2.50,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "google/gemini-2.5-flash",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "gemini_2_5_pro": {
         "name": "Gemini 2.5 Pro",
         "archetype": "token",
         "native_currency": "USD",
         "input_rate_1m": 1.25,
-        "output_rate_1m": 5.00,
+        "output_rate_1m": 10.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "google/gemini-2.5-pro",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "gemini_2_0_flash": {
         "name": "Gemini 2.0 Flash",
@@ -84,15 +164,44 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "native_currency": "USD",
         "input_rate_1m": 0.10,
         "output_rate_1m": 0.40,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "Google AI Docs (Legacy)",
+        "source_url": "https://ai.google.dev/gemini-api/docs/models",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Legacy Gemini 2.0 Flash token rate card, converted to INR ($1=₹100). "
+            "Batch API applies a 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "gemini_api": {
         "name": "Gemini 3.8 Flash (Default)",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 0.10,
-        "output_rate_1m": 0.40,
+        "input_rate_1m": 0.75,
+        "output_rate_1m": 3.75,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "google/gemini-3.8-flash",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": "Default Gemini endpoint alias mapped to Gemini 3.8 Flash rates.",
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
 
     # 2. OpenAI Models (USD, Token-based, 50% Batch API discount)
@@ -100,41 +209,139 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "GPT-5.6 Luna",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 0.25,
-        "output_rate_1m": 1.00,
+        "input_rate_1m": 0.20,
+        "output_rate_1m": 1.20,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-5.6-luna",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "openai_gpt_5_6_terra": {
         "name": "GPT-5.6 Terra",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 1.25,
-        "output_rate_1m": 5.00,
+        "input_rate_1m": 2.00,
+        "output_rate_1m": 12.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-5.6-terra",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "openai_gpt_5_6_tera": {
         "name": "GPT-5.6 Terra (Alias)",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 1.25,
-        "output_rate_1m": 5.00,
+        "input_rate_1m": 2.00,
+        "output_rate_1m": 12.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-5.6-terra",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": "OpenAI Terra alias endpoint mapped to GPT-5.6 Terra rates.",
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
+    },
+    "openai_gpt_6_1_sol": {
+        "name": "GPT-6.1 Sol",
+        "archetype": "token",
+        "native_currency": "USD",
+        "input_rate_1m": 4.00,
+        "output_rate_1m": 20.00,
+        "supports_batching": True,
+        "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-6.1-sol",
+        "last_synced_at": "2026-10-12",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "openai_gpt_5_6_sol": {
         "name": "GPT-5.6 Sol",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 2.50,
-        "output_rate_1m": 10.00,
+        "input_rate_1m": 4.00,
+        "output_rate_1m": 20.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-5.6-sol",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "openai_api": {
         "name": "OpenAI GPT-5.6 Sol (Default)",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 2.50,
-        "output_rate_1m": 10.00,
+        "input_rate_1m": 4.00,
+        "output_rate_1m": 20.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-5.6-sol",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": "Default OpenAI endpoint alias mapped to GPT-5.6 Sol rates.",
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
 
     # 3. Anthropic Claude Models (USD, Token-based, 50% Message Batches discount)
@@ -142,25 +349,70 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "Claude Haiku 4.5",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 0.80,
-        "output_rate_1m": 4.00,
+        "input_rate_1m": 1.00,
+        "output_rate_1m": 5.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "anthropic/claude-haiku-4-5",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Message Batches offer 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "claude_sonnet_5_5": {
         "name": "Claude Sonnet 5.5",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 3.00,
-        "output_rate_1m": 15.00,
+        "input_rate_1m": 2.00,
+        "output_rate_1m": 10.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "anthropic/claude-sonnet-5-5",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Message Batches offer 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
     "claude_api": {
         "name": "Claude Sonnet 5.5 (Default)",
         "archetype": "token",
         "native_currency": "USD",
-        "input_rate_1m": 3.00,
-        "output_rate_1m": 15.00,
+        "input_rate_1m": 2.00,
+        "output_rate_1m": 10.00,
+        "supports_batching": True,
         "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "anthropic/claude-sonnet-5-5",
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": "Default Anthropic endpoint alias mapped to Claude Sonnet 5.5 rates.",
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
     },
 
     # 4. Fixed-Page Commercial OCR Providers
@@ -168,103 +420,300 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "Sarvam AI Document Parser",
         "archetype": "fixed_page",
         "native_currency": "INR",
-        "rate_per_page": 0.75,         # Flat ₹0.75 / page
+        "rate_per_page": 1.25,         # Flat ₹1.25 / page
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Sarvam AI Docs",
+        "source_url": "https://www.sarvam.ai/apis/document-digitisation",
+        "wayback_url": (
+            "https://web.archive.org/web/20261007121717/"
+            "https://www.sarvam.ai/apis/document-digitisation"
+        ),
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "INR per page",
+        "how_computed": (
+            "Flat rate of ₹1.25 per document page. "
+            "Billed natively in INR with no batch discount."
+        ),
+        "formula": "pages * rate_per_page",
+        "batch_formula": "realtime_cost",
     },
     "mistral_api": {
         "name": "Mistral OCR",
         "archetype": "fixed_page",
         "native_currency": "USD",
-        "rate_per_page": 0.0010,       # $1.00 / 1,000 pages
+        "rate_per_page": 0.0040,       # $4.00 / 1,000 pages
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Mistral AI Docs",
+        "source_url": "https://docs.mistral.ai/inference/pricing",
+        "wayback_url": (
+            "https://web.archive.org/web/20261008042634/"
+            "https://docs.mistral.ai/inference/pricing"
+        ),
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1K pages",
+        "how_computed": (
+            "Flat rate of $0.004 per page ($4.00 per 1,000 pages). "
+            "Converted to INR ($1=₹100)."
+        ),
+        "formula": "pages * rate_per_page * USD_TO_INR",
+        "batch_formula": "realtime_cost",
     },
     "datalab_api": {
         "name": "Datalab Marker API",
         "archetype": "fixed_page",
         "native_currency": "USD",
-        "rate_per_page": 0.0030,       # ~$3.00 / 1,000 pages
+        "rate_per_page": 0.0040,       # $4.00 / 1,000 pages
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "DataLab Docs",
+        "source_url": "https://www.datalab.to/pricing",
+        "wayback_url": (
+            "https://web.archive.org/web/20260922224926/"
+            "https://www.datalab.to/pricing"
+        ),
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1K pages",
+        "how_computed": (
+            "Flat rate of $0.004 per page ($4.00 per 1,000 pages). "
+            "Converted to INR ($1=₹100)."
+        ),
+        "formula": "pages * rate_per_page * USD_TO_INR",
+        "batch_formula": "realtime_cost",
     },
     "gcv_api": {
         "name": "Google Cloud Vision",
         "archetype": "fixed_page",
         "native_currency": "USD",
         "rate_per_page": 0.0015,       # $1.50 / 1,000 pages
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Google Cloud Pricing",
+        "source_url": "https://cloud.google.com/vision/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "USD per 1K pages",
+        "how_computed": (
+            "Standard Document Text Detection rate ($1.50 per 1,000 pages). "
+            "Converted to INR ($1=₹100)."
+        ),
+        "formula": "pages * rate_per_page * USD_TO_INR",
+        "batch_formula": "realtime_cost",
     },
 
-    # 4. Compute-Time Providers (Open Source on Modal.com)
+    # 5. Compute-Time Providers (Open Source on Modal.com)
     "paddleocr_hpd": {
         "name": "PaddleOCR HPD-Parsing (Modal H100)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "H100",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,     # Amortization calculated from batch metrics
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "GPU hardware seconds",
+        "how_computed": (
+            "Billed per second of NVIDIA H100 GPU ($4.76/hr) + 4 cores + 16 GiB RAM, "
+            "amortized across batch."
+        ),
+        "formula": (
+            "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
+            "(ram_seconds * ram_rate)) * USD_TO_INR"
+        ),
+        "batch_formula": "amortized_batch_cost",
     },
     "qwen3_vl_8b": {
         "name": "Qwen3-VL-8B-Instruct (Modal L4)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "L4",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,     # Amortization calculated from batch metrics
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "GPU hardware seconds",
+        "how_computed": (
+            "Billed per second of NVIDIA L4 GPU ($0.80/hr) + 4 cores + 16 GiB RAM, "
+            "amortized across batch."
+        ),
+        "formula": (
+            "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
+            "(ram_seconds * ram_rate)) * USD_TO_INR"
+        ),
+        "batch_formula": "amortized_batch_cost",
     },
     "paddleocr_modal_h100": {
         "name": "PaddleOCR HPD-Parsing (Modal H100)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "H100",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "GPU hardware seconds",
+        "how_computed": (
+            "Billed per second of NVIDIA H100 GPU ($4.76/hr) + CPU/RAM, "
+            "amortized across batch."
+        ),
+        "formula": (
+            "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
+            "(ram_seconds * ram_rate)) * USD_TO_INR"
+        ),
+        "batch_formula": "amortized_batch_cost",
     },
     "paddleocr_modal_l40s": {
         "name": "PaddleOCR HPD-Parsing (Modal L40S)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "L40S",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "GPU hardware seconds",
+        "how_computed": (
+            "Billed per second of NVIDIA L40S GPU ($1.95/hr) + CPU/RAM, "
+            "amortized across batch."
+        ),
+        "formula": (
+            "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
+            "(ram_seconds * ram_rate)) * USD_TO_INR"
+        ),
+        "batch_formula": "amortized_batch_cost",
     },
     "hpd_parsing": {
         "name": "PaddleOCR HPD-Parsing (Modal H100)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "H100",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "GPU hardware seconds",
+        "how_computed": "Alias for PaddleOCR on Modal H100.",
+        "formula": (
+            "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
+            "(ram_seconds * ram_rate)) * USD_TO_INR"
+        ),
+        "batch_formula": "amortized_batch_cost",
     },
     "qwen_modal": {
         "name": "Qwen3-VL-8B-Instruct (Modal L4)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "L4",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "GPU hardware seconds",
+        "how_computed": "Alias for Qwen3-VL-8B on Modal L4.",
+        "formula": (
+            "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
+            "(ram_seconds * ram_rate)) * USD_TO_INR"
+        ),
+        "batch_formula": "amortized_batch_cost",
     },
     "tesseract": {
         "name": "Tesseract 5 (Modal CPU)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "CPU",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "CPU core seconds",
+        "how_computed": "Billed per second of 8-core CPU ($0.05/core-hr) + 8 GiB RAM on Modal.com.",
+        "formula": "((cpu_seconds * cpu_rate) + (ram_seconds * ram_rate)) * USD_TO_INR",
+        "batch_formula": "amortized_batch_cost",
     },
     "tesseract_modal": {
         "name": "Tesseract 5 (Modal CPU)",
         "archetype": "compute_time",
         "native_currency": "USD",
         "default_gpu": "CPU",
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Modal.com Pricing",
+        "source_url": "https://modal.com/pricing",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "CPU core seconds",
+        "how_computed": "Alias for Tesseract on Modal CPU.",
+        "formula": "((cpu_seconds * cpu_rate) + (ram_seconds * ram_rate)) * USD_TO_INR",
+        "batch_formula": "amortized_batch_cost",
     },
 
-    # 5. Local / Free Open-Source Models
+    # 6. Local / Free Open-Source Models
     "docling": {
         "name": "Docling (Local)",
         "archetype": "free",
         "native_currency": "INR",
         "rate_per_page": 0.0,
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Local Open Source",
+        "source_url": "https://github.com/DS4SD/docling",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "Free (₹0.00)",
+        "how_computed": (
+            "Executed locally on self-hosted hardware with "
+            "zero external API or licensing charges."
+        ),
+        "formula": "0.0",
+        "batch_formula": "0.0",
     },
     "paddleocr_local": {
         "name": "PaddleOCR (Local)",
         "archetype": "free",
         "native_currency": "INR",
         "rate_per_page": 0.0,
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Local Open Source",
+        "source_url": "https://github.com/PaddlePaddle/PaddleOCR",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-10",
+        "billing_unit": "Free (₹0.00)",
+        "how_computed": (
+            "Executed locally on self-hosted hardware with "
+            "zero external API or licensing charges."
+        ),
+        "formula": "0.0",
+        "batch_formula": "0.0",
     },
 }
 
@@ -302,7 +751,11 @@ def get_provider_config(provider_slug: str) -> dict[str, Any]:
         "archetype": "free",
         "native_currency": "INR",
         "rate_per_page": 0.0,
+        "supports_batching": False,
         "batch_discount_pct": 0.0,
+        "pricing_source": "Unknown",
+        "source_url": "",
+        "wayback_url": None,
     }
 
 
@@ -310,12 +763,10 @@ def extract_usage_from_raw(
     provider_slug: str,
     raw_json: dict[str, Any],
 ) -> dict[str, Any]:
-    """Extracts physical consumption telemetry (tokens, pages, compute seconds) from any raw response.
+    """Extracts physical consumption telemetry from any raw response.
 
     Seamlessly supports both new `provider_usage` format and legacy raw JSON files on disk.
     """
-    p_lower = provider_slug.lower()
-
     # 1. New normalized provider_usage structure if already migrated/generated
     if "provider_usage" in raw_json and isinstance(raw_json["provider_usage"], dict):
         pu = raw_json["provider_usage"]
@@ -334,9 +785,15 @@ def extract_usage_from_raw(
     # 2. Legacy Gemini and OpenAI raw files on disk
     if "usage_metadata" in raw_json and isinstance(raw_json["usage_metadata"], dict):
         um = raw_json["usage_metadata"]
-        pin = um.get("prompt_token_count") if um.get("prompt_token_count") is not None else um.get("prompt_tokens")
-        pout = um.get("candidates_token_count") if um.get("candidates_token_count") is not None else um.get("completion_tokens")
-        tot = um.get("total_token_count") if um.get("total_token_count") is not None else um.get("total_tokens")
+        pin = um.get("prompt_token_count")
+        if pin is None:
+            pin = um.get("prompt_tokens")
+        pout = um.get("candidates_token_count")
+        if pout is None:
+            pout = um.get("completion_tokens")
+        tot = um.get("total_token_count")
+        if tot is None:
+            tot = um.get("total_tokens")
         if tot is None and pin is not None and pout is not None:
             tot = pin + pout
         return {
@@ -352,9 +809,20 @@ def extract_usage_from_raw(
     # 3. Direct OpenAI / Anthropic 'usage' dict (if present in raw response)
     if "usage" in raw_json and isinstance(raw_json["usage"], dict):
         u = raw_json["usage"]
-        pin = u.get("prompt_tokens") if u.get("prompt_tokens") is not None else u.get("input_tokens")
-        pout = u.get("completion_tokens") if u.get("completion_tokens") is not None else u.get("output_tokens")
-        tot = u.get("total_tokens", (pin or 0) + (pout or 0) if (pin is not None or pout is not None) else None)
+        pin = (
+            u.get("prompt_tokens")
+            if u.get("prompt_tokens") is not None
+            else u.get("input_tokens")
+        )
+        pout = (
+            u.get("completion_tokens")
+            if u.get("completion_tokens") is not None
+            else u.get("output_tokens")
+        )
+        if pin is not None or pout is not None:
+            tot = u.get("total_tokens", (pin or 0) + (pout or 0))
+        else:
+            tot = u.get("total_tokens")
         return {
             "prompt_tokens": pin,
             "completion_tokens": pout,
@@ -478,7 +946,11 @@ def calculate_doc_cost(
             gpu_type in ("CPU", "none", "NONE", None)
             or "tesseract" in provider_slug.lower()
         )
-        gpu_rate = 0.0 if is_cpu_provider else MODAL_RATES["gpu"].get(gpu_type, MODAL_RATES["gpu"]["H100"])
+        gpu_rate = (
+            0.0
+            if is_cpu_provider
+            else MODAL_RATES["gpu"].get(gpu_type, MODAL_RATES["gpu"]["H100"])
+        )
         cpu_rate = MODAL_RATES["cpu_core_second"]
         ram_rate = MODAL_RATES["memory_gib_second"]
 
@@ -504,7 +976,9 @@ def calculate_doc_cost(
 
             # Realtime cost: single page execution including cold start / container overhead
             realtime_native = batch_native * 2.0
-            batch_discount_pct = round(((realtime_native - batch_native) / realtime_native) * 100.0, 1)
+            batch_discount_pct = round(
+                ((realtime_native - batch_native) / realtime_native) * 100.0, 1
+            )
         elif is_cpu_provider:
             # Per-request CPU attribution for Tesseract
             if cpu_sec_share is not None and float(cpu_sec_share) > 0:

@@ -437,12 +437,12 @@
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: true
-  signature_type: MANUAL
+  signature_type: NONE
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 90
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: true
@@ -519,12 +519,12 @@
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: true
-  signature_type: MANUAL
+  signature_type: NONE
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 270
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: true
@@ -1139,7 +1139,7 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 270
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: true
@@ -1218,7 +1218,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -1583,7 +1583,7 @@
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
-  has_logo: false
+  has_logo: true
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
@@ -1956,7 +1956,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -1997,7 +1997,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -3637,7 +3637,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -3678,7 +3678,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -3760,7 +3760,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -3801,7 +3801,7 @@
   has_signature: true
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: true
   rotation: 0
@@ -3842,7 +3842,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4005,7 +4005,7 @@
   has_logo: false
   has_signature: true
   signature_type: MANUAL
-  has_stamp: true
+  has_stamp: false
   has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
@@ -4128,7 +4128,7 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -4211,7 +4211,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4252,7 +4252,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4334,7 +4334,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4375,7 +4375,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4415,7 +4415,7 @@
   has_logo: false
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
+  has_stamp: true
   has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
@@ -4580,7 +4580,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4784,8 +4784,8 @@
   has_logo: false
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5030,8 +5030,8 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5113,7 +5113,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5154,7 +5154,7 @@
   has_signature: true
   signature_type: DIGITAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5318,7 +5318,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5359,7 +5359,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5400,7 +5400,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5441,7 +5441,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5482,7 +5482,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5522,8 +5522,8 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5645,7 +5645,7 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -5686,7 +5686,7 @@
   has_logo: false
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -5727,7 +5727,7 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -5768,7 +5768,7 @@
   has_logo: false
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -5809,7 +5809,7 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -5850,7 +5850,7 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
+  has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
@@ -5892,7 +5892,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5933,7 +5933,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -5974,7 +5974,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6015,7 +6015,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6219,8 +6219,8 @@
   has_logo: false
   has_signature: true
   signature_type: DIGITAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6261,7 +6261,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6346,7 +6346,7 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 180
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
@@ -6384,7 +6384,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6425,7 +6425,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6466,7 +6466,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6548,7 +6548,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6630,7 +6630,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6671,7 +6671,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6712,7 +6712,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6749,11 +6749,11 @@
   table_has_merged_cols: false
   table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
-  has_logo: true
+  has_logo: false
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6793,8 +6793,8 @@
   has_logo: false
   has_signature: false
   signature_type: NONE
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6835,7 +6835,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6876,7 +6876,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -6917,7 +6917,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -7553,7 +7553,7 @@
   scripts:
   - Devanagari
   doc_type: Order
-  layout: single
+  layout: Single Column
   doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: archive
@@ -7576,12 +7576,12 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 270
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: DONE
 - doc_id: order_mr_archive_028
   doc_date: ''
@@ -8004,7 +8004,7 @@
   scripts:
   - Devanagari
   doc_type: Order
-  layout: single
+  layout: Single Column
   doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: archive
@@ -8027,12 +8027,12 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 270
   scan_has_tilt: true
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: DONE
 - doc_id: order_mr_archive_039
   doc_date: ''
@@ -8680,7 +8680,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -9950,8 +9950,8 @@
   has_logo: true
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -9992,7 +9992,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: true
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10036,7 +10036,7 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 90
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
@@ -10073,8 +10073,8 @@
   has_logo: true
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10114,8 +10114,8 @@
   has_logo: true
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10155,8 +10155,8 @@
   has_logo: true
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10196,8 +10196,8 @@
   has_logo: true
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10238,7 +10238,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: true
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10278,8 +10278,8 @@
   has_logo: true
   has_signature: true
   signature_type: MANUAL
-  has_stamp: false
-  has_handwritten: false
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10320,7 +10320,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: true
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10484,7 +10484,7 @@
   has_signature: true
   signature_type: MANUAL
   has_stamp: true
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -10915,7 +10915,7 @@
   scripts:
   - Devanagari
   doc_type: Order
-  layout: single
+  layout: Single Column
   doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
@@ -10933,17 +10933,17 @@
   table_has_multi_merged_cells: true
   has_logo: false
   has_signature: true
-  signature_type: MANUAL
-  has_stamp: true
+  signature_type: NONE
+  has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 90
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: DONE
 - doc_id: order_mr_current_083
   doc_date: ''
@@ -10956,7 +10956,7 @@
   scripts:
   - Devanagari
   doc_type: Order
-  layout: single
+  layout: Single Column
   doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
@@ -10974,17 +10974,17 @@
   table_has_multi_merged_cells: true
   has_logo: false
   has_signature: true
-  signature_type: MANUAL
-  has_stamp: true
+  signature_type: NONE
+  has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 90
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: true
   scan_has_darkpatch: true
-  audit_status: unreviewed
+  audit_status: verified
   notes: DONE-ENGLISH-MARATHI
 - doc_id: order_mr_current_084
   doc_date: ''
@@ -11038,7 +11038,7 @@
   scripts:
   - Devanagari
   doc_type: Order
-  layout: single
+  layout: Single Column
   doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
@@ -11058,13 +11058,13 @@
   has_signature: false
   signature_type: NONE
   has_stamp: true
-  has_handwritten: true
+  has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 270
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: DONE
