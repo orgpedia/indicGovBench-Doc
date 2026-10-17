@@ -57,10 +57,7 @@ def strip_markdown_syntax(text: str) -> str:
 
     # 8. Unescape standard HTML entities (&amp; -> &, &lt; -> <, &gt; -> >)
     text = (
-        text.replace("&amp;", "&")
-        .replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&quot;", '"')
+        text.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", '"')
     )
 
     # Normalize multiple whitespace runs within line while preserving newlines

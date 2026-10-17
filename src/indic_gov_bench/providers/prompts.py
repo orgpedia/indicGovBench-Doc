@@ -108,6 +108,7 @@ GEMINI_SLUG_MODEL_MAP: dict[str, str] = {
 
 OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
     "openai_gpt_6_1_sol": "gpt-6.1-sol",
+    "openai_gpt_6_luna": "gpt-6-luna",
     "openai_gpt_5_6_sol": "gpt-5.6-sol",
     "openai_gpt_5_6_terra": "gpt-5.6-terra",
     "openai_gpt_5_6_tera": "gpt-5.6-terra",
@@ -117,9 +118,7 @@ OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
 }
 
 CLAUDE_SLUG_MODEL_MAP: dict[str, str] = {
-    "claude_haiku_4_5": os.environ.get(
-        "CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"
-    ),
+    "claude_haiku_4_5": os.environ.get("CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"),
     "claude_sonnet_5_5": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
     "claude_api": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
     "claude": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
@@ -128,6 +127,7 @@ CLAUDE_SLUG_MODEL_MAP: dict[str, str] = {
 # ==============================================================================
 # Cost Estimations
 # ==============================================================================
+
 
 def estimate_gemini_cost(
     model_name: str,

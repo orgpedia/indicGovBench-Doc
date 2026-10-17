@@ -130,9 +130,7 @@ class TestScorer3(unittest.TestCase):
         p1 = score_page("doc_1", "prov", gt, pred1)
         p2 = score_page("doc_2", "prov", gt, pred2)
 
-        corp = aggregate_corpus_evaluations(
-            "run_1", "prov", [p1, p2], num_bootstrap=100
-        )
+        corp = aggregate_corpus_evaluations("run_1", "prov", [p1, p2], num_bootstrap=100)
         self.assertEqual(corp.num_docs, 2)
         self.assertIn("textCER_norm", corp.ci_95)
         self.assertEqual(len(corp.ci_95["textCER_norm"]), 2)

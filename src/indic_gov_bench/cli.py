@@ -63,26 +63,43 @@ def main() -> None:
 
     if args.command == "import":
         from indic_gov_bench.storage.importer import import_benchmark_to_db
-        import_benchmark_to_db(benchmark_dir=Path(args.data_dir), db_path=Path(args.db_path), run_id=args.run)
+
+        import_benchmark_to_db(
+            benchmark_dir=Path(args.data_dir), db_path=Path(args.db_path), run_id=args.run
+        )
 
     elif args.command == "eval":
         from indic_gov_bench.eval.engine import evaluate_corpus, evaluate_single_doc
+
         if args.doc:
             evaluate_single_doc(args.doc, db_path=Path(args.db_path), target_provider=args.provider)
         else:
-            evaluate_corpus(db_path=Path(args.db_path), target_provider=args.provider, run_id=args.run)
+            evaluate_corpus(
+                db_path=Path(args.db_path), target_provider=args.provider, run_id=args.run
+            )
 
     elif args.command == "sync":
         from indic_gov_bench.hub.sync_hf_job import main as sync_main
-        sys.argv = ["sync_hf_job", "--mode", args.mode, "--prefix", args.prefix, "--hf-token", args.hf_token]
+
+        sys.argv = [
+            "sync_hf_job",
+            "--mode",
+            args.mode,
+            "--prefix",
+            args.prefix,
+            "--hf-token",
+            args.hf_token,
+        ]
         sync_main()
 
     elif args.command == "serve":
         from web.studio.server import run_server
+
         run_server(port=args.port, db_path=Path(args.db_path))
 
     elif args.command == "verify":
         import glob
+
         gts = sorted(glob.glob("data/ground_truth/*.json"))
         anchs = sorted(glob.glob("data/anchors/*.json"))
         preds = sorted(glob.glob("data/predictions/**/*.json", recursive=True))
@@ -100,6 +117,7 @@ def main() -> None:
 
     elif args.command == "leaderboard":
         from indic_gov_bench.eval.engine import print_leaderboard
+
         print_leaderboard(run_id=args.run, db_path=Path(args.db_path))
 
 

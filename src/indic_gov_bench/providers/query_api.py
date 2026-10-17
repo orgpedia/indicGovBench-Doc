@@ -114,6 +114,7 @@ GEMINI_SLUG_MODEL_MAP: dict[str, str] = {
 
 OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
     "openai_gpt_6_1_sol": "gpt-6.1-sol",
+    "openai_gpt_6_luna": "gpt-6-luna",
     "openai_gpt_5_6_sol": "gpt-5.6-sol",
     "openai_gpt_5_6_terra": "gpt-5.6-terra",
     "openai_gpt_5_6_tera": "gpt-5.6-terra",
@@ -123,9 +124,7 @@ OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
 }
 
 CLAUDE_SLUG_MODEL_MAP: dict[str, str] = {
-    "claude_haiku_4_5": os.environ.get(
-        "CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"
-    ),
+    "claude_haiku_4_5": os.environ.get("CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"),
     "claude_sonnet_5_5": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
     "claude_api": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
     "claude": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
@@ -154,9 +153,7 @@ def call_sarvam_api(pdf_path: Path, language: str = "hi-IN") -> dict[str, Any]:
         job.download_output(str(tmp_zip))
         pages: list[dict[str, Any]] = []
         with zipfile.ZipFile(tmp_zip) as z:
-            json_files = sorted(
-                [name for name in z.namelist() if name.endswith(".json")]
-            )
+            json_files = sorted([name for name in z.namelist() if name.endswith(".json")])
             for jf in json_files:
                 with z.open(jf) as f:
                     data = json.load(f)
@@ -251,9 +248,7 @@ def call_gemini_api(
     # Prioritize Vertex AI if GOOGLE_CLOUD_PROJECT is specified and GEMINI_BACKEND != "aistudio",
     # or if GEMINI_BACKEND == "vertexai", or if GEMINI_API_KEY is not set.
     use_vertex = (
-        backend == "vertexai"
-        or (project and not api_key)
-        or (project and backend != "aistudio")
+        backend == "vertexai" or (project and not api_key) or (project and backend != "aistudio")
     )
 
     if use_vertex and project:
@@ -328,9 +323,7 @@ def call_gemini_api(
             "medium": types.ThinkingLevel.MEDIUM,
             "high": types.ThinkingLevel.HIGH,
         }
-        thinking_config = types.ThinkingConfig(
-            thinking_level=level_map[str(thinking).lower()]
-        )
+        thinking_config = types.ThinkingConfig(thinking_level=level_map[str(thinking).lower()])
     elif thinking and str(thinking).isdigit():
         thinking_config = types.ThinkingConfig(
             thinking_budget=int(thinking),
@@ -342,13 +335,9 @@ def call_gemini_api(
             f"🔍 [DEBUG] Sending request to Gemini model: {model_name} (thinking={thinking}, temp={temperature}, image size: {img_size})"
         )
         print("📄 [DEBUG] Gemini Document Extraction Prompt:")
-        print(
-            "--------------------------------------------------------------------------------"
-        )
+        print("--------------------------------------------------------------------------------")
         print(GEMINI_DOCUMENT_PROMPT.strip())
-        print(
-            "--------------------------------------------------------------------------------"
-        )
+        print("--------------------------------------------------------------------------------")
 
     def _execute_gemini_call(tc: types.ThinkingConfig | None):
         return client.models.generate_content(
@@ -367,9 +356,7 @@ def call_gemini_api(
     except Exception as exc:
         err_msg = str(exc).lower()
         if (
-            "thinking" in err_msg
-            or "invalid argument" in err_msg
-            or "budget" in err_msg
+            "thinking" in err_msg or "invalid argument" in err_msg or "budget" in err_msg
         ) and thinking_config:
             # Automatic cascading fallback:
             # 1. If thinking_budget failed, try thinking_level=MINIMAL, then LOW
@@ -381,10 +368,7 @@ def call_gemini_api(
                     types.ThinkingConfig(thinking_level=types.ThinkingLevel.MINIMAL),
                     types.ThinkingConfig(thinking_level=types.ThinkingLevel.LOW),
                 ]
-            elif (
-                getattr(thinking_config, "thinking_level", None)
-                == types.ThinkingLevel.MINIMAL
-            ):
+            elif getattr(thinking_config, "thinking_level", None) == types.ThinkingLevel.MINIMAL:
                 candidate_fallbacks = [
                     types.ThinkingConfig(thinking_level=types.ThinkingLevel.LOW),
                     types.ThinkingConfig(thinking_budget=0),
@@ -423,9 +407,7 @@ def call_gemini_api(
             "prompt_token_count": getattr(um, "prompt_token_count", None),
             "candidates_token_count": getattr(um, "candidates_token_count", None),
             "total_token_count": getattr(um, "total_token_count", None),
-            "cached_content_token_count": getattr(
-                um, "cached_content_token_count", None
-            ),
+            "cached_content_token_count": getattr(um, "cached_content_token_count", None),
             "thoughts_token_count": getattr(um, "thoughts_token_count", None),
         }
 
@@ -456,9 +438,7 @@ def call_gemini_api(
                 fr = getattr(cand, "finish_reason", None)
                 if fr:
                     finish_reasons.append(f"Candidate {i}: {fr}")
-                if getattr(cand, "content", None) and getattr(
-                    cand.content, "parts", None
-                ):
+                if getattr(cand, "content", None) and getattr(cand.content, "parts", None):
                     for part in cand.content.parts:
                         t = getattr(part, "text", None)
                         if t:
@@ -637,13 +617,9 @@ def call_openai_api(
             f"🔍 [DEBUG] Sending request to OpenAI model: {model_name} (detail={detail}, reasoning={reasoning_effort})"
         )
         print("📄 [DEBUG] OpenAI Document Extraction Prompt:")
-        print(
-            "--------------------------------------------------------------------------------"
-        )
+        print("--------------------------------------------------------------------------------")
         print(OPENAI_DOCUMENT_PROMPT.strip())
-        print(
-            "--------------------------------------------------------------------------------"
-        )
+        print("--------------------------------------------------------------------------------")
 
     resp = client.chat.completions.create(**req_kwargs)
 
@@ -691,8 +667,7 @@ def call_openai_api(
         result_json = json.loads(cleaned)
     except json.JSONDecodeError as jde:
         raise ValueError(
-            f"Failed to parse OpenAI response as JSON: {jde}\n"
-            f"Raw response text:\n{raw_text[:1000]}"
+            f"Failed to parse OpenAI response as JSON: {jde}\nRaw response text:\n{raw_text[:1000]}"
         ) from jde
 
     ret_payload: dict[str, Any] = {
@@ -826,13 +801,9 @@ def call_claude_api(
     if verbose >= 2:
         print(f"🔍 [DEBUG] Sending request to Claude model: {model_name}")
         print("📄 [DEBUG] Claude Document Extraction Prompt:")
-        print(
-            "--------------------------------------------------------------------------------"
-        )
+        print("--------------------------------------------------------------------------------")
         print(CLAUDE_DOCUMENT_PROMPT.strip())
-        print(
-            "--------------------------------------------------------------------------------"
-        )
+        print("--------------------------------------------------------------------------------")
 
     try:
         resp = client.messages.create(**req_kwargs)
@@ -983,9 +954,7 @@ def call_mistral_api(pdf_path: Path) -> dict[str, Any]:
     return resp.json()
 
 
-def call_modal_realtime(
-    provider: str, pdf_path: Path, verbose: int = 0
-) -> dict[str, Any]:
+def call_modal_realtime(provider: str, pdf_path: Path, verbose: int = 0) -> dict[str, Any]:
     """Calls Modal realtime vLLM or Tesseract endpoint."""
     p_lower = provider.lower()
     is_tesseract = "tesseract" in p_lower
@@ -1019,9 +988,7 @@ def call_modal_realtime(
         render_scale = 144.0 / 72.0
 
     if not key:
-        raise ValueError(
-            "HPD_API_KEY (or OCR_API_KEY) environment variable is not set."
-        )
+        raise ValueError("HPD_API_KEY (or OCR_API_KEY) environment variable is not set.")
 
     import base64
     import io
@@ -1125,22 +1092,14 @@ def query_single_api(
         return False
 
     # 1. Check if output file was already created (e.g. from an unpacked batch)
-    if (
-        output_json_path.is_file()
-        and not force_realtime
-        and not os.environ.get("FORCE_REALTIME")
-    ):
+    if output_json_path.is_file() and not force_realtime and not os.environ.get("FORCE_REALTIME"):
         if verbose > 0:
             print(f"✅ Output '{output_json_path.name}' already exists on disk.")
         return True
 
     # 2. Check if a cloud batch job is active for this provider
     active_batch_file = Path("workspace/batches") / provider / "active_batch.json"
-    if (
-        active_batch_file.is_file()
-        and not force_realtime
-        and not os.environ.get("FORCE_REALTIME")
-    ):
+    if active_batch_file.is_file() and not force_realtime and not os.environ.get("FORCE_REALTIME"):
         try:
             from indic_gov_bench.providers.batch_adapters import get_batch_adapter
 
@@ -1239,9 +1198,7 @@ def query_single_api(
             lang = "mr-IN" if "_mr_" in doc_id else "hi-IN"
             raw_res = call_sarvam_api(pdf_path, language=lang)
         elif "gemini" in p_lower:
-            chosen_model = gemini_model or GEMINI_SLUG_MODEL_MAP.get(
-                provider, "gemini-3.8-flash"
-            )
+            chosen_model = gemini_model or GEMINI_SLUG_MODEL_MAP.get(provider, "gemini-3.8-flash")
             raw_res = call_gemini_api(
                 pdf_path,
                 model_name=chosen_model,
@@ -1250,9 +1207,7 @@ def query_single_api(
                 verbose=verbose,
             )
         elif "openai" in p_lower:
-            chosen_model = openai_model or OPENAI_SLUG_MODEL_MAP.get(
-                provider, "gpt-5.6-sol"
-            )
+            chosen_model = openai_model or OPENAI_SLUG_MODEL_MAP.get(provider, "gpt-5.6-sol")
             raw_res = call_openai_api(
                 pdf_path,
                 model_name=chosen_model,
@@ -1312,7 +1267,9 @@ def query_single_api(
             pin = u_dict.get("prompt_tokens")
             pout = u_dict.get("completion_tokens")
             if pin is not None and pout is not None:
-                token_info = f" [Tokens: in={pin:,}, out={pout:,}, tot={(pin + pout):,} (₹{c_inr:.2f}*)]"
+                token_info = (
+                    f" [Tokens: in={pin:,}, out={pout:,}, tot={(pin + pout):,} (₹{c_inr:.2f}*)]"
+                )
             elif c_inr > 0:
                 token_info = f" [Cost: ₹{c_inr:.2f}*]"
 
@@ -1333,9 +1290,7 @@ def query_single_api(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Call external provider API for a single PDF."
-    )
+    parser = argparse.ArgumentParser(description="Call external provider API for a single PDF.")
     parser.add_argument("input_pdf", type=str, help="Input PDF file path")
     parser.add_argument("output_json", type=str, help="Output raw JSON path")
     parser.add_argument(

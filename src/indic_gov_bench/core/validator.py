@@ -66,8 +66,7 @@ def polygon_area_and_clockwise(poly: list[float]) -> tuple[float, bool]:
     # In top-left origin (y increasing downwards), a clockwise polygon has negative signed area in standard Cartesian shoelace formula (or positive depending on sign convention).
     # Specifically sum (x2 - x1) * (y2 + y1) > 0 for clockwise.
     edge_sum = sum(
-        (pts[(i + 1) % n][0] - pts[i][0]) * (pts[(i + 1) % n][1] + pts[i][1])
-        for i in range(n)
+        (pts[(i + 1) % n][0] - pts[i][0]) * (pts[(i + 1) % n][1] + pts[i][1]) for i in range(n)
     )
     is_clockwise = edge_sum > 0
     return abs(signed_area) / 2.0, is_clockwise
@@ -94,9 +93,7 @@ def validate_ground_truth_document(
     if dataset_root and doc.image.path:
         img_path = dataset_root / doc.image.path
         if not img_path.exists():
-            res.add_warning(
-                f"Referenced image path '{doc.image.path}' does not exist on disk"
-            )
+            res.add_warning(f"Referenced image path '{doc.image.path}' does not exist on disk")
 
     # 2. Block IDs uniqueness
     block_ids = [b.id for b in doc.blocks]
@@ -109,12 +106,7 @@ def validate_ground_truth_document(
         if b.text:
             if b.text != unicodedata.normalize("NFC", b.text):
                 res.add_error(f"Block id={b.id} text is not in Unicode NFC form")
-            if (
-                "\t" in b.text
-                or "\r" in b.text
-                or "\u2028" in b.text
-                or "\u2029" in b.text
-            ):
+            if "\t" in b.text or "\r" in b.text or "\u2028" in b.text or "\u2029" in b.text:
                 res.add_error(
                     f"Block id={b.id} contains illegal whitespace characters (\\t, \\r, U+2028, U+2029)"
                 )
@@ -154,22 +146,13 @@ def validate_ground_truth_document(
         poly = b.poly
         for i, val in enumerate(poly):
             if not math.isfinite(val):
-                res.add_error(
-                    f"Block id={b.id} poly contains non-finite coordinate: {val}"
-                )
+                res.add_error(f"Block id={b.id} poly contains non-finite coordinate: {val}")
 
         # Check boundary bounds (with slight 5% tolerance for scan edges)
         xs = [poly[0], poly[2], poly[4], poly[6]]
         ys = [poly[1], poly[3], poly[5], poly[7]]
-        if (
-            min(xs) < -10
-            or max(xs) > width + 10
-            or min(ys) < -10
-            or max(ys) > height + 10
-        ):
-            res.add_warning(
-                f"Block id={b.id} poly exceeds page bounds ({width}x{height})"
-            )
+        if min(xs) < -10 or max(xs) > width + 10 or min(ys) < -10 or max(ys) > height + 10:
+            res.add_warning(f"Block id={b.id} poly exceeds page bounds ({width}x{height})")
 
         area, is_cw = polygon_area_and_clockwise(poly)
         if area <= 0:
@@ -187,9 +170,7 @@ def validate_ground_truth_document(
     # 6. Check uncertain area threshold warning (>20% of page)
     uncertain_blocks = [b for b in doc.blocks if b.scope == "uncertain"]
     if uncertain_blocks:
-        total_unc_area = sum(
-            polygon_area_and_clockwise(b.poly)[0] for b in uncertain_blocks
-        )
+        total_unc_area = sum(polygon_area_and_clockwise(b.poly)[0] for b in uncertain_blocks)
         page_area = width * height
         if page_area > 0 and (total_unc_area / page_area) > 0.20:
             res.add_warning(
@@ -222,7 +203,7 @@ def validate_prediction_document(doc_dict: dict[str, Any]) -> ValidationResult:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Validate benchmark3 reference and prediction files against §14 rules."
+        description="Validate IndicGovBench-Doc ground truth and prediction files against §14 rules."
     )
     parser.add_argument(
         "--reference-dir",

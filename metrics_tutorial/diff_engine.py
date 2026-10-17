@@ -407,7 +407,7 @@ def compute_teds_trace(
 ) -> TEDSArithmeticTrace | None:
     """Computes node-by-node AST tree edit mapping, costs, and derivation for TEDS."""
     from apted import APTED
-    from indic_gov_bench.eval3.scorer3 import TEDSConfig, html_to_teds_tree
+    from indic_gov_bench.eval.scorer import TEDSConfig, html_to_teds_tree
     import rapidfuzz.distance.Levenshtein as Lev
 
     if not ref_html and not pred_html:

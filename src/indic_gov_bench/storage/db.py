@@ -177,13 +177,9 @@ def init_schema(conn: sqlite3.Connection) -> None:
     # Auto-migration: documents
     doc_cols = {r[1] for r in conn.execute("PRAGMA table_info(documents)").fetchall()}
     if "rotation" not in doc_cols:
-        conn.execute(
-            "ALTER TABLE documents ADD COLUMN rotation INTEGER NOT NULL DEFAULT 0"
-        )
+        conn.execute("ALTER TABLE documents ADD COLUMN rotation INTEGER NOT NULL DEFAULT 0")
     if "has_watermark" not in doc_cols:
-        conn.execute(
-            "ALTER TABLE documents ADD COLUMN has_watermark INTEGER NOT NULL DEFAULT 0"
-        )
+        conn.execute("ALTER TABLE documents ADD COLUMN has_watermark INTEGER NOT NULL DEFAULT 0")
 
     # Auto-migration: predictions
     pred_cols = {r[1] for r in conn.execute("PRAGMA table_info(predictions)").fetchall()}

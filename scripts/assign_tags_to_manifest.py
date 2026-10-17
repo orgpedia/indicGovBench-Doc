@@ -474,12 +474,6 @@ def get_default_image_dir() -> Path:
 
 
 def get_default_manifest() -> Path:
-    for candidate in [
-        Path("data/manifests/documents.yaml"),
-        Path("benchmark3/manifests/documents.yaml"),
-    ]:
-        if candidate.exists():
-            return candidate
     return Path("data/manifests/documents.yaml")
 
 

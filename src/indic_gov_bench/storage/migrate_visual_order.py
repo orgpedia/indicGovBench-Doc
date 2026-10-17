@@ -37,9 +37,7 @@ def migrate_visual_orders(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     cursor = conn.cursor()
 
     # Get all distinct document IDs
-    doc_rows = cursor.execute(
-        "SELECT doc_id FROM documents ORDER BY doc_id ASC"
-    ).fetchall()
+    doc_rows = cursor.execute("SELECT doc_id FROM documents ORDER BY doc_id ASC").fetchall()
     doc_ids = [r["doc_id"] for r in doc_rows]
 
     total_docs = len(doc_ids)
@@ -103,9 +101,7 @@ def migrate_visual_orders(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
                         best_gt_idx = i
 
                 if best_gt_idx >= 0:
-                    slot_key = (
-                        items_with_keys[best_gt_idx]["sort_key"] + 500.0 + (idx * 0.1)
-                    )
+                    slot_key = items_with_keys[best_gt_idx]["sort_key"] + 500.0 + (idx * 0.1)
 
                 items_with_keys.append(
                     {
@@ -132,12 +128,8 @@ def migrate_visual_orders(db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
 
     print(f"✓ Migration complete!")
     print(f"  • {total_docs} documents processed")
-    print(
-        f"  • {total_blocks_migrated} total blocks assigned non-null visual order_idx (0..N-1)"
-    )
-    print(
-        f"  • {null_blocks_repositioned} non-target/null blocks slotted into physical positions"
-    )
+    print(f"  • {total_blocks_migrated} total blocks assigned non-null visual order_idx (0..N-1)")
+    print(f"  • {null_blocks_repositioned} non-target/null blocks slotted into physical positions")
 
     return {
         "status": "ok",

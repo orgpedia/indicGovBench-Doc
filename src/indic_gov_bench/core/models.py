@@ -55,9 +55,7 @@ class BlockRecord(BaseModel):
     id: int = Field(..., ge=0, description="Unique block ID within the page")
     type: Literal["text", "table", "figure"]
     scope: Literal["target", "excluded", "uncertain"]
-    order: int | None = Field(
-        None, ge=0, description="Dense reading order index for target blocks"
-    )
+    order: int | None = Field(None, ge=0, description="Dense reading order index for target blocks")
     poly: list[float] = Field(
         ...,
         min_length=8,
@@ -86,54 +84,36 @@ class BlockRecord(BaseModel):
                     f"Figure block (id={self.id}) must have scope='excluded', got '{self.scope}'"
                 )
             if self.text is not None or self.html is not None:
-                raise ValueError(
-                    f"Figure block (id={self.id}) must have text=null and html=null"
-                )
+                raise ValueError(f"Figure block (id={self.id}) must have text=null and html=null")
             if self.order is not None:
                 raise ValueError(f"Figure block (id={self.id}) must have order=null")
             if not self.reason:
-                raise ValueError(
-                    f"Figure block (id={self.id}) must have a non-null reason"
-                )
+                raise ValueError(f"Figure block (id={self.id}) must have a non-null reason")
 
         elif self.type == "text":
             if self.html is not None:
                 raise ValueError(f"Text block (id={self.id}) must have html=null")
             if self.scope == "target":
                 if not self.text or not self.text.strip():
-                    raise ValueError(
-                        f"Target text block (id={self.id}) must have non-empty text"
-                    )
+                    raise ValueError(f"Target text block (id={self.id}) must have non-empty text")
                 if self.order is None:
-                    raise ValueError(
-                        f"Target text block (id={self.id}) must have integer order"
-                    )
+                    raise ValueError(f"Target text block (id={self.id}) must have integer order")
                 if self.reason is not None:
-                    raise ValueError(
-                        f"Target text block (id={self.id}) must have reason=null"
-                    )
+                    raise ValueError(f"Target text block (id={self.id}) must have reason=null")
             elif self.scope == "excluded":
                 if not self.text or not self.text.strip():
-                    raise ValueError(
-                        f"Excluded text block (id={self.id}) must have non-empty text"
-                    )
+                    raise ValueError(f"Excluded text block (id={self.id}) must have non-empty text")
                 if self.order is not None:
-                    raise ValueError(
-                        f"Excluded text block (id={self.id}) must have order=null"
-                    )
+                    raise ValueError(f"Excluded text block (id={self.id}) must have order=null")
                 if not self.reason:
                     raise ValueError(
                         f"Excluded text block (id={self.id}) must have non-null reason"
                     )
             elif self.scope == "uncertain":
                 if self.text is not None:
-                    raise ValueError(
-                        f"Uncertain text block (id={self.id}) must have text=null"
-                    )
+                    raise ValueError(f"Uncertain text block (id={self.id}) must have text=null")
                 if self.order is not None:
-                    raise ValueError(
-                        f"Uncertain text block (id={self.id}) must have order=null"
-                    )
+                    raise ValueError(f"Uncertain text block (id={self.id}) must have order=null")
                 if self.reason != ExcludeReason.ILLEGIBLE.value:
                     raise ValueError(
                         f"Uncertain text block (id={self.id}) must have reason='illegible', got '{self.reason}'"
@@ -144,39 +124,27 @@ class BlockRecord(BaseModel):
                 raise ValueError(f"Table block (id={self.id}) must have text=null")
             if self.scope == "target":
                 if not self.html or not self.html.strip():
-                    raise ValueError(
-                        f"Target table block (id={self.id}) must have non-empty html"
-                    )
+                    raise ValueError(f"Target table block (id={self.id}) must have non-empty html")
                 if self.order is None:
-                    raise ValueError(
-                        f"Target table block (id={self.id}) must have integer order"
-                    )
+                    raise ValueError(f"Target table block (id={self.id}) must have integer order")
                 if self.reason is not None:
-                    raise ValueError(
-                        f"Target table block (id={self.id}) must have reason=null"
-                    )
+                    raise ValueError(f"Target table block (id={self.id}) must have reason=null")
             elif self.scope == "excluded":
                 if not self.html or not self.html.strip():
                     raise ValueError(
                         f"Excluded table block (id={self.id}) must have non-empty html"
                     )
                 if self.order is not None:
-                    raise ValueError(
-                        f"Excluded table block (id={self.id}) must have order=null"
-                    )
+                    raise ValueError(f"Excluded table block (id={self.id}) must have order=null")
                 if not self.reason:
                     raise ValueError(
                         f"Excluded table block (id={self.id}) must have non-null reason"
                     )
             elif self.scope == "uncertain":
                 if self.html is not None:
-                    raise ValueError(
-                        f"Uncertain table block (id={self.id}) must have html=null"
-                    )
+                    raise ValueError(f"Uncertain table block (id={self.id}) must have html=null")
                 if self.order is not None:
-                    raise ValueError(
-                        f"Uncertain table block (id={self.id}) must have order=null"
-                    )
+                    raise ValueError(f"Uncertain table block (id={self.id}) must have order=null")
                 if self.reason != ExcludeReason.ILLEGIBLE.value:
                     raise ValueError(
                         f"Uncertain table block (id={self.id}) must have reason='illegible', got '{self.reason}'"
@@ -214,9 +182,7 @@ class PredictionBlock(BaseModel):
     id: int = Field(..., ge=0)
     type: Literal["text", "table", "figure"] = "text"
     order: int | None = Field(None, ge=0)
-    poly: list[float] | None = Field(
-        None, description="Optional for pure markdown submissions"
-    )
+    poly: list[float] | None = Field(None, description="Optional for pure markdown submissions")
     text: str | None = None
     html: str | None = None
 
@@ -225,9 +191,7 @@ class PredictionBlock(BaseModel):
     def validate_poly_floats(cls, v: list[float] | None) -> list[float] | None:
         if v is not None:
             if len(v) != 8:
-                raise ValueError(
-                    f"poly must have exactly 8 elements if present, got {len(v)}"
-                )
+                raise ValueError(f"poly must have exactly 8 elements if present, got {len(v)}")
             return [float(x) for x in v]
         return None
 
@@ -236,4 +200,3 @@ class PredictionDocument(BaseModel):
     doc_id: str = Field(..., min_length=1)
     blocks: list[PredictionBlock] = Field(default_factory=list)
     usage_and_cost: dict[str, Any] | None = None
-

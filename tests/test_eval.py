@@ -33,9 +33,7 @@ class TestNormalizer3(unittest.TestCase):
             strip_markdown_syntax("**Bold text** and *italic*"), "Bold text and italic"
         )
         self.assertEqual(strip_markdown_syntax("`inline code`"), "inline code")
-        self.assertEqual(
-            strip_markdown_syntax("[Link label](https://example.com)"), "Link label"
-        )
+        self.assertEqual(strip_markdown_syntax("[Link label](https://example.com)"), "Link label")
         self.assertEqual(strip_markdown_syntax("<b>Tag</b> text"), "Tag text")
 
     def test_eyelash_reph_unification(self):

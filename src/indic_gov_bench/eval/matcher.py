@@ -143,10 +143,7 @@ def match_page_blocks(
             (compute_iou(p_poly, gt_polys[g["id"]]) for g in target_gt),
             default=0.0,
         )
-        if (
-            max_dc_containment >= containment_threshold
-            and max_target_iou < iou_threshold
-        ):
+        if max_dc_containment >= containment_threshold and max_target_iou < iou_threshold:
             result.suppressed_pred_ids.append(p["id"])
         else:
             surviving_preds.append(p)
@@ -198,17 +195,13 @@ def match_page_blocks(
             for r, c in zip(row_ind, col_ind)
             if cost_matrix[r, c] < 0
         ]
-        assignments.sort(
-            key=lambda it: (it[0], it[1])
-        )  # deterministic tie-break by (g.id, p.id)
+        assignments.sort(key=lambda it: (it[0], it[1]))  # deterministic tie-break by (g.id, p.id)
         for g_id, p_id, iou_val in assignments:
             gi = _new_group()
             _add_gt(gi, g_id)
             _add_pred(gi, p_id)
             groups[gi]["iou"] = iou_val
-            groups[gi]["containment"] = compute_containment(
-                pred_polys[p_id], gt_polys[g_id]
-            )
+            groups[gi]["containment"] = compute_containment(pred_polys[p_id], gt_polys[g_id])
             step3_pred_ids.add(p_id)
 
     # Step 4: Split recovery — one GT text block -> several predicted text blocks.
@@ -275,21 +268,15 @@ def match_page_blocks(
         if len(gt_ids) == 1 and len(pred_ids) == 1:
             iou_val = grp["iou"]
             status = (
-                ("exact" if iou_val >= 0.95 else "high_overlap")
-                if iou_val >= 0.8
-                else "partial"
+                ("exact" if iou_val >= 0.95 else "high_overlap") if iou_val >= 0.8 else "partial"
             )
         elif len(gt_ids) > 1:
             status = "merge"
         else:
             status = "split"
 
-        ref_text = (
-            " ".join(gt_by_id[i].get("text") or "" for i in gt_ids).strip() or None
-        )
-        pred_text = (
-            " ".join(pred_by_id[i].get("text") or "" for i in pred_ids).strip() or None
-        )
+        ref_text = " ".join(gt_by_id[i].get("text") or "" for i in gt_ids).strip() or None
+        pred_text = " ".join(pred_by_id[i].get("text") or "" for i in pred_ids).strip() or None
 
         result.matched_units.append(
             MatchedUnit(
@@ -299,12 +286,8 @@ def match_page_blocks(
                 pred_block_ids=pred_ids,
                 ref_text=ref_text,
                 pred_text=pred_text,
-                ref_html=gt_by_id[gt_ids[0]].get("html")
-                if unit_type == "table"
-                else None,
-                pred_html=pred_by_id[pred_ids[0]].get("html")
-                if unit_type == "table"
-                else None,
+                ref_html=gt_by_id[gt_ids[0]].get("html") if unit_type == "table" else None,
+                pred_html=pred_by_id[pred_ids[0]].get("html") if unit_type == "table" else None,
                 iou=round(grp["iou"], 4),
                 containment=round(grp["containment"], 4),
                 ref_poly=gt_by_id[gt_ids[0]].get("poly"),
@@ -362,9 +345,7 @@ def match_page_blocks(
         go = sorted(o for o in (gt_order.get(i) for i in grp["gt"]) if o is not None)
         if len(go) > 1 and (go[-1] - go[0] + 1) != len(go):
             nc = True
-        po = sorted(
-            o for o in (pred_order.get(i) for i in grp["pred"]) if o is not None
-        )
+        po = sorted(o for o in (pred_order.get(i) for i in grp["pred"]) if o is not None)
         if len(po) > 1 and (po[-1] - po[0] + 1) != len(po):
             nc = True
         if nc:

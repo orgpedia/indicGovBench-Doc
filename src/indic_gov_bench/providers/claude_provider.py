@@ -126,9 +126,7 @@ def parse_claude_raw_response(
                     elif isinstance(parsed, dict):
                         for k in ("blocks", "items", "elements", "content", "result"):
                             if isinstance(parsed.get(k), list):
-                                block_items = [
-                                    b for b in parsed[k] if isinstance(b, dict)
-                                ]
+                                block_items = [b for b in parsed[k] if isinstance(b, dict)]
                                 break
                         if not block_items:
                             block_items = [parsed]
@@ -136,11 +134,7 @@ def parse_claude_raw_response(
                     pass
 
         # Case 3: "blocks" key
-        if (
-            not block_items
-            and "blocks" in raw_json
-            and isinstance(raw_json["blocks"], list)
-        ):
+        if not block_items and "blocks" in raw_json and isinstance(raw_json["blocks"], list):
             block_items = [b for b in raw_json["blocks"] if isinstance(b, dict)]
 
     scale_x, scale_y = _detect_coordinate_scales(block_items)
@@ -191,9 +185,7 @@ def parse_claude_raw_response(
             elif "|" in raw_content:
                 html_val = markdown_table_to_canonical_html(raw_content)
             else:
-                html_val = (
-                    f"<table><tbody><tr><td>{raw_content}</td></tr></tbody></table>"
-                )
+                html_val = f"<table><tbody><tr><td>{raw_content}</td></tr></tbody></table>"
         else:
             cleaned_text = unicodedata.normalize("NFC", raw_content)
             cleaned_text = strip_markdown_syntax(cleaned_text)

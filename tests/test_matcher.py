@@ -219,9 +219,7 @@ class TestMatcher3(unittest.TestCase):
         ]
         # Sanity: no fragment can clear the primary IoU threshold.
         gp = poly_to_shapely(gt[0]["poly"])
-        self.assertLess(
-            max(compute_iou(gp, poly_to_shapely(p["poly"])) for p in pred), 0.5
-        )
+        self.assertLess(max(compute_iou(gp, poly_to_shapely(p["poly"])) for p in pred), 0.5)
 
         res = match_page_blocks(gt, pred)
         groups = [

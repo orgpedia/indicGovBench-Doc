@@ -32,11 +32,7 @@ class TestSyncPricing(unittest.TestCase):
         """Verifies drift detection when local rates differ from upstream."""
         mock_catalog = {
             "google": {
-                "models": {
-                    "gemini-3.1-pro-preview": {
-                        "cost": {"input": 2.00, "output": 12.00}
-                    }
-                }
+                "models": {"gemini-3.1-pro-preview": {"cost": {"input": 2.00, "output": 12.00}}}
             }
         }
         mock_registry = {
@@ -62,11 +58,7 @@ class TestSyncPricing(unittest.TestCase):
         """Verifies UP-TO-DATE status when local and upstream match."""
         mock_catalog = {
             "google": {
-                "models": {
-                    "gemini-3.1-pro-preview": {
-                        "cost": {"input": 2.00, "output": 12.00}
-                    }
-                }
+                "models": {"gemini-3.1-pro-preview": {"cost": {"input": 2.00, "output": 12.00}}}
             }
         }
         mock_registry = {
@@ -88,7 +80,7 @@ class TestSyncPricing(unittest.TestCase):
 
     def test_apply_sync_updates_file_and_preserves_batch_discount(self):
         """Verifies in-place regex update of rates while enforcing 50.0% batch discount."""
-        initial_content = '''
+        initial_content = """
 PRICING_REGISTRY = {
     "gemini_3_1_pro": {
         "name": "Gemini 3.1 Pro",
@@ -107,7 +99,7 @@ PRICING_REGISTRY = {
         "batch_discount_pct": 50.0,
     },
 }
-'''
+"""
         with tempfile.NamedTemporaryFile("w+", delete=False, suffix=".py") as tmp:
             tmp.write(initial_content)
             tmp_path = Path(tmp.name)
@@ -201,9 +193,7 @@ PRICING_REGISTRY = {
             # Batch (50% discount) = 0.6171 INR batch
             conn = sqlite3.connect(str(tmp_db))
             conn.row_factory = sqlite3.Row
-            row = conn.execute(
-                "SELECT * FROM predictions WHERE doc_id = 'order_hi_001'"
-            ).fetchone()
+            row = conn.execute("SELECT * FROM predictions WHERE doc_id = 'order_hi_001'").fetchone()
 
             self.assertIsNotNone(row["cost_realtime_inr"])
             self.assertIsNotNone(row["cost_batch_inr"])

@@ -1,4 +1,4 @@
-"""import_to_db3.py — Fast One-Way Ingestion Engine from benchmark3/ into SQLite (v3).
+"""importer.py — Fast One-Way Ingestion Engine from data/ into SQLite.
 
 Ingests pristine reference Ground Truth documents, computes 'Fit' viewport bounding boxes,
 and stores provider predictions in workspace/benchmark.db in <1 second.
@@ -94,9 +94,7 @@ def import_benchmark_to_db(
     pdfs_dir = benchmark_dir / "pdfs"
 
     if not ref_dir.exists():
-        raise FileNotFoundError(
-            f"Ground truth directory '{ref_dir}' not found."
-        )
+        raise FileNotFoundError(f"Ground truth directory '{ref_dir}' not found.")
 
     counts = {"documents": 0, "blocks": 0, "predictions": 0}
     manifest_map = _load_manifest_metadata(benchmark_dir)
@@ -110,7 +108,7 @@ def import_benchmark_to_db(
             INSERT OR REPLACE INTO runs (run_id, description, status, is_default)
             VALUES (?, ?, 'completed', 1)
             """,
-            (run_id, "Pristine benchmark3 evaluation run"),
+            (run_id, "IndicGovBench-Doc baseline evaluation run"),
         )
 
         # 2. Ingest Ground Truth Reference Documents & Blocks
@@ -145,52 +143,25 @@ def import_benchmark_to_db(
 
                 # Normalize legacy fields if needed
                 if manifest_entry:
-                    if (
-                        "department" in manifest_entry
-                        and "govt_dept_name" not in manifest_entry
-                    ):
+                    if "department" in manifest_entry and "govt_dept_name" not in manifest_entry:
                         manifest_entry["govt_dept_name"] = manifest_entry["department"]
-                    if (
-                        "government" in manifest_entry
-                        and "govt_name" not in manifest_entry
-                    ):
+                    if "government" in manifest_entry and "govt_name" not in manifest_entry:
                         manifest_entry["govt_name"] = manifest_entry["government"]
-                    if (
-                        "language" in manifest_entry
-                        and "languages" not in manifest_entry
-                    ):
-                        manifest_entry["languages"] = [
-                            str(manifest_entry["language"]).capitalize()
-                        ]
+                    if "language" in manifest_entry and "languages" not in manifest_entry:
+                        manifest_entry["languages"] = [str(manifest_entry["language"]).capitalize()]
                     if "script" in manifest_entry and "scripts" not in manifest_entry:
                         manifest_entry["scripts"] = [str(manifest_entry["script"])]
-                    if (
-                        "data_source" in manifest_entry
-                        and "doc_type" not in manifest_entry
-                    ):
+                    if "data_source" in manifest_entry and "doc_type" not in manifest_entry:
                         manifest_entry["doc_type"] = manifest_entry["data_source"]
-                    if (
-                        "pdf_type" in manifest_entry
-                        and "doc_source" not in manifest_entry
-                    ):
+                    if "pdf_type" in manifest_entry and "doc_source" not in manifest_entry:
                         manifest_entry["doc_source"] = (
-                            "IMAGE_SCAN"
-                            if manifest_entry["pdf_type"] == "scan"
-                            else "TEXT_PDF"
+                            "IMAGE_SCAN" if manifest_entry["pdf_type"] == "scan" else "TEXT_PDF"
                         )
-                    if "flags" in manifest_entry and isinstance(
-                        manifest_entry["flags"], dict
-                    ):
+                    if "flags" in manifest_entry and isinstance(manifest_entry["flags"], dict):
                         flags_d = manifest_entry["flags"]
-                        if (
-                            "stamp_seal" in flags_d
-                            and "has_stamp" not in manifest_entry
-                        ):
+                        if "stamp_seal" in flags_d and "has_stamp" not in manifest_entry:
                             manifest_entry["has_stamp"] = flags_d["stamp_seal"]
-                        if (
-                            "handwritten" in flags_d
-                            and "has_handwritten" not in manifest_entry
-                        ):
+                        if "handwritten" in flags_d and "has_handwritten" not in manifest_entry:
                             manifest_entry["has_handwritten"] = flags_d["handwritten"]
                         if (
                             "full_page_table" in flags_d
@@ -229,9 +200,7 @@ def import_benchmark_to_db(
                         "table_has_lines" in manifest_entry
                         and "table_row_has_lines" not in manifest_entry
                     ):
-                        manifest_entry["table_row_has_lines"] = manifest_entry[
-                            "table_has_lines"
-                        ]
+                        manifest_entry["table_row_has_lines"] = manifest_entry["table_has_lines"]
                     if (
                         "table_has_multi_lines" in manifest_entry
                         and "table_cell_has_multi_lines" not in manifest_entry
@@ -245,22 +214,16 @@ def import_benchmark_to_db(
                         "scan_has_noise_dots" in manifest_entry
                         and "scan_has_dots" not in manifest_entry
                     ):
-                        manifest_entry["scan_has_dots"] = manifest_entry[
-                            "scan_has_noise_dots"
-                        ]
+                        manifest_entry["scan_has_dots"] = manifest_entry["scan_has_noise_dots"]
                     if (
                         "scan_has_shadows" in manifest_entry
                         and "scan_has_darkpatch" not in manifest_entry
                     ):
-                        manifest_entry["scan_has_darkpatch"] = manifest_entry[
-                            "scan_has_shadows"
-                        ]
+                        manifest_entry["scan_has_darkpatch"] = manifest_entry["scan_has_shadows"]
                     if "page_number" not in manifest_entry:
                         manifest_entry["page_number"] = 1
                     else:
-                        manifest_entry["page_number"] = int(
-                            manifest_entry["page_number"]
-                        )
+                        manifest_entry["page_number"] = int(manifest_entry["page_number"])
 
                 # Extract indexed columns
                 department = manifest_entry.get("govt_dept_name") or manifest_entry.get(
@@ -275,9 +238,7 @@ def import_benchmark_to_db(
                     language = str(manifest_entry.get("language", "marathi")).lower()
 
                 scan_type = manifest_entry.get("scan_type")
-                source_url = manifest_entry.get("url") or manifest_entry.get(
-                    "source_url"
-                )
+                source_url = manifest_entry.get("url") or manifest_entry.get("source_url")
                 audit_status = manifest_entry.get("audit_status", "unreviewed")
                 rotation = (
                     int(manifest_entry.get("rotation", 0))
@@ -288,16 +249,11 @@ def import_benchmark_to_db(
 
                 if "has_tables" in manifest_entry:
                     has_tables = 1 if manifest_entry["has_tables"] else 0
-                if (
-                    "table_count" in manifest_entry
-                    and manifest_entry["table_count"] is not None
-                ):
+                if "table_count" in manifest_entry and manifest_entry["table_count"] is not None:
                     table_count = int(manifest_entry["table_count"])
 
                 meta_json = (
-                    json.dumps(manifest_entry, ensure_ascii=False)
-                    if manifest_entry
-                    else "{}"
+                    json.dumps(manifest_entry, ensure_ascii=False) if manifest_entry else "{}"
                 )
 
                 conn.execute(
@@ -332,9 +288,7 @@ def import_benchmark_to_db(
                 counts["documents"] += 1
 
                 # Clean existing blocks and gcv words for this document
-                conn.execute(
-                    "DELETE FROM ground_truth_blocks WHERE doc_id = ?", (doc_id,)
-                )
+                conn.execute("DELETE FROM ground_truth_blocks WHERE doc_id = ?", (doc_id,))
                 conn.execute("DELETE FROM gcv_words WHERE doc_id = ?", (doc_id,))
 
                 for b in blocks:
@@ -407,12 +361,8 @@ def import_benchmark_to_db(
                     )
                     counts["blocks"] += 1
 
-                # Ingest GCV word anchors from benchmark3/anchors/{doc_id}.json
+                # Ingest GCV word anchors from data/anchors/{doc_id}.json
                 anc_file = benchmark_dir / "anchors" / f"{doc_id}.json"
-                if not anc_file.exists():
-                    anc_file = (
-                        Path("benchmark") / "reference" / "anchors" / f"{doc_id}.json"
-                    )
 
                 if anc_file.exists():
                     try:
@@ -583,17 +533,21 @@ def import_benchmark_to_db(
                             p_data = json.load(f)
 
                         blocks_list = p_data.get("blocks", [])
-                        raw_resp_path = (
-                            f"raw_responses/{provider}/{doc_id}.json"
-                        )
+                        raw_resp_path = f"raw_responses/{provider}/{doc_id}.json"
 
                         # Extract or calculate dual costs and telemetry
                         cost_data = p_data.get("usage_and_cost")
                         if not cost_data:
                             raw_candidates = [
                                 benchmark_dir / "raw_responses" / provider / f"{doc_id}.json",
-                                benchmark_dir / "raw_responses" / provider / f"{provider}-{doc_id}-response.json",
-                                benchmark_dir / "raw_responses" / provider / f"{doc_id}-response.json",
+                                benchmark_dir
+                                / "raw_responses"
+                                / provider
+                                / f"{provider}-{doc_id}-response.json",
+                                benchmark_dir
+                                / "raw_responses"
+                                / provider
+                                / f"{doc_id}-response.json",
                             ]
                             for rc in raw_candidates:
                                 if rc.exists():
@@ -653,9 +607,7 @@ def import_benchmark_to_db(
                         counts["predictions"] += 1
 
                     except Exception as err:
-                        print(
-                            f"❌ Error ingesting prediction {pf.name} for {provider}: {err}"
-                        )
+                        print(f"❌ Error ingesting prediction {pf.name} for {provider}: {err}")
 
     elapsed = time.time() - t0
     print("=" * 60)

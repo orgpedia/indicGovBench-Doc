@@ -63,8 +63,12 @@ class TestStudioPages(unittest.TestCase):
         self.assertIn("from '../attribute_catalog.js'", summary_js)
 
         # 2. Extract Set I attributes from attribute_catalog.js
-        tables_match = re.search(r"groupId:\s*'tables'.*?attributes:\s*\[(.*?)\]\s*,\s*\}", catalog_js, re.DOTALL)
-        self.assertIsNotNone(tables_match, "Set I tables group must be defined in attribute_catalog.js")
+        tables_match = re.search(
+            r"groupId:\s*'tables'.*?attributes:\s*\[(.*?)\]\s*,\s*\}", catalog_js, re.DOTALL
+        )
+        self.assertIsNotNone(
+            tables_match, "Set I tables group must be defined in attribute_catalog.js"
+        )
         catalog_set_i = re.findall(r"key:\s*'([^']+)'", tables_match.group(1))
 
         expected_order = [
@@ -81,31 +85,32 @@ class TestStudioPages(unittest.TestCase):
             "table_has_merged_cells",
             "table_has_multi_lines",
         ]
-        self.assertEqual(catalog_set_i, expected_order, "attribute_catalog.js Set I order must match expected")
+        self.assertEqual(
+            catalog_set_i, expected_order, "attribute_catalog.js Set I order must match expected"
+        )
 
         # 3. Explicit invariant checks requested by user
         self.assertEqual(
             catalog_set_i.index("table_row_has_lines"),
             catalog_set_i.index("table_has_multi_row_header") + 1,
-            "table_row_has_lines must appear immediately after table_has_multi_row_header"
+            "table_row_has_lines must appear immediately after table_has_multi_row_header",
         )
         self.assertEqual(
             catalog_set_i[-1],
             "table_has_multi_lines",
-            "table_has_multi_lines must be the last attribute in Set I"
+            "table_has_multi_lines must be the last attribute in Set I",
         )
 
         # 4. Verify index.html Set I HTML table is in 100% parity with attribute_catalog.js
         html_tables_match = re.search(
-            r"Table Content &amp; Structural Elements(.*?)</tbody>",
-            index_html,
-            re.DOTALL
+            r"Table Content &amp; Structural Elements(.*?)</tbody>", index_html, re.DOTALL
         )
         self.assertIsNotNone(html_tables_match, "Set I table must be present in index.html")
         html_set_i = re.findall(r"<code[^>]*>([^<]+)</code>", html_tables_match.group(1))
-        self.assertEqual(html_set_i, catalog_set_i, "index.html Set I order must match attribute_catalog.js")
+        self.assertEqual(
+            html_set_i, catalog_set_i, "index.html Set I order must match attribute_catalog.js"
+        )
 
 
 if __name__ == "__main__":
     unittest.main()
-

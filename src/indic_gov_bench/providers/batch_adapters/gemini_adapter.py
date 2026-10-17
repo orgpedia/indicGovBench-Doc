@@ -66,16 +66,12 @@ class GCSHelper:
         from google.auth.transport.requests import AuthorizedSession
         from urllib.parse import quote
 
-        creds, _ = google.auth.default(
-            scopes=["https://www.googleapis.com/auth/cloud-platform"]
-        )
+        creds, _ = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
         session = AuthorizedSession(creds)
         encoded_name = quote(blob_name, safe="")
         url = f"https://storage.googleapis.com/upload/storage/v1/b/{bucket_name}/o?uploadType=media&name={encoded_name}"
         with open(local_path, "rb") as f:
-            resp = session.post(
-                url, data=f, headers={"Content-Type": "application/jsonl"}
-            )
+            resp = session.post(url, data=f, headers={"Content-Type": "application/jsonl"})
         if not resp.ok:
             raise RuntimeError(
                 f"Failed to upload {local_path} to {gcs_uri}: HTTP {resp.status_code} {resp.text}"
@@ -93,9 +89,7 @@ class GCSHelper:
         import google.auth
         from google.auth.transport.requests import AuthorizedSession
 
-        creds, _ = google.auth.default(
-            scopes=["https://www.googleapis.com/auth/cloud-platform"]
-        )
+        creds, _ = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
         session = AuthorizedSession(creds)
         url = f"https://storage.googleapis.com/storage/v1/b/{bucket_name}/o"
         resp = session.get(url, params={"prefix": prefix})
@@ -119,12 +113,12 @@ class GCSHelper:
         from google.auth.transport.requests import AuthorizedSession
         from urllib.parse import quote
 
-        creds, _ = google.auth.default(
-            scopes=["https://www.googleapis.com/auth/cloud-platform"]
-        )
+        creds, _ = google.auth.default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
         session = AuthorizedSession(creds)
         encoded_name = quote(blob_name, safe="")
-        url = f"https://storage.googleapis.com/storage/v1/b/{bucket_name}/o/{encoded_name}?alt=media"
+        url = (
+            f"https://storage.googleapis.com/storage/v1/b/{bucket_name}/o/{encoded_name}?alt=media"
+        )
         resp = session.get(url)
         if not resp.ok:
             raise RuntimeError(
@@ -218,10 +212,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
             "response_schema": GEMINI_BLOCKS_SCHEMA,
             "temperature": 0.0,
         }
-        if (
-            "3.1" in str(self.model_name).lower()
-            or "pro" in str(self.model_name).lower()
-        ):
+        if "3.1" in str(self.model_name).lower() or "pro" in str(self.model_name).lower():
             gen_config["thinking_config"] = {"thinking_level": "LOW"}
         elif "3.5" in str(self.model_name).lower():
             gen_config["thinking_config"] = {"thinking_level": "MINIMAL"}
@@ -286,11 +277,11 @@ class GeminiBatchAdapter(BaseBatchAdapter):
 
         if self._is_vertex():
             bucket_name, prefix = self._get_gcs_bucket()
-            gcs_input_blob = f"{prefix}/batches/{self.provider_slug}/{chunk_name}_{ts}/input.jsonl".lstrip(
-                "/"
+            gcs_input_blob = (
+                f"{prefix}/batches/{self.provider_slug}/{chunk_name}_{ts}/input.jsonl".lstrip("/")
             )
-            gcs_output_prefix = f"{prefix}/batches/{self.provider_slug}/{chunk_name}_{ts}/output/".lstrip(
-                "/"
+            gcs_output_prefix = (
+                f"{prefix}/batches/{self.provider_slug}/{chunk_name}_{ts}/output/".lstrip("/")
             )
 
             src_gcs_uri = f"gs://{bucket_name}/{gcs_input_blob}"
@@ -320,11 +311,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                 "dest_gcs_uri": dest_gcs_uri,
                 "bucket_name": bucket_name,
                 "output_prefix": gcs_output_prefix,
-                "doc_ids": [
-                    item.get("custom_id")
-                    for item in items
-                    if item.get("custom_id")
-                ],
+                "doc_ids": [item.get("custom_id") for item in items if item.get("custom_id")],
             }
             meta_path = output_batch_dir / f"job_meta_{chunk_name}.json"
             with open(meta_path, "w", encoding="utf-8") as f:
@@ -370,11 +357,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
             norm_status = "failed"
         elif "cancelled" in raw_state or "canceled" in raw_state:
             norm_status = "cancelled"
-        elif (
-            "running" in raw_state
-            or "pending" in raw_state
-            or "in_progress" in raw_state
-        ):
+        elif "running" in raw_state or "pending" in raw_state or "in_progress" in raw_state:
             norm_status = "in_progress"
         else:
             norm_status = raw_state
@@ -456,31 +439,23 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                 elif getattr(job, "output_info", None) and hasattr(
                     job.output_info, "gcs_output_directory"
                 ):
-                    dest_bucket, dest_prefix = parse_gcs_uri(
-                        job.output_info.gcs_output_directory
-                    )
+                    dest_bucket, dest_prefix = parse_gcs_uri(job.output_info.gcs_output_directory)
 
             # 3. Fallback to default bucket
             if not dest_bucket:
                 b_name, b_prefix = self._get_gcs_bucket()
                 dest_bucket = b_name
-                dest_prefix = f"{b_prefix}/batches/{self.provider_slug}/".lstrip(
-                    "/"
-                )
+                dest_prefix = f"{b_prefix}/batches/{self.provider_slug}/".lstrip("/")
 
             blobs = self._gcs_helper.list_blobs(f"gs://{dest_bucket}/{dest_prefix}")
-            result_blobs = [
-                b for b in blobs if b.endswith(".jsonl") or "prediction" in b
-            ]
+            result_blobs = [b for b in blobs if b.endswith(".jsonl") or "prediction" in b]
             if not result_blobs:
                 raise ValueError(
                     f"No prediction output files found in gs://{dest_bucket}/{dest_prefix} for batch {batch_id}"
                 )
 
             for blob_name in result_blobs:
-                content = self._gcs_helper.download_blob_text(
-                    dest_bucket, blob_name
-                )
+                content = self._gcs_helper.download_blob_text(dest_bucket, blob_name)
                 for line in content.splitlines():
                     line = line.strip()
                     if not line:
@@ -496,11 +471,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                         or line_obj.get("instance", {}).get("custom_id")
                         or line_obj.get("metadata", {}).get("custom_id")
                     )
-                    if (
-                        not custom_id
-                        and doc_ids
-                        and unpacked_count < len(doc_ids)
-                    ):
+                    if not custom_id and doc_ids and unpacked_count < len(doc_ids):
                         custom_id = doc_ids[unpacked_count]
                     if not custom_id:
                         continue
@@ -510,11 +481,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                     if isinstance(resp_obj, dict):
                         candidates = resp_obj.get("candidates", [])
                         if candidates and isinstance(candidates, list):
-                            parts = (
-                                candidates[0]
-                                .get("content", {})
-                                .get("parts", [])
-                            )
+                            parts = candidates[0].get("content", {}).get("parts", [])
                             if parts and isinstance(parts, list):
                                 text = parts[0].get("text", "[]")
                         if not text or text == "[]":
@@ -527,33 +494,21 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                     except Exception:
                         cleaned = text.strip()
                         if cleaned.startswith("```"):
-                            cleaned = (
-                                cleaned.split("\n", 1)[-1]
-                                .rsplit("```", 1)[0]
-                                .strip()
-                            )
+                            cleaned = cleaned.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
                         try:
                             result_json = json.loads(cleaned)
                         except Exception:
                             result_json = []
 
                     um = (
-                        resp_obj.get("usageMetadata")
-                        or resp_obj.get("usage_metadata")
-                        or {}
+                        resp_obj.get("usageMetadata") or resp_obj.get("usage_metadata") or {}
                         if isinstance(resp_obj, dict)
                         else getattr(resp_obj, "usage_metadata", None)
                     )
                     if isinstance(um, dict):
-                        p_in = int(
-                            um.get("promptTokenCount")
-                            or um.get("prompt_token_count")
-                            or 0
-                        )
+                        p_in = int(um.get("promptTokenCount") or um.get("prompt_token_count") or 0)
                         p_out = int(
-                            um.get("candidatesTokenCount")
-                            or um.get("candidates_token_count")
-                            or 0
+                            um.get("candidatesTokenCount") or um.get("candidates_token_count") or 0
                         )
                         tot = int(
                             um.get("totalTokenCount")
@@ -562,35 +517,19 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                         )
                     else:
                         p_in = int(getattr(um, "prompt_token_count", 0) or 0) if um else 0
-                        p_out = (
-                            int(getattr(um, "candidates_token_count", 0) or 0)
-                            if um
-                            else 0
-                        )
+                        p_out = int(getattr(um, "candidates_token_count", 0) or 0) if um else 0
                         tot = (
-                            int(getattr(um, "total_token_count", 0) or (p_in + p_out))
-                            if um
-                            else 0
+                            int(getattr(um, "total_token_count", 0) or (p_in + p_out)) if um else 0
                         )
 
-                    cost_info = estimate_gemini_cost(
-                        str(self.model_name), p_in, p_out
-                    )
-                    cost_info["input_rate_per_1m"] = round(
-                        cost_info["input_rate_per_1m"] * 0.5, 6
-                    )
+                    cost_info = estimate_gemini_cost(str(self.model_name), p_in, p_out)
+                    cost_info["input_rate_per_1m"] = round(cost_info["input_rate_per_1m"] * 0.5, 6)
                     cost_info["output_rate_per_1m"] = round(
                         cost_info["output_rate_per_1m"] * 0.5, 6
                     )
-                    cost_info["input_cost_usd"] = round(
-                        cost_info["input_cost_usd"] * 0.5, 6
-                    )
-                    cost_info["output_cost_usd"] = round(
-                        cost_info["output_cost_usd"] * 0.5, 6
-                    )
-                    cost_info["total_cost_usd"] = round(
-                        cost_info["total_cost_usd"] * 0.5, 6
-                    )
+                    cost_info["input_cost_usd"] = round(cost_info["input_cost_usd"] * 0.5, 6)
+                    cost_info["output_cost_usd"] = round(cost_info["output_cost_usd"] * 0.5, 6)
+                    cost_info["total_cost_usd"] = round(cost_info["total_cost_usd"] * 0.5, 6)
                     cost_info["batch_discount"] = "50%"
                     cost_info["is_batch_discount"] = True
 
@@ -613,9 +552,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                     }
 
                     with open(target_file, "w", encoding="utf-8") as out_f:
-                        json.dump(
-                            raw_payload, out_f, indent=2, ensure_ascii=False
-                        )
+                        json.dump(raw_payload, out_f, indent=2, ensure_ascii=False)
 
                     unpacked_count += 1
 
@@ -623,11 +560,7 @@ class GeminiBatchAdapter(BaseBatchAdapter):
 
         # Mode B: AI Studio (Inlined responses)
         out_info = getattr(job, "output_info", None)
-        responses = (
-            getattr(job, "responses", None)
-            or getattr(out_info, "responses", None)
-            or []
-        )
+        responses = getattr(job, "responses", None) or getattr(out_info, "responses", None) or []
         if isinstance(responses, list) and responses:
             for resp_item in responses:
                 custom_id = getattr(resp_item, "custom_id", None) or getattr(
@@ -648,30 +581,14 @@ class GeminiBatchAdapter(BaseBatchAdapter):
                 um = getattr(resp_obj, "usage_metadata", None)
                 p_in = int(getattr(um, "prompt_token_count", 0) or 0) if um else 0
                 p_out = int(getattr(um, "candidates_token_count", 0) or 0) if um else 0
-                tot = (
-                    int(getattr(um, "total_token_count", 0) or (p_in + p_out))
-                    if um
-                    else 0
-                )
+                tot = int(getattr(um, "total_token_count", 0) or (p_in + p_out)) if um else 0
 
-                cost_info = estimate_gemini_cost(
-                    str(self.model_name), p_in, p_out
-                )
-                cost_info["input_rate_per_1m"] = round(
-                    cost_info["input_rate_per_1m"] * 0.5, 6
-                )
-                cost_info["output_rate_per_1m"] = round(
-                    cost_info["output_rate_per_1m"] * 0.5, 6
-                )
-                cost_info["input_cost_usd"] = round(
-                    cost_info["input_cost_usd"] * 0.5, 6
-                )
-                cost_info["output_cost_usd"] = round(
-                    cost_info["output_cost_usd"] * 0.5, 6
-                )
-                cost_info["total_cost_usd"] = round(
-                    cost_info["total_cost_usd"] * 0.5, 6
-                )
+                cost_info = estimate_gemini_cost(str(self.model_name), p_in, p_out)
+                cost_info["input_rate_per_1m"] = round(cost_info["input_rate_per_1m"] * 0.5, 6)
+                cost_info["output_rate_per_1m"] = round(cost_info["output_rate_per_1m"] * 0.5, 6)
+                cost_info["input_cost_usd"] = round(cost_info["input_cost_usd"] * 0.5, 6)
+                cost_info["output_cost_usd"] = round(cost_info["output_cost_usd"] * 0.5, 6)
+                cost_info["total_cost_usd"] = round(cost_info["total_cost_usd"] * 0.5, 6)
                 cost_info["batch_discount"] = "50%"
                 cost_info["is_batch_discount"] = True
 

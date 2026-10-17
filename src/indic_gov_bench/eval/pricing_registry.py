@@ -20,16 +20,16 @@ DEFAULT_USD_TO_INR = 100.0
 # -----------------------------------------------------------------------------
 MODAL_RATES = {
     "gpu": {
-        "H100": 4.76 / 3600.0,       # $4.76 / hr ≈ $0.001322 / sec
-        "L40S": 1.95 / 3600.0,       # $1.95 / hr ≈ $0.000542 / sec
+        "H100": 4.76 / 3600.0,  # $4.76 / hr ≈ $0.001322 / sec
+        "L40S": 1.95 / 3600.0,  # $1.95 / hr ≈ $0.000542 / sec
         "A100-80GB": 3.67 / 3600.0,  # $3.67 / hr ≈ $0.001019 / sec
         "A100": 3.67 / 3600.0,
-        "L4": 0.80 / 3600.0,         # $0.80 / hr ≈ $0.000222 / sec
+        "L4": 0.80 / 3600.0,  # $0.80 / hr ≈ $0.000222 / sec
         "T4": 0.59 / 3600.0,
         "CPU": 0.0,
         None: 0.0,
     },
-    "cpu_core_second": 0.0000139,    # ~$0.05 / core-hr
+    "cpu_core_second": 0.0000139,  # ~$0.05 / core-hr
     "memory_gib_second": 0.0000022,  # ~$0.008 / GiB-hr
 }
 
@@ -203,8 +203,31 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         ),
         "batch_formula": "realtime_cost * 0.50",
     },
-
     # 2. OpenAI Models (USD, Token-based, 50% Batch API discount)
+    "openai_gpt_6_luna": {
+        "name": "GPT-6 Luna",
+        "archetype": "token",
+        "native_currency": "USD",
+        "input_rate_1m": 0.10,
+        "output_rate_1m": 0.50,
+        "supports_batching": True,
+        "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-6-luna",
+        "last_synced_at": "2026-10-14",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
+    },
     "openai_gpt_5_6_luna": {
         "name": "GPT-5.6 Luna",
         "archetype": "token",
@@ -343,7 +366,6 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         ),
         "batch_formula": "realtime_cost * 0.50",
     },
-
     # 3. Anthropic Claude Models (USD, Token-based, 50% Message Batches discount)
     "claude_haiku_4_5": {
         "name": "Claude Haiku 4.5",
@@ -414,13 +436,12 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         ),
         "batch_formula": "realtime_cost * 0.50",
     },
-
     # 4. Fixed-Page Commercial OCR Providers
     "sarvam_api": {
         "name": "Sarvam AI Document Parser",
         "archetype": "fixed_page",
         "native_currency": "INR",
-        "rate_per_page": 1.25,         # Flat ₹1.25 / page
+        "rate_per_page": 1.25,  # Flat ₹1.25 / page
         "supports_batching": False,
         "batch_discount_pct": 0.0,
         "pricing_source": "Sarvam AI Docs",
@@ -433,8 +454,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "last_synced_at": "2026-10-10",
         "billing_unit": "INR per page",
         "how_computed": (
-            "Flat rate of ₹1.25 per document page. "
-            "Billed natively in INR with no batch discount."
+            "Flat rate of ₹1.25 per document page. Billed natively in INR with no batch discount."
         ),
         "formula": "pages * rate_per_page",
         "batch_formula": "realtime_cost",
@@ -443,21 +463,19 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "Mistral OCR",
         "archetype": "fixed_page",
         "native_currency": "USD",
-        "rate_per_page": 0.0040,       # $4.00 / 1,000 pages
+        "rate_per_page": 0.0040,  # $4.00 / 1,000 pages
         "supports_batching": False,
         "batch_discount_pct": 0.0,
         "pricing_source": "Mistral AI Docs",
         "source_url": "https://docs.mistral.ai/inference/pricing",
         "wayback_url": (
-            "https://web.archive.org/web/20261008042634/"
-            "https://docs.mistral.ai/inference/pricing"
+            "https://web.archive.org/web/20261008042634/https://docs.mistral.ai/inference/pricing"
         ),
         "models_dev_id": None,
         "last_synced_at": "2026-10-10",
         "billing_unit": "USD per 1K pages",
         "how_computed": (
-            "Flat rate of $0.004 per page ($4.00 per 1,000 pages). "
-            "Converted to INR ($1=₹100)."
+            "Flat rate of $0.004 per page ($4.00 per 1,000 pages). Converted to INR ($1=₹100)."
         ),
         "formula": "pages * rate_per_page * USD_TO_INR",
         "batch_formula": "realtime_cost",
@@ -466,21 +484,19 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "Datalab Marker API",
         "archetype": "fixed_page",
         "native_currency": "USD",
-        "rate_per_page": 0.0040,       # $4.00 / 1,000 pages
+        "rate_per_page": 0.0040,  # $4.00 / 1,000 pages
         "supports_batching": False,
         "batch_discount_pct": 0.0,
         "pricing_source": "DataLab Docs",
         "source_url": "https://www.datalab.to/pricing",
         "wayback_url": (
-            "https://web.archive.org/web/20260922224926/"
-            "https://www.datalab.to/pricing"
+            "https://web.archive.org/web/20260922224926/https://www.datalab.to/pricing"
         ),
         "models_dev_id": None,
         "last_synced_at": "2026-10-10",
         "billing_unit": "USD per 1K pages",
         "how_computed": (
-            "Flat rate of $0.004 per page ($4.00 per 1,000 pages). "
-            "Converted to INR ($1=₹100)."
+            "Flat rate of $0.004 per page ($4.00 per 1,000 pages). Converted to INR ($1=₹100)."
         ),
         "formula": "pages * rate_per_page * USD_TO_INR",
         "batch_formula": "realtime_cost",
@@ -489,7 +505,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "name": "Google Cloud Vision",
         "archetype": "fixed_page",
         "native_currency": "USD",
-        "rate_per_page": 0.0015,       # $1.50 / 1,000 pages
+        "rate_per_page": 0.0015,  # $1.50 / 1,000 pages
         "supports_batching": False,
         "batch_discount_pct": 0.0,
         "pricing_source": "Google Cloud Pricing",
@@ -505,7 +521,6 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "formula": "pages * rate_per_page * USD_TO_INR",
         "batch_formula": "realtime_cost",
     },
-
     # 5. Compute-Time Providers (Open Source on Modal.com)
     "paddleocr_hpd": {
         "name": "PaddleOCR HPD-Parsing (Modal H100)",
@@ -513,7 +528,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "native_currency": "USD",
         "default_gpu": "H100",
         "supports_batching": False,
-        "batch_discount_pct": 0.0,     # Amortization calculated from batch metrics
+        "batch_discount_pct": 0.0,  # Amortization calculated from batch metrics
         "pricing_source": "Modal.com Pricing",
         "source_url": "https://modal.com/pricing",
         "wayback_url": None,
@@ -536,7 +551,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "native_currency": "USD",
         "default_gpu": "L4",
         "supports_batching": False,
-        "batch_discount_pct": 0.0,     # Amortization calculated from batch metrics
+        "batch_discount_pct": 0.0,  # Amortization calculated from batch metrics
         "pricing_source": "Modal.com Pricing",
         "source_url": "https://modal.com/pricing",
         "wayback_url": None,
@@ -567,8 +582,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "last_synced_at": "2026-10-10",
         "billing_unit": "GPU hardware seconds",
         "how_computed": (
-            "Billed per second of NVIDIA H100 GPU ($4.76/hr) + CPU/RAM, "
-            "amortized across batch."
+            "Billed per second of NVIDIA H100 GPU ($4.76/hr) + CPU/RAM, amortized across batch."
         ),
         "formula": (
             "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
@@ -590,8 +604,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "last_synced_at": "2026-10-10",
         "billing_unit": "GPU hardware seconds",
         "how_computed": (
-            "Billed per second of NVIDIA L40S GPU ($1.95/hr) + CPU/RAM, "
-            "amortized across batch."
+            "Billed per second of NVIDIA L40S GPU ($1.95/hr) + CPU/RAM, amortized across batch."
         ),
         "formula": (
             "((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + "
@@ -673,7 +686,6 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "formula": "((cpu_seconds * cpu_rate) + (ram_seconds * ram_rate)) * USD_TO_INR",
         "batch_formula": "amortized_batch_cost",
     },
-
     # 6. Local / Free Open-Source Models
     "docling": {
         "name": "Docling (Local)",
@@ -689,8 +701,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "last_synced_at": "2026-10-10",
         "billing_unit": "Free (₹0.00)",
         "how_computed": (
-            "Executed locally on self-hosted hardware with "
-            "zero external API or licensing charges."
+            "Executed locally on self-hosted hardware with zero external API or licensing charges."
         ),
         "formula": "0.0",
         "batch_formula": "0.0",
@@ -709,8 +720,7 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "last_synced_at": "2026-10-10",
         "billing_unit": "Free (₹0.00)",
         "how_computed": (
-            "Executed locally on self-hosted hardware with "
-            "zero external API or licensing charges."
+            "Executed locally on self-hosted hardware with zero external API or licensing charges."
         ),
         "formula": "0.0",
         "batch_formula": "0.0",
@@ -810,9 +820,7 @@ def extract_usage_from_raw(
     if "usage" in raw_json and isinstance(raw_json["usage"], dict):
         u = raw_json["usage"]
         pin = (
-            u.get("prompt_tokens")
-            if u.get("prompt_tokens") is not None
-            else u.get("input_tokens")
+            u.get("prompt_tokens") if u.get("prompt_tokens") is not None else u.get("input_tokens")
         )
         pout = (
             u.get("completion_tokens")
@@ -943,13 +951,10 @@ def calculate_doc_cost(
     # -------------------------------------------------------------------------
     elif archetype == "compute_time":
         is_cpu_provider = (
-            gpu_type in ("CPU", "none", "NONE", None)
-            or "tesseract" in provider_slug.lower()
+            gpu_type in ("CPU", "none", "NONE", None) or "tesseract" in provider_slug.lower()
         )
         gpu_rate = (
-            0.0
-            if is_cpu_provider
-            else MODAL_RATES["gpu"].get(gpu_type, MODAL_RATES["gpu"]["H100"])
+            0.0 if is_cpu_provider else MODAL_RATES["gpu"].get(gpu_type, MODAL_RATES["gpu"]["H100"])
         )
         cpu_rate = MODAL_RATES["cpu_core_second"]
         ram_rate = MODAL_RATES["memory_gib_second"]

@@ -17,9 +17,7 @@ from typing import Any
 from indic_gov_bench.storage.db import DEFAULT_DB_PATH, db_session
 
 
-def get_leaderboard(
-    run_id: str = "default", db_path: Path = DEFAULT_DB_PATH
-) -> dict[str, Any]:
+def get_leaderboard(run_id: str = "default", db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     """Returns overall corpus evaluation results, bootstrap CIs, and cost economics for all providers."""
     with db_session(db_path) as conn:
         rows = conn.execute(
@@ -38,20 +36,126 @@ def get_leaderboard(
 
         # Enriched provider metadata (high contrast print colors for white background)
         provider_meta_map = {
-            "gemini_3_1_pro": {"display_name": "Gemini 3.1 Pro", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#2563eb"},
-            "openai_gpt_6_1_sol": {"display_name": "GPT-6.1 Sol", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
-            "openai_gpt_5_6_tera": {"display_name": "GPT-5.6 Terra", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
-            "mistral_api": {"display_name": "Mistral OCR", "org": "Mistral AI", "category": "proprietary", "tags": ["Doc VLM", "Proprietary"], "supports_batching": False, "color": "#e11d48"},
-            "gemini_3_8_flash": {"display_name": "Gemini 3.8 Flash", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#0284c7"},
-            "datalab_api": {"display_name": "Marker API", "org": "DataLab", "category": "proprietary", "tags": ["Doc AI", "Proprietary"], "supports_batching": False, "color": "#0891b2"},
-            "sarvam_api": {"display_name": "Sarvam Vision API", "org": "Sarvam AI", "category": "proprietary", "tags": ["Indic VLM", "Proprietary"], "supports_batching": False, "color": "#7c3aed"},
-            "claude_sonnet_5_5": {"display_name": "Claude Sonnet 5.5", "org": "Anthropic", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#d97706"},
-            "qwen3_vl_8b": {"display_name": "Qwen3-VL-8B", "org": "Modal GPU", "category": "open_weights", "tags": ["VLM", "Open Weights"], "supports_batching": False, "color": "#4f46e5"},
-            "gemini_3_5_flash_lite": {"display_name": "Gemini 3.5 Flash-Lite", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#0ea5e9"},
-            "openai_gpt_5_6_luna": {"display_name": "GPT-5.6 Luna", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#10b981"},
-            "claude_haiku_4_5": {"display_name": "Claude Haiku 4.5", "org": "Anthropic", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#ea580c"},
-            "paddleocr_hpd": {"display_name": "PaddleOCR v4", "org": "PaddlePaddle", "category": "classical_ocr", "tags": ["OCR", "Open Source"], "supports_batching": False, "color": "#ca8a04"},
-            "tesseract": {"display_name": "Tesseract 5.3", "org": "Open Source", "category": "classical_ocr", "tags": ["OCR", "Open Source"], "supports_batching": False, "color": "#4b5563"},
+            "gemini_3_1_pro": {
+                "display_name": "Gemini 3.1 Pro",
+                "org": "Google",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#2563eb",
+            },
+            "openai_gpt_6_1_sol": {
+                "display_name": "GPT-6.1 Sol",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#059669",
+            },
+            "openai_gpt_6_luna": {
+                "display_name": "GPT-6 Luna",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#10b981",
+            },
+            "openai_gpt_5_6_tera": {
+                "display_name": "GPT-5.6 Terra",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#059669",
+            },
+            "mistral_api": {
+                "display_name": "Mistral OCR",
+                "org": "Mistral AI",
+                "category": "proprietary",
+                "tags": ["Doc VLM", "Proprietary"],
+                "supports_batching": False,
+                "color": "#e11d48",
+            },
+            "gemini_3_8_flash": {
+                "display_name": "Gemini 3.8 Flash",
+                "org": "Google",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#0284c7",
+            },
+            "datalab_api": {
+                "display_name": "Marker API",
+                "org": "DataLab",
+                "category": "proprietary",
+                "tags": ["Doc AI", "Proprietary"],
+                "supports_batching": False,
+                "color": "#0891b2",
+            },
+            "sarvam_api": {
+                "display_name": "Sarvam Vision API",
+                "org": "Sarvam AI",
+                "category": "proprietary",
+                "tags": ["Indic VLM", "Proprietary"],
+                "supports_batching": False,
+                "color": "#7c3aed",
+            },
+            "claude_sonnet_5_5": {
+                "display_name": "Claude Sonnet 5.5",
+                "org": "Anthropic",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#d97706",
+            },
+            "qwen3_vl_8b": {
+                "display_name": "Qwen3-VL-8B",
+                "org": "Modal GPU",
+                "category": "open_weights",
+                "tags": ["VLM", "Open Weights"],
+                "supports_batching": False,
+                "color": "#4f46e5",
+            },
+            "gemini_3_5_flash_lite": {
+                "display_name": "Gemini 3.5 Flash-Lite",
+                "org": "Google",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#0ea5e9",
+            },
+            "openai_gpt_5_6_luna": {
+                "display_name": "GPT-5.6 Luna",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#10b981",
+            },
+            "claude_haiku_4_5": {
+                "display_name": "Claude Haiku 4.5",
+                "org": "Anthropic",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#ea580c",
+            },
+            "paddleocr_hpd": {
+                "display_name": "PaddleOCR v4",
+                "org": "PaddlePaddle",
+                "category": "classical_ocr",
+                "tags": ["OCR", "Open Source"],
+                "supports_batching": False,
+                "color": "#ca8a04",
+            },
+            "tesseract": {
+                "display_name": "Tesseract 5.3",
+                "org": "Open Source",
+                "category": "classical_ocr",
+                "tags": ["OCR", "Open Source"],
+                "supports_batching": False,
+                "color": "#4b5563",
+            },
         }
 
         providers = []
@@ -59,13 +163,16 @@ def get_leaderboard(
             p = dict(r)
             p["ci_95"] = json.loads(p.pop("ci_95_json", "{}"))
             prov_id = p["provider"]
-            meta = provider_meta_map.get(prov_id, {
-                "display_name": prov_id.replace("_", " ").title(),
-                "org": "Unknown",
-                "category": "proprietary" if "api" in prov_id else "open_weights",
-                "tags": ["VLM"],
-                "color": "#94a3b8"
-            })
+            meta = provider_meta_map.get(
+                prov_id,
+                {
+                    "display_name": prov_id.replace("_", " ").title(),
+                    "org": "Unknown",
+                    "category": "proprietary" if "api" in prov_id else "open_weights",
+                    "tags": ["VLM"],
+                    "color": "#94a3b8",
+                },
+            )
             p.update(meta)
             providers.append(p)
 
@@ -127,6 +234,7 @@ def get_leaderboard(
 
         # Preferred canonical ordering (Marathi, Hindi, English, then any newly added languages by document count)
         preferred_order = ["marathi", "hindi", "english"]
+
         def lang_sort_key(k: str) -> tuple[int, int]:
             if k in preferred_order:
                 return (0, preferred_order.index(k))
@@ -143,6 +251,7 @@ def get_leaderboard(
             strata[l] = l_data
 
         from indic_gov_bench.eval.pricing_registry import get_usd_to_inr_rate
+
         fx = get_usd_to_inr_rate()
 
         return {
@@ -215,9 +324,7 @@ def get_documents_list(
             # Check staleness
             gt_edited_at = meta.get("gt_edited_at")
             eval_at = d.get("evaluated_at")
-            d["is_stale"] = bool(
-                gt_edited_at and (not eval_at or gt_edited_at > eval_at)
-            )
+            d["is_stale"] = bool(gt_edited_at and (not eval_at or gt_edited_at > eval_at))
 
             comp = d.get("composite_score")
 
@@ -262,9 +369,7 @@ def get_document_bundle(
 ) -> dict[str, Any] | None:
     """Returns the complete document bundle required for the 4 audit views."""
     with db_session(db_path) as conn:
-        doc_row = conn.execute(
-            "SELECT * FROM documents WHERE doc_id = ?", (doc_id,)
-        ).fetchone()
+        doc_row = conn.execute("SELECT * FROM documents WHERE doc_id = ?", (doc_id,)).fetchone()
         if not doc_row:
             return None
 
@@ -272,9 +377,7 @@ def get_document_bundle(
         meta = json.loads(doc_dict.pop("meta_json", "{}") or "{}")
         doc_dict["meta"] = meta
         doc_dict["notes"] = meta.get("notes", "")
-        doc_dict["content_bbox"] = json.loads(
-            doc_dict.pop("content_bbox_json", "[]") or "[]"
-        )
+        doc_dict["content_bbox"] = json.loads(doc_dict.pop("content_bbox_json", "[]") or "[]")
 
         # 1. Fetch GT Blocks in Visual Order
         gt_rows = conn.execute(
@@ -318,9 +421,7 @@ def get_document_bundle(
             w = dict(r)
             w["poly"] = json.loads(w.pop("poly_json", "[]"))
             w["crop_poly"] = (
-                json.loads(w.pop("crop_poly_json", "[]"))
-                if w["crop_poly_json"]
-                else None
+                json.loads(w.pop("crop_poly_json", "[]")) if w["crop_poly_json"] else None
             )
             gcv_words.append(w)
 
@@ -379,9 +480,7 @@ def get_document_bundle(
         eval_data = {}
         if pe_row:
             eval_data = dict(pe_row)
-            eval_data["diff_counts"] = json.loads(
-                eval_data.pop("diff_counts_json", "{}") or "{}"
-            )
+            eval_data["diff_counts"] = json.loads(eval_data.pop("diff_counts_json", "{}") or "{}")
             eval_data["word_alignments"] = json.loads(
                 eval_data.pop("word_alignments_json", "[]") or "[]"
             )
@@ -391,9 +490,7 @@ def get_document_bundle(
             eval_data["matched_units"] = json.loads(
                 eval_data.pop("matched_units_json", "[]") or "[]"
             )
-            eval_data["diff_tokens"] = json.loads(
-                eval_data.pop("diff_tokens_json", "[]") or "[]"
-            )
+            eval_data["diff_tokens"] = json.loads(eval_data.pop("diff_tokens_json", "[]") or "[]")
 
         # 5. Fetch all available providers with this-document mismatch signals (§3.1)
         all_prov_rows = conn.execute(
@@ -410,11 +507,7 @@ def get_document_bundle(
 
         provider_options = []
         for r in all_prov_rows:
-            diffs = (
-                json.loads(r["diff_counts_json"] or "{}")
-                if r["diff_counts_json"]
-                else {}
-            )
+            diffs = json.loads(r["diff_counts_json"] or "{}") if r["diff_counts_json"] else {}
             provider_options.append(
                 {
                     "provider": r["provider"],
@@ -440,9 +533,7 @@ def get_document_bundle(
             "SELECT doc_id FROM documents WHERE doc_id > ? ORDER BY doc_id ASC LIMIT 1",
             (doc_id,),
         ).fetchone()
-        all_doc_rows = conn.execute(
-            "SELECT doc_id FROM documents ORDER BY doc_id ASC"
-        ).fetchall()
+        all_doc_rows = conn.execute("SELECT doc_id FROM documents ORDER BY doc_id ASC").fetchall()
         all_doc_ids = [r["doc_id"] for r in all_doc_rows]
 
         return {
@@ -590,9 +681,7 @@ def save_gt_block(
                 params.append(str(content).strip() if str(content).strip() else None)
             if doc_category is not None:
                 updates.append("doc_category = ?")
-                params.append(
-                    str(doc_category).strip() if str(doc_category).strip() else None
-                )
+                params.append(str(doc_category).strip() if str(doc_category).strip() else None)
         else:
             updates.append("content = NULL")
             updates.append("doc_category = NULL")
@@ -663,9 +752,7 @@ def add_gt_block(
         reason = None
         content = str(content).strip() if content and str(content).strip() else None
         doc_category = (
-            str(doc_category).strip()
-            if doc_category and str(doc_category).strip()
-            else None
+            str(doc_category).strip() if doc_category and str(doc_category).strip() else None
         )
     elif scope == "excluded":
         content = None
@@ -697,11 +784,7 @@ def add_gt_block(
             "SELECT MAX(block_id) as m FROM ground_truth_blocks WHERE doc_id = ?",
             (doc_id,),
         ).fetchone()
-        new_b_id = (
-            (max_id_row["m"] + 1)
-            if (max_id_row and max_id_row["m"] is not None)
-            else 0
-        )
+        new_b_id = (max_id_row["m"] + 1) if (max_id_row and max_id_row["m"] is not None) else 0
 
         # Allocate and shift visual order_idx for all blocks (never NULL)
         if order_idx is None:
@@ -762,9 +845,7 @@ def add_gt_block(
         }
 
 
-def delete_gt_block(
-    doc_id: str, block_id: int, db_path: Path = DEFAULT_DB_PATH
-) -> dict[str, Any]:
+def delete_gt_block(doc_id: str, block_id: int, db_path: Path = DEFAULT_DB_PATH) -> dict[str, Any]:
     """Deletes a GT block, compacts subsequent visual order_idx, and marks evaluation stale."""
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     with db_session(db_path) as conn:
@@ -984,9 +1065,7 @@ def save_doc_meta(
                 meta["has_tables"] = flags["has_table"]
 
         # Ensure top-level columns in SQLite are synced
-        has_tables_val = (
-            1 if meta.get("has_tables") or (flags and flags.get("has_table")) else 0
-        )
+        has_tables_val = 1 if meta.get("has_tables") or (flags and flags.get("has_table")) else 0
         table_count_val = int(meta.get("table_count", 0))
 
         updates = ["meta_json = ?", "has_tables = ?", "table_count = ?"]
@@ -1019,9 +1098,7 @@ def save_doc_meta(
             params.append(dept_val)
 
         lang_val = language or (
-            meta.get("languages", ["marathi"])[0]
-            if meta.get("languages")
-            else meta.get("language")
+            meta.get("languages", ["marathi"])[0] if meta.get("languages") else meta.get("language")
         )
         if lang_val is not None:
             updates.append("language = ?")
@@ -1038,9 +1115,7 @@ def save_doc_meta(
             params.append(url_val)
 
         params.append(doc_id)
-        conn.execute(
-            f"UPDATE documents SET {', '.join(updates)} WHERE doc_id = ?", params
-        )
+        conn.execute(f"UPDATE documents SET {', '.join(updates)} WHERE doc_id = ?", params)
 
         return {
             "status": "ok",
@@ -1122,10 +1197,7 @@ def get_metadata_coverage(
             d_has_tables = bool(r_dict.get("has_tables", False))
             d_dept = str(r_dict.get("department") or "").strip()
             d_horizon = (
-                str(
-                    r_dict.get("horizon")
-                    or ("archive" if "_archive_" in doc_id else "current")
-                )
+                str(r_dict.get("horizon") or ("archive" if "_archive_" in doc_id else "current"))
                 .strip()
                 .lower()
             )
@@ -1155,9 +1227,7 @@ def get_metadata_coverage(
         # Helper for boolean flags
         def compute_bool(check_fn):
             matching_ids = [
-                doc_id
-                for doc_id, r_doc, m_doc in filtered_docs
-                if check_fn(r_doc, m_doc)
+                doc_id for doc_id, r_doc, m_doc in filtered_docs if check_fn(r_doc, m_doc)
             ]
             cnt = len(matching_ids)
             pct = round((cnt / denom) * 100.0, 1) if filtered_count > 0 else 0.0
@@ -1173,9 +1243,7 @@ def get_metadata_coverage(
             for doc_id, r_doc, m_doc in filtered_docs:
                 val = extract_fn(r_doc, m_doc)
                 if isinstance(val, list):
-                    vals = [str(v).strip() for v in val if str(v).strip()] or [
-                        default_key
-                    ]
+                    vals = [str(v).strip() for v in val if str(v).strip()] or [default_key]
                 else:
                     v_str = (
                         str(val).strip()
@@ -1189,9 +1257,7 @@ def get_metadata_coverage(
                     res[v].append(doc_id)
 
             output = {}
-            for k, doc_ids in sorted(
-                res.items(), key=lambda item: len(item[1]), reverse=True
-            ):
+            for k, doc_ids in sorted(res.items(), key=lambda item: len(item[1]), reverse=True):
                 cnt = len(doc_ids)
                 pct = round((cnt / denom) * 100.0, 1) if filtered_count > 0 else 0.0
                 output[k] = {
@@ -1218,35 +1284,25 @@ def get_metadata_coverage(
                     else "0 Tables"
                 )
             ),
-            "table_has_no_header": compute_bool(
-                lambda r, m: bool(m.get("table_has_no_header"))
-            ),
+            "table_has_no_header": compute_bool(lambda r, m: bool(m.get("table_has_no_header"))),
             "table_has_multi_row_header": compute_bool(
                 lambda r, m: bool(m.get("table_has_multi_row_header"))
             ),
             "table_has_merged_rows": compute_bool(
-                lambda r, m: bool(
-                    m.get("table_has_merged_rows") or m.get("table_has_row_span")
-                )
+                lambda r, m: bool(m.get("table_has_merged_rows") or m.get("table_has_row_span"))
             ),
             "table_has_merged_cols": compute_bool(
-                lambda r, m: bool(
-                    m.get("table_has_merged_cols") or m.get("table_has_col_span")
-                )
+                lambda r, m: bool(m.get("table_has_merged_cols") or m.get("table_has_col_span"))
             ),
             "table_has_multi_merged_cells": compute_bool(
                 lambda r, m: bool(m.get("table_has_multi_merged_cells"))
             ),
             "table_row_has_lines": compute_bool(
-                lambda r, m: bool(
-                    m.get("table_row_has_lines", m.get("table_has_lines"))
-                )
+                lambda r, m: bool(m.get("table_row_has_lines", m.get("table_has_lines")))
             ),
             "table_has_full_outer_border": compute_bool(
                 lambda r, m: bool(
-                    m.get(
-                        "table_has_full_outer_border", m.get("table_has_border_lines")
-                    )
+                    m.get("table_has_full_outer_border", m.get("table_has_border_lines"))
                 )
             ),
             "table_has_only_bottom_top_border": compute_bool(
@@ -1266,14 +1322,10 @@ def get_metadata_coverage(
             ),
             "scan_has_tilt": compute_bool(lambda r, m: bool(m.get("scan_has_tilt"))),
             "scan_has_dots": compute_bool(
-                lambda r, m: bool(
-                    m.get("scan_has_dots") or m.get("scan_has_noise_dots")
-                )
+                lambda r, m: bool(m.get("scan_has_dots") or m.get("scan_has_noise_dots"))
             ),
             "scan_has_darkpatch": compute_bool(
-                lambda r, m: bool(
-                    m.get("scan_has_darkpatch") or m.get("scan_has_shadows")
-                )
+                lambda r, m: bool(m.get("scan_has_darkpatch") or m.get("scan_has_shadows"))
             ),
             "scan_has_wavy_distortion": compute_bool(
                 lambda r, m: bool(m.get("scan_has_wavy_distortion"))
@@ -1288,20 +1340,15 @@ def get_metadata_coverage(
             "has_signature": compute_bool(lambda r, m: bool(m.get("has_signature"))),
             "signature_type": compute_categorical(
                 lambda r, m: (
-                    m.get("signature_type")
-                    or ("NONE" if not m.get("has_signature") else "MANUAL")
+                    m.get("signature_type") or ("NONE" if not m.get("has_signature") else "MANUAL")
                 )
             ),
             "has_stamp": compute_bool(
-                lambda r, m: bool(
-                    m.get("has_stamp") or m.get("flags", {}).get("stamp_seal")
-                )
+                lambda r, m: bool(m.get("has_stamp") or m.get("flags", {}).get("stamp_seal"))
             ),
             "has_logo": compute_bool(lambda r, m: bool(m.get("has_logo"))),
             "has_handwritten": compute_bool(
-                lambda r, m: bool(
-                    m.get("has_handwritten") or m.get("flags", {}).get("handwritten")
-                )
+                lambda r, m: bool(m.get("has_handwritten") or m.get("flags", {}).get("handwritten"))
             ),
             "has_non_standard_font": compute_bool(
                 lambda r, m: bool(m.get("has_non_standard_font"))
@@ -1320,11 +1367,7 @@ def get_metadata_coverage(
             "languages": compute_categorical(
                 lambda r, m: (
                     m.get("languages")
-                    or (
-                        [r["language"].capitalize()]
-                        if r.get("language")
-                        else ["Unknown"]
-                    )
+                    or ([r["language"].capitalize()] if r.get("language") else ["Unknown"])
                 )
             ),
             "scripts": compute_categorical(
@@ -1332,17 +1375,12 @@ def get_metadata_coverage(
                     m.get("scripts")
                     or (
                         ["Devanagari"]
-                        if (
-                            r.get("language")
-                            and r["language"].lower() in ["marathi", "hindi"]
-                        )
+                        if (r.get("language") and r["language"].lower() in ["marathi", "hindi"])
                         else ["Latin"]
                     )
                 )
             ),
-            "layout": compute_categorical(
-                lambda r, m: m.get("layout") or "Single Column"
-            ),
+            "layout": compute_categorical(lambda r, m: m.get("layout") or "Single Column"),
             "doc_creation": compute_categorical(
                 lambda r, m: (
                     m.get("doc_creation")
@@ -1354,15 +1392,11 @@ def get_metadata_coverage(
             ),
             "doc_type": compute_categorical(
                 lambda r, m: (
-                    m.get("doc_type")
-                    or m.get("data_source")
-                    or "Government Resolution (GR)"
+                    m.get("doc_type") or m.get("data_source") or "Government Resolution (GR)"
                 )
             ),
             "audit_status": compute_categorical(
-                lambda r, m: (
-                    r.get("audit_status") or m.get("audit_status") or "unreviewed"
-                )
+                lambda r, m: r.get("audit_status") or m.get("audit_status") or "unreviewed"
             ),
         }
 
@@ -1376,8 +1410,7 @@ def get_metadata_coverage(
                 "dept": dept,
             },
             "available_filters": {
-                "horizons": ["all"]
-                + (all_horizons if all_horizons else ["current", "archive"]),
+                "horizons": ["all"] + (all_horizons if all_horizons else ["current", "archive"]),
                 "languages": ["all", "marathi", "hindi", "english"],
                 "departments": ["all"] + all_departments,
             },
@@ -1410,20 +1443,126 @@ def get_attribute_explorer_data(
         ).fetchall()
 
         provider_meta_map = {
-            "gemini_3_1_pro": {"display_name": "Gemini 3.1 Pro", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#2563eb"},
-            "openai_gpt_6_1_sol": {"display_name": "GPT-6.1 Sol", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
-            "openai_gpt_5_6_tera": {"display_name": "GPT-5.6 Terra", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#059669"},
-            "mistral_api": {"display_name": "Mistral OCR", "org": "Mistral AI", "category": "proprietary", "tags": ["Doc VLM", "Proprietary"], "supports_batching": False, "color": "#e11d48"},
-            "gemini_3_8_flash": {"display_name": "Gemini 3.8 Flash", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#0284c7"},
-            "datalab_api": {"display_name": "Marker API", "org": "DataLab", "category": "proprietary", "tags": ["Doc AI", "Proprietary"], "supports_batching": False, "color": "#0891b2"},
-            "sarvam_api": {"display_name": "Sarvam Vision API", "org": "Sarvam AI", "category": "proprietary", "tags": ["Indic VLM", "Proprietary"], "supports_batching": False, "color": "#7c3aed"},
-            "claude_sonnet_5_5": {"display_name": "Claude Sonnet 5.5", "org": "Anthropic", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#d97706"},
-            "qwen3_vl_8b": {"display_name": "Qwen3-VL-8B", "org": "Modal GPU", "category": "open_weights", "tags": ["VLM", "Open Weights"], "supports_batching": False, "color": "#4f46e5"},
-            "gemini_3_5_flash_lite": {"display_name": "Gemini 3.5 Flash-Lite", "org": "Google", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#0ea5e9"},
-            "openai_gpt_5_6_luna": {"display_name": "GPT-5.6 Luna", "org": "OpenAI", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#10b981"},
-            "claude_haiku_4_5": {"display_name": "Claude Haiku 4.5", "org": "Anthropic", "category": "proprietary", "tags": ["VLM", "Proprietary"], "supports_batching": True, "color": "#ea580c"},
-            "paddleocr_hpd": {"display_name": "PaddleOCR v4", "org": "PaddlePaddle", "category": "classical_ocr", "tags": ["OCR", "Open Source"], "supports_batching": False, "color": "#ca8a04"},
-            "tesseract": {"display_name": "Tesseract 5.3", "org": "Open Source", "category": "classical_ocr", "tags": ["OCR", "Open Source"], "supports_batching": False, "color": "#4b5563"},
+            "gemini_3_1_pro": {
+                "display_name": "Gemini 3.1 Pro",
+                "org": "Google",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#2563eb",
+            },
+            "openai_gpt_6_1_sol": {
+                "display_name": "GPT-6.1 Sol",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#059669",
+            },
+            "openai_gpt_6_luna": {
+                "display_name": "GPT-6 Luna",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#10b981",
+            },
+            "openai_gpt_5_6_tera": {
+                "display_name": "GPT-5.6 Terra",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#059669",
+            },
+            "mistral_api": {
+                "display_name": "Mistral OCR",
+                "org": "Mistral AI",
+                "category": "proprietary",
+                "tags": ["Doc VLM", "Proprietary"],
+                "supports_batching": False,
+                "color": "#e11d48",
+            },
+            "gemini_3_8_flash": {
+                "display_name": "Gemini 3.8 Flash",
+                "org": "Google",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#0284c7",
+            },
+            "datalab_api": {
+                "display_name": "Marker API",
+                "org": "DataLab",
+                "category": "proprietary",
+                "tags": ["Doc AI", "Proprietary"],
+                "supports_batching": False,
+                "color": "#0891b2",
+            },
+            "sarvam_api": {
+                "display_name": "Sarvam Vision API",
+                "org": "Sarvam AI",
+                "category": "proprietary",
+                "tags": ["Indic VLM", "Proprietary"],
+                "supports_batching": False,
+                "color": "#7c3aed",
+            },
+            "claude_sonnet_5_5": {
+                "display_name": "Claude Sonnet 5.5",
+                "org": "Anthropic",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#d97706",
+            },
+            "qwen3_vl_8b": {
+                "display_name": "Qwen3-VL-8B",
+                "org": "Modal GPU",
+                "category": "open_weights",
+                "tags": ["VLM", "Open Weights"],
+                "supports_batching": False,
+                "color": "#4f46e5",
+            },
+            "gemini_3_5_flash_lite": {
+                "display_name": "Gemini 3.5 Flash-Lite",
+                "org": "Google",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#0ea5e9",
+            },
+            "openai_gpt_5_6_luna": {
+                "display_name": "GPT-5.6 Luna",
+                "org": "OpenAI",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#10b981",
+            },
+            "claude_haiku_4_5": {
+                "display_name": "Claude Haiku 4.5",
+                "org": "Anthropic",
+                "category": "proprietary",
+                "tags": ["VLM", "Proprietary"],
+                "supports_batching": True,
+                "color": "#ea580c",
+            },
+            "paddleocr_hpd": {
+                "display_name": "PaddleOCR v4",
+                "org": "PaddlePaddle",
+                "category": "classical_ocr",
+                "tags": ["OCR", "Open Source"],
+                "supports_batching": False,
+                "color": "#ca8a04",
+            },
+            "tesseract": {
+                "display_name": "Tesseract 5.3",
+                "org": "Open Source",
+                "category": "classical_ocr",
+                "tags": ["OCR", "Open Source"],
+                "supports_batching": False,
+                "color": "#4b5563",
+            },
         }
 
         # 1. Fetch exact macro-averages across all 270 pages per provider
@@ -1448,41 +1587,60 @@ def get_attribute_explorer_data(
         providers = []
         for r in ce_rows:
             p_id = r["provider"]
-            meta = provider_meta_map.get(p_id, {
-                "display_name": p_id.replace("_", " ").title(),
-                "org": "Provider",
-                "category": "proprietary" if "api" in p_id else "open_weights",
-                "tags": ["VLM"],
-                "supports_batching": False,
-                "color": "#6b7280"
-            })
-            pe_st = pe_stat_map.get(p_id)
-            providers.append({
-                "provider": p_id,
-                "display_name": meta["display_name"],
-                "org": meta["org"],
-                "category": meta["category"],
-                "tags": meta.get("tags", ["VLM"]),
-                "supports_batching": meta.get("supports_batching", False),
-                "color": meta.get("color", "#2563eb"),
-                "avg_batch_cost_inr": round(pe_st["avg_batch_cost"], 4) if pe_st and pe_st["avg_batch_cost"] is not None else r["avg_batch_cost_inr"],
-                "avg_realtime_cost_inr": round(pe_st["avg_rt_cost"], 4) if pe_st and pe_st["avg_rt_cost"] is not None else r["avg_realtime_cost_inr"],
-                "baseline": {
-                    "composite_score": round(pe_st["avg_composite"], 4) if pe_st and pe_st["avg_composite"] is not None else r["composite_score"],
-                    "textCER_norm": round(pe_st["avg_textcer"], 4) if pe_st and pe_st["avg_textcer"] is not None else r["textCER_norm"],
-                    "e2eNED_norm": round(pe_st["avg_ned"], 4) if pe_st and pe_st["avg_ned"] is not None else r["e2eNED_norm"],
-                    "TEDS": round(pe_st["avg_teds"], 4) if pe_st and pe_st["avg_teds"] is not None else r["TEDS"],
+            meta = provider_meta_map.get(
+                p_id,
+                {
+                    "display_name": p_id.replace("_", " ").title(),
+                    "org": "Provider",
+                    "category": "proprietary" if "api" in p_id else "open_weights",
+                    "tags": ["VLM"],
+                    "supports_batching": False,
+                    "color": "#6b7280",
                 },
-                "corpus_baseline": {
-                    "composite_score": r["composite_score"],
-                    "textCER_norm": r["textCER_norm"],
-                    "e2eNED_norm": r["e2eNED_norm"],
-                    "TEDS": r["TEDS"],
+            )
+            pe_st = pe_stat_map.get(p_id)
+            providers.append(
+                {
+                    "provider": p_id,
+                    "display_name": meta["display_name"],
+                    "org": meta["org"],
+                    "category": meta["category"],
+                    "tags": meta.get("tags", ["VLM"]),
+                    "supports_batching": meta.get("supports_batching", False),
+                    "color": meta.get("color", "#2563eb"),
+                    "avg_batch_cost_inr": round(pe_st["avg_batch_cost"], 4)
+                    if pe_st and pe_st["avg_batch_cost"] is not None
+                    else r["avg_batch_cost_inr"],
+                    "avg_realtime_cost_inr": round(pe_st["avg_rt_cost"], 4)
+                    if pe_st and pe_st["avg_rt_cost"] is not None
+                    else r["avg_realtime_cost_inr"],
+                    "baseline": {
+                        "composite_score": round(pe_st["avg_composite"], 4)
+                        if pe_st and pe_st["avg_composite"] is not None
+                        else r["composite_score"],
+                        "textCER_norm": round(pe_st["avg_textcer"], 4)
+                        if pe_st and pe_st["avg_textcer"] is not None
+                        else r["textCER_norm"],
+                        "e2eNED_norm": round(pe_st["avg_ned"], 4)
+                        if pe_st and pe_st["avg_ned"] is not None
+                        else r["e2eNED_norm"],
+                        "TEDS": round(pe_st["avg_teds"], 4)
+                        if pe_st and pe_st["avg_teds"] is not None
+                        else r["TEDS"],
+                    },
+                    "corpus_baseline": {
+                        "composite_score": r["composite_score"],
+                        "textCER_norm": r["textCER_norm"],
+                        "e2eNED_norm": r["e2eNED_norm"],
+                        "TEDS": r["TEDS"],
+                    },
                 }
-            })
+            )
 
         # 2. Fetch all documents and normalize attributes
-        doc_rows = conn.execute("SELECT doc_id, language, horizon, has_tables, meta_json FROM documents ORDER BY doc_id ASC").fetchall()
+        doc_rows = conn.execute(
+            "SELECT doc_id, language, horizon, has_tables, meta_json FROM documents ORDER BY doc_id ASC"
+        ).fetchall()
         documents = []
         for dr in doc_rows:
             d_id = dr["doc_id"]
@@ -1491,10 +1649,14 @@ def get_attribute_explorer_data(
             # Language
             lang = dr["language"]
             if not lang:
-                if "_mr_" in d_id: lang = "marathi"
-                elif "_hi_" in d_id: lang = "hindi"
-                elif "_en_" in d_id: lang = "english"
-                else: lang = "marathi"
+                if "_mr_" in d_id:
+                    lang = "marathi"
+                elif "_hi_" in d_id:
+                    lang = "hindi"
+                elif "_en_" in d_id:
+                    lang = "english"
+                else:
+                    lang = "marathi"
             lang = lang.lower().strip()
 
             # Horizon
@@ -1527,7 +1689,9 @@ def get_attribute_explorer_data(
 
                 # Borders
                 row_lines = bool(m.get("table_row_has_lines", m.get("table_has_lines", False)))
-                outer_border = bool(m.get("table_has_full_outer_border", m.get("table_has_border_lines", False)))
+                outer_border = bool(
+                    m.get("table_has_full_outer_border", m.get("table_has_border_lines", False))
+                )
                 top_bottom = bool(m.get("table_has_only_bottom_top_border", False))
 
                 if row_lines and outer_border:
@@ -1548,21 +1712,25 @@ def get_attribute_explorer_data(
                     tbl_merging.append("no_merge")
 
                 # Cell size
-                multi_line = bool(m.get("table_cell_has_multi_lines", m.get("table_has_multi_lines", False)))
+                multi_line = bool(
+                    m.get("table_cell_has_multi_lines", m.get("table_has_multi_lines", False))
+                )
                 tbl_cell_size = "multi_line" if multi_line else "single_line"
 
-            documents.append({
-                "doc_id": d_id,
-                "language": lang,
-                "horizon": horiz,
-                "scan_tilt": scan_tilt,
-                "scan_dots": scan_dots,
-                "has_tables": has_tbl,
-                "table_layout": tbl_layout,
-                "table_borders": tbl_borders,
-                "table_merging": tbl_merging,
-                "table_cell_size": tbl_cell_size,
-            })
+            documents.append(
+                {
+                    "doc_id": d_id,
+                    "language": lang,
+                    "horizon": horiz,
+                    "scan_tilt": scan_tilt,
+                    "scan_dots": scan_dots,
+                    "has_tables": has_tbl,
+                    "table_layout": tbl_layout,
+                    "table_borders": tbl_borders,
+                    "table_merging": tbl_merging,
+                    "table_cell_size": tbl_cell_size,
+                }
+            )
 
         # 3. Fetch precomputed evaluations for run_id
         pe_rows = conn.execute(
@@ -1597,4 +1765,3 @@ def get_attribute_explorer_data(
             "documents": documents,
             "evaluations": evaluations,
         }
-

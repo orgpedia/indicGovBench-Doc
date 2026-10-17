@@ -1,8 +1,8 @@
-"""export_from_db3.py — Database Export Engine to JSON & YAML (v3).
+"""exporter.py — Database Export Engine to JSON & YAML.
 
 Exports Ground Truth blocks, metadata, and strata from workspace/benchmark.db
-back into standard git-friendly JSON files (benchmark3/reference/{doc_id}.json)
-and manifests (benchmark3/manifests/documents.yaml).
+back into standard git-friendly JSON files (data/ground_truth/{doc_id}.json)
+and manifests (data/manifests/documents.yaml).
 """
 
 from __future__ import annotations
@@ -165,9 +165,7 @@ def export_db_to_json(
         # Step 0: Ensure SQLite ground_truth_blocks table is normalized in-place (§5.3)
         conn.execute("UPDATE ground_truth_blocks SET text = NULL WHERE type = 'table'")
         conn.execute("UPDATE ground_truth_blocks SET html = NULL WHERE type = 'text'")
-        conn.execute(
-            "UPDATE ground_truth_blocks SET reason = NULL WHERE scope = 'target'"
-        )
+        conn.execute("UPDATE ground_truth_blocks SET reason = NULL WHERE scope = 'target'")
         conn.execute(
             "UPDATE ground_truth_blocks SET reason = 'excluded' WHERE scope = 'excluded' AND (reason IS NULL OR trim(reason) = '')"
         )
@@ -178,9 +176,7 @@ def export_db_to_json(
             "UPDATE ground_truth_blocks SET content = NULL, doc_category = NULL WHERE scope != 'target'"
         )
 
-        doc_rows = conn.execute(
-            "SELECT * FROM documents ORDER BY doc_id ASC"
-        ).fetchall()
+        doc_rows = conn.execute("SELECT * FROM documents ORDER BY doc_id ASC").fetchall()
 
         for d in doc_rows:
             doc_id = d["doc_id"]
@@ -240,15 +236,10 @@ def export_db_to_json(
             flags = meta.get("flags", {})
             doc_date = meta.get("doc_date") or meta.get("date") or ""
             govt_name = (
-                meta.get("govt_name")
-                or meta.get("government")
-                or "Government of Maharashtra"
+                meta.get("govt_name") or meta.get("government") or "Government of Maharashtra"
             )
             govt_dept_name = (
-                meta.get("govt_dept_name")
-                or d["department"]
-                or meta.get("department")
-                or ""
+                meta.get("govt_dept_name") or d["department"] or meta.get("department") or ""
             )
             url = meta.get("url") or d["source_url"] or meta.get("source_url") or ""
             page_number = int(meta.get("page_number", 1))
@@ -257,9 +248,7 @@ def export_db_to_json(
             if not raw_langs:
                 lang_single = d["language"] or meta.get("language") or "marathi"
                 languages = [
-                    lang_single.capitalize()
-                    if isinstance(lang_single, str)
-                    else lang_single
+                    lang_single.capitalize() if isinstance(lang_single, str) else lang_single
                 ]
             elif isinstance(raw_langs, list):
                 languages = raw_langs
@@ -276,36 +265,27 @@ def export_db_to_json(
                 scripts = [str(raw_scripts)]
 
             doc_type = (
-                meta.get("doc_type")
-                or meta.get("data_source")
-                or "Government Resolution (GR)"
+                meta.get("doc_type") or meta.get("data_source") or "Government Resolution (GR)"
             )
             layout = meta.get("layout") or "Single Column"
             doc_creation = meta.get("doc_creation") or (
                 "Typewritten" if meta.get("pdf_type") == "scan" else "Computer"
             )
             doc_source = meta.get("doc_source") or (
-                "IMAGE_SCAN"
-                if meta.get("pdf_type") == "scan" or d["scan_type"]
-                else "TEXT_PDF"
+                "IMAGE_SCAN" if meta.get("pdf_type") == "scan" or d["scan_type"] else "TEXT_PDF"
             )
             horizon = d["horizon"] or meta.get("horizon") or "archive"
 
             has_tables = (
-                bool(d["has_tables"])
-                if "has_tables" in d
-                else bool(meta.get("has_tables", False))
+                bool(d["has_tables"]) if "has_tables" in d else bool(meta.get("has_tables", False))
             )
             table_count = int(
-                d["table_count"]
-                if d["table_count"] is not None
-                else meta.get("table_count", 0)
+                d["table_count"] if d["table_count"] is not None else meta.get("table_count", 0)
             )
             table_has_full_page = bool(
                 meta.get(
                     "table_has_full_page",
-                    meta.get("table_layout") == "full_page"
-                    or flags.get("full_page_table", False),
+                    meta.get("table_layout") == "full_page" or flags.get("full_page_table", False),
                 )
             )
             table_row_has_lines = bool(
@@ -315,9 +295,7 @@ def export_db_to_json(
                 )
             )
             table_has_no_header = bool(meta.get("table_has_no_header", False))
-            table_has_multi_row_header = bool(
-                meta.get("table_has_multi_row_header", False)
-            )
+            table_has_multi_row_header = bool(meta.get("table_has_multi_row_header", False))
             table_has_full_outer_border = bool(
                 meta.get(
                     "table_has_full_outer_border",
@@ -339,35 +317,25 @@ def export_db_to_json(
                     meta.get("table_has_multi_lines", False),
                 )
             )
-            table_has_multi_merged_cells = bool(
-                meta.get("table_has_multi_merged_cells", False)
-            )
+            table_has_multi_merged_cells = bool(meta.get("table_has_multi_merged_cells", False))
 
             has_logo = bool(meta.get("has_logo", False))
             has_signature = bool(meta.get("has_signature", False))
-            signature_type = meta.get(
-                "signature_type", "HAND-WRITTEN" if has_signature else "NONE"
-            )
+            signature_type = meta.get("signature_type", "HAND-WRITTEN" if has_signature else "NONE")
             has_stamp = bool(meta.get("has_stamp", flags.get("stamp_seal", False)))
-            has_handwritten = bool(
-                meta.get("has_handwritten", flags.get("handwritten", False))
-            )
+            has_handwritten = bool(meta.get("has_handwritten", flags.get("handwritten", False)))
             has_non_standard_font = bool(meta.get("has_non_standard_font", False))
 
             scan_has_tilt = bool(meta.get("scan_has_tilt", False))
             scan_has_wavy_distortion = bool(meta.get("scan_has_wavy_distortion", False))
-            scan_has_dots = bool(
-                meta.get("scan_has_dots", meta.get("scan_has_noise_dots", False))
-            )
+            scan_has_dots = bool(meta.get("scan_has_dots", meta.get("scan_has_noise_dots", False)))
             scan_has_darkpatch = bool(
                 meta.get("scan_has_darkpatch", meta.get("scan_has_shadows", False))
             )
             rotation = int(
                 meta.get(
                     "rotation",
-                    d["rotation"]
-                    if "rotation" in d.keys() and d["rotation"] is not None
-                    else 0,
+                    d["rotation"] if "rotation" in d.keys() and d["rotation"] is not None else 0,
                 )
             )
             has_watermark = bool(

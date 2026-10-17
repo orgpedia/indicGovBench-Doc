@@ -86,12 +86,7 @@ def parse_gemini_raw_response(
             content = item.get("content") or item.get("text") or ""
 
             if b_type == "table" or "<table" in content.lower():
-                table_raw = (
-                    content
-                    or item.get("html_table")
-                    or item.get("markdown_table")
-                    or ""
-                )
+                table_raw = content or item.get("html_table") or item.get("markdown_table") or ""
                 if not table_raw.strip():
                     continue
                 if "<table" in table_raw.lower():
@@ -178,9 +173,7 @@ def parse_gemini_raw_response(
             if "<table" in tbl_raw.lower():
                 html_table = canonicalize_table_html(tbl_raw)
             else:
-                html_table = canonicalize_table_html(
-                    markdown_table_to_canonical_html(tbl_raw)
-                )
+                html_table = canonicalize_table_html(markdown_table_to_canonical_html(tbl_raw))
 
             raw_blocks.append(
                 {

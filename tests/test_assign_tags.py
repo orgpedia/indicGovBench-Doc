@@ -63,6 +63,7 @@ def test_closed_world_process_manifest_tags(tmp_path, monkeypatch):
         return doc_tags, tag_counts, unknown_tags
 
     import assign_tags_to_manifest
+
     monkeypatch.setattr(assign_tags_to_manifest, "scan_image_directory", mock_scan)
 
     mapping = {

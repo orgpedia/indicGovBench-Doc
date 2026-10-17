@@ -82,7 +82,9 @@ def parse_openai_raw_response(
                     block_items.append(res)
         elif "blocks" in raw_json and isinstance(raw_json["blocks"], list):
             block_items = [b for b in raw_json["blocks"] if isinstance(b, dict)]
-        elif "choices" in raw_json and isinstance(raw_json["choices"], list) and raw_json["choices"]:
+        elif (
+            "choices" in raw_json and isinstance(raw_json["choices"], list) and raw_json["choices"]
+        ):
             choice = raw_json["choices"][0]
             if isinstance(choice, dict):
                 content = choice.get("message", {}).get("content", "")
@@ -121,17 +123,13 @@ def parse_openai_raw_response(
         content = item.get("content") or item.get("text") or ""
 
         if block_type == "table" or "<table" in content.lower():
-            table_raw = (
-                content or item.get("html_table") or item.get("markdown_table") or ""
-            )
+            table_raw = content or item.get("html_table") or item.get("markdown_table") or ""
             if not table_raw.strip():
                 continue
             if "<table" in table_raw.lower():
                 html_table = canonicalize_table_html(table_raw)
             else:
-                html_table = canonicalize_table_html(
-                    markdown_table_to_canonical_html(table_raw)
-                )
+                html_table = canonicalize_table_html(markdown_table_to_canonical_html(table_raw))
 
             raw_blocks.append(
                 {

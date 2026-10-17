@@ -25,16 +25,12 @@ def inspect_document(
 ) -> None:
     db_path = Path(db_path)
     if not db_path.exists():
-        print(
-            f"❌ Database not found at '{db_path}'. Run 'make -f Makefile3 eval_all' first."
-        )
+        print(f"❌ Database not found at '{db_path}'. Run 'make eval_all' first.")
         return
 
     with db_session(db_path) as conn:
         # Check doc metadata
-        d_row = conn.execute(
-            "SELECT * FROM documents WHERE doc_id = ?", (doc_id,)
-        ).fetchone()
+        d_row = conn.execute("SELECT * FROM documents WHERE doc_id = ?", (doc_id,)).fetchone()
         if not d_row:
             print(f"❌ Document '{doc_id}' not found in database.")
             return
@@ -54,7 +50,7 @@ def inspect_document(
 
     if not rows:
         print(
-            f"⚠️ No evaluation rows found for doc '{doc_id}' in run '{run_id}'. Run 'make -f Makefile3 eval_doc DOC={doc_id}' to score it."
+            f"⚠️ No evaluation rows found for doc '{doc_id}' in run '{run_id}'. Run 'make eval_doc DOC={doc_id}' to score it."
         )
         return
 
@@ -88,9 +84,7 @@ def inspect_document(
 
     # Compare with eval_workspace2 if requested
     if compare_v2:
-        print(
-            "\n" + "🔍 Comparison with Legacy eval_workspace2 (post_normalization run):"
-        )
+        print("\n" + "🔍 Comparison with Legacy eval_workspace2 (post_normalization run):")
         print("-" * 105)
         print(
             f"{'Provider':<15} | {'v3 textCER':<10} | {'v2 textCER':<10} | {'v3 e2eNED':<10} | {'v2 e2eCER':<10} | {'v3 TEDS':<8} | {'v2 TEDS':<8}"

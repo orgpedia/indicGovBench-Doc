@@ -48,8 +48,11 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
         if not api_key:
             raise ValueError("OPENAI_API_KEY environment variable is not set.")
         from openai import OpenAI
+        import httpx
 
-        return OpenAI(api_key=api_key)
+        # Generous timeouts for large multi-megabyte batch uploads (connect=60s, read/write=1800s)
+        timeout = httpx.Timeout(connect=60.0, read=1800.0, write=1800.0, pool=60.0)
+        return OpenAI(api_key=api_key, timeout=timeout, max_retries=5)
 
     def build_request_item(
         self,
@@ -115,6 +118,52 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
             "body": body,
         }
 
+    def submit_batch_file(
+        self,
+        jsonl_path: Path,
+        metadata: dict[str, str] | None = None,
+        max_retries: int = 3,
+        backoff_sec: float = 5.0,
+    ) -> str:
+        """Uploads an existing JSONL and submits batch job to OpenAI with retries."""
+        from openai import APIConnectionError, APITimeoutError, InternalServerError
+
+        client = self._get_client()
+
+        meta = {
+            "provider": self.provider_slug,
+            "model": str(self.model_name),
+        }
+        if metadata:
+            meta.update(metadata)
+
+        last_err: Exception | None = None
+        for attempt in range(1, max_retries + 1):
+            try:
+                with open(jsonl_path, "rb") as f:
+                    batch_file = client.files.create(file=f, purpose="batch")
+
+                batch_job = client.batches.create(
+                    input_file_id=batch_file.id,
+                    endpoint="/v1/chat/completions",
+                    completion_window="24h",
+                    metadata=meta,
+                )
+                return batch_job.id
+            except (APIConnectionError, APITimeoutError, InternalServerError) as e:
+                last_err = e
+                if attempt < max_retries:
+                    wait_time = backoff_sec * (2 ** (attempt - 1))
+                    print(
+                        f"    ⚠️ Upload/submit failed ({e}); retrying attempt {attempt + 1}/{max_retries} in {wait_time:.1f}s..."
+                    )
+                    time.sleep(wait_time)
+                else:
+                    raise
+            except Exception:
+                raise
+        raise last_err or RuntimeError("Failed to submit batch file after retries.")
+
     def submit_batch(
         self,
         items: list[dict[str, Any]],
@@ -131,26 +180,7 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
             for item in items:
                 f.write(json.dumps(item, ensure_ascii=False) + "\n")
 
-        client = self._get_client()
-
-        with open(jsonl_path, "rb") as f:
-            batch_file = client.files.create(file=f, purpose="batch")
-
-        meta = {
-            "provider": self.provider_slug,
-            "model": str(self.model_name),
-        }
-        if metadata:
-            meta.update(metadata)
-
-        batch_job = client.batches.create(
-            input_file_id=batch_file.id,
-            endpoint="/v1/chat/completions",
-            completion_window="24h",
-            metadata=meta,
-        )
-
-        return batch_job.id
+        return self.submit_batch_file(jsonl_path, metadata=metadata)
 
     def get_status(self, batch_id: str) -> BatchStatus:
         """Retrieves live status of the OpenAI batch job, extracting detailed error reasons if failed."""
@@ -203,13 +233,16 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
                     first_line = json.loads(err_bytes.strip().splitlines()[0])
                     resp = first_line.get("response", {})
                     st_code = resp.get("status_code", "")
-                    err_body = (
-                        resp.get("body", {}).get("error", {})
-                        or first_line.get("error", {})
-                    )
+                    err_body = resp.get("body", {}).get("error", {}) or first_line.get("error", {})
                     c_code = err_body.get("code") or err_body.get("type", "")
                     c_msg = err_body.get("message", "")
-                    prefix = f"[{st_code} {c_code}]" if st_code and c_code else f"[{c_code}]" if c_code else ""
+                    prefix = (
+                        f"[{st_code} {c_code}]"
+                        if st_code and c_code
+                        else f"[{c_code}]"
+                        if c_code
+                        else ""
+                    )
                     err_msg = f"{prefix} {c_msg}".strip()
             except Exception:
                 err_msg = f"{failed} request(s) failed in batch"
@@ -257,9 +290,7 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
         output_file_id = getattr(b, "output_file_id", None)
         if not output_file_id:
             st = self.get_status(batch_id)
-            print(
-                f"⚠️ Batch {batch_id} produced 0 successful outputs. Reason: {st.error_message}"
-            )
+            print(f"⚠️ Batch {batch_id} produced 0 successful outputs. Reason: {st.error_message}")
             return 0
 
         content_resp = client.files.content(output_file_id)
@@ -279,9 +310,7 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
             resp_obj = item.get("response", {})
             status_code = resp_obj.get("status_code", 200)
             if status_code != 200:
-                print(
-                    f"⚠️ Warning: Batch item {custom_id} returned status_code {status_code}"
-                )
+                print(f"⚠️ Warning: Batch item {custom_id} returned status_code {status_code}")
                 continue
 
             resp_body = resp_obj.get("body", {})
@@ -294,12 +323,8 @@ class OpenAIBatchAdapter(BaseBatchAdapter):
 
             # 50% discount calculation for Batch API
             cost_info = estimate_openai_cost(str(self.model_name), p_in, p_out)
-            cost_info["input_rate_per_1m"] = round(
-                cost_info["input_rate_per_1m"] * 0.5, 6
-            )
-            cost_info["output_rate_per_1m"] = round(
-                cost_info["output_rate_per_1m"] * 0.5, 6
-            )
+            cost_info["input_rate_per_1m"] = round(cost_info["input_rate_per_1m"] * 0.5, 6)
+            cost_info["output_rate_per_1m"] = round(cost_info["output_rate_per_1m"] * 0.5, 6)
             cost_info["input_cost_usd"] = round(cost_info["input_cost_usd"] * 0.5, 6)
             cost_info["output_cost_usd"] = round(cost_info["output_cost_usd"] * 0.5, 6)
             cost_info["total_cost_usd"] = round(cost_info["total_cost_usd"] * 0.5, 6)

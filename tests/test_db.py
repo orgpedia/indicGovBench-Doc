@@ -53,9 +53,7 @@ class TestDb3(unittest.TestCase):
             {"poly": [120.0, 100.0, 300.0, 100.0, 300.0, 250.0, 120.0, 250.0]},
         ]
         # min_x=100-10=90, min_y=50-10=40, max_x=300+10=310, max_y=250+10=260
-        bbox = compute_content_bbox(
-            blocks, page_width=500.0, page_height=700.0, padding=10.0
-        )
+        bbox = compute_content_bbox(blocks, page_width=500.0, page_height=700.0, padding=10.0)
         self.assertEqual(bbox, [90.0, 40.0, 310.0, 260.0])
 
     def test_ingestion_and_reset(self):
@@ -97,9 +95,7 @@ class TestDb3(unittest.TestCase):
         from indic_gov_bench.storage.exporter import export_db_to_json
 
         # 1. Ingest
-        import_data_to_db(
-            benchmark_dir=Path("data"), db_path=self.db_path, run_id="test_meta"
-        )
+        import_data_to_db(benchmark_dir=Path("data"), db_path=self.db_path, run_id="test_meta")
 
         # 2. Save structured 37-field metadata for doc
         doc_id = "order_hi_archive_001"
@@ -147,9 +143,7 @@ class TestDb3(unittest.TestCase):
             "notes": "Verified complete roundtrip test notes",
         }
 
-        save_res = save_doc_meta(
-            doc_id=doc_id, meta_payload=test_payload, db_path=self.db_path
-        )
+        save_res = save_doc_meta(doc_id=doc_id, meta_payload=test_payload, db_path=self.db_path)
         self.assertEqual(save_res["status"], "ok")
         self.assertEqual(save_res["meta"]["doc_date"], "2024-05-15")
         self.assertEqual(save_res["meta"]["languages"], ["Hindi", "English"])
@@ -191,9 +185,7 @@ class TestDb3(unittest.TestCase):
 
         # 5. Re-import from exported directory into a second clean DB
         second_db_path = Path(self.temp_dir.name) / "second_benchmark.db"
-        import_data_to_db(
-            benchmark_dir=export_dir, db_path=second_db_path, run_id="reimport_run"
-        )
+        import_data_to_db(benchmark_dir=export_dir, db_path=second_db_path, run_id="reimport_run")
 
         with db_session(second_db_path) as conn:
             row = conn.execute(
@@ -302,9 +294,7 @@ class TestDb3(unittest.TestCase):
         self.assertTrue(unicodedata.is_normalized("NFC", blk_888["text"]))
         self.assertEqual(blk_888["text"], unicodedata.normalize("NFC", nfd_text))
         # Check polygon expansion: [10.0, 20.0, 100.0, 20.0, 100.0, 80.0, 10.0, 80.0]
-        self.assertEqual(
-            blk_888["poly"], [10.0, 20.0, 100.0, 20.0, 100.0, 80.0, 10.0, 80.0]
-        )
+        self.assertEqual(blk_888["poly"], [10.0, 20.0, 100.0, 20.0, 100.0, 80.0, 10.0, 80.0])
 
     def test_content_and_doc_category_roundtrip(self):
         """Verify that content and doc_category tags export to JSON and re-ingest properly."""

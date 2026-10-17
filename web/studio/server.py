@@ -49,9 +49,7 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
         self.wfile.write(payload)
 
     def _send_error(self, message: str, status_code: int = 400) -> None:
-        self._send_json(
-            {"status": "error", "message": message}, status_code=status_code
-        )
+        self._send_json({"status": "error", "message": message}, status_code=status_code)
 
     def do_OPTIONS(self) -> None:
         self.send_response(HTTPStatus.NO_CONTENT)
@@ -336,9 +334,7 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
             if path == "/api/gt/block/delete":
                 doc_id = data["doc_id"]
                 block_id = int(data["block_id"])
-                res = delete_gt_block(
-                    doc_id=doc_id, block_id=block_id, db_path=self.db_path
-                )
+                res = delete_gt_block(doc_id=doc_id, block_id=block_id, db_path=self.db_path)
                 self._send_json(res)
                 return
 
@@ -358,9 +354,7 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
                     if "block_id" in data and data["block_id"] is not None
                     else None
                 )
-                res = revert_gt_block(
-                    doc_id=doc_id, block_id=b_id, db_path=self.db_path
-                )
+                res = revert_gt_block(doc_id=doc_id, block_id=b_id, db_path=self.db_path)
                 self._send_json(res)
                 return
 
@@ -390,9 +384,7 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
             if path == "/api/doc/reevaluate":
                 doc_id = data["doc_id"]
                 run_id = data.get("run_id", "default")
-                res = reevaluate_document(
-                    doc_id=doc_id, run_id=run_id, db_path=self.db_path
-                )
+                res = reevaluate_document(doc_id=doc_id, run_id=run_id, db_path=self.db_path)
                 self._send_json(res)
                 return
 
@@ -434,9 +426,7 @@ def run_server(port: int = 8030, db_path: Path = DEFAULT_DB_PATH) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="IndicGovBench Dashboard3 Server")
-    parser.add_argument(
-        "--port", type=int, default=8030, help="Port to serve on (default: 8030)"
-    )
+    parser.add_argument("--port", type=int, default=8030, help="Port to serve on (default: 8030)")
     parser.add_argument(
         "--db", type=Path, default=DEFAULT_DB_PATH, help="Path to SQLite benchmark.db"
     )

@@ -843,30 +843,50 @@ def convert_spec_to_html(md_path: Path, output_path: Path) -> str:
     )
 
     # 2. Enhance RFC 2119 keywords
-    body_html = re.sub(r"<strong>MUST</strong>", '<span class="rfc-badge rfc-must">MUST</span>', body_html)
-    body_html = re.sub(r"<strong>MUST NOT</strong>", '<span class="rfc-badge rfc-must-not">MUST NOT</span>', body_html)
-    body_html = re.sub(r"<strong>SHOULD</strong>", '<span class="rfc-badge rfc-should">SHOULD</span>', body_html)
-    body_html = re.sub(r"<strong>SHOULD NOT</strong>", '<span class="rfc-badge rfc-should-not">SHOULD NOT</span>', body_html)
-    body_html = re.sub(r"<strong>MAY</strong>", '<span class="rfc-badge rfc-may">MAY</span>', body_html)
+    body_html = re.sub(
+        r"<strong>MUST</strong>", '<span class="rfc-badge rfc-must">MUST</span>', body_html
+    )
+    body_html = re.sub(
+        r"<strong>MUST NOT</strong>",
+        '<span class="rfc-badge rfc-must-not">MUST NOT</span>',
+        body_html,
+    )
+    body_html = re.sub(
+        r"<strong>SHOULD</strong>", '<span class="rfc-badge rfc-should">SHOULD</span>', body_html
+    )
+    body_html = re.sub(
+        r"<strong>SHOULD NOT</strong>",
+        '<span class="rfc-badge rfc-should-not">SHOULD NOT</span>',
+        body_html,
+    )
+    body_html = re.sub(
+        r"<strong>MAY</strong>", '<span class="rfc-badge rfc-may">MAY</span>', body_html
+    )
 
     # 3. Assemble full HTML
-    final_html = HTML_SHELL_TEMPLATE.replace("{{TOC_HTML}}", toc_html).replace("{{BODY_HTML}}", body_html)
+    final_html = HTML_SHELL_TEMPLATE.replace("{{TOC_HTML}}", toc_html).replace(
+        "{{BODY_HTML}}", body_html
+    )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(final_html)
 
-    print(f"✅ Successfully generated Annotation Protocol HTML at: {output_path} ({len(final_html)} bytes)")
+    print(
+        f"✅ Successfully generated Annotation Protocol HTML at: {output_path} ({len(final_html)} bytes)"
+    )
     return final_html
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate Annotation Protocol HTML from Markdown Spec")
+    parser = argparse.ArgumentParser(
+        description="Generate Annotation Protocol HTML from Markdown Spec"
+    )
     parser.add_argument(
         "--spec",
         "-s",
         type=Path,
-        default=Path("specs/benchmark_format_and_metrics_spec_2.md"),
+        default=Path("docs/annotation_protocol.md"),
         help="Input markdown specification path",
     )
     parser.add_argument(
@@ -879,12 +899,17 @@ def main() -> int:
     args = parser.parse_args()
 
     if not args.spec.is_file():
-        # Fallback to Downloads
-        dl_spec = Path.home() / "Downloads" / "benchmark_format_and_metrics_spec_2.md"
-        if dl_spec.is_file():
-            args.spec = dl_spec
+        # Fallback candidates
+        candidates = [
+            Path("docs/annotation_protocol.md"),
+            Path("specs/benchmark_format_and_metrics_spec_2.md"),
+            Path.home() / "Downloads" / "benchmark_format_and_metrics_spec_2.md",
+        ]
+        found = next((p for p in candidates if p.is_file()), None)
+        if found:
+            args.spec = found
         else:
-            print(f"Error: Specification file not found at {args.spec} or {dl_spec}")
+            print(f"Error: Specification file not found at {args.spec}")
             return 1
 
     convert_spec_to_html(args.spec, args.output)

@@ -143,9 +143,7 @@ def parse_datalab_raw_response(
         else:
             md_content = node.get("markdown")
             html_str = node.get("html", "")
-            text_val = (
-                md_content.strip() if md_content else _extract_text_from_html(html_str)
-            )
+            text_val = md_content.strip() if md_content else _extract_text_from_html(html_str)
             if not text_val:
                 text_val = node.get("text", "").strip()
 

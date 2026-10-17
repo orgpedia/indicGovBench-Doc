@@ -79,6 +79,7 @@ def _load_dotenv_if_available() -> None:
     repo_root = Path(__file__).resolve().parents[3]
     try:
         from dotenv import load_dotenv
+
         for candidate in [Path.cwd() / ".env", repo_root / ".env"]:
             if candidate.is_file():
                 load_dotenv(candidate)
@@ -96,7 +97,7 @@ def _load_dotenv_if_available() -> None:
                         if not line or line.startswith("#"):
                             continue
                         if line.startswith("export "):
-                            line = line[len("export "):].strip()
+                            line = line[len("export ") :].strip()
                         if "=" in line:
                             k, v = line.split("=", 1)
                             k = k.strip()
@@ -114,12 +115,15 @@ def resolve_token(arg_token: str | None) -> str:
 
     _load_dotenv_if_available()
 
-    env_token = (os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or "").strip()
+    env_token = (
+        os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or ""
+    ).strip()
     if env_token:
         return env_token
 
     try:
         from huggingface_hub import get_token
+
         cached = get_token()
         if cached:
             return cached.strip()
@@ -223,13 +227,17 @@ def run_upload(config: SyncHFConfig) -> int:
     if local_target.is_file():
         files_to_upload = [local_target]
     else:
-        files_to_upload = [p for p in local_target.rglob("*") if p.is_file() and not p.name.startswith(".")]
+        files_to_upload = [
+            p for p in local_target.rglob("*") if p.is_file() and not p.name.startswith(".")
+        ]
 
     if not files_to_upload:
         print(f"ℹ️ No local files found in {local_target} to upload.")
         return 0
 
-    print(f"📤 Uploading {len(files_to_upload)} file(s) from {local_target} to {config.hf_repo_id}...")
+    print(
+        f"📤 Uploading {len(files_to_upload)} file(s) from {local_target} to {config.hf_repo_id}..."
+    )
     if config.dry_run:
         for f in files_to_upload[:5]:
             print(f"  [dry-run] Would upload: {f.relative_to(config.hf_repo_path)}")
@@ -274,7 +282,9 @@ def run_upload(config: SyncHFConfig) -> int:
 def main() -> None:
     hf_cfg = load_hf_config()
 
-    parser = argparse.ArgumentParser(description="Synchronize IndicGovBench assets with Hugging Face Hub")
+    parser = argparse.ArgumentParser(
+        description="Synchronize IndicGovBench assets with Hugging Face Hub"
+    )
     parser.add_argument(
         "--mode",
         choices=["download", "upload"],

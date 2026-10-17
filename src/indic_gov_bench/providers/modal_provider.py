@@ -24,9 +24,7 @@ from indic_gov_bench.eval.table_html import (
     markdown_table_to_canonical_html,
 )
 
-HPD_BLOCK_RE = re.compile(
-    r"<BLOCK>(\w+)\s*\[([^\]]*)\](?:<CHILD>)?(.*?)(?=<BLOCK>|\Z)", re.DOTALL
-)
+HPD_BLOCK_RE = re.compile(r"<BLOCK>(\w+)\s*\[([^\]]*)\](?:<CHILD>)?(.*?)(?=<BLOCK>|\Z)", re.DOTALL)
 
 
 def _extract_content_str(raw_json: Any) -> str:
@@ -101,9 +99,7 @@ def parse_modal_hpd_response(
             if "<table" in body_str.lower():
                 html_table = canonicalize_table_html(body_str)
             else:
-                html_table = canonicalize_table_html(
-                    markdown_table_to_canonical_html(body_str)
-                )
+                html_table = canonicalize_table_html(markdown_table_to_canonical_html(body_str))
 
             raw_blocks.append(
                 {
@@ -164,7 +160,9 @@ def parse_qwen_modal_response(
 
     if isinstance(raw_json, list):
         items = [x for x in raw_json if isinstance(x, dict)]
-    elif isinstance(raw_json, dict) and "blocks" in raw_json and isinstance(raw_json["blocks"], list):
+    elif (
+        isinstance(raw_json, dict) and "blocks" in raw_json and isinstance(raw_json["blocks"], list)
+    ):
         items = [x for x in raw_json["blocks"] if isinstance(x, dict)]
     else:
         content = _extract_content_str(raw_json)
@@ -174,7 +172,11 @@ def parse_qwen_modal_response(
             parsed = json.loads(clean_content)
             if isinstance(parsed, list):
                 items = [x for x in parsed if isinstance(x, dict)]
-            elif isinstance(parsed, dict) and "blocks" in parsed and isinstance(parsed["blocks"], list):
+            elif (
+                isinstance(parsed, dict)
+                and "blocks" in parsed
+                and isinstance(parsed["blocks"], list)
+            ):
                 items = [x for x in parsed["blocks"] if isinstance(x, dict)]
             elif isinstance(parsed, dict):
                 items = [parsed]
@@ -215,20 +217,13 @@ def parse_qwen_modal_response(
         poly = [x1, y1, x2, y1, x2, y2, x1, y2]
 
         if b_type == "table" or "<table" in content_val.lower():
-            table_raw = (
-                content_val
-                or item.get("html_table")
-                or item.get("markdown_table")
-                or ""
-            )
+            table_raw = content_val or item.get("html_table") or item.get("markdown_table") or ""
             if not table_raw.strip():
                 continue
             if "<table" in table_raw.lower():
                 html_table = canonicalize_table_html(table_raw)
             else:
-                html_table = canonicalize_table_html(
-                    markdown_table_to_canonical_html(table_raw)
-                )
+                html_table = canonicalize_table_html(markdown_table_to_canonical_html(table_raw))
 
             raw_blocks.append(
                 {
@@ -421,9 +416,7 @@ def parse_tesseract_modal_response(
     return PredictionDocument(doc_id=doc_id, blocks=prediction_blocks)
 
 
-def call_modal_realtime(
-    provider: str, pdf_path: Path, verbose: int = 0
-) -> dict[str, Any]:
+def call_modal_realtime(provider: str, pdf_path: Path, verbose: int = 0) -> dict[str, Any]:
     """Calls Modal realtime vLLM or Tesseract endpoint."""
     p_lower = provider.lower()
     is_tesseract = "tesseract" in p_lower
@@ -447,12 +440,12 @@ def call_modal_realtime(
             "Analyze the provided document image and extract all content into a valid JSON array of block objects.\n\n"
             "Output format specifications:\n"
             "Return a JSON array where each detected block follows this schema:\n"
-            "[\n  {\n    \"type\": \"text\" | \"table\",\n    \"box_2d\": [ymin, xmin, ymax, xmax],\n    \"content\": \"...\"\n  }\n]\n\n"
+            '[\n  {\n    "type": "text" | "table",\n    "box_2d": [ymin, xmin, ymax, xmax],\n    "content": "..."\n  }\n]\n\n'
             "Extraction rules:\n"
             "1. Coordinate system:\n   - Normalize coordinates on a 0 to 1000 scale: [ymin, xmin, ymax, xmax].\n"
             "   - Provide tight bounding boxes for each coherent text block or table.\n\n"
-            "2. Content formatting:\n   - For \"text\" blocks: Output raw text verbatim. Preserve line breaks using \\n, spacing, and capitalization exactly as printed. Do NOT apply Markdown styling.\n"
-            "   - For \"table\" blocks: Output valid, minified HTML (<table>...</table>). Use <thead>, <tbody>, <tr>, <th>, and <td>.\n\n"
+            '2. Content formatting:\n   - For "text" blocks: Output raw text verbatim. Preserve line breaks using \\n, spacing, and capitalization exactly as printed. Do NOT apply Markdown styling.\n'
+            '   - For "table" blocks: Output valid, minified HTML (<table>...</table>). Use <thead>, <tbody>, <tr>, <th>, and <td>.\n\n'
             "3. Integrity & ordering:\n   - Follow natural top-to-bottom, left-to-right reading order.\n"
             "   - Transcribe all text, numbers, and symbols exactly as written.\n\n"
             "Output ONLY valid JSON."
@@ -470,9 +463,7 @@ def call_modal_realtime(
         render_scale = 144.0 / 72.0
 
     if not key:
-        raise ValueError(
-            "HPD_API_KEY (or OCR_API_KEY) environment variable is not set."
-        )
+        raise ValueError("HPD_API_KEY (or OCR_API_KEY) environment variable is not set.")
 
     import base64
     import io
@@ -550,5 +541,3 @@ def call_modal_realtime(
     }
     resp_dict["provider_usage"] = provider_usage
     return resp_dict
-
-

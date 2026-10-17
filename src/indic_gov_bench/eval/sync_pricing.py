@@ -40,15 +40,14 @@ MODEL_MAPPINGS: dict[str, dict[str, Any]] = {
     "gemini_2_5_pro": {"provider": "google", "model": "gemini-2.5-pro"},
     "gemini_2_0_flash": {"provider": "google", "model": "gemini-2.0-flash"},
     "gemini_api": {"alias_of": "gemini_3_8_flash"},
-
     # 2. OpenAI Models
     "openai_gpt_6_1_sol": {"provider": "openai", "model": "gpt-6.1-sol"},
+    "openai_gpt_6_luna": {"provider": "openai", "model": "gpt-6-luna"},
     "openai_gpt_5_6_luna": {"provider": "openai", "model": "gpt-5.6-luna"},
     "openai_gpt_5_6_terra": {"provider": "openai", "model": "gpt-5.6-terra"},
     "openai_gpt_5_6_tera": {"alias_of": "openai_gpt_5_6_terra"},
     "openai_gpt_5_6_sol": {"provider": "openai", "model": "gpt-5.6-sol"},
     "openai_api": {"alias_of": "openai_gpt_5_6_sol"},
-
     # 3. Anthropic Claude Models
     "claude_haiku_4_5": {"provider": "anthropic", "model": "claude-haiku-4-5"},
     "claude_sonnet_5_5": {"provider": "anthropic", "model": "claude-sonnet-5-5"},
@@ -144,17 +143,19 @@ def audit_pricing(
 
         if "alias_of" in mapping:
             target_slug = mapping["alias_of"]
-            rows.append({
-                "slug": slug,
-                "name": local_cfg.get("name", slug),
-                "type": "token (alias)",
-                "local_in": local_in,
-                "local_out": local_out,
-                "upstream_in": None,
-                "upstream_out": None,
-                "status": f"ALIAS -> {target_slug}",
-                "target_slug": target_slug,
-            })
+            rows.append(
+                {
+                    "slug": slug,
+                    "name": local_cfg.get("name", slug),
+                    "type": "token (alias)",
+                    "local_in": local_in,
+                    "local_out": local_out,
+                    "upstream_in": None,
+                    "upstream_out": None,
+                    "status": f"ALIAS -> {target_slug}",
+                    "target_slug": target_slug,
+                }
+            )
             continue
 
         prov_id = mapping["provider"]
@@ -165,16 +166,18 @@ def audit_pricing(
         cost = model_data.get("cost")
 
         if not cost:
-            rows.append({
-                "slug": slug,
-                "name": local_cfg.get("name", slug),
-                "type": "token",
-                "local_in": local_in,
-                "local_out": local_out,
-                "upstream_in": None,
-                "upstream_out": None,
-                "status": "UPSTREAM MISSING",
-            })
+            rows.append(
+                {
+                    "slug": slug,
+                    "name": local_cfg.get("name", slug),
+                    "type": "token",
+                    "local_in": local_in,
+                    "local_out": local_out,
+                    "upstream_in": None,
+                    "upstream_out": None,
+                    "status": "UPSTREAM MISSING",
+                }
+            )
             continue
 
         up_in = float(cost.get("input", 0.0))
@@ -194,32 +197,36 @@ def audit_pricing(
         else:
             status = "UP-TO-DATE"
 
-        rows.append({
-            "slug": slug,
-            "name": local_cfg.get("name", slug),
-            "type": "token",
-            "local_in": local_in,
-            "local_out": local_out,
-            "upstream_in": up_in,
-            "upstream_out": up_out,
-            "status": status,
-        })
+        rows.append(
+            {
+                "slug": slug,
+                "name": local_cfg.get("name", slug),
+                "type": "token",
+                "local_in": local_in,
+                "local_out": local_out,
+                "upstream_in": up_in,
+                "upstream_out": up_out,
+                "status": status,
+            }
+        )
 
     # Include unmanaged archetypes for comprehensive awareness
     for slug, cfg in registry.items():
         if slug in MODEL_MAPPINGS:
             continue
         arch = cfg.get("archetype", "other")
-        rows.append({
-            "slug": slug,
-            "name": cfg.get("name", slug),
-            "type": arch,
-            "local_in": None,
-            "local_out": None,
-            "upstream_in": None,
-            "upstream_out": None,
-            "status": f"MANUAL ({arch})",
-        })
+        rows.append(
+            {
+                "slug": slug,
+                "name": cfg.get("name", slug),
+                "type": arch,
+                "local_in": None,
+                "local_out": None,
+                "upstream_in": None,
+                "upstream_out": None,
+                "status": f"MANUAL ({arch})",
+            }
+        )
 
     return rows, has_mismatch
 
@@ -253,8 +260,7 @@ def print_audit_table(rows: list[dict[str, Any]]) -> None:
             status_colored = f"✅ {r['status']}"
 
         print(
-            f"{r['slug']:<24} | {r['type']:<14} | "
-            f"{loc_str:<20} | {up_str:<20} | {status_colored}"
+            f"{r['slug']:<24} | {r['type']:<14} | {loc_str:<20} | {up_str:<20} | {status_colored}"
         )
     print(sep + "\n")
 
@@ -359,6 +365,7 @@ def update_database_costs(
     import importlib
 
     import indic_gov_bench.eval.pricing_registry as pr_module
+
     importlib.reload(pr_module)
 
     conn = sqlite3.connect(str(db_file))
@@ -370,9 +377,7 @@ def update_database_costs(
         # Check tables
         tables = {
             r[0]
-            for r in conn.execute(
-                "SELECT name FROM sqlite_master WHERE type='table'"
-            ).fetchall()
+            for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
         }
 
         if "predictions" not in tables:

@@ -236,8 +236,6 @@ def resolve_json_path(target: str, repo_root: Path) -> Path:
     candidates = [
         repo_root / "data" / "ground_truth" / f"{doc_id}.json",
         repo_root / "data" / "anchors" / f"{doc_id}.json",
-        repo_root / "benchmark3" / "reference" / f"{doc_id}.json",
-        repo_root / "benchmark" / "reference" / f"{doc_id}.json",
     ]
 
     # Check ground truth / reference candidates first
@@ -266,8 +264,6 @@ def main():
 
     if args.all:
         ref_dir = repo_root / "data" / "ground_truth"
-        if not ref_dir.exists():
-            ref_dir = repo_root / "benchmark3" / "reference"
         out_dir = Path(args.out_dir) if args.out_dir else ref_dir
         json_files = sorted(list(ref_dir.glob("*.json")))
 

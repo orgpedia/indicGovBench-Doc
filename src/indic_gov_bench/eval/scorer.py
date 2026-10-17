@@ -111,9 +111,7 @@ def html_to_teds_tree(html_str: str) -> TableNode | None:
                 norm_text = normalize_text(text, profile="norm")
                 content = list(norm_text)
 
-            node = TableNode(
-                elem.name, colspan=colspan, rowspan=rowspan, content=content
-            )
+            node = TableNode(elem.name, colspan=colspan, rowspan=rowspan, content=content)
             for child in elem.children:
                 c_node = parse_element(child)
                 if c_node:
@@ -145,9 +143,7 @@ def compute_teds(ref_html: str, pred_html: str, structure_only: bool = False) ->
         return 1.0
 
     try:
-        apted_engine = APTED(
-            pred_tree, ref_tree, TEDSConfig(structure_only=structure_only)
-        )
+        apted_engine = APTED(pred_tree, ref_tree, TEDSConfig(structure_only=structure_only))
         edit_dist = apted_engine.compute_edit_distance()
         score = 1.0 - (edit_dist / max_v)
         return max(0.0, min(1.0, float(score)))
@@ -369,9 +365,7 @@ def score_page(
                 if tag == "equal":
                     for idx_offset, w in enumerate(p_words[j1:j2]):
                         w_idx = i1 + idx_offset
-                        gcv_box = (
-                            gcv_words_map.get((b_id, w_idx)) if gcv_words_map else None
-                        )
+                        gcv_box = gcv_words_map.get((b_id, w_idx)) if gcv_words_map else None
                         word_alignments.append(
                             {
                                 "gt_word": w,
@@ -510,11 +504,7 @@ def score_page(
                         if tag == "equal":
                             for idx_off, w in enumerate(p_c_words[j1:j2]):
                                 w_i = tbl_word_counter + i1 + idx_off
-                                gbox = (
-                                    gcv_words_map.get((tbl_b_id, w_i))
-                                    if gcv_words_map
-                                    else None
-                                )
+                                gbox = gcv_words_map.get((tbl_b_id, w_i)) if gcv_words_map else None
                                 word_alignments.append(
                                     {
                                         "gt_word": w,
@@ -531,11 +521,7 @@ def score_page(
                             rw = " ".join(r_c_words[i1:i2])
                             pw = " ".join(p_c_words[j1:j2])
                             w_i = tbl_word_counter + i1
-                            gbox = (
-                                gcv_words_map.get((tbl_b_id, w_i))
-                                if gcv_words_map
-                                else None
-                            )
+                            gbox = gcv_words_map.get((tbl_b_id, w_i)) if gcv_words_map else None
                             word_alignments.append(
                                 {
                                     "gt_word": rw,
@@ -551,11 +537,7 @@ def score_page(
                         elif tag == "delete":
                             rw = " ".join(r_c_words[i1:i2])
                             w_i = tbl_word_counter + i1
-                            gbox = (
-                                gcv_words_map.get((tbl_b_id, w_i))
-                                if gcv_words_map
-                                else None
-                            )
+                            gbox = gcv_words_map.get((tbl_b_id, w_i)) if gcv_words_map else None
                             word_alignments.append(
                                 {
                                     "gt_word": rw,
@@ -585,11 +567,7 @@ def score_page(
                 elif r_c_words and not p_c_words:
                     for idx_off, rw in enumerate(r_c_words):
                         w_i = tbl_word_counter + idx_off
-                        gbox = (
-                            gcv_words_map.get((tbl_b_id, w_i))
-                            if gcv_words_map
-                            else None
-                        )
+                        gbox = gcv_words_map.get((tbl_b_id, w_i)) if gcv_words_map else None
                         word_alignments.append(
                             {
                                 "gt_word": rw,
@@ -619,17 +597,13 @@ def score_page(
 
                 tbl_word_counter += len(r_c_words)
 
-            t_diff_counts["all"] = sum(
-                t_diff_counts[k] for k in ("subs", "missing", "extra")
-            )
+            t_diff_counts["all"] = sum(t_diff_counts[k] for k in ("subs", "missing", "extra"))
             for k in doc_diff_counts:
                 doc_diff_counts[k] += t_diff_counts[k]
 
             # Compute TEDS for this table
             teds_val = (
-                compute_teds(
-                    mu.ref_html or "", mu.pred_html or "", structure_only=False
-                )
+                compute_teds(mu.ref_html or "", mu.pred_html or "", structure_only=False)
                 if mu.ref_html
                 else None
             )
@@ -665,9 +639,7 @@ def score_page(
     )
     max_len_raw = max(len(s_ref_raw), len(s_pred_raw))
     e2eNED_raw = (
-        Levenshtein.distance(s_ref_raw, s_pred_raw) / max_len_raw
-        if max_len_raw > 0
-        else 0.0
+        Levenshtein.distance(s_ref_raw, s_pred_raw) / max_len_raw if max_len_raw > 0 else 0.0
     )
 
     s_ref_norm = serialize_page_S(gt_blocks, profile="norm", is_reference=True)
@@ -676,9 +648,7 @@ def score_page(
     )
     max_len_norm = max(len(s_ref_norm), len(s_pred_norm))
     e2eNED_norm = (
-        Levenshtein.distance(s_ref_norm, s_pred_norm) / max_len_norm
-        if max_len_norm > 0
-        else 0.0
+        Levenshtein.distance(s_ref_norm, s_pred_norm) / max_len_norm if max_len_norm > 0 else 0.0
     )
 
     # Full document diff tokens for Overview view
@@ -686,14 +656,11 @@ def score_page(
 
     # 4. Table TEDS on Page (§12)
     has_ref_tables = any(
-        b.get("type") == "table" and b.get("scope", "target") == "target"
-        for b in gt_blocks
+        b.get("type") == "table" and b.get("scope", "target") == "target" for b in gt_blocks
     )
     if has_ref_tables and table_evaluations:
         page_teds = sum(t["teds"] for t in table_evaluations) / len(table_evaluations)
-        page_teds_s = sum(t["teds_s"] for t in table_evaluations) / len(
-            table_evaluations
-        )
+        page_teds_s = sum(t["teds_s"] for t in table_evaluations) / len(table_evaluations)
     else:
         page_teds = None
         page_teds_s = None
@@ -790,12 +757,8 @@ def aggregate_corpus_evaluations(
 
     # 3. Macro-Averaged TEDS (§12.1)
     table_pages = [p for p in page_results if p.TEDS is not None]
-    corpus_teds = (
-        sum(p.TEDS for p in table_pages) / len(table_pages) if table_pages else None
-    )
-    corpus_teds_s = (
-        sum(p.TEDS_S for p in table_pages) / len(table_pages) if table_pages else None
-    )
+    corpus_teds = sum(p.TEDS for p in table_pages) / len(table_pages) if table_pages else None
+    corpus_teds_s = sum(p.TEDS_S for p in table_pages) / len(table_pages) if table_pages else None
 
     # 4. Composite Score & Token F1
     corpus_token_f1 = sum(p.token_f1 for p in page_results) / len(page_results)

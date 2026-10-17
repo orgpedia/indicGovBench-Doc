@@ -47,9 +47,7 @@ def extract_gcv_words(
     for block in gv_page.get("blocks", []):
         for paragraph in block.get("paragraphs", []):
             for w in paragraph.get("words", []):
-                w_text = "".join(
-                    symbol.get("text", "") for symbol in w.get("symbols", [])
-                ).strip()
+                w_text = "".join(symbol.get("text", "") for symbol in w.get("symbols", [])).strip()
                 if not w_text:
                     continue
 
@@ -115,9 +113,7 @@ def parse_gcv_raw_response(
             ys = []
 
             for w in paragraph.get("words", []):
-                w_text = "".join(
-                    symbol.get("text", "") for symbol in w.get("symbols", [])
-                )
+                w_text = "".join(symbol.get("text", "") for symbol in w.get("symbols", []))
                 if w_text:
                     words_in_para.append(w_text)
 
@@ -127,9 +123,7 @@ def parse_gcv_raw_response(
 
                 if norm_verts:
                     xs.extend([float(v.get("x", 0.0)) * page_width for v in norm_verts])
-                    ys.extend(
-                        [float(v.get("y", 0.0)) * page_height for v in norm_verts]
-                    )
+                    ys.extend([float(v.get("y", 0.0)) * page_height for v in norm_verts])
                 elif verts:
                     scale_x = page_width / p_w
                     scale_y = page_height / p_h
@@ -180,9 +174,7 @@ def call_gcv_api(
         "GOOGLE_APPLICATION_CREDENTIALS" not in os.environ
         or not os.environ["GOOGLE_APPLICATION_CREDENTIALS"].strip()
     ):
-        raise ValueError(
-            "GOOGLE_APPLICATION_CREDENTIALS environment variable is not set."
-        )
+        raise ValueError("GOOGLE_APPLICATION_CREDENTIALS environment variable is not set.")
 
     import pypdfium2 as pdfium
     from google.cloud import vision

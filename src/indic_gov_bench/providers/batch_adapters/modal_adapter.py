@@ -71,7 +71,9 @@ class ModalBatchAdapter(BaseBatchAdapter):
 
         return OpenAI(base_url=url.rstrip("/") + "/v1", api_key=key, timeout=300, max_retries=3)
 
-    def _upload_single_pdf_with_retry(self, client: Any, pdf_path: Path, max_retries: int = 3) -> None:
+    def _upload_single_pdf_with_retry(
+        self, client: Any, pdf_path: Path, max_retries: int = 3
+    ) -> None:
         """Uploads a single PDF to Modal OCR Gateway with exponential backoff retries."""
         filename = pdf_path.name
         content_bytes = pdf_path.read_bytes()
@@ -85,7 +87,9 @@ class ModalBatchAdapter(BaseBatchAdapter):
                 return
             except Exception as e:
                 if attempt == max_retries - 1:
-                    raise RuntimeError(f"Failed to upload {filename} after {max_retries} attempts: {e}") from e
+                    raise RuntimeError(
+                        f"Failed to upload {filename} after {max_retries} attempts: {e}"
+                    ) from e
                 time.sleep(1.0 * (attempt + 1))
 
     def _sync_pdfs_to_gateway(self, client: Any, pdf_paths: list[Path]) -> None:
@@ -94,9 +98,14 @@ class ModalBatchAdapter(BaseBatchAdapter):
 
         # 1. Fetch existing files in 1 single API call
         try:
-            server_files = {f.id: getattr(f, "bytes", 0) for f in client.files.list(limit=10000).data}
+            server_files = {
+                f.id: getattr(f, "bytes", 0) for f in client.files.list(limit=10000).data
+            }
         except Exception as e:
-            print(f"  ⚠️ Warning querying server files list: {e}. Falling back to upload check.", file=sys.stderr)
+            print(
+                f"  ⚠️ Warning querying server files list: {e}. Falling back to upload check.",
+                file=sys.stderr,
+            )
             server_files = {}
 
         # 2. Determine which PDFs actually need uploading
@@ -104,7 +113,9 @@ class ModalBatchAdapter(BaseBatchAdapter):
         already_on_server = len(pdf_paths) - len(missing_paths)
 
         if not missing_paths:
-            print(f"📦 Modal Volume sync: All {len(pdf_paths)} PDFs verified on server (0 to upload).")
+            print(
+                f"📦 Modal Volume sync: All {len(pdf_paths)} PDFs verified on server (0 to upload)."
+            )
             return
 
         print(
@@ -115,7 +126,9 @@ class ModalBatchAdapter(BaseBatchAdapter):
         completed = 0
         total_missing = len(missing_paths)
         with ThreadPoolExecutor(max_workers=4) as pool:
-            futures = {pool.submit(self._upload_single_pdf_with_retry, client, p): p for p in missing_paths}
+            futures = {
+                pool.submit(self._upload_single_pdf_with_retry, client, p): p for p in missing_paths
+            }
             for fut in as_completed(futures):
                 fut.result()  # will raise if all retries failed
                 completed += 1
@@ -248,7 +261,8 @@ class ModalBatchAdapter(BaseBatchAdapter):
             "error_file_id": getattr(b, "error_file_id", None),
             "created_at": getattr(b, "created_at", None),
             "completed_at": getattr(b, "completed_at", None),
-            "metrics": getattr(b, "metrics", None) or (b.to_dict().get("metrics") if hasattr(b, "to_dict") else None),
+            "metrics": getattr(b, "metrics", None)
+            or (b.to_dict().get("metrics") if hasattr(b, "to_dict") else None),
         }
 
         err_msg = None
@@ -305,9 +319,7 @@ class ModalBatchAdapter(BaseBatchAdapter):
         output_file_id = getattr(b, "output_file_id", None)
         if not output_file_id:
             st = self.get_status(batch_id)
-            print(
-                f"⚠️ Batch {batch_id} produced 0 successful outputs. Reason: {st.error_message}"
-            )
+            print(f"⚠️ Batch {batch_id} produced 0 successful outputs. Reason: {st.error_message}")
             return 0
 
         # Retrieve batch metrics and hardware resources
@@ -336,9 +348,7 @@ class ModalBatchAdapter(BaseBatchAdapter):
             resp_obj = item.get("response", {})
             status_code = resp_obj.get("status_code", 200)
             if status_code != 200:
-                print(
-                    f"⚠️ Warning: Batch item {custom_id} returned status_code {status_code}"
-                )
+                print(f"⚠️ Warning: Batch item {custom_id} returned status_code {status_code}")
                 continue
 
             resp_body = resp_obj.get("body", {})
@@ -348,12 +358,18 @@ class ModalBatchAdapter(BaseBatchAdapter):
             usage = resp_body.get("usage", {})
             p_in = metrics.get("prompt_tokens") or usage.get("prompt_tokens")
             p_out = metrics.get("completion_tokens") or usage.get("completion_tokens")
-            tot = metrics.get("total_tokens") or usage.get("total_tokens") or ((p_in or 0) + (p_out or 0))
+            tot = (
+                metrics.get("total_tokens")
+                or usage.get("total_tokens")
+                or ((p_in or 0) + (p_out or 0))
+            )
             gpu_sec = metrics.get("gpu_seconds_share")
             cpu_ms = metrics.get("cpu_ms") or usage.get("cpu_ms")
             cpu_sec_share = metrics.get("cpu_seconds_share")
 
-            is_cpu_model = self.gpu_type == "CPU" or (b_resources.get("gpu_count", 1) == 0 and not b_resources.get("gpu_requested"))
+            is_cpu_model = self.gpu_type == "CPU" or (
+                b_resources.get("gpu_count", 1) == 0 and not b_resources.get("gpu_requested")
+            )
 
             provider_usage = {
                 "pricing_type": "compute_time",
@@ -363,14 +379,22 @@ class ModalBatchAdapter(BaseBatchAdapter):
                 "total_tokens": tot or 0,
                 "pages_processed": 1,
                 "gpu_seconds": 0.0 if is_cpu_model else gpu_sec,
-                "gpu_type": "CPU" if is_cpu_model else (b_resources.get("gpu_requested") or self.gpu_type),
+                "gpu_type": "CPU"
+                if is_cpu_model
+                else (b_resources.get("gpu_requested") or self.gpu_type),
                 "cpu_ms": cpu_ms,
                 "cpu_seconds_share": cpu_sec_share,
                 "batch_metrics": {
-                    "gpu_requested": None if is_cpu_model else (b_resources.get("gpu_requested") or self.gpu_type),
+                    "gpu_requested": None
+                    if is_cpu_model
+                    else (b_resources.get("gpu_requested") or self.gpu_type),
                     "gpu_count": 0 if is_cpu_model else b_resources.get("gpu_count", 1),
-                    "cpu_cores_reserved": b_resources.get("cpu_cores_reserved", 8.0 if is_cpu_model else 4.0),
-                    "memory_mib_reserved": b_resources.get("memory_mib_reserved", 8192 if is_cpu_model else 16384),
+                    "cpu_cores_reserved": b_resources.get(
+                        "cpu_cores_reserved", 8.0 if is_cpu_model else 4.0
+                    ),
+                    "memory_mib_reserved": b_resources.get(
+                        "memory_mib_reserved", 8192 if is_cpu_model else 16384
+                    ),
                     "cpu_seconds_used": b_resources.get("cpu_seconds_used"),
                     "model_load_s": b_metrics.get("model_load_s"),
                     "inference_s": b_metrics.get("inference_s"),

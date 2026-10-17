@@ -14,7 +14,7 @@ import json
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from indic_gov_bench.storage.db import (
     DEFAULT_DB_PATH,
@@ -22,7 +22,6 @@ from indic_gov_bench.storage.db import (
     get_db_connection,
     init_schema,
 )
-from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from indic_gov_bench.eval.scorer import (
@@ -152,9 +151,7 @@ def evaluate_single_doc(
 
     elapsed_ms = (time.time() - t0) * 1000.0
     if results:
-        print(
-            f"⚡ Evaluated doc '{doc_id}' across {len(results)} providers in {elapsed_ms:.1f}ms."
-        )
+        print(f"⚡ Evaluated doc '{doc_id}' across {len(results)} providers in {elapsed_ms:.1f}ms.")
     return results
 
 
@@ -201,12 +198,14 @@ def evaluate_corpus(
     )
     all_gcv_words: dict[str, dict[tuple[int, int], list[float]]] = {}
     for gr in cur_gcv.fetchall():
-        all_gcv_words.setdefault(gr["doc_id"], {})[(gr["block_id"], gr["word_idx"])] = (
-            json.loads(gr["poly_json"])
+        all_gcv_words.setdefault(gr["doc_id"], {})[(gr["block_id"], gr["word_idx"])] = json.loads(
+            gr["poly_json"]
         )
 
     # 3. Fetch predictions and per-doc costs to evaluate
-    query = "SELECT provider, doc_id, blocks_json, cost_realtime_inr, cost_batch_inr FROM predictions"
+    query = (
+        "SELECT provider, doc_id, blocks_json, cost_realtime_inr, cost_batch_inr FROM predictions"
+    )
     params = []
     if provider_filter:
         query += " WHERE provider = ?"
@@ -312,9 +311,7 @@ def evaluate_corpus(
 
     with db_session(db_path) as conn:
         for prov, p_results in page_results_by_provider.items():
-            corp_res = aggregate_corpus_evaluations(
-                run_id, prov, p_results, num_bootstrap=1000
-            )
+            corp_res = aggregate_corpus_evaluations(run_id, prov, p_results, num_bootstrap=1000)
             corpus_results[prov] = corp_res
 
             # Query economics from predictions
@@ -335,9 +332,7 @@ def evaluate_corpus(
                 else "USD"
             )
             b_mode = (
-                cost_cur[0]["billing_mode"]
-                if cost_cur and cost_cur[0]["billing_mode"]
-                else "token"
+                cost_cur[0]["billing_mode"] if cost_cur and cost_cur[0]["billing_mode"] else "token"
             )
 
             provider_economics[prov] = {
@@ -424,9 +419,7 @@ def evaluate_corpus(
     print("=" * 60)
     print(f"✅ Evaluation Complete in {elapsed:.2f}s:")
     print(f"   • {len(evaluated_pages)} Document page evaluations saved to SQLite")
-    print(
-        f"   • {len(corpus_results)} Providers aggregated with 1,000-draw Bootstrap 95% CIs"
-    )
+    print(f"   • {len(corpus_results)} Providers aggregated with 1,000-draw Bootstrap 95% CIs")
     print(f"   • Leaderboard published to: {leaderboard_file.resolve()}")
     print("=" * 60)
 
@@ -437,9 +430,7 @@ def evaluate_corpus(
 def print_leaderboard(run_id: str = "default", db_path: Path = DEFAULT_DB_PATH) -> None:
     """Prints a formatted leaderboard table from SQLite corpus_evaluations."""
     if not db_path.exists():
-        print(
-            f"⚠️ Database not found at '{db_path}'. Run 'make init_db && make eval_all' first."
-        )
+        print(f"⚠️ Database not found at '{db_path}'. Run 'make init_db && make eval_all' first.")
         return
 
     try:
@@ -447,7 +438,7 @@ def print_leaderboard(run_id: str = "default", db_path: Path = DEFAULT_DB_PATH) 
             cur = conn.execute(
                 """
                 SELECT provider, composite_score, textCER_norm, e2eNED_norm, TEDS, token_f1, num_docs,
-                       total_batch_cost_inr, cost_per_1k_inr, total_savings_inr, ci_95_json
+                       avg_batch_cost_inr, total_batch_cost_inr, total_savings_inr, ci_95_json
                 FROM corpus_evaluations
                 WHERE run_id = ?
                 ORDER BY composite_score DESC
@@ -456,24 +447,22 @@ def print_leaderboard(run_id: str = "default", db_path: Path = DEFAULT_DB_PATH) 
             )
             rows = cur.fetchall()
     except Exception as err:
-        print(
-            f"⚠️ Could not query evaluations ({err}). Run 'make init_db && make eval_all' first."
-        )
+        print(f"⚠️ Could not query evaluations ({err}). Run 'make init_db && make eval_all' first.")
         return
 
     if not rows:
-        print(
-            f"⚠️ No evaluation results found for run '{run_id}'. Run 'make eval_all' first."
-        )
+        print(f"⚠️ No evaluation results found for run '{run_id}'. Run 'make eval_all' first.")
         return
 
-    print("\n" + "=" * 110)
-    print(f"   🏆 IndicGovBench Published Leaderboard — Run: [{run_id}] (Prices in INR ₹, Batch API *)")
-    print("=" * 110)
+    print("\n" + "=" * 99)
     print(
-        f"{'Provider':<24} | {'Composite':<9} | {'textCER':<8} | {'e2eNED':<8} | {'TEDS':<7} | {'F1':<6} | {'Docs':<5} | {'Spend (₹)*':<11} | {'/1K Pages':<10}"
+        f"   🏆 IndicGovBench Published Leaderboard — Run: [{run_id}] (Prices in INR ₹, Batch API *)"
     )
-    print("-" * 110)
+    print("=" * 99)
+    print(
+        f"{'Provider':<24} | {'Composite':<9} | {'textCER':<8} | {'e2eNED':<8} | {'TEDS':<7} | {'F1':<6} | {'Docs':<5} | {'Price/Doc (₹)*':<14}"
+    )
+    print("-" * 99)
 
     for r in rows:
         prov = r["provider"]
@@ -483,30 +472,37 @@ def print_leaderboard(run_id: str = "default", db_path: Path = DEFAULT_DB_PATH) 
         teds = f"{r['TEDS']:.4f}" if r["TEDS"] is not None else "N/A"
         f1 = f"{r['token_f1']:.4f}"
         docs = str(r["num_docs"])
-        spend_val = r["total_batch_cost_inr"]
-        spend_str = f"₹{spend_val:.2f}*" if spend_val is not None else "—"
-        rate_val = r["cost_per_1k_inr"]
-        rate_str = f"₹{rate_val:.2f}" if rate_val is not None else "—"
+        cost_val = r["avg_batch_cost_inr"]
+        if cost_val is None and r["total_batch_cost_inr"] is not None and r["num_docs"]:
+            cost_val = r["total_batch_cost_inr"] / r["num_docs"]
+
+        if cost_val is not None:
+            if cost_val == 0.0:
+                price_str = "₹0.00"
+            elif cost_val < 0.10:
+                price_str = f"₹{cost_val:.3f}"
+            else:
+                price_str = f"₹{cost_val:.2f}"
+        else:
+            price_str = "—"
 
         print(
-            f"{prov:<24} | {comp:<9} | {cer:<8} | {ned:<8} | {teds:<7} | {f1:<6} | {docs:<5} | {spend_str:<11} | {rate_str:<10}"
+            f"{prov:<24} | {comp:<9} | {cer:<8} | {ned:<8} | {teds:<7} | {f1:<6} | {docs:<5} | {price_str:<14}"
         )
 
-    print("=" * 110)
-    print("(*) Batch API pricing assumed (50% off cloud VLMs, amortized GPU-time for Modal). FX: $1 USD = ₹100.00.\n")
+    print("=" * 99)
+    print(
+        "(*) Batch API pricing assumed (50% off cloud VLMs, amortized GPU-time for Modal). FX: $1 USD = ₹100.00.\n"
+    )
 
 
 def main():
     parser = argparse.ArgumentParser(
         description="Fast 6-Metric Evaluation Engine for IndicGovBench."
     )
-    parser.add_argument(
-        "--all", action="store_true", help="Run full parallel corpus evaluation"
-    )
+    parser.add_argument("--all", action="store_true", help="Run full parallel corpus evaluation")
     parser.add_argument("--doc", type=str, help="Evaluate a single document by ID")
-    parser.add_argument(
-        "--run", type=str, default="default", help="Evaluation run identifier"
-    )
+    parser.add_argument("--run", type=str, default="default", help="Evaluation run identifier")
     parser.add_argument("--provider", type=str, help="Filter specific provider")
     parser.add_argument(
         "--exclude",
@@ -522,6 +518,11 @@ def main():
         "--workers", type=int, default=4, help="Number of parallel worker processes"
     )
     parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force re-evaluation of all documents",
+    )
+    parser.add_argument(
         "--leaderboard", action="store_true", help="Print aggregate leaderboard table"
     )
     args = parser.parse_args()
@@ -529,9 +530,7 @@ def main():
     if args.leaderboard:
         print_leaderboard(run_id=args.run, db_path=Path(args.db_path))
     elif args.doc:
-        evaluate_single_doc(
-            doc_id=args.doc, run_id=args.run, db_path=Path(args.db_path)
-        )
+        evaluate_single_doc(doc_id=args.doc, run_id=args.run, db_path=Path(args.db_path))
     elif args.all:
         evaluate_corpus(
             run_id=args.run,

@@ -214,7 +214,7 @@ def export_table_data(
 
     for row in cursor:
         row_dict = dict(zip(columns, row))
-        
+
         # Prepare values; columns with large payloads (>10KB) are deferred to chunked UPDATEs
         deferred_cols: dict[str, str] = {}
         insert_vals: dict[str, str] = {}
@@ -223,13 +223,15 @@ def export_table_data(
             val = row_dict[col]
             if isinstance(val, str):
                 # Minify if JSON
-                if (val.startswith("{") and val.endswith("}")) or (val.startswith("[") and val.endswith("]")):
+                if (val.startswith("{") and val.endswith("}")) or (
+                    val.startswith("[") and val.endswith("]")
+                ):
                     try:
                         parsed = json.loads(val)
                         val = json.dumps(parsed, separators=(",", ":"), ensure_ascii=False)
                     except Exception:
                         pass
-                
+
                 # If string encoded bytes > 15,000 bytes, defer it entirely to UPDATE chunks
                 val_bytes = len(val.encode("utf-8"))
                 if val_bytes > 15000:
@@ -246,7 +248,9 @@ def export_table_data(
             insert_vals[col] = sql_quote(val)
 
         val_list = [insert_vals[c] for c in columns]
-        insert_stmt = f"INSERT OR REPLACE INTO {table} ({col_names}) VALUES ({', '.join(val_list)});\n"
+        insert_stmt = (
+            f"INSERT OR REPLACE INTO {table} ({col_names}) VALUES ({', '.join(val_list)});\n"
+        )
         f_out.write(insert_stmt)
         rows_written += 1
 
@@ -310,18 +314,40 @@ def export_database_sql(db_path: Path, out_dir: Path) -> dict[str, int]:
 
             # 2. documents
             doc_cols = [
-                "doc_id", "pdf_path", "image_path", "width", "height",
-                "content_bbox_json", "has_tables", "table_count", "audit_status",
-                "department", "horizon", "language", "scan_type", "source_url",
-                "rotation", "has_watermark", "meta_json",
+                "doc_id",
+                "pdf_path",
+                "image_path",
+                "width",
+                "height",
+                "content_bbox_json",
+                "has_tables",
+                "table_count",
+                "audit_status",
+                "department",
+                "horizon",
+                "language",
+                "scan_type",
+                "source_url",
+                "rotation",
+                "has_watermark",
+                "meta_json",
             ]
             c = export_table_data(conn, "documents", doc_cols, ["doc_id"], f_data)
             counts["documents"] = c
 
             # 3. ground_truth_blocks
             gt_cols = [
-                "doc_id", "block_id", "type", "scope", "order_idx",
-                "poly_json", "text", "html", "reason", "content", "doc_category",
+                "doc_id",
+                "block_id",
+                "type",
+                "scope",
+                "order_idx",
+                "poly_json",
+                "text",
+                "html",
+                "reason",
+                "content",
+                "doc_category",
             ]
             c = export_table_data(
                 conn, "ground_truth_blocks", gt_cols, ["doc_id", "block_id"], f_data
@@ -330,12 +356,28 @@ def export_database_sql(db_path: Path, out_dir: Path) -> dict[str, int]:
 
             # 4. corpus_evaluations
             ce_cols = [
-                "run_id", "provider", "composite_score", "token_f1", "textCER_raw",
-                "textCER_norm", "e2eNED_raw", "e2eNED_norm", "TEDS", "TEDS_S",
-                "ci_95_json", "num_docs", "num_tables", "total_realtime_cost_inr",
-                "total_batch_cost_inr", "total_savings_inr", "avg_realtime_cost_inr",
-                "avg_batch_cost_inr", "cost_per_1k_inr", "native_currency",
-                "billing_mode", "aggregated_at",
+                "run_id",
+                "provider",
+                "composite_score",
+                "token_f1",
+                "textCER_raw",
+                "textCER_norm",
+                "e2eNED_raw",
+                "e2eNED_norm",
+                "TEDS",
+                "TEDS_S",
+                "ci_95_json",
+                "num_docs",
+                "num_tables",
+                "total_realtime_cost_inr",
+                "total_batch_cost_inr",
+                "total_savings_inr",
+                "avg_realtime_cost_inr",
+                "avg_batch_cost_inr",
+                "cost_per_1k_inr",
+                "native_currency",
+                "billing_mode",
+                "aggregated_at",
             ]
             c = export_table_data(
                 conn, "corpus_evaluations", ce_cols, ["run_id", "provider"], f_data
@@ -344,25 +386,49 @@ def export_database_sql(db_path: Path, out_dir: Path) -> dict[str, int]:
 
             # 5. predictions
             pred_cols = [
-                "provider", "doc_id", "blocks_json", "raw_response_path",
-                "cost_realtime_inr", "cost_batch_inr", "prompt_tokens",
-                "candidates_tokens", "total_tokens", "pages_processed",
-                "gpu_seconds", "billing_mode", "native_currency", "cost_info_json",
+                "provider",
+                "doc_id",
+                "blocks_json",
+                "raw_response_path",
+                "cost_realtime_inr",
+                "cost_batch_inr",
+                "prompt_tokens",
+                "candidates_tokens",
+                "total_tokens",
+                "pages_processed",
+                "gpu_seconds",
+                "billing_mode",
+                "native_currency",
+                "cost_info_json",
                 "updated_at",
             ]
-            c = export_table_data(
-                conn, "predictions", pred_cols, ["provider", "doc_id"], f_data
-            )
+            c = export_table_data(conn, "predictions", pred_cols, ["provider", "doc_id"], f_data)
             counts["predictions"] = c
 
             # 6. page_evaluations (EXCLUDING word_alignments_json)
             pe_cols = [
-                "run_id", "provider", "doc_id", "composite_score", "token_f1",
-                "textCER_raw", "textCER_norm", "e2eNED_raw", "e2eNED_norm",
-                "TEDS", "TEDS_S", "levenshtein_raw_num", "levenshtein_norm_num",
-                "gt_len_raw_den", "gt_len_norm_den", "diff_counts_json",
-                "table_evaluations_json", "matched_units_json", "diff_tokens_json",
-                "cost_realtime_inr", "cost_batch_inr", "evaluated_at",
+                "run_id",
+                "provider",
+                "doc_id",
+                "composite_score",
+                "token_f1",
+                "textCER_raw",
+                "textCER_norm",
+                "e2eNED_raw",
+                "e2eNED_norm",
+                "TEDS",
+                "TEDS_S",
+                "levenshtein_raw_num",
+                "levenshtein_norm_num",
+                "gt_len_raw_den",
+                "gt_len_norm_den",
+                "diff_counts_json",
+                "table_evaluations_json",
+                "matched_units_json",
+                "diff_tokens_json",
+                "cost_realtime_inr",
+                "cost_batch_inr",
+                "evaluated_at",
             ]
             c = export_table_data(
                 conn, "page_evaluations", pe_cols, ["run_id", "provider", "doc_id"], f_data
@@ -395,9 +461,7 @@ def _convert_single_png(
     cmd.extend([str(png), "-o", str(webp_out)])
 
     try:
-        subprocess.run(
-            cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True
-        )
+        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
         return (True, webp_out.stat().st_size)
     except Exception as e:
         # Fallback using sips if cwebp fails
@@ -431,7 +495,9 @@ def convert_images_to_webp(
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
-            executor.submit(_convert_single_png, png, out_images_dir, quality, max_width, force): png
+            executor.submit(
+                _convert_single_png, png, out_images_dir, quality, max_width, force
+            ): png
             for png in png_files
         }
         for i, fut in enumerate(concurrent.futures.as_completed(futures), 1):
@@ -445,7 +511,9 @@ def convert_images_to_webp(
                 )
 
     mb = total_bytes / (1024 * 1024)
-    print(f"✅ Finished WebP conversion: {total} images ({newly_converted} encoded), {mb:.2f} MB total.")
+    print(
+        f"✅ Finished WebP conversion: {total} images ({newly_converted} encoded), {mb:.2f} MB total."
+    )
     return (total, mb)
 
 
@@ -501,13 +569,30 @@ def bundle_static_assets(repo_root: Path, out_static_dir: Path) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Export pruned database & WebP images for Cloudflare")
-    parser.add_argument("--db-path", type=Path, default=DEFAULT_DB_PATH, help="Path to local benchmark.db")
-    parser.add_argument("--images-dir", type=Path, default=Path("data/images"), help="Path to raw PNG images")
-    parser.add_argument("--out-dir", type=Path, default=Path("workspace/cf_export"), help="Output export directory")
-    parser.add_argument("--quality", type=int, default=68, help="WebP compression quality (default 68)")
-    parser.add_argument("--max-width", type=int, default=1280, help="Max image width for WebP resize (default 1280px)")
-    parser.add_argument("--force-images", action="store_true", help="Force re-converting existing WebP images")
+    parser = argparse.ArgumentParser(
+        description="Export pruned database & WebP images for Cloudflare"
+    )
+    parser.add_argument(
+        "--db-path", type=Path, default=DEFAULT_DB_PATH, help="Path to local benchmark.db"
+    )
+    parser.add_argument(
+        "--images-dir", type=Path, default=Path("data/images"), help="Path to raw PNG images"
+    )
+    parser.add_argument(
+        "--out-dir", type=Path, default=Path("workspace/cf_export"), help="Output export directory"
+    )
+    parser.add_argument(
+        "--quality", type=int, default=68, help="WebP compression quality (default 68)"
+    )
+    parser.add_argument(
+        "--max-width",
+        type=int,
+        default=1280,
+        help="Max image width for WebP resize (default 1280px)",
+    )
+    parser.add_argument(
+        "--force-images", action="store_true", help="Force re-converting existing WebP images"
+    )
     parser.add_argument("--skip-images", action="store_true", help="Skip image conversion step")
     args = parser.parse_args()
 

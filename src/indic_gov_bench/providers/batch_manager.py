@@ -87,9 +87,7 @@ def normalize_chunks(active_data: dict[str, Any]) -> list[dict[str, Any]]:
                 "chunk_id": "part_01_of_01",
                 "batch_id": batch_id,
                 "doc_ids": active_data.get("doc_ids", []),
-                "total_count": active_data.get(
-                    "total_count", len(active_data.get("doc_ids", []))
-                ),
+                "total_count": active_data.get("total_count", len(active_data.get("doc_ids", []))),
                 "status": active_data.get("status", "in_progress"),
                 "unpacked": False,
             }
@@ -188,9 +186,7 @@ def run_batch_submit(
                         chunk["failed_count"] = status.failed_count
                         changed = True
                 except Exception as ex:
-                    print(
-                        f"⚠️ Error checking status for chunk '{chunk['chunk_id']}': {ex}"
-                    )
+                    print(f"⚠️ Error checking status for chunk '{chunk['chunk_id']}': {ex}")
 
             if changed:
                 active["chunks"] = chunks
@@ -198,8 +194,7 @@ def run_batch_submit(
 
             all_unpacked = all(c.get("unpacked") for c in chunks)
             all_succeeded = all(
-                c.get("status") in ("completed", "succeeded", "job_state_succeeded")
-                for c in chunks
+                c.get("status") in ("completed", "succeeded", "job_state_succeeded") for c in chunks
             )
 
             if all_unpacked:
@@ -283,8 +278,7 @@ def run_batch_submit(
                 if all(c.get("unpacked") for c in chunks):
                     remove_active_batch(provider)
                     all_succ = all(
-                        c.get("status")
-                        in ("completed", "succeeded", "job_state_succeeded")
+                        c.get("status") in ("completed", "succeeded", "job_state_succeeded")
                         for c in chunks
                     )
                     if all_succ:
@@ -326,9 +320,7 @@ def run_batch_submit(
         except ValueError:
             pass
 
-    env_items = os.environ.get("BATCH_MAX_CHUNK_ITEMS") or os.environ.get(
-        "BATCH_MAX_CHUNK_SIZE"
-    )
+    env_items = os.environ.get("BATCH_MAX_CHUNK_ITEMS") or os.environ.get("BATCH_MAX_CHUNK_SIZE")
     if env_items:
         try:
             max_items = int(env_items)
@@ -351,45 +343,83 @@ def run_batch_submit(
 
     # Partition items dynamically based on byte budget and item limit
     planned_chunks: list[dict[str, Any]] = []
-    current_items: list[dict[str, Any]] = []
-    current_bytes = 0
+    reused_chunks = False
 
-    for doc_id in missing_docs:
-        pdf_path = PDFS_DIR / f"{doc_id}.pdf"
-        try:
-            item = adapter.build_request_item(doc_id=doc_id, pdf_path=pdf_path)
-            item_bytes = len(json.dumps(item, ensure_ascii=False).encode("utf-8")) + 1
-        except Exception as e:
-            print(f"  ⚠️ Error preparing batch item for {doc_id}: {e}")
-            continue
+    # Check if pre-existing chunk jsonl files in batch_dir cover missing_docs exactly
+    existing_jsonls = sorted(batch_dir.glob("openai_batch_input_*.jsonl")) or sorted(
+        batch_dir.glob("*batch_input_*.jsonl")
+    )
+    if existing_jsonls and not target_doc:
+        candidate_chunks = []
+        covered_doc_ids = set()
+        missing_set = set(missing_docs)
+        for jf in existing_jsonls:
+            try:
+                c_ids = []
+                with open(jf, encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line:
+                            data = json.loads(line)
+                            cid = data.get("custom_id")
+                            if cid:
+                                c_ids.append(cid)
+                if c_ids and all(cid in missing_set for cid in c_ids):
+                    candidate_chunks.append(
+                        {
+                            "jsonl_path": jf,
+                            "doc_ids": c_ids,
+                            "bytes": jf.stat().st_size,
+                        }
+                    )
+                    covered_doc_ids.update(c_ids)
+            except Exception:
+                pass
 
-        would_exceed_bytes = max_bytes is not None and (
-            current_bytes + item_bytes > max_bytes
-        )
-        would_exceed_items = max_items is not None and (
-            len(current_items) >= max_items
-        )
+        if candidate_chunks and covered_doc_ids == missing_set:
+            print(
+                f"⚡ Found {len(candidate_chunks)} pre-built chunk JSONL file(s) in {batch_dir.name} "
+                f"covering all {len(missing_docs)} missing documents. Reusing them directly (saving ~1.5h render time)!"
+            )
+            planned_chunks = candidate_chunks
+            reused_chunks = True
 
-        if current_items and (would_exceed_bytes or would_exceed_items):
+    if not reused_chunks:
+        current_items: list[dict[str, Any]] = []
+        current_bytes = 0
+
+        for doc_id in missing_docs:
+            pdf_path = PDFS_DIR / f"{doc_id}.pdf"
+            try:
+                item = adapter.build_request_item(doc_id=doc_id, pdf_path=pdf_path)
+                item_bytes = len(json.dumps(item, ensure_ascii=False).encode("utf-8")) + 1
+            except Exception as e:
+                print(f"  ⚠️ Error preparing batch item for {doc_id}: {e}")
+                continue
+
+            would_exceed_bytes = max_bytes is not None and (current_bytes + item_bytes > max_bytes)
+            would_exceed_items = max_items is not None and (len(current_items) >= max_items)
+
+            if current_items and (would_exceed_bytes or would_exceed_items):
+                planned_chunks.append(
+                    {
+                        "items": current_items,
+                        "bytes": current_bytes,
+                    }
+                )
+                current_items = [item]
+                current_bytes = item_bytes
+            else:
+                current_items.append(item)
+                current_bytes += item_bytes
+
+        if current_items:
             planned_chunks.append(
                 {
                     "items": current_items,
                     "bytes": current_bytes,
                 }
             )
-            current_items = [item]
-            current_bytes = item_bytes
-        else:
-            current_items.append(item)
-            current_bytes += item_bytes
-
-    if current_items:
-        planned_chunks.append(
-            {
-                "items": current_items,
-                "bytes": current_bytes,
-            }
-        )
 
     num_chunks = len(planned_chunks)
     if num_chunks == 0:
@@ -399,40 +429,61 @@ def run_batch_submit(
     print(f"📦 Successfully partitioned into {num_chunks} chunk(s):")
     for idx, p_chunk in enumerate(planned_chunks):
         c_mb = p_chunk["bytes"] / (1024 * 1024)
-        c_count = len(p_chunk["items"])
+        c_count = len(p_chunk["doc_ids"]) if reused_chunks else len(p_chunk["items"])
         print(f"  • Chunk {idx + 1}/{num_chunks}: {c_count} document(s) ({c_mb:.1f} MB)")
 
     chunk_records = []
     for idx, p_chunk in enumerate(planned_chunks):
-        chunk_items = p_chunk["items"]
-        chunk_bytes = p_chunk["bytes"]
-        chunk_mb = chunk_bytes / (1024 * 1024)
-        chunk_label = f"part_{idx + 1:02d}_of_{num_chunks:02d}"
+        if reused_chunks:
+            chunk_doc_ids = p_chunk["doc_ids"]
+            chunk_bytes = p_chunk["bytes"]
+            chunk_mb = chunk_bytes / (1024 * 1024)
+            stem = p_chunk["jsonl_path"].stem
+            chunk_label = stem.replace("openai_batch_input_", "").replace("batch_input_", "")
+            if not chunk_label.startswith("part_"):
+                chunk_label = f"part_{idx + 1:02d}_of_{num_chunks:02d}"
+        else:
+            chunk_items = p_chunk["items"]
+            chunk_doc_ids = [it["custom_id"] for it in chunk_items]
+            chunk_bytes = p_chunk["bytes"]
+            chunk_mb = chunk_bytes / (1024 * 1024)
+            chunk_label = f"part_{idx + 1:02d}_of_{num_chunks:02d}"
 
         print(
-            f"  • Submitting chunk {idx + 1}/{num_chunks} ({len(chunk_items)} requests, {chunk_mb:.1f} MB: {chunk_label}) to {provider} cloud..."
+            f"  • Submitting chunk {idx + 1}/{num_chunks} ({len(chunk_doc_ids)} requests, {chunk_mb:.1f} MB: {chunk_label}) to {provider} cloud..."
         )
         try:
-            batch_id = adapter.submit_batch(
-                items=chunk_items,
-                output_batch_dir=batch_dir,
-                metadata={
-                    "chunk_name": chunk_label,
-                    "chunk_index": str(idx + 1),
-                    "total_chunks": str(num_chunks),
-                },
-            )
+            if reused_chunks and hasattr(adapter, "submit_batch_file"):
+                batch_id = adapter.submit_batch_file(
+                    jsonl_path=p_chunk["jsonl_path"],
+                    metadata={
+                        "chunk_name": chunk_label,
+                        "chunk_index": str(idx + 1),
+                        "total_chunks": str(num_chunks),
+                    },
+                )
+            else:
+                batch_id = adapter.submit_batch(
+                    items=chunk_items,
+                    output_batch_dir=batch_dir,
+                    metadata={
+                        "chunk_name": chunk_label,
+                        "chunk_index": str(idx + 1),
+                        "total_chunks": str(num_chunks),
+                    },
+                )
             chunk_records.append(
                 {
                     "chunk_id": chunk_label,
                     "batch_id": batch_id,
-                    "doc_ids": [it["custom_id"] for it in chunk_items],
-                    "total_count": len(chunk_items),
+                    "doc_ids": chunk_doc_ids,
+                    "total_count": len(chunk_doc_ids),
                     "size_bytes": chunk_bytes,
                     "status": "in_progress",
                     "unpacked": False,
                 }
             )
+            time.sleep(2.0)
         except Exception as e:
             print(f"    ❌ Failed to submit chunk {chunk_label}: {e}")
 
@@ -453,17 +504,13 @@ def run_batch_submit(
     print(
         "\n=========================================================================================="
     )
-    print(
-        f"🎉 {len(chunk_records)} Cloud Batch Job(s) Submitted Successfully for {provider}!"
-    )
+    print(f"🎉 {len(chunk_records)} Cloud Batch Job(s) Submitted Successfully for {provider}!")
     print(f"  • Model:       {adapter.model_name} (50% Off Queue)")
     print(
         f"  • Total Docs:  {record['total_count']} PDF page(s) across {len(chunk_records)} chunk(s)"
     )
     for cr in chunk_records:
-        print(
-            f"    - {cr['chunk_id']}: Batch ID={cr['batch_id']} ({cr['total_count']} docs)"
-        )
+        print(f"    - {cr['chunk_id']}: Batch ID={cr['batch_id']} ({cr['total_count']} docs)")
     print(
         "=========================================================================================="
     )
@@ -533,9 +580,7 @@ def run_batch_submit(
                     for c in chunk_records
                 )
                 if all_succ:
-                    print(
-                        f"✅ Finished! All chunks unpacked into {RAW_RESPONSES_DIR / provider}/."
-                    )
+                    print(f"✅ Finished! All chunks unpacked into {RAW_RESPONSES_DIR / provider}/.")
                     return True
                 else:
                     print("❌ Finished with some chunk failures.")
@@ -547,9 +592,7 @@ def run_batch_submit(
 def run_batch_status(provider: str | None = None) -> None:
     """Prints a formatted summary table of all active cloud batches and their chunks."""
     providers = (
-        [provider]
-        if provider
-        else sorted([p.name for p in BATCH_BASE_DIR.glob("*") if p.is_dir()])
+        [provider] if provider else sorted([p.name for p in BATCH_BASE_DIR.glob("*") if p.is_dir()])
     )
     all_chunks_info = []
 
@@ -580,20 +623,12 @@ def run_batch_status(provider: str | None = None) -> None:
                     except Exception:
                         pass
 
-                done = chunk.get(
-                    "completed_count", 0 if is_failed else chunk.get("total_count", 0)
-                )
-                fail = chunk.get(
-                    "failed_count", chunk.get("total_count", 0) if is_failed else 0
-                )
+                done = chunk.get("completed_count", 0 if is_failed else chunk.get("total_count", 0))
+                fail = chunk.get("failed_count", chunk.get("total_count", 0) if is_failed else 0)
                 diag = (
                     error_msg
                     if (is_failed and error_msg)
-                    else (
-                        f"{done}/{chunk['total_count']} (100%)"
-                        if not is_failed
-                        else "failed"
-                    )
+                    else (f"{done}/{chunk['total_count']} (100%)" if not is_failed else "failed")
                 )
 
                 all_chunks_info.append(
@@ -716,9 +751,7 @@ def run_batch_unpack(
                 batch_id=batch_id,
                 output_dir=out_dir,
             )
-            print(
-                f"✅ Successfully unpacked {unpacked} raw response files into {out_dir}/."
-            )
+            print(f"✅ Successfully unpacked {unpacked} raw response files into {out_dir}/.")
 
             # Update active_batch.json if tracked
             active = load_active_batch(provider)
@@ -796,9 +829,7 @@ def run_batch_unpack(
                 changed = True
                 total_unpacked_files += unpacked
                 chunks_unpacked += 1
-                print(
-                    f"✅ Unpacked {unpacked} files from chunk '{chunk['chunk_id']}'."
-                )
+                print(f"✅ Unpacked {unpacked} files from chunk '{chunk['chunk_id']}'.")
             elif status.is_terminal and not status.is_success:
                 print(
                     f"⚠️ Chunk '{chunk['chunk_id']}' ended with state: {status.status}. "
@@ -862,9 +893,7 @@ def run_batch_cancel(provider: str) -> None:
                     print(f"⚠️ Error cancelling batch {chunk['batch_id']}: {ex}")
 
     remove_active_batch(provider)
-    print(
-        f"🛑 Cancelled {cancelled} active batch job(s) for '{provider}' and cleared local lock."
-    )
+    print(f"🛑 Cancelled {cancelled} active batch job(s) for '{provider}' and cleared local lock.")
 
 
 def main():
@@ -875,9 +904,7 @@ def main():
         default=None,
         help="Provider slug (e.g. openai_gpt_5_6_sol, gemini_3_8_flash)",
     )
-    parser.add_argument(
-        "--doc", type=str, default=None, help="Target document ID (optional)"
-    )
+    parser.add_argument("--doc", type=str, default=None, help="Target document ID (optional)")
     parser.add_argument(
         "--batch-id",
         type=str,
@@ -890,12 +917,8 @@ def main():
         default="auto",
         choices=["auto", "submit", "status", "cancel", "unpack"],
     )
-    parser.add_argument(
-        "--wait", action="store_true", help="Block and wait for completion"
-    )
-    parser.add_argument(
-        "--poll-interval", type=int, default=15, help="Poll interval in seconds"
-    )
+    parser.add_argument("--wait", action="store_true", help="Block and wait for completion")
+    parser.add_argument("--poll-interval", type=int, default=15, help="Poll interval in seconds")
     parser.add_argument("--verbose", type=int, default=0, help="Verbosity level")
 
     args = parser.parse_args()
