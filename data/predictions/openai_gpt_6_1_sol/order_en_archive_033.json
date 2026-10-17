@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        534.9,
+        25.26,
+        561.08,
+        25.26,
+        561.08,
+        43.78,
+        534.9,
+        43.78
+      ],
+      "text": "100"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        275.49,
+        71.57,
+        327.85,
+        71.57,
+        327.85,
+        82.52,
+        275.49,
+        82.52
+      ],
+      "text": ": 3 :"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        97.58,
+        91.78,
+        546.21,
+        91.78,
+        546.21,
+        590.24,
+        97.58,
+        590.24
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>20.</td><td>Shri Pattabhi Rama Rao</td><td>- Minister of State in the Ministry of Finance.</td></tr><tr><td>21.</td><td>Shri R.C. Rath</td><td>- Minister of State in the Ministry of Chemicals &amp; Fertilizers.</td></tr><tr><td>22.</td><td>Shri N.K.P. Salve</td><td>- Minister of State (Independent charge) of the Ministry of Information and Broadcasting.</td></tr><tr><td>23.</td><td>Shri C.K. Jaffer Sharief</td><td>- Minister of State in the Ministry of Railways.</td></tr><tr><td>24.</td><td>Shri Chandra Shekhar Singh</td><td>- Minister of State in the Ministry of Energy.</td></tr><tr><td>25.</td><td>Shri Dalbir Singh</td><td>- Minister of State in the Department of Coal in the Ministry of Energy.</td></tr><tr><td>26.</td><td>Shri Virbhadra Singh</td><td>- Minister of State in the Ministry of Industry.</td></tr><tr><td>27.</td><td>Smt. Ram Dulari Sinha</td><td>- Minister of State in the Ministries of Industry and Steel &amp; Mines.</td></tr><tr><td>28.</td><td>Shri P. Venkatasubbaiah</td><td>- Minister of State in the Ministry of Home Affairs.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        279.65,
+        416.79,
+        300.48,
+        416.79,
+        300.48,
+        426.05,
+        279.65,
+        426.05
+      ],
+      "text": "---"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        254.06,
+        437.0,
+        359.38,
+        437.0,
+        359.38,
+        450.47,
+        254.06,
+        450.47
+      ],
+      "text": "DEPUTY MINISTERS"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        96.39,
+        455.52,
+        524.2,
+        455.52,
+        524.2,
+        682.02,
+        96.39,
+        682.02
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Mohammed Usman Arif</td><td>- Deputy Minister in the Ministry of Civil Supplies.</td></tr><tr><td>2.</td><td>Shri Ghulam Nabi Azad</td><td>- Deputy Minister in the Ministry of Law, Justice and Company Affairs.</td></tr><tr><td>3.</td><td>Shri Ashok Gehlot</td><td>- Deputy Minister in the Ministry of Tourism.</td></tr><tr><td>4.</td><td>Miss. Kumudben M. Joshi</td><td>- Deputy Minister in the Ministry of Health and Family Welfare.</td></tr><tr><td>5.</td><td>Shri Mallikarjun</td><td>- Deputy Minister in the Ministry of Information and Broadcasting in addition to his office as Deputy Minister in the Department of Parliamentary Affairs.</td></tr><tr><td>6.</td><td>Shri Vijay N. Patil</td><td>- Deputy Minister in the Ministry of Communications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        469.46,
+        687.07,
+        523.6,
+        687.07,
+        523.6,
+        693.81,
+        469.46,
+        693.81
+      ],
+      "text": ".. 4 .."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 995,
+      "total": 4289
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.033076,
+      "batch": 0.016538
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.3076,
+      "batch": 1.6538,
+      "savings": 1.6538,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

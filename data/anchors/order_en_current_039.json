@@ -9,32 +9,6 @@
     }
   },
   "blocks": {
-    "#/texts/0": {
-      "self_ref": "#/texts/0",
-      "label": "paragraph",
-      "full_gt_text": "1/356047/2026",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "1/356047/2026",
-          "gcv_text": "1/356047/2026",
-          "page_no": 1,
-          "bbox": {
-            "l": 521.23,
-            "t": 758.34,
-            "r": 569.2,
-            "b": 752.72
-          },
-          "crop_bbox": {
-            "l": 517.23,
-            "t": 762.34,
-            "r": 573.2,
-            "b": 748.72
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/1": {
       "self_ref": "#/texts/1",
       "label": "paragraph",
@@ -61,33 +35,78 @@
         }
       ]
     },
-    "#/texts/2": {
-      "self_ref": "#/texts/2",
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
       "label": "paragraph",
-      "full_gt_text": "अंदमान तथा निकोबार प्रशासन\nANDAMAN AND NICOBAR ADMINISTRATION\nसचिवालय / SECRETARIAT\n****",
+      "full_gt_text": "1/356047/2026",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "अंदमान",
-          "gcv_text": "",
+          "gt_text": "1/356047/2026",
+          "gcv_text": "1/356047/2026",
           "page_no": 1,
           "bbox": {
-            "l": 159.46,
-            "t": 697.18,
-            "r": 432.56,
-            "b": 638.24
+            "l": 521.23,
+            "t": 758.34,
+            "r": 569.2,
+            "b": 752.72
           },
           "crop_bbox": {
-            "l": 145.81,
-            "t": 701.18,
-            "r": 446.22,
-            "b": 634.24
+            "l": 517.23,
+            "t": 762.34,
+            "r": 573.2,
+            "b": 748.72
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "अंडमान तथा निकोबार प्रशासन\nANDAMAN AND NICOBAR ADMINISTRATION\nसचिवालय / SECRETARIAT\n****",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "अंडमान",
+          "gcv_text": "अंडमान",
+          "page_no": 1,
+          "bbox": {
+            "l": 224.04,
+            "t": 694.82,
+            "r": 258.34,
+            "b": 683.34
+          },
+          "crop_bbox": {
+            "l": 220.04,
+            "t": 698.82,
+            "r": 262.34,
+            "b": 679.34
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 1,
           "gt_text": "तथा",
+          "gcv_text": "तथा",
+          "page_no": 1,
+          "bbox": {
+            "l": 263.2,
+            "t": 695.08,
+            "r": 282.02,
+            "b": 684.11
+          },
+          "crop_bbox": {
+            "l": 259.2,
+            "t": 699.08,
+            "r": 286.02,
+            "b": 680.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "निकोबार",
           "gcv_text": "",
           "page_no": 1,
           "bbox": {
@@ -105,40 +124,21 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
-          "gt_text": "निकोबार",
-          "gcv_text": "निकोबार",
-          "page_no": 1,
-          "bbox": {
-            "l": 286.27,
-            "t": 696.1,
-            "r": 326.34,
-            "b": 684.62
-          },
-          "crop_bbox": {
-            "l": 282.27,
-            "t": 700.1,
-            "r": 330.34,
-            "b": 680.62
-          },
-          "rotation_deg": 0
-        },
-        {
           "word_idx": 3,
           "gt_text": "प्रशासन",
-          "gcv_text": "प्रशासन",
+          "gcv_text": "",
           "page_no": 1,
           "bbox": {
-            "l": 331.2,
-            "t": 696.86,
-            "r": 367.02,
-            "b": 685.38
+            "l": 159.46,
+            "t": 697.18,
+            "r": 432.56,
+            "b": 638.24
           },
           "crop_bbox": {
-            "l": 327.2,
-            "t": 700.86,
-            "r": 371.02,
-            "b": 681.38
+            "l": 145.81,
+            "t": 701.18,
+            "r": 446.22,
+            "b": 634.24
           },
           "rotation_deg": 0
         },
@@ -3074,6 +3074,70 @@
         }
       ]
     },
+    "#/texts/10": {
+      "self_ref": "#/texts/10",
+      "label": "paragraph",
+      "full_gt_text": "Encl: As above",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Encl:",
+          "gcv_text": "Enci",
+          "page_no": 1,
+          "bbox": {
+            "l": 89.55,
+            "t": 331.85,
+            "r": 112.62,
+            "b": 323.94
+          },
+          "crop_bbox": {
+            "l": 85.55,
+            "t": 335.85,
+            "r": 116.62,
+            "b": 319.94
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "As",
+          "gcv_text": "As",
+          "page_no": 1,
+          "bbox": {
+            "l": 119.0,
+            "t": 332.11,
+            "r": 133.27,
+            "b": 324.45
+          },
+          "crop_bbox": {
+            "l": 115.0,
+            "t": 336.11,
+            "r": 137.27,
+            "b": 320.45
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "above",
+          "gcv_text": "above",
+          "page_no": 1,
+          "bbox": {
+            "l": 136.91,
+            "t": 332.36,
+            "r": 170.0,
+            "b": 324.45
+          },
+          "crop_bbox": {
+            "l": 132.91,
+            "t": 336.36,
+            "r": 174.0,
+            "b": 320.45
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/9": {
       "self_ref": "#/texts/9",
       "label": "paragraph",
@@ -3399,70 +3463,6 @@
             "t": 290.7,
             "r": 453.29,
             "b": 272.25
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/10": {
-      "self_ref": "#/texts/10",
-      "label": "paragraph",
-      "full_gt_text": "Encl: As above",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Encl:",
-          "gcv_text": "Enci",
-          "page_no": 1,
-          "bbox": {
-            "l": 89.55,
-            "t": 331.85,
-            "r": 112.62,
-            "b": 323.94
-          },
-          "crop_bbox": {
-            "l": 85.55,
-            "t": 335.85,
-            "r": 116.62,
-            "b": 319.94
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "As",
-          "gcv_text": "As",
-          "page_no": 1,
-          "bbox": {
-            "l": 119.0,
-            "t": 332.11,
-            "r": 133.27,
-            "b": 324.45
-          },
-          "crop_bbox": {
-            "l": 115.0,
-            "t": 336.11,
-            "r": 137.27,
-            "b": 320.45
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "above",
-          "gcv_text": "above",
-          "page_no": 1,
-          "bbox": {
-            "l": 136.91,
-            "t": 332.36,
-            "r": 170.0,
-            "b": 324.45
-          },
-          "crop_bbox": {
-            "l": 132.91,
-            "t": 336.36,
-            "r": 174.0,
-            "b": 320.45
           },
           "rotation_deg": 0
         }

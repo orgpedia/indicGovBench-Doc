@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_002",
-  "total_words": 298,
+  "total_words": 317,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,10 +9,378 @@
     }
   },
   "blocks": {
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "This image contains no readable text. It appears to be a QR code or a highly pixelated abstract pattern.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "This",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "image",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "contains",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "no",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "readable",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "text.",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "It",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "appears",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "to",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "be",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "a",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "QR",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "code",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "or",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "a",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "highly",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "pixelated",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "abstract",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "pattern.",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 523.34,
+            "t": 809.19,
+            "r": 555.47,
+            "b": 777.07
+          },
+          "crop_bbox": {
+            "l": 519.34,
+            "t": 813.19,
+            "r": 559.47,
+            "b": 773.07
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
-      "full_gt_text": "No. 45020 / 11 / 97 - IPS - II\nMinistry of Home Affairs / Greh Mantralaya\nGovernment of India / Bharat Sarkar",
+      "full_gt_text": "No. 45020 / 11 / 97 - IPS - II\nMinistry of Home Affairs / Grih Mantralaya\nGovernment of India / Bharat Sarkar",
       "words": [
         {
           "word_idx": 0,
@@ -301,7 +669,7 @@
         },
         {
           "word_idx": 15,
-          "gt_text": "Greh",
+          "gt_text": "Grih",
           "gcv_text": "Grih",
           "page_no": 1,
           "bbox": {
@@ -717,7 +1085,7 @@
     "#/texts/3": {
       "self_ref": "#/texts/3",
       "label": "paragraph",
-      "full_gt_text": "Subject :- Indian Police Service-Promotion to Senior Scale,\nJunior Administrative Grade, Selection Grade,\nSuper Time Scale and above Super Time Scales -\nGuidelines regarding.",
+      "full_gt_text": "Subject :- Indian Police Service-Promotion to Senior Scale,\nJunior Administrative Grade, Selection Grade,\nSuper Time Scale and above Super Time Scales - Guidelines regarding.",
       "words": [
         {
           "word_idx": 0,
@@ -1206,7 +1574,7 @@
     "#/texts/5": {
       "self_ref": "#/texts/5",
       "label": "paragraph",
-      "full_gt_text": "I am writing this to invite your attention is guidelines on the above subject circulated vide this Ministry's letter No. 16011/39/89- IPS -II, dated 28.04.1988, 16011/1/89- IPS -II, dated 04.09.1989 and 16011/61/90- IPS -II, dated 28.12.1990. Taking into consideration of certain difficulties brought to the notice of this Ministry from different quarters from time to time and the encadrement of post of Additional Director General of Police in the police hierarchy, Government have decided to modify the existing guidelines and have consolidate them in one place for the sake of reference. Further, in order to ensure uniformity of procedure in the matter of promotion, formation of DPC and their functioning etc., general principles of promotion are also being suggested for guidance.",
+      "full_gt_text": "I am writing this to invite your attention is guidelines on the above subject circulated vide this Ministry's letter No. 16011/39/89- IPS -II, dated 28.04.1988, 16011/1/89- IPS -II, dated 04.09.1989 and 16011/61/90- IPS -II, dated 28.12.1990. Taking into consideration of certain difficulties brought to the notice of this Ministry from different quarters from time to time and the encaderment of post of Additional Director General of Police in the police hierarchy, Government have decided to modify the existing guidelines and have consolidate them in one place for the sake of reference. Further, in order to ensure uniformity of procedure in the matter of promotion, formation of DPC and their functioning etc., general principles of promotion are also being suggested for guidance.",
       "words": [
         {
           "word_idx": 0,
@@ -2312,7 +2680,7 @@
         },
         {
           "word_idx": 58,
-          "gt_text": "encadrement",
+          "gt_text": "encaderment",
           "gcv_text": "encaderment",
           "page_no": 1,
           "bbox": {

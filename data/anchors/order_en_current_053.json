@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_053",
-  "total_words": 86,
+  "total_words": 87,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Aus",
+          "page_no": 1,
+          "bbox": {
+            "l": 244.58,
+            "t": 122.09,
+            "r": 285.34,
+            "b": 82.6
+          },
+          "crop_bbox": {
+            "l": 240.58,
+            "t": 126.09,
+            "r": 289.34,
+            "b": 78.6
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",

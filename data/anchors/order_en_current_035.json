@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_035",
-  "total_words": 162,
+  "total_words": 165,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,10 +9,88 @@
     }
   },
   "blocks": {
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "lle",
+          "page_no": 1,
+          "bbox": {
+            "l": 462.23,
+            "t": 572.16,
+            "r": 504.7,
+            "b": 530.06
+          },
+          "crop_bbox": {
+            "l": 458.23,
+            "t": 576.16,
+            "r": 508.7,
+            "b": 526.06
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "21/8/26",
+          "page_no": 1,
+          "bbox": {
+            "l": 475.77,
+            "t": 258.61,
+            "r": 529.67,
+            "b": 235.76
+          },
+          "crop_bbox": {
+            "l": 471.77,
+            "t": 262.61,
+            "r": 533.67,
+            "b": 231.76
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/10": {
+      "self_ref": "#/texts/10",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Personnel",
+          "page_no": 1,
+          "bbox": {
+            "l": 463.63,
+            "t": 232.55,
+            "r": 513.57,
+            "b": 222.73
+          },
+          "crop_bbox": {
+            "l": 459.63,
+            "t": 236.55,
+            "r": 517.57,
+            "b": 218.73
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
-      "full_gt_text": "अंडमान तथा निकोबार प्रशासन\nANDAMAN AND NICOBAR ADMINISTRATION\nसचिवालय /SECRETARIAT\n*****",
+      "full_gt_text": "अंडमान तथा निकोबार प्रशासन\nANDAMAN AND NICOBAR ADMINISTRATION\nसचिवालय /SECRETARIAT *****\n*****",
       "words": [
         {
           "word_idx": 0,
@@ -220,6 +298,25 @@
             "t": 774.63,
             "r": 345.13,
             "b": 761.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "*****",
+          "gcv_text": "Sri",
+          "page_no": 1,
+          "bbox": {
+            "l": 300.77,
+            "t": 754.19,
+            "r": 314.3,
+            "b": 742.76
+          },
+          "crop_bbox": {
+            "l": 296.77,
+            "t": 758.19,
+            "r": 318.3,
+            "b": 738.76
           },
           "rotation_deg": 0
         }
@@ -1092,7 +1189,7 @@
     "#/texts/6": {
       "self_ref": "#/texts/6",
       "label": "paragraph",
-      "full_gt_text": "ORDER BOOK\nCopy to:-\n1. Sr. PS to Lt. Governor, Lok Niwas, Sri Vijaya Puram.\n2. PS to Chief Secretary, Secretariat, A&N Administration.\n3. All Commissioner-cum-Secretaries/ Secretaries/Special Secretary/Joint\nSecretaries.\n4. All Deputy Commissioners, A&N Islands.\n5. All HoDs, A&N Administration.\n6. Shri Gurav Nilesh Nishikant, DANICS : 2012, A&N Administration.\n7. Shri Mohit Mishra, DANICS : 2013, A&N Administration.\n8. All Deputy Secretaries/Assistant Secretaries, Secretariat, A&N\nAdministration.\n9. The Pay & Accounts Officer, Sri Vijaya Puram.\n10. The Assistant Secretary (Cash/GA), Secretariat, A&N Administration.\n11. The Assistant Director, Social Welfare/Fisheries/Health, A&N\nAdministration.\n12. The AM (IT), EDP Cell, Secretariat.\n13. The Confidential/Vigilance/H&E Section, Secretariat.",
+      "full_gt_text": "ORDER BOOK\nCopy to:-\n1. Sr. PS to Lt. Governor, Lok Niwas, Sri Vijaya Puram.\n2. PS to Chief Secretary, Secretariat, A&N Administration.\n3. All Commissioner-cum-Secretaries/ Secretaries/Special Secretary/Joint\nSecretaries.\n4. All Deputy Commissioners, A&N Islands.\n5. All HoDs, A&N Administration.\n6. Shri Gurav Nilesh Nishikant, DANICS : 2012, A&N Administration.\n7. Shri Mohit Mishra, DANICS :2013, A&N Administration.\n8. All Deputy Secretaries/Assistant Secretaries, Secretariat, A&N\nAdministration.\n9. The Pay & Accounts Officer, Sri Vijaya Puram.\n10. The Assistant Secretary (Cash/GA), Secretariat, A&N Administration.\n11. The Assistant Director, Social Welfare/Fisheries/Health, A&N\nAdministration.\n12. The AM (IT), EDP Cell, Secretariat.\n13. The Confidential/Vigilance/H&E Section, Secretariat.",
       "words": [
         {
           "word_idx": 0,
@@ -2141,7 +2238,7 @@
         },
         {
           "word_idx": 55,
-          "gt_text": ":",
+          "gt_text": ":2013,",
           "gcv_text": ":",
           "page_no": 1,
           "bbox": {
@@ -2160,7 +2257,7 @@
         },
         {
           "word_idx": 56,
-          "gt_text": "2013,",
+          "gt_text": "A&N",
           "gcv_text": "2013",
           "page_no": 1,
           "bbox": {
@@ -2179,7 +2276,7 @@
         },
         {
           "word_idx": 57,
-          "gt_text": "A&N",
+          "gt_text": "Administration.",
           "gcv_text": ",",
           "page_no": 1,
           "bbox": {
@@ -2198,25 +2295,6 @@
         },
         {
           "word_idx": 58,
-          "gt_text": "Administration.",
-          "gcv_text": "A",
-          "page_no": 1,
-          "bbox": {
-            "l": 313.37,
-            "t": 377.9,
-            "r": 319.9,
-            "b": 369.28
-          },
-          "crop_bbox": {
-            "l": 309.37,
-            "t": 381.9,
-            "r": 323.9,
-            "b": 365.28
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 59,
           "gt_text": "8.",
           "gcv_text": "8.",
           "page_no": 1,
@@ -2235,7 +2313,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 60,
+          "word_idx": 59,
           "gt_text": "All",
           "gcv_text": "All",
           "page_no": 1,
@@ -2254,7 +2332,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 61,
+          "word_idx": 60,
           "gt_text": "Deputy",
           "gcv_text": "Deputy",
           "page_no": 1,
@@ -2273,7 +2351,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 62,
+          "word_idx": 61,
           "gt_text": "Secretaries/Assistant",
           "gcv_text": "Secretaries",
           "page_no": 1,
@@ -2292,7 +2370,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 63,
+          "word_idx": 62,
           "gt_text": "Secretaries,",
           "gcv_text": "/",
           "page_no": 1,
@@ -2311,7 +2389,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 64,
+          "word_idx": 63,
           "gt_text": "Secretariat,",
           "gcv_text": "Assistant",
           "page_no": 1,
@@ -2330,7 +2408,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 65,
+          "word_idx": 64,
           "gt_text": "A&N",
           "gcv_text": "Secretaries",
           "page_no": 1,
@@ -2349,7 +2427,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 66,
+          "word_idx": 65,
           "gt_text": "Administration.",
           "gcv_text": ",",
           "page_no": 1,
@@ -2368,7 +2446,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 67,
+          "word_idx": 66,
           "gt_text": "9.",
           "gcv_text": "9.",
           "page_no": 1,
@@ -2387,7 +2465,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 68,
+          "word_idx": 67,
           "gt_text": "The",
           "gcv_text": "The",
           "page_no": 1,
@@ -2406,7 +2484,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 69,
+          "word_idx": 68,
           "gt_text": "Pay",
           "gcv_text": "Pay",
           "page_no": 1,
@@ -2425,7 +2503,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 70,
+          "word_idx": 69,
           "gt_text": "&",
           "gcv_text": "&",
           "page_no": 1,
@@ -2444,7 +2522,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 71,
+          "word_idx": 70,
           "gt_text": "Accounts",
           "gcv_text": "Accounts",
           "page_no": 1,
@@ -2463,7 +2541,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 72,
+          "word_idx": 71,
           "gt_text": "Officer,",
           "gcv_text": "Officer",
           "page_no": 1,
@@ -2482,7 +2560,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 73,
+          "word_idx": 72,
           "gt_text": "Sri",
           "gcv_text": "Sri",
           "page_no": 1,
@@ -2501,7 +2579,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 74,
+          "word_idx": 73,
           "gt_text": "Vijaya",
           "gcv_text": "Vijaya",
           "page_no": 1,
@@ -2520,7 +2598,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 75,
+          "word_idx": 74,
           "gt_text": "Puram.",
           "gcv_text": "Puram",
           "page_no": 1,
@@ -2539,7 +2617,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 76,
+          "word_idx": 75,
           "gt_text": "10.",
           "gcv_text": "10.",
           "page_no": 1,
@@ -2558,7 +2636,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 77,
+          "word_idx": 76,
           "gt_text": "The",
           "gcv_text": "The",
           "page_no": 1,
@@ -2577,7 +2655,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 78,
+          "word_idx": 77,
           "gt_text": "Assistant",
           "gcv_text": "Assistant",
           "page_no": 1,
@@ -2596,7 +2674,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 79,
+          "word_idx": 78,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,
@@ -2615,7 +2693,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 80,
+          "word_idx": 79,
           "gt_text": "(Cash/GA),",
           "gcv_text": "(",
           "page_no": 1,
@@ -2634,7 +2712,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 81,
+          "word_idx": 80,
           "gt_text": "Secretariat,",
           "gcv_text": "Cash",
           "page_no": 1,
@@ -2653,7 +2731,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 82,
+          "word_idx": 81,
           "gt_text": "A&N",
           "gcv_text": "/",
           "page_no": 1,
@@ -2672,7 +2750,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 83,
+          "word_idx": 82,
           "gt_text": "Administration.",
           "gcv_text": "GA",
           "page_no": 1,
@@ -2691,7 +2769,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 84,
+          "word_idx": 83,
           "gt_text": "11.",
           "gcv_text": "11.",
           "page_no": 1,
@@ -2710,7 +2788,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 85,
+          "word_idx": 84,
           "gt_text": "The",
           "gcv_text": "The",
           "page_no": 1,
@@ -2729,7 +2807,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 86,
+          "word_idx": 85,
           "gt_text": "Assistant",
           "gcv_text": "Assistant",
           "page_no": 1,
@@ -2748,7 +2826,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 87,
+          "word_idx": 86,
           "gt_text": "Director,",
           "gcv_text": "Director",
           "page_no": 1,
@@ -2767,7 +2845,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 88,
+          "word_idx": 87,
           "gt_text": "Social",
           "gcv_text": "Social",
           "page_no": 1,
@@ -2786,7 +2864,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 89,
+          "word_idx": 88,
           "gt_text": "Welfare/Fisheries/Health,",
           "gcv_text": "Welfare",
           "page_no": 1,
@@ -2805,7 +2883,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 90,
+          "word_idx": 89,
           "gt_text": "A&N",
           "gcv_text": "/",
           "page_no": 1,
@@ -2824,7 +2902,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 91,
+          "word_idx": 90,
           "gt_text": "Administration.",
           "gcv_text": "Fisheries",
           "page_no": 1,
@@ -2843,7 +2921,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 92,
+          "word_idx": 91,
           "gt_text": "12.",
           "gcv_text": "12.",
           "page_no": 1,
@@ -2862,7 +2940,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 93,
+          "word_idx": 92,
           "gt_text": "The",
           "gcv_text": "The",
           "page_no": 1,
@@ -2881,7 +2959,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 94,
+          "word_idx": 93,
           "gt_text": "AM",
           "gcv_text": "AM",
           "page_no": 1,
@@ -2900,7 +2978,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 95,
+          "word_idx": 94,
           "gt_text": "(IT),",
           "gcv_text": "(",
           "page_no": 1,
@@ -2919,7 +2997,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 96,
+          "word_idx": 95,
           "gt_text": "EDP",
           "gcv_text": "EDP",
           "page_no": 1,
@@ -2938,7 +3016,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 97,
+          "word_idx": 96,
           "gt_text": "Cell,",
           "gcv_text": "Cell",
           "page_no": 1,
@@ -2957,7 +3035,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 98,
+          "word_idx": 97,
           "gt_text": "Secretariat.",
           "gcv_text": ",",
           "page_no": 1,
@@ -2976,7 +3054,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 99,
+          "word_idx": 98,
           "gt_text": "13.",
           "gcv_text": "13.",
           "page_no": 1,
@@ -2995,7 +3073,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 100,
+          "word_idx": 99,
           "gt_text": "The",
           "gcv_text": "The",
           "page_no": 1,
@@ -3014,7 +3092,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 101,
+          "word_idx": 100,
           "gt_text": "Confidential/Vigilance/H&E",
           "gcv_text": "Confidential",
           "page_no": 1,
@@ -3033,7 +3111,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 102,
+          "word_idx": 101,
           "gt_text": "Section,",
           "gcv_text": "/",
           "page_no": 1,
@@ -3052,7 +3130,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 103,
+          "word_idx": 102,
           "gt_text": "Secretariat.",
           "gcv_text": "Vigilance",
           "page_no": 1,

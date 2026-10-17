@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_017",
-  "total_words": 276,
+  "total_words": 280,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,96 @@
     }
   },
   "blocks": {
+    "#/texts/24": {
+      "self_ref": "#/texts/24",
+      "label": "paragraph",
+      "full_gt_text": "[SCANNING NUMBER]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCANNING",
+          "gcv_text": "55/1/1/80",
+          "page_no": 1,
+          "bbox": {
+            "l": 293.06,
+            "t": 778.62,
+            "r": 352.3,
+            "b": 768.05
+          },
+          "crop_bbox": {
+            "l": 289.06,
+            "t": 782.62,
+            "r": 356.3,
+            "b": 764.05
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "NUMBER]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 353.74,
+            "t": 777.9,
+            "r": 358.53,
+            "b": 768.05
+          },
+          "crop_bbox": {
+            "l": 349.74,
+            "t": 781.9,
+            "r": 362.53,
+            "b": 764.05
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/25": {
+      "self_ref": "#/texts/25",
+      "label": "paragraph",
+      "full_gt_text": "[SCANNING NUMBER]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCANNING",
+          "gcv_text": "63",
+          "page_no": 1,
+          "bbox": {
+            "l": 499.79,
+            "t": 787.98,
+            "r": 519.46,
+            "b": 772.85
+          },
+          "crop_bbox": {
+            "l": 495.79,
+            "t": 791.98,
+            "r": 523.46,
+            "b": 768.85
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "NUMBER]",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 502.43,
+            "t": 752.93,
+            "r": 506.75,
+            "b": 743.08
+          },
+          "crop_bbox": {
+            "l": 498.43,
+            "t": 756.93,
+            "r": 510.75,
+            "b": 739.08
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -1799,11 +1889,11 @@
     "#/texts/11": {
       "self_ref": "#/texts/11",
       "label": "paragraph",
-      "full_gt_text": "(v) Shri T. Arjiah assumed the office of the Minister of State in the Ministry of Labour;",
+      "full_gt_text": "(v ) Shri T. Arjiah assumed the office of the Minister of State in the Ministry of Labour;",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "(v)",
+          "gt_text": "(v",
           "gcv_text": "of",
           "page_no": 1,
           "bbox": {
@@ -1822,6 +1912,25 @@
         },
         {
           "word_idx": 1,
+          "gt_text": ")",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 147.97,
+            "t": 525.32,
+            "r": 153.49,
+            "b": 514.52
+          },
+          "crop_bbox": {
+            "l": 143.97,
+            "t": 529.32,
+            "r": 157.49,
+            "b": 510.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
           "gt_text": "Shri",
           "gcv_text": "Shri",
           "page_no": 1,
@@ -1840,7 +1949,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 3,
           "gt_text": "T.",
           "gcv_text": "T.",
           "page_no": 1,
@@ -1859,7 +1968,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 4,
           "gt_text": "Arjiah",
           "gcv_text": "Arjiah",
           "page_no": 1,
@@ -1878,7 +1987,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 5,
           "gt_text": "assumed",
           "gcv_text": "assumed",
           "page_no": 1,
@@ -1897,7 +2006,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 6,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -1916,7 +2025,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 6,
+          "word_idx": 7,
           "gt_text": "office",
           "gcv_text": "office",
           "page_no": 1,
@@ -1935,7 +2044,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 7,
+          "word_idx": 8,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -1954,7 +2063,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 8,
+          "word_idx": 9,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -1973,7 +2082,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 9,
+          "word_idx": 10,
           "gt_text": "Minister",
           "gcv_text": "Minister",
           "page_no": 1,
@@ -1992,7 +2101,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 10,
+          "word_idx": 11,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2011,7 +2120,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 11,
+          "word_idx": 12,
           "gt_text": "State",
           "gcv_text": "State",
           "page_no": 1,
@@ -2030,7 +2139,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 12,
+          "word_idx": 13,
           "gt_text": "in",
           "gcv_text": "in",
           "page_no": 1,
@@ -2049,7 +2158,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 13,
+          "word_idx": 14,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2068,7 +2177,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 14,
+          "word_idx": 15,
           "gt_text": "Ministry",
           "gcv_text": "Kinistry",
           "page_no": 1,
@@ -2087,7 +2196,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 15,
+          "word_idx": 16,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2106,7 +2215,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 16,
+          "word_idx": 17,
           "gt_text": "Labour;",
           "gcv_text": "Labour",
           "page_no": 1,
@@ -2884,11 +2993,11 @@
     "#/texts/14": {
       "self_ref": "#/texts/14",
       "label": "paragraph",
-      "full_gt_text": "(viii) Shri Vikram Mahajan assumed the office of the Minister of State in the Ministry of Energy;",
+      "full_gt_text": "(viii)Shri Vikram Mahajan assumed the office of the Minister of State in the Ministry of Energy;",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "(viii)",
+          "gt_text": "(viii)Shri",
           "gcv_text": "&",
           "page_no": 1,
           "bbox": {
@@ -2907,25 +3016,6 @@
         },
         {
           "word_idx": 1,
-          "gt_text": "Shri",
-          "gcv_text": "Shri",
-          "page_no": 1,
-          "bbox": {
-            "l": 160.2,
-            "t": 411.28,
-            "r": 186.34,
-            "b": 399.99
-          },
-          "crop_bbox": {
-            "l": 156.2,
-            "t": 415.28,
-            "r": 190.34,
-            "b": 395.99
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
           "gt_text": "Vikram",
           "gcv_text": "Vikram",
           "page_no": 1,
@@ -2944,7 +3034,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 2,
           "gt_text": "Mahajan",
           "gcv_text": "Mahajan",
           "page_no": 1,
@@ -2963,7 +3053,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 3,
           "gt_text": "assumed",
           "gcv_text": "assumed",
           "page_no": 1,
@@ -2982,7 +3072,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 4,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3001,7 +3091,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 6,
+          "word_idx": 5,
           "gt_text": "office",
           "gcv_text": "office",
           "page_no": 1,
@@ -3020,7 +3110,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 7,
+          "word_idx": 6,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -3039,7 +3129,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 8,
+          "word_idx": 7,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3058,7 +3148,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 9,
+          "word_idx": 8,
           "gt_text": "Minister",
           "gcv_text": "Minister",
           "page_no": 1,
@@ -3077,7 +3167,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 10,
+          "word_idx": 9,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -3096,7 +3186,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 11,
+          "word_idx": 10,
           "gt_text": "State",
           "gcv_text": "State",
           "page_no": 1,
@@ -3115,7 +3205,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 12,
+          "word_idx": 11,
           "gt_text": "in",
           "gcv_text": "in",
           "page_no": 1,
@@ -3134,7 +3224,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 13,
+          "word_idx": 12,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3153,7 +3243,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 14,
+          "word_idx": 13,
           "gt_text": "Ministry",
           "gcv_text": "Ministry",
           "page_no": 1,
@@ -3172,7 +3262,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 15,
+          "word_idx": 14,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -3191,7 +3281,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 16,
+          "word_idx": 15,
           "gt_text": "Energy;",
           "gcv_text": "Energy",
           "page_no": 1,

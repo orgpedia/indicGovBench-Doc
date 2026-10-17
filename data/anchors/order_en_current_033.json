@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "06/09/25",
+          "page_no": 1,
+          "bbox": {
+            "l": 476.0,
+            "t": 318.14,
+            "r": 552.34,
+            "b": 285.67
+          },
+          "crop_bbox": {
+            "l": 472.0,
+            "t": 322.14,
+            "r": 556.34,
+            "b": 281.67
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -2749,32 +2775,6 @@
             "t": 370.6,
             "r": 146.51,
             "b": 350.25
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/4": {
-      "self_ref": "#/texts/4",
-      "label": "paragraph",
-      "full_gt_text": "06/09/25",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "06/09/25",
-          "gcv_text": "06/09/25",
-          "page_no": 1,
-          "bbox": {
-            "l": 476.0,
-            "t": 318.14,
-            "r": 552.34,
-            "b": 285.67
-          },
-          "crop_bbox": {
-            "l": 472.0,
-            "t": 322.14,
-            "r": 556.34,
-            "b": 281.67
           },
           "rotation_deg": 0
         }

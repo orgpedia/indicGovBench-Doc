@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Yours",
+          "page_no": 1,
+          "bbox": {
+            "l": 432.84,
+            "t": 401.14,
+            "r": 461.23,
+            "b": 390.96
+          },
+          "crop_bbox": {
+            "l": 428.84,
+            "t": 405.14,
+            "r": 465.23,
+            "b": 386.96
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -494,7 +520,7 @@
     "#/texts/1": {
       "self_ref": "#/texts/1",
       "label": "paragraph",
-      "full_gt_text": "New Delhi,24 .07.2026",
+      "full_gt_text": "New Delhi, 24.07.2026",
       "words": [
         {
           "word_idx": 0,
@@ -517,7 +543,7 @@
         },
         {
           "word_idx": 1,
-          "gt_text": "Delhi,24",
+          "gt_text": "Delhi,",
           "gcv_text": "Delhi",
           "page_no": 1,
           "bbox": {
@@ -536,19 +562,19 @@
         },
         {
           "word_idx": 2,
-          "gt_text": ".07.2026",
-          "gcv_text": ",",
+          "gt_text": "24.07.2026",
+          "gcv_text": "24.07.2026",
           "page_no": 1,
           "bbox": {
-            "l": 474.46,
-            "t": 695.93,
-            "r": 476.87,
+            "l": 477.35,
+            "t": 696.42,
+            "r": 542.31,
             "b": 682.61
           },
           "crop_bbox": {
-            "l": 470.46,
-            "t": 699.93,
-            "r": 480.87,
+            "l": 473.35,
+            "t": 700.42,
+            "r": 546.31,
             "b": 678.61
           },
           "rotation_deg": 0
@@ -1930,7 +1956,7 @@
     "#/texts/8": {
       "self_ref": "#/texts/8",
       "label": "paragraph",
-      "full_gt_text": "2. The last date for submission of application for the above referred circular is extended upto 23 .08.2026. Nominations are to be routed through DoPT online interface (DoPT website>>EO Division>>Apply for posts of CSS, CVO and Others- Non-CSS category>>SUPREMO; through SUPREMO link: https://supremo.nic.in) for those officers who have not yet applied for any other posts online this year. Nominations as well as all correspondence on the subject may be routed through email id: dirsm@nic.in_and useosm1@nic.in only. This office is not accepting any physical communication.",
+      "full_gt_text": "2. The last date for submission of application for the above referred circular is extended upto 23.08.2026. Nominations are to be routed through DoPT online interface (DoPT website>>EO Division>>Apply for posts of CSS, CVO and Others- Non-CSS category>>SUPREMO; through SUPREMO link: https://supremo.nic.in) for those officers who have not yet applied for any other posts online this year. Nominations as well as all correspondence on the subject may be routed through email id: dirsm@nic.in and useosm1@nic.in only. This office is not accepting any physical communication.",
       "words": [
         {
           "word_idx": 0,
@@ -2238,7 +2264,7 @@
         },
         {
           "word_idx": 16,
-          "gt_text": "23",
+          "gt_text": "23.08.2026.",
           "gcv_text": "website",
           "page_no": 1,
           "bbox": {
@@ -2257,7 +2283,7 @@
         },
         {
           "word_idx": 17,
-          "gt_text": ".08.2026.",
+          "gt_text": "Nominations",
           "gcv_text": ">>",
           "page_no": 1,
           "bbox": {
@@ -2276,7 +2302,7 @@
         },
         {
           "word_idx": 18,
-          "gt_text": "Nominations",
+          "gt_text": "are",
           "gcv_text": "EO",
           "page_no": 1,
           "bbox": {
@@ -2295,7 +2321,7 @@
         },
         {
           "word_idx": 19,
-          "gt_text": "are",
+          "gt_text": "to",
           "gcv_text": "Division",
           "page_no": 1,
           "bbox": {
@@ -2314,7 +2340,7 @@
         },
         {
           "word_idx": 20,
-          "gt_text": "to",
+          "gt_text": "be",
           "gcv_text": ">>",
           "page_no": 1,
           "bbox": {
@@ -2333,7 +2359,7 @@
         },
         {
           "word_idx": 21,
-          "gt_text": "be",
+          "gt_text": "routed",
           "gcv_text": "Apply",
           "page_no": 1,
           "bbox": {
@@ -2352,7 +2378,7 @@
         },
         {
           "word_idx": 22,
-          "gt_text": "routed",
+          "gt_text": "through",
           "gcv_text": "for",
           "page_no": 1,
           "bbox": {
@@ -2371,25 +2397,6 @@
         },
         {
           "word_idx": 23,
-          "gt_text": "through",
-          "gcv_text": "for",
-          "page_no": 1,
-          "bbox": {
-            "l": 245.17,
-            "t": 489.31,
-            "r": 260.09,
-            "b": 479.62
-          },
-          "crop_bbox": {
-            "l": 241.17,
-            "t": 493.31,
-            "r": 264.09,
-            "b": 475.62
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 24,
           "gt_text": "DoPT",
           "gcv_text": "for",
           "page_no": 1,
@@ -2408,7 +2415,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 25,
+          "word_idx": 24,
           "gt_text": "online",
           "gcv_text": "for",
           "page_no": 1,
@@ -2427,7 +2434,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 26,
+          "word_idx": 25,
           "gt_text": "interface",
           "gcv_text": "for",
           "page_no": 1,
@@ -2446,7 +2453,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 27,
+          "word_idx": 26,
           "gt_text": "(DoPT",
           "gcv_text": "for",
           "page_no": 1,
@@ -2465,7 +2472,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 28,
+          "word_idx": 27,
           "gt_text": "website>>EO",
           "gcv_text": "for",
           "page_no": 1,
@@ -2484,7 +2491,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 29,
+          "word_idx": 28,
           "gt_text": "Division>>Apply",
           "gcv_text": "for",
           "page_no": 1,
@@ -2503,7 +2510,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 30,
+          "word_idx": 29,
           "gt_text": "for",
           "gcv_text": "for",
           "page_no": 1,
@@ -2522,7 +2529,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 31,
+          "word_idx": 30,
           "gt_text": "posts",
           "gcv_text": "posts",
           "page_no": 1,
@@ -2541,7 +2548,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 32,
+          "word_idx": 31,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2560,7 +2567,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 33,
+          "word_idx": 32,
           "gt_text": "CSS,",
           "gcv_text": "CSS",
           "page_no": 1,
@@ -2579,7 +2586,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 34,
+          "word_idx": 33,
           "gt_text": "CVO",
           "gcv_text": "CVO",
           "page_no": 1,
@@ -2598,7 +2605,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 35,
+          "word_idx": 34,
           "gt_text": "and",
           "gcv_text": "and",
           "page_no": 1,
@@ -2617,7 +2624,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 36,
+          "word_idx": 35,
           "gt_text": "Others-",
           "gcv_text": "Others-",
           "page_no": 1,
@@ -2636,7 +2643,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 37,
+          "word_idx": 36,
           "gt_text": "Non-CSS",
           "gcv_text": "Non",
           "page_no": 1,
@@ -2655,7 +2662,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 38,
+          "word_idx": 37,
           "gt_text": "category>>SUPREMO;",
           "gcv_text": "-",
           "page_no": 1,
@@ -2674,7 +2681,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 39,
+          "word_idx": 38,
           "gt_text": "through",
           "gcv_text": "through",
           "page_no": 1,
@@ -2693,7 +2700,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 40,
+          "word_idx": 39,
           "gt_text": "SUPREMO",
           "gcv_text": "SUPREMO",
           "page_no": 1,
@@ -2712,7 +2719,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 41,
+          "word_idx": 40,
           "gt_text": "link:",
           "gcv_text": "link",
           "page_no": 1,
@@ -2731,7 +2738,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 42,
+          "word_idx": 41,
           "gt_text": "https://supremo.nic.in)",
           "gcv_text": ":",
           "page_no": 1,
@@ -2750,7 +2757,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 43,
+          "word_idx": 42,
           "gt_text": "for",
           "gcv_text": "for",
           "page_no": 1,
@@ -2769,7 +2776,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 44,
+          "word_idx": 43,
           "gt_text": "those",
           "gcv_text": "those",
           "page_no": 1,
@@ -2788,7 +2795,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 45,
+          "word_idx": 44,
           "gt_text": "officers",
           "gcv_text": "officers",
           "page_no": 1,
@@ -2807,7 +2814,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 46,
+          "word_idx": 45,
           "gt_text": "who",
           "gcv_text": "who",
           "page_no": 1,
@@ -2826,7 +2833,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 47,
+          "word_idx": 46,
           "gt_text": "have",
           "gcv_text": "have",
           "page_no": 1,
@@ -2845,7 +2852,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 48,
+          "word_idx": 47,
           "gt_text": "not",
           "gcv_text": "not",
           "page_no": 1,
@@ -2864,7 +2871,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 49,
+          "word_idx": 48,
           "gt_text": "yet",
           "gcv_text": "yet",
           "page_no": 1,
@@ -2883,7 +2890,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 50,
+          "word_idx": 49,
           "gt_text": "applied",
           "gcv_text": "applied",
           "page_no": 1,
@@ -2902,7 +2909,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 51,
+          "word_idx": 50,
           "gt_text": "for",
           "gcv_text": "for",
           "page_no": 1,
@@ -2921,7 +2928,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 52,
+          "word_idx": 51,
           "gt_text": "any",
           "gcv_text": "any",
           "page_no": 1,
@@ -2940,7 +2947,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 53,
+          "word_idx": 52,
           "gt_text": "other",
           "gcv_text": "other",
           "page_no": 1,
@@ -2959,7 +2966,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 54,
+          "word_idx": 53,
           "gt_text": "posts",
           "gcv_text": "posts",
           "page_no": 1,
@@ -2978,7 +2985,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 55,
+          "word_idx": 54,
           "gt_text": "online",
           "gcv_text": "online",
           "page_no": 1,
@@ -2997,7 +3004,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 56,
+          "word_idx": 55,
           "gt_text": "this",
           "gcv_text": "this",
           "page_no": 1,
@@ -3016,7 +3023,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 57,
+          "word_idx": 56,
           "gt_text": "year.",
           "gcv_text": "year",
           "page_no": 1,
@@ -3035,7 +3042,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 58,
+          "word_idx": 57,
           "gt_text": "Nominations",
           "gcv_text": "Nominations",
           "page_no": 1,
@@ -3054,7 +3061,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 59,
+          "word_idx": 58,
           "gt_text": "as",
           "gcv_text": "as",
           "page_no": 1,
@@ -3073,7 +3080,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 60,
+          "word_idx": 59,
           "gt_text": "well",
           "gcv_text": "well",
           "page_no": 1,
@@ -3092,7 +3099,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 61,
+          "word_idx": 60,
           "gt_text": "as",
           "gcv_text": "as",
           "page_no": 1,
@@ -3111,7 +3118,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 62,
+          "word_idx": 61,
           "gt_text": "all",
           "gcv_text": "all",
           "page_no": 1,
@@ -3130,7 +3137,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 63,
+          "word_idx": 62,
           "gt_text": "correspondence",
           "gcv_text": "correspondence",
           "page_no": 1,
@@ -3149,7 +3156,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 64,
+          "word_idx": 63,
           "gt_text": "on",
           "gcv_text": "on",
           "page_no": 1,
@@ -3168,7 +3175,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 65,
+          "word_idx": 64,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3187,7 +3194,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 66,
+          "word_idx": 65,
           "gt_text": "subject",
           "gcv_text": "subject",
           "page_no": 1,
@@ -3206,7 +3213,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 67,
+          "word_idx": 66,
           "gt_text": "may",
           "gcv_text": "may",
           "page_no": 1,
@@ -3225,7 +3232,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 68,
+          "word_idx": 67,
           "gt_text": "be",
           "gcv_text": "be",
           "page_no": 1,
@@ -3244,7 +3251,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 69,
+          "word_idx": 68,
           "gt_text": "routed",
           "gcv_text": "routed",
           "page_no": 1,
@@ -3263,7 +3270,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 70,
+          "word_idx": 69,
           "gt_text": "through",
           "gcv_text": "through",
           "page_no": 1,
@@ -3282,7 +3289,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 71,
+          "word_idx": 70,
           "gt_text": "email",
           "gcv_text": "email",
           "page_no": 1,
@@ -3301,7 +3308,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 72,
+          "word_idx": 71,
           "gt_text": "id:",
           "gcv_text": "id",
           "page_no": 1,
@@ -3320,20 +3327,39 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 73,
-          "gt_text": "dirsm@nic.in_and",
-          "gcv_text": ":",
+          "word_idx": 72,
+          "gt_text": "dirsm@nic.in",
+          "gcv_text": "dirsm@nic.in",
           "page_no": 1,
           "bbox": {
-            "l": 438.61,
+            "l": 450.88,
             "t": 451.04,
-            "r": 440.78,
+            "r": 514.16,
             "b": 441.11
           },
           "crop_bbox": {
-            "l": 434.61,
+            "l": 446.88,
             "t": 455.04,
-            "r": 444.78,
+            "r": 518.16,
+            "b": 437.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 73,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 524.26,
+            "t": 451.04,
+            "r": 542.55,
+            "b": 441.11
+          },
+          "crop_bbox": {
+            "l": 520.26,
+            "t": 455.04,
+            "r": 546.55,
             "b": 437.11
           },
           "rotation_deg": 0
@@ -3530,10 +3556,10 @@
         }
       ]
     },
-    "#/texts/9": {
-      "self_ref": "#/texts/9",
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
       "label": "paragraph",
-      "full_gt_text": "Yours faithfully,\n24/07/26",
+      "full_gt_text": "Yours faithfully,",
       "words": [
         {
           "word_idx": 0,
@@ -3570,25 +3596,6 @@
             "t": 404.41,
             "r": 510.46,
             "b": 385.99
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "24/07/26",
-          "gcv_text": "24/07/26",
-          "page_no": 1,
-          "bbox": {
-            "l": 492.02,
-            "t": 388.3,
-            "r": 559.15,
-            "b": 354.39
-          },
-          "crop_bbox": {
-            "l": 488.02,
-            "t": 392.3,
-            "r": 563.15,
-            "b": 350.39
           },
           "rotation_deg": 0
         }

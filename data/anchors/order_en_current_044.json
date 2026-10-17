@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_044",
-  "total_words": 93,
+  "total_words": 95,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/11": {
+      "self_ref": "#/texts/11",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "30-26",
+          "page_no": 1,
+          "bbox": {
+            "l": 441.75,
+            "t": 218.24,
+            "r": 471.73,
+            "b": 210.32
+          },
+          "crop_bbox": {
+            "l": 437.75,
+            "t": 222.24,
+            "r": 475.73,
+            "b": 206.32
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -235,7 +261,7 @@
     "#/texts/2": {
       "self_ref": "#/texts/2",
       "label": "paragraph",
-      "full_gt_text": "Sri Vijaya Puram, dated 28$^{th}$ July, 2026.",
+      "full_gt_text": "Sri Vijaya Puram, dated 28th July, 2026.",
       "words": [
         {
           "word_idx": 0,
@@ -315,7 +341,7 @@
         },
         {
           "word_idx": 4,
-          "gt_text": "28$^{th}$",
+          "gt_text": "28th",
           "gcv_text": "28th",
           "page_no": 1,
           "bbox": {
@@ -902,11 +928,11 @@
     "#/texts/6": {
       "self_ref": "#/texts/6",
       "label": "paragraph",
-      "full_gt_text": "(Shailaja)",
+      "full_gt_text": "[SIGNATURE]",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "(Shailaja)",
+          "gt_text": "[SIGNATURE]",
           "gcv_text": "Deifers",
           "page_no": 1,
           "bbox": {
@@ -928,10 +954,29 @@
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "Deputy Secretary (Personnel)\nF. No. 30-26/2026-PW",
+      "full_gt_text": "(Shailaja)\nDeputy Secretary (Personnel)\nF. No. 30-26/2026-PW",
       "words": [
         {
           "word_idx": 0,
+          "gt_text": "(Shailaja)",
+          "gcv_text": "Deifers",
+          "page_no": 1,
+          "bbox": {
+            "l": 448.71,
+            "t": 273.94,
+            "r": 516.34,
+            "b": 245.61
+          },
+          "crop_bbox": {
+            "l": 444.71,
+            "t": 277.94,
+            "r": 520.34,
+            "b": 241.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
           "gt_text": "Deputy",
           "gcv_text": "Deputy",
           "page_no": 1,
@@ -950,7 +995,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 2,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,
@@ -969,7 +1014,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 3,
           "gt_text": "(Personnel)",
           "gcv_text": "(",
           "page_no": 1,
@@ -988,7 +1033,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 4,
           "gt_text": "F.",
           "gcv_text": "F.",
           "page_no": 1,
@@ -1007,7 +1052,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 5,
           "gt_text": "No.",
           "gcv_text": "No.",
           "page_no": 1,
@@ -1026,7 +1071,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 6,
           "gt_text": "30-26/2026-PW",
           "gcv_text": "30-26",
           "page_no": 1,

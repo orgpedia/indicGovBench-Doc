@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_en_archive_028",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        121.38,
+        125.46,
+        436.73,
+        125.46,
+        436.73,
+        599.5,
+        121.38,
+        599.5
+      ],
+      "text": "IMMEDIATE\n\nNo. 55/4/CT-64(1)\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\n\nNew Delhi, the 9th June 1964.\n---\n\nThe undersigned is directed to state that the Members\nof the new Council of Ministers shown in the enclosed list\nassumed office with effect from the forenoon of Tuesday, June 9,\n1964.\n\n(D. P. Chopra)\nfor Cabinet Secretary.\n\nTo.\nAll Members of the Council of Ministers.\n---\n\nCopy with a copy of the enclosure forwarded to the\nPrincipal Private Secretary to the Prime Minister/the Private\nSecretary to the Prime Minister, for information.\n---\n\nP.T.O."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        73.78,
+        209.66,
+        131.5,
+        209.66,
+        131.5,
+        409.21,
+        73.78,
+        409.21
+      ],
+      "text": "S. No. 43\n154"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2199,
+      "total": 5493
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001429,
+      "batch": 0.000714
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.14289,
+      "batch": 0.071445,
+      "savings": 0.071445,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

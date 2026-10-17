@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_036",
-  "total_words": 179,
+  "total_words": 181,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,58 @@
     }
   },
   "blocks": {
+    "#/texts/11": {
+      "self_ref": "#/texts/11",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "3/8/26",
+          "page_no": 1,
+          "bbox": {
+            "l": 464.48,
+            "t": 448.23,
+            "r": 505.99,
+            "b": 427.6
+          },
+          "crop_bbox": {
+            "l": 460.48,
+            "t": 452.23,
+            "r": 509.99,
+            "b": 423.6
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "3/8/26",
+          "page_no": 1,
+          "bbox": {
+            "l": 446.25,
+            "t": 129.1,
+            "r": 489.2,
+            "b": 106.3
+          },
+          "crop_bbox": {
+            "l": 442.25,
+            "t": 133.1,
+            "r": 493.2,
+            "b": 102.3
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -1249,19 +1301,19 @@
         {
           "word_idx": 0,
           "gt_text": "(K.",
-          "gcv_text": "District",
+          "gcv_text": "3/8/26",
           "page_no": 1,
           "bbox": {
-            "l": 316.69,
-            "t": 495.75,
-            "r": 352.44,
-            "b": 487.35
+            "l": 464.48,
+            "t": 448.23,
+            "r": 505.99,
+            "b": 427.6
           },
           "crop_bbox": {
-            "l": 312.69,
-            "t": 499.75,
-            "r": 356.44,
-            "b": 483.35
+            "l": 460.48,
+            "t": 452.23,
+            "r": 509.99,
+            "b": 423.6
           },
           "rotation_deg": 0
         },

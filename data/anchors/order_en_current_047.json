@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "[LOGO]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[LOGO]",
+          "gcv_text": "सत्यमेव",
+          "page_no": 1,
+          "bbox": {
+            "l": 276.94,
+            "t": 756.54,
+            "r": 301.57,
+            "b": 748.93
+          },
+          "crop_bbox": {
+            "l": 272.94,
+            "t": 760.54,
+            "r": 305.57,
+            "b": 744.93
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -320,51 +346,6 @@
         }
       ]
     },
-    "#/texts/1": {
-      "self_ref": "#/texts/1",
-      "label": "paragraph",
-      "full_gt_text": "सत्यमेव जयते",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "सत्यमेव",
-          "gcv_text": "सत्यमेव",
-          "page_no": 1,
-          "bbox": {
-            "l": 276.94,
-            "t": 756.54,
-            "r": 301.57,
-            "b": 748.93
-          },
-          "crop_bbox": {
-            "l": 272.94,
-            "t": 760.54,
-            "r": 305.57,
-            "b": 744.93
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "जयते",
-          "gcv_text": "जयते",
-          "page_no": 1,
-          "bbox": {
-            "l": 303.89,
-            "t": 756.14,
-            "r": 323.17,
-            "b": 748.73
-          },
-          "crop_bbox": {
-            "l": 299.89,
-            "t": 760.14,
-            "r": 327.17,
-            "b": 744.73
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/2": {
       "self_ref": "#/texts/2",
       "label": "paragraph",
@@ -489,7 +470,7 @@
     "#/texts/3": {
       "self_ref": "#/texts/3",
       "label": "paragraph",
-      "full_gt_text": "सतर्कता भवन, जी.पी.ओ. कॉम्प्लेक्स,\nब्लॉक-ए, आई.एन.ए., नई दिल्ली-110023\nSatarkta Bhawan, G.P.O. Complex,\nBlock A, INA, New Delhi-110023",
+      "full_gt_text": "सतर्कता भवन, जी.पी.ओ. कॉम्पलैक्स,\nब्लॉक-ए, आई.एन.ए., नई दिल्ली-110023\nSatarkta Bhawan, G.P.O. Complex,\nBlock A, INA, New Delhi-110023",
       "words": [
         {
           "word_idx": 0,
@@ -550,7 +531,7 @@
         },
         {
           "word_idx": 3,
-          "gt_text": "कॉम्प्लेक्स,",
+          "gt_text": "कॉम्पलैक्स,",
           "gcv_text": "कॉम्पलैक्स",
           "page_no": 1,
           "bbox": {
@@ -4523,7 +4504,7 @@
     "#/texts/12": {
       "self_ref": "#/texts/12",
       "label": "paragraph",
-      "full_gt_text": "Similarly, Para 1.4.9 of Chapter-1 of Vigilance Manual (updated 2021) also stipulates that\nadministrative misconduct would be dealt by the disciplinary authority in an appropriate\nmanner. If lapse is without vigilance angle, the disciplinary authority would be within its\nrights to initiate appropriate penalty proceedings against erring employees.",
+      "full_gt_text": "Similarly, Para 1.4.9 of Chapter-I of Vigilance Manual (updated 2021) also stipulates that\nadministrative misconduct would be dealt by the disciplinary authority in an appropriate\nmanner. If lapse is without vigilance angle, the disciplinary authority would be within its\nrights to initiate appropriate penalty proceedings against erring employees.",
       "words": [
         {
           "word_idx": 0,
@@ -4603,7 +4584,7 @@
         },
         {
           "word_idx": 4,
-          "gt_text": "Chapter-1",
+          "gt_text": "Chapter-I",
           "gcv_text": "Chapter",
           "page_no": 1,
           "bbox": {
@@ -5783,6 +5764,32 @@
             "t": 247.77,
             "r": 174.07,
             "b": 230.97
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "[LOGO]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[LOGO]",
+          "gcv_text": "सतर्कता",
+          "page_no": 1,
+          "bbox": {
+            "l": 462.8,
+            "t": 799.57,
+            "r": 500.67,
+            "b": 785.16
+          },
+          "crop_bbox": {
+            "l": 458.8,
+            "t": 803.57,
+            "r": 504.67,
+            "b": 781.16
           },
           "rotation_deg": 0
         }

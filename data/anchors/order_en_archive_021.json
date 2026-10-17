@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_021",
-  "total_words": 228,
+  "total_words": 229,
   "pages": {
     "1": {
       "width": 595.0,
@@ -49,6 +49,122 @@
             "t": 814.32,
             "r": 375.7,
             "b": 787.64
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "V.R. Srinivasan",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "V.R.",
+          "gcv_text": "V.R.",
+          "page_no": 1,
+          "bbox": {
+            "l": 384.3,
+            "t": 273.6,
+            "r": 410.9,
+            "b": 266.68
+          },
+          "crop_bbox": {
+            "l": 380.3,
+            "t": 277.6,
+            "r": 414.9,
+            "b": 262.68
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Srinivasan",
+          "gcv_text": "Srinivasan",
+          "page_no": 1,
+          "bbox": {
+            "l": 420.23,
+            "t": 273.6,
+            "r": 488.83,
+            "b": 266.68
+          },
+          "crop_bbox": {
+            "l": 416.23,
+            "t": 277.6,
+            "r": 492.83,
+            "b": 262.68
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/22": {
+      "self_ref": "#/texts/22",
+      "label": "paragraph",
+      "full_gt_text": "V.R. Srinivasan",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "V.R.",
+          "gcv_text": "V.R.",
+          "page_no": 1,
+          "bbox": {
+            "l": 392.0,
+            "t": 95.89,
+            "r": 418.6,
+            "b": 88.96
+          },
+          "crop_bbox": {
+            "l": 388.0,
+            "t": 99.89,
+            "r": 422.6,
+            "b": 84.96
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Srinivasan",
+          "gcv_text": "Srinivasan",
+          "page_no": 1,
+          "bbox": {
+            "l": 427.7,
+            "t": 95.89,
+            "r": 496.53,
+            "b": 88.96
+          },
+          "crop_bbox": {
+            "l": 423.7,
+            "t": 99.89,
+            "r": 500.53,
+            "b": 84.96
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/27": {
+      "self_ref": "#/texts/27",
+      "label": "paragraph",
+      "full_gt_text": "[EXCLUDED]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[EXCLUDED]",
+          "gcv_text": "%",
+          "page_no": 1,
+          "bbox": {
+            "l": 540.87,
+            "t": 738.98,
+            "r": 578.2,
+            "b": 694.71
+          },
+          "crop_bbox": {
+            "l": 536.87,
+            "t": 742.98,
+            "r": 582.2,
+            "b": 690.71
           },
           "rotation_deg": 0
         }
@@ -3686,51 +3802,6 @@
         }
       ]
     },
-    "#/texts/15": {
-      "self_ref": "#/texts/15",
-      "label": "paragraph",
-      "full_gt_text": "V.R. Srinivasan",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "V.R.",
-          "gcv_text": "V.R.",
-          "page_no": 1,
-          "bbox": {
-            "l": 384.3,
-            "t": 273.6,
-            "r": 410.9,
-            "b": 266.68
-          },
-          "crop_bbox": {
-            "l": 380.3,
-            "t": 277.6,
-            "r": 414.9,
-            "b": 262.68
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Srinivasan",
-          "gcv_text": "Srinivasan",
-          "page_no": 1,
-          "bbox": {
-            "l": 420.23,
-            "t": 273.6,
-            "r": 488.83,
-            "b": 266.68
-          },
-          "crop_bbox": {
-            "l": 416.23,
-            "t": 277.6,
-            "r": 492.83,
-            "b": 262.68
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/16": {
       "self_ref": "#/texts/16",
       "label": "paragraph",
@@ -4286,51 +4357,6 @@
         }
       ]
     },
-    "#/texts/22": {
-      "self_ref": "#/texts/22",
-      "label": "paragraph",
-      "full_gt_text": "V.R. Srinivasan",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "V.R.",
-          "gcv_text": "V.R.",
-          "page_no": 1,
-          "bbox": {
-            "l": 392.0,
-            "t": 95.89,
-            "r": 418.6,
-            "b": 88.96
-          },
-          "crop_bbox": {
-            "l": 388.0,
-            "t": 99.89,
-            "r": 422.6,
-            "b": 84.96
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Srinivasan",
-          "gcv_text": "Srinivasan",
-          "page_no": 1,
-          "bbox": {
-            "l": 427.7,
-            "t": 95.89,
-            "r": 496.53,
-            "b": 88.96
-          },
-          "crop_bbox": {
-            "l": 423.7,
-            "t": 99.89,
-            "r": 500.53,
-            "b": 84.96
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/23": {
       "self_ref": "#/texts/23",
       "label": "paragraph",
@@ -4459,32 +4485,6 @@
         }
       ]
     },
-    "#/texts/25": {
-      "self_ref": "#/texts/25",
-      "label": "paragraph",
-      "full_gt_text": "...2",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "...2",
-          "gcv_text": "...",
-          "page_no": 1,
-          "bbox": {
-            "l": 456.63,
-            "t": 53.92,
-            "r": 476.0,
-            "b": 47.42
-          },
-          "crop_bbox": {
-            "l": 452.63,
-            "t": 57.92,
-            "r": 480.0,
-            "b": 43.42
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/26": {
       "self_ref": "#/texts/26",
       "label": "paragraph",
@@ -4525,6 +4525,32 @@
             "t": 47.43,
             "r": 179.0,
             "b": 30.62
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/25": {
+      "self_ref": "#/texts/25",
+      "label": "paragraph",
+      "full_gt_text": "...2",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "...2",
+          "gcv_text": "...",
+          "page_no": 1,
+          "bbox": {
+            "l": 456.63,
+            "t": 53.92,
+            "r": 476.0,
+            "b": 47.42
+          },
+          "crop_bbox": {
+            "l": 452.63,
+            "t": 57.92,
+            "r": 480.0,
+            "b": 43.42
           },
           "rotation_deg": 0
         }

@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_003",
-  "total_words": 214,
+  "total_words": 215,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "By",
+          "page_no": 1,
+          "bbox": {
+            "l": 422.64,
+            "t": 156.12,
+            "r": 436.54,
+            "b": 145.81
+          },
+          "crop_bbox": {
+            "l": 418.64,
+            "t": 160.12,
+            "r": 440.54,
+            "b": 141.81
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -4007,10 +4033,10 @@
         }
       ]
     },
-    "#/texts/12": {
-      "self_ref": "#/texts/12",
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
       "label": "paragraph",
-      "full_gt_text": "By Order\n(Nirmesh Kumar Shukla)\nJoint Secretary",
+      "full_gt_text": "By Order",
       "words": [
         {
           "word_idx": 0,
@@ -4049,9 +4075,16 @@
             "b": 142.53
           },
           "rotation_deg": 0
-        },
+        }
+      ]
+    },
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "(Nirmesh Kumar Shukla)\nJoint Secretary",
+      "words": [
         {
-          "word_idx": 2,
+          "word_idx": 0,
           "gt_text": "(Nirmesh",
           "gcv_text": "Nesuble",
           "page_no": 1,
@@ -4070,7 +4103,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 1,
           "gt_text": "Kumar",
           "gcv_text": "Kumar",
           "page_no": 1,
@@ -4089,7 +4122,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 2,
           "gt_text": "Shukla)",
           "gcv_text": "Shukla",
           "page_no": 1,
@@ -4108,7 +4141,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 3,
           "gt_text": "Joint",
           "gcv_text": "Joint",
           "page_no": 1,
@@ -4127,7 +4160,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 6,
+          "word_idx": 4,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,

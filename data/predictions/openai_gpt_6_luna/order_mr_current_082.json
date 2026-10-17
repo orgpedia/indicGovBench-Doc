@@ -1,0 +1,46 @@
+{
+  "doc_id": "order_mr_current_082",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        439.64,
+        90.25,
+        950.5,
+        90.25,
+        950.5,
+        1526.13,
+        439.64,
+        1526.13
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>NHM Type (SD/PM)</td><td>FMR No</td><td>संवर्गाचे प्रकार</td><td>संवर्गित पद</td><td>कार्यरत पदाचे नाव</td><td>जिल्हा</td><td>तालुका</td><td>कार्यालयाचे ठिकाण</td><td colspan=\"3\">कर्मचारी व कर्मचारीचे नाव</td><td colspan=\"3\">जन्म तारीख</td><td colspan=\"3\">वय</td><td>संबंधित पदाचा नियुक्ती प्रकार (Contractual/Regular)</td><td>नियुक्तीचा आदेश क्रमांक व दिनांक</td><td colspan=\"3\">नियुक्ती दिनांक</td><td>एकत्रित मानधन (एकूण मासिक वेतन)</td><td>वेतन</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>Surname</td><td>Name</td><td>Middle Name</td><td>दिवस</td><td>महिने</td><td>वर्ष</td><td>वर्ष</td><td>महिने</td><td>दिवस</td><td>13</td><td>14</td><td>दिवस</td><td>महिने</td><td>वर्ष</td><td>16</td><td>17</td></tr></thead><tbody><tr><td>1</td><td>Service Delivery</td><td>U.S.1.8.1.1</td><td>5</td><td>FTMO</td><td>NCHM</td><td>Nagpur NC</td><td>Nagpur</td><td>UPHC SAKKARDHARA NAGAR</td><td>KATORE</td><td>PRIYANKA</td><td>VASANTRAO</td><td>12</td><td>12</td><td>1980</td><td>45</td><td>6</td><td>13</td><td>Interview</td><td>FTMO</td><td>16</td><td>8</td><td>2014</td><td>60000</td><td>99971</td></tr><tr><td>2</td><td>Service Delivery</td><td>U.S.1.8.1.1</td><td>5</td><td>FTMO</td><td>NURHM</td><td>Nagpur NC</td><td>Nagpur</td><td>UPHC FUTALA</td><td>YAMALKAR</td><td>RENuka</td><td>LINESH</td><td>1</td><td>5</td><td>1974</td><td>52</td><td>1</td><td>24</td><td>Interview</td><td>FTMO</td><td>16</td><td>8</td><td>2014</td><td>60000</td><td>104970</td></tr><tr><td>3</td><td>Service Delivery</td><td>U.S.1.8.1.1</td><td>5</td><td>FTMO</td><td>NURHM</td><td>Nagpur NC</td><td>Nagpur</td><td>UPHC NALA</td><td>MULAWKAR</td><td>SHILPA</td><td>RAJIQ</td><td>28</td><td>10</td><td>1981</td><td>44</td><td>7</td><td>28</td><td>Interview</td><td>FTMO</td><td>20</td><td>8</td><td>2014</td><td>60000</td><td>104970</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3273,
+      "output": 3024,
+      "total": 6297
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001839,
+      "batch": 0.00092
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.18393,
+      "batch": 0.091965,
+      "savings": 0.091965,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

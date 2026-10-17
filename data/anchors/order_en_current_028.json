@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_028",
-  "total_words": 123,
+  "total_words": 124,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "rath",
+          "page_no": 1,
+          "bbox": {
+            "l": 473.12,
+            "t": 374.22,
+            "r": 515.19,
+            "b": 348.49
+          },
+          "crop_bbox": {
+            "l": 469.12,
+            "t": 378.22,
+            "r": 519.19,
+            "b": 344.49
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -539,7 +565,7 @@
     "#/texts/2": {
       "self_ref": "#/texts/2",
       "label": "paragraph",
-      "full_gt_text": "Jaisalmer House, 26, Man Singh Road,\nNew Delhi-110 011, Dated: 08$^{th}$ September, 2026.",
+      "full_gt_text": "Jaisalmer House, 26, Man Singh Road,\nNew Delhi-110 011, Dated: 08th September, 2026.",
       "words": [
         {
           "word_idx": 0,
@@ -733,19 +759,19 @@
         },
         {
           "word_idx": 10,
-          "gt_text": "08$^{th}$",
-          "gcv_text": "011",
+          "gt_text": "08th",
+          "gcv_text": "08th",
           "page_no": 1,
           "bbox": {
-            "l": 344.74,
+            "l": 410.37,
             "t": 581.54,
-            "r": 361.81,
+            "r": 430.56,
             "b": 569.03
           },
           "crop_bbox": {
-            "l": 340.74,
+            "l": 406.37,
             "t": 585.54,
-            "r": 365.81,
+            "r": 434.56,
             "b": 565.03
           },
           "rotation_deg": 0
@@ -753,18 +779,18 @@
         {
           "word_idx": 11,
           "gt_text": "September,",
-          "gcv_text": ",",
+          "gcv_text": "September",
           "page_no": 1,
           "bbox": {
-            "l": 363.49,
+            "l": 432.49,
             "t": 581.54,
-            "r": 366.14,
+            "r": 487.54,
             "b": 569.03
           },
           "crop_bbox": {
-            "l": 359.49,
+            "l": 428.49,
             "t": 585.54,
-            "r": 370.14,
+            "r": 491.54,
             "b": 565.03
           },
           "rotation_deg": 0
@@ -772,18 +798,18 @@
         {
           "word_idx": 12,
           "gt_text": "2026.",
-          "gcv_text": "Dated",
+          "gcv_text": ",",
           "page_no": 1,
           "bbox": {
-            "l": 369.5,
+            "l": 487.3,
             "t": 581.54,
-            "r": 400.27,
+            "r": 489.94,
             "b": 569.03
           },
           "crop_bbox": {
-            "l": 365.5,
+            "l": 483.3,
             "t": 585.54,
-            "r": 404.27,
+            "r": 493.94,
             "b": 565.03
           },
           "rotation_deg": 0

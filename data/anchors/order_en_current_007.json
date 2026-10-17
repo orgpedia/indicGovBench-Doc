@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_007",
-  "total_words": 184,
+  "total_words": 185,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "blake",
+          "page_no": 1,
+          "bbox": {
+            "l": 478.88,
+            "t": 425.92,
+            "r": 531.9,
+            "b": 387.29
+          },
+          "crop_bbox": {
+            "l": 474.88,
+            "t": 429.92,
+            "r": 535.9,
+            "b": 383.29
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",

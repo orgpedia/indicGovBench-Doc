@@ -1,0 +1,238 @@
+{
+  "doc_id": "order_en_archive_010",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        407.58,
+        39.57,
+        531.93,
+        39.57,
+        531.93,
+        53.89,
+        407.58,
+        53.89
+      ],
+      "text": "IMMEDIATE."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        517.65,
+        39.57,
+        530.74,
+        39.57,
+        530.74,
+        54.73,
+        517.65,
+        54.73
+      ],
+      "text": "13"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        215.98,
+        90.94,
+        412.33,
+        90.94,
+        412.33,
+        131.35,
+        215.98,
+        131.35
+      ],
+      "text": "No.245/C.F/48.\nGOVERNMENT OF INDIA.\nCABINET SECRETARIAT.\nNew Delhi, the 6th December, 1948."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        292.74,
+        142.3,
+        302.86,
+        142.3,
+        302.86,
+        147.35,
+        292.74,
+        147.35
+      ],
+      "text": "----"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        245.73,
+        169.24,
+        349.86,
+        169.24,
+        349.86,
+        181.03,
+        245.73,
+        181.03
+      ],
+      "text": "OFFICE MEMORANDUM."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        141.01,
+        197.87,
+        523.0,
+        197.87,
+        523.0,
+        521.2,
+        141.01,
+        521.2
+      ],
+      "text": "The undersigned is directed to circulate for the information\nof all Ministries of the Government of India a copy of the minutes\nrecorded by the Prime Minister relating to -"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        165.41,
+        266.07,
+        534.31,
+        266.07,
+        534.31,
+        356.17,
+        165.41,
+        356.17
+      ],
+      "text": "(1) The appointment of Shri R.R.Diwakar, Member of the\n Constituent Assembly, as Minister of State for\n Information and Broadcasting with effect from the\n 7th December, 1948.\n\n(2) The appointment of Dr.Balkrishan V.Keskar, Member of the\n Constituent Assembly, as Deputy Minister with effect\n from the 7th December, 1948. He will be attached to\n the Ministry of External Affairs & Commonwealth Relations."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        296.31,
+        414.26,
+        499.2,
+        414.26,
+        499.2,
+        435.31,
+        296.31,
+        435.31
+      ],
+      "text": "(E.C.Donoghue)\nfor Joint Secretary to the Cabinet."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        143.99,
+        455.52,
+        160.65,
+        455.52,
+        160.65,
+        465.63,
+        143.99,
+        465.63
+      ],
+      "text": "To"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        192.78,
+        474.05,
+        442.08,
+        474.05,
+        442.08,
+        484.99,
+        192.78,
+        484.99
+      ],
+      "text": "All Secretaries to the Government of India."
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        310.0,
+        505.2,
+        320.71,
+        505.2,
+        320.71,
+        510.25,
+        310.0,
+        510.25
+      ],
+      "text": "----"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        144.59,
+        532.99,
+        536.1,
+        532.99,
+        536.1,
+        563.3,
+        144.59,
+        563.3
+      ],
+      "text": "Copy with a copy of the enclosures forwarded to the\nSecretary and Military Secretary to the Governor-General/the\nPrincipal Private Secretary to the Prime Minister, for information."
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        308.81,
+        617.19,
+        490.88,
+        617.19,
+        490.88,
+        639.08,
+        308.81,
+        639.08
+      ],
+      "text": "(E.C.Donoghue)\nUnder Secretary to the Cabinet."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 1599,
+      "total": 4893
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001129,
+      "batch": 0.000564
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.11289,
+      "batch": 0.056445,
+      "savings": 0.056445,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

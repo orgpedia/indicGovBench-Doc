@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_024",
-  "total_words": 246,
+  "total_words": 250,
   "pages": {
     "1": {
       "width": 595.0,
@@ -68,6 +68,110 @@
             "t": 820.31,
             "r": 362.5,
             "b": 801.31
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/18": {
+      "self_ref": "#/texts/18",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 450.34,
+            "t": 365.2,
+            "r": 454.08,
+            "b": 355.28
+          },
+          "crop_bbox": {
+            "l": 446.34,
+            "t": 369.2,
+            "r": 458.08,
+            "b": 351.28
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/19": {
+      "self_ref": "#/texts/19",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 450.11,
+            "t": 204.83,
+            "r": 454.55,
+            "b": 194.69
+          },
+          "crop_bbox": {
+            "l": 446.11,
+            "t": 208.83,
+            "r": 458.55,
+            "b": 190.69
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/20": {
+      "self_ref": "#/texts/20",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 450.34,
+            "t": 93.24,
+            "r": 454.31,
+            "b": 83.1
+          },
+          "crop_bbox": {
+            "l": 446.34,
+            "t": 97.24,
+            "r": 458.31,
+            "b": 79.1
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 514.84,
+            "t": 839.19,
+            "r": 542.88,
+            "b": 821.06
+          },
+          "crop_bbox": {
+            "l": 510.84,
+            "t": 842.0,
+            "r": 546.88,
+            "b": 817.06
           },
           "rotation_deg": 0
         }
@@ -807,7 +911,7 @@
     "#/texts/5": {
       "self_ref": "#/texts/5",
       "label": "paragraph",
-      "full_gt_text": "i) The Prime Minister relinquished the charge of the offices of Minister of\nEnvironment and Forests and Minister of Non-Conventional Energy\nSources;",
+      "full_gt_text": "i) The Prime Minister relinquished the charge of the offices of Minister of Environment and Forests and Minister of Non-Conventional Energy Sources;",
       "words": [
         {
           "word_idx": 0,

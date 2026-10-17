@@ -1,6 +1,6 @@
 {
   "doc_id": "order_mr_archive_033",
-  "total_words": 172,
+  "total_words": 173,
   "pages": {
     "1": {
       "width": 534.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "यांच्या",
+          "page_no": 1,
+          "bbox": {
+            "l": 243.0,
+            "t": 219.0,
+            "r": 279.0,
+            "b": 203.0
+          },
+          "crop_bbox": {
+            "l": 239.0,
+            "t": 223.0,
+            "r": 283.0,
+            "b": 199.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",

@@ -1,6 +1,6 @@
 {
   "doc_id": "order_mr_current_006",
-  "total_words": 272,
+  "total_words": 273,
   "pages": {
     "1": {
       "width": 612.0,
@@ -12,11 +12,11 @@
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "[FILENAME]",
+      "full_gt_text": "Desktop/अधिसंख्य पद",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "[FILENAME]",
+          "gt_text": "Desktop/अधिसंख्य",
           "gcv_text": "Desktop",
           "page_no": 1,
           "bbox": {
@@ -29,6 +29,25 @@
             "l": 97.0,
             "t": 104.0,
             "r": 120.0,
+            "b": 90.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "पद",
+          "gcv_text": "पद",
+          "page_no": 1,
+          "bbox": {
+            "l": 137.0,
+            "t": 100.0,
+            "r": 143.0,
+            "b": 94.0
+          },
+          "crop_bbox": {
+            "l": 133.0,
+            "t": 104.0,
+            "r": 147.0,
             "b": 90.0
           },
           "rotation_deg": 0

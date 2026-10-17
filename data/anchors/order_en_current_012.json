@@ -1016,7 +1016,7 @@
     "#/texts/5": {
       "self_ref": "#/texts/5",
       "label": "paragraph",
-      "full_gt_text": "Dear Sir/Madam,",
+      "full_gt_text": "Dear Sir/Ma'am,",
       "words": [
         {
           "word_idx": 0,
@@ -1039,7 +1039,7 @@
         },
         {
           "word_idx": 1,
-          "gt_text": "Sir/Madam,",
+          "gt_text": "Sir/Ma'am,",
           "gcv_text": "Sirf",
           "page_no": 1,
           "bbox": {

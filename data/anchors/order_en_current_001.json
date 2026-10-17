@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_001",
-  "total_words": 307,
+  "total_words": 308,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "[LOGO]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[LOGO]",
+          "gcv_text": "भीमराव",
+          "page_no": 1,
+          "bbox": {
+            "l": 277.29,
+            "t": 795.52,
+            "r": 295.2,
+            "b": 779.07
+          },
+          "crop_bbox": {
+            "l": 273.29,
+            "t": 799.52,
+            "r": 299.2,
+            "b": 775.07
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -493,7 +519,7 @@
     "#/texts/9": {
       "self_ref": "#/texts/9",
       "label": "paragraph",
-      "full_gt_text": "Dated: May 11/06/2013",
+      "full_gt_text": "Dated: May 11/06/,2013",
       "words": [
         {
           "word_idx": 0,
@@ -535,7 +561,7 @@
         },
         {
           "word_idx": 2,
-          "gt_text": "11/06/2013",
+          "gt_text": "11/06/,2013",
           "gcv_text": "11",
           "page_no": 1,
           "bbox": {

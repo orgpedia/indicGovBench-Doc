@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Yours",
+          "page_no": 1,
+          "bbox": {
+            "l": 466.02,
+            "t": 413.52,
+            "r": 494.47,
+            "b": 404.1
+          },
+          "crop_bbox": {
+            "l": 462.02,
+            "t": 417.52,
+            "r": 498.47,
+            "b": 400.1
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -513,7 +539,7 @@
     "#/texts/1": {
       "self_ref": "#/texts/1",
       "label": "paragraph",
-      "full_gt_text": "Kartavya Bhawan-3, New Delhi, | 8.08.2026",
+      "full_gt_text": "Kartavya Bhawan-3, New Delhi, 18.08.2026",
       "words": [
         {
           "word_idx": 0,
@@ -593,26 +619,7 @@
         },
         {
           "word_idx": 4,
-          "gt_text": "|",
-          "gcv_text": ",",
-          "page_no": 1,
-          "bbox": {
-            "l": 483.38,
-            "t": 708.02,
-            "r": 485.06,
-            "b": 696.44
-          },
-          "crop_bbox": {
-            "l": 479.38,
-            "t": 712.02,
-            "r": 489.06,
-            "b": 692.44
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 5,
-          "gt_text": "8.08.2026",
+          "gt_text": "18.08.2026",
           "gcv_text": "18.08.2026",
           "page_no": 1,
           "bbox": {

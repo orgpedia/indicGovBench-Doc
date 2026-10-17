@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_002",
-  "total_words": 209,
+  "total_words": 201,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,136 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Bejoda",
+          "page_no": 1,
+          "bbox": {
+            "l": 406.07,
+            "t": 410.32,
+            "r": 502.72,
+            "b": 393.67
+          },
+          "crop_bbox": {
+            "l": 401.24,
+            "t": 414.32,
+            "r": 507.55,
+            "b": 389.67
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/13": {
+      "self_ref": "#/texts/13",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Issueft",
+          "page_no": 1,
+          "bbox": {
+            "l": 105.38,
+            "t": 225.66,
+            "r": 177.06,
+            "b": 192.46
+          },
+          "crop_bbox": {
+            "l": 101.38,
+            "t": 229.66,
+            "r": 181.06,
+            "b": 188.46
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "11-6-13",
+          "page_no": 1,
+          "bbox": {
+            "l": 200.8,
+            "t": 181.49,
+            "r": 261.27,
+            "b": 162.24
+          },
+          "crop_bbox": {
+            "l": 196.8,
+            "t": 185.49,
+            "r": 265.27,
+            "b": 158.24
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "11.6.13",
+          "page_no": 1,
+          "bbox": {
+            "l": 278.63,
+            "t": 158.58,
+            "r": 341.79,
+            "b": 122.79
+          },
+          "crop_bbox": {
+            "l": 274.63,
+            "t": 162.58,
+            "r": 345.79,
+            "b": 118.79
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/17": {
+      "self_ref": "#/texts/17",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "8/6",
+          "page_no": 1,
+          "bbox": {
+            "l": 462.4,
+            "t": 279.93,
+            "r": 486.26,
+            "b": 268.77
+          },
+          "crop_bbox": {
+            "l": 458.4,
+            "t": 283.93,
+            "r": 490.26,
+            "b": 264.77
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -3060,32 +3190,6 @@
         }
       ]
     },
-    "#/texts/7": {
-      "self_ref": "#/texts/7",
-      "label": "paragraph",
-      "full_gt_text": "Bejoli",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Bejoli",
-          "gcv_text": "Bejoda",
-          "page_no": 1,
-          "bbox": {
-            "l": 406.07,
-            "t": 410.32,
-            "r": 502.72,
-            "b": 393.67
-          },
-          "crop_bbox": {
-            "l": 401.24,
-            "t": 414.32,
-            "r": 507.55,
-            "b": 389.67
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/8": {
       "self_ref": "#/texts/8",
       "label": "paragraph",
@@ -3151,57 +3255,57 @@
         {
           "word_idx": 3,
           "gt_text": "816",
-          "gcv_text": "/",
+          "gcv_text": "",
           "page_no": 1,
           "bbox": {
-            "l": 501.15,
-            "t": 385.01,
-            "r": 509.89,
-            "b": 373.08
+            "l": 393.43,
+            "t": 387.84,
+            "r": 472.71,
+            "b": 355.99
           },
           "crop_bbox": {
-            "l": 497.15,
-            "t": 389.01,
-            "r": 513.89,
-            "b": 369.08
+            "l": 389.43,
+            "t": 391.84,
+            "r": 476.71,
+            "b": 351.99
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 4,
           "gt_text": "/",
-          "gcv_text": "/",
+          "gcv_text": "",
           "page_no": 1,
           "bbox": {
-            "l": 521.31,
-            "t": 385.11,
-            "r": 527.47,
-            "b": 373.27
+            "l": 393.43,
+            "t": 387.84,
+            "r": 472.71,
+            "b": 355.99
           },
           "crop_bbox": {
-            "l": 517.31,
-            "t": 389.11,
-            "r": 531.47,
-            "b": 369.27
+            "l": 389.43,
+            "t": 391.84,
+            "r": 476.71,
+            "b": 351.99
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 5,
           "gt_text": "13",
-          "gcv_text": "13",
+          "gcv_text": "",
           "page_no": 1,
           "bbox": {
-            "l": 527.13,
-            "t": 385.11,
-            "r": 540.01,
-            "b": 373.27
+            "l": 393.43,
+            "t": 387.84,
+            "r": 472.71,
+            "b": 355.99
           },
           "crop_bbox": {
-            "l": 523.13,
-            "t": 389.11,
-            "r": 544.01,
-            "b": 369.27
+            "l": 389.43,
+            "t": 391.84,
+            "r": 476.71,
+            "b": 351.99
           },
           "rotation_deg": 0
         },
@@ -3668,29 +3772,10 @@
     "#/texts/12": {
       "self_ref": "#/texts/12",
       "label": "paragraph",
-      "full_gt_text": "8/6\n( Chandra Prakash )\nSecretary to the Chancellor",
+      "full_gt_text": "( Chandra Prakash )\nSecretary to the Chancellor",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "8/6",
-          "gcv_text": "8/6",
-          "page_no": 1,
-          "bbox": {
-            "l": 462.4,
-            "t": 279.93,
-            "r": 486.26,
-            "b": 268.77
-          },
-          "crop_bbox": {
-            "l": 458.4,
-            "t": 283.93,
-            "r": 490.26,
-            "b": 264.77
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
           "gt_text": "(",
           "gcv_text": "(",
           "page_no": 1,
@@ -3709,7 +3794,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 1,
           "gt_text": "Chandra",
           "gcv_text": "Chandra",
           "page_no": 1,
@@ -3728,7 +3813,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 2,
           "gt_text": "Prakash",
           "gcv_text": "Prakash",
           "page_no": 1,
@@ -3747,7 +3832,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 3,
           "gt_text": ")",
           "gcv_text": ")",
           "page_no": 1,
@@ -3766,7 +3851,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 4,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,
@@ -3785,7 +3870,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 6,
+          "word_idx": 5,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -3804,7 +3889,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 7,
+          "word_idx": 6,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3823,7 +3908,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 8,
+          "word_idx": 7,
           "gt_text": "Chancellor",
           "gcv_text": "Chancellor",
           "page_no": 1,
@@ -3838,236 +3923,6 @@
             "t": 258.43,
             "r": 516.91,
             "b": 239.55
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/13": {
-      "self_ref": "#/texts/13",
-      "label": "paragraph",
-      "full_gt_text": "Issue of Indrasen\nC\n11-6-13",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Issue",
-          "gcv_text": "Issueft",
-          "page_no": 1,
-          "bbox": {
-            "l": 105.38,
-            "t": 225.66,
-            "r": 177.06,
-            "b": 192.46
-          },
-          "crop_bbox": {
-            "l": 101.38,
-            "t": 229.66,
-            "r": 181.06,
-            "b": 188.46
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "of",
-          "gcv_text": "Indrazen",
-          "page_no": 1,
-          "bbox": {
-            "l": 177.39,
-            "t": 224.31,
-            "r": 256.68,
-            "b": 191.01
-          },
-          "crop_bbox": {
-            "l": 173.39,
-            "t": 228.31,
-            "r": 260.68,
-            "b": 187.01
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "Indrasen",
-          "gcv_text": "Indrazen",
-          "page_no": 1,
-          "bbox": {
-            "l": 177.39,
-            "t": 224.31,
-            "r": 256.68,
-            "b": 191.01
-          },
-          "crop_bbox": {
-            "l": 173.39,
-            "t": 228.31,
-            "r": 260.68,
-            "b": 187.01
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 3,
-          "gt_text": "C",
-          "gcv_text": "Indrazen",
-          "page_no": 1,
-          "bbox": {
-            "l": 177.39,
-            "t": 224.31,
-            "r": 256.68,
-            "b": 191.01
-          },
-          "crop_bbox": {
-            "l": 173.39,
-            "t": 228.31,
-            "r": 260.68,
-            "b": 187.01
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 4,
-          "gt_text": "11-6-13",
-          "gcv_text": "11-6-13",
-          "page_no": 1,
-          "bbox": {
-            "l": 200.8,
-            "t": 181.49,
-            "r": 261.27,
-            "b": 162.24
-          },
-          "crop_bbox": {
-            "l": 196.8,
-            "t": 185.49,
-            "r": 265.27,
-            "b": 158.24
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/14": {
-      "self_ref": "#/texts/14",
-      "label": "paragraph",
-      "full_gt_text": "9d. Q2/11.6.13\ntech",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "9d.",
-          "gcv_text": "11-6-13",
-          "page_no": 1,
-          "bbox": {
-            "l": 200.8,
-            "t": 181.49,
-            "r": 261.27,
-            "b": 162.24
-          },
-          "crop_bbox": {
-            "l": 196.8,
-            "t": 185.49,
-            "r": 265.27,
-            "b": 158.24
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Q2/11.6.13",
-          "gcv_text": ".",
-          "page_no": 1,
-          "bbox": {
-            "l": 229.13,
-            "t": 150.5,
-            "r": 247.94,
-            "b": 130.87
-          },
-          "crop_bbox": {
-            "l": 225.13,
-            "t": 154.5,
-            "r": 251.94,
-            "b": 126.87
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "tech",
-          "gcv_text": "Q",
-          "page_no": 1,
-          "bbox": {
-            "l": 242.79,
-            "t": 154.93,
-            "r": 265.86,
-            "b": 134.24
-          },
-          "crop_bbox": {
-            "l": 238.79,
-            "t": 158.93,
-            "r": 269.86,
-            "b": 130.24
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/15": {
-      "self_ref": "#/texts/15",
-      "label": "paragraph",
-      "full_gt_text": "noted\n26/\n17-06-13",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "noted",
-          "gcv_text": "11.6.13",
-          "page_no": 1,
-          "bbox": {
-            "l": 278.63,
-            "t": 158.58,
-            "r": 341.79,
-            "b": 122.79
-          },
-          "crop_bbox": {
-            "l": 274.63,
-            "t": 162.58,
-            "r": 345.79,
-            "b": 118.79
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "26/",
-          "gcv_text": "hotel",
-          "page_no": 1,
-          "bbox": {
-            "l": 299.46,
-            "t": 136.16,
-            "r": 345.26,
-            "b": 102.0
-          },
-          "crop_bbox": {
-            "l": 295.46,
-            "t": 140.16,
-            "r": 349.26,
-            "b": 98.0
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "17-06-13",
-          "gcv_text": "17-06-13",
-          "page_no": 1,
-          "bbox": {
-            "l": 355.01,
-            "t": 120.0,
-            "r": 400.7,
-            "b": 72.94
-          },
-          "crop_bbox": {
-            "l": 351.01,
-            "t": 124.0,
-            "r": 404.7,
-            "b": 68.94
           },
           "rotation_deg": 0
         }

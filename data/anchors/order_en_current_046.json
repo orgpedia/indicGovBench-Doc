@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_046",
-  "total_words": 241,
+  "total_words": 243,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,77 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 464.29,
+            "t": 354.72,
+            "r": 467.64,
+            "b": 344.09
+          },
+          "crop_bbox": {
+            "l": 460.29,
+            "t": 358.72,
+            "r": 471.64,
+            "b": 340.09
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "[SCANNING ARTIFACT]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCANNING",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 566.33,
+            "t": 185.5,
+            "r": 576.12,
+            "b": 177.05
+          },
+          "crop_bbox": {
+            "l": 562.33,
+            "t": 189.5,
+            "r": 580.12,
+            "b": 173.05
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "ARTIFACT]",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 566.33,
+            "t": 185.5,
+            "r": 576.12,
+            "b": 177.05
+          },
+          "crop_bbox": {
+            "l": 562.33,
+            "t": 189.5,
+            "r": 580.12,
+            "b": 173.05
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -4143,10 +4214,10 @@
         }
       ]
     },
-    "#/texts/7": {
-      "self_ref": "#/texts/7",
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
       "label": "paragraph",
-      "full_gt_text": "(R.K.Yadav)",
+      "full_gt_text": "(R.K.Yadav)\nUnder Secretary to the Government of India\nTel:011-24010415",
       "words": [
         {
           "word_idx": 0,
@@ -4166,16 +4237,9 @@
             "b": 340.09
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/8": {
-      "self_ref": "#/texts/8",
-      "label": "paragraph",
-      "full_gt_text": "Under Secretary to the Government of India\nTel:011-24010415",
-      "words": [
+        },
         {
-          "word_idx": 0,
+          "word_idx": 1,
           "gt_text": "Under",
           "gcv_text": "Under",
           "page_no": 1,
@@ -4194,7 +4258,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 2,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,
@@ -4213,7 +4277,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 3,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -4232,7 +4296,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 4,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -4251,7 +4315,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 5,
           "gt_text": "Government",
           "gcv_text": "Government",
           "page_no": 1,
@@ -4270,7 +4334,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 6,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -4289,7 +4353,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 6,
+          "word_idx": 7,
           "gt_text": "India",
           "gcv_text": "India",
           "page_no": 1,
@@ -4308,7 +4372,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 7,
+          "word_idx": 8,
           "gt_text": "Tel:011-24010415",
           "gcv_text": "Tel",
           "page_no": 1,
@@ -4354,10 +4418,10 @@
         }
       ]
     },
-    "#/texts/10": {
-      "self_ref": "#/texts/10",
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
       "label": "paragraph",
-      "full_gt_text": "The Under Secretary (IPS-II),",
+      "full_gt_text": "The Under Secretary (IPS-II),\nMinistry of Home Affairs,\nHall No.34020, Kartavya Bhawan-3,\nJanpath, New Delhi-110001",
       "words": [
         {
           "word_idx": 0,
@@ -4434,16 +4498,9 @@
             "b": 286.0
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/11": {
-      "self_ref": "#/texts/11",
-      "label": "paragraph",
-      "full_gt_text": "Ministry of Home Affairs,",
-      "words": [
+        },
         {
-          "word_idx": 0,
+          "word_idx": 4,
           "gt_text": "Ministry",
           "gcv_text": "Ministry",
           "page_no": 1,
@@ -4462,7 +4519,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 5,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -4481,7 +4538,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 6,
           "gt_text": "Home",
           "gcv_text": "Home",
           "page_no": 1,
@@ -4500,7 +4557,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 7,
           "gt_text": "Affairs,",
           "gcv_text": "Affairs",
           "page_no": 1,
@@ -4517,16 +4574,9 @@
             "b": 275.14
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/12": {
-      "self_ref": "#/texts/12",
-      "label": "paragraph",
-      "full_gt_text": "Hall No.34020, Kartavya Bhawan-3,",
-      "words": [
+        },
         {
-          "word_idx": 0,
+          "word_idx": 8,
           "gt_text": "Hall",
           "gcv_text": "Hall",
           "page_no": 1,
@@ -4545,7 +4595,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 9,
           "gt_text": "No.34020,",
           "gcv_text": "No.34020",
           "page_no": 1,
@@ -4564,7 +4614,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 10,
           "gt_text": "Kartavya",
           "gcv_text": "Kartavya",
           "page_no": 1,
@@ -4583,7 +4633,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 11,
           "gt_text": "Bhawan-3,",
           "gcv_text": "Bhawan",
           "page_no": 1,
@@ -4600,35 +4650,28 @@
             "b": 262.34
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/13": {
-      "self_ref": "#/texts/13",
-      "label": "paragraph",
-      "full_gt_text": "Janpath, New Delhi-110001",
-      "words": [
+        },
         {
-          "word_idx": 0,
+          "word_idx": 12,
           "gt_text": "Janpath,",
-          "gcv_text": ",",
+          "gcv_text": "-",
           "page_no": 1,
           "bbox": {
-            "l": 260.94,
-            "t": 289.04,
-            "r": 264.29,
-            "b": 279.14
+            "l": 304.43,
+            "t": 277.45,
+            "r": 308.25,
+            "b": 266.58
           },
           "crop_bbox": {
-            "l": 256.94,
-            "t": 293.04,
-            "r": 268.29,
-            "b": 275.14
+            "l": 300.43,
+            "t": 281.45,
+            "r": 312.25,
+            "b": 262.58
           },
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 13,
           "gt_text": "New",
           "gcv_text": "New",
           "page_no": 1,
@@ -4647,7 +4690,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 14,
           "gt_text": "Delhi-110001",
           "gcv_text": "Delhi",
           "page_no": 1,
@@ -4662,32 +4705,6 @@
             "t": 271.55,
             "r": 238.65,
             "b": 253.65
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/14": {
-      "self_ref": "#/texts/14",
-      "label": "paragraph",
-      "full_gt_text": "ক্ষ",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "ক্ষ",
-          "gcv_text": "",
-          "page_no": 1,
-          "bbox": {
-            "l": 566.33,
-            "t": 185.5,
-            "r": 576.12,
-            "b": 177.05
-          },
-          "crop_bbox": {
-            "l": 562.33,
-            "t": 189.5,
-            "r": 580.12,
-            "b": 173.05
           },
           "rotation_deg": 0
         }

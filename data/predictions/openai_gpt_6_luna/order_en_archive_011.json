@@ -1,0 +1,254 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        183.26,
+        185.24,
+        220.15,
+        185.24,
+        220.15,
+        227.34,
+        183.26,
+        227.34
+      ],
+      "text": "To\nJoint Secretary to the Cabinet.\nAll Members of the Council of Ministers."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        89.25,
+        227.34,
+        100.56,
+        227.34,
+        100.56,
+        309.01,
+        89.25,
+        309.01
+      ],
+      "text": "MANUAL ML"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        137.44,
+        227.34,
+        174.93,
+        227.34,
+        174.93,
+        688.76,
+        137.44,
+        688.76
+      ],
+      "text": "Copy forwarded to the Principal Private Secretary to the\nPrime Minister/the Private Secretary to the Prime Minister, for\ninformation."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        255.85,
+        259.34,
+        265.97,
+        259.34,
+        265.97,
+        275.33,
+        255.85,
+        275.33
+      ],
+      "text": "---"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        271.32,
+        271.97,
+        358.78,
+        271.97,
+        358.78,
+        358.69,
+        271.32,
+        358.69
+      ],
+      "text": "The undersigned is directed to state that, with\neffect from the forenoon of February 16, 1963, the designation\nof Shri S.K. Dey will be \"Minister of Community Development\nand Cooperation\"."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        379.01,
+        356.17,
+        449.23,
+        356.17,
+        449.23,
+        537.2,
+        379.01,
+        537.2
+      ],
+      "text": "No.55/4/CF-63\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the 16th February 1963."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        371.88,
+        361.22,
+        382.59,
+        361.22,
+        382.59,
+        380.58,
+        371.88,
+        380.58
+      ],
+      "text": "---"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        492.06,
+        373.01,
+        502.18,
+        373.01,
+        502.18,
+        452.15,
+        492.06,
+        452.15
+      ],
+      "text": "No.77"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        242.76,
+        403.32,
+        253.47,
+        403.32,
+        253.47,
+        420.16,
+        242.76,
+        420.16
+      ],
+      "text": "---"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        241.57,
+        522.04,
+        260.61,
+        522.04,
+        260.61,
+        564.14,
+        241.57,
+        564.14
+      ],
+      "text": "V. Shankar"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        465.88,
+        564.98,
+        474.22,
+        564.98,
+        474.22,
+        633.18,
+        465.88,
+        633.18
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        124.95,
+        614.66,
+        135.06,
+        614.66,
+        135.06,
+        631.5,
+        124.95,
+        631.5
+      ],
+      "text": "---"
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "order": 12,
+      "poly": [
+        110.08,
+        618.03,
+        120.19,
+        618.03,
+        120.19,
+        661.81,
+        110.08,
+        661.81
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 13,
+      "type": "text",
+      "order": 13,
+      "poly": [
+        516.46,
+        641.6,
+        535.5,
+        641.6,
+        535.5,
+        676.97,
+        516.46,
+        676.97
+      ],
+      "text": "168"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 3593,
+      "total": 6887
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002126,
+      "batch": 0.001063
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.21259,
+      "batch": 0.106295,
+      "savings": 0.106295,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

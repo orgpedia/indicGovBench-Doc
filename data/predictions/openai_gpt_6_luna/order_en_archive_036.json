@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_archive_036",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        404.6,
+        20.21,
+        547.4,
+        20.21,
+        547.4,
+        121.25,
+        404.6,
+        121.25
+      ],
+      "text": "ANNEXURE-B 26"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        181.47,
+        58.94,
+        455.18,
+        58.94,
+        455.18,
+        129.67,
+        181.47,
+        129.67
+      ],
+      "text": "LIST OF THE COUNCIL OF MINISTERS ... IN\nAT 10-45 A.M. ON MONDAY, 14 JANUARY, 1980.\n[illegible]"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        261.8,
+        107.78,
+        413.52,
+        107.78,
+        413.52,
+        121.25,
+        261.8,
+        121.25
+      ],
+      "text": "MEMBERS OF THE CABINET"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        89.25,
+        133.04,
+        547.4,
+        133.04,
+        547.4,
+        538.88,
+        89.25,
+        538.88
+      ],
+      "html": "<table><thead><tr><td>No.</td><td>Name</td><td>Portfolio</td></tr></thead><tbody><tr><td>1.</td><td>Shrimati Indira Gandhi</td><td>Prime Minister/All Ministries/Departments not specified below.</td></tr><tr><td>2.</td><td>Rao Birendra Singh</td><td>Minister of Agriculture.</td></tr><tr><td>3.</td><td>Shri [illegible]</td><td>Minister of Education.</td></tr><tr><td>4.</td><td>Shri [illegible]</td><td>Minister of Energy and Irrigation.</td></tr><tr><td>5.</td><td>Shri P. V. Narasimha Rao</td><td>Minister of External Affairs</td></tr><tr><td>6.</td><td>Shri R. Venkataraman</td><td>Minister of Finance.</td></tr><tr><td>7.</td><td>Shri V. P. [illegible]</td><td>Minister of Information and Broadcasting.</td></tr><tr><td>8.</td><td>Giani Zail Singh</td><td>Minister of Home Affairs</td></tr><tr><td>9.</td><td>Shri [illegible]</td><td>Minister of Industries and Supply.</td></tr><tr><td>10.</td><td>Shri [illegible]</td><td>Minister of Railways</td></tr><tr><td>11.</td><td>Shri A. P. Sharma</td><td>Minister of Shipping and Transport</td></tr><tr><td>12.</td><td>Shri J. R. [illegible]</td><td>Minister of Tourism and Civil Aviation.</td></tr><tr><td>13.</td><td>Shri P. C. Sethi</td><td>Minister of Steel and Mines</td></tr><tr><td>14.</td><td>Shri [illegible]</td><td>Minister of Parliamentary Affairs.</td></tr><tr><td>15.</td><td>Shri [illegible]</td><td>Minister of Commerce.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        257.63,
+        571.72,
+        392.7,
+        571.72,
+        392.7,
+        585.19,
+        257.63,
+        585.19
+      ],
+      "text": "MINISTERS OF STATE"
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "order": 5,
+      "poly": [
+        89.25,
+        597.82,
+        550.38,
+        597.82,
+        550.38,
+        779.69,
+        89.25,
+        779.69
+      ],
+      "html": "<table><thead><tr><td>No.</td><td>Name</td><td>Portfolio</td></tr></thead><tbody><tr><td>1.</td><td>Shri [illegible]</td><td>Minister of State in the Ministry of Agriculture.</td></tr><tr><td>2.</td><td>Shri Jagannath Pahadia</td><td>Minister of State in the Ministry of Finance.</td></tr><tr><td>3.</td><td>Shri Nihar Ranjan Laskar</td><td>Minister of State in the Ministry of Health.</td></tr><tr><td>4.</td><td>Shri P. V. [illegible]</td><td>Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>5.</td><td>Shri [illegible]</td><td>Minister of State in the Ministry of Home Affairs.</td></tr><tr><td>6.</td><td>Shri O. K. [illegible]</td><td>Minister of State in the Ministry of Railways.</td></tr><tr><td>7.</td><td>Shri [illegible]</td><td>Minister of State in the Ministry of Tourism and Civil Aviation.</td></tr></tbody></table>"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        512.89,
+        655.92,
+        535.5,
+        655.92,
+        535.5,
+        671.07,
+        512.89,
+        671.07
+      ],
+      "text": "< Here"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 3551,
+      "total": 6845
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002105,
+      "batch": 0.001052
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.21049,
+      "batch": 0.105245,
+      "savings": 0.105245,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

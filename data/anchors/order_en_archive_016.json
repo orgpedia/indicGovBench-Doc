@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_016",
-  "total_words": 184,
+  "total_words": 189,
   "pages": {
     "1": {
       "width": 595.0,
@@ -30,6 +30,103 @@
             "t": 828.71,
             "r": 573.58,
             "b": 807.27
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/16": {
+      "self_ref": "#/texts/16",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Prime",
+          "page_no": 1,
+          "bbox": {
+            "l": 353.5,
+            "t": 237.45,
+            "r": 384.44,
+            "b": 227.85
+          },
+          "crop_bbox": {
+            "l": 349.5,
+            "t": 241.45,
+            "r": 388.44,
+            "b": 223.85
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/19": {
+      "self_ref": "#/texts/19",
+      "label": "paragraph",
+      "full_gt_text": "[SCANNING NUMBER]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCANNING",
+          "gcv_text": "24",
+          "page_no": 1,
+          "bbox": {
+            "l": 367.41,
+            "t": 825.91,
+            "r": 395.95,
+            "b": 800.46
+          },
+          "crop_bbox": {
+            "l": 363.41,
+            "t": 829.91,
+            "r": 399.95,
+            "b": 796.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "NUMBER]",
+          "gcv_text": "NO",
+          "page_no": 1,
+          "bbox": {
+            "l": 347.74,
+            "t": 815.35,
+            "r": 373.88,
+            "b": 791.1
+          },
+          "crop_bbox": {
+            "l": 343.74,
+            "t": 819.35,
+            "r": 377.88,
+            "b": 787.1
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 370.53,
+            "t": 445.37,
+            "r": 374.6,
+            "b": 436.97
+          },
+          "crop_bbox": {
+            "l": 366.53,
+            "t": 449.37,
+            "r": 378.6,
+            "b": 432.97
           },
           "rotation_deg": 0
         }
@@ -450,6 +547,32 @@
             "t": 710.11,
             "r": 487.48,
             "b": 692.74
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/20": {
+      "self_ref": "#/texts/20",
+      "label": "paragraph",
+      "full_gt_text": "...",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "...",
+          "gcv_text": "directed",
+          "page_no": 1,
+          "bbox": {
+            "l": 334.07,
+            "t": 670.81,
+            "r": 386.11,
+            "b": 660.73
+          },
+          "crop_bbox": {
+            "l": 330.07,
+            "t": 674.81,
+            "r": 390.11,
+            "b": 656.73
           },
           "rotation_deg": 0
         }
@@ -3389,71 +3512,14 @@
         }
       ]
     },
-    "#/texts/16": {
-      "self_ref": "#/texts/16",
+    "#/texts/22": {
+      "self_ref": "#/texts/22",
       "label": "paragraph",
       "full_gt_text": "(K. Ramiah)\nUnder Secretary to the Cabinet.",
       "words": [
         {
           "word_idx": 0,
           "gt_text": "(K.",
-          "gcv_text": "Prime",
-          "page_no": 1,
-          "bbox": {
-            "l": 353.5,
-            "t": 237.45,
-            "r": 384.44,
-            "b": 227.85
-          },
-          "crop_bbox": {
-            "l": 349.5,
-            "t": 241.45,
-            "r": 388.44,
-            "b": 223.85
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Ramiah)",
-          "gcv_text": "Minister",
-          "page_no": 1,
-          "bbox": {
-            "l": 391.39,
-            "t": 236.97,
-            "r": 442.95,
-            "b": 226.65
-          },
-          "crop_bbox": {
-            "l": 387.39,
-            "t": 240.97,
-            "r": 446.95,
-            "b": 222.65
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "Under",
-          "gcv_text": ".",
-          "page_no": 1,
-          "bbox": {
-            "l": 444.39,
-            "t": 235.77,
-            "r": 448.23,
-            "b": 226.65
-          },
-          "crop_bbox": {
-            "l": 440.39,
-            "t": 239.77,
-            "r": 452.23,
-            "b": 222.65
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 3,
-          "gt_text": "Secretary",
           "gcv_text": "(",
           "page_no": 1,
           "bbox": {
@@ -3471,8 +3537,8 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
-          "gt_text": "to",
+          "word_idx": 1,
+          "gt_text": "Ramiah)",
           "gcv_text": "K.",
           "page_no": 1,
           "bbox": {
@@ -3490,40 +3556,97 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
-          "gt_text": "the",
-          "gcv_text": "Ramiah",
+          "word_idx": 2,
+          "gt_text": "Under",
+          "gcv_text": "Under",
           "page_no": 1,
           "bbox": {
-            "l": 390.91,
-            "t": 193.51,
-            "r": 430.0,
-            "b": 183.91
+            "l": 304.81,
+            "t": 183.67,
+            "r": 337.43,
+            "b": 174.07
           },
           "crop_bbox": {
-            "l": 386.91,
-            "t": 197.51,
-            "r": 434.0,
-            "b": 179.91
+            "l": 300.81,
+            "t": 187.67,
+            "r": 341.43,
+            "b": 170.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Secretary",
+          "gcv_text": "Secretary",
+          "page_no": 1,
+          "bbox": {
+            "l": 345.1,
+            "t": 182.95,
+            "r": 403.62,
+            "b": 173.11
+          },
+          "crop_bbox": {
+            "l": 341.1,
+            "t": 186.95,
+            "r": 407.62,
+            "b": 169.11
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 410.82,
+            "t": 181.99,
+            "r": 422.81,
+            "b": 172.87
+          },
+          "crop_bbox": {
+            "l": 406.82,
+            "t": 185.99,
+            "r": 426.81,
+            "b": 168.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 430.24,
+            "t": 181.75,
+            "r": 449.43,
+            "b": 172.39
+          },
+          "crop_bbox": {
+            "l": 426.24,
+            "t": 185.75,
+            "r": 453.43,
+            "b": 168.39
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 6,
           "gt_text": "Cabinet.",
-          "gcv_text": ")",
+          "gcv_text": "Cabinet",
           "page_no": 1,
           "bbox": {
-            "l": 431.44,
-            "t": 192.55,
-            "r": 436.0,
-            "b": 183.91
+            "l": 456.62,
+            "t": 181.27,
+            "r": 501.47,
+            "b": 171.67
           },
           "crop_bbox": {
-            "l": 427.44,
-            "t": 196.55,
-            "r": 440.0,
-            "b": 179.91
+            "l": 452.62,
+            "t": 185.27,
+            "r": 505.47,
+            "b": 167.67
           },
           "rotation_deg": 0
         }

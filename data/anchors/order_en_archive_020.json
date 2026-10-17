@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_020",
-  "total_words": 120,
+  "total_words": 125,
   "pages": {
     "1": {
       "width": 595.0,
@@ -113,6 +113,110 @@
             "t": 814.0,
             "r": 387.46,
             "b": 778.22
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/13": {
+      "self_ref": "#/texts/13",
+      "label": "paragraph",
+      "full_gt_text": "[Signature]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[Signature]",
+          "gcv_text": "FRS",
+          "page_no": 1,
+          "bbox": {
+            "l": 395.73,
+            "t": 554.06,
+            "r": 443.1,
+            "b": 523.58
+          },
+          "crop_bbox": {
+            "l": 391.73,
+            "t": 558.06,
+            "r": 447.1,
+            "b": 519.58
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/14": {
+      "self_ref": "#/texts/14",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "ній",
+          "page_no": 1,
+          "bbox": {
+            "l": 447.53,
+            "t": 239.87,
+            "r": 467.83,
+            "b": 230.53
+          },
+          "crop_bbox": {
+            "l": 443.53,
+            "t": 243.87,
+            "r": 471.83,
+            "b": 226.53
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Prime",
+          "page_no": 1,
+          "bbox": {
+            "l": 347.2,
+            "t": 99.24,
+            "r": 381.5,
+            "b": 90.34
+          },
+          "crop_bbox": {
+            "l": 343.2,
+            "t": 103.24,
+            "r": 385.5,
+            "b": 86.34
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/16": {
+      "self_ref": "#/texts/16",
+      "label": "paragraph",
+      "full_gt_text": "[SCAN]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCAN]",
+          "gcv_text": "2",
+          "page_no": 1,
+          "bbox": {
+            "l": 548.8,
+            "t": 740.31,
+            "r": 589.4,
+            "b": 701.37
+          },
+          "crop_bbox": {
+            "l": 544.8,
+            "t": 744.31,
+            "r": 593.4,
+            "b": 697.37
           },
           "rotation_deg": 0
         }
@@ -1746,6 +1850,32 @@
             "t": 215.84,
             "r": 545.57,
             "b": 198.49
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/17": {
+      "self_ref": "#/texts/17",
+      "label": "paragraph",
+      "full_gt_text": "-----",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "-----",
+          "gcv_text": "Deputy",
+          "page_no": 1,
+          "bbox": {
+            "l": 325.97,
+            "t": 209.61,
+            "r": 367.27,
+            "b": 200.49
+          },
+          "crop_bbox": {
+            "l": 321.97,
+            "t": 213.61,
+            "r": 371.27,
+            "b": 196.49
           },
           "rotation_deg": 0
         }

@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_026",
-  "total_words": 784,
+  "total_words": 787,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,51 @@
     }
   },
   "blocks": {
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "MOST IMMEDIATE",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "MOST",
+          "gcv_text": "MOST",
+          "page_no": 1,
+          "bbox": {
+            "l": 467.67,
+            "t": 811.06,
+            "r": 498.1,
+            "b": 803.48
+          },
+          "crop_bbox": {
+            "l": 463.67,
+            "t": 815.06,
+            "r": 502.1,
+            "b": 799.48
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "IMMEDIATE",
+          "gcv_text": "IMMEDIATE",
+          "page_no": 1,
+          "bbox": {
+            "l": 501.84,
+            "t": 811.88,
+            "r": 560.36,
+            "b": 803.89
+          },
+          "crop_bbox": {
+            "l": 497.84,
+            "t": 815.88,
+            "r": 564.36,
+            "b": 799.89
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -14935,6 +14980,32 @@
             "t": 66.7,
             "r": 159.89,
             "b": 49.48
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "...2/-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "...2/-",
+          "gcv_text": ".2",
+          "page_no": 1,
+          "bbox": {
+            "l": 541.63,
+            "t": 27.66,
+            "r": 549.59,
+            "b": 20.49
+          },
+          "crop_bbox": {
+            "l": 537.63,
+            "t": 31.66,
+            "r": 553.59,
+            "b": 16.49
           },
           "rotation_deg": 0
         }

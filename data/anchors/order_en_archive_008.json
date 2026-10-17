@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_008",
-  "total_words": 2,
+  "total_words": 12,
   "pages": {
     "1": {
       "width": 595.0,
@@ -30,6 +30,210 @@
             "t": 815.49,
             "r": 586.28,
             "b": 791.4
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "LIST OF COUNCIL OF MINISTERS\n(as on 09.11.2014)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "LIST",
+          "gcv_text": "LIST",
+          "page_no": 1,
+          "bbox": {
+            "l": 209.69,
+            "t": 806.45,
+            "r": 236.08,
+            "b": 795.16
+          },
+          "crop_bbox": {
+            "l": 205.69,
+            "t": 810.45,
+            "r": 240.08,
+            "b": 791.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "OF",
+          "gcv_text": "OF",
+          "page_no": 1,
+          "bbox": {
+            "l": 239.68,
+            "t": 805.73,
+            "r": 256.23,
+            "b": 794.68
+          },
+          "crop_bbox": {
+            "l": 235.68,
+            "t": 809.73,
+            "r": 260.23,
+            "b": 790.68
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "COUNCIL",
+          "gcv_text": "COUNCIL",
+          "page_no": 1,
+          "bbox": {
+            "l": 260.07,
+            "t": 805.25,
+            "r": 315.01,
+            "b": 793.23
+          },
+          "crop_bbox": {
+            "l": 256.07,
+            "t": 809.25,
+            "r": 319.01,
+            "b": 789.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "OF",
+          "gcv_text": "OF",
+          "page_no": 1,
+          "bbox": {
+            "l": 318.61,
+            "t": 803.8,
+            "r": 334.69,
+            "b": 792.99
+          },
+          "crop_bbox": {
+            "l": 314.61,
+            "t": 807.8,
+            "r": 338.69,
+            "b": 788.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "MINISTERS",
+          "gcv_text": "MINISTERS",
+          "page_no": 1,
+          "bbox": {
+            "l": 339.01,
+            "t": 803.56,
+            "r": 404.74,
+            "b": 791.31
+          },
+          "crop_bbox": {
+            "l": 335.01,
+            "t": 807.56,
+            "r": 408.74,
+            "b": 787.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "(as",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 255.03,
+            "t": 790.35,
+            "r": 259.35,
+            "b": 779.78
+          },
+          "crop_bbox": {
+            "l": 251.03,
+            "t": 794.35,
+            "r": 263.35,
+            "b": 775.78
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 276.63,
+            "t": 790.11,
+            "r": 290.3,
+            "b": 779.3
+          },
+          "crop_bbox": {
+            "l": 272.63,
+            "t": 794.11,
+            "r": 294.3,
+            "b": 775.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "09.11.2014)",
+          "gcv_text": "09.11.2014",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.14,
+            "t": 789.87,
+            "r": 355.08,
+            "b": 777.86
+          },
+          "crop_bbox": {
+            "l": 290.14,
+            "t": 793.87,
+            "r": 359.08,
+            "b": 773.86
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "CABINET MINISTERS",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "CABINET",
+          "gcv_text": "CABINET",
+          "page_no": 1,
+          "bbox": {
+            "l": 243.52,
+            "t": 639.01,
+            "r": 297.26,
+            "b": 627.72
+          },
+          "crop_bbox": {
+            "l": 239.52,
+            "t": 643.01,
+            "r": 301.26,
+            "b": 623.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "MINISTERS",
+          "gcv_text": "MINISTERS",
+          "page_no": 1,
+          "bbox": {
+            "l": 301.1,
+            "t": 637.57,
+            "r": 366.36,
+            "b": 626.03
+          },
+          "crop_bbox": {
+            "l": 297.1,
+            "t": 641.57,
+            "r": 370.36,
+            "b": 622.03
           },
           "rotation_deg": 0
         }

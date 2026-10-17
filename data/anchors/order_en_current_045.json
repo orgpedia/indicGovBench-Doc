@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_045",
-  "total_words": 282,
+  "total_words": 283,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/11": {
+      "self_ref": "#/texts/11",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Yours",
+          "page_no": 1,
+          "bbox": {
+            "l": 442.17,
+            "t": 397.24,
+            "r": 471.44,
+            "b": 386.92
+          },
+          "crop_bbox": {
+            "l": 438.17,
+            "t": 401.24,
+            "r": 475.44,
+            "b": 382.92
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -3366,58 +3392,51 @@
         }
       ]
     },
-    "#/texts/11": {
-      "self_ref": "#/texts/11",
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
       "label": "paragraph",
-      "full_gt_text": "(Sanjeev Kumar)",
+      "full_gt_text": "(Sanjeev Kumar)\nUnder Secretary to the Govt. of India",
       "words": [
         {
           "word_idx": 0,
           "gt_text": "(Sanjeev",
-          "gcv_text": "Yours",
+          "gcv_text": "(",
           "page_no": 1,
           "bbox": {
-            "l": 442.17,
-            "t": 397.24,
-            "r": 471.44,
-            "b": 386.92
+            "l": 434.73,
+            "t": 345.15,
+            "r": 438.81,
+            "b": 333.87
           },
           "crop_bbox": {
-            "l": 438.17,
-            "t": 401.24,
-            "r": 475.44,
-            "b": 382.92
+            "l": 430.73,
+            "t": 349.15,
+            "r": 442.81,
+            "b": 329.87
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 1,
           "gt_text": "Kumar)",
-          "gcv_text": "faithfully",
+          "gcv_text": "Sanjeev",
           "page_no": 1,
           "bbox": {
-            "l": 474.32,
-            "t": 396.76,
-            "r": 517.03,
-            "b": 386.2
+            "l": 437.61,
+            "t": 345.39,
+            "r": 479.6,
+            "b": 333.63
           },
           "crop_bbox": {
-            "l": 470.32,
-            "t": 400.76,
-            "r": 521.03,
-            "b": 382.2
+            "l": 433.61,
+            "t": 349.39,
+            "r": 483.6,
+            "b": 329.63
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/12": {
-      "self_ref": "#/texts/12",
-      "label": "paragraph",
-      "full_gt_text": "Under Secretary to the Govt. of India",
-      "words": [
+        },
         {
-          "word_idx": 0,
+          "word_idx": 2,
           "gt_text": "Under",
           "gcv_text": "Under",
           "page_no": 1,
@@ -3436,7 +3455,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 3,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,
@@ -3455,7 +3474,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 4,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -3474,7 +3493,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 5,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3493,7 +3512,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 6,
           "gt_text": "Govt.",
           "gcv_text": "Govt",
           "page_no": 1,
@@ -3512,7 +3531,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 5,
+          "word_idx": 7,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -3531,7 +3550,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 6,
+          "word_idx": 8,
           "gt_text": "India",
           "gcv_text": "India",
           "page_no": 1,

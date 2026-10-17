@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_023",
-  "total_words": 351,
+  "total_words": 353,
   "pages": {
     "1": {
       "width": 595.0,
@@ -94,6 +94,58 @@
             "t": 818.85,
             "r": 344.21,
             "b": 793.8
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/17": {
+      "self_ref": "#/texts/17",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 403.78,
+            "t": 191.46,
+            "r": 407.62,
+            "b": 182.57
+          },
+          "crop_bbox": {
+            "l": 399.78,
+            "t": 195.46,
+            "r": 411.62,
+            "b": 178.57
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/18": {
+      "self_ref": "#/texts/18",
+      "label": "paragraph",
+      "full_gt_text": "[SCAN]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCAN]",
+          "gcv_text": "ilis",
+          "page_no": 1,
+          "bbox": {
+            "l": 502.39,
+            "t": 824.94,
+            "r": 530.7,
+            "b": 795.64
+          },
+          "crop_bbox": {
+            "l": 498.39,
+            "t": 828.94,
+            "r": 534.7,
+            "b": 791.64
           },
           "rotation_deg": 0
         }

@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_006",
-  "total_words": 214,
+  "total_words": 212,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Ilals",
+          "page_no": 1,
+          "bbox": {
+            "l": 467.57,
+            "t": 504.14,
+            "r": 515.48,
+            "b": 472.47
+          },
+          "crop_bbox": {
+            "l": 463.57,
+            "t": 508.14,
+            "r": 519.48,
+            "b": 468.47
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -2084,51 +2110,6 @@
         }
       ]
     },
-    "#/texts/6": {
-      "self_ref": "#/texts/6",
-      "label": "paragraph",
-      "full_gt_text": "llala h",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "llala",
-          "gcv_text": "Ilals",
-          "page_no": 1,
-          "bbox": {
-            "l": 467.57,
-            "t": 504.14,
-            "r": 515.48,
-            "b": 472.47
-          },
-          "crop_bbox": {
-            "l": 463.57,
-            "t": 508.14,
-            "r": 519.48,
-            "b": 468.47
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "h",
-          "gcv_text": "(",
-          "page_no": 1,
-          "bbox": {
-            "l": 471.4,
-            "t": 465.99,
-            "r": 476.43,
-            "b": 455.91
-          },
-          "crop_bbox": {
-            "l": 467.4,
-            "t": 469.99,
-            "r": 480.43,
-            "b": 451.91
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
@@ -3240,7 +3221,7 @@
     "#/texts/16": {
       "self_ref": "#/texts/16",
       "label": "paragraph",
-      "full_gt_text": "2. The Secretary, Central Vigilance Commission, Satarkta Bhawan, GPO Complex, Block-\nA, INA, New Delhi-110023.",
+      "full_gt_text": "2. The Secretary, Central Vigilance Commission, Satarkta Bhawan, GPO Complex, Block-A, INA, New Delhi-110023.",
       "words": [
         {
           "word_idx": 0,
@@ -3434,7 +3415,26 @@
         },
         {
           "word_idx": 10,
-          "gt_text": "Block-",
+          "gt_text": "Block-A,",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 492.48,
+            "t": 266.11,
+            "r": 495.35,
+            "b": 255.07
+          },
+          "crop_bbox": {
+            "l": 488.48,
+            "t": 270.11,
+            "r": 499.35,
+            "b": 251.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "INA,",
           "gcv_text": "Block-",
           "page_no": 1,
           "bbox": {
@@ -3452,45 +3452,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 11,
-          "gt_text": "A,",
-          "gcv_text": "110023",
-          "page_no": 1,
-          "bbox": {
-            "l": 207.44,
-            "t": 250.99,
-            "r": 240.73,
-            "b": 241.15
-          },
-          "crop_bbox": {
-            "l": 203.44,
-            "t": 254.99,
-            "r": 244.73,
-            "b": 237.15
-          },
-          "rotation_deg": 0
-        },
-        {
           "word_idx": 12,
-          "gt_text": "INA,",
-          "gcv_text": ".",
-          "page_no": 1,
-          "bbox": {
-            "l": 241.21,
-            "t": 250.75,
-            "r": 244.32,
-            "b": 241.63
-          },
-          "crop_bbox": {
-            "l": 237.21,
-            "t": 254.75,
-            "r": 248.32,
-            "b": 237.63
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 13,
           "gt_text": "New",
           "gcv_text": "New",
           "page_no": 1,
@@ -3509,7 +3471,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 14,
+          "word_idx": 13,
           "gt_text": "Delhi-110023.",
           "gcv_text": "Delhi",
           "page_no": 1,

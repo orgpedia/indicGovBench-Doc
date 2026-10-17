@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_012",
-  "total_words": 166,
+  "total_words": 169,
   "pages": {
     "1": {
       "width": 595.0,
@@ -30,6 +30,84 @@
             "t": 814.55,
             "r": 509.79,
             "b": 789.02
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/19": {
+      "self_ref": "#/texts/19",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "DZupra",
+          "page_no": 1,
+          "bbox": {
+            "l": 357.34,
+            "t": 572.86,
+            "r": 407.7,
+            "b": 554.37
+          },
+          "crop_bbox": {
+            "l": 353.34,
+            "t": 576.86,
+            "r": 411.7,
+            "b": 550.37
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/20": {
+      "self_ref": "#/texts/20",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Депорта",
+          "page_no": 1,
+          "bbox": {
+            "l": 350.14,
+            "t": 423.76,
+            "r": 396.67,
+            "b": 400.47
+          },
+          "crop_bbox": {
+            "l": 346.14,
+            "t": 427.76,
+            "r": 400.67,
+            "b": 396.47
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Dempn",
+          "page_no": 1,
+          "bbox": {
+            "l": 347.5,
+            "t": 293.39,
+            "r": 397.39,
+            "b": 273.46
+          },
+          "crop_bbox": {
+            "l": 343.5,
+            "t": 297.39,
+            "r": 401.39,
+            "b": 269.46
           },
           "rotation_deg": 0
         }

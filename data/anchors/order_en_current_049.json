@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_049",
-  "total_words": 204,
+  "total_words": 205,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "-2-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "-2-",
+          "gcv_text": "-2-",
+          "page_no": 1,
+          "bbox": {
+            "l": 308.47,
+            "t": 771.23,
+            "r": 322.47,
+            "b": 764.42
+          },
+          "crop_bbox": {
+            "l": 304.47,
+            "t": 775.23,
+            "r": 326.47,
+            "b": 760.42
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -3512,7 +3538,7 @@
     "#/texts/6": {
       "self_ref": "#/texts/6",
       "label": "paragraph",
-      "full_gt_text": "(*) If vigilance clearance had been obtained from the Commission in the past, the\ninformation may be provided for the period thereafter.",
+      "full_gt_text": "(*) If vigilance clearance had been obtained from the Commission in the past, the information may be provided for the period thereafter.",
       "words": [
         {
           "word_idx": 0,

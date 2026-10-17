@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "option",
+          "page_no": 1,
+          "bbox": {
+            "l": 96.87,
+            "t": 120.89,
+            "r": 133.05,
+            "b": 112.27
+          },
+          "crop_bbox": {
+            "l": 92.87,
+            "t": 124.89,
+            "r": 137.05,
+            "b": 108.27
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -1997,7 +2023,7 @@
     "#/texts/5": {
       "self_ref": "#/texts/5",
       "label": "paragraph",
-      "full_gt_text": "On their promotion to the post of Head Clerk/Assistant In-\ncharge/Assistant, they are entitled to exercise an option to get their pay\nfixed in the promotional post in accordance with the provisions contained\nunder the Saving Clause of FR 22(1)(a)(1). The option shall be exercised\nwithin one month from the date of reporting to the promoted post and the\noption once exercised shall be final.",
+      "full_gt_text": "On their promotion to the post of Head Clerk/Assistant In-charge/Assistant, they are entitled to exercise an option to get their pay\nfixed in the promotional post in accordance with the provisions contained\nunder the Saving Clause of FR 22(1)(a)(1). The option shall be exercised\nwithin one month from the date of reporting to the promoted post and the\noption once exercised shall be final.",
       "words": [
         {
           "word_idx": 0,
@@ -2172,44 +2198,25 @@
         },
         {
           "word_idx": 9,
-          "gt_text": "In-",
-          "gcv_text": "In-",
+          "gt_text": "In-charge/Assistant,",
+          "gcv_text": "/",
           "page_no": 1,
           "bbox": {
-            "l": 517.97,
+            "l": 447.94,
             "t": 178.82,
-            "r": 535.24,
+            "r": 454.01,
             "b": 169.4
           },
           "crop_bbox": {
-            "l": 513.97,
+            "l": 443.94,
             "t": 182.82,
-            "r": 539.24,
+            "r": 458.01,
             "b": 165.4
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 10,
-          "gt_text": "charge/Assistant,",
-          "gcv_text": "charge",
-          "page_no": 1,
-          "bbox": {
-            "l": 97.57,
-            "t": 168.0,
-            "r": 136.55,
-            "b": 158.38
-          },
-          "crop_bbox": {
-            "l": 93.57,
-            "t": 172.0,
-            "r": 140.55,
-            "b": 154.38
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 11,
           "gt_text": "they",
           "gcv_text": "they",
           "page_no": 1,
@@ -2228,7 +2235,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 12,
+          "word_idx": 11,
           "gt_text": "are",
           "gcv_text": "are",
           "page_no": 1,
@@ -2247,7 +2254,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 13,
+          "word_idx": 12,
           "gt_text": "entitled",
           "gcv_text": "entitled",
           "page_no": 1,
@@ -2266,7 +2273,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 14,
+          "word_idx": 13,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -2285,7 +2292,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 15,
+          "word_idx": 14,
           "gt_text": "exercise",
           "gcv_text": "exercise",
           "page_no": 1,
@@ -2304,7 +2311,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 16,
+          "word_idx": 15,
           "gt_text": "an",
           "gcv_text": "an",
           "page_no": 1,
@@ -2323,7 +2330,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 17,
+          "word_idx": 16,
           "gt_text": "option",
           "gcv_text": "option",
           "page_no": 1,
@@ -2342,7 +2349,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 18,
+          "word_idx": 17,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -2361,7 +2368,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 19,
+          "word_idx": 18,
           "gt_text": "get",
           "gcv_text": "",
           "page_no": 1,
@@ -2380,7 +2387,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 20,
+          "word_idx": 19,
           "gt_text": "their",
           "gcv_text": "",
           "page_no": 1,
@@ -2399,7 +2406,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 21,
+          "word_idx": 20,
           "gt_text": "pay",
           "gcv_text": "",
           "page_no": 1,
@@ -2418,7 +2425,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 22,
+          "word_idx": 21,
           "gt_text": "fixed",
           "gcv_text": "fixed",
           "page_no": 1,
@@ -2437,7 +2444,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 23,
+          "word_idx": 22,
           "gt_text": "in",
           "gcv_text": "in",
           "page_no": 1,
@@ -2456,7 +2463,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 24,
+          "word_idx": 23,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2475,7 +2482,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 25,
+          "word_idx": 24,
           "gt_text": "promotional",
           "gcv_text": "promotional",
           "page_no": 1,
@@ -2494,7 +2501,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 26,
+          "word_idx": 25,
           "gt_text": "post",
           "gcv_text": "post",
           "page_no": 1,
@@ -2513,7 +2520,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 27,
+          "word_idx": 26,
           "gt_text": "in",
           "gcv_text": "in",
           "page_no": 1,
@@ -2532,7 +2539,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 28,
+          "word_idx": 27,
           "gt_text": "accordance",
           "gcv_text": "accordance",
           "page_no": 1,
@@ -2551,7 +2558,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 29,
+          "word_idx": 28,
           "gt_text": "with",
           "gcv_text": "with",
           "page_no": 1,
@@ -2570,7 +2577,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 30,
+          "word_idx": 29,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2589,7 +2596,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 31,
+          "word_idx": 30,
           "gt_text": "provisions",
           "gcv_text": "provisions",
           "page_no": 1,
@@ -2608,7 +2615,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 32,
+          "word_idx": 31,
           "gt_text": "contained",
           "gcv_text": "contained",
           "page_no": 1,
@@ -2627,7 +2634,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 33,
+          "word_idx": 32,
           "gt_text": "under",
           "gcv_text": "under",
           "page_no": 1,
@@ -2646,7 +2653,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 34,
+          "word_idx": 33,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2665,7 +2672,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 35,
+          "word_idx": 34,
           "gt_text": "Saving",
           "gcv_text": "Saving",
           "page_no": 1,
@@ -2684,7 +2691,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 36,
+          "word_idx": 35,
           "gt_text": "Clause",
           "gcv_text": "Clause",
           "page_no": 1,
@@ -2703,7 +2710,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 37,
+          "word_idx": 36,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2722,7 +2729,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 38,
+          "word_idx": 37,
           "gt_text": "FR",
           "gcv_text": "FR",
           "page_no": 1,
@@ -2741,7 +2748,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 39,
+          "word_idx": 38,
           "gt_text": "22(1)(a)(1).",
           "gcv_text": "22",
           "page_no": 1,
@@ -2760,7 +2767,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 40,
+          "word_idx": 39,
           "gt_text": "The",
           "gcv_text": "The",
           "page_no": 1,
@@ -2779,7 +2786,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 41,
+          "word_idx": 40,
           "gt_text": "option",
           "gcv_text": "option",
           "page_no": 1,
@@ -2798,7 +2805,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 42,
+          "word_idx": 41,
           "gt_text": "shall",
           "gcv_text": "shall",
           "page_no": 1,
@@ -2817,7 +2824,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 43,
+          "word_idx": 42,
           "gt_text": "be",
           "gcv_text": "be",
           "page_no": 1,
@@ -2836,7 +2843,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 44,
+          "word_idx": 43,
           "gt_text": "exercised",
           "gcv_text": "exercised",
           "page_no": 1,
@@ -2855,7 +2862,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 45,
+          "word_idx": 44,
           "gt_text": "within",
           "gcv_text": "within",
           "page_no": 1,
@@ -2874,7 +2881,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 46,
+          "word_idx": 45,
           "gt_text": "one",
           "gcv_text": "one",
           "page_no": 1,
@@ -2893,7 +2900,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 47,
+          "word_idx": 46,
           "gt_text": "month",
           "gcv_text": "month",
           "page_no": 1,
@@ -2912,7 +2919,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 48,
+          "word_idx": 47,
           "gt_text": "from",
           "gcv_text": "from",
           "page_no": 1,
@@ -2931,7 +2938,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 49,
+          "word_idx": 48,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2950,7 +2957,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 50,
+          "word_idx": 49,
           "gt_text": "date",
           "gcv_text": "date",
           "page_no": 1,
@@ -2969,7 +2976,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 51,
+          "word_idx": 50,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2988,7 +2995,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 52,
+          "word_idx": 51,
           "gt_text": "reporting",
           "gcv_text": "reporting",
           "page_no": 1,
@@ -3007,7 +3014,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 53,
+          "word_idx": 52,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -3026,7 +3033,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 54,
+          "word_idx": 53,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3045,7 +3052,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 55,
+          "word_idx": 54,
           "gt_text": "promoted",
           "gcv_text": "promoted",
           "page_no": 1,
@@ -3064,7 +3071,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 56,
+          "word_idx": 55,
           "gt_text": "post",
           "gcv_text": "post",
           "page_no": 1,
@@ -3083,7 +3090,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 57,
+          "word_idx": 56,
           "gt_text": "and",
           "gcv_text": "and",
           "page_no": 1,
@@ -3102,7 +3109,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 58,
+          "word_idx": 57,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3121,7 +3128,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 59,
+          "word_idx": 58,
           "gt_text": "option",
           "gcv_text": "option",
           "page_no": 1,
@@ -3140,7 +3147,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 60,
+          "word_idx": 59,
           "gt_text": "once",
           "gcv_text": "once",
           "page_no": 1,
@@ -3159,7 +3166,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 61,
+          "word_idx": 60,
           "gt_text": "exercised",
           "gcv_text": "exercised",
           "page_no": 1,
@@ -3178,7 +3185,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 62,
+          "word_idx": 61,
           "gt_text": "shall",
           "gcv_text": "shall",
           "page_no": 1,
@@ -3197,7 +3204,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 63,
+          "word_idx": 62,
           "gt_text": "be",
           "gcv_text": "be",
           "page_no": 1,
@@ -3216,7 +3223,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 64,
+          "word_idx": 63,
           "gt_text": "final.",
           "gcv_text": "final",
           "page_no": 1,
@@ -3244,76 +3251,76 @@
         {
           "word_idx": 0,
           "gt_text": "Page",
-          "gcv_text": "final",
+          "gcv_text": "Page",
           "page_no": 1,
           "bbox": {
-            "l": 272.64,
-            "t": 120.89,
-            "r": 299.02,
-            "b": 112.27
+            "l": 290.85,
+            "t": 80.79,
+            "r": 313.49,
+            "b": 72.57
           },
           "crop_bbox": {
-            "l": 268.64,
-            "t": 124.89,
-            "r": 303.02,
-            "b": 108.27
+            "l": 286.85,
+            "t": 84.79,
+            "r": 317.49,
+            "b": 68.57
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 1,
           "gt_text": "1",
-          "gcv_text": ".",
+          "gcv_text": "1",
           "page_no": 1,
           "bbox": {
-            "l": 298.32,
-            "t": 120.89,
-            "r": 302.05,
-            "b": 112.27
+            "l": 314.42,
+            "t": 80.79,
+            "r": 320.26,
+            "b": 72.97
           },
           "crop_bbox": {
-            "l": 294.32,
-            "t": 124.89,
-            "r": 306.05,
-            "b": 108.27
+            "l": 310.42,
+            "t": 84.79,
+            "r": 324.26,
+            "b": 68.97
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 2,
           "gt_text": "of",
-          "gcv_text": ".",
+          "gcv_text": "of",
           "page_no": 1,
           "bbox": {
-            "l": 298.32,
-            "t": 120.89,
-            "r": 302.05,
-            "b": 112.27
+            "l": 322.13,
+            "t": 81.19,
+            "r": 333.1,
+            "b": 72.97
           },
           "crop_bbox": {
-            "l": 294.32,
-            "t": 124.89,
-            "r": 306.05,
-            "b": 108.27
+            "l": 318.13,
+            "t": 85.19,
+            "r": 337.1,
+            "b": 68.97
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 3,
           "gt_text": "2",
-          "gcv_text": ".",
+          "gcv_text": "2",
           "page_no": 1,
           "bbox": {
-            "l": 298.32,
-            "t": 120.89,
-            "r": 302.05,
-            "b": 112.27
+            "l": 332.86,
+            "t": 80.99,
+            "r": 339.63,
+            "b": 73.17
           },
           "crop_bbox": {
-            "l": 294.32,
-            "t": 124.89,
-            "r": 306.05,
-            "b": 108.27
+            "l": 328.86,
+            "t": 84.99,
+            "r": 343.63,
+            "b": 69.17
           },
           "rotation_deg": 0
         }

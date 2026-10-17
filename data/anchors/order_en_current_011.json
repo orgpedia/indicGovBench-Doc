@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_011",
-  "total_words": 482,
+  "total_words": 485,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "[LOGO]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[LOGO]",
+          "gcv_text": "सत्यमेव",
+          "page_no": 1,
+          "bbox": {
+            "l": 269.95,
+            "t": 737.62,
+            "r": 296.3,
+            "b": 728.26
+          },
+          "crop_bbox": {
+            "l": 265.95,
+            "t": 741.62,
+            "r": 300.3,
+            "b": 724.26
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -323,7 +349,7 @@
     "#/texts/1": {
       "self_ref": "#/texts/1",
       "label": "paragraph",
-      "full_gt_text": "भारत सरकार\nकार्मिक और प्रशिक्षण विभाग\nकार्मिक, लोक शिकायत तथा पेंशन मंत्रालय\nGovernment of India\nDepartment of Personnel & Training\nMinistry of Personnel, Public\nGrievances and Pensions",
+      "full_gt_text": "भारत सरकार\nकार्मिक और प्रशिक्षण विभाग\nकार्मिक, लोक शिकायत तथा पेंशन मंत्रालय\nGovernment Of India\nDepartment of Personnel & Training\nMinistry of Personnel, Public\nGrievances and Pensions",
       "words": [
         {
           "word_idx": 0,
@@ -574,7 +600,7 @@
         },
         {
           "word_idx": 13,
-          "gt_text": "of",
+          "gt_text": "Of",
           "gcv_text": "Of",
           "page_no": 1,
           "bbox": {
@@ -8772,7 +8798,7 @@
     "#/texts/11": {
       "self_ref": "#/texts/11",
       "label": "paragraph",
-      "full_gt_text": "कमरा नं. 31039, कर्त्तव्य भवन-3, नई दिल्ली-110001, Room No. 31039, Kartavya Bhavan-3, New Delhi - 110001\nटेली / Tel.: 011-24010404, 011-24010411 E-mail: eo@nic.in Website: www.dopt.gov.in",
+      "full_gt_text": "कमरा नं. 31039, कर्तव्य भवन-3, नई दिल्ली-110001, Room No. 31039, Kartavya Bhavan-3, New Delhi - 110001\nटेली / Tel.: 011-24010404, 011-24010411 E-mail : eo@nic.in Website : www.dopt.gov.in",
       "words": [
         {
           "word_idx": 0,
@@ -8833,7 +8859,7 @@
         },
         {
           "word_idx": 3,
-          "gt_text": "कर्त्तव्य",
+          "gt_text": "कर्तव्य",
           "gcv_text": "31039",
           "page_no": 1,
           "bbox": {
@@ -9175,7 +9201,7 @@
         },
         {
           "word_idx": 21,
-          "gt_text": "E-mail:",
+          "gt_text": "E-mail",
           "gcv_text": "E",
           "page_no": 1,
           "bbox": {
@@ -9194,6 +9220,25 @@
         },
         {
           "word_idx": 22,
+          "gt_text": ":",
+          "gcv_text": ":",
+          "page_no": 1,
+          "bbox": {
+            "l": 303.01,
+            "t": 27.59,
+            "r": 306.6,
+            "b": 19.68
+          },
+          "crop_bbox": {
+            "l": 299.01,
+            "t": 31.59,
+            "r": 310.6,
+            "b": 15.68
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
           "gt_text": "eo@nic.in",
           "gcv_text": "eo@nic.in",
           "page_no": 1,
@@ -9212,8 +9257,8 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 23,
-          "gt_text": "Website:",
+          "word_idx": 24,
+          "gt_text": "Website",
           "gcv_text": "Website",
           "page_no": 1,
           "bbox": {
@@ -9231,7 +9276,26 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 24,
+          "word_idx": 25,
+          "gt_text": ":",
+          "gcv_text": ":",
+          "page_no": 1,
+          "bbox": {
+            "l": 427.57,
+            "t": 26.39,
+            "r": 430.92,
+            "b": 18.24
+          },
+          "crop_bbox": {
+            "l": 423.57,
+            "t": 30.39,
+            "r": 434.92,
+            "b": 14.24
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
           "gt_text": "www.dopt.gov.in",
           "gcv_text": "www.dopt.gov.in",
           "page_no": 1,

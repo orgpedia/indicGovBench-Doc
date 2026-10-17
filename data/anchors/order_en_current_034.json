@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_034",
-  "total_words": 128,
+  "total_words": 127,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "math",
+          "page_no": 1,
+          "bbox": {
+            "l": 481.13,
+            "t": 358.91,
+            "r": 524.64,
+            "b": 331.94
+          },
+          "crop_bbox": {
+            "l": 477.13,
+            "t": 362.91,
+            "r": 528.64,
+            "b": 327.94
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -1996,51 +2022,6 @@
             "t": 422.69,
             "r": 553.55,
             "b": 401.57
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/5": {
-      "self_ref": "#/texts/5",
-      "label": "paragraph",
-      "full_gt_text": "Jagannath\n18/25",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Jagannath",
-          "gcv_text": "Jagannath",
-          "page_no": 1,
-          "bbox": {
-            "l": 415.12,
-            "t": 312.01,
-            "r": 478.22,
-            "b": 297.92
-          },
-          "crop_bbox": {
-            "l": 411.12,
-            "t": 316.01,
-            "r": 482.22,
-            "b": 293.92
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "18/25",
-          "gcv_text": "Srinivasan",
-          "page_no": 1,
-          "bbox": {
-            "l": 482.09,
-            "t": 312.5,
-            "r": 545.92,
-            "b": 298.41
-          },
-          "crop_bbox": {
-            "l": 478.09,
-            "t": 316.5,
-            "r": 549.92,
-            "b": 294.41
           },
           "rotation_deg": 0
         }

@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_040",
-  "total_words": 9,
+  "total_words": 11,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,51 @@
     }
   },
   "blocks": {
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "[SCANNING ARTIFACTS]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCANNING",
+          "gcv_text": "Shr",
+          "page_no": 1,
+          "bbox": {
+            "l": 552.27,
+            "t": 842.0,
+            "r": 581.93,
+            "b": 819.3
+          },
+          "crop_bbox": {
+            "l": 548.27,
+            "t": 842.0,
+            "r": 585.93,
+            "b": 815.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "ARTIFACTS]",
+          "gcv_text": "Ms",
+          "page_no": 1,
+          "bbox": {
+            "l": 571.09,
+            "t": 829.5,
+            "r": 594.68,
+            "b": 809.61
+          },
+          "crop_bbox": {
+            "l": 567.09,
+            "t": 833.5,
+            "r": 595.0,
+            "b": 805.61
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",

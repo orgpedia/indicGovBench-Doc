@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_hi_archive_031",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        106.5,
+        229.02,
+        517.05,
+        229.02,
+        517.05,
+        243.34,
+        106.5,
+        243.34
+      ],
+      "text": "संभाग में माह ............ की स्थिति में अनुबंध की कंडिका 3 (सी) के कुल लंबित प्रकरणों का विवरण"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        45.81,
+        242.5,
+        570.61,
+        242.5,
+        570.61,
+        255.97,
+        45.81,
+        255.97
+      ],
+      "text": "संभाग ........................ मण्डल ............................ परिक्षेत्र ......................."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        514.08,
+        255.97,
+        574.17,
+        255.97,
+        574.17,
+        268.6,
+        514.08,
+        268.6
+      ],
+      "text": "(सिर्फ आंकड़ों में)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        42.84,
+        268.6,
+        575.96,
+        268.6,
+        575.96,
+        406.69,
+        42.84,
+        406.69
+      ],
+      "html": "<table><thead><tr><td>स.क्र.</td><td>कार्य कानाम</td><td>अनुबंधक्रमांक</td><td>अनुमानितलागत</td><td>निविदादर</td><td>निविदालागत</td><td>ठेकेदारद्वारा कियाकार्य</td><td>शेषकार्य</td><td>शेष कार्यकी निविदादर</td><td>शेषकार्य कीनिविदालागत</td><td>मूलठेकेदार सेवसूलीयोग्यराशि</td><td>संभाग मेंठेकेदारके नामसे उपलब्धराशि</td><td>ठेकेदारसे कीगईवसूलीकी राशि</td><td>शेषवसूलीयोग्यराशि</td><td>शेष वसूलीयोग्य राशिएवं RRCप्रकरण काक्रमांक एवंदिनांक</td><td>RRCप्रकरणोंकी वर्तमानस्थिति</td><td>किसके</td></tr><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        436.13,
+        444.58,
+        524.2,
+        444.58,
+        524.2,
+        492.57,
+        436.13,
+        492.57
+      ],
+      "text": "कार्यपालन यंत्री\nलोक निर्माण विभाग\nसंभाग ........................\nजिला ........................"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        332.01,
+        795.69,
+        354.62,
+        795.69,
+        354.62,
+        812.53,
+        332.01,
+        812.53
+      ],
+      "text": "12"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2922,
+      "total": 6216
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.00179,
+      "batch": 0.000895
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.17904,
+      "batch": 0.08952,
+      "savings": 0.08952,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

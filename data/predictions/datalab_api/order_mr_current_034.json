@@ -233,16 +233,16 @@
     "tokens": null,
     "compute_details": null,
     "native_costs": {
-      "realtime": 0.003,
-      "batch": 0.003
+      "realtime": 0.004,
+      "batch": 0.004
     },
     "fx": {
       "rate_usd_to_inr": 100.0,
       "source": "USD_TO_INR=100.00"
     },
     "cost_inr": {
-      "realtime": 0.3,
-      "batch": 0.3,
+      "realtime": 0.4,
+      "batch": 0.4,
       "savings": 0.0,
       "batch_discount_pct": 0.0
     }

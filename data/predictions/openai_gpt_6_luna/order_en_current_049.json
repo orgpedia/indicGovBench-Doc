@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_current_049",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        307.62,
+        70.73,
+        322.49,
+        70.73,
+        322.49,
+        79.15,
+        307.62,
+        79.15
+      ],
+      "text": "-2-"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        95.8,
+        82.52,
+        525.98,
+        82.52,
+        525.98,
+        104.41,
+        95.8,
+        104.41
+      ],
+      "text": "VIGILANCE PROFILE OF OFFICERS FOR WHOM VIGILANCE COMMENTS /\nCELARANCE BEING SOUGHT"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        196.95,
+        109.46,
+        434.94,
+        109.46,
+        434.94,
+        118.72,
+        196.95,
+        118.72
+      ],
+      "text": "(To be furnished and signed by the CVO or HOD)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        95.2,
+        134.72,
+        345.69,
+        134.72,
+        345.69,
+        557.4,
+        95.2,
+        557.4
+      ],
+      "html": "<table><thead></thead><tbody><tr><td></td><td>Name of the Officer</td><td>:</td></tr><tr><td>8.</td><td>Whether the officer has been placedon the “Agreed List” or “List ofOfficers of Doubtful Integrity”.(If yes, details to be given)</td><td>:</td></tr><tr><td>9.</td><td>Whether any allegation of misconductinvolving vigilance angle wasexamined against the officer duringthe last 10 years and if so withwhat result (*)</td><td>:</td></tr><tr><td>10.</td><td>Whether any punishment was awarded tothe officer during the last 10 years andif so, the date of imposition and detailsof the penalty (*)</td><td>:</td></tr><tr><td>11.</td><td>Is any disciplinary / criminal proceedingsor charge sheet pending against the officers,as on date. [If so, details to be furnished –including reference no., if any,of the Commission]</td><td>:</td></tr><tr><td>12.</td><td>Is any action contemplated against theofficer as on date [If so, details to befurnished (*)</td><td>:</td></tr><tr><td>13.</td><td>Whether any complaint withvigilance angle is pending againstthe officer [If so, detailsto be furnished].</td><td>:</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        133.88,
+        598.66,
+        174.93,
+        598.66,
+        174.93,
+        609.61,
+        133.88,
+        609.61
+      ],
+      "text": "DATE:"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        391.51,
+        600.35,
+        532.52,
+        600.35,
+        532.52,
+        610.45,
+        391.51,
+        610.45
+      ],
+      "text": "(NAME AND SIGNATURE)"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        95.2,
+        626.45,
+        530.74,
+        626.45,
+        530.74,
+        650.02,
+        95.2,
+        650.02
+      ],
+      "text": "(*) If vigilance clearance had been obtained from the Commission in the past, the\ninformation may be provided for the period thereafter."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3193,
+      "output": 1421,
+      "total": 4614
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.00103,
+      "batch": 0.000515
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.10298,
+      "batch": 0.05149,
+      "savings": 0.05149,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

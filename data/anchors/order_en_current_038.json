@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_038",
-  "total_words": 244,
+  "total_words": 240,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,84 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "31/8/26",
+          "page_no": 1,
+          "bbox": {
+            "l": 477.44,
+            "t": 418.72,
+            "r": 528.78,
+            "b": 392.81
+          },
+          "crop_bbox": {
+            "l": 473.44,
+            "t": 422.72,
+            "r": 532.78,
+            "b": 388.81
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 354.12,
+            "t": 211.88,
+            "r": 363.24,
+            "b": 199.88
+          },
+          "crop_bbox": {
+            "l": 350.12,
+            "t": 215.88,
+            "r": 367.24,
+            "b": 195.88
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/23": {
+      "self_ref": "#/texts/23",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Deputy",
+          "page_no": 1,
+          "bbox": {
+            "l": 360.6,
+            "t": 152.61,
+            "r": 398.99,
+            "b": 137.97
+          },
+          "crop_bbox": {
+            "l": 356.6,
+            "t": 156.61,
+            "r": 402.99,
+            "b": 133.97
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -2319,32 +2397,6 @@
         }
       ]
     },
-    "#/texts/7": {
-      "self_ref": "#/texts/7",
-      "label": "paragraph",
-      "full_gt_text": "31/8/26",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "31/8/26",
-          "gcv_text": "31/8/26",
-          "page_no": 1,
-          "bbox": {
-            "l": 477.44,
-            "t": 418.72,
-            "r": 528.78,
-            "b": 392.81
-          },
-          "crop_bbox": {
-            "l": 473.44,
-            "t": 422.72,
-            "r": 532.78,
-            "b": 388.81
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/8": {
       "self_ref": "#/texts/8",
       "label": "paragraph",
@@ -2647,7 +2699,7 @@
     "#/texts/10": {
       "self_ref": "#/texts/10",
       "label": "paragraph",
-      "full_gt_text": "[No. 45/2026-PWI\nal\n31/e",
+      "full_gt_text": "[No. 45/2026-PW]",
       "words": [
         {
           "word_idx": 0,
@@ -2670,7 +2722,7 @@
         },
         {
           "word_idx": 1,
-          "gt_text": "45/2026-PWI",
+          "gt_text": "45/2026-PW]",
           "gcv_text": "(",
           "page_no": 1,
           "bbox": {
@@ -2684,44 +2736,6 @@
             "t": 376.17,
             "r": 462.97,
             "b": 357.37
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "al",
-          "gcv_text": "Personnel",
-          "page_no": 1,
-          "bbox": {
-            "l": 460.17,
-            "t": 372.17,
-            "r": 511.51,
-            "b": 360.65
-          },
-          "crop_bbox": {
-            "l": 456.17,
-            "t": 376.17,
-            "r": 515.51,
-            "b": 356.65
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 3,
-          "gt_text": "31/e",
-          "gcv_text": ")",
-          "page_no": 1,
-          "bbox": {
-            "l": 511.51,
-            "t": 371.45,
-            "r": 515.35,
-            "b": 360.65
-          },
-          "crop_bbox": {
-            "l": 507.51,
-            "t": 375.45,
-            "r": 519.35,
-            "b": 356.65
           },
           "rotation_deg": 0
         }
@@ -4678,51 +4692,6 @@
         }
       ]
     },
-    "#/texts/21": {
-      "self_ref": "#/texts/21",
-      "label": "paragraph",
-      "full_gt_text": "Ms 31/8/26",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Ms",
-          "gcv_text": "&",
-          "page_no": 1,
-          "bbox": {
-            "l": 354.12,
-            "t": 211.88,
-            "r": 363.24,
-            "b": 199.88
-          },
-          "crop_bbox": {
-            "l": 350.12,
-            "t": 215.88,
-            "r": 367.24,
-            "b": 195.88
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "31/8/26",
-          "gcv_text": "31/8/26",
-          "page_no": 1,
-          "bbox": {
-            "l": 459.21,
-            "t": 183.33,
-            "r": 515.11,
-            "b": 149.25
-          },
-          "crop_bbox": {
-            "l": 455.21,
-            "t": 187.33,
-            "r": 519.11,
-            "b": 145.25
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/22": {
       "self_ref": "#/texts/22",
       "label": "paragraph",
@@ -4763,51 +4732,6 @@
             "t": 155.65,
             "r": 457.69,
             "b": 132.77
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/23": {
-      "self_ref": "#/texts/23",
-      "label": "paragraph",
-      "full_gt_text": "on\n31/8",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "on",
-          "gcv_text": "Deputy",
-          "page_no": 1,
-          "bbox": {
-            "l": 360.6,
-            "t": 152.61,
-            "r": 398.99,
-            "b": 137.97
-          },
-          "crop_bbox": {
-            "l": 356.6,
-            "t": 156.61,
-            "r": 402.99,
-            "b": 133.97
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "31/8",
-          "gcv_text": "31/8",
-          "page_no": 1,
-          "bbox": {
-            "l": 499.27,
-            "t": 126.46,
-            "r": 529.26,
-            "b": 109.9
-          },
-          "crop_bbox": {
-            "l": 495.27,
-            "t": 130.46,
-            "r": 533.26,
-            "b": 105.9
           },
           "rotation_deg": 0
         }

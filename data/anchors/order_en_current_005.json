@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_005",
-  "total_words": 144,
+  "total_words": 148,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Order",
+          "page_no": 1,
+          "bbox": {
+            "l": 433.9,
+            "t": 406.97,
+            "r": 462.67,
+            "b": 397.14
+          },
+          "crop_bbox": {
+            "l": 429.9,
+            "t": 410.97,
+            "r": 466.67,
+            "b": 393.14
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -2640,10 +2666,10 @@
         }
       ]
     },
-    "#/texts/4": {
-      "self_ref": "#/texts/4",
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "By Order\n(Nirmesh Kumar Shukla)\nJoint Secretary",
+      "full_gt_text": "By Order",
       "words": [
         {
           "word_idx": 0,
@@ -2682,10 +2708,17 @@
             "b": 373.71
           },
           "rotation_deg": 0
-        },
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "By Order\n(Nirmesh Kumar Shukla)\nJoint Secretary",
+      "words": [
         {
-          "word_idx": 2,
-          "gt_text": "(Nirmesh",
+          "word_idx": 0,
+          "gt_text": "By",
           "gcv_text": "(",
           "page_no": 1,
           "bbox": {
@@ -2698,6 +2731,44 @@
             "l": 379.56,
             "t": 372.36,
             "r": 391.4,
+            "b": 354.53
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Order",
+          "gcv_text": "Nirmesh",
+          "page_no": 1,
+          "bbox": {
+            "l": 387.4,
+            "t": 368.36,
+            "r": 428.63,
+            "b": 358.53
+          },
+          "crop_bbox": {
+            "l": 383.4,
+            "t": 372.36,
+            "r": 432.63,
+            "b": 354.53
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "(Nirmesh",
+          "gcv_text": "Nirmesh",
+          "page_no": 1,
+          "bbox": {
+            "l": 387.4,
+            "t": 368.36,
+            "r": 428.63,
+            "b": 358.53
+          },
+          "crop_bbox": {
+            "l": 383.4,
+            "t": 372.36,
+            "r": 432.63,
             "b": 354.53
           },
           "rotation_deg": 0
@@ -2775,6 +2846,32 @@
             "t": 358.45,
             "r": 477.7,
             "b": 341.1
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "4",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "4",
+          "gcv_text": "4",
+          "page_no": 1,
+          "bbox": {
+            "l": 503.18,
+            "t": 99.76,
+            "r": 509.9,
+            "b": 93.77
+          },
+          "crop_bbox": {
+            "l": 499.18,
+            "t": 103.76,
+            "r": 513.9,
+            "b": 89.77
           },
           "rotation_deg": 0
         }

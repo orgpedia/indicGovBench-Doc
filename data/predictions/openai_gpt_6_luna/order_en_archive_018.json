@@ -1,0 +1,158 @@
+{
+  "doc_id": "order_en_archive_018",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        500.99,
+        22.73,
+        534.9,
+        22.73,
+        534.9,
+        70.73,
+        500.99,
+        70.73
+      ],
+      "text": "D/2"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        287.38,
+        40.42,
+        377.23,
+        40.42,
+        377.23,
+        66.52,
+        287.38,
+        66.52
+      ],
+      "text": "Sl No 52"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        415.9,
+        75.78,
+        502.77,
+        75.78,
+        502.77,
+        87.57,
+        415.9,
+        87.57
+      ],
+      "text": "MOST IMMEDIATE"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        170.17,
+        86.73,
+        445.65,
+        86.73,
+        445.65,
+        120.41,
+        170.17,
+        120.41
+      ],
+      "text": "No. 55/1/1/88-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        293.93,
+        138.93,
+        476.0,
+        138.93,
+        476.0,
+        164.19,
+        293.93,
+        164.19
+      ],
+      "text": "NEW DELHI, the 25th June,1988.\n4 Asadha, 1910 (S)."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        292.74,
+        171.77,
+        321.3,
+        171.77,
+        321.3,
+        175.98,
+        292.74,
+        175.98
+      ],
+      "text": "-----"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        111.86,
+        181.87,
+        501.58,
+        181.87,
+        501.58,
+        727.49,
+        111.86,
+        727.49
+      ],
+      "text": "The undersigned is directed to say that with effect from\n25th June, 1988 -\n\n(1) Shri Narayan Datt Tiwari relinquished the office of\nthe Minister of Finance and Minister of Commerce.\n(2) Prime Minister relinquished the office of Minister of\nExternal Affairs.\n(3) Shri P.V. Narasimha Rao relinquished the office of\nMinister of Human Resource Development and assumed\nthe office of Minister of External Affairs.\n(4) Shri P. Shiv Shanker relinquished the office of\nMinister of Planning and Minister of Programme\nImplementation and assumed the office of Minister\nof Human Resource Development.\n(5) Shri Vasant Sathe, Minister of Energy relinquished the\noffice of Minister of Communications.\n(6) Shri Bindeshwari Dubey relinquished the office of\nMinister of Law and Justice and assumed the office\nof Minister of Labour.\n(7) Shri Dinesh Singh relinquished the office of Minister\nof Water Resources and assumed the office of\nMinister of Commerce.\n(8) Smt. Mohsina Kidwai, Minister of Urban Development\nrelinquished the office of Minister of Tourism.\n(9) Shri Moti Lal Vora, Minister of Health & Family\nWelfare relinquished the office of Minister of\nCivil Aviation.\n(10) Shri Z.R. Ansari relinquished the office of the\nMinister of State (Independent charge) of the\nMinistry of Environment & Forests and assumed the\noffice of Minister of Environment & Forests.\n(11) Shri Jagdish Tyler relinquished the office of\nMinister of State (Independent charge) of the\nMinistry of Labour and assumed the office of\nMinister of State (Independent charge) of the\nMinistry of Food Processing Industries.\n(12) Shri Shiv Raj Patil relinquished the office of\nMinister of State in the Departments of Defence\nProduction and Supplies in the Ministry of Defence\nand assumed the office of Minister of State\n(Independent charge) of the Ministry of Civil\nAviation and Tourism."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        384.37,
+        753.59,
+        418.28,
+        753.59,
+        418.28,
+        760.33,
+        384.37,
+        760.33
+      ],
+      "text": "...-2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2513,
+      "total": 5807
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001586,
+      "batch": 0.000793
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.15859,
+      "batch": 0.079295,
+      "savings": 0.079295,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

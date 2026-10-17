@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_009",
-  "total_words": 337,
+  "total_words": 338,
   "pages": {
     "1": {
       "width": 595.0,
@@ -5033,6 +5033,32 @@
             "t": 306.9,
             "r": 519.22,
             "b": 288.79
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Yours",
+          "page_no": 1,
+          "bbox": {
+            "l": 442.44,
+            "t": 303.62,
+            "r": 470.73,
+            "b": 293.75
+          },
+          "crop_bbox": {
+            "l": 438.44,
+            "t": 307.62,
+            "r": 474.73,
+            "b": 289.75
           },
           "rotation_deg": 0
         }

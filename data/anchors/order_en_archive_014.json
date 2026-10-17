@@ -54,10 +54,81 @@
         }
       ]
     },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "(of State)",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "(of",
+          "gcv_text": "11",
+          "page_no": 1,
+          "bbox": {
+            "l": 69.79,
+            "t": 162.78,
+            "r": 87.78,
+            "b": 143.81
+          },
+          "crop_bbox": {
+            "l": 65.79,
+            "t": 166.78,
+            "r": 91.78,
+            "b": 139.81
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "State)",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 85.14,
+            "t": 165.18,
+            "r": 101.21,
+            "b": 146.46
+          },
+          "crop_bbox": {
+            "l": 81.14,
+            "t": 169.18,
+            "r": 105.21,
+            "b": 142.46
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
+      "label": "paragraph",
+      "full_gt_text": "92",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "92",
+          "gcv_text": "12",
+          "page_no": 1,
+          "bbox": {
+            "l": 544.88,
+            "t": 815.59,
+            "r": 561.66,
+            "b": 805.03
+          },
+          "crop_bbox": {
+            "l": 540.88,
+            "t": 819.59,
+            "r": 565.66,
+            "b": 801.03
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/1": {
       "self_ref": "#/texts/1",
       "label": "paragraph",
-      "full_gt_text": "IMMEDIATE (92)",
+      "full_gt_text": "IMMEDIATE",
       "words": [
         {
           "word_idx": 0,
@@ -75,25 +146,6 @@
             "t": 819.59,
             "r": 565.66,
             "b": 801.03
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "(92)",
-          "gcv_text": "TMEDIATE",
-          "page_no": 1,
-          "bbox": {
-            "l": 474.13,
-            "t": 798.78,
-            "r": 535.28,
-            "b": 788.46
-          },
-          "crop_bbox": {
-            "l": 470.13,
-            "t": 802.78,
-            "r": 539.28,
-            "b": 784.46
           },
           "rotation_deg": 0
         }
@@ -811,55 +863,10 @@
         }
       ]
     },
-    "#/texts/6": {
-      "self_ref": "#/texts/6",
-      "label": "paragraph",
-      "full_gt_text": "(of State)",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "(of",
-          "gcv_text": "11",
-          "page_no": 1,
-          "bbox": {
-            "l": 69.79,
-            "t": 162.78,
-            "r": 87.78,
-            "b": 143.81
-          },
-          "crop_bbox": {
-            "l": 65.79,
-            "t": 166.78,
-            "r": 91.78,
-            "b": 139.81
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "State)",
-          "gcv_text": "of",
-          "page_no": 1,
-          "bbox": {
-            "l": 85.14,
-            "t": 165.18,
-            "r": 101.21,
-            "b": 146.46
-          },
-          "crop_bbox": {
-            "l": 81.14,
-            "t": 169.18,
-            "r": 105.21,
-            "b": 142.46
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "1. Shri Uma Shankar Dikshit assumed the office of Minister of Works and Housing;\n2. Shri H.N. Bahuguna assumed the office of Minister (of State) of Communications;\n3. Prof. D.P. Chattopadhyaya assumed the office of Minister of State in the Ministry of Health and Family Planning;\n4. Shri Niti Raj Singh Chaudhury relinquished the office of Minister of State in the Ministry of Petroleum, Chemicals and Non-Ferrous Metals and assumed the office of Minister of State in the Ministry of Law and Justice;\n5. Shri D.R. Chavan relinquished the office of Minister of State in the Ministry of Petroleum, Chemicals and Non-Ferrous Metals and assumed the office of Minister (of State) of Supply;\n6. Shri Mohan Dharia assumed the office of Minister of State in the Ministry of Planning;\n7. Shri K.R. Ganesh relinquished the office of Deputy Minister in the Ministry of Finance and assumed the office of Minister of State in the Ministry of Finance;\n8. Shri I.K. Gujral relinquished the office of Minister of Works, Housing and Urban Development and assumed the office of Minister of State in the Ministry of Works and Housing;\n9. Shri Shah Nawaz Khan assumed the office of Minister of State in the Ministry of Steel and Mines;\n10. Dr. (Smt) Sarojini Mahishi relinquished the office of Deputy Minister in the Ministry of Tourism & Civil Aviation and assumed the office of Minister of State in the Ministry of Tourism & Civil Aviation;\n11. Shri Chanshyam Bhai Oza assumed the office of Minister of State in the Ministry of Industrial Development;\n12. Shri Prakashchand B. Sethi relinquished the office of Minister of State (Defence Production) in the Ministry of Defence and assumed the office of Minister of Petroleum and Chemicals;\n13. Shri V.C. Shukla relinquished the office of Minister of State in the Ministry of Finance and assumed the office of Minister of State (Defence Production) in the Ministry of Defence.",
+      "full_gt_text": "1. Shri Uma Shankar Dikshit assumed the office of Minister of Works and Housing;\n2. Shri H.N. Bahuguna assumed the office of Minister (of State) of Communications;\n3. Prof. D.P. Chattopadhyaya assumed the office of Minister of State in the Ministry of Health and Family Planning;\n4. Shri Niti Raj Singh Chaudhury relinquished the office of Minister of State in the Ministry of Petroleum, Chemicals and Non-Ferrous Metals and assumed the office of Minister of State in the Ministry of Law and Justice;\n5. Shri D.R. Chavan relinquished the office of Minister of State in the Ministry of Petroleum, Chemicals and Non-Ferrous Metals and assumed the office of Minister (of State) of Supply;\n6. Shri Mohan Dharia assumed the office of Minister of State in the Ministry of Planning;\n7. Shri K.R. Ganesh relinquished the office of Deputy Minister in the Ministry of Finance and assumed the office of Minister of State in the Ministry of Finance;\n8. Shri I.K. Gujral relinquished the office of Minister of Works, Housing and Urban Development and assumed the office of Minister of State in the Ministry of Works and Housing;\n9. Shri Shah Nawaz Khan assumed the office of Minister of State in the Ministry of Steel and Mines;\n10. Dr. (Smt) Sarojini Mahishi relinquished the office of Deputy Minister in the Ministry of Tourism & Civil Aviation and assumed the office of Minister of State in the Ministry of Tourism & Civil Aviation;\n11. Shri Ghanshyam Bhai Oza assumed the office of Minister of State in the Ministry of Industrial Development;\n12. Shri Prakashchand B. Sethi relinquished the office of Minister of State (Defence Production) in the Ministry of Defence and assumed the office of Minister of Petroleum and Chemicals;\n13. Shri V.C. Shukla relinquished the office of Minister of State in the Ministry of Finance and assumed the office of Minister of State (Defence Production) in the Ministry of Defence.",
       "words": [
         {
           "word_idx": 0,
@@ -5480,7 +5487,7 @@
         },
         {
           "word_idx": 243,
-          "gt_text": "Chanshyam",
+          "gt_text": "Ghanshyam",
           "gcv_text": "Chanshyam",
           "page_no": 1,
           "bbox": {

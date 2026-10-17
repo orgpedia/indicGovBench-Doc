@@ -1,0 +1,142 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        252.88,
+        178.5,
+        338.55,
+        178.5,
+        338.55,
+        196.19,
+        252.88,
+        196.19
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        149.94,
+        248.39,
+        445.65,
+        248.39,
+        445.65,
+        426.05,
+        149.94,
+        426.05
+      ],
+      "text": "सिविल लिस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        283.81,
+        428.58,
+        373.06,
+        428.58,
+        373.06,
+        522.04,
+        283.81,
+        522.04
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        274.89,
+        528.78,
+        316.54,
+        528.78,
+        316.54,
+        555.72,
+        274.89,
+        555.72
+      ],
+      "text": "IPS"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        204.68,
+        591.08,
+        386.75,
+        591.08,
+        386.75,
+        626.45,
+        204.68,
+        626.45
+      ],
+      "text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        228.48,
+        661.81,
+        361.16,
+        661.81,
+        361.16,
+        718.23,
+        228.48,
+        718.23
+      ],
+      "text": "गृह मंत्रालय\nभारत सरकार"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        118.41,
+        729.17,
+        478.38,
+        729.17,
+        478.38,
+        783.06,
+        118.41,
+        783.06
+      ],
+      "text": "MINISTRY OF HOME AFFAIRS\nGOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 408,
+      "total": 3702
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.021336,
+      "batch": 0.010668
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 2.1336,
+      "batch": 1.0668,
+      "savings": 1.0668,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

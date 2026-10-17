@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_019",
-  "total_words": 48,
+  "total_words": 42,
   "pages": {
     "1": {
       "width": 595.0,
@@ -790,127 +790,6 @@
             "t": 701.77,
             "r": 379.15,
             "b": 685.11
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/2": {
-      "self_ref": "#/texts/2",
-      "label": "paragraph",
-      "full_gt_text": "परिशिष्ट - 3\nAPPENDIX - III",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "परिशिष्ट",
-          "gcv_text": "परिशिष्ट",
-          "page_no": 1,
-          "bbox": {
-            "l": 201.29,
-            "t": 617.4,
-            "r": 240.82,
-            "b": 606.52
-          },
-          "crop_bbox": {
-            "l": 197.29,
-            "t": 621.4,
-            "r": 244.82,
-            "b": 602.52
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "-",
-          "gcv_text": "-",
-          "page_no": 1,
-          "bbox": {
-            "l": 245.46,
-            "t": 616.59,
-            "r": 248.89,
-            "b": 606.52
-          },
-          "crop_bbox": {
-            "l": 241.46,
-            "t": 620.59,
-            "r": 252.89,
-            "b": 602.52
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "3",
-          "gcv_text": "3",
-          "page_no": 1,
-          "bbox": {
-            "l": 254.14,
-            "t": 616.59,
-            "r": 260.79,
-            "b": 606.52
-          },
-          "crop_bbox": {
-            "l": 250.14,
-            "t": 620.59,
-            "r": 264.79,
-            "b": 602.52
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 3,
-          "gt_text": "APPENDIX",
-          "gcv_text": "APPENDIX",
-          "page_no": 1,
-          "bbox": {
-            "l": 302.74,
-            "t": 616.19,
-            "r": 355.79,
-            "b": 609.34
-          },
-          "crop_bbox": {
-            "l": 298.74,
-            "t": 620.19,
-            "r": 359.79,
-            "b": 605.34
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 4,
-          "gt_text": "-",
-          "gcv_text": "-",
-          "page_no": 1,
-          "bbox": {
-            "l": 358.61,
-            "t": 616.19,
-            "r": 363.25,
-            "b": 609.34
-          },
-          "crop_bbox": {
-            "l": 354.61,
-            "t": 620.19,
-            "r": 367.25,
-            "b": 605.34
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 5,
-          "gt_text": "III",
-          "gcv_text": "III",
-          "page_no": 1,
-          "bbox": {
-            "l": 364.87,
-            "t": 616.19,
-            "r": 376.97,
-            "b": 609.34
-          },
-          "crop_bbox": {
-            "l": 360.87,
-            "t": 620.19,
-            "r": 380.97,
-            "b": 605.34
           },
           "rotation_deg": 0
         }

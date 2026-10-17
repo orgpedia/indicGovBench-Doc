@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_031",
-  "total_words": 169,
+  "total_words": 176,
   "pages": {
     "1": {
       "width": 595.0,
@@ -120,6 +120,219 @@
             "t": 806.17,
             "r": 538.78,
             "b": 784.01
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "Solu",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Solu",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 77.97,
+            "t": 681.95,
+            "r": 123.8,
+            "b": 650.04
+          },
+          "crop_bbox": {
+            "l": 73.97,
+            "t": 685.95,
+            "r": 127.8,
+            "b": 646.04
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/15": {
+      "self_ref": "#/texts/15",
+      "label": "paragraph",
+      "full_gt_text": "2\nApril\n11\n7/1/85",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "2",
+          "gcv_text": "Th",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.12,
+            "t": 249.31,
+            "r": 147.55,
+            "b": 222.92
+          },
+          "crop_bbox": {
+            "l": 106.12,
+            "t": 253.31,
+            "r": 151.55,
+            "b": 218.92
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "April",
+          "gcv_text": "Th",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.12,
+            "t": 249.31,
+            "r": 147.55,
+            "b": 222.92
+          },
+          "crop_bbox": {
+            "l": 106.12,
+            "t": 253.31,
+            "r": 151.55,
+            "b": 218.92
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "11",
+          "gcv_text": "Th",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.12,
+            "t": 249.31,
+            "r": 147.55,
+            "b": 222.92
+          },
+          "crop_bbox": {
+            "l": 106.12,
+            "t": 253.31,
+            "r": 151.55,
+            "b": 218.92
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "7/1/85",
+          "gcv_text": "7/1/85",
+          "page_no": 1,
+          "bbox": {
+            "l": 130.52,
+            "t": 223.88,
+            "r": 172.02,
+            "b": 199.88
+          },
+          "crop_bbox": {
+            "l": 126.52,
+            "t": 227.88,
+            "r": 176.02,
+            "b": 195.88
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/20": {
+      "self_ref": "#/texts/20",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "da",
+          "page_no": 1,
+          "bbox": {
+            "l": 383.87,
+            "t": 473.67,
+            "r": 408.34,
+            "b": 459.99
+          },
+          "crop_bbox": {
+            "l": 379.87,
+            "t": 477.67,
+            "r": 412.34,
+            "b": 455.99
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 341.17,
+            "t": 453.75,
+            "r": 377.15,
+            "b": 425.68
+          },
+          "crop_bbox": {
+            "l": 337.17,
+            "t": 457.75,
+            "r": 381.15,
+            "b": 421.68
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/22": {
+      "self_ref": "#/texts/22",
+      "label": "paragraph",
+      "full_gt_text": "[EXCLUDED]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[EXCLUDED]",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 372.59,
+            "t": 273.55,
+            "r": 375.95,
+            "b": 263.23
+          },
+          "crop_bbox": {
+            "l": 368.59,
+            "t": 277.55,
+            "r": 379.95,
+            "b": 259.23
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/24": {
+      "self_ref": "#/texts/24",
+      "label": "paragraph",
+      "full_gt_text": "[EXCLUDED]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[EXCLUDED]",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.29,
+            "t": 243.07,
+            "r": 363.48,
+            "b": 208.04
+          },
+          "crop_bbox": {
+            "l": 334.29,
+            "t": 247.07,
+            "r": 367.48,
+            "b": 204.04
           },
           "rotation_deg": 0
         }
@@ -564,32 +777,6 @@
         }
       ]
     },
-    "#/texts/6": {
-      "self_ref": "#/texts/6",
-      "label": "paragraph",
-      "full_gt_text": "Solu",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Solu",
-          "gcv_text": "",
-          "page_no": 1,
-          "bbox": {
-            "l": 77.97,
-            "t": 681.95,
-            "r": 123.8,
-            "b": 650.04
-          },
-          "crop_bbox": {
-            "l": 73.97,
-            "t": 685.95,
-            "r": 127.8,
-            "b": 646.04
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
@@ -667,6 +854,32 @@
             "l": 220.32,
             "t": 678.99,
             "r": 273.67,
+            "b": 662.83
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/18": {
+      "self_ref": "#/texts/18",
+      "label": "paragraph",
+      "full_gt_text": "...",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "...",
+          "gcv_text": "-",
+          "page_no": 1,
+          "bbox": {
+            "l": 270.39,
+            "t": 674.51,
+            "r": 275.43,
+            "b": 666.83
+          },
+          "crop_bbox": {
+            "l": 266.39,
+            "t": 678.51,
+            "r": 279.43,
             "b": 662.83
           },
           "rotation_deg": 0
@@ -2488,19 +2701,19 @@
         {
           "word_idx": 1,
           "gt_text": "Ramiah)",
-          "gcv_text": "of",
+          "gcv_text": "(",
           "page_no": 1,
           "bbox": {
-            "l": 341.17,
-            "t": 453.75,
-            "r": 377.15,
-            "b": 425.68
+            "l": 379.79,
+            "t": 449.91,
+            "r": 383.87,
+            "b": 440.32
           },
           "crop_bbox": {
-            "l": 337.17,
-            "t": 457.75,
-            "r": 381.15,
-            "b": 421.68
+            "l": 375.79,
+            "t": 453.91,
+            "r": 387.87,
+            "b": 436.32
           },
           "rotation_deg": 0
         },
@@ -2762,6 +2975,32 @@
             "t": 391.77,
             "r": 480.48,
             "b": 372.49
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/23": {
+      "self_ref": "#/texts/23",
+      "label": "paragraph",
+      "full_gt_text": ".....",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": ".....",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 286.3,
+            "t": 363.1,
+            "r": 314.8,
+            "b": 355.8
+          },
+          "crop_bbox": {
+            "l": 282.3,
+            "t": 367.1,
+            "r": 318.8,
+            "b": 351.8
           },
           "rotation_deg": 0
         }
@@ -3040,89 +3279,6 @@
         }
       ]
     },
-    "#/texts/15": {
-      "self_ref": "#/texts/15",
-      "label": "paragraph",
-      "full_gt_text": "2\nApril\n11\n7/1/85",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "2",
-          "gcv_text": "Th",
-          "page_no": 1,
-          "bbox": {
-            "l": 110.12,
-            "t": 249.31,
-            "r": 147.55,
-            "b": 222.92
-          },
-          "crop_bbox": {
-            "l": 106.12,
-            "t": 253.31,
-            "r": 151.55,
-            "b": 218.92
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "April",
-          "gcv_text": "Th",
-          "page_no": 1,
-          "bbox": {
-            "l": 110.12,
-            "t": 249.31,
-            "r": 147.55,
-            "b": 222.92
-          },
-          "crop_bbox": {
-            "l": 106.12,
-            "t": 253.31,
-            "r": 151.55,
-            "b": 218.92
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "11",
-          "gcv_text": "Th",
-          "page_no": 1,
-          "bbox": {
-            "l": 110.12,
-            "t": 249.31,
-            "r": 147.55,
-            "b": 222.92
-          },
-          "crop_bbox": {
-            "l": 106.12,
-            "t": 253.31,
-            "r": 151.55,
-            "b": 218.92
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 3,
-          "gt_text": "7/1/85",
-          "gcv_text": "7/1/85",
-          "page_no": 1,
-          "bbox": {
-            "l": 130.52,
-            "t": 223.88,
-            "r": 172.02,
-            "b": 199.88
-          },
-          "crop_bbox": {
-            "l": 126.52,
-            "t": 227.88,
-            "r": 176.02,
-            "b": 195.88
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/16": {
       "self_ref": "#/texts/16",
       "label": "paragraph",
@@ -3290,38 +3446,38 @@
         {
           "word_idx": 0,
           "gt_text": "(K.",
-          "gcv_text": "Agarwal",
+          "gcv_text": "(",
           "page_no": 1,
           "bbox": {
-            "l": 331.09,
-            "t": 273.55,
-            "r": 372.35,
-            "b": 263.23
+            "l": 378.35,
+            "t": 231.8,
+            "r": 382.91,
+            "b": 222.68
           },
           "crop_bbox": {
-            "l": 327.09,
-            "t": 277.55,
-            "r": 376.35,
-            "b": 259.23
+            "l": 374.35,
+            "t": 235.8,
+            "r": 386.91,
+            "b": 218.68
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 1,
           "gt_text": "Ramiah)",
-          "gcv_text": ",",
+          "gcv_text": "K.",
           "page_no": 1,
           "bbox": {
-            "l": 372.59,
-            "t": 273.55,
-            "r": 375.95,
-            "b": 263.23
+            "l": 381.71,
+            "t": 232.04,
+            "r": 393.47,
+            "b": 222.92
           },
           "crop_bbox": {
-            "l": 368.59,
-            "t": 277.55,
-            "r": 379.95,
-            "b": 259.23
+            "l": 377.71,
+            "t": 236.04,
+            "r": 397.47,
+            "b": 218.92
           },
           "rotation_deg": 0
         },
@@ -3341,6 +3497,32 @@
             "t": 223.08,
             "r": 432.02,
             "b": 208.84
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/19": {
+      "self_ref": "#/texts/19",
+      "label": "paragraph",
+      "full_gt_text": ".....",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": ".....",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 285.2,
+            "t": 198.0,
+            "r": 312.6,
+            "b": 190.6
+          },
+          "crop_bbox": {
+            "l": 281.2,
+            "t": 202.0,
+            "r": 316.6,
+            "b": 186.6
           },
           "rotation_deg": 0
         }

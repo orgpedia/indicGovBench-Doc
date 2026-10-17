@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_031",
-  "total_words": 131,
+  "total_words": 132,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Jag",
+          "page_no": 1,
+          "bbox": {
+            "l": 430.44,
+            "t": 416.75,
+            "r": 458.07,
+            "b": 386.65
+          },
+          "crop_bbox": {
+            "l": 426.44,
+            "t": 420.75,
+            "r": 462.07,
+            "b": 382.65
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",

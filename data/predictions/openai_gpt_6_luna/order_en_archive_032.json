@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_archive_032",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        401.62,
+        24.42,
+        462.91,
+        24.42,
+        462.91,
+        69.89,
+        401.62,
+        69.89
+      ],
+      "text": "60"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        39.27,
+        60.62,
+        466.48,
+        60.62,
+        466.48,
+        350.27,
+        39.27,
+        350.27
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>20</td><td>Shri Santosh Mohan Dev</td><td>Minister of Heavy Industries &amp; PublicEnterprises.</td></tr><tr><td>21</td><td>Prof. Saif-ud-din Soz</td><td>Minister of Water Resources.</td></tr><tr><td>22</td><td>Shri Raghuvansh PrasadSingh</td><td>Minister of Rural Development.</td></tr><tr><td>23</td><td>Shri Priyaranjan Dasmunsi</td><td>Minister without Portfolio.</td></tr><tr><td>24</td><td>Shri Mani Shankar Aiyar</td><td>Minister of Panchayati Raj and Minister ofDevelopment of North Eastern Region.</td></tr><tr><td>25</td><td>Smt. Meira Kumar</td><td>Minister of Social Justice &amp; Empowerment.</td></tr><tr><td>26</td><td>Shri Murli Deora</td><td>Minister of Petroleum &amp; Natural Gas.</td></tr><tr><td>27</td><td>Smt. Ambika Soni</td><td>Minister of Tourism and Minister of Culture.</td></tr><tr><td>28</td><td>Shri A. Raja</td><td>Minister of Communications and InformationTechnology.</td></tr><tr><td>29</td><td>Shri Kapil Sibal</td><td>Minister of Science &amp; Technology and Minister ofEarth Sciences.</td></tr><tr><td>30</td><td>Shri Prem Chand Gupta</td><td>Minister of Corporate Affairs.</td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        113.64,
+        364.59,
+        370.69,
+        364.59,
+        370.69,
+        384.79,
+        113.64,
+        384.79
+      ],
+      "text": "MINISTERS OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        30.94,
+        394.06,
+        455.18,
+        394.06,
+        455.18,
+        712.33,
+        30.94,
+        712.33
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1</td><td>Smt. Renuka Chowdhury</td><td>Minister of State (Independent Charge) of theMinistry of Women &amp; Child Development.</td></tr><tr><td>2</td><td>Shri Subodh Kant Sahay</td><td>Minister of State (Independent Charge) of theMinistry of Food Processing Industries.</td></tr><tr><td>3</td><td>Shri Vilas Muttemwar</td><td>Minister of State (Independent Charge) of theMinistry of New and Renewable Energy.</td></tr><tr><td>4</td><td>Kumari Selja</td><td>Minister of State (Independent Charge) of theMinistry of Housing and Urban PovertyAlleviation.</td></tr><tr><td>5</td><td>Shri Praful Patel</td><td>Minister of State (Independent Charge) of theMinistry of Civil Aviation.</td></tr><tr><td>6</td><td>Shri G.K. Vasan</td><td>Minister of State (Independent Charge) of theMinistry of Statistics &amp; ProgrammeImplementation and Minister of State(Independent Charge) of the Ministry of Labour&amp; Employment.</td></tr><tr><td>7</td><td>Dr. M.S. Gill</td><td>Minister of State (Independent Charge) of theMinistry of Youth Affairs &amp; Sports.</td></tr><tr><td>8</td><td>Smt. Panabaka Lakshmi</td><td>Minister of State (Independent Charge) of theMinistry of Health &amp; Family Welfare.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3269,
+      "output": 2074,
+      "total": 5343
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001364,
+      "batch": 0.000682
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.13639,
+      "batch": 0.068195,
+      "savings": 0.068195,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

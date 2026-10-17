@@ -1,0 +1,190 @@
+{
+  "doc_id": "order_en_archive_015",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        429.0,
+        70.73,
+        511.7,
+        70.73,
+        511.7,
+        85.04,
+        429.0,
+        85.04
+      ],
+      "text": "MOST IMMEDIATE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        196.95,
+        79.15,
+        451.01,
+        79.15,
+        451.01,
+        139.77,
+        196.95,
+        139.77
+      ],
+      "text": "No. 55/1/1/79-Cab.\nGOVERNMENT OF INDIA (BHARAT SARKAR)\nCABINET SECRETARIAT (MANTRIMANDAL SACHIVALAYA)"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        98.18,
+        117.04,
+        311.19,
+        117.04,
+        311.19,
+        690.44,
+        98.18,
+        690.44
+      ],
+      "text": "NEW DELHI, 30 July, 1979.\n8 Sravana, 1901(S)."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        135.66,
+        154.93,
+        164.82,
+        154.93,
+        164.82,
+        715.7,
+        135.66,
+        715.7
+      ],
+      "text": "The President, on the advice of the Prime Minister,\nhas allocated the business of the Government to Ministers\nin the manner indicated below:—"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        166.6,
+        196.19,
+        343.31,
+        196.19,
+        343.31,
+        667.71,
+        166.6,
+        667.71
+      ],
+      "text": "✓ 1. Shri Y.B. Chavan, to be Deputy Prime Minister\n and Cabinet Minister in charge of the Ministry of\n Home Affairs;\n✓ 2. Shri H.N. Bahuguna, to be Cabinet Minister in\n charge of the Ministry of Finance;\n✓ 3. Shri Brahm Perkash, to be Cabinet Minister in\n charge of the Ministry of Agriculture & Irrigation;\n✓ 4. Shri Hitendra Desai, to be Cabinet Minister in\n charge of the Ministry of Commerce & Civil\n Supplies;\n✓ 5. Shri Purushottam Kaushik, to be Cabinet Minister\n in charge of the Ministry of Information and\n Broadcasting;\n✓ 6. Shri Ram Kinkar, to be Cabinet Minister in charge\n of the Ministry of Works, Housing, Supply and\n Rehabilitation;\n✓ 7. Shri H.R. Khanna, to be Cabinet Minister in\n charge of the Ministry of Law, Justice & Company\n Affairs;\n✓ 8. Shri S.N. Mishra, to be Cabinet Minister in\n charge of the Ministry of External Affairs;\n✓ 9. Shri K.C. Pant, to be Cabinet Minister in charge\n of the Ministry of Energy;\n✓ 10. Shri T.A. Pai, to be Cabinet Minister in charge\n of the Ministry of Petroleum, Chemicals and\n Fertilizers; also, for the present, to be in\n charge of the Ministry of Railway;\n✓ 11. Shri Biju Patnaik, to be Cabinet Minister in\n charge of the Ministry of Steel, Mines & Coal;\n✓ 12. Shri Mohamed Shafi Qureshi, to be Cabinet Minister\n in charge of the Ministry of Labour;\n✓ 13. Shri Rabi Ray, to be Cabinet Minister in charge\n of the Ministry of Health and Family Welfare;\n✓ 14. Shri K. Brahmananda Reddi, to be Cabinet Minister\n in charge of the Ministry of Industry."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        433.16,
+        536.35,
+        493.25,
+        536.35,
+        493.25,
+        548.98,
+        433.16,
+        548.98
+      ],
+      "text": "5/No 55"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        148.75,
+        540.56,
+        193.38,
+        540.56,
+        193.38,
+        585.19,
+        148.75,
+        585.19
+      ],
+      "text": "New Division"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        381.39,
+        596.14,
+        414.12,
+        596.14,
+        414.12,
+        610.45,
+        381.39,
+        610.45
+      ],
+      "text": "T&C A"
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        155.3,
+        669.39,
+        217.77,
+        669.39,
+        217.77,
+        695.49,
+        155.3,
+        695.49
+      ],
+      "text": "P.K.T.\n300 Copies."
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        433.75,
+        672.76,
+        467.08,
+        672.76,
+        467.08,
+        683.7,
+        433.75,
+        683.7
+      ],
+      "text": "...2/-"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2664,
+      "total": 5958
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001661,
+      "batch": 0.000831
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.16614,
+      "batch": 0.08307,
+      "savings": 0.08307,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

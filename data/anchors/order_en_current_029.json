@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_029",
-  "total_words": 243,
+  "total_words": 244,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "ngth",
+          "page_no": 1,
+          "bbox": {
+            "l": 465.92,
+            "t": 291.49,
+            "r": 507.67,
+            "b": 261.19
+          },
+          "crop_bbox": {
+            "l": 461.92,
+            "t": 295.49,
+            "r": 511.67,
+            "b": 257.19
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -4232,25 +4258,6 @@
         {
           "word_idx": 0,
           "gt_text": "(Jagannath",
-          "gcv_text": "ngth",
-          "page_no": 1,
-          "bbox": {
-            "l": 465.92,
-            "t": 291.49,
-            "r": 507.67,
-            "b": 261.19
-          },
-          "crop_bbox": {
-            "l": 461.92,
-            "t": 295.49,
-            "r": 511.67,
-            "b": 257.19
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Srinivasan)",
           "gcv_text": "Jagann",
           "page_no": 1,
           "bbox": {
@@ -4264,6 +4271,25 @@
             "t": 288.27,
             "r": 479.28,
             "b": 244.92
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "Srinivasan)",
+          "gcv_text": "7/8/26",
+          "page_no": 1,
+          "bbox": {
+            "l": 451.29,
+            "t": 273.69,
+            "r": 501.67,
+            "b": 247.96
+          },
+          "crop_bbox": {
+            "l": 447.29,
+            "t": 277.69,
+            "r": 505.67,
+            "b": 243.96
           },
           "rotation_deg": 0
         }

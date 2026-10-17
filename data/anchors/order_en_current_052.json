@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_052",
-  "total_words": 303,
+  "total_words": 304,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/13": {
+      "self_ref": "#/texts/13",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.8,
+            "t": 167.3,
+            "r": 384.2,
+            "b": 155.77
+          },
+          "crop_bbox": {
+            "l": 371.8,
+            "t": 171.3,
+            "r": 388.2,
+            "b": 151.77
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -399,7 +425,7 @@
     "#/texts/1": {
       "self_ref": "#/texts/1",
       "label": "paragraph",
-      "full_gt_text": "No. F.42(15)(B)/DE/PE&NI/Misc.(SSA)/2026-27/ 562-68",
+      "full_gt_text": "No. F.42(15)(B)/DE/PE&NI/Misc.(SSA)/2026-27/ 562-60",
       "words": [
         {
           "word_idx": 0,
@@ -441,20 +467,20 @@
         },
         {
           "word_idx": 2,
-          "gt_text": "562-68",
-          "gcv_text": "(",
+          "gt_text": "562-60",
+          "gcv_text": "562-60",
           "page_no": 1,
           "bbox": {
-            "l": 131.42,
-            "t": 677.34,
-            "r": 134.54,
-            "b": 664.86
+            "l": 328.08,
+            "t": 680.22,
+            "r": 387.55,
+            "b": 667.02
           },
           "crop_bbox": {
-            "l": 127.42,
-            "t": 681.34,
-            "r": 138.54,
-            "b": 660.86
+            "l": 324.08,
+            "t": 684.22,
+            "r": 391.55,
+            "b": 663.02
           },
           "rotation_deg": 0
         }

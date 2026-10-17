@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_archive_003",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        454.58,
+        73.25,
+        521.22,
+        73.25,
+        521.22,
+        88.41,
+        454.58,
+        88.41
+      ],
+      "text": "ANNEXURE"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        95.2,
+        105.25,
+        502.77,
+        105.25,
+        502.77,
+        151.56,
+        95.2,
+        151.56
+      ],
+      "text": "GENERAL PRINCIPLES REGARDING MODE OF SELECTION ETC.\nFOR PROMOTION AND FUNCTIONS OF SCREENING COMMITTEES ETC."
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        86.27,
+        160.82,
+        553.35,
+        160.82,
+        553.35,
+        767.9,
+        86.27,
+        767.9
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>FUNCTIONS OFSCREENINGCOMMITTEES</td><td>1.1</td><td>It should be ensured while making promotions that suitability of candidates for promotion is considered in an objective and impartial manner. For this purpose Screening Committees (hereafter referred to as Committees) should be formed for different grades whenever an occasion arises for making promotions / confirmations etc. the committees so constituted shall adjudge the suitability of officers for :-(a) Promotions of officers in various grades;(b) Confirmation; and(c) Assessment of the work and conduct of probationers for the purpose of determining the suitability for retention in Service or their discharge from Service or extending their probation.</td></tr><tr><td>2.</td><td>FREQUENCY ATWHICH COMMITTEESSHOULD MEET</td><td>2.1</td><td>Meeting of the Committees should be convened at regular intervals to draw panels for filling up the vacancies arising during the course of a year. For this purpose, it is essential for the concerned appointing authorities to initiate action to fill up the existing as well as anticipated vacancies well in advance of the expiry of the previous panel by collecting relevant documents like ACRs, Integrity Certificates, Seniority List etc. for placing before the Committees. Meetings of the Committees could be convened every year and if necessary, on a fixed date, e.g. 1st of May or June. All the cadres should lay down a time schedule for holding the Committee meetings and the same should be monitored by making one of their officers responsible for keeping a watch to ensure that they are held regularly. Holding of these meetings need not be delayed or postponed on one</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3223,
+      "output": 2024,
+      "total": 5247
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001334,
+      "batch": 0.000667
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.13343,
+      "batch": 0.066715,
+      "savings": 0.066715,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

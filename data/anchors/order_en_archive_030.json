@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_030",
-  "total_words": 184,
+  "total_words": 187,
   "pages": {
     "1": {
       "width": 595.0,
@@ -49,6 +49,300 @@
             "t": 826.07,
             "r": 370.45,
             "b": 795.02
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/9": {
+      "self_ref": "#/texts/9",
+      "label": "paragraph",
+      "full_gt_text": "Recd. M.C. to Cmt 14/1/80\nDirector\nShri Laxmi\nMHA",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Recd.",
+          "gcv_text": "te",
+          "page_no": 1,
+          "bbox": {
+            "l": 75.78,
+            "t": 442.01,
+            "r": 100.49,
+            "b": 418.24
+          },
+          "crop_bbox": {
+            "l": 71.78,
+            "t": 446.01,
+            "r": 104.49,
+            "b": 414.24
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "M.C.",
+          "gcv_text": "14/1/30",
+          "page_no": 1,
+          "bbox": {
+            "l": 104.32,
+            "t": 447.77,
+            "r": 144.13,
+            "b": 423.52
+          },
+          "crop_bbox": {
+            "l": 100.32,
+            "t": 451.77,
+            "r": 148.13,
+            "b": 419.52
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "to",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 34.53,
+            "t": 427.84,
+            "r": 50.6,
+            "b": 408.4
+          },
+          "crop_bbox": {
+            "l": 30.53,
+            "t": 431.84,
+            "r": 54.6,
+            "b": 404.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Cmt",
+          "gcv_text": "leed",
+          "page_no": 1,
+          "bbox": {
+            "l": 1.44,
+            "t": 423.76,
+            "r": 41.97,
+            "b": 392.07
+          },
+          "crop_bbox": {
+            "l": 0.0,
+            "t": 427.76,
+            "r": 45.97,
+            "b": 388.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "14/1/80",
+          "gcv_text": "Last",
+          "page_no": 1,
+          "bbox": {
+            "l": 88.73,
+            "t": 418.0,
+            "r": 123.75,
+            "b": 386.07
+          },
+          "crop_bbox": {
+            "l": 84.73,
+            "t": 422.0,
+            "r": 127.75,
+            "b": 382.07
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "Director",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 26.14,
+            "t": 401.43,
+            "r": 47.25,
+            "b": 380.3
+          },
+          "crop_bbox": {
+            "l": 22.14,
+            "t": 405.43,
+            "r": 51.25,
+            "b": 376.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Shri",
+          "gcv_text": "de",
+          "page_no": 1,
+          "bbox": {
+            "l": 37.17,
+            "t": 414.64,
+            "r": 64.51,
+            "b": 388.71
+          },
+          "crop_bbox": {
+            "l": 33.17,
+            "t": 418.64,
+            "r": 68.51,
+            "b": 384.71
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "Laxmi",
+          "gcv_text": "Rif",
+          "page_no": 1,
+          "bbox": {
+            "l": 7.91,
+            "t": 398.31,
+            "r": 43.17,
+            "b": 366.14
+          },
+          "crop_bbox": {
+            "l": 3.91,
+            "t": 402.31,
+            "r": 47.17,
+            "b": 362.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "MHA",
+          "gcv_text": "Asistent",
+          "page_no": 1,
+          "bbox": {
+            "l": 24.46,
+            "t": 419.2,
+            "r": 99.77,
+            "b": 354.13
+          },
+          "crop_bbox": {
+            "l": 20.46,
+            "t": 423.2,
+            "r": 103.77,
+            "b": 350.13
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/16": {
+      "self_ref": "#/texts/16",
+      "label": "paragraph",
+      "full_gt_text": "secy\n2/4/80\n14/1/80",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "secy",
+          "gcv_text": "Copy",
+          "page_no": 1,
+          "bbox": {
+            "l": 138.86,
+            "t": 270.82,
+            "r": 166.92,
+            "b": 257.86
+          },
+          "crop_bbox": {
+            "l": 134.86,
+            "t": 274.82,
+            "r": 170.92,
+            "b": 253.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "2/4/80",
+          "gcv_text": "480",
+          "page_no": 1,
+          "bbox": {
+            "l": 118.23,
+            "t": 226.41,
+            "r": 162.6,
+            "b": 189.43
+          },
+          "crop_bbox": {
+            "l": 114.23,
+            "t": 230.41,
+            "r": 166.6,
+            "b": 185.43
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "14/1/80",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 187.78,
+            "t": 216.8,
+            "r": 197.37,
+            "b": 200.0
+          },
+          "crop_bbox": {
+            "l": 183.78,
+            "t": 220.8,
+            "r": 201.37,
+            "b": 196.0
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/19": {
+      "self_ref": "#/texts/19",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 346.78,
+            "t": 379.82,
+            "r": 351.34,
+            "b": 370.22
+          },
+          "crop_bbox": {
+            "l": 342.78,
+            "t": 383.82,
+            "r": 355.34,
+            "b": 366.22
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/20": {
+      "self_ref": "#/texts/20",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.63,
+            "t": 128.93,
+            "r": 344.39,
+            "b": 118.85
+          },
+          "crop_bbox": {
+            "l": 334.63,
+            "t": 132.93,
+            "r": 348.39,
+            "b": 114.85
           },
           "rotation_deg": 0
         }
@@ -493,6 +787,32 @@
         }
       ]
     },
+    "#/texts/18": {
+      "self_ref": "#/texts/18",
+      "label": "paragraph",
+      "full_gt_text": "---",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "---",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 325.9,
+            "t": 670.8,
+            "r": 383.3,
+            "b": 661.8
+          },
+          "crop_bbox": {
+            "l": 321.9,
+            "t": 674.8,
+            "r": 387.3,
+            "b": 657.8
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/4": {
       "self_ref": "#/texts/4",
       "label": "paragraph",
@@ -584,19 +904,19 @@
         {
           "word_idx": 0,
           "gt_text": "...",
-          "gcv_text": "ceremony",
+          "gcv_text": "",
           "page_no": 1,
           "bbox": {
-            "l": 306.01,
-            "t": 652.81,
-            "r": 360.69,
-            "b": 637.92
+            "l": 336.1,
+            "t": 628.03,
+            "r": 359.75,
+            "b": 615.0
           },
           "crop_bbox": {
-            "l": 302.01,
-            "t": 656.81,
-            "r": 364.69,
-            "b": 633.92
+            "l": 332.1,
+            "t": 632.03,
+            "r": 363.75,
+            "b": 611.0
           },
           "rotation_deg": 0
         }
@@ -2409,184 +2729,6 @@
         }
       ]
     },
-    "#/texts/9": {
-      "self_ref": "#/texts/9",
-      "label": "paragraph",
-      "full_gt_text": "Recd. M.C. to Cmt 14/1/80\nDirector\nShri Laxmi\nMHA",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Recd.",
-          "gcv_text": "te",
-          "page_no": 1,
-          "bbox": {
-            "l": 75.78,
-            "t": 442.01,
-            "r": 100.49,
-            "b": 418.24
-          },
-          "crop_bbox": {
-            "l": 71.78,
-            "t": 446.01,
-            "r": 104.49,
-            "b": 414.24
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "M.C.",
-          "gcv_text": "14/1/30",
-          "page_no": 1,
-          "bbox": {
-            "l": 104.32,
-            "t": 447.77,
-            "r": 144.13,
-            "b": 423.52
-          },
-          "crop_bbox": {
-            "l": 100.32,
-            "t": 451.77,
-            "r": 148.13,
-            "b": 419.52
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "to",
-          "gcv_text": ".",
-          "page_no": 1,
-          "bbox": {
-            "l": 34.53,
-            "t": 427.84,
-            "r": 50.6,
-            "b": 408.4
-          },
-          "crop_bbox": {
-            "l": 30.53,
-            "t": 431.84,
-            "r": 54.6,
-            "b": 404.4
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 3,
-          "gt_text": "Cmt",
-          "gcv_text": "leed",
-          "page_no": 1,
-          "bbox": {
-            "l": 1.44,
-            "t": 423.76,
-            "r": 41.97,
-            "b": 392.07
-          },
-          "crop_bbox": {
-            "l": 0.0,
-            "t": 427.76,
-            "r": 45.97,
-            "b": 388.07
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 4,
-          "gt_text": "14/1/80",
-          "gcv_text": "Last",
-          "page_no": 1,
-          "bbox": {
-            "l": 88.73,
-            "t": 418.0,
-            "r": 123.75,
-            "b": 386.07
-          },
-          "crop_bbox": {
-            "l": 84.73,
-            "t": 422.0,
-            "r": 127.75,
-            "b": 382.07
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 5,
-          "gt_text": "Director",
-          "gcv_text": ".",
-          "page_no": 1,
-          "bbox": {
-            "l": 26.14,
-            "t": 401.43,
-            "r": 47.25,
-            "b": 380.3
-          },
-          "crop_bbox": {
-            "l": 22.14,
-            "t": 405.43,
-            "r": 51.25,
-            "b": 376.3
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 6,
-          "gt_text": "Shri",
-          "gcv_text": "de",
-          "page_no": 1,
-          "bbox": {
-            "l": 37.17,
-            "t": 414.64,
-            "r": 64.51,
-            "b": 388.71
-          },
-          "crop_bbox": {
-            "l": 33.17,
-            "t": 418.64,
-            "r": 68.51,
-            "b": 384.71
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 7,
-          "gt_text": "Laxmi",
-          "gcv_text": "Rif",
-          "page_no": 1,
-          "bbox": {
-            "l": 7.91,
-            "t": 398.31,
-            "r": 43.17,
-            "b": 366.14
-          },
-          "crop_bbox": {
-            "l": 3.91,
-            "t": 402.31,
-            "r": 47.17,
-            "b": 362.14
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 8,
-          "gt_text": "MHA",
-          "gcv_text": "Asistent",
-          "page_no": 1,
-          "bbox": {
-            "l": 24.46,
-            "t": 419.2,
-            "r": 99.77,
-            "b": 354.13
-          },
-          "crop_bbox": {
-            "l": 20.46,
-            "t": 423.2,
-            "r": 103.77,
-            "b": 350.13
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/10": {
       "self_ref": "#/texts/10",
       "label": "paragraph",
@@ -3422,70 +3564,6 @@
             "t": 207.12,
             "r": 460.38,
             "b": 178.23
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/16": {
-      "self_ref": "#/texts/16",
-      "label": "paragraph",
-      "full_gt_text": "secy\n2/4/80\n14/1/80",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "secy",
-          "gcv_text": "Copy",
-          "page_no": 1,
-          "bbox": {
-            "l": 138.86,
-            "t": 270.82,
-            "r": 166.92,
-            "b": 257.86
-          },
-          "crop_bbox": {
-            "l": 134.86,
-            "t": 274.82,
-            "r": 170.92,
-            "b": 253.86
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "2/4/80",
-          "gcv_text": "480",
-          "page_no": 1,
-          "bbox": {
-            "l": 118.23,
-            "t": 226.41,
-            "r": 162.6,
-            "b": 189.43
-          },
-          "crop_bbox": {
-            "l": 114.23,
-            "t": 230.41,
-            "r": 166.6,
-            "b": 185.43
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 2,
-          "gt_text": "14/1/80",
-          "gcv_text": "(",
-          "page_no": 1,
-          "bbox": {
-            "l": 187.78,
-            "t": 216.8,
-            "r": 197.37,
-            "b": 200.0
-          },
-          "crop_bbox": {
-            "l": 183.78,
-            "t": 220.8,
-            "r": 201.37,
-            "b": 196.0
           },
           "rotation_deg": 0
         }

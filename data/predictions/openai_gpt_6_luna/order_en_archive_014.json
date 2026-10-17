@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_archive_014",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        282.62,
+        23.58,
+        374.85,
+        23.58,
+        374.85,
+        60.62,
+        282.62,
+        60.62
+      ],
+      "text": "S. No. 2"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        163.62,
+        25.26,
+        580.12,
+        25.26,
+        580.12,
+        778.85,
+        163.62,
+        778.85
+      ],
+      "text": "No.55/1/1/71-CF\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\n\nNew Delhi, the 3rd May 1971.\n13th Vaisakha 1893.\n---\n\nThe undersigned is directed to state that with effect\nfrom the afternoon of May 2, 1971,\n\n1. Shri Uma Shankar Dikshit assumed the office of Minister\n of Works and Housing;\n2. Shri H.N. Bahuguna assumed the office of Minister (of\n State) of Communications;\n3. Prof. D.P. Chattopadhyaya assumed the office of Minister\n of State in the Ministry of Health and Family Planning;\n4. Shri Niti Raj Singh Chaudhury relinquished the office of\n Minister of State in the Ministry of Petroleum, Chemicals\n and Non-Ferrous Metals and assumed the office of Minister\n of State in the Ministry of Law and Justice;\n5. Shri D.R. Chavan relinquished the office of Minister of\n State in the Ministry of Petroleum, Chemicals and Non-\n Ferrous Metals and assumed the office of Minister(of State)\n of Supply;\n6. Shri Mohan Dharia assumed the office of Minister of\n State in the Ministry of Planning;\n7. Shri K.R. Ganesh relinquished the office of Deputy\n Minister in the Ministry of Finance and assumed the office\n of Minister of State in the Ministry of Finance;\n8. Shri I.K. Gujral relinquished the office of Minister of\n Works, Housing and Urban Development and assumed the\n office of Minister of State in the Ministry of Works and\n Housing;\n9. Shri Shah Nawaz Khan assumed the office of Minister of\n State in the Ministry of Steel and Mines;\n10. Dr. (Smt) Sarojini Mahishi relinquished the office of\n Deputy Minister in the Ministry of Tourism & Civil\n Aviation and assumed the office of Minister of State in\n the Ministry of Tourism & Civil Aviation;\n11. Shri Ghanshyam Bhat Oza assumed the office of Minister\n of State in the Ministry of Industrial Development;\n12. Shri Prakashchand B. Sethi relinquished the office of\n Minister of State (Defence Production) in the Ministry of\n Defence and assumed the office of Minister of Petroleum\n and Chemicals;\n13. Shri V.C. Shukla relinquished the office of Minister of\n State in the Ministry of Finance and assumed the office\n of Minister of State(Defence Production) in the Ministry\n of Defence."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        470.05,
+        42.94,
+        565.25,
+        42.94,
+        565.25,
+        57.26,
+        470.05,
+        57.26
+      ],
+      "text": "92"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        473.03,
+        43.78,
+        538.48,
+        43.78,
+        538.48,
+        58.94,
+        473.03,
+        58.94
+      ],
+      "text": "IMMEDIATE"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 1966,
+      "total": 5260
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001312,
+      "batch": 0.000656
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.13124,
+      "batch": 0.06562,
+      "savings": 0.06562,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

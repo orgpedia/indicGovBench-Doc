@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_030",
-  "total_words": 101,
+  "total_words": 100,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Jagamath",
+          "page_no": 1,
+          "bbox": {
+            "l": 427.59,
+            "t": 422.21,
+            "r": 515.52,
+            "b": 378.51
+          },
+          "crop_bbox": {
+            "l": 423.19,
+            "t": 426.21,
+            "r": 519.92,
+            "b": 374.51
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -1483,51 +1509,6 @@
             "t": 454.45,
             "r": 355.98,
             "b": 435.35
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/5": {
-      "self_ref": "#/texts/5",
-      "label": "paragraph",
-      "full_gt_text": "Jagannath\n127/5/26",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Jagannath",
-          "gcv_text": "Jagannath",
-          "page_no": 1,
-          "bbox": {
-            "l": 397.87,
-            "t": 379.0,
-            "r": 459.96,
-            "b": 367.17
-          },
-          "crop_bbox": {
-            "l": 393.87,
-            "t": 383.0,
-            "r": 463.96,
-            "b": 363.17
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "127/5/26",
-          "gcv_text": "Srinivasan",
-          "page_no": 1,
-          "bbox": {
-            "l": 462.86,
-            "t": 379.0,
-            "r": 524.94,
-            "b": 367.17
-          },
-          "crop_bbox": {
-            "l": 458.86,
-            "t": 383.0,
-            "r": 528.94,
-            "b": 363.17
           },
           "rotation_deg": 0
         }

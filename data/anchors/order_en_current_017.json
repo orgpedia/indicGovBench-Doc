@@ -12,11 +12,11 @@
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
-      "full_gt_text": "सत्यमेव जयते",
+      "full_gt_text": "[LOGO]",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "सत्यमेव",
+          "gt_text": "[LOGO]",
           "gcv_text": "सत्यमेव",
           "page_no": 1,
           "bbox": {
@@ -32,23 +32,30 @@
             "b": 642.92
           },
           "rotation_deg": 0
-        },
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "[LOGO]",
+      "words": [
         {
-          "word_idx": 1,
-          "gt_text": "जयते",
-          "gcv_text": "जयते",
+          "word_idx": 0,
+          "gt_text": "[LOGO]",
+          "gcv_text": "IPS",
           "page_no": 1,
           "bbox": {
-            "l": 304.7,
-            "t": 664.19,
-            "r": 336.85,
-            "b": 647.16
+            "l": 275.67,
+            "t": 311.46,
+            "r": 316.93,
+            "b": 288.19
           },
           "crop_bbox": {
-            "l": 300.7,
-            "t": 668.19,
-            "r": 340.85,
-            "b": 643.16
+            "l": 271.67,
+            "t": 315.46,
+            "r": 320.93,
+            "b": 284.19
           },
           "rotation_deg": 0
         }

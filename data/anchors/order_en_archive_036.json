@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_036",
-  "total_words": 29,
+  "total_words": 30,
   "pages": {
     "1": {
       "width": 595.0,
@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/5": {
+      "self_ref": "#/texts/5",
+      "label": "paragraph",
+      "full_gt_text": "[SCAN]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCAN]",
+          "gcv_text": "26",
+          "page_no": 1,
+          "bbox": {
+            "l": 520.65,
+            "t": 821.59,
+            "r": 545.12,
+            "b": 802.14
+          },
+          "crop_bbox": {
+            "l": 516.65,
+            "t": 825.59,
+            "r": 549.12,
+            "b": 798.14
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",

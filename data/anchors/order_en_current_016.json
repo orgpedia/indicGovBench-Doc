@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_current_016",
-  "total_words": 161,
+  "total_words": 162,
   "pages": {
     "1": {
       "width": 595.0,
@@ -498,7 +498,7 @@
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "1. Whether any disciplinary proceedings have been initiated against the officer during his career, so far. If yes, details thereof\n2. Whether any complaint including that of corruption, against the officer, which in view of the State Government/ Cadre Controlling Authority may have a direct bearing/relevance on the vigilance status/ Integrity of the officer as on date, is pending against the officer. If so, details thereof.\n3. Whether any preliminary inquiry or any other vigilance related matter is pending against the officer. If so, full facts of the pending matter.\n4. Whether any criminal proceedings were registered against the officer during his career so far. If so, the details/present status and the final out come thereof.\n5. Whether the name of the officer appears in the Agreed List.",
+      "full_gt_text": "1. Whether any disciplinary proceedings have been initiated against the officer during his career, so far. If yes, details thereof\n2. Whether any complaint including that of corruption, against the officer, which in view of the State Government/ Cadre Controlling Authority may have a direct bearing/relevance on the vigilance status/ Integrity of the officer as on date, is pending against the officer . If so, details thereof.\n3. Whether any preliminary inquiry or any other vigilance related matter is pending against the officer. If so, full facts of the pending matter.\n4. Whether any criminal proceedings were registered against the officer during his career so far. If so, the details/present status and the final out  come thereof.`\n5. Whether the name of the officer appears in the Agreed List.",
       "words": [
         {
           "word_idx": 0,
@@ -1661,7 +1661,7 @@
         },
         {
           "word_idx": 61,
-          "gt_text": "officer.",
+          "gt_text": "officer",
           "gcv_text": "officer",
           "page_no": 1,
           "bbox": {
@@ -1680,6 +1680,25 @@
         },
         {
           "word_idx": 62,
+          "gt_text": ".",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 109.47,
+            "t": 495.03,
+            "r": 112.1,
+            "b": 486.87
+          },
+          "crop_bbox": {
+            "l": 105.47,
+            "t": 499.03,
+            "r": 116.1,
+            "b": 482.87
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 63,
           "gt_text": "If",
           "gcv_text": "If",
           "page_no": 1,
@@ -1698,7 +1717,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 63,
+          "word_idx": 64,
           "gt_text": "so,",
           "gcv_text": "so",
           "page_no": 1,
@@ -1717,7 +1736,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 64,
+          "word_idx": 65,
           "gt_text": "details",
           "gcv_text": "details",
           "page_no": 1,
@@ -1736,7 +1755,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 65,
+          "word_idx": 66,
           "gt_text": "thereof.",
           "gcv_text": "thereof",
           "page_no": 1,
@@ -1755,7 +1774,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 66,
+          "word_idx": 67,
           "gt_text": "3.",
           "gcv_text": ".",
           "page_no": 1,
@@ -1774,7 +1793,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 67,
+          "word_idx": 68,
           "gt_text": "Whether",
           "gcv_text": "Whether",
           "page_no": 1,
@@ -1793,7 +1812,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 68,
+          "word_idx": 69,
           "gt_text": "any",
           "gcv_text": "any",
           "page_no": 1,
@@ -1812,7 +1831,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 69,
+          "word_idx": 70,
           "gt_text": "preliminary",
           "gcv_text": "preliminary",
           "page_no": 1,
@@ -1831,7 +1850,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 70,
+          "word_idx": 71,
           "gt_text": "inquiry",
           "gcv_text": "",
           "page_no": 1,
@@ -1850,7 +1869,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 71,
+          "word_idx": 72,
           "gt_text": "or",
           "gcv_text": "",
           "page_no": 1,
@@ -1869,7 +1888,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 72,
+          "word_idx": 73,
           "gt_text": "any",
           "gcv_text": "any",
           "page_no": 1,
@@ -1888,7 +1907,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 73,
+          "word_idx": 74,
           "gt_text": "other",
           "gcv_text": "other",
           "page_no": 1,
@@ -1907,7 +1926,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 74,
+          "word_idx": 75,
           "gt_text": "vigilance",
           "gcv_text": "vigilance",
           "page_no": 1,
@@ -1926,7 +1945,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 75,
+          "word_idx": 76,
           "gt_text": "related",
           "gcv_text": "related",
           "page_no": 1,
@@ -1945,7 +1964,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 76,
+          "word_idx": 77,
           "gt_text": "matter",
           "gcv_text": "matter",
           "page_no": 1,
@@ -1964,7 +1983,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 77,
+          "word_idx": 78,
           "gt_text": "is",
           "gcv_text": "is",
           "page_no": 1,
@@ -1983,7 +2002,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 78,
+          "word_idx": 79,
           "gt_text": "pending",
           "gcv_text": "full",
           "page_no": 1,
@@ -2002,7 +2021,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 79,
+          "word_idx": 80,
           "gt_text": "against",
           "gcv_text": "against",
           "page_no": 1,
@@ -2021,7 +2040,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 80,
+          "word_idx": 81,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2040,7 +2059,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 81,
+          "word_idx": 82,
           "gt_text": "officer.",
           "gcv_text": "officer",
           "page_no": 1,
@@ -2059,7 +2078,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 82,
+          "word_idx": 83,
           "gt_text": "If",
           "gcv_text": "If",
           "page_no": 1,
@@ -2078,7 +2097,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 83,
+          "word_idx": 84,
           "gt_text": "so,",
           "gcv_text": "so",
           "page_no": 1,
@@ -2097,7 +2116,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 84,
+          "word_idx": 85,
           "gt_text": "full",
           "gcv_text": ",",
           "page_no": 1,
@@ -2116,7 +2135,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 85,
+          "word_idx": 86,
           "gt_text": "facts",
           "gcv_text": "facts",
           "page_no": 1,
@@ -2135,7 +2154,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 86,
+          "word_idx": 87,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2154,7 +2173,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 87,
+          "word_idx": 88,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2173,7 +2192,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 88,
+          "word_idx": 89,
           "gt_text": "pending",
           "gcv_text": "pending",
           "page_no": 1,
@@ -2192,7 +2211,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 89,
+          "word_idx": 90,
           "gt_text": "matter.",
           "gcv_text": "matter",
           "page_no": 1,
@@ -2211,7 +2230,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 90,
+          "word_idx": 91,
           "gt_text": "4.",
           "gcv_text": ".",
           "page_no": 1,
@@ -2230,7 +2249,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 91,
+          "word_idx": 92,
           "gt_text": "Whether",
           "gcv_text": "Whether",
           "page_no": 1,
@@ -2249,7 +2268,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 92,
+          "word_idx": 93,
           "gt_text": "any",
           "gcv_text": "any",
           "page_no": 1,
@@ -2268,7 +2287,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 93,
+          "word_idx": 94,
           "gt_text": "criminal",
           "gcv_text": "criminal",
           "page_no": 1,
@@ -2287,7 +2306,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 94,
+          "word_idx": 95,
           "gt_text": "proceedings",
           "gcv_text": "proceedings",
           "page_no": 1,
@@ -2306,7 +2325,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 95,
+          "word_idx": 96,
           "gt_text": "were",
           "gcv_text": "were",
           "page_no": 1,
@@ -2325,7 +2344,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 96,
+          "word_idx": 97,
           "gt_text": "registered",
           "gcv_text": "registered",
           "page_no": 1,
@@ -2344,7 +2363,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 97,
+          "word_idx": 98,
           "gt_text": "against",
           "gcv_text": "against",
           "page_no": 1,
@@ -2363,7 +2382,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 98,
+          "word_idx": 99,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2382,7 +2401,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 99,
+          "word_idx": 100,
           "gt_text": "officer",
           "gcv_text": "officer",
           "page_no": 1,
@@ -2401,7 +2420,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 100,
+          "word_idx": 101,
           "gt_text": "during",
           "gcv_text": "during",
           "page_no": 1,
@@ -2420,7 +2439,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 101,
+          "word_idx": 102,
           "gt_text": "his",
           "gcv_text": "his",
           "page_no": 1,
@@ -2439,7 +2458,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 102,
+          "word_idx": 103,
           "gt_text": "career",
           "gcv_text": "career",
           "page_no": 1,
@@ -2458,7 +2477,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 103,
+          "word_idx": 104,
           "gt_text": "so",
           "gcv_text": "so",
           "page_no": 1,
@@ -2477,7 +2496,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 104,
+          "word_idx": 105,
           "gt_text": "far.",
           "gcv_text": "far",
           "page_no": 1,
@@ -2496,7 +2515,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 105,
+          "word_idx": 106,
           "gt_text": "If",
           "gcv_text": "If",
           "page_no": 1,
@@ -2515,7 +2534,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 106,
+          "word_idx": 107,
           "gt_text": "so,",
           "gcv_text": "so",
           "page_no": 1,
@@ -2534,7 +2553,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 107,
+          "word_idx": 108,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2553,7 +2572,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 108,
+          "word_idx": 109,
           "gt_text": "details/present",
           "gcv_text": "details",
           "page_no": 1,
@@ -2572,7 +2591,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 109,
+          "word_idx": 110,
           "gt_text": "status",
           "gcv_text": "status",
           "page_no": 1,
@@ -2591,7 +2610,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 110,
+          "word_idx": 111,
           "gt_text": "and",
           "gcv_text": "and",
           "page_no": 1,
@@ -2610,7 +2629,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 111,
+          "word_idx": 112,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2629,7 +2648,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 112,
+          "word_idx": 113,
           "gt_text": "final",
           "gcv_text": "final",
           "page_no": 1,
@@ -2648,7 +2667,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 113,
+          "word_idx": 114,
           "gt_text": "out",
           "gcv_text": "out",
           "page_no": 1,
@@ -2667,7 +2686,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 114,
+          "word_idx": 115,
           "gt_text": "come",
           "gcv_text": "come",
           "page_no": 1,
@@ -2686,8 +2705,8 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 115,
-          "gt_text": "thereof.",
+          "word_idx": 116,
+          "gt_text": "thereof.`",
           "gcv_text": "thereof",
           "page_no": 1,
           "bbox": {
@@ -2705,7 +2724,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 116,
+          "word_idx": 117,
           "gt_text": "5.",
           "gcv_text": ".",
           "page_no": 1,
@@ -2724,7 +2743,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 117,
+          "word_idx": 118,
           "gt_text": "Whether",
           "gcv_text": "Whether",
           "page_no": 1,
@@ -2743,7 +2762,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 118,
+          "word_idx": 119,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2762,7 +2781,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 119,
+          "word_idx": 120,
           "gt_text": "name",
           "gcv_text": "name",
           "page_no": 1,
@@ -2781,7 +2800,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 120,
+          "word_idx": 121,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2800,7 +2819,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 121,
+          "word_idx": 122,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2819,7 +2838,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 122,
+          "word_idx": 123,
           "gt_text": "officer",
           "gcv_text": "officer",
           "page_no": 1,
@@ -2838,7 +2857,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 123,
+          "word_idx": 124,
           "gt_text": "appears",
           "gcv_text": "appears",
           "page_no": 1,
@@ -2857,7 +2876,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 124,
+          "word_idx": 125,
           "gt_text": "in",
           "gcv_text": "in",
           "page_no": 1,
@@ -2876,7 +2895,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 125,
+          "word_idx": 126,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2895,7 +2914,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 126,
+          "word_idx": 127,
           "gt_text": "Agreed",
           "gcv_text": "Agreed",
           "page_no": 1,
@@ -2914,7 +2933,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 127,
+          "word_idx": 128,
           "gt_text": "List.",
           "gcv_text": "List",
           "page_no": 1,

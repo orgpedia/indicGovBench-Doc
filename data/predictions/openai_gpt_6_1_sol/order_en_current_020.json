@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_current_020",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        61.28,
+        32.84,
+        107.1,
+        32.84,
+        107.1,
+        43.78,
+        61.28,
+        43.78
+      ],
+      "text": "पश्चिम बंगाल"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        485.52,
+        35.36,
+        533.12,
+        35.36,
+        533.12,
+        44.63,
+        485.52,
+        44.63
+      ],
+      "text": "West Bengal"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        58.91,
+        47.99,
+        535.5,
+        47.99,
+        535.5,
+        658.44,
+        58.91,
+        658.44
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>315</td><td>प्रणव जैनPranav JainB.Tech</td><td>RR20251035Delhi</td><td>21/05/199325/08/2025</td><td></td><td></td></tr><tr><td>316</td><td>सौम्या कृष्णनSowmya KrishnanB.Sc.</td><td>RR20251054Kerala</td><td>24/10/199725/08/2025</td><td></td><td></td></tr><tr><td>317</td><td>वैभव सर्वेश पाण्डेVaibhav Sarvesh PandeyB.Tech</td><td>RR20251058Uttar Pradesh</td><td>18/11/199525/08/2025</td><td></td><td></td></tr><tr><td>318</td><td>शुभम कौरव कौरवShubham KauravB.Tech</td><td>RR20251062Madhya Pradesh</td><td>28/07/199825/08/2025</td><td></td><td></td></tr><tr><td>319</td><td>शुभम मिश्राShubham MishraB.Tech</td><td>RR20251064Uttar Pradesh</td><td>11/04/199708/12/2025</td><td></td><td></td></tr><tr><td>320</td><td>आकाश कुमार रायAkash Kumar RaiB.Tech., M.A.</td><td>RR20251065Delhi</td><td>19/12/199615/09/2025</td><td></td><td></td></tr><tr><td>321</td><td>रवीन्द्र खोजाRavindra KhojaB.Tech</td><td>RR20251095Rajasthan</td><td>01/07/199625/08/2025</td><td></td><td></td></tr><tr><td>322</td><td>शकील अहमदShakeel AhmedB.Tech</td><td>RR20251098Uttar Pradesh</td><td>18/06/199725/08/2025</td><td></td><td></td></tr><tr><td>323</td><td>दीपक चौधरीDeepak ChoudharyB.Tech</td><td>RR20251101Rajasthan</td><td>08/02/199425/08/2025</td><td></td><td></td></tr><tr><td>324</td><td>अभिशील जैसवालAbhisheel JaiswalL.L.M.</td><td>RR20251106Madhya Pradesh</td><td>25/09/199725/08/2025</td><td></td><td></td></tr><tr><td>325</td><td>डन बिरदेव सिद्धप्पाDone Birdev SiddhappaB.Tech</td><td>RR20251112Maharashtra</td><td>27/09/199808/12/2025</td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        290.95,
+        692.12,
+        304.05,
+        692.12,
+        304.05,
+        701.39,
+        290.95,
+        701.39
+      ],
+      "text": "450"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 1228,
+      "total": 4522
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.037736,
+      "batch": 0.018868
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.7736,
+      "batch": 1.8868,
+      "savings": 1.8868,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

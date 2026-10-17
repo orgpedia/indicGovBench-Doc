@@ -413,17 +413,17 @@
     },
     "compute_details": null,
     "native_costs": {
-      "realtime": 0.000755,
-      "batch": 0.000377
+      "realtime": 0.006776,
+      "batch": 0.003388
     },
     "fx": {
       "rate_usd_to_inr": 100.0,
       "source": "USD_TO_INR=100.00"
     },
     "cost_inr": {
-      "realtime": 0.07549,
-      "batch": 0.037745,
-      "savings": 0.037745,
+      "realtime": 0.677625,
+      "batch": 0.338812,
+      "savings": 0.338812,
       "batch_discount_pct": 50.0
     }
   }

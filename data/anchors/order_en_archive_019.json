@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_019",
-  "total_words": 211,
+  "total_words": 210,
   "pages": {
     "1": {
       "width": 595.0,
@@ -94,6 +94,103 @@
             "t": 806.97,
             "r": 558.4,
             "b": 789.1
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "i",
+          "page_no": 1,
+          "bbox": {
+            "l": 395.5,
+            "t": 399.12,
+            "r": 403.43,
+            "b": 392.48
+          },
+          "crop_bbox": {
+            "l": 391.5,
+            "t": 403.12,
+            "r": 407.43,
+            "b": 388.48
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 360.5,
+            "t": 110.02,
+            "r": 363.77,
+            "b": 102.73
+          },
+          "crop_bbox": {
+            "l": 356.5,
+            "t": 114.02,
+            "r": 367.77,
+            "b": 98.73
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/25": {
+      "self_ref": "#/texts/25",
+      "label": "paragraph",
+      "full_gt_text": "[SCANNING NUMBERS]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SCANNING",
+          "gcv_text": "%",
+          "page_no": 1,
+          "bbox": {
+            "l": 520.57,
+            "t": 736.27,
+            "r": 557.9,
+            "b": 693.37
+          },
+          "crop_bbox": {
+            "l": 516.57,
+            "t": 740.27,
+            "r": 561.9,
+            "b": 689.37
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "NUMBERS]",
+          "gcv_text": "%",
+          "page_no": 1,
+          "bbox": {
+            "l": 520.57,
+            "t": 736.27,
+            "r": 557.9,
+            "b": 693.37
+          },
+          "crop_bbox": {
+            "l": 516.57,
+            "t": 740.27,
+            "r": 561.9,
+            "b": 689.37
           },
           "rotation_deg": 0
         }
@@ -336,51 +433,6 @@
             "t": 714.75,
             "r": 374.45,
             "b": 699.24
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/4": {
-      "self_ref": "#/texts/4",
-      "label": "paragraph",
-      "full_gt_text": "New Delhi,",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "New",
-          "gcv_text": "New",
-          "page_no": 1,
-          "bbox": {
-            "l": 286.53,
-            "t": 678.15,
-            "r": 308.23,
-            "b": 670.64
-          },
-          "crop_bbox": {
-            "l": 282.53,
-            "t": 682.15,
-            "r": 312.23,
-            "b": 666.64
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Delhi,",
-          "gcv_text": "Delhi",
-          "page_no": 1,
-          "bbox": {
-            "l": 315.0,
-            "t": 678.15,
-            "r": 348.6,
-            "b": 670.43
-          },
-          "crop_bbox": {
-            "l": 311.0,
-            "t": 682.15,
-            "r": 352.6,
-            "b": 666.43
           },
           "rotation_deg": 0
         }
@@ -2620,32 +2672,6 @@
         }
       ]
     },
-    "#/texts/12": {
-      "self_ref": "#/texts/12",
-      "label": "paragraph",
-      "full_gt_text": "Irwinow",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Irwinow",
-          "gcv_text": "i",
-          "page_no": 1,
-          "bbox": {
-            "l": 395.5,
-            "t": 399.12,
-            "r": 403.43,
-            "b": 392.48
-          },
-          "crop_bbox": {
-            "l": 391.5,
-            "t": 403.12,
-            "r": 407.43,
-            "b": 388.48
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/13": {
       "self_ref": "#/texts/13",
       "label": "paragraph",
@@ -3937,51 +3963,6 @@
         }
       ]
     },
-    "#/texts/21": {
-      "self_ref": "#/texts/21",
-      "label": "paragraph",
-      "full_gt_text": "R. Minaw",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "R.",
-          "gcv_text": ".",
-          "page_no": 1,
-          "bbox": {
-            "l": 360.5,
-            "t": 110.02,
-            "r": 363.77,
-            "b": 102.73
-          },
-          "crop_bbox": {
-            "l": 356.5,
-            "t": 114.02,
-            "r": 367.77,
-            "b": 98.73
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Minaw",
-          "gcv_text": "nir",
-          "page_no": 1,
-          "bbox": {
-            "l": 402.03,
-            "t": 74.21,
-            "r": 429.57,
-            "b": 65.2
-          },
-          "crop_bbox": {
-            "l": 398.03,
-            "t": 78.21,
-            "r": 433.57,
-            "b": 61.2
-          },
-          "rotation_deg": 0
-        }
-      ]
-    },
     "#/texts/22": {
       "self_ref": "#/texts/22",
       "label": "paragraph",
@@ -4125,7 +4106,7 @@
     "#/texts/23": {
       "self_ref": "#/texts/23",
       "label": "paragraph",
-      "full_gt_text": "300 Copr",
+      "full_gt_text": "300 Copies",
       "words": [
         {
           "word_idx": 0,
@@ -4148,7 +4129,7 @@
         },
         {
           "word_idx": 1,
-          "gt_text": "Copr",
+          "gt_text": "Copies",
           "gcv_text": "Copin",
           "page_no": 1,
           "bbox": {
@@ -4170,24 +4151,24 @@
     "#/texts/24": {
       "self_ref": "#/texts/24",
       "label": "paragraph",
-      "full_gt_text": "2",
+      "full_gt_text": "...2",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "2",
-          "gcv_text": "2",
+          "gt_text": "...2",
+          "gcv_text": "...",
           "page_no": 1,
           "bbox": {
-            "l": 442.17,
+            "l": 422.57,
             "t": 23.16,
-            "r": 448.0,
-            "b": 17.37
+            "r": 440.77,
+            "b": 16.94
           },
           "crop_bbox": {
-            "l": 438.17,
+            "l": 418.57,
             "t": 27.16,
-            "r": 452.0,
-            "b": 13.37
+            "r": 444.77,
+            "b": 12.94
           },
           "rotation_deg": 0
         }

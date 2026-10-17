@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_mr_archive_027",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        48.4,
+        28.07,
+        474.32,
+        28.07,
+        474.32,
+        793.98,
+        48.4,
+        793.98
+      ],
+      "html": "<table><thead><tr><td>अनुक्रमांक</td><td>नाम क्रमांक</td><td>महाविद्यालय</td><td>विषय</td></tr></thead><tbody><tr><td>१.</td><td>...</td><td>महाविद्यालय ...</td><td>...</td></tr><tr><td>२.</td><td>...</td><td>महाविद्यालय ...</td><td>...</td></tr><tr><td>३.</td><td>...</td><td>महाविद्यालय ...</td><td>...</td></tr><tr><td>४.</td><td>...</td><td>महाविद्यालय ...</td><td>...</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        4.84,
+        40.1,
+        38.72,
+        40.1,
+        38.72,
+        649.62,
+        4.84,
+        649.62
+      ],
+      "text": "भारत निर्वाचन आयोग, क्रमांक : ... दिनांक ...\n... महाविद्यालय ... प्राचार्य ..."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3193,
+      "output": 2268,
+      "total": 5461
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.001453,
+      "batch": 0.000727
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.14533,
+      "batch": 0.072665,
+      "savings": 0.072665,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

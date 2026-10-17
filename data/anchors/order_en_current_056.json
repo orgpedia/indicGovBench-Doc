@@ -9,6 +9,32 @@
     }
   },
   "blocks": {
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Vikawahl",
+          "page_no": 1,
+          "bbox": {
+            "l": 452.44,
+            "t": 575.98,
+            "r": 539.71,
+            "b": 548.22
+          },
+          "crop_bbox": {
+            "l": 448.08,
+            "t": 579.98,
+            "r": 544.07,
+            "b": 544.22
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
     "#/texts/0": {
       "self_ref": "#/texts/0",
       "label": "paragraph",
@@ -178,24 +204,24 @@
     "#/texts/2": {
       "self_ref": "#/texts/2",
       "label": "paragraph",
-      "full_gt_text": "**Direct Recruitment Cell (E-III), Conference Hall, Old Secretariat, Civil Lines\nNear Vidhan Sabha, New Delhi, Delhi, Pincode - 110054**",
+      "full_gt_text": "Direct Recruitment Cell (E-III), Conference Hall, Old Secretariat, Civil Lines\nNear Vidhan Sabha, New Delhi, Delhi, Pincode - 110054",
       "words": [
         {
           "word_idx": 0,
-          "gt_text": "**Direct",
-          "gcv_text": "GOVERNMENT",
+          "gt_text": "Direct",
+          "gcv_text": "Direct",
           "page_no": 1,
           "bbox": {
-            "l": 218.05,
-            "t": 798.31,
-            "r": 279.83,
-            "b": 791.31
+            "l": 121.16,
+            "t": 779.72,
+            "r": 147.13,
+            "b": 772.24
           },
           "crop_bbox": {
-            "l": 214.05,
-            "t": 802.31,
-            "r": 283.83,
-            "b": 787.31
+            "l": 117.16,
+            "t": 783.72,
+            "r": 151.13,
+            "b": 768.24
           },
           "rotation_deg": 0
         },
@@ -335,171 +361,171 @@
         {
           "word_idx": 8,
           "gt_text": "Civil",
-          "gcv_text": "Civil",
+          "gcv_text": ",",
           "page_no": 1,
           "bbox": {
-            "l": 413.25,
+            "l": 407.24,
             "t": 777.55,
-            "r": 431.53,
-            "b": 770.3
+            "r": 409.65,
+            "b": 770.55
           },
           "crop_bbox": {
-            "l": 409.25,
+            "l": 403.24,
             "t": 781.55,
-            "r": 435.53,
-            "b": 766.3
+            "r": 413.65,
+            "b": 766.55
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 9,
           "gt_text": "Lines",
-          "gcv_text": "Lines",
+          "gcv_text": ",",
           "page_no": 1,
           "bbox": {
-            "l": 435.13,
+            "l": 407.24,
             "t": 777.55,
-            "r": 458.21,
-            "b": 770.06
+            "r": 409.65,
+            "b": 770.55
           },
           "crop_bbox": {
-            "l": 431.13,
+            "l": 403.24,
             "t": 781.55,
-            "r": 462.21,
-            "b": 766.06
+            "r": 413.65,
+            "b": 766.55
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 10,
           "gt_text": "Near",
-          "gcv_text": "F.No.DE.3",
+          "gcv_text": "Near",
           "page_no": 1,
           "bbox": {
-            "l": 88.95,
-            "t": 753.17,
-            "r": 124.53,
-            "b": 745.92
+            "l": 165.64,
+            "t": 770.06,
+            "r": 186.31,
+            "b": 762.82
           },
           "crop_bbox": {
-            "l": 84.95,
-            "t": 757.17,
-            "r": 128.53,
-            "b": 741.92
+            "l": 161.64,
+            "t": 774.06,
+            "r": 190.31,
+            "b": 758.82
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 11,
           "gt_text": "Vidhan",
-          "gcv_text": "(",
+          "gcv_text": "Vidhan",
           "page_no": 1,
           "bbox": {
-            "l": 125.25,
-            "t": 752.92,
-            "r": 127.89,
-            "b": 746.16
+            "l": 188.96,
+            "t": 769.82,
+            "r": 219.25,
+            "b": 762.58
           },
           "crop_bbox": {
-            "l": 121.25,
-            "t": 756.92,
-            "r": 131.89,
-            "b": 742.16
+            "l": 184.96,
+            "t": 773.82,
+            "r": 223.25,
+            "b": 758.58
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 12,
           "gt_text": "Sabha,",
-          "gcv_text": "65",
+          "gcv_text": "Sabha",
           "page_no": 1,
           "bbox": {
-            "l": 128.86,
-            "t": 752.68,
-            "r": 137.51,
-            "b": 745.92
+            "l": 223.34,
+            "t": 769.58,
+            "r": 249.78,
+            "b": 762.34
           },
           "crop_bbox": {
-            "l": 124.86,
-            "t": 756.68,
-            "r": 141.51,
-            "b": 741.92
+            "l": 219.34,
+            "t": 773.58,
+            "r": 253.78,
+            "b": 758.34
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 13,
           "gt_text": "New",
-          "gcv_text": ")",
+          "gcv_text": "New",
           "page_no": 1,
           "bbox": {
-            "l": 138.47,
-            "t": 752.68,
-            "r": 141.12,
-            "b": 745.92
+            "l": 256.51,
+            "t": 769.34,
+            "r": 274.78,
+            "b": 762.1
           },
           "crop_bbox": {
-            "l": 134.47,
-            "t": 756.68,
-            "r": 145.12,
-            "b": 741.92
+            "l": 252.51,
+            "t": 773.34,
+            "r": 278.78,
+            "b": 758.1
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 14,
           "gt_text": "Delhi,",
-          "gcv_text": "/",
+          "gcv_text": "Delhi",
           "page_no": 1,
           "bbox": {
-            "l": 142.32,
-            "t": 752.68,
-            "r": 145.93,
-            "b": 745.92
+            "l": 278.63,
+            "t": 769.1,
+            "r": 300.02,
+            "b": 762.1
           },
           "crop_bbox": {
-            "l": 138.32,
-            "t": 756.68,
-            "r": 149.93,
-            "b": 741.92
+            "l": 274.63,
+            "t": 773.1,
+            "r": 304.02,
+            "b": 758.1
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 15,
           "gt_text": "Delhi,",
-          "gcv_text": "DRC",
+          "gcv_text": ",",
           "page_no": 1,
           "bbox": {
-            "l": 146.89,
-            "t": 752.68,
-            "r": 162.27,
-            "b": 745.44
+            "l": 300.99,
+            "t": 768.86,
+            "r": 303.15,
+            "b": 762.1
           },
           "crop_bbox": {
-            "l": 142.89,
-            "t": 756.68,
-            "r": 166.27,
-            "b": 741.44
+            "l": 296.99,
+            "t": 772.86,
+            "r": 307.15,
+            "b": 758.1
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 16,
           "gt_text": "Pincode",
-          "gcv_text": "(",
+          "gcv_text": "Pincode",
           "page_no": 1,
           "bbox": {
-            "l": 162.99,
-            "t": 752.44,
-            "r": 165.64,
-            "b": 745.68
+            "l": 335.6,
+            "t": 768.86,
+            "r": 370.22,
+            "b": 761.61
           },
           "crop_bbox": {
-            "l": 158.99,
-            "t": 756.44,
-            "r": 169.64,
-            "b": 741.68
+            "l": 331.6,
+            "t": 772.86,
+            "r": 374.22,
+            "b": 757.61
           },
           "rotation_deg": 0
         },
@@ -509,35 +535,35 @@
           "gcv_text": "-",
           "page_no": 1,
           "bbox": {
-            "l": 170.69,
-            "t": 752.44,
-            "r": 174.05,
-            "b": 745.68
+            "l": 373.59,
+            "t": 768.37,
+            "r": 376.95,
+            "b": 761.61
           },
           "crop_bbox": {
-            "l": 166.69,
-            "t": 756.44,
-            "r": 178.05,
-            "b": 741.68
+            "l": 369.59,
+            "t": 772.37,
+            "r": 380.95,
+            "b": 757.61
           },
           "rotation_deg": 0
         },
         {
           "word_idx": 18,
-          "gt_text": "110054**",
-          "gcv_text": "III",
+          "gt_text": "110054",
+          "gcv_text": "110054",
           "page_no": 1,
           "bbox": {
-            "l": 174.29,
-            "t": 752.44,
-            "r": 184.63,
-            "b": 745.68
+            "l": 380.56,
+            "t": 768.37,
+            "r": 413.49,
+            "b": 761.13
           },
           "crop_bbox": {
-            "l": 170.29,
-            "t": 756.44,
-            "r": 188.63,
-            "b": 741.68
+            "l": 376.56,
+            "t": 772.37,
+            "r": 417.49,
+            "b": 757.13
           },
           "rotation_deg": 0
         }
@@ -1410,7 +1436,7 @@
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "1. NOC required from current employer. You are once again directed to submit reply alongwith the requisite documents within the stipulated given time period as you are given a final reminder/last opportunity for the purpose of furnishing reply against the deficiency memo that was issued to you earlier & also directed to submit the required clarification/NOC as mentioned above to\n2. D.R. Cell, Establishment-III Branch of Directorate of Education, Delhi failing which your candidature will be cancelled or it is presumed that you would no longer be interested to join & candidature cancellation proceedings will be initiated without any correspondence.",
+      "full_gt_text": "1. NOC required from current employer. You are once again directed to submit reply alongwith the requisite documents within the stipulated given time period as you are given a final reminder/last opportunity for the purpose of furnishing reply against the deficiency memo that was issued to you earlier & also directed to submit the required clarification/NOC as mentioned above to D.R. Cell, Establishment-III Branch of Directorate of Education, Delhi failing which your candidature will be cancelled or it is presumed that you would no longer be interested to join & candidature cancellation proceedings will be initiated without any correspondence.",
       "words": [
         {
           "word_idx": 0,
@@ -2554,25 +2580,6 @@
         },
         {
           "word_idx": 60,
-          "gt_text": "2.",
-          "gcv_text": "the",
-          "page_no": 1,
-          "bbox": {
-            "l": 499.08,
-            "t": 668.19,
-            "r": 510.14,
-            "b": 661.43
-          },
-          "crop_bbox": {
-            "l": 495.08,
-            "t": 672.19,
-            "r": 514.14,
-            "b": 657.43
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 61,
           "gt_text": "D.R.",
           "gcv_text": "D.R.",
           "page_no": 1,
@@ -2591,7 +2598,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 62,
+          "word_idx": 61,
           "gt_text": "Cell,",
           "gcv_text": "presumed",
           "page_no": 1,
@@ -2610,7 +2617,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 63,
+          "word_idx": 62,
           "gt_text": "Establishment-III",
           "gcv_text": "Cell",
           "page_no": 1,
@@ -2629,7 +2636,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 64,
+          "word_idx": 63,
           "gt_text": "Branch",
           "gcv_text": "Branch",
           "page_no": 1,
@@ -2648,7 +2655,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 65,
+          "word_idx": 64,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2667,7 +2674,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 66,
+          "word_idx": 65,
           "gt_text": "Directorate",
           "gcv_text": "Directorate",
           "page_no": 1,
@@ -2686,7 +2693,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 67,
+          "word_idx": 66,
           "gt_text": "of",
           "gcv_text": "of",
           "page_no": 1,
@@ -2705,7 +2712,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 68,
+          "word_idx": 67,
           "gt_text": "Education,",
           "gcv_text": "join",
           "page_no": 1,
@@ -2724,7 +2731,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 69,
+          "word_idx": 68,
           "gt_text": "Delhi",
           "gcv_text": "Delhi",
           "page_no": 1,
@@ -2743,7 +2750,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 70,
+          "word_idx": 69,
           "gt_text": "failing",
           "gcv_text": "failing",
           "page_no": 1,
@@ -2762,7 +2769,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 71,
+          "word_idx": 70,
           "gt_text": "which",
           "gcv_text": "which",
           "page_no": 1,
@@ -2781,7 +2788,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 72,
+          "word_idx": 71,
           "gt_text": "your",
           "gcv_text": "your",
           "page_no": 1,
@@ -2800,7 +2807,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 73,
+          "word_idx": 72,
           "gt_text": "candidature",
           "gcv_text": "candidature",
           "page_no": 1,
@@ -2819,7 +2826,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 74,
+          "word_idx": 73,
           "gt_text": "will",
           "gcv_text": "will",
           "page_no": 1,
@@ -2838,7 +2845,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 75,
+          "word_idx": 74,
           "gt_text": "be",
           "gcv_text": "be",
           "page_no": 1,
@@ -2857,7 +2864,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 76,
+          "word_idx": 75,
           "gt_text": "cancelled",
           "gcv_text": "cancelled",
           "page_no": 1,
@@ -2876,7 +2883,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 77,
+          "word_idx": 76,
           "gt_text": "or",
           "gcv_text": "or",
           "page_no": 1,
@@ -2895,7 +2902,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 78,
+          "word_idx": 77,
           "gt_text": "it",
           "gcv_text": "it",
           "page_no": 1,
@@ -2914,7 +2921,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 79,
+          "word_idx": 78,
           "gt_text": "is",
           "gcv_text": "is",
           "page_no": 1,
@@ -2933,7 +2940,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 80,
+          "word_idx": 79,
           "gt_text": "presumed",
           "gcv_text": "correspondence",
           "page_no": 1,
@@ -2952,7 +2959,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 81,
+          "word_idx": 80,
           "gt_text": "that",
           "gcv_text": ".",
           "page_no": 1,
@@ -2971,7 +2978,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 82,
+          "word_idx": 81,
           "gt_text": "you",
           "gcv_text": ".",
           "page_no": 1,
@@ -2990,7 +2997,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 83,
+          "word_idx": 82,
           "gt_text": "would",
           "gcv_text": ".",
           "page_no": 1,
@@ -3009,7 +3016,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 84,
+          "word_idx": 83,
           "gt_text": "no",
           "gcv_text": ".",
           "page_no": 1,
@@ -3028,7 +3035,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 85,
+          "word_idx": 84,
           "gt_text": "longer",
           "gcv_text": ".",
           "page_no": 1,
@@ -3047,7 +3054,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 86,
+          "word_idx": 85,
           "gt_text": "be",
           "gcv_text": ".",
           "page_no": 1,
@@ -3066,7 +3073,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 87,
+          "word_idx": 86,
           "gt_text": "interested",
           "gcv_text": ".",
           "page_no": 1,
@@ -3085,7 +3092,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 88,
+          "word_idx": 87,
           "gt_text": "to",
           "gcv_text": ".",
           "page_no": 1,
@@ -3104,7 +3111,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 89,
+          "word_idx": 88,
           "gt_text": "join",
           "gcv_text": ".",
           "page_no": 1,
@@ -3123,7 +3130,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 90,
+          "word_idx": 89,
           "gt_text": "&",
           "gcv_text": ".",
           "page_no": 1,
@@ -3142,7 +3149,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 91,
+          "word_idx": 90,
           "gt_text": "candidature",
           "gcv_text": ".",
           "page_no": 1,
@@ -3161,7 +3168,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 92,
+          "word_idx": 91,
           "gt_text": "cancellation",
           "gcv_text": "cancellation",
           "page_no": 1,
@@ -3180,7 +3187,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 93,
+          "word_idx": 92,
           "gt_text": "proceedings",
           "gcv_text": "proceedings",
           "page_no": 1,
@@ -3199,7 +3206,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 94,
+          "word_idx": 93,
           "gt_text": "will",
           "gcv_text": "will",
           "page_no": 1,
@@ -3218,7 +3225,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 95,
+          "word_idx": 94,
           "gt_text": "be",
           "gcv_text": "be",
           "page_no": 1,
@@ -3237,7 +3244,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 96,
+          "word_idx": 95,
           "gt_text": "initiated",
           "gcv_text": "initiated",
           "page_no": 1,
@@ -3256,7 +3263,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 97,
+          "word_idx": 96,
           "gt_text": "without",
           "gcv_text": "without",
           "page_no": 1,
@@ -3275,7 +3282,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 98,
+          "word_idx": 97,
           "gt_text": "any",
           "gcv_text": "any",
           "page_no": 1,
@@ -3294,7 +3301,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 99,
+          "word_idx": 98,
           "gt_text": "correspondence.",
           "gcv_text": "You",
           "page_no": 1,

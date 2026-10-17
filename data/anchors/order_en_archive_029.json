@@ -1,6 +1,6 @@
 {
   "doc_id": "order_en_archive_029",
-  "total_words": 157,
+  "total_words": 165,
   "pages": {
     "1": {
       "width": 595.0,
@@ -75,6 +75,167 @@
             "t": 827.83,
             "r": 329.03,
             "b": 778.22
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/11": {
+      "self_ref": "#/texts/11",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 348.37,
+            "t": 456.03,
+            "r": 353.97,
+            "b": 444.08
+          },
+          "crop_bbox": {
+            "l": 344.37,
+            "t": 460.03,
+            "r": 357.97,
+            "b": 440.08
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/21": {
+      "self_ref": "#/texts/21",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "Secretary",
+          "page_no": 1,
+          "bbox": {
+            "l": 325.73,
+            "t": 444.32,
+            "r": 389.67,
+            "b": 430.69
+          },
+          "crop_bbox": {
+            "l": 321.73,
+            "t": 448.32,
+            "r": 393.67,
+            "b": 426.69
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/22": {
+      "self_ref": "#/texts/22",
+      "label": "paragraph",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.1,
+            "t": 239.38,
+            "r": 343.23,
+            "b": 229.09
+          },
+          "crop_bbox": {
+            "l": 334.1,
+            "t": 243.38,
+            "r": 347.23,
+            "b": 225.09
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/23": {
+      "self_ref": "#/texts/23",
+      "label": "paragraph",
+      "full_gt_text": "jsund\n2037\ndir\n24/3",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "jsund",
+          "gcv_text": "Issund",
+          "page_no": 1,
+          "bbox": {
+            "l": 14.0,
+            "t": 648.06,
+            "r": 70.23,
+            "b": 581.82
+          },
+          "crop_bbox": {
+            "l": 10.0,
+            "t": 652.06,
+            "r": 74.23,
+            "b": 577.82
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "2037",
+          "gcv_text": "20737",
+          "page_no": 1,
+          "bbox": {
+            "l": 47.83,
+            "t": 629.89,
+            "r": 82.83,
+            "b": 594.49
+          },
+          "crop_bbox": {
+            "l": 43.83,
+            "t": 633.89,
+            "r": 86.83,
+            "b": 590.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "dir",
+          "gcv_text": "чев",
+          "page_no": 1,
+          "bbox": {
+            "l": 30.8,
+            "t": 556.71,
+            "r": 66.73,
+            "b": 516.77
+          },
+          "crop_bbox": {
+            "l": 26.8,
+            "t": 560.71,
+            "r": 70.73,
+            "b": 512.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "24/3",
+          "gcv_text": "24/3",
+          "page_no": 1,
+          "bbox": {
+            "l": 51.1,
+            "t": 544.51,
+            "r": 91.23,
+            "b": 503.86
+          },
+          "crop_bbox": {
+            "l": 47.1,
+            "t": 548.51,
+            "r": 95.23,
+            "b": 499.86
           },
           "rotation_deg": 0
         }
@@ -479,7 +640,7 @@
     "#/texts/7": {
       "self_ref": "#/texts/7",
       "label": "paragraph",
-      "full_gt_text": "New Delhi, 24 March, 1977.\n3 Chaitra, 2899(s).",
+      "full_gt_text": "New Delhi, 24 March, 1977.\n3 Chaitra, 1899(s).",
       "words": [
         {
           "word_idx": 0,
@@ -616,7 +777,7 @@
         },
         {
           "word_idx": 7,
-          "gt_text": "2899(s).",
+          "gt_text": "1899(s).",
           "gcv_text": "s",
           "page_no": 1,
           "bbox": {
@@ -2157,10 +2318,10 @@
         }
       ]
     },
-    "#/texts/11": {
-      "self_ref": "#/texts/11",
+    "#/texts/12": {
+      "self_ref": "#/texts/12",
       "label": "paragraph",
-      "full_gt_text": "(K. Ramiah)",
+      "full_gt_text": "(K. Ramiah)\nUnder Secretary to the Cabinet",
       "words": [
         {
           "word_idx": 0,
@@ -2199,54 +2360,47 @@
             "b": 440.32
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/12": {
-      "self_ref": "#/texts/12",
-      "label": "paragraph",
-      "full_gt_text": "Under Secretary to the Cabinet",
-      "words": [
-        {
-          "word_idx": 0,
-          "gt_text": "Under",
-          "gcv_text": "(",
-          "page_no": 1,
-          "bbox": {
-            "l": 348.37,
-            "t": 456.03,
-            "r": 353.97,
-            "b": 444.08
-          },
-          "crop_bbox": {
-            "l": 344.37,
-            "t": 460.03,
-            "r": 357.97,
-            "b": 440.08
-          },
-          "rotation_deg": 0
-        },
-        {
-          "word_idx": 1,
-          "gt_text": "Secretary",
-          "gcv_text": "K.",
-          "page_no": 1,
-          "bbox": {
-            "l": 353.5,
-            "t": 456.27,
-            "r": 367.03,
-            "b": 444.32
-          },
-          "crop_bbox": {
-            "l": 349.5,
-            "t": 460.27,
-            "r": 371.03,
-            "b": 440.32
-          },
-          "rotation_deg": 0
         },
         {
           "word_idx": 2,
+          "gt_text": "Under",
+          "gcv_text": "Ramish",
+          "page_no": 1,
+          "bbox": {
+            "l": 374.03,
+            "t": 457.71,
+            "r": 417.2,
+            "b": 444.79
+          },
+          "crop_bbox": {
+            "l": 370.03,
+            "t": 461.71,
+            "r": 421.2,
+            "b": 440.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Secretary",
+          "gcv_text": ")",
+          "page_no": 1,
+          "bbox": {
+            "l": 418.13,
+            "t": 457.95,
+            "r": 423.5,
+            "b": 445.99
+          },
+          "crop_bbox": {
+            "l": 414.13,
+            "t": 461.95,
+            "r": 427.5,
+            "b": 441.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -2265,7 +2419,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 5,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -2284,7 +2438,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 6,
           "gt_text": "Cabinet",
           "gcv_text": "Cabinet",
           "page_no": 1,
@@ -2537,7 +2691,7 @@
     "#/texts/16": {
       "self_ref": "#/texts/16",
       "label": "paragraph",
-      "full_gt_text": "S. S. Srdhu",
+      "full_gt_text": "S. S. Sidhu",
       "words": [
         {
           "word_idx": 0,
@@ -2579,7 +2733,7 @@
         },
         {
           "word_idx": 2,
-          "gt_text": "Srdhu",
+          "gt_text": "Sidhu",
           "gcv_text": "Sidh",
           "page_no": 1,
           "bbox": {
@@ -2995,7 +3149,33 @@
     "#/texts/19": {
       "self_ref": "#/texts/19",
       "label": "paragraph",
-      "full_gt_text": "(K. Ramiah)",
+      "full_gt_text": "[SIGNATURE]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[SIGNATURE]",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 338.1,
+            "t": 239.38,
+            "r": 343.23,
+            "b": 229.09
+          },
+          "crop_bbox": {
+            "l": 334.1,
+            "t": 243.38,
+            "r": 347.23,
+            "b": 225.09
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/20": {
+      "self_ref": "#/texts/20",
+      "label": "paragraph",
+      "full_gt_text": "(K. Ramiah)\nUnder Secretary to the Cabinet.",
       "words": [
         {
           "word_idx": 0,
@@ -3034,35 +3214,28 @@
             "b": 225.33
           },
           "rotation_deg": 0
-        }
-      ]
-    },
-    "#/texts/20": {
-      "self_ref": "#/texts/20",
-      "label": "paragraph",
-      "full_gt_text": "Under Secretary to the Cabinet.",
-      "words": [
+        },
         {
-          "word_idx": 0,
+          "word_idx": 2,
           "gt_text": "Under",
-          "gcv_text": "(",
+          "gcv_text": "Remia",
           "page_no": 1,
           "bbox": {
-            "l": 338.1,
-            "t": 239.38,
-            "r": 343.23,
-            "b": 229.09
+            "l": 362.83,
+            "t": 240.33,
+            "r": 399.93,
+            "b": 229.33
           },
           "crop_bbox": {
-            "l": 334.1,
-            "t": 243.38,
-            "r": 347.23,
-            "b": 225.09
+            "l": 358.83,
+            "t": 244.33,
+            "r": 403.93,
+            "b": 225.33
           },
           "rotation_deg": 0
         },
         {
-          "word_idx": 1,
+          "word_idx": 3,
           "gt_text": "Secretary",
           "gcv_text": "Secretary",
           "page_no": 1,
@@ -3081,7 +3254,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 2,
+          "word_idx": 4,
           "gt_text": "to",
           "gcv_text": "to",
           "page_no": 1,
@@ -3100,7 +3273,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 3,
+          "word_idx": 5,
           "gt_text": "the",
           "gcv_text": "the",
           "page_no": 1,
@@ -3119,7 +3292,7 @@
           "rotation_deg": 0
         },
         {
-          "word_idx": 4,
+          "word_idx": 6,
           "gt_text": "Cabinet.",
           "gcv_text": "Cabinet",
           "page_no": 1,
