@@ -19,7 +19,14 @@ LFS_ROOT ?= LFS/indicGovBench-Doc
 WORKSPACE_DIR ?= workspace
 PORT ?= 9091
 
+HF_BIN ?= $(shell if command -v huggingface-cli >/dev/null 2>&1; then echo huggingface-cli; \
+                  elif command -v hf >/dev/null 2>&1; then echo hf; \
+                  elif [ -f $(VENV_DIR)/bin/huggingface-cli ]; then echo $(VENV_DIR)/bin/huggingface-cli; \
+                  elif [ -f $(VENV_DIR)/bin/hf ]; then echo $(VENV_DIR)/bin/hf; \
+                  else echo "$(PY_EXEC) -m huggingface_hub.cli.hf"; fi)
+
 .PHONY: help install import setup_links verify_data sync_hf_pull sync_hf_push export_parquet \
+        tag checkout checkout_main list_tags delete_tag \
         all_docs images gcv anchors raw predictions validate prepare \
         batch_status batch_wait batch_cancel batch_unpack \
         init_db reset_db export_db eval_all eval_doc inspect_doc leaderboard \
@@ -37,6 +44,13 @@ help:
 	@echo "  make setup_links        Configure zero-copy symlinks to local LFS storage"
 	@echo "  make verify_data        Verify ground-truth annotations and symlink integrity"
 	@echo "  make sync_hf_push       Push local heavy assets from LFS/ to Hugging Face Hub (huggingface-cli)"
+	@echo ""
+	@echo "🏷️  Versioning & Snapshot Management (GitHub + Hugging Face):"
+	@echo "  make tag TAG=...        Create synced tag on GitHub & Hugging Face Dataset (Options: MSG=\"...\")"
+	@echo "  make checkout TAG=...   Switch Git and HF LFS mirror to exact tag (Options: CLEAN=1)"
+	@echo "  make checkout_main      Restore Git and HF dataset mirror to latest main (Options: CLEAN=1)"
+	@echo "  make list_tags          List available tags on GitHub & Hugging Face Dataset"
+	@echo "  make delete_tag TAG=... Delete tag on both GitHub & Hugging Face Dataset"
 	@echo ""
 	@echo "📦 Pipeline Execution & Document Generation:"
 	@echo "  make images             Render 300 DPI PNG images from PDFs"
@@ -144,17 +158,17 @@ verify_data:
 	@PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.cli verify
 
 import:
-	@echo "📥 Importing all dataset files from Hugging Face Hub ($(HF_REPO_ID))..."
+	@echo "📥 Importing dataset files from Hugging Face Hub ($(HF_REPO_ID)$(if $(HF_REVISION), @ revision $(HF_REVISION),))..."
+	$(if $(CLEAN),@rm -rf $(LFS_ROOT),)
 	@mkdir -p $(LFS_ROOT)
-	@if command -v huggingface-cli >/dev/null 2>&1; then \
-		huggingface-cli download $(HF_REPO_ID) --local-dir $(LFS_ROOT) --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
-	elif [ -f $(VENV_DIR)/bin/huggingface-cli ]; then \
-		$(VENV_DIR)/bin/huggingface-cli download $(HF_REPO_ID) --local-dir $(LFS_ROOT) --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
+	@if [ -n "$(HF_BIN)" ]; then \
+		$(HF_BIN) download $(HF_REPO_ID) $(if $(HF_REVISION),--revision $(HF_REVISION),) --local-dir $(LFS_ROOT) --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
 	else \
 		PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.sync_hf_job \
 			--mode download \
 			--hf-repo-id $(HF_REPO_ID) \
 			--hf-repo-path $(LFS_ROOT) \
+			$(if $(HF_REVISION),--revision $(HF_REVISION),) \
 			$(if $(HF_TOKEN),--hf-token $(HF_TOKEN),); \
 	fi
 	@$(MAKE) setup_links
@@ -165,10 +179,8 @@ sync_hf_pull: import
 
 sync_hf_push:
 	@echo "📤 Uploading assets from $(LFS_ROOT) to Hugging Face Hub ($(HF_REPO_ID))..."
-	@if command -v huggingface-cli >/dev/null 2>&1; then \
-		huggingface-cli upload $(HF_REPO_ID) $(LFS_ROOT) . --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
-	elif [ -f $(VENV_DIR)/bin/huggingface-cli ]; then \
-		$(VENV_DIR)/bin/huggingface-cli upload $(HF_REPO_ID) $(LFS_ROOT) . --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
+	@if [ -n "$(HF_BIN)" ]; then \
+		$(HF_BIN) upload $(HF_REPO_ID) $(LFS_ROOT) . --repo-type dataset $(if $(HF_TOKEN),--token $(HF_TOKEN),); \
 	else \
 		PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.sync_hf_job \
 			--mode upload \
@@ -181,6 +193,54 @@ sync_hf_push:
 export_parquet:
 	@echo "📦 Generating Hugging Face Parquet dataset tables..."
 	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.hub.export_parquet --out-dir $(LFS_ROOT)/data
+
+# ----------------------------------------------------------------------
+# 2. Versioning & Snapshot Management (GitHub + Hugging Face)
+# ----------------------------------------------------------------------
+
+tag:
+	@if [ -z "$(TAG)" ]; then echo "❌ Please specify TAG=<name> (e.g. make tag TAG=v0.1-270docs [MSG=\"...\"])"; exit 1; fi
+	@if [ -n "$$(git status --porcelain)" ]; then echo "❌ Git working tree has uncommitted changes. Please commit or stash first."; exit 1; fi
+	@echo "🏷️  Tagging Git repository at $$(git rev-parse --short HEAD)..."
+	git tag -a $(TAG) -m "$(if $(MSG),$(MSG),Release $(TAG))"
+	git push origin $(TAG)
+	@echo "🏷️  Tagging Hugging Face dataset ($(HF_REPO_ID))..."
+	$(PY_EXEC) -m huggingface_hub.cli.hf repos tag create $(HF_REPO_ID) $(TAG) --type dataset $(if $(MSG),-m "$(MSG)",)
+	@echo "✅ Synchronized tag '$(TAG)' successfully published to GitHub and Hugging Face!"
+
+checkout:
+	@if [ -z "$(TAG)" ]; then echo "❌ Please specify TAG=<name> (e.g. make checkout TAG=v0.1-270docs [CLEAN=1])"; exit 1; fi
+	@if [ -n "$$(git status --porcelain)" ]; then echo "❌ Git working tree has uncommitted changes. Stash or commit before switching tags."; exit 1; fi
+	@echo "🔄 Checking out Git tag $(TAG)..."
+	git checkout $(TAG)
+	@$(MAKE) import HF_REVISION=$(TAG) $(if $(CLEAN),CLEAN=1,)
+	@$(MAKE) reset_db
+	@echo "🎯 Workspace, LFS files, and benchmark.db successfully locked to $(TAG)!"
+
+checkout_main:
+	@if [ -n "$$(git status --porcelain)" ]; then echo "❌ Git working tree has uncommitted changes. Stash or commit before switching branches."; exit 1; fi
+	@echo "🔄 Returning Git to main branch..."
+	git checkout main
+	@$(MAKE) import HF_REVISION=main $(if $(CLEAN),CLEAN=1,)
+	@$(MAKE) reset_db
+	@echo "🎯 Workspace restored to latest active development (main)!"
+
+list_tags:
+	@echo "🏷️  GitHub Tags:"
+	@git tag -l -n1
+	@echo ""
+	@echo "🏷️  Hugging Face Dataset Tags ($(HF_REPO_ID)):"
+	@$(PY_EXEC) -m huggingface_hub.cli.hf repos tag list $(HF_REPO_ID) --type dataset 2>/dev/null || echo "⚠️ Could not list HF tags"
+
+delete_tag:
+	@if [ -z "$(TAG)" ]; then echo "❌ Please specify TAG=<name> (e.g. make delete_tag TAG=v0.1-test)"; exit 1; fi
+	@echo "⚠️ Deleting tag $(TAG) from local Git..."
+	@git tag -d $(TAG) 2>/dev/null || true
+	@echo "⚠️ Deleting tag $(TAG) from GitHub origin..."
+	@git push origin --delete $(TAG) 2>/dev/null || true
+	@echo "⚠️ Deleting tag $(TAG) from Hugging Face dataset ($(HF_REPO_ID))..."
+	@$(PY_EXEC) -m huggingface_hub.cli.hf repos tag delete $(HF_REPO_ID) $(TAG) --type dataset 2>/dev/null || true
+	@echo "✅ Tag '$(TAG)' deleted from GitHub and Hugging Face."
 
 # ----------------------------------------------------------------------
 # 2. Pipeline Execution & Provider Querying (Native IndicGovBench-Doc)
@@ -215,11 +275,12 @@ TARGET_PROVIDERS := $(RAW_PROVIDERS)
 # EVAL_PROVIDERS: Scoped to PROVIDER if given, else all discovered predictions on disk (minus EXCLUDE)
 EVAL_PROVIDERS   ?= $(filter-out $(EXCLUDE),$(if $(PROVIDER),$(PROVIDER),$(DISCOVERED_PREDS)))
 
-# Dynamic Document Scoping (Single DOC/DOC_ID or All PDFs)
+# Unified Document Identifier (DOC and DOC_ID are interchangeable)
+DOC ?= $(DOC_ID)
+
+# Dynamic Document Scoping (Single DOC or All PDFs)
 ifdef DOC
     DOC_IDS := $(DOC)
-else ifdef DOC_ID
-    DOC_IDS := $(DOC_ID)
 else
     PDFS := $(wildcard data/pdfs/*.pdf)
     DOC_IDS := $(patsubst data/pdfs/%.pdf,%,$(PDFS))
@@ -231,9 +292,6 @@ IMAGES := $(patsubst %,data/images/%.png,$(DOC_IDS))
 ifdef DOC
     ANCHORS     := data/anchors/$(DOC).json
     PREDICTIONS := $(foreach p,$(TARGET_PROVIDERS),data/predictions/$(p)/$(DOC).json)
-else ifdef DOC_ID
-    ANCHORS     := data/anchors/$(DOC_ID).json
-    PREDICTIONS := $(foreach p,$(TARGET_PROVIDERS),data/predictions/$(p)/$(DOC_ID).json)
 else
     ANCHORS     := $(patsubst data/ground_truth/%.json,data/anchors/%.json,$(wildcard data/ground_truth/*.json))
     PREDICTIONS := $(foreach p,$(TARGET_PROVIDERS),$(patsubst data/raw_responses/$(p)/%.json,data/predictions/$(p)/%.json,$(wildcard data/raw_responses/$(p)/*.json)))
