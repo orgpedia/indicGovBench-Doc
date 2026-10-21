@@ -10,6 +10,25 @@
   },
   "blocks": [
     {
+      "id": 14,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        39.67,
+        580.63,
+        99.17,
+        580.63,
+        99.17,
+        639.36,
+        39.67,
+        639.36
+      ],
+      "text": "Handwritten signature and date: 18/10/2022",
+      "html": null,
+      "reason": "[SIGNATURE]"
+    },
+    {
       "id": 0,
       "type": "text",
       "scope": "target",
@@ -274,25 +293,6 @@
       "text": "Page 1 of 2",
       "html": null,
       "reason": null
-    },
-    {
-      "id": 14,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        39.67,
-        580.63,
-        99.17,
-        580.63,
-        99.17,
-        639.36,
-        39.67,
-        639.36
-      ],
-      "text": "Handwritten signature and date: 18/10/2022",
-      "html": null,
-      "reason": "[SIGNATURE]"
     }
   ]
 }

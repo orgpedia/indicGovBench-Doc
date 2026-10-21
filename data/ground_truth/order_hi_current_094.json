@@ -105,6 +105,25 @@
       "reason": null
     },
     {
+      "id": 34,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        487.4,
+        193.4,
+        571.8,
+        193.4,
+        571.8,
+        221.9,
+        487.4,
+        221.9
+      ],
+      "text": "[SIGNATURE]",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
       "id": 5,
       "type": "text",
       "scope": "target",
@@ -618,23 +637,23 @@
       "reason": null
     },
     {
-      "id": 32,
+      "id": 35,
       "type": "text",
       "scope": "excluded",
       "order": null,
       "poly": [
-        452.1841434899721,
-        692.9697835980828,
-        515.27,
-        692.9697835980828,
-        515.27,
-        742.64,
-        452.1841434899721,
-        742.64
+        438.7,
+        693.3,
+        528.7,
+        693.3,
+        528.7,
+        735.3,
+        438.7,
+        735.3
       ],
-      "text": "26/5/26",
+      "text": "[SIGNATURE]",
       "html": null,
-      "reason": "SIGNATURE"
+      "reason": "excluded"
     },
     {
       "id": 33,

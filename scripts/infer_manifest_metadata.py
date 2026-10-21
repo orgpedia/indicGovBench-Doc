@@ -4,7 +4,7 @@ infer_manifest_metadata.py — Automatically infer and update document metadata 
 from ground-truth reference JSON files.
 
 Principles:
-- 100% Deterministic: Table AST properties (merged rows/cols, no-header, multi-row header, layout),
+- 100% Deterministic: Table AST properties (merged rows/cols, no-header, multi-row header, full-page tables),
   Unicode scripts, multilingual language detection, horizon, digital signatures, and logos.
 - Safe Execution: Does not modify original YAML unless explicitly directed to an output path.
 
@@ -41,7 +41,7 @@ def infer_table_metadata(blocks: list[dict[str, Any]], page_width: float, page_h
         return {
             "has_tables": False,
             "table_count": 0,
-            "table_layout": "none",
+            "table_has_full_page": False,
             "table_row_has_lines": False,
             "table_has_full_outer_border": False,
             "table_has_only_bottom_top_border": False,
@@ -62,7 +62,6 @@ def infer_table_metadata(blocks: list[dict[str, Any]], page_width: float, page_h
             total_table_height += (max(ys) - min(ys))
 
     is_full_page = (total_table_height / max(page_height, 1.0)) > 0.55
-    table_layout = "full_page" if is_full_page else "half_page"
 
     # Analyze HTML AST across all tables in doc
     has_merged_rows = False
@@ -121,7 +120,7 @@ def infer_table_metadata(blocks: list[dict[str, Any]], page_width: float, page_h
     return {
         "has_tables": True,
         "table_count": table_count,
-        "table_layout": table_layout,
+        "table_has_full_page": is_full_page,
         "table_has_merged_rows": has_merged_rows,
         "table_has_merged_cols": has_merged_cols,
         "table_has_no_header": has_no_header,
@@ -228,7 +227,7 @@ def process_manifest_inference(
             "scripts": scripts,
             "has_tables": has_tbl,
             "table_count": table_meta["table_count"],
-            "table_layout": table_meta["table_layout"],
+            "table_has_full_page": table_meta["table_has_full_page"],
             "table_row_has_lines": entry.get("table_row_has_lines", entry.get("table_has_lines", False)) if has_tbl else False,
             "table_has_full_outer_border": entry.get("table_has_full_outer_border", entry.get("table_has_border_lines", False)) if has_tbl else False,
             "table_has_only_bottom_top_border": entry.get("table_has_only_bottom_top_border", False) if has_tbl else False,
@@ -252,7 +251,7 @@ def process_manifest_inference(
         doc_diffs = []
         new_entry = dict(entry)
         # Remove legacy field keys if present
-        for legacy_k in ("table_has_lines", "table_has_border_lines", "table_has_multi_lines"):
+        for legacy_k in ("table_has_lines", "table_has_border_lines", "table_has_multi_lines", "table_layout"):
             new_entry.pop(legacy_k, None)
 
         for k, new_v in proposed_updates.items():

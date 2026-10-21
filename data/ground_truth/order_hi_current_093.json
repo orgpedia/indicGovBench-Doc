@@ -10,6 +10,25 @@
   },
   "blocks": [
     {
+      "id": 13,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        465.2,
+        746.2,
+        496.15,
+        746.2,
+        496.15,
+        763.97,
+        465.2,
+        763.97
+      ],
+      "text": "அ",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
       "id": 0,
       "type": "text",
       "scope": "target",
@@ -255,25 +274,6 @@
       "text": "II उक्त प्रोन्नति दिनांक-01.01.2026 अथवा प्रोन्नत पर योगदान देने की तिथि, जो\nबाद में हो, से प्रभावी होगी।",
       "html": null,
       "reason": null
-    },
-    {
-      "id": 13,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        465.2,
-        746.2,
-        496.15,
-        746.2,
-        496.15,
-        763.97,
-        465.2,
-        763.97
-      ],
-      "text": "அ",
-      "html": null,
-      "reason": "excluded"
     }
   ]
 }

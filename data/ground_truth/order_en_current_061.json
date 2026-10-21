@@ -10,6 +10,25 @@
   },
   "blocks": [
     {
+      "id": 3,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        313.56,
+        69.04,
+        336.17,
+        69.04,
+        336.17,
+        76.62,
+        313.56,
+        76.62
+      ],
+      "text": "***",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
       "id": 0,
       "type": "text",
       "scope": "target",
@@ -65,25 +84,6 @@
       "text": "INDIRA NAGAR, GORIMEDU, PUDUCHERRY-6",
       "html": null,
       "reason": null
-    },
-    {
-      "id": 3,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        313.56,
-        69.04,
-        336.17,
-        69.04,
-        336.17,
-        76.62,
-        313.56,
-        76.62
-      ],
-      "text": "***",
-      "html": null,
-      "reason": "excluded"
     },
     {
       "id": 4,
@@ -274,6 +274,25 @@
       "text": "(Dr. J. Ramesh)\nMedical Superintendent – cum-\nHead of Office, DFS",
       "html": null,
       "reason": null
+    },
+    {
+      "id": 14,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        426.3,
+        748.1,
+        576.3,
+        748.1,
+        576.3,
+        774.1,
+        426.3,
+        774.1
+      ],
+      "text": "[SIGNATURE]",
+      "html": null,
+      "reason": "excluded"
     }
   ]
 }

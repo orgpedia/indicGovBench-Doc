@@ -437,7 +437,7 @@
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: true
-  signature_type: NONE
+  signature_type: MANUAL
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -519,7 +519,7 @@
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: true
-  signature_type: NONE
+  signature_type: MANUAL
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -3799,7 +3799,7 @@
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: true
-  signature_type: NONE
+  signature_type: MANUAL
   has_stamp: false
   has_handwritten: true
   has_non_standard_font: false
@@ -3823,26 +3823,26 @@
   - Latin
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
+  has_tables: true
   table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
-  has_stamp: false
-  has_handwritten: false
+  has_signature: true
+  signature_type: HAND-WRITTEN
+  has_stamp: true
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -3850,7 +3850,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_en_current_059
   doc_date: ''
@@ -3864,26 +3864,26 @@
   - Latin
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
+  has_tables: true
   table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -3891,7 +3891,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_en_current_060
   doc_date: ''
@@ -3905,23 +3905,23 @@
   - Latin
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
-  table_has_no_header: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
+  table_has_no_header: true
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
+  has_signature: true
   signature_type: NONE
   has_stamp: false
   has_handwritten: false
@@ -3932,7 +3932,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_en_current_061
   doc_date: ''
@@ -3946,24 +3946,24 @@
   - Latin
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
+  has_tables: true
+  table_has_full_page: true
+  table_count: 2
   table_row_has_lines: false
   table_has_no_header: false
-  table_has_multi_row_header: false
+  table_has_multi_row_header: true
   table_has_full_outer_border: false
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
-  table_has_merged_cols: false
+  table_has_merged_cols: true
   table_cell_has_multi_lines: false
-  table_has_multi_merged_cells: false
+  table_has_multi_merged_cells: true
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -3973,7 +3973,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_en_current_063
   doc_date: ''
@@ -3987,7 +3987,7 @@
   - Latin
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -4002,11 +4002,11 @@
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
-  has_logo: false
+  has_logo: true
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -4014,7 +4014,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_en_current_066
   doc_date: ''
@@ -4028,24 +4028,24 @@
   - Latin
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
+  has_tables: true
   table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
-  has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_logo: true
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -4055,7 +4055,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_en_current_067
   doc_date: ''
@@ -4084,9 +4084,9 @@
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
-  has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_logo: true
+  has_signature: true
+  signature_type: MANUAL
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -5213,11 +5213,12 @@
   page_number: 1
   languages:
   - Hindi
+  - English
   scripts:
   - Devanagari
   doc_type: Order
-  layout: Single Column
-  doc_creation: Digital
+  layout: Two Column
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: archive
   has_tables: false
@@ -5236,15 +5237,15 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
   scan_has_tilt: false
   scan_has_wavy_distortion: false
-  scan_has_dots: false
-  scan_has_darkpatch: false
-  audit_status: unreviewed
+  scan_has_dots: true
+  scan_has_darkpatch: true
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_001
   doc_date: ''
@@ -6176,8 +6177,8 @@
   table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: MANUAL
   has_stamp: true
   has_handwritten: false
   has_non_standard_font: false
@@ -7077,7 +7078,7 @@
   table_has_merged_cols: false
   table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
-  has_logo: false
+  has_logo: true
   has_signature: true
   signature_type: MANUAL
   has_stamp: false
@@ -7513,26 +7514,26 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
+  has_tables: true
+  table_has_full_page: true
+  table_count: 2
   table_row_has_lines: false
   table_has_no_header: false
-  table_has_multi_row_header: false
+  table_has_multi_row_header: true
   table_has_full_outer_border: false
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
-  table_has_merged_cols: false
-  table_cell_has_multi_lines: false
-  table_has_multi_merged_cells: false
+  table_has_merged_cols: true
+  table_cell_has_multi_lines: true
+  table_has_multi_merged_cells: true
   has_logo: false
-  has_signature: false
+  has_signature: true
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -7540,7 +7541,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_077
   doc_date: ''
@@ -7554,7 +7555,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -7570,10 +7571,10 @@
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -7581,7 +7582,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_079
   doc_date: ''
@@ -7595,21 +7596,21 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
-  table_has_merged_rows: false
+  table_has_merged_rows: true
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
-  table_has_multi_merged_cells: false
+  table_cell_has_multi_lines: true
+  table_has_multi_merged_cells: true
   has_logo: false
   has_signature: false
   signature_type: NONE
@@ -7622,7 +7623,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_081
   doc_date: ''
@@ -7636,21 +7637,21 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
-  table_has_multi_merged_cells: false
+  table_has_multi_merged_cells: true
   has_logo: false
   has_signature: false
   signature_type: NONE
@@ -7663,7 +7664,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_084
   doc_date: ''
@@ -7677,20 +7678,20 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
-  table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_multi_row_header: true
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: false
@@ -7699,12 +7700,12 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 90
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_085
   doc_date: ''
@@ -7718,26 +7719,26 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
-  table_has_no_header: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 2
+  table_row_has_lines: true
+  table_has_no_header: true
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -7745,7 +7746,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_086
   doc_date: ''
@@ -7759,20 +7760,20 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
+  has_tables: true
   table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
-  table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_multi_row_header: true
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: false
@@ -7786,7 +7787,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_087
   doc_date: ''
@@ -7800,20 +7801,20 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: false
@@ -7827,7 +7828,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_088
   doc_date: ''
@@ -7841,7 +7842,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -7857,8 +7858,8 @@
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -7868,7 +7869,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_090
   doc_date: ''
@@ -7882,7 +7883,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -7898,10 +7899,10 @@
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -7909,7 +7910,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_093
   doc_date: ''
@@ -7964,7 +7965,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -7980,18 +7981,18 @@
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
-  scan_has_darkpatch: false
-  audit_status: unreviewed
+  scan_has_darkpatch: true
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_095
   doc_date: ''
@@ -8005,16 +8006,16 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
-  table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_multi_row_header: true
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
@@ -8032,7 +8033,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_096
   doc_date: ''
@@ -8046,7 +8047,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -8061,7 +8062,7 @@
   table_has_merged_cols: false
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
-  has_logo: false
+  has_logo: true
   has_signature: false
   signature_type: NONE
   has_stamp: false
@@ -8071,9 +8072,9 @@
   rotation: 0
   scan_has_tilt: false
   scan_has_wavy_distortion: false
-  scan_has_dots: false
+  scan_has_dots: true
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_097
   doc_date: ''
@@ -8087,7 +8088,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -8112,9 +8113,9 @@
   rotation: 0
   scan_has_tilt: false
   scan_has_wavy_distortion: false
-  scan_has_dots: false
+  scan_has_dots: true
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_098
   doc_date: ''
@@ -8128,7 +8129,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -8147,15 +8148,15 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
   scan_has_tilt: false
   scan_has_wavy_distortion: false
-  scan_has_dots: false
+  scan_has_dots: true
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_hi_current_099
   doc_date: ''
@@ -8169,7 +8170,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -8185,10 +8186,10 @@
   table_cell_has_multi_lines: false
   table_has_multi_merged_cells: false
   has_logo: false
-  has_signature: false
-  signature_type: NONE
+  has_signature: true
+  signature_type: HAND-WRITTEN
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -8196,7 +8197,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_mr_archive_007
   doc_date: ''
@@ -11958,7 +11959,7 @@
   table_has_multi_merged_cells: true
   has_logo: false
   has_signature: true
-  signature_type: NONE
+  signature_type: MANUAL
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -11999,7 +12000,7 @@
   table_has_multi_merged_cells: true
   has_logo: false
   has_signature: true
-  signature_type: NONE
+  signature_type: MANUAL
   has_stamp: false
   has_handwritten: false
   has_non_standard_font: false
@@ -12105,7 +12106,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -12124,15 +12125,15 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
-  scan_has_tilt: false
+  scan_has_tilt: true
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_mr_current_088
   doc_date: ''
@@ -12146,7 +12147,7 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
   has_tables: false
@@ -12165,7 +12166,7 @@
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -12173,7 +12174,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_mr_current_089
   doc_date: ''
@@ -12187,16 +12188,16 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 2
+  table_row_has_lines: true
   table_has_no_header: false
   table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
@@ -12209,12 +12210,12 @@
   has_handwritten: false
   has_non_standard_font: false
   has_watermark: false
-  rotation: 0
+  rotation: 270
   scan_has_tilt: false
   scan_has_wavy_distortion: false
   scan_has_dots: false
-  scan_has_darkpatch: false
-  audit_status: unreviewed
+  scan_has_darkpatch: true
+  audit_status: verified
   notes: ''
 - doc_id: order_mr_current_090
   doc_date: ''
@@ -12228,26 +12229,26 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
-  table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_multi_row_header: true
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -12255,7 +12256,7 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''
 - doc_id: order_mr_current_091
   doc_date: ''
@@ -12269,26 +12270,26 @@
   - Devanagari
   doc_type: Order
   layout: Single Column
-  doc_creation: Digital
+  doc_creation: Typewritten
   doc_source: IMAGE_SCAN
   horizon: current
-  has_tables: false
-  table_has_full_page: false
-  table_count: 0
-  table_row_has_lines: false
+  has_tables: true
+  table_has_full_page: true
+  table_count: 1
+  table_row_has_lines: true
   table_has_no_header: false
-  table_has_multi_row_header: false
-  table_has_full_outer_border: false
+  table_has_multi_row_header: true
+  table_has_full_outer_border: true
   table_has_only_bottom_top_border: false
   table_has_merged_rows: false
   table_has_merged_cols: false
-  table_cell_has_multi_lines: false
+  table_cell_has_multi_lines: true
   table_has_multi_merged_cells: false
   has_logo: false
   has_signature: false
   signature_type: NONE
   has_stamp: false
-  has_handwritten: false
+  has_handwritten: true
   has_non_standard_font: false
   has_watermark: false
   rotation: 0
@@ -12296,5 +12297,5 @@
   scan_has_wavy_distortion: false
   scan_has_dots: false
   scan_has_darkpatch: false
-  audit_status: unreviewed
+  audit_status: verified
   notes: ''

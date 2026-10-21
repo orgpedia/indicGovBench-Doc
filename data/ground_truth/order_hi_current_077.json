@@ -10,6 +10,63 @@
   },
   "blocks": [
     {
+      "id": 13,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        428.07936012302076,
+        506.35570418427284,
+        531.93,
+        506.35570418427284,
+        531.93,
+        554.9812613908108,
+        428.07936012302076,
+        554.9812613908108
+      ],
+      "text": "5/8/22",
+      "html": null,
+      "reason": "Signature"
+    },
+    {
+      "id": 21,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        436.45386206979737,
+        673.2411073681858,
+        542.05,
+        673.2411073681858,
+        542.05,
+        727.49,
+        436.45386206979737,
+        727.49
+      ],
+      "text": "5/8/22",
+      "html": null,
+      "reason": "Signature"
+    },
+    {
+      "id": 23,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        364.7,
+        725.7,
+        459.3,
+        725.7,
+        459.3,
+        800.8,
+        364.7,
+        800.8
+      ],
+      "text": "[SIGNATURE]",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
       "id": 1,
       "type": "text",
       "scope": "target",
@@ -238,25 +295,6 @@
       "reason": null
     },
     {
-      "id": 13,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        428.07936012302076,
-        506.35570418427284,
-        531.93,
-        506.35570418427284,
-        531.93,
-        554.9812613908108,
-        428.07936012302076,
-        554.9812613908108
-      ],
-      "text": "5/8/22",
-      "html": null,
-      "reason": "Signature"
-    },
-    {
       "id": 14,
       "type": "text",
       "scope": "target",
@@ -390,25 +428,6 @@
       "reason": null
     },
     {
-      "id": 21,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        436.45386206979737,
-        673.2411073681858,
-        542.05,
-        673.2411073681858,
-        542.05,
-        727.49,
-        436.45386206979737,
-        727.49
-      ],
-      "text": "5/8/22",
-      "html": null,
-      "reason": "Signature"
-    },
-    {
       "id": 22,
       "type": "text",
       "scope": "target",
@@ -426,25 +445,6 @@
       "text": "प्रमुख अभियंता,\nलोक निर्माण विभाग, म.प्र., भोपाल",
       "html": null,
       "reason": null
-    },
-    {
-      "id": 23,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        364.7,
-        725.7,
-        459.3,
-        725.7,
-        459.3,
-        800.8,
-        364.7,
-        800.8
-      ],
-      "text": "[SIGNATURE]",
-      "html": null,
-      "reason": "excluded"
     }
   ]
 }
