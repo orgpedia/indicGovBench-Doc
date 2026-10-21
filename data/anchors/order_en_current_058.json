@@ -1,0 +1,5161 @@
+{
+  "doc_id": "order_en_current_058",
+  "total_words": 268,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "[LOGO]",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "[LOGO]",
+          "gcv_text": "Safety",
+          "page_no": 1,
+          "bbox": {
+            "l": 448.0,
+            "t": 805.78,
+            "r": 478.57,
+            "b": 794.05
+          },
+          "crop_bbox": {
+            "l": 444.0,
+            "t": 809.78,
+            "r": 482.57,
+            "b": 790.05
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "Directorate of Health Safety & Regulation\nHimachal Pradesh",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Directorate",
+          "gcv_text": "Directorate",
+          "page_no": 1,
+          "bbox": {
+            "l": 181.3,
+            "t": 770.58,
+            "r": 229.37,
+            "b": 759.61
+          },
+          "crop_bbox": {
+            "l": 177.3,
+            "t": 774.58,
+            "r": 233.37,
+            "b": 755.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 232.4,
+            "t": 769.81,
+            "r": 241.73,
+            "b": 759.61
+          },
+          "crop_bbox": {
+            "l": 228.4,
+            "t": 773.81,
+            "r": 245.73,
+            "b": 755.61
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Health",
+          "gcv_text": "Health",
+          "page_no": 1,
+          "bbox": {
+            "l": 244.07,
+            "t": 769.81,
+            "r": 272.53,
+            "b": 759.36
+          },
+          "crop_bbox": {
+            "l": 240.07,
+            "t": 773.81,
+            "r": 276.53,
+            "b": 755.36
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "Safety",
+          "gcv_text": "Safety",
+          "page_no": 1,
+          "bbox": {
+            "l": 275.33,
+            "t": 769.56,
+            "r": 301.93,
+            "b": 758.85
+          },
+          "crop_bbox": {
+            "l": 271.33,
+            "t": 773.56,
+            "r": 305.93,
+            "b": 754.85
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "&",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 304.5,
+            "t": 769.3,
+            "r": 311.97,
+            "b": 759.1
+          },
+          "crop_bbox": {
+            "l": 300.5,
+            "t": 773.3,
+            "r": 315.97,
+            "b": 755.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "Regulation",
+          "gcv_text": "Regulation",
+          "page_no": 1,
+          "bbox": {
+            "l": 315.23,
+            "t": 769.3,
+            "r": 362.37,
+            "b": 758.34
+          },
+          "crop_bbox": {
+            "l": 311.23,
+            "t": 773.3,
+            "r": 366.37,
+            "b": 754.34
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "Himachal",
+          "gcv_text": "Himachal",
+          "page_no": 1,
+          "bbox": {
+            "l": 181.3,
+            "t": 755.53,
+            "r": 222.6,
+            "b": 747.37
+          },
+          "crop_bbox": {
+            "l": 177.3,
+            "t": 759.53,
+            "r": 226.6,
+            "b": 743.37
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "Pradesh",
+          "gcv_text": "Pradesh",
+          "page_no": 1,
+          "bbox": {
+            "l": 225.87,
+            "t": 755.53,
+            "r": 259.47,
+            "b": 747.37
+          },
+          "crop_bbox": {
+            "l": 221.87,
+            "t": 759.53,
+            "r": 263.47,
+            "b": 743.37
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "No.HSR-H(DPR)-FSSA)/62/09-Vol-II-8231-35",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "No.HSR-H(DPR)-FSSA)/62/09-Vol-II-8231-35",
+          "gcv_text": "Himachal",
+          "page_no": 1,
+          "bbox": {
+            "l": 181.3,
+            "t": 755.53,
+            "r": 222.6,
+            "b": 747.37
+          },
+          "crop_bbox": {
+            "l": 177.3,
+            "t": 759.53,
+            "r": 226.6,
+            "b": 743.37
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/3": {
+      "self_ref": "#/texts/3",
+      "label": "paragraph",
+      "full_gt_text": "OFFICE ORDER",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "OFFICE",
+          "gcv_text": "OFFICE",
+          "page_no": 1,
+          "bbox": {
+            "l": 181.3,
+            "t": 700.94,
+            "r": 220.5,
+            "b": 692.78
+          },
+          "crop_bbox": {
+            "l": 177.3,
+            "t": 704.94,
+            "r": 224.5,
+            "b": 688.78
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "ORDER",
+          "gcv_text": "ORDER",
+          "page_no": 1,
+          "bbox": {
+            "l": 224.23,
+            "t": 700.94,
+            "r": 263.2,
+            "b": 692.78
+          },
+          "crop_bbox": {
+            "l": 220.23,
+            "t": 704.94,
+            "r": 267.2,
+            "b": 688.78
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/4": {
+      "self_ref": "#/texts/4",
+      "label": "paragraph",
+      "full_gt_text": "In pursuance to the letter No. PER(AP)C-B(2)-1/2019 dated\n28/12/2021 issued by the Department of Personnel and on the recommendations of the\nScreening Committee of the Directorate of Health Safety & Regulation, H.P., the competent\nauthority is pleased to order regularisation of services of the following Food Safety Officers\nin the Department of Health Safety & Regulation, in the pay band of Rs. 5910-20200 + 3000\nG.P. with immediate effect in public interest:-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "In",
+          "gcv_text": "In",
+          "page_no": 1,
+          "bbox": {
+            "l": 181.3,
+            "t": 671.61,
+            "r": 190.4,
+            "b": 659.37
+          },
+          "crop_bbox": {
+            "l": 177.3,
+            "t": 675.61,
+            "r": 194.4,
+            "b": 655.37
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "pursuance",
+          "gcv_text": "pursuance",
+          "page_no": 1,
+          "bbox": {
+            "l": 200.43,
+            "t": 671.87,
+            "r": 248.03,
+            "b": 659.37
+          },
+          "crop_bbox": {
+            "l": 196.43,
+            "t": 675.87,
+            "r": 252.03,
+            "b": 655.37
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 258.07,
+            "t": 671.87,
+            "r": 267.4,
+            "b": 659.88
+          },
+          "crop_bbox": {
+            "l": 254.07,
+            "t": 675.87,
+            "r": 271.4,
+            "b": 655.88
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "the",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 72.96,
+            "t": 676.56,
+            "r": 516.02,
+            "b": 576.97
+          },
+          "crop_bbox": {
+            "l": 50.81,
+            "t": 681.54,
+            "r": 538.17,
+            "b": 571.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "letter",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 72.96,
+            "t": 676.56,
+            "r": 516.02,
+            "b": 576.97
+          },
+          "crop_bbox": {
+            "l": 50.81,
+            "t": 681.54,
+            "r": 538.17,
+            "b": 571.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "No.",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 72.96,
+            "t": 676.56,
+            "r": 516.02,
+            "b": 576.97
+          },
+          "crop_bbox": {
+            "l": 50.81,
+            "t": 681.54,
+            "r": 538.17,
+            "b": 571.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "PER(AP)C-B(2)-1/2019",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 72.96,
+            "t": 676.56,
+            "r": 516.02,
+            "b": 576.97
+          },
+          "crop_bbox": {
+            "l": 50.81,
+            "t": 681.54,
+            "r": 538.17,
+            "b": 571.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "dated",
+          "gcv_text": "",
+          "page_no": 1,
+          "bbox": {
+            "l": 72.96,
+            "t": 676.56,
+            "r": 516.02,
+            "b": 576.97
+          },
+          "crop_bbox": {
+            "l": 50.81,
+            "t": 681.54,
+            "r": 538.17,
+            "b": 571.99
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "28/12/2021",
+          "gcv_text": "28/12/2021",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.3,
+            "t": 655.29,
+            "r": 127.87,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 72.3,
+            "t": 659.29,
+            "r": 131.87,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "issued",
+          "gcv_text": "issued",
+          "page_no": 1,
+          "bbox": {
+            "l": 134.4,
+            "t": 655.29,
+            "r": 163.1,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 130.4,
+            "t": 659.29,
+            "r": 167.1,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 168.93,
+            "t": 655.29,
+            "r": 180.83,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 164.93,
+            "t": 659.29,
+            "r": 184.83,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 185.5,
+            "t": 655.29,
+            "r": 199.97,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 181.5,
+            "t": 659.29,
+            "r": 203.97,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "Department",
+          "gcv_text": "Department",
+          "page_no": 1,
+          "bbox": {
+            "l": 205.8,
+            "t": 655.29,
+            "r": 261.33,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 201.8,
+            "t": 659.29,
+            "r": 265.33,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 266.47,
+            "t": 655.29,
+            "r": 277.43,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 262.47,
+            "t": 659.29,
+            "r": 281.43,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "Personnel",
+          "gcv_text": "Personnel",
+          "page_no": 1,
+          "bbox": {
+            "l": 280.93,
+            "t": 655.29,
+            "r": 327.13,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 276.93,
+            "t": 659.29,
+            "r": 331.13,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 337.63,
+            "t": 655.29,
+            "r": 354.2,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 333.63,
+            "t": 659.29,
+            "r": 358.2,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 359.8,
+            "t": 655.29,
+            "r": 371.47,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 355.8,
+            "t": 659.29,
+            "r": 375.47,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 376.6,
+            "t": 655.29,
+            "r": 391.07,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 372.6,
+            "t": 659.29,
+            "r": 395.07,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "recommendations",
+          "gcv_text": "recommendations",
+          "page_no": 1,
+          "bbox": {
+            "l": 396.43,
+            "t": 655.29,
+            "r": 479.5,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 392.28,
+            "t": 659.29,
+            "r": 483.65,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 484.87,
+            "t": 655.29,
+            "r": 496.07,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 480.87,
+            "t": 659.29,
+            "r": 500.07,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 499.33,
+            "t": 655.29,
+            "r": 514.03,
+            "b": 644.06
+          },
+          "crop_bbox": {
+            "l": 495.33,
+            "t": 659.29,
+            "r": 518.03,
+            "b": 640.06
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "Screening",
+          "gcv_text": "Screening",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.77,
+            "t": 639.98,
+            "r": 122.73,
+            "b": 627.23
+          },
+          "crop_bbox": {
+            "l": 72.77,
+            "t": 643.98,
+            "r": 126.73,
+            "b": 623.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "Committee",
+          "gcv_text": "Committee",
+          "page_no": 1,
+          "bbox": {
+            "l": 126.23,
+            "t": 639.73,
+            "r": 178.03,
+            "b": 626.97
+          },
+          "crop_bbox": {
+            "l": 122.23,
+            "t": 643.73,
+            "r": 182.03,
+            "b": 622.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 182.23,
+            "t": 639.47,
+            "r": 192.27,
+            "b": 627.23
+          },
+          "crop_bbox": {
+            "l": 178.23,
+            "t": 643.47,
+            "r": 196.27,
+            "b": 623.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 24,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 194.83,
+            "t": 639.22,
+            "r": 209.3,
+            "b": 626.97
+          },
+          "crop_bbox": {
+            "l": 190.83,
+            "t": 643.22,
+            "r": 213.3,
+            "b": 622.97
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 25,
+          "gt_text": "Directorate",
+          "gcv_text": "Directorate",
+          "page_no": 1,
+          "bbox": {
+            "l": 213.03,
+            "t": 639.47,
+            "r": 265.3,
+            "b": 626.72
+          },
+          "crop_bbox": {
+            "l": 209.03,
+            "t": 643.47,
+            "r": 269.3,
+            "b": 622.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 269.03,
+            "t": 638.96,
+            "r": 280.23,
+            "b": 626.72
+          },
+          "crop_bbox": {
+            "l": 265.03,
+            "t": 642.96,
+            "r": 284.23,
+            "b": 622.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 27,
+          "gt_text": "Health",
+          "gcv_text": "Health",
+          "page_no": 1,
+          "bbox": {
+            "l": 282.8,
+            "t": 638.96,
+            "r": 313.83,
+            "b": 626.46
+          },
+          "crop_bbox": {
+            "l": 278.8,
+            "t": 642.96,
+            "r": 317.83,
+            "b": 622.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 28,
+          "gt_text": "Safety",
+          "gcv_text": "Safety",
+          "page_no": 1,
+          "bbox": {
+            "l": 317.33,
+            "t": 638.71,
+            "r": 347.2,
+            "b": 626.21
+          },
+          "crop_bbox": {
+            "l": 313.33,
+            "t": 642.71,
+            "r": 351.2,
+            "b": 622.21
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 29,
+          "gt_text": "&",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 350.47,
+            "t": 638.71,
+            "r": 358.63,
+            "b": 626.46
+          },
+          "crop_bbox": {
+            "l": 346.47,
+            "t": 642.71,
+            "r": 362.63,
+            "b": 622.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 30,
+          "gt_text": "Regulation,",
+          "gcv_text": "Regulation",
+          "page_no": 1,
+          "bbox": {
+            "l": 362.83,
+            "t": 638.71,
+            "r": 414.4,
+            "b": 625.95
+          },
+          "crop_bbox": {
+            "l": 358.83,
+            "t": 642.71,
+            "r": 418.4,
+            "b": 621.95
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 31,
+          "gt_text": "H.P.,",
+          "gcv_text": ",",
+          "page_no": 1,
+          "bbox": {
+            "l": 414.4,
+            "t": 638.45,
+            "r": 416.73,
+            "b": 626.21
+          },
+          "crop_bbox": {
+            "l": 410.4,
+            "t": 642.45,
+            "r": 420.73,
+            "b": 622.21
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 32,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 447.77,
+            "t": 638.2,
+            "r": 462.23,
+            "b": 625.95
+          },
+          "crop_bbox": {
+            "l": 443.77,
+            "t": 642.2,
+            "r": 466.23,
+            "b": 621.95
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 33,
+          "gt_text": "competent",
+          "gcv_text": "competent",
+          "page_no": 1,
+          "bbox": {
+            "l": 466.2,
+            "t": 638.2,
+            "r": 514.5,
+            "b": 625.44
+          },
+          "crop_bbox": {
+            "l": 462.2,
+            "t": 642.2,
+            "r": 518.5,
+            "b": 621.44
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 34,
+          "gt_text": "authority",
+          "gcv_text": "authority",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.53,
+            "t": 622.13,
+            "r": 118.07,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 72.53,
+            "t": 626.13,
+            "r": 122.07,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 35,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 124.13,
+            "t": 622.13,
+            "r": 132.07,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 120.13,
+            "t": 626.13,
+            "r": 136.07,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 36,
+          "gt_text": "pleased",
+          "gcv_text": "pleased",
+          "page_no": 1,
+          "bbox": {
+            "l": 134.63,
+            "t": 622.13,
+            "r": 169.87,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 130.63,
+            "t": 626.13,
+            "r": 173.87,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 37,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 172.9,
+            "t": 622.13,
+            "r": 181.77,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 168.9,
+            "t": 626.13,
+            "r": 185.77,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 38,
+          "gt_text": "order",
+          "gcv_text": "order",
+          "page_no": 1,
+          "bbox": {
+            "l": 185.73,
+            "t": 622.13,
+            "r": 210.47,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 181.73,
+            "t": 626.13,
+            "r": 214.47,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 39,
+          "gt_text": "regularisation",
+          "gcv_text": "regularisation",
+          "page_no": 1,
+          "bbox": {
+            "l": 216.3,
+            "t": 622.13,
+            "r": 280.93,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 212.3,
+            "t": 626.13,
+            "r": 284.93,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 40,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 283.73,
+            "t": 622.13,
+            "r": 294.7,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 279.73,
+            "t": 626.13,
+            "r": 298.7,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 41,
+          "gt_text": "services",
+          "gcv_text": "services",
+          "page_no": 1,
+          "bbox": {
+            "l": 297.03,
+            "t": 622.13,
+            "r": 333.9,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 293.03,
+            "t": 626.13,
+            "r": 337.9,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 42,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 337.4,
+            "t": 622.13,
+            "r": 348.13,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 333.4,
+            "t": 626.13,
+            "r": 352.13,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 43,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 349.77,
+            "t": 622.13,
+            "r": 364.0,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 345.77,
+            "t": 626.13,
+            "r": 368.0,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 44,
+          "gt_text": "following",
+          "gcv_text": "following",
+          "page_no": 1,
+          "bbox": {
+            "l": 367.5,
+            "t": 622.13,
+            "r": 412.77,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 363.5,
+            "t": 626.13,
+            "r": 416.77,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 45,
+          "gt_text": "Food",
+          "gcv_text": "Food",
+          "page_no": 1,
+          "bbox": {
+            "l": 416.5,
+            "t": 622.13,
+            "r": 440.07,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 412.5,
+            "t": 626.13,
+            "r": 444.07,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 46,
+          "gt_text": "Safety",
+          "gcv_text": "Safety",
+          "page_no": 1,
+          "bbox": {
+            "l": 443.57,
+            "t": 622.13,
+            "r": 473.2,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 439.57,
+            "t": 626.13,
+            "r": 477.2,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 47,
+          "gt_text": "Officers",
+          "gcv_text": "Officers",
+          "page_no": 1,
+          "bbox": {
+            "l": 476.47,
+            "t": 622.13,
+            "r": 514.03,
+            "b": 610.14
+          },
+          "crop_bbox": {
+            "l": 472.47,
+            "t": 626.13,
+            "r": 518.03,
+            "b": 606.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 48,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.53,
+            "t": 605.04,
+            "r": 85.17,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 72.53,
+            "t": 609.04,
+            "r": 89.17,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 49,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 87.73,
+            "t": 605.04,
+            "r": 102.2,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 83.73,
+            "t": 609.04,
+            "r": 106.2,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 50,
+          "gt_text": "Department",
+          "gcv_text": "Department",
+          "page_no": 1,
+          "bbox": {
+            "l": 105.47,
+            "t": 605.04,
+            "r": 160.3,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 101.47,
+            "t": 609.04,
+            "r": 164.3,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 51,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 163.33,
+            "t": 605.04,
+            "r": 174.3,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 159.33,
+            "t": 609.04,
+            "r": 178.3,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 52,
+          "gt_text": "Health",
+          "gcv_text": "Health",
+          "page_no": 1,
+          "bbox": {
+            "l": 176.63,
+            "t": 605.04,
+            "r": 207.9,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 172.63,
+            "t": 609.04,
+            "r": 211.9,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 53,
+          "gt_text": "Safety",
+          "gcv_text": "Safety",
+          "page_no": 1,
+          "bbox": {
+            "l": 210.93,
+            "t": 605.04,
+            "r": 240.57,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 206.93,
+            "t": 609.04,
+            "r": 244.57,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 54,
+          "gt_text": "&",
+          "gcv_text": "&",
+          "page_no": 1,
+          "bbox": {
+            "l": 243.13,
+            "t": 605.04,
+            "r": 251.53,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 239.13,
+            "t": 609.04,
+            "r": 255.53,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 55,
+          "gt_text": "Regulation,",
+          "gcv_text": "Regulation",
+          "page_no": 1,
+          "bbox": {
+            "l": 255.73,
+            "t": 605.04,
+            "r": 306.6,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 251.73,
+            "t": 609.04,
+            "r": 310.6,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 56,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 312.9,
+            "t": 605.04,
+            "r": 321.53,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 308.9,
+            "t": 609.04,
+            "r": 325.53,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 57,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 324.57,
+            "t": 605.04,
+            "r": 338.8,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 320.57,
+            "t": 609.04,
+            "r": 342.8,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 58,
+          "gt_text": "pay",
+          "gcv_text": "pay",
+          "page_no": 1,
+          "bbox": {
+            "l": 341.83,
+            "t": 605.04,
+            "r": 358.63,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 337.83,
+            "t": 609.04,
+            "r": 362.63,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 59,
+          "gt_text": "band",
+          "gcv_text": "band",
+          "page_no": 1,
+          "bbox": {
+            "l": 361.9,
+            "t": 605.04,
+            "r": 384.07,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 357.9,
+            "t": 609.04,
+            "r": 388.07,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 60,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 390.6,
+            "t": 605.04,
+            "r": 401.57,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 386.6,
+            "t": 609.04,
+            "r": 405.57,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 61,
+          "gt_text": "Rs.",
+          "gcv_text": "Rs",
+          "page_no": 1,
+          "bbox": {
+            "l": 403.2,
+            "t": 605.04,
+            "r": 415.8,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 399.2,
+            "t": 609.04,
+            "r": 419.8,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 62,
+          "gt_text": "5910-20200",
+          "gcv_text": "5910-20200",
+          "page_no": 1,
+          "bbox": {
+            "l": 421.87,
+            "t": 605.04,
+            "r": 478.1,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 417.87,
+            "t": 609.04,
+            "r": 482.1,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 63,
+          "gt_text": "+",
+          "gcv_text": "+",
+          "page_no": 1,
+          "bbox": {
+            "l": 481.13,
+            "t": 605.04,
+            "r": 486.73,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 477.13,
+            "t": 609.04,
+            "r": 490.73,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 64,
+          "gt_text": "3000",
+          "gcv_text": "3000",
+          "page_no": 1,
+          "bbox": {
+            "l": 490.93,
+            "t": 605.04,
+            "r": 514.03,
+            "b": 592.79
+          },
+          "crop_bbox": {
+            "l": 486.93,
+            "t": 609.04,
+            "r": 518.03,
+            "b": 588.79
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 65,
+          "gt_text": "G.P.",
+          "gcv_text": "G.P.",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.53,
+            "t": 588.46,
+            "r": 96.37,
+            "b": 577.23
+          },
+          "crop_bbox": {
+            "l": 72.53,
+            "t": 592.46,
+            "r": 100.37,
+            "b": 573.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 66,
+          "gt_text": "with",
+          "gcv_text": "with",
+          "page_no": 1,
+          "bbox": {
+            "l": 99.87,
+            "t": 588.46,
+            "r": 120.63,
+            "b": 577.23
+          },
+          "crop_bbox": {
+            "l": 95.87,
+            "t": 592.46,
+            "r": 124.63,
+            "b": 573.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 67,
+          "gt_text": "immediate",
+          "gcv_text": "immediate",
+          "page_no": 1,
+          "bbox": {
+            "l": 123.43,
+            "t": 588.46,
+            "r": 172.2,
+            "b": 576.72
+          },
+          "crop_bbox": {
+            "l": 119.43,
+            "t": 592.46,
+            "r": 176.2,
+            "b": 572.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 68,
+          "gt_text": "effect",
+          "gcv_text": "effect",
+          "page_no": 1,
+          "bbox": {
+            "l": 175.7,
+            "t": 588.2,
+            "r": 202.07,
+            "b": 576.72
+          },
+          "crop_bbox": {
+            "l": 171.7,
+            "t": 592.2,
+            "r": 206.07,
+            "b": 572.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 69,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 205.1,
+            "t": 587.95,
+            "r": 213.97,
+            "b": 576.72
+          },
+          "crop_bbox": {
+            "l": 201.1,
+            "t": 591.95,
+            "r": 217.97,
+            "b": 572.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 70,
+          "gt_text": "public",
+          "gcv_text": "public",
+          "page_no": 1,
+          "bbox": {
+            "l": 216.77,
+            "t": 587.95,
+            "r": 246.17,
+            "b": 576.72
+          },
+          "crop_bbox": {
+            "l": 212.77,
+            "t": 591.95,
+            "r": 250.17,
+            "b": 572.72
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 71,
+          "gt_text": "interest:-",
+          "gcv_text": "interest",
+          "page_no": 1,
+          "bbox": {
+            "l": 249.43,
+            "t": 587.95,
+            "r": 283.73,
+            "b": 576.21
+          },
+          "crop_bbox": {
+            "l": 245.43,
+            "t": 591.95,
+            "r": 287.73,
+            "b": 572.21
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/6": {
+      "self_ref": "#/texts/6",
+      "label": "paragraph",
+      "full_gt_text": "The terms and conditions of regularisation are as under :-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "The",
+          "gcv_text": "The",
+          "page_no": 1,
+          "bbox": {
+            "l": 145.6,
+            "t": 373.43,
+            "r": 163.8,
+            "b": 361.95
+          },
+          "crop_bbox": {
+            "l": 141.6,
+            "t": 377.43,
+            "r": 167.8,
+            "b": 357.95
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "terms",
+          "gcv_text": "terms",
+          "page_no": 1,
+          "bbox": {
+            "l": 166.37,
+            "t": 373.43,
+            "r": 192.27,
+            "b": 361.7
+          },
+          "crop_bbox": {
+            "l": 162.37,
+            "t": 377.43,
+            "r": 196.27,
+            "b": 357.7
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 195.53,
+            "t": 373.17,
+            "r": 212.33,
+            "b": 361.7
+          },
+          "crop_bbox": {
+            "l": 191.53,
+            "t": 377.17,
+            "r": 216.33,
+            "b": 357.7
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "conditions",
+          "gcv_text": "conditions",
+          "page_no": 1,
+          "bbox": {
+            "l": 215.6,
+            "t": 373.43,
+            "r": 263.67,
+            "b": 361.44
+          },
+          "crop_bbox": {
+            "l": 211.6,
+            "t": 377.43,
+            "r": 267.67,
+            "b": 357.44
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 267.4,
+            "t": 372.92,
+            "r": 278.13,
+            "b": 361.44
+          },
+          "crop_bbox": {
+            "l": 263.4,
+            "t": 376.92,
+            "r": 282.13,
+            "b": 357.44
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "regularisation",
+          "gcv_text": "regularisation",
+          "page_no": 1,
+          "bbox": {
+            "l": 280.0,
+            "t": 372.92,
+            "r": 343.47,
+            "b": 360.93
+          },
+          "crop_bbox": {
+            "l": 276.0,
+            "t": 376.92,
+            "r": 347.47,
+            "b": 356.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "are",
+          "gcv_text": "are",
+          "page_no": 1,
+          "bbox": {
+            "l": 346.5,
+            "t": 372.41,
+            "r": 360.03,
+            "b": 360.93
+          },
+          "crop_bbox": {
+            "l": 342.5,
+            "t": 376.41,
+            "r": 364.03,
+            "b": 356.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "as",
+          "gcv_text": "as",
+          "page_no": 1,
+          "bbox": {
+            "l": 363.53,
+            "t": 372.41,
+            "r": 372.63,
+            "b": 360.93
+          },
+          "crop_bbox": {
+            "l": 359.53,
+            "t": 376.41,
+            "r": 376.63,
+            "b": 356.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "under",
+          "gcv_text": "under",
+          "page_no": 1,
+          "bbox": {
+            "l": 375.9,
+            "t": 372.41,
+            "r": 402.73,
+            "b": 360.42
+          },
+          "crop_bbox": {
+            "l": 371.9,
+            "t": 376.41,
+            "r": 406.73,
+            "b": 356.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": ":-",
+          "gcv_text": ":",
+          "page_no": 1,
+          "bbox": {
+            "l": 406.23,
+            "t": 372.15,
+            "r": 408.8,
+            "b": 360.67
+          },
+          "crop_bbox": {
+            "l": 402.23,
+            "t": 376.15,
+            "r": 412.8,
+            "b": 356.67
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/7": {
+      "self_ref": "#/texts/7",
+      "label": "paragraph",
+      "full_gt_text": "Terms and Conditions:-",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Terms",
+          "gcv_text": "Terms",
+          "page_no": 1,
+          "bbox": {
+            "l": 76.3,
+            "t": 343.07,
+            "r": 107.8,
+            "b": 333.38
+          },
+          "crop_bbox": {
+            "l": 72.3,
+            "t": 347.07,
+            "r": 111.8,
+            "b": 329.38
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.83,
+            "t": 343.07,
+            "r": 129.03,
+            "b": 333.38
+          },
+          "crop_bbox": {
+            "l": 106.83,
+            "t": 347.07,
+            "r": 133.03,
+            "b": 329.38
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "Conditions:-",
+          "gcv_text": "Conditions",
+          "page_no": 1,
+          "bbox": {
+            "l": 132.77,
+            "t": 343.07,
+            "r": 187.13,
+            "b": 333.38
+          },
+          "crop_bbox": {
+            "l": 128.77,
+            "t": 347.07,
+            "r": 191.13,
+            "b": 329.38
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/8": {
+      "self_ref": "#/texts/8",
+      "label": "paragraph",
+      "full_gt_text": "1. (1) That on Regularisation, the officers shall be appointed on the minimum of the pay scale i.e. Rs. 5910-20200 + 3000 and they will be entitled to get the revised pay scale of Rs. 10300-34800 + 4200 after completion of 2 years of regular service.\n2. (2) These Food Safety officers will be entitled to draw dearness and other allowances at the rate admissible and subject to the conditions laid down in the rules and orders/instructions in force issued by the State Government from time to time.\n3. (3) The Regularisation shall carry with it the liability to serve in any part of Himachal Pradesh.\n4. (4) The Regularisation will be on probation for a period of 2 years and during the period of probation his/her service can be terminated at any time by giving one month's notice or pay in lieu thereof by the appointing authority without assigning any reason.\n5. (5) The regularisation is subject to the Character and antecedents of the candidates being found satisfactory on verification.",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "1.",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 93.1,
+            "t": 313.49,
+            "r": 97.77,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 89.1,
+            "t": 317.49,
+            "r": 101.77,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "(1)",
+          "gcv_text": "1",
+          "page_no": 1,
+          "bbox": {
+            "l": 97.53,
+            "t": 313.49,
+            "r": 102.2,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 93.53,
+            "t": 317.49,
+            "r": 106.2,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "That",
+          "gcv_text": "That",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 313.49,
+            "r": 132.07,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 317.49,
+            "r": 136.07,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 136.27,
+            "t": 313.49,
+            "r": 148.17,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 132.27,
+            "t": 317.49,
+            "r": 152.17,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 4,
+          "gt_text": "Regularisation,",
+          "gcv_text": "Regularisation",
+          "page_no": 1,
+          "bbox": {
+            "l": 152.37,
+            "t": 313.49,
+            "r": 220.97,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 148.37,
+            "t": 317.49,
+            "r": 224.97,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 5,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 228.2,
+            "t": 313.49,
+            "r": 242.43,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 224.2,
+            "t": 317.49,
+            "r": 246.43,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 6,
+          "gt_text": "officers",
+          "gcv_text": "officers",
+          "page_no": 1,
+          "bbox": {
+            "l": 247.1,
+            "t": 313.49,
+            "r": 282.1,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 243.1,
+            "t": 317.49,
+            "r": 286.1,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 7,
+          "gt_text": "shall",
+          "gcv_text": "shall",
+          "page_no": 1,
+          "bbox": {
+            "l": 287.47,
+            "t": 313.49,
+            "r": 308.93,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 283.47,
+            "t": 317.49,
+            "r": 312.93,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 8,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 313.37,
+            "t": 313.49,
+            "r": 324.33,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 309.37,
+            "t": 317.49,
+            "r": 328.33,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 9,
+          "gt_text": "appointed",
+          "gcv_text": "appointed",
+          "page_no": 1,
+          "bbox": {
+            "l": 328.77,
+            "t": 313.49,
+            "r": 374.5,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 324.77,
+            "t": 317.49,
+            "r": 378.5,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 10,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 379.63,
+            "t": 313.49,
+            "r": 391.07,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 375.63,
+            "t": 317.49,
+            "r": 395.07,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 11,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 395.27,
+            "t": 313.49,
+            "r": 410.2,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 391.27,
+            "t": 317.49,
+            "r": 414.2,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 12,
+          "gt_text": "minimum",
+          "gcv_text": "minimum",
+          "page_no": 1,
+          "bbox": {
+            "l": 414.87,
+            "t": 313.49,
+            "r": 459.43,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 410.87,
+            "t": 317.49,
+            "r": 463.43,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 13,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 464.1,
+            "t": 313.49,
+            "r": 475.3,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 460.1,
+            "t": 317.49,
+            "r": 479.3,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 14,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 477.87,
+            "t": 313.49,
+            "r": 492.57,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 473.87,
+            "t": 317.49,
+            "r": 496.57,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 15,
+          "gt_text": "pay",
+          "gcv_text": "pay",
+          "page_no": 1,
+          "bbox": {
+            "l": 496.53,
+            "t": 313.49,
+            "r": 514.03,
+            "b": 301.5
+          },
+          "crop_bbox": {
+            "l": 492.53,
+            "t": 317.49,
+            "r": 518.03,
+            "b": 297.5
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 16,
+          "gt_text": "scale",
+          "gcv_text": "scale",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 300.48,
+            "r": 134.17,
+            "b": 288.23
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 304.48,
+            "r": 138.17,
+            "b": 284.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 17,
+          "gt_text": "i.e.",
+          "gcv_text": "i.e.",
+          "page_no": 1,
+          "bbox": {
+            "l": 136.97,
+            "t": 300.48,
+            "r": 150.97,
+            "b": 288.49
+          },
+          "crop_bbox": {
+            "l": 132.97,
+            "t": 304.48,
+            "r": 154.97,
+            "b": 284.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 18,
+          "gt_text": "Rs.",
+          "gcv_text": "Rs",
+          "page_no": 1,
+          "bbox": {
+            "l": 154.47,
+            "t": 300.22,
+            "r": 167.07,
+            "b": 288.23
+          },
+          "crop_bbox": {
+            "l": 150.47,
+            "t": 304.22,
+            "r": 171.07,
+            "b": 284.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 19,
+          "gt_text": "5910-20200",
+          "gcv_text": "5910-20200",
+          "page_no": 1,
+          "bbox": {
+            "l": 173.37,
+            "t": 300.22,
+            "r": 230.07,
+            "b": 287.98
+          },
+          "crop_bbox": {
+            "l": 169.37,
+            "t": 304.22,
+            "r": 234.07,
+            "b": 283.98
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 20,
+          "gt_text": "+",
+          "gcv_text": "+",
+          "page_no": 1,
+          "bbox": {
+            "l": 232.87,
+            "t": 299.97,
+            "r": 238.7,
+            "b": 287.98
+          },
+          "crop_bbox": {
+            "l": 228.87,
+            "t": 303.97,
+            "r": 242.7,
+            "b": 283.98
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 21,
+          "gt_text": "3000",
+          "gcv_text": "3000",
+          "page_no": 1,
+          "bbox": {
+            "l": 243.13,
+            "t": 299.71,
+            "r": 266.0,
+            "b": 287.47
+          },
+          "crop_bbox": {
+            "l": 239.13,
+            "t": 303.71,
+            "r": 270.0,
+            "b": 283.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 22,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 269.97,
+            "t": 299.71,
+            "r": 286.07,
+            "b": 287.47
+          },
+          "crop_bbox": {
+            "l": 265.97,
+            "t": 303.71,
+            "r": 290.07,
+            "b": 283.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 23,
+          "gt_text": "they",
+          "gcv_text": "they",
+          "page_no": 1,
+          "bbox": {
+            "l": 289.33,
+            "t": 299.46,
+            "r": 309.4,
+            "b": 287.47
+          },
+          "crop_bbox": {
+            "l": 285.33,
+            "t": 303.46,
+            "r": 313.4,
+            "b": 283.47
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 24,
+          "gt_text": "will",
+          "gcv_text": "will",
+          "page_no": 1,
+          "bbox": {
+            "l": 312.67,
+            "t": 299.46,
+            "r": 331.1,
+            "b": 287.21
+          },
+          "crop_bbox": {
+            "l": 308.67,
+            "t": 303.46,
+            "r": 335.1,
+            "b": 283.21
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 25,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 334.13,
+            "t": 299.2,
+            "r": 344.87,
+            "b": 287.21
+          },
+          "crop_bbox": {
+            "l": 330.13,
+            "t": 303.2,
+            "r": 348.87,
+            "b": 283.21
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 26,
+          "gt_text": "entitled",
+          "gcv_text": "entitled",
+          "page_no": 1,
+          "bbox": {
+            "l": 348.13,
+            "t": 299.2,
+            "r": 382.9,
+            "b": 286.7
+          },
+          "crop_bbox": {
+            "l": 344.13,
+            "t": 303.2,
+            "r": 386.9,
+            "b": 282.7
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 27,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 386.4,
+            "t": 298.95,
+            "r": 395.27,
+            "b": 286.96
+          },
+          "crop_bbox": {
+            "l": 382.4,
+            "t": 302.95,
+            "r": 399.27,
+            "b": 282.96
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 28,
+          "gt_text": "get",
+          "gcv_text": "get",
+          "page_no": 1,
+          "bbox": {
+            "l": 399.23,
+            "t": 298.95,
+            "r": 413.47,
+            "b": 286.7
+          },
+          "crop_bbox": {
+            "l": 395.23,
+            "t": 302.95,
+            "r": 417.47,
+            "b": 282.7
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 29,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 415.8,
+            "t": 298.69,
+            "r": 430.27,
+            "b": 286.7
+          },
+          "crop_bbox": {
+            "l": 411.8,
+            "t": 302.69,
+            "r": 434.27,
+            "b": 282.7
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 30,
+          "gt_text": "revised",
+          "gcv_text": "revised",
+          "page_no": 1,
+          "bbox": {
+            "l": 433.53,
+            "t": 298.69,
+            "r": 467.6,
+            "b": 286.19
+          },
+          "crop_bbox": {
+            "l": 429.53,
+            "t": 302.69,
+            "r": 471.6,
+            "b": 282.19
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 31,
+          "gt_text": "pay",
+          "gcv_text": "pay",
+          "page_no": 1,
+          "bbox": {
+            "l": 470.63,
+            "t": 298.44,
+            "r": 488.13,
+            "b": 286.45
+          },
+          "crop_bbox": {
+            "l": 466.63,
+            "t": 302.44,
+            "r": 492.13,
+            "b": 282.45
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 32,
+          "gt_text": "scale",
+          "gcv_text": "scale",
+          "page_no": 1,
+          "bbox": {
+            "l": 490.7,
+            "t": 298.44,
+            "r": 514.5,
+            "b": 285.94
+          },
+          "crop_bbox": {
+            "l": 486.7,
+            "t": 302.44,
+            "r": 518.5,
+            "b": 281.94
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 33,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 111.07,
+            "t": 284.92,
+            "r": 121.8,
+            "b": 273.18
+          },
+          "crop_bbox": {
+            "l": 107.07,
+            "t": 288.92,
+            "r": 125.8,
+            "b": 269.18
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 34,
+          "gt_text": "Rs.",
+          "gcv_text": "Rs",
+          "page_no": 1,
+          "bbox": {
+            "l": 122.97,
+            "t": 284.92,
+            "r": 136.03,
+            "b": 273.18
+          },
+          "crop_bbox": {
+            "l": 118.97,
+            "t": 288.92,
+            "r": 140.03,
+            "b": 269.18
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 35,
+          "gt_text": "10300-34800",
+          "gcv_text": "10300-34800",
+          "page_no": 1,
+          "bbox": {
+            "l": 142.33,
+            "t": 284.92,
+            "r": 203.7,
+            "b": 272.93
+          },
+          "crop_bbox": {
+            "l": 138.33,
+            "t": 288.92,
+            "r": 207.7,
+            "b": 268.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 36,
+          "gt_text": "+",
+          "gcv_text": "+",
+          "page_no": 1,
+          "bbox": {
+            "l": 206.5,
+            "t": 284.66,
+            "r": 212.33,
+            "b": 272.93
+          },
+          "crop_bbox": {
+            "l": 202.5,
+            "t": 288.66,
+            "r": 216.33,
+            "b": 268.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 37,
+          "gt_text": "4200",
+          "gcv_text": "4200",
+          "page_no": 1,
+          "bbox": {
+            "l": 216.07,
+            "t": 284.66,
+            "r": 239.17,
+            "b": 272.67
+          },
+          "crop_bbox": {
+            "l": 212.07,
+            "t": 288.66,
+            "r": 243.17,
+            "b": 268.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 38,
+          "gt_text": "after",
+          "gcv_text": "after",
+          "page_no": 1,
+          "bbox": {
+            "l": 242.9,
+            "t": 284.41,
+            "r": 264.13,
+            "b": 272.67
+          },
+          "crop_bbox": {
+            "l": 238.9,
+            "t": 288.41,
+            "r": 268.13,
+            "b": 268.67
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 39,
+          "gt_text": "completion",
+          "gcv_text": "completion",
+          "page_no": 1,
+          "bbox": {
+            "l": 267.4,
+            "t": 284.41,
+            "r": 319.2,
+            "b": 272.16
+          },
+          "crop_bbox": {
+            "l": 263.4,
+            "t": 288.41,
+            "r": 323.2,
+            "b": 268.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 40,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 322.0,
+            "t": 284.15,
+            "r": 332.73,
+            "b": 272.42
+          },
+          "crop_bbox": {
+            "l": 318.0,
+            "t": 288.15,
+            "r": 336.73,
+            "b": 268.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 41,
+          "gt_text": "2",
+          "gcv_text": "2",
+          "page_no": 1,
+          "bbox": {
+            "l": 334.6,
+            "t": 283.9,
+            "r": 339.97,
+            "b": 272.16
+          },
+          "crop_bbox": {
+            "l": 330.6,
+            "t": 287.9,
+            "r": 343.97,
+            "b": 268.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 42,
+          "gt_text": "years",
+          "gcv_text": "years",
+          "page_no": 1,
+          "bbox": {
+            "l": 343.23,
+            "t": 283.9,
+            "r": 367.5,
+            "b": 272.16
+          },
+          "crop_bbox": {
+            "l": 339.23,
+            "t": 287.9,
+            "r": 371.5,
+            "b": 268.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 43,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 370.77,
+            "t": 283.9,
+            "r": 381.73,
+            "b": 272.16
+          },
+          "crop_bbox": {
+            "l": 366.77,
+            "t": 287.9,
+            "r": 385.73,
+            "b": 268.16
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 44,
+          "gt_text": "regular",
+          "gcv_text": "regular",
+          "page_no": 1,
+          "bbox": {
+            "l": 383.6,
+            "t": 283.9,
+            "r": 416.5,
+            "b": 271.65
+          },
+          "crop_bbox": {
+            "l": 379.6,
+            "t": 287.9,
+            "r": 420.5,
+            "b": 267.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 45,
+          "gt_text": "service.",
+          "gcv_text": "service",
+          "page_no": 1,
+          "bbox": {
+            "l": 419.53,
+            "t": 283.64,
+            "r": 452.43,
+            "b": 271.4
+          },
+          "crop_bbox": {
+            "l": 415.53,
+            "t": 287.64,
+            "r": 456.43,
+            "b": 267.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 46,
+          "gt_text": "2.",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 452.9,
+            "t": 283.39,
+            "r": 455.23,
+            "b": 271.65
+          },
+          "crop_bbox": {
+            "l": 448.9,
+            "t": 287.39,
+            "r": 459.23,
+            "b": 267.65
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 47,
+          "gt_text": "(2)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 92.87,
+            "t": 257.11,
+            "r": 97.3,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 88.87,
+            "t": 261.11,
+            "r": 101.3,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 48,
+          "gt_text": "These",
+          "gcv_text": "These",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.83,
+            "t": 257.11,
+            "r": 138.6,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 106.83,
+            "t": 261.11,
+            "r": 142.6,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 49,
+          "gt_text": "Food",
+          "gcv_text": "Food",
+          "page_no": 1,
+          "bbox": {
+            "l": 141.63,
+            "t": 257.11,
+            "r": 165.9,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 137.63,
+            "t": 261.11,
+            "r": 169.9,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 50,
+          "gt_text": "Safety",
+          "gcv_text": "Safety",
+          "page_no": 1,
+          "bbox": {
+            "l": 169.63,
+            "t": 257.11,
+            "r": 199.97,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 165.63,
+            "t": 261.11,
+            "r": 203.97,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 51,
+          "gt_text": "officers",
+          "gcv_text": "officers",
+          "page_no": 1,
+          "bbox": {
+            "l": 203.47,
+            "t": 257.11,
+            "r": 239.17,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 199.47,
+            "t": 261.11,
+            "r": 243.17,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 52,
+          "gt_text": "will",
+          "gcv_text": "will",
+          "page_no": 1,
+          "bbox": {
+            "l": 243.13,
+            "t": 257.11,
+            "r": 261.57,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 239.13,
+            "t": 261.11,
+            "r": 265.57,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 53,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 264.83,
+            "t": 257.11,
+            "r": 275.8,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 260.83,
+            "t": 261.11,
+            "r": 279.8,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 54,
+          "gt_text": "entitled",
+          "gcv_text": "entitled",
+          "page_no": 1,
+          "bbox": {
+            "l": 279.77,
+            "t": 257.11,
+            "r": 314.07,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 275.77,
+            "t": 261.11,
+            "r": 318.07,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 55,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 318.03,
+            "t": 257.11,
+            "r": 327.13,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 314.03,
+            "t": 261.11,
+            "r": 331.13,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 56,
+          "gt_text": "draw",
+          "gcv_text": "draw",
+          "page_no": 1,
+          "bbox": {
+            "l": 330.87,
+            "t": 257.11,
+            "r": 354.2,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 326.87,
+            "t": 261.11,
+            "r": 358.2,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 57,
+          "gt_text": "dearness",
+          "gcv_text": "dearness",
+          "page_no": 1,
+          "bbox": {
+            "l": 357.93,
+            "t": 257.11,
+            "r": 397.83,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 353.93,
+            "t": 261.11,
+            "r": 401.83,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 58,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 402.03,
+            "t": 257.11,
+            "r": 418.37,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 398.03,
+            "t": 261.11,
+            "r": 422.37,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 59,
+          "gt_text": "other",
+          "gcv_text": "other",
+          "page_no": 1,
+          "bbox": {
+            "l": 422.8,
+            "t": 257.11,
+            "r": 446.37,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 418.8,
+            "t": 261.11,
+            "r": 450.37,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 60,
+          "gt_text": "allowances",
+          "gcv_text": "allowances",
+          "page_no": 1,
+          "bbox": {
+            "l": 449.87,
+            "t": 257.11,
+            "r": 501.67,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 445.87,
+            "t": 261.11,
+            "r": 505.67,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 61,
+          "gt_text": "at",
+          "gcv_text": "at",
+          "page_no": 1,
+          "bbox": {
+            "l": 505.17,
+            "t": 257.11,
+            "r": 514.03,
+            "b": 246.15
+          },
+          "crop_bbox": {
+            "l": 501.17,
+            "t": 261.11,
+            "r": 518.03,
+            "b": 242.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 62,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 242.58,
+            "r": 125.07,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 246.58,
+            "r": 129.07,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 63,
+          "gt_text": "rate",
+          "gcv_text": "rate",
+          "page_no": 1,
+          "bbox": {
+            "l": 131.83,
+            "t": 242.58,
+            "r": 149.57,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 127.83,
+            "t": 246.58,
+            "r": 153.57,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 64,
+          "gt_text": "admissible",
+          "gcv_text": "admissible",
+          "page_no": 1,
+          "bbox": {
+            "l": 156.8,
+            "t": 242.58,
+            "r": 207.2,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 152.8,
+            "t": 246.58,
+            "r": 211.2,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 65,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 214.2,
+            "t": 242.58,
+            "r": 230.77,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 210.2,
+            "t": 246.58,
+            "r": 234.77,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 66,
+          "gt_text": "subject",
+          "gcv_text": "subject",
+          "page_no": 1,
+          "bbox": {
+            "l": 238.23,
+            "t": 242.58,
+            "r": 271.37,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 234.23,
+            "t": 246.58,
+            "r": 275.37,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 67,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 278.37,
+            "t": 242.58,
+            "r": 287.7,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 274.37,
+            "t": 246.58,
+            "r": 291.7,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 68,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 294.23,
+            "t": 242.58,
+            "r": 308.93,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 290.23,
+            "t": 246.58,
+            "r": 312.93,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 69,
+          "gt_text": "conditions",
+          "gcv_text": "conditions",
+          "page_no": 1,
+          "bbox": {
+            "l": 316.17,
+            "t": 242.58,
+            "r": 364.47,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 312.17,
+            "t": 246.58,
+            "r": 368.47,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 70,
+          "gt_text": "laid",
+          "gcv_text": "laid",
+          "page_no": 1,
+          "bbox": {
+            "l": 372.17,
+            "t": 242.58,
+            "r": 389.2,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 368.17,
+            "t": 246.58,
+            "r": 393.2,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 71,
+          "gt_text": "down",
+          "gcv_text": "down",
+          "page_no": 1,
+          "bbox": {
+            "l": 396.43,
+            "t": 242.58,
+            "r": 422.8,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 392.43,
+            "t": 246.58,
+            "r": 426.8,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 72,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 430.03,
+            "t": 242.58,
+            "r": 438.67,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 426.03,
+            "t": 246.58,
+            "r": 442.67,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 73,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 445.9,
+            "t": 242.58,
+            "r": 460.6,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 441.9,
+            "t": 246.58,
+            "r": 464.6,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 74,
+          "gt_text": "rules",
+          "gcv_text": "rules",
+          "page_no": 1,
+          "bbox": {
+            "l": 467.13,
+            "t": 242.58,
+            "r": 490.0,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 463.13,
+            "t": 246.58,
+            "r": 494.0,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 75,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 496.77,
+            "t": 242.58,
+            "r": 514.03,
+            "b": 230.84
+          },
+          "crop_bbox": {
+            "l": 492.77,
+            "t": 246.58,
+            "r": 518.03,
+            "b": 226.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 76,
+          "gt_text": "orders/instructions",
+          "gcv_text": "orders",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.83,
+            "t": 227.78,
+            "r": 139.53,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 106.83,
+            "t": 231.78,
+            "r": 143.53,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 77,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 200.67,
+            "t": 227.78,
+            "r": 210.0,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 196.67,
+            "t": 231.78,
+            "r": 214.0,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 78,
+          "gt_text": "force",
+          "gcv_text": "force",
+          "page_no": 1,
+          "bbox": {
+            "l": 212.33,
+            "t": 227.78,
+            "r": 236.6,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 208.33,
+            "t": 231.78,
+            "r": 240.6,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 79,
+          "gt_text": "issued",
+          "gcv_text": "issued",
+          "page_no": 1,
+          "bbox": {
+            "l": 239.63,
+            "t": 227.78,
+            "r": 267.87,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 235.63,
+            "t": 231.78,
+            "r": 271.87,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 80,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 271.37,
+            "t": 227.78,
+            "r": 283.27,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 267.37,
+            "t": 231.78,
+            "r": 287.27,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 81,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 285.6,
+            "t": 227.78,
+            "r": 300.07,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 281.6,
+            "t": 231.78,
+            "r": 304.07,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 82,
+          "gt_text": "State",
+          "gcv_text": "State",
+          "page_no": 1,
+          "bbox": {
+            "l": 303.1,
+            "t": 227.78,
+            "r": 326.43,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 299.1,
+            "t": 231.78,
+            "r": 330.43,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 83,
+          "gt_text": "Government",
+          "gcv_text": "Government",
+          "page_no": 1,
+          "bbox": {
+            "l": 329.47,
+            "t": 227.78,
+            "r": 387.57,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 325.47,
+            "t": 231.78,
+            "r": 391.57,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 84,
+          "gt_text": "from",
+          "gcv_text": "from",
+          "page_no": 1,
+          "bbox": {
+            "l": 390.6,
+            "t": 227.78,
+            "r": 413.23,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 386.6,
+            "t": 231.78,
+            "r": 417.23,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 85,
+          "gt_text": "time",
+          "gcv_text": "time",
+          "page_no": 1,
+          "bbox": {
+            "l": 415.8,
+            "t": 227.78,
+            "r": 436.57,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 411.8,
+            "t": 231.78,
+            "r": 440.57,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 86,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 439.13,
+            "t": 227.78,
+            "r": 448.47,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 435.13,
+            "t": 231.78,
+            "r": 452.47,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 87,
+          "gt_text": "time.",
+          "gcv_text": "time",
+          "page_no": 1,
+          "bbox": {
+            "l": 451.5,
+            "t": 227.78,
+            "r": 472.73,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 447.5,
+            "t": 231.78,
+            "r": 476.73,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 88,
+          "gt_text": "3.",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 472.03,
+            "t": 227.78,
+            "r": 474.83,
+            "b": 216.56
+          },
+          "crop_bbox": {
+            "l": 468.03,
+            "t": 231.78,
+            "r": 478.83,
+            "b": 212.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 89,
+          "gt_text": "(3)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 93.1,
+            "t": 199.72,
+            "r": 97.77,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 89.1,
+            "t": 203.72,
+            "r": 101.77,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 90,
+          "gt_text": "The",
+          "gcv_text": "The",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 199.72,
+            "r": 128.8,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 203.72,
+            "r": 132.8,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 91,
+          "gt_text": "Regularisation",
+          "gcv_text": "Regularisation",
+          "page_no": 1,
+          "bbox": {
+            "l": 132.53,
+            "t": 199.72,
+            "r": 201.6,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 128.53,
+            "t": 203.72,
+            "r": 205.6,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 92,
+          "gt_text": "shall",
+          "gcv_text": "shall",
+          "page_no": 1,
+          "bbox": {
+            "l": 206.03,
+            "t": 199.72,
+            "r": 227.73,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 202.03,
+            "t": 203.72,
+            "r": 231.73,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 93,
+          "gt_text": "carry",
+          "gcv_text": "carry",
+          "page_no": 1,
+          "bbox": {
+            "l": 232.4,
+            "t": 199.72,
+            "r": 256.2,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 228.4,
+            "t": 203.72,
+            "r": 260.2,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 94,
+          "gt_text": "with",
+          "gcv_text": "with",
+          "page_no": 1,
+          "bbox": {
+            "l": 260.4,
+            "t": 199.72,
+            "r": 281.17,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 256.4,
+            "t": 203.72,
+            "r": 285.17,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 95,
+          "gt_text": "it",
+          "gcv_text": "it",
+          "page_no": 1,
+          "bbox": {
+            "l": 285.6,
+            "t": 199.72,
+            "r": 292.37,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 281.6,
+            "t": 203.72,
+            "r": 296.37,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 96,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 295.87,
+            "t": 199.72,
+            "r": 309.87,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 291.87,
+            "t": 203.72,
+            "r": 313.87,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 97,
+          "gt_text": "liability",
+          "gcv_text": "liability",
+          "page_no": 1,
+          "bbox": {
+            "l": 314.77,
+            "t": 199.72,
+            "r": 351.4,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 310.77,
+            "t": 203.72,
+            "r": 355.4,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 98,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 354.43,
+            "t": 199.72,
+            "r": 364.0,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 350.43,
+            "t": 203.72,
+            "r": 368.0,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 99,
+          "gt_text": "serve",
+          "gcv_text": "serve",
+          "page_no": 1,
+          "bbox": {
+            "l": 368.67,
+            "t": 199.72,
+            "r": 392.47,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 364.67,
+            "t": 203.72,
+            "r": 396.47,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 100,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 397.6,
+            "t": 199.72,
+            "r": 406.23,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 393.6,
+            "t": 203.72,
+            "r": 410.23,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 101,
+          "gt_text": "any",
+          "gcv_text": "any",
+          "page_no": 1,
+          "bbox": {
+            "l": 411.13,
+            "t": 199.72,
+            "r": 427.7,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 407.13,
+            "t": 203.72,
+            "r": 431.7,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 102,
+          "gt_text": "part",
+          "gcv_text": "part",
+          "page_no": 1,
+          "bbox": {
+            "l": 432.13,
+            "t": 199.72,
+            "r": 450.57,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 428.13,
+            "t": 203.72,
+            "r": 454.57,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 103,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 454.53,
+            "t": 199.72,
+            "r": 465.27,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 450.53,
+            "t": 203.72,
+            "r": 469.27,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 104,
+          "gt_text": "Himachal",
+          "gcv_text": "Himachal",
+          "page_no": 1,
+          "bbox": {
+            "l": 468.53,
+            "t": 199.72,
+            "r": 513.57,
+            "b": 186.46
+          },
+          "crop_bbox": {
+            "l": 464.53,
+            "t": 203.72,
+            "r": 517.57,
+            "b": 182.46
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 105,
+          "gt_text": "Pradesh.",
+          "gcv_text": "Pradesh",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.83,
+            "t": 184.42,
+            "r": 147.23,
+            "b": 176.0
+          },
+          "crop_bbox": {
+            "l": 106.83,
+            "t": 188.42,
+            "r": 151.23,
+            "b": 172.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 106,
+          "gt_text": "4.",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 147.47,
+            "t": 184.42,
+            "r": 150.03,
+            "b": 176.0
+          },
+          "crop_bbox": {
+            "l": 143.47,
+            "t": 188.42,
+            "r": 154.03,
+            "b": 172.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 107,
+          "gt_text": "(4)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 93.33,
+            "t": 147.18,
+            "r": 98.23,
+            "b": 134.93
+          },
+          "crop_bbox": {
+            "l": 89.33,
+            "t": 151.18,
+            "r": 102.23,
+            "b": 130.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 108,
+          "gt_text": "The",
+          "gcv_text": "The",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.37,
+            "t": 147.18,
+            "r": 128.33,
+            "b": 134.93
+          },
+          "crop_bbox": {
+            "l": 106.37,
+            "t": 151.18,
+            "r": 132.33,
+            "b": 130.93
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 109,
+          "gt_text": "Regularisation",
+          "gcv_text": "Regularisation",
+          "page_no": 1,
+          "bbox": {
+            "l": 131.6,
+            "t": 147.18,
+            "r": 200.43,
+            "b": 134.42
+          },
+          "crop_bbox": {
+            "l": 127.6,
+            "t": 151.18,
+            "r": 204.43,
+            "b": 130.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 110,
+          "gt_text": "will",
+          "gcv_text": "will",
+          "page_no": 1,
+          "bbox": {
+            "l": 203.23,
+            "t": 146.67,
+            "r": 221.67,
+            "b": 134.42
+          },
+          "crop_bbox": {
+            "l": 199.23,
+            "t": 150.67,
+            "r": 225.67,
+            "b": 130.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 111,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 224.7,
+            "t": 146.67,
+            "r": 235.67,
+            "b": 134.42
+          },
+          "crop_bbox": {
+            "l": 220.7,
+            "t": 150.67,
+            "r": 239.67,
+            "b": 130.42
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 112,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 239.17,
+            "t": 146.41,
+            "r": 250.6,
+            "b": 134.17
+          },
+          "crop_bbox": {
+            "l": 235.17,
+            "t": 150.41,
+            "r": 254.6,
+            "b": 130.17
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 113,
+          "gt_text": "probation",
+          "gcv_text": "probation",
+          "page_no": 1,
+          "bbox": {
+            "l": 253.87,
+            "t": 146.67,
+            "r": 298.9,
+            "b": 133.91
+          },
+          "crop_bbox": {
+            "l": 249.87,
+            "t": 150.67,
+            "r": 302.9,
+            "b": 129.91
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 114,
+          "gt_text": "for",
+          "gcv_text": "for",
+          "page_no": 1,
+          "bbox": {
+            "l": 301.7,
+            "t": 146.16,
+            "r": 315.7,
+            "b": 133.91
+          },
+          "crop_bbox": {
+            "l": 297.7,
+            "t": 150.16,
+            "r": 319.7,
+            "b": 129.91
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 115,
+          "gt_text": "a",
+          "gcv_text": "a",
+          "page_no": 1,
+          "bbox": {
+            "l": 318.5,
+            "t": 146.16,
+            "r": 323.63,
+            "b": 133.91
+          },
+          "crop_bbox": {
+            "l": 314.5,
+            "t": 150.16,
+            "r": 327.63,
+            "b": 129.91
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 116,
+          "gt_text": "period",
+          "gcv_text": "period",
+          "page_no": 1,
+          "bbox": {
+            "l": 326.9,
+            "t": 146.16,
+            "r": 356.3,
+            "b": 133.4
+          },
+          "crop_bbox": {
+            "l": 322.9,
+            "t": 150.16,
+            "r": 360.3,
+            "b": 129.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 117,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 360.03,
+            "t": 145.9,
+            "r": 371.0,
+            "b": 133.66
+          },
+          "crop_bbox": {
+            "l": 356.03,
+            "t": 149.9,
+            "r": 375.0,
+            "b": 129.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 118,
+          "gt_text": "2",
+          "gcv_text": "2",
+          "page_no": 1,
+          "bbox": {
+            "l": 372.63,
+            "t": 145.9,
+            "r": 378.47,
+            "b": 133.66
+          },
+          "crop_bbox": {
+            "l": 368.63,
+            "t": 149.9,
+            "r": 382.47,
+            "b": 129.66
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 119,
+          "gt_text": "years",
+          "gcv_text": "years",
+          "page_no": 1,
+          "bbox": {
+            "l": 381.73,
+            "t": 145.65,
+            "r": 406.0,
+            "b": 133.15
+          },
+          "crop_bbox": {
+            "l": 377.73,
+            "t": 149.65,
+            "r": 410.0,
+            "b": 129.15
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 120,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 409.5,
+            "t": 145.65,
+            "r": 426.3,
+            "b": 133.4
+          },
+          "crop_bbox": {
+            "l": 405.5,
+            "t": 149.65,
+            "r": 430.3,
+            "b": 129.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 121,
+          "gt_text": "during",
+          "gcv_text": "during",
+          "page_no": 1,
+          "bbox": {
+            "l": 429.8,
+            "t": 145.65,
+            "r": 460.37,
+            "b": 132.89
+          },
+          "crop_bbox": {
+            "l": 425.8,
+            "t": 149.65,
+            "r": 464.37,
+            "b": 128.89
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 122,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 466.43,
+            "t": 145.39,
+            "r": 480.9,
+            "b": 132.89
+          },
+          "crop_bbox": {
+            "l": 462.43,
+            "t": 149.39,
+            "r": 484.9,
+            "b": 128.89
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 123,
+          "gt_text": "period",
+          "gcv_text": "period",
+          "page_no": 1,
+          "bbox": {
+            "l": 483.93,
+            "t": 145.14,
+            "r": 513.33,
+            "b": 132.64
+          },
+          "crop_bbox": {
+            "l": 479.93,
+            "t": 149.14,
+            "r": 517.33,
+            "b": 128.64
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 124,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 132.38,
+            "r": 121.57,
+            "b": 120.4
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 136.38,
+            "r": 125.57,
+            "b": 116.4
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 125,
+          "gt_text": "probation",
+          "gcv_text": "probation",
+          "page_no": 1,
+          "bbox": {
+            "l": 124.6,
+            "t": 132.64,
+            "r": 169.63,
+            "b": 120.14
+          },
+          "crop_bbox": {
+            "l": 120.6,
+            "t": 136.64,
+            "r": 173.63,
+            "b": 116.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 126,
+          "gt_text": "his/her",
+          "gcv_text": "his",
+          "page_no": 1,
+          "bbox": {
+            "l": 174.3,
+            "t": 132.13,
+            "r": 187.83,
+            "b": 120.14
+          },
+          "crop_bbox": {
+            "l": 170.3,
+            "t": 136.13,
+            "r": 191.83,
+            "b": 116.14
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 127,
+          "gt_text": "service",
+          "gcv_text": "service",
+          "page_no": 1,
+          "bbox": {
+            "l": 210.93,
+            "t": 132.13,
+            "r": 243.83,
+            "b": 119.63
+          },
+          "crop_bbox": {
+            "l": 206.93,
+            "t": 136.13,
+            "r": 247.83,
+            "b": 115.63
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 128,
+          "gt_text": "can",
+          "gcv_text": "can",
+          "page_no": 1,
+          "bbox": {
+            "l": 248.5,
+            "t": 131.62,
+            "r": 264.37,
+            "b": 119.63
+          },
+          "crop_bbox": {
+            "l": 244.5,
+            "t": 135.62,
+            "r": 268.37,
+            "b": 115.63
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 129,
+          "gt_text": "be",
+          "gcv_text": "be",
+          "page_no": 1,
+          "bbox": {
+            "l": 269.27,
+            "t": 131.62,
+            "r": 280.0,
+            "b": 119.63
+          },
+          "crop_bbox": {
+            "l": 265.27,
+            "t": 135.62,
+            "r": 284.0,
+            "b": 115.63
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 130,
+          "gt_text": "terminated",
+          "gcv_text": "terminated",
+          "page_no": 1,
+          "bbox": {
+            "l": 284.9,
+            "t": 131.62,
+            "r": 334.13,
+            "b": 119.12
+          },
+          "crop_bbox": {
+            "l": 280.9,
+            "t": 135.62,
+            "r": 338.13,
+            "b": 115.12
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 131,
+          "gt_text": "at",
+          "gcv_text": "at",
+          "page_no": 1,
+          "bbox": {
+            "l": 339.03,
+            "t": 131.11,
+            "r": 347.67,
+            "b": 119.12
+          },
+          "crop_bbox": {
+            "l": 335.03,
+            "t": 135.11,
+            "r": 351.67,
+            "b": 115.12
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 132,
+          "gt_text": "any",
+          "gcv_text": "any",
+          "page_no": 1,
+          "bbox": {
+            "l": 352.1,
+            "t": 131.11,
+            "r": 368.43,
+            "b": 119.12
+          },
+          "crop_bbox": {
+            "l": 348.1,
+            "t": 135.11,
+            "r": 372.43,
+            "b": 115.12
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 133,
+          "gt_text": "time",
+          "gcv_text": "time",
+          "page_no": 1,
+          "bbox": {
+            "l": 373.33,
+            "t": 130.85,
+            "r": 394.1,
+            "b": 118.86
+          },
+          "crop_bbox": {
+            "l": 369.33,
+            "t": 134.85,
+            "r": 398.1,
+            "b": 114.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 134,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 403.43,
+            "t": 130.85,
+            "r": 415.33,
+            "b": 118.86
+          },
+          "crop_bbox": {
+            "l": 399.43,
+            "t": 134.85,
+            "r": 419.33,
+            "b": 114.86
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 135,
+          "gt_text": "giving",
+          "gcv_text": "giving",
+          "page_no": 1,
+          "bbox": {
+            "l": 420.23,
+            "t": 130.85,
+            "r": 449.63,
+            "b": 118.35
+          },
+          "crop_bbox": {
+            "l": 416.23,
+            "t": 134.85,
+            "r": 453.63,
+            "b": 114.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 136,
+          "gt_text": "one",
+          "gcv_text": "one",
+          "page_no": 1,
+          "bbox": {
+            "l": 454.53,
+            "t": 130.6,
+            "r": 471.1,
+            "b": 118.35
+          },
+          "crop_bbox": {
+            "l": 450.53,
+            "t": 134.6,
+            "r": 475.1,
+            "b": 114.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 137,
+          "gt_text": "month's",
+          "gcv_text": "month's",
+          "page_no": 1,
+          "bbox": {
+            "l": 475.77,
+            "t": 130.34,
+            "r": 513.8,
+            "b": 118.1
+          },
+          "crop_bbox": {
+            "l": 471.77,
+            "t": 134.34,
+            "r": 517.8,
+            "b": 114.1
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 138,
+          "gt_text": "notice",
+          "gcv_text": "notice",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 118.1,
+            "r": 138.83,
+            "b": 105.35
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 122.1,
+            "r": 142.83,
+            "b": 101.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 139,
+          "gt_text": "or",
+          "gcv_text": "or",
+          "page_no": 1,
+          "bbox": {
+            "l": 149.33,
+            "t": 117.84,
+            "r": 159.37,
+            "b": 105.35
+          },
+          "crop_bbox": {
+            "l": 145.33,
+            "t": 121.84,
+            "r": 163.37,
+            "b": 101.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 140,
+          "gt_text": "pay",
+          "gcv_text": "pay",
+          "page_no": 1,
+          "bbox": {
+            "l": 164.5,
+            "t": 117.59,
+            "r": 181.53,
+            "b": 105.35
+          },
+          "crop_bbox": {
+            "l": 160.5,
+            "t": 121.59,
+            "r": 185.53,
+            "b": 101.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 141,
+          "gt_text": "in",
+          "gcv_text": "in",
+          "page_no": 1,
+          "bbox": {
+            "l": 186.9,
+            "t": 117.59,
+            "r": 195.77,
+            "b": 105.35
+          },
+          "crop_bbox": {
+            "l": 182.9,
+            "t": 121.59,
+            "r": 199.77,
+            "b": 101.35
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 142,
+          "gt_text": "lieu",
+          "gcv_text": "lieu",
+          "page_no": 1,
+          "bbox": {
+            "l": 201.6,
+            "t": 117.33,
+            "r": 218.63,
+            "b": 105.09
+          },
+          "crop_bbox": {
+            "l": 197.6,
+            "t": 121.33,
+            "r": 222.63,
+            "b": 101.09
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 143,
+          "gt_text": "thereof",
+          "gcv_text": "thereof",
+          "page_no": 1,
+          "bbox": {
+            "l": 224.23,
+            "t": 117.33,
+            "r": 258.3,
+            "b": 104.58
+          },
+          "crop_bbox": {
+            "l": 220.23,
+            "t": 121.33,
+            "r": 262.3,
+            "b": 100.58
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 144,
+          "gt_text": "by",
+          "gcv_text": "by",
+          "page_no": 1,
+          "bbox": {
+            "l": 262.5,
+            "t": 117.08,
+            "r": 274.63,
+            "b": 104.84
+          },
+          "crop_bbox": {
+            "l": 258.5,
+            "t": 121.08,
+            "r": 278.63,
+            "b": 100.84
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 145,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 279.53,
+            "t": 116.82,
+            "r": 293.53,
+            "b": 104.58
+          },
+          "crop_bbox": {
+            "l": 275.53,
+            "t": 120.82,
+            "r": 297.53,
+            "b": 100.58
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 146,
+          "gt_text": "appointing",
+          "gcv_text": "appointing",
+          "page_no": 1,
+          "bbox": {
+            "l": 298.9,
+            "t": 116.82,
+            "r": 348.83,
+            "b": 104.33
+          },
+          "crop_bbox": {
+            "l": 294.9,
+            "t": 120.82,
+            "r": 352.83,
+            "b": 100.33
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 147,
+          "gt_text": "authority",
+          "gcv_text": "authority",
+          "page_no": 1,
+          "bbox": {
+            "l": 354.2,
+            "t": 116.57,
+            "r": 396.67,
+            "b": 103.82
+          },
+          "crop_bbox": {
+            "l": 350.2,
+            "t": 120.57,
+            "r": 400.67,
+            "b": 99.82
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 148,
+          "gt_text": "without",
+          "gcv_text": "without",
+          "page_no": 1,
+          "bbox": {
+            "l": 406.7,
+            "t": 116.31,
+            "r": 443.1,
+            "b": 103.56
+          },
+          "crop_bbox": {
+            "l": 402.7,
+            "t": 120.31,
+            "r": 447.1,
+            "b": 99.56
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 149,
+          "gt_text": "assigning",
+          "gcv_text": "assigning",
+          "page_no": 1,
+          "bbox": {
+            "l": 447.53,
+            "t": 116.06,
+            "r": 492.33,
+            "b": 103.31
+          },
+          "crop_bbox": {
+            "l": 443.53,
+            "t": 120.06,
+            "r": 496.33,
+            "b": 99.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 150,
+          "gt_text": "any",
+          "gcv_text": "any",
+          "page_no": 1,
+          "bbox": {
+            "l": 496.77,
+            "t": 115.55,
+            "r": 514.27,
+            "b": 103.31
+          },
+          "crop_bbox": {
+            "l": 492.77,
+            "t": 119.55,
+            "r": 518.27,
+            "b": 99.31
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 151,
+          "gt_text": "reason.",
+          "gcv_text": "reason",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.6,
+            "t": 99.22,
+            "r": 139.77,
+            "b": 93.36
+          },
+          "crop_bbox": {
+            "l": 106.6,
+            "t": 103.22,
+            "r": 143.77,
+            "b": 89.36
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 152,
+          "gt_text": "5.",
+          "gcv_text": ".",
+          "page_no": 1,
+          "bbox": {
+            "l": 140.7,
+            "t": 99.22,
+            "r": 143.03,
+            "b": 93.36
+          },
+          "crop_bbox": {
+            "l": 136.7,
+            "t": 103.22,
+            "r": 147.03,
+            "b": 89.36
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 153,
+          "gt_text": "(5)",
+          "gcv_text": "(",
+          "page_no": 1,
+          "bbox": {
+            "l": 93.33,
+            "t": 75.76,
+            "r": 97.07,
+            "b": 64.02
+          },
+          "crop_bbox": {
+            "l": 89.33,
+            "t": 79.76,
+            "r": 101.07,
+            "b": 60.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 154,
+          "gt_text": "The",
+          "gcv_text": "The",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.83,
+            "t": 75.76,
+            "r": 128.33,
+            "b": 64.02
+          },
+          "crop_bbox": {
+            "l": 106.83,
+            "t": 79.76,
+            "r": 132.33,
+            "b": 60.02
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 155,
+          "gt_text": "regularisation",
+          "gcv_text": "regularisation",
+          "page_no": 1,
+          "bbox": {
+            "l": 132.07,
+            "t": 75.76,
+            "r": 196.47,
+            "b": 63.51
+          },
+          "crop_bbox": {
+            "l": 128.07,
+            "t": 79.76,
+            "r": 200.47,
+            "b": 59.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 156,
+          "gt_text": "is",
+          "gcv_text": "is",
+          "page_no": 1,
+          "bbox": {
+            "l": 199.97,
+            "t": 75.5,
+            "r": 207.43,
+            "b": 63.77
+          },
+          "crop_bbox": {
+            "l": 195.97,
+            "t": 79.5,
+            "r": 211.43,
+            "b": 59.77
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 157,
+          "gt_text": "subject",
+          "gcv_text": "subject",
+          "page_no": 1,
+          "bbox": {
+            "l": 211.63,
+            "t": 75.5,
+            "r": 244.07,
+            "b": 63.51
+          },
+          "crop_bbox": {
+            "l": 207.63,
+            "t": 79.5,
+            "r": 248.07,
+            "b": 59.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 158,
+          "gt_text": "to",
+          "gcv_text": "to",
+          "page_no": 1,
+          "bbox": {
+            "l": 247.57,
+            "t": 75.25,
+            "r": 256.2,
+            "b": 63.51
+          },
+          "crop_bbox": {
+            "l": 243.57,
+            "t": 79.25,
+            "r": 260.2,
+            "b": 59.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 159,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 259.7,
+            "t": 75.25,
+            "r": 274.17,
+            "b": 63.51
+          },
+          "crop_bbox": {
+            "l": 255.7,
+            "t": 79.25,
+            "r": 278.17,
+            "b": 59.51
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 160,
+          "gt_text": "Character",
+          "gcv_text": "Character",
+          "page_no": 1,
+          "bbox": {
+            "l": 277.9,
+            "t": 75.25,
+            "r": 322.7,
+            "b": 63.0
+          },
+          "crop_bbox": {
+            "l": 273.9,
+            "t": 79.25,
+            "r": 326.7,
+            "b": 59.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 161,
+          "gt_text": "and",
+          "gcv_text": "and",
+          "page_no": 1,
+          "bbox": {
+            "l": 326.2,
+            "t": 74.99,
+            "r": 342.77,
+            "b": 63.26
+          },
+          "crop_bbox": {
+            "l": 322.2,
+            "t": 78.99,
+            "r": 346.77,
+            "b": 59.26
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 162,
+          "gt_text": "antecedents",
+          "gcv_text": "antecedents",
+          "page_no": 1,
+          "bbox": {
+            "l": 346.97,
+            "t": 74.99,
+            "r": 400.4,
+            "b": 62.75
+          },
+          "crop_bbox": {
+            "l": 342.97,
+            "t": 78.99,
+            "r": 404.4,
+            "b": 58.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 163,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 404.37,
+            "t": 74.74,
+            "r": 415.33,
+            "b": 63.0
+          },
+          "crop_bbox": {
+            "l": 400.37,
+            "t": 78.74,
+            "r": 419.33,
+            "b": 59.0
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 164,
+          "gt_text": "the",
+          "gcv_text": "the",
+          "page_no": 1,
+          "bbox": {
+            "l": 417.2,
+            "t": 74.74,
+            "r": 431.43,
+            "b": 62.75
+          },
+          "crop_bbox": {
+            "l": 413.2,
+            "t": 78.74,
+            "r": 435.43,
+            "b": 58.75
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 165,
+          "gt_text": "candidates",
+          "gcv_text": "candidates",
+          "page_no": 1,
+          "bbox": {
+            "l": 435.4,
+            "t": 74.74,
+            "r": 484.17,
+            "b": 62.49
+          },
+          "crop_bbox": {
+            "l": 431.4,
+            "t": 78.74,
+            "r": 488.17,
+            "b": 58.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 166,
+          "gt_text": "being",
+          "gcv_text": "being",
+          "page_no": 1,
+          "bbox": {
+            "l": 487.67,
+            "t": 74.23,
+            "r": 513.57,
+            "b": 62.49
+          },
+          "crop_bbox": {
+            "l": 483.67,
+            "t": 78.23,
+            "r": 517.57,
+            "b": 58.49
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 167,
+          "gt_text": "found",
+          "gcv_text": "found",
+          "page_no": 1,
+          "bbox": {
+            "l": 110.37,
+            "t": 60.45,
+            "r": 136.73,
+            "b": 49.23
+          },
+          "crop_bbox": {
+            "l": 106.37,
+            "t": 64.45,
+            "r": 140.73,
+            "b": 45.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 168,
+          "gt_text": "satisfactory",
+          "gcv_text": "satisfactory",
+          "page_no": 1,
+          "bbox": {
+            "l": 140.47,
+            "t": 60.45,
+            "r": 194.6,
+            "b": 49.23
+          },
+          "crop_bbox": {
+            "l": 136.47,
+            "t": 64.45,
+            "r": 198.6,
+            "b": 45.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 169,
+          "gt_text": "on",
+          "gcv_text": "on",
+          "page_no": 1,
+          "bbox": {
+            "l": 197.17,
+            "t": 60.45,
+            "r": 209.53,
+            "b": 49.23
+          },
+          "crop_bbox": {
+            "l": 193.17,
+            "t": 64.45,
+            "r": 213.53,
+            "b": 45.23
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 170,
+          "gt_text": "verification.",
+          "gcv_text": "verification",
+          "page_no": 1,
+          "bbox": {
+            "l": 211.63,
+            "t": 60.45,
+            "r": 266.23,
+            "b": 49.23
+          },
+          "crop_bbox": {
+            "l": 207.63,
+            "t": 64.45,
+            "r": 270.23,
+            "b": 45.23
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

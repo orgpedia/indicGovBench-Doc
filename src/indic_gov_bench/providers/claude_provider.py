@@ -1,4 +1,4 @@
-"""claude_api3.py — Anthropic Claude VLM Raw Response Parser & Pipeline (v3).
+"""claude_provider.py — Anthropic Claude VLM Raw Response Parser & Pipeline.
 
 Parses raw Claude JSON responses into standard §9.1 block JSON format.
 """

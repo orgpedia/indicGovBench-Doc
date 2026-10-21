@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_mr_current_089",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        151.13,
+        154.09,
+        289.76,
+        154.09,
+        289.76,
+        704.75,
+        151.13,
+        704.75
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>क्षेत्र लेखनिकांचे नाव</td><td>सेवानिवृत्त लेखनिकांचे नाव</td><td>हुद्दा</td><td>वर्ष १/२/३/४</td><td>प्रलंबित असलेल्या प्रकरण</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        330.23,
+        169.24,
+        467.67,
+        169.24,
+        467.67,
+        713.17,
+        330.23,
+        713.17
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>क्षेत्र लेखनिकांचे नाव</td><td>सेवानिवृत्त लेखनिकांचे नाव</td><td>हुद्दा</td><td>वर्ष १/२/३/४</td><td>प्रलंबित असलेल्या प्रकरण</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        107.1,
+        243.34,
+        137.44,
+        243.34,
+        137.44,
+        611.29,
+        107.1,
+        611.29
+      ],
+      "text": "खाते/विभागाचे नाव :----------------"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        268.94,
+        258.49,
+        302.26,
+        258.49,
+        302.26,
+        620.55,
+        268.94,
+        620.55
+      ],
+      "text": "खाते/विभागाचे नाव :----------------"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        142.2,
+        294.7,
+        162.44,
+        294.7,
+        162.44,
+        530.46,
+        142.2,
+        530.46
+      ],
+      "text": "४) धारणाधारक प्रकरण माहे -------- अखेरची"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        311.78,
+        302.28,
+        334.98,
+        302.28,
+        334.98,
+        547.3,
+        311.78,
+        547.3
+      ],
+      "text": "५) अनुकंपा वारस - प्रकरणे माहे ------- अखेरची"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 2743,
+      "total": 6037
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.039504,
+      "batch": 0.019752
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.9504,
+      "batch": 1.9752,
+      "savings": 1.9752,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

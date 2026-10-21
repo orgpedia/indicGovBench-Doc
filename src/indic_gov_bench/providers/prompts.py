@@ -120,7 +120,6 @@ OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
 CLAUDE_SLUG_MODEL_MAP: dict[str, str] = {
     "claude_haiku_4_5": os.environ.get("CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"),
     "claude_sonnet_5_5": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
-    "claude_api": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
     "claude": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
 }
 

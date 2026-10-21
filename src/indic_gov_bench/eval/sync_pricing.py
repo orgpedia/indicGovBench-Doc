@@ -51,7 +51,6 @@ MODEL_MAPPINGS: dict[str, dict[str, Any]] = {
     # 3. Anthropic Claude Models
     "claude_haiku_4_5": {"provider": "anthropic", "model": "claude-haiku-4-5"},
     "claude_sonnet_5_5": {"provider": "anthropic", "model": "claude-sonnet-5-5"},
-    "claude_api": {"alias_of": "claude_sonnet_5_5"},
 }
 
 

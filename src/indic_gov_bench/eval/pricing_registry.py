@@ -415,27 +415,6 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         ),
         "batch_formula": "realtime_cost * 0.50",
     },
-    "claude_api": {
-        "name": "Claude Sonnet 5.5 (Default)",
-        "archetype": "token",
-        "native_currency": "USD",
-        "input_rate_1m": 2.00,
-        "output_rate_1m": 10.00,
-        "supports_batching": True,
-        "batch_discount_pct": 50.0,
-        "pricing_source": "models.dev",
-        "source_url": "https://models.dev",
-        "wayback_url": None,
-        "models_dev_id": "anthropic/claude-sonnet-5-5",
-        "last_synced_at": "2026-10-10",
-        "billing_unit": "USD per 1M tokens",
-        "how_computed": "Default Anthropic endpoint alias mapped to Claude Sonnet 5.5 rates.",
-        "formula": (
-            "((prompt_tokens / 1e6) * input_rate_1m + "
-            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
-        ),
-        "batch_formula": "realtime_cost * 0.50",
-    },
     # 4. Fixed-Page Commercial OCR Providers
     "sarvam_api": {
         "name": "Sarvam AI Document Parser",

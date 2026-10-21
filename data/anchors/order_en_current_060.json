@@ -1,0 +1,39 @@
+{
+  "doc_id": "order_en_current_060",
+  "total_words": 1,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/1": {
+      "self_ref": "#/texts/1",
+      "label": "paragraph",
+      "full_gt_text": "W",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "W",
+          "gcv_text": "ww",
+          "page_no": 1,
+          "bbox": {
+            "l": 37.41,
+            "t": 178.1,
+            "r": 48.2,
+            "b": 157.21
+          },
+          "crop_bbox": {
+            "l": 33.41,
+            "t": 182.1,
+            "r": 52.2,
+            "b": 153.21
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

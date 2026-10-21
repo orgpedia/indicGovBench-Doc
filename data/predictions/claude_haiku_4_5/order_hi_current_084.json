@@ -1,0 +1,62 @@
+{
+  "doc_id": "order_hi_current_084",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        44.62,
+        181.03,
+        446.25,
+        181.03,
+        446.25,
+        631.5,
+        44.62,
+        631.5
+      ],
+      "html": "<table><thead><tr><td>ល.រ</td><td>ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td></tr></thead><tbody><tr><td>១</td><td>ឆ្នាំ២០២៣</td><td>ឆ្នាំ២០២១</td><td>ឆ្នាំ២០២១</td><td>ឆ្នាំ២០១៩</td><td>ឆ្នាំ២០១៦</td><td>ឆ្នាំ២០១៨</td><td>ឆ្នាំ២០១៨</td></tr><tr><td>២</td><td>១៥៨</td><td></td><td>១២០១</td><td>៣៨០</td><td>៩៥១</td><td></td><td>ឆ្នាំ២០១៨</td></tr><tr><td>៣</td><td>១៥៣</td><td>១៣១</td><td>១០១</td><td>៦១២</td><td>៥២៣</td><td>១៨៤</td><td>ឆ្នាំ២០១៨</td></tr><tr><td>៤</td><td colspan=\"7\">ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ</td></tr><tr><td>៥</td><td>SC</td><td>GEN</td><td>GEN</td><td>GEN</td><td>ST</td><td>GEN</td><td>ឆ្នាំ</td></tr><tr><td>៦</td><td colspan=\"2\">ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ</td><td colspan=\"2\">ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ</td><td colspan=\"2\">ឈ្មោះលេខកូដ ឈ្មោះលេខកូដ</td><td>ឈ្មោះលេខកូដ</td></tr><tr><td>៧</td><td>២៥-៦-២៦</td><td>០២-៦-២៧</td><td>២៣-១-២៧</td><td>០៨-១២-២២</td><td>១៩-៦-៥១</td><td>០៣-១-២១</td><td>ឆ្នាំ</td></tr><tr><td>៨</td><td>០៣-០-००</td><td>១-១-១៩៩</td><td>១-១-១៩៩</td><td>០-०-៨-៩៨</td><td>១៦-១-៥២</td><td>០១-०-២</td><td>ឆ្នាំ</td></tr><tr><td>៩</td><td>២-១-១៩៩២</td><td>១-១-១៩៩៥</td><td>១៩៨៨</td><td>១៩៨៨</td><td>២៧-១-១៩៩០</td><td>២៤-०-៨៨</td><td>ឆ្នាំ</td></tr><tr><td>១០</td><td>០១-०៩-១២</td><td>១២-०១-១២</td><td>៣១-០៣-១២</td><td>២១-०२-១២</td><td>១៩-១២-០៦</td><td>០៤-०२-०៤</td><td>ឆ្នាំ</td></tr><tr><td>១១</td><td>១២-०៦-៨</td><td>០७-०១-०៦</td><td>០७-០១-०៦</td><td>០७-०១-०៦</td><td>២៦-០៤-១០</td><td>១២-०៩-១៨</td><td>ឆ្នាំ</td></tr><tr><td>១២</td><td>CD.MARCH</td><td>CD.MARCH</td><td>RANCH</td><td>GODDA</td><td>KORBA</td><td>RANCH</td><td>ឆ្នាំ</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        446.25,
+        631.5,
+        595.0,
+        631.5,
+        595.0,
+        842.0,
+        446.25,
+        842.0
+      ],
+      "text": "Page 1 of 2"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1992,
+      "output": 1530,
+      "total": 3522
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.009642,
+      "batch": 0.004821
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.9642,
+      "batch": 0.4821,
+      "savings": 0.4821,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

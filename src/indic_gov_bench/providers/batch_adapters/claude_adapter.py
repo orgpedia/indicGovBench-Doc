@@ -164,6 +164,41 @@ class ClaudeBatchAdapter(BaseBatchAdapter):
 
         return batch_id
 
+    def submit_batch_file(
+        self,
+        jsonl_path: Path,
+        metadata: dict[str, str] | None = None,
+    ) -> str:
+        """Submits batch job to Anthropic Message Batches API from an existing JSONL file."""
+        items: list[dict[str, Any]] = []
+        with open(jsonl_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    items.append(json.loads(line))
+
+        client = self._get_client()
+        message_batch = client.messages.batches.create(requests=items)
+        batch_id = message_batch.id
+
+        ts = int(time.time() * 1000)
+        chunk_name = metadata.get("chunk_name", f"{ts}") if metadata else f"{ts}"
+        output_batch_dir = jsonl_path.parent
+        meta = {
+            "batch_id": batch_id,
+            "provider": self.provider_slug,
+            "model": self.model_name,
+            "chunk_name": chunk_name,
+            "total_count": len(items),
+            "doc_ids": [it["custom_id"] for it in items if "custom_id" in it],
+            "submitted_at": int(time.time()),
+        }
+        meta_path = output_batch_dir / f"job_meta_{chunk_name}.json"
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(meta, f, indent=2)
+
+        return batch_id
+
     def get_status(self, batch_id: str) -> BatchStatus:
         """Queries live progress and state of an Anthropic message batch."""
         client = self._get_client()

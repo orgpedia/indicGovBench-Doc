@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_hi_current_087",
+  "total_words": 5,
+  "pages": {
+    "1": {
+      "width": 595.0,
+      "height": 842.0,
+      "rotation_deg": 0
+    }
+  },
+  "blocks": {
+    "#/texts/0": {
+      "self_ref": "#/texts/0",
+      "label": "paragraph",
+      "full_gt_text": "1496",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "1496",
+          "gcv_text": "1496",
+          "page_no": 1,
+          "bbox": {
+            "l": 549.66,
+            "t": 826.63,
+            "r": 580.84,
+            "b": 810.07
+          },
+          "crop_bbox": {
+            "l": 545.66,
+            "t": 830.63,
+            "r": 584.84,
+            "b": 806.07
+          },
+          "rotation_deg": 0
+        }
+      ]
+    },
+    "#/texts/2": {
+      "self_ref": "#/texts/2",
+      "label": "paragraph",
+      "full_gt_text": "Page 7 of 10",
+      "words": [
+        {
+          "word_idx": 0,
+          "gt_text": "Page",
+          "gcv_text": "Page",
+          "page_no": 1,
+          "bbox": {
+            "l": 265.83,
+            "t": 56.18,
+            "r": 287.18,
+            "b": 47.3
+          },
+          "crop_bbox": {
+            "l": 261.83,
+            "t": 60.18,
+            "r": 291.18,
+            "b": 43.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 1,
+          "gt_text": "7",
+          "gcv_text": "7",
+          "page_no": 1,
+          "bbox": {
+            "l": 289.34,
+            "t": 56.18,
+            "r": 294.38,
+            "b": 47.3
+          },
+          "crop_bbox": {
+            "l": 285.34,
+            "t": 60.18,
+            "r": 298.38,
+            "b": 43.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 2,
+          "gt_text": "of",
+          "gcv_text": "of",
+          "page_no": 1,
+          "bbox": {
+            "l": 297.98,
+            "t": 56.18,
+            "r": 307.58,
+            "b": 47.3
+          },
+          "crop_bbox": {
+            "l": 293.98,
+            "t": 60.18,
+            "r": 311.58,
+            "b": 43.3
+          },
+          "rotation_deg": 0
+        },
+        {
+          "word_idx": 3,
+          "gt_text": "10",
+          "gcv_text": "10",
+          "page_no": 1,
+          "bbox": {
+            "l": 309.74,
+            "t": 56.18,
+            "r": 320.29,
+            "b": 47.3
+          },
+          "crop_bbox": {
+            "l": 305.74,
+            "t": 60.18,
+            "r": 324.29,
+            "b": 43.3
+          },
+          "rotation_deg": 0
+        }
+      ]
+    }
+  }
+}

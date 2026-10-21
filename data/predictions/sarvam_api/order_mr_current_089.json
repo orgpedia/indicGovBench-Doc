@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_mr_current_089",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        150.19,
+        152.89,
+        292.46,
+        152.89,
+        292.46,
+        711.43,
+        150.19,
+        711.43
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>बील लेखनिकाचे नाव</td><td>सेवानिवृत्त सेवकाचे नाव</td><td>हुद्दा</td><td>वर्ग१/२/३/४</td><td>प्रलंबित असल्याचे कारण</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        327.25,
+        167.78,
+        468.8,
+        167.78,
+        468.8,
+        723.43,
+        327.25,
+        723.43
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>बील लेखनिकेचे नाव</td><td>सेवानिवृत्त सेवकाचे नाव</td><td>हुद्दा</td><td>वर्ग१/२/३/४</td><td>प्रलंबित असल्याचे कारण</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        135.31,
+        291.39,
+        167.22,
+        291.39,
+        167.22,
+        557.81,
+        135.31,
+        557.81
+      ],
+      "text": "४) घराणसत्तावास प्रकरणे माहे ----- अहवाल"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        312.85,
+        301.71,
+        346.68,
+        301.71,
+        346.68,
+        568.85,
+        312.85,
+        568.85
+      ],
+      "text": "अहवाल\nअनुकंपा वारस - प्रकरणे माहे"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "INR",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 1.25,
+      "batch": 1.25
+    },
+    "fx": {
+      "rate_usd_to_inr": 1.0,
+      "source": "native_inr"
+    },
+    "cost_inr": {
+      "realtime": 1.25,
+      "batch": 1.25,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

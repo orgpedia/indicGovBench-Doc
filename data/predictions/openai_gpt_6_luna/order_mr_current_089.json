@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_mr_current_089",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        151.13,
+        155.77,
+        290.95,
+        155.77,
+        290.95,
+        710.65,
+        151.13,
+        710.65
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>कीर्तन व भजनिकांचे नाव</td><td>सेवाभावी संस्थेचे नाव</td><td>हुद्दा</td><td>वर्ग १/२/३/४</td><td>संस्थेचे असलेले कार्य</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        329.04,
+        169.24,
+        468.27,
+        169.24,
+        468.27,
+        722.44,
+        329.04,
+        722.44
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>कीर्तन व भजनिकांचे नाव</td><td>सेवाभावी संस्थेचे नाव</td><td>हुद्दा</td><td>वर्ग १/२/३/४</td><td>संस्थेचे असलेले कार्य</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        106.5,
+        246.71,
+        138.04,
+        246.71,
+        138.04,
+        608.77,
+        106.5,
+        608.77
+      ],
+      "text": "खाते/विभागाचे नाव : --------------------"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        282.03,
+        283.75,
+        313.56,
+        283.75,
+        313.56,
+        623.08,
+        282.03,
+        623.08
+      ],
+      "text": "खाते/विभागाचे नाव : --------------------"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        135.06,
+        291.33,
+        164.82,
+        291.33,
+        164.82,
+        426.89,
+        135.06,
+        426.89
+      ],
+      "text": "४) प्राण्यांपासून प्रकटीकरण पाहणे — अहवाल"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        315.35,
+        318.28,
+        344.5,
+        318.28,
+        344.5,
+        454.68,
+        315.35,
+        454.68
+      ],
+      "text": "५) अनुसूचना बाबत - प्रकटीकरण पाहणे — अहवाल"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 3294,
+      "output": 3659,
+      "total": 6953
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.002159,
+      "batch": 0.001079
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.21589,
+      "batch": 0.107945,
+      "savings": 0.107945,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

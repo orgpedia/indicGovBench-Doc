@@ -29,6 +29,71 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from bs4 import BeautifulSoup, Tag
+
+
+def format_table_html(raw_html: str, indent: str = "    ") -> str:
+    """Pretty-prints an HTML table string with clean, hierarchical indentation and readable cell lines."""
+    if not raw_html or not raw_html.strip():
+        return ""
+
+    soup = BeautifulSoup(raw_html.strip(), "html.parser")
+    table = soup.find("table")
+    if not table or not isinstance(table, Tag):
+        return raw_html.strip()
+
+    def format_attrs(tag: Tag) -> str:
+        attrs = []
+        for k, v in tag.attrs.items():
+            val = v if isinstance(v, str) else " ".join(v)
+            attrs.append(f" {k}=\"{val}\"")
+        return "".join(attrs)
+
+    lines = [f"{indent}<table{format_attrs(table)}>"]
+    children = [c for c in table.children if isinstance(c, Tag)]
+    has_sections = any(c.name in ("thead", "tbody", "tfoot") for c in children)
+
+    def render_row(tr: Tag, row_indent: str) -> None:
+        lines.append(f"{row_indent}<tr{format_attrs(tr)}>")
+        cell_indent = row_indent + "  "
+        for cell in tr.find_all(["td", "th"], recursive=False):
+            inner = "".join(str(c) for c in cell.children).strip()
+            lines.append(f"{cell_indent}<{cell.name}{format_attrs(cell)}>{inner}</{cell.name}>")
+        lines.append(f"{row_indent}</tr>")
+
+    if not has_sections:
+        row_indent = indent + "  "
+        for child in children:
+            if child.name == "tr":
+                render_row(child, row_indent)
+            elif child.name == "caption":
+                cap_inner = "".join(str(c) for c in child.children).strip()
+                lines.append(f"{row_indent}<caption{format_attrs(child)}>{cap_inner}</caption>")
+            else:
+                lines.append(f"{row_indent}{str(child).strip()}")
+    else:
+        for sec in children:
+            sec_indent = indent + "  "
+            if sec.name in ("thead", "tbody", "tfoot"):
+                trs = sec.find_all("tr", recursive=False)
+                if not trs and not sec.get_text(strip=True):
+                    continue  # Skip empty sections (e.g. empty <thead></thead>)
+                lines.append(f"{sec_indent}<{sec.name}{format_attrs(sec)}>")
+                row_indent = sec_indent + "  "
+                for tr in trs:
+                    render_row(tr, row_indent)
+                lines.append(f"{sec_indent}</{sec.name}>")
+            elif sec.name == "tr":
+                render_row(sec, sec_indent)
+            elif sec.name == "caption":
+                cap_inner = "".join(str(c) for c in sec.children).strip()
+                lines.append(f"{sec_indent}<caption{format_attrs(sec)}>{cap_inner}</caption>")
+            else:
+                lines.append(f"{sec_indent}{str(sec).strip()}")
+
+    lines.append(f"{indent}</table>")
+    return "\n".join(lines)
+
 
 def render_grid_table_html(data_obj: dict[str, Any]) -> str:
     """Renders a canonical HTML table from cell arrays and row/col indices."""
@@ -71,8 +136,12 @@ def render_grid_table_html(data_obj: dict[str, Any]) -> str:
     return "<table>\n    <tbody>\n" + "\n".join(rows_html) + "\n    </tbody>\n  </table>"
 
 
-def extract_tables_from_json(json_path: Path, out_dir: Path | None = None) -> list[Path]:
-    """Extracts tables from any supported JSON format and saves each table to <stub>_table<num>.html."""
+def extract_tables_from_json(
+    json_path: Path,
+    out_dir: Path | None = None,
+    table_only: bool = False,
+) -> list[Path]:
+    """Extracts tables from any supported JSON format and saves each formatted table to <stub>_table<num>.html."""
     if not json_path.exists():
         raise FileNotFoundError(f"JSON file not found: {json_path}")
 
@@ -134,7 +203,7 @@ def extract_tables_from_json(json_path: Path, out_dir: Path | None = None) -> li
                                 if fallback not in extracted_html_tables:
                                     extracted_html_tables.append(fallback)
 
-    # 3. Format 3: Generic fallback — search for embedded <table>...</table> tags anywhere in JSON text if no tables extracted yet
+    # 4. Format 4: Generic fallback — search for embedded <table>...</table> tags anywhere in JSON text if no tables extracted yet
     if not extracted_html_tables and isinstance(data, dict):
         raw_json_str = json.dumps(data, ensure_ascii=False)
         tbl_matches = re.findall(r"(<table[\s>].*?</table>)", raw_json_str, flags=re.DOTALL | re.IGNORECASE)
@@ -151,7 +220,12 @@ def extract_tables_from_json(json_path: Path, out_dir: Path | None = None) -> li
     for idx, table_content in enumerate(extracted_html_tables, 1):
         out_file = out_dir / f"{stub}_table{idx}.html"
 
-        full_html_page = f"""<!DOCTYPE html>
+        formatted_table = format_table_html(table_content, indent="    " if not table_only else "")
+
+        if table_only:
+            output_content = formatted_table + "\n"
+        else:
+            output_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -159,29 +233,31 @@ def extract_tables_from_json(json_path: Path, out_dir: Path | None = None) -> li
   <title>{stub}_table{idx}</title>
   <style>
     body {{
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #0f172a;
       color: #f8fafc;
-      padding: 24px;
+      padding: 32px 20px;
       margin: 0;
     }}
     .table-container {{
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       background: #1e293b;
       border: 1px solid #334155;
       border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      overflow-x: auto;
     }}
     h2 {{
       color: #38bdf8;
-      font-size: 18px;
+      font-size: 20px;
       margin-top: 0;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      font-weight: 600;
     }}
     table {{
       border-collapse: collapse;
@@ -198,26 +274,31 @@ def extract_tables_from_json(json_path: Path, out_dir: Path | None = None) -> li
       font-size: 14px;
       line-height: 1.5;
     }}
-    th {{
+    thead th, thead td, th {{
       background: #1e293b;
       color: #38bdf8;
       font-weight: 700;
+      border-bottom: 2px solid #475569;
     }}
-    tr:nth-child(even) {{
+    tbody tr:nth-child(even) {{
       background: rgba(255, 255, 255, 0.02);
+    }}
+    tbody tr:hover {{
+      background: rgba(56, 189, 248, 0.05);
     }}
   </style>
 </head>
 <body>
   <div class="table-container">
     <h2>📊 Table #{idx} for {stub}</h2>
-    {table_content}
+{formatted_table}
   </div>
 </body>
-</html>"""
+</html>
+"""
 
         with open(out_file, "w", encoding="utf-8") as out_f:
-            out_f.write(full_html_page)
+            out_f.write(output_content)
 
         created_files.append(out_file)
         print(f"✅ Extracted Table #{idx} -> {out_file}")
@@ -257,6 +338,7 @@ def main():
     )
     parser.add_argument("input", nargs="?", help="Path to JSON file or doc_id (e.g., order_mr_current_080)")
     parser.add_argument("-o", "--out-dir", help="Directory to save output HTML files (default: same directory as input JSON)")
+    parser.add_argument("--table-only", action="store_true", help="Save only the formatted <table> HTML snippet without full page wrapper")
     parser.add_argument("--all", action="store_true", help="Process all ground truth JSON files in data/ground_truth/")
 
     args = parser.parse_args()
@@ -271,7 +353,7 @@ def main():
         total_tables = 0
         for jpath in json_files:
             try:
-                tables = extract_tables_from_json(jpath, out_dir=out_dir)
+                tables = extract_tables_from_json(jpath, out_dir=out_dir, table_only=args.table_only)
                 total_tables += len(tables)
             except Exception as err:
                 print(f"⚠️ Error processing {jpath.name}: {err}", file=sys.stderr)
@@ -287,7 +369,7 @@ def main():
     out_dir = Path(args.out_dir) if args.out_dir else None
 
     try:
-        extract_tables_from_json(json_path, out_dir=out_dir)
+        extract_tables_from_json(json_path, out_dir=out_dir, table_only=args.table_only)
     except Exception as err:
         print(f"❌ Error: {err}", file=sys.stderr)
         sys.exit(1)

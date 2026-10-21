@@ -248,7 +248,7 @@ delete_tag:
 # 1. Supported Provider Registries
 BATCH_PROVIDERS    := gemini_3_1_pro gemini_3_8_flash gemini_3_5_flash_lite \
                       openai_gpt_6_1_sol openai_gpt_6_luna openai_gpt_5_6_tera openai_gpt_5_6_luna \
-                      claude_haiku_4_5 claude_sonnet_5_5 claude_api \
+                      claude_haiku_4_5 claude_sonnet_5_5 \
                       paddleocr_hpd qwen3_vl_8b tesseract
 
 REALTIME_PROVIDERS := datalab_api mistral_api sarvam_api
@@ -257,7 +257,7 @@ REALTIME_PROVIDERS := datalab_api mistral_api sarvam_api
 VALID_PROVIDERS    := $(BATCH_PROVIDERS) $(REALTIME_PROVIDERS)
 
 # 2. Strict Typo & Invalid Provider Validation (Fail-Fast)
-ifdef PROVIDER
+ifneq ($(strip $(PROVIDER)),)
     INVALID_PROVIDERS := $(filter-out $(VALID_PROVIDERS),$(PROVIDER))
     ifneq ($(INVALID_PROVIDERS),)
         $(error ❌ Unknown provider '$(INVALID_PROVIDERS)'. Supported providers are: $(VALID_PROVIDERS))
@@ -279,7 +279,7 @@ EVAL_PROVIDERS   ?= $(filter-out $(EXCLUDE),$(if $(PROVIDER),$(PROVIDER),$(DISCO
 DOC ?= $(DOC_ID)
 
 # Dynamic Document Scoping (Single DOC or All PDFs)
-ifdef DOC
+ifneq ($(strip $(DOC)),)
     DOC_IDS := $(DOC)
 else
     PDFS := $(wildcard data/pdfs/*.pdf)
@@ -289,7 +289,7 @@ endif
 # Dynamic Target Lists
 IMAGES := $(patsubst %,data/images/%.png,$(DOC_IDS))
 
-ifdef DOC
+ifneq ($(strip $(DOC)),)
     ANCHORS     := data/anchors/$(DOC).json
     PREDICTIONS := $(foreach p,$(TARGET_PROVIDERS),data/predictions/$(p)/$(DOC).json)
 else

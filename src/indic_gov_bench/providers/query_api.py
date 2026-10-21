@@ -126,7 +126,6 @@ OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
 CLAUDE_SLUG_MODEL_MAP: dict[str, str] = {
     "claude_haiku_4_5": os.environ.get("CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"),
     "claude_sonnet_5_5": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
-    "claude_api": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
     "claude": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
 }
 
@@ -1291,8 +1290,22 @@ def query_single_api(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Call external provider API for a single PDF.")
-    parser.add_argument("input_pdf", type=str, help="Input PDF file path")
-    parser.add_argument("output_json", type=str, help="Output raw JSON path")
+    parser.add_argument("input_pdf", nargs="?", default=None, type=str, help="Input PDF file path")
+    parser.add_argument("output_json", nargs="?", default=None, type=str, help="Output raw JSON path")
+    parser.add_argument(
+        "--input-pdf",
+        dest="input_pdf_flag",
+        type=str,
+        default=None,
+        help="Input PDF file path (alternative to positional argument)",
+    )
+    parser.add_argument(
+        "--output-json",
+        dest="output_json_flag",
+        type=str,
+        default=None,
+        help="Output raw JSON path (alternative to positional argument)",
+    )
     parser.add_argument(
         "--provider",
         type=str,
@@ -1369,10 +1382,17 @@ def main() -> None:
     )
 
     args = parser.parse_args()
+    input_pdf_str = args.input_pdf or args.input_pdf_flag
+    output_json_str = args.output_json or args.output_json_flag
+    if not input_pdf_str or not output_json_str:
+        parser.error(
+            "Both input PDF and output JSON paths are required (as positional arguments or via --input-pdf and --output-json)."
+        )
+
     ok = query_single_api(
         provider=args.provider,
-        pdf_path=Path(args.input_pdf),
-        output_json_path=Path(args.output_json),
+        pdf_path=Path(input_pdf_str),
+        output_json_path=Path(output_json_str),
         verbose=args.verbose,
         gemini_model=args.gemini_model,
         gemini_thinking=args.gemini_thinking,

@@ -1,0 +1,65 @@
+{
+  "doc_id": "order_hi_current_084",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        41.65,
+        211.34,
+        56.52,
+        211.34,
+        56.52,
+        252.6,
+        41.65,
+        252.6
+      ],
+      "text": "राजु"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        6.54,
+        431.95,
+        17.85,
+        431.95,
+        17.85,
+        475.73,
+        6.54,
+        475.73
+      ],
+      "text": "Page 1 of 2"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "compute_time",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 2287,
+      "output": 8000,
+      "total": 10287
+    },
+    "compute_details": {
+      "gpu_type": "H100",
+      "gpu_seconds": 6.07
+    },
+    "native_costs": {
+      "realtime": 0.01397,
+      "batch": 0.006985
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.397008,
+      "batch": 0.698504,
+      "savings": 0.698504,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

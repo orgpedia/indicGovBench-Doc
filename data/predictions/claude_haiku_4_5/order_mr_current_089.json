@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_mr_current_089",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        29.75,
+        42.1,
+        208.25,
+        42.1,
+        208.25,
+        126.3,
+        29.75,
+        126.3
+      ],
+      "text": "दिनांक/समय (Date/Time)"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        29.75,
+        126.3,
+        267.75,
+        126.3,
+        267.75,
+        463.1,
+        29.75,
+        463.1
+      ],
+      "html": "<table><thead><tr><td>दिनांकांश पत्रक</td><td colspan=\"4\"></td></tr></thead><tbody><tr><td>क्र.</td><td>x/y(k)</td><td colspan=\"2\"></td></tr><tr><td>1</td><td>log</td><td colspan=\"2\"></td></tr><tr><td>2</td><td></td><td colspan=\"2\"></td></tr><tr><td>3</td><td>log log</td><td colspan=\"2\"></td></tr><tr><td>4</td><td></td><td colspan=\"2\"></td></tr><tr><td>क्र.</td><td>~</td><td>α</td><td>m</td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        267.75,
+        42.1,
+        446.25,
+        42.1,
+        446.25,
+        126.3,
+        267.75,
+        126.3
+      ],
+      "text": "दिनांक/समय (Date/Time)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        267.75,
+        126.3,
+        505.75,
+        126.3,
+        505.75,
+        463.1,
+        267.75,
+        463.1
+      ],
+      "html": "<table><thead><tr><td>दिनांकांश पत्रक</td><td colspan=\"4\"></td></tr></thead><tbody><tr><td>क्र.</td><td>x/y(k)</td><td colspan=\"2\"></td></tr><tr><td>1</td><td>log</td><td colspan=\"2\"></td></tr><tr><td>2</td><td></td><td colspan=\"2\"></td></tr><tr><td>3</td><td>log log</td><td colspan=\"2\"></td></tr><tr><td>4</td><td></td><td colspan=\"2\"></td></tr><tr><td>क्र.</td><td>~</td><td>α</td><td>m</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1992,
+      "output": 585,
+      "total": 2577
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004917,
+      "batch": 0.002458
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4917,
+      "batch": 0.24585,
+      "savings": 0.24585,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

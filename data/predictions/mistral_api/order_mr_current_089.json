@@ -1,0 +1,122 @@
+{
+  "doc_id": "order_mr_current_089",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        152.06,
+        153.02,
+        289.24,
+        153.02,
+        289.24,
+        704.7,
+        152.06,
+        704.7
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>बील लेखनिकाचे नाव</td><td>सेवानिवृत्त सेवकाचे नाव</td><td>हुद्दा</td><td>वर्ग १/२/३/४</td><td>प्रलंबित असल्याचकारण</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        329.73,
+        167.9,
+        466.91,
+        167.9,
+        466.91,
+        717.93,
+        329.73,
+        717.93
+      ],
+      "html": "<table><thead><tr><td>अ.क्र.</td><td>बील लेखनिकाचे नाव</td><td>सेवानिवृत्त सेवकाचे नाव</td><td>हुद्दा</td><td>वर्ग १/२/३/४</td><td>प्रलंबित असल्याचकारण</td></tr></thead><tbody><tr><td>१</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>२</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>३</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        135.53,
+        294.45,
+        163.62,
+        294.45,
+        163.62,
+        552.51,
+        135.53,
+        552.51
+      ],
+      "text": "४) पानभत्तावासस प्रकरणे माहे ---अहवाल"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        314.03,
+        303.55,
+        342.95,
+        303.55,
+        342.95,
+        572.36,
+        314.03,
+        572.36
+      ],
+      "text": "५) अनुकंपा वासस - प्रकरणे माहे ---अहवाल"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        103.3,
+        518.6,
+        119.83,
+        518.6,
+        119.83,
+        600.48,
+        103.3,
+        600.48
+      ],
+      "text": "खाते/विभागाचे नाव : ---"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        281.8,
+        531.83,
+        297.5,
+        531.83,
+        297.5,
+        614.54,
+        281.8,
+        614.54
+      ],
+      "text": "खाते/विभागाचे नाव : ---"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.004,
+      "batch": 0.004
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.4,
+      "batch": 0.4,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

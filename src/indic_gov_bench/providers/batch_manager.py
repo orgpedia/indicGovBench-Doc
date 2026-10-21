@@ -439,7 +439,14 @@ def run_batch_submit(
             chunk_bytes = p_chunk["bytes"]
             chunk_mb = chunk_bytes / (1024 * 1024)
             stem = p_chunk["jsonl_path"].stem
-            chunk_label = stem.replace("openai_batch_input_", "").replace("batch_input_", "")
+            chunk_label = stem
+            for prefix in (
+                "openai_batch_input_",
+                "claude_batch_input_",
+                "gemini_batch_input_",
+                "batch_input_",
+            ):
+                chunk_label = chunk_label.replace(prefix, "")
             if not chunk_label.startswith("part_"):
                 chunk_label = f"part_{idx + 1:02d}_of_{num_chunks:02d}"
         else:
@@ -463,6 +470,16 @@ def run_batch_submit(
                     },
                 )
             else:
+                if reused_chunks:
+                    chunk_items = []
+                    with open(p_chunk["jsonl_path"], "r", encoding="utf-8") as f:
+                        for line in f:
+                            line = line.strip()
+                            if line:
+                                chunk_items.append(json.loads(line))
+                else:
+                    chunk_items = p_chunk["items"]
+
                 batch_id = adapter.submit_batch(
                     items=chunk_items,
                     output_batch_dir=batch_dir,
