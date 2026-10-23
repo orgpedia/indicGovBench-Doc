@@ -3,74 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Provider Pricing & Implementation Details — IndicGovBench-Orders</title>
+  <title>Provider Pricing &amp; Implementation Details — IndicGovBench-Orders</title>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <style>
-    .pricing-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      padding: 18px 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-      transition: border-color 0.15s ease;
-    }
-    .pricing-card:hover {
-      border-color: #cbd5e1;
-    }
-    .pricing-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #f1f5f9;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-      margin-bottom: 12px;
-    }
-    .pricing-stat-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 4px;
-      padding: 10px 14px;
-    }
-    .pricing-stat-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      margin-bottom: 3px;
-    }
-    .pricing-stat-value {
-      font-size: 14.5px;
-      font-weight: 700;
-      color: #0f172a;
-    }
-    .pricing-stat-sub {
-      font-size: 12px;
-      color: #64748b;
-      margin-top: 2px;
-    }
-    .formula-code-box {
-      background: #0f172a;
-      color: #38bdf8;
-      font-family: var(--font-mono, ui-monospace, monospace);
-      font-size: 12px;
-      padding: 10px 14px;
-      border-radius: 4px;
-      overflow-x: auto;
-      line-height: 1.5;
-      margin: 8px 0;
-    }
     .source-badge-link {
       display: inline-flex;
       align-items: center;
@@ -102,7 +39,31 @@
       color: #581c87;
     }
 
-    /* Compact Master Table - No Horizontal Scrolling */
+    .pricing-stat-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 10px 14px;
+    }
+    .pricing-stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 3px;
+    }
+    .pricing-stat-value {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .pricing-stat-sub {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
     .compact-table {
       table-layout: auto !important;
       font-size: 13px !important;
@@ -123,14 +84,14 @@
     <!-- Top Global Header -->
     <header id="global-header" data-testid="global-header">
       <div class="brand-title">
-        <a href="index.html#section-cost-perf" class="btn-tool" style="margin-right:8px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center;">
-          ← Back to Benchmark
+        <a href="index.html#section-results" class="btn-tool" style="margin-right:8px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center;">
+          ← Back to Leaderboard
         </a>
         <span>🏛️ IndicGovBench-Orders</span>
-        <span class="brand-badge" style="background:#111827; color:#ffffff; border-color:#111827;">Pricing &amp; Implementation Guide</span>
+        <span class="brand-badge" style="background:#111827; color:#ffffff; border-color:#111827;">Pricing &amp; Rate Card</span>
       </div>
       <div class="header-actions" style="display:flex; align-items:center; gap:8px;">
-        <a class="header-nav-link" href="https://orgpedia.in" target="_blank" rel="noopener noreferrer" title="Orgpedia Official Website">
+        <a class="header-nav-link" href="https://indicgovbench.orgpedia.in" target="_blank" rel="noopener noreferrer" title="Orgpedia Official Website">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -150,11 +111,17 @@
           </svg>
           <span>HuggingFace</span>
         </a>
+        <a class="header-nav-link" href="https://arxiv.org" target="_blank" rel="noopener noreferrer" title="arXiv Preprint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#B31B1B">
+            <path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/>
+          </svg>
+          <span>arXiv</span>
+        </a>
       </div>
     </header>
 
     <!-- Main Content Root -->
-    <main class="summary-container" id="landing-page-root" style="padding-bottom: 60px;">
+    <main class="summary-container" id="landing-page-root" style="padding-bottom: 40px;">
       
       <!-- 1. Hero & Economics Overview -->
       <section class="landing-section" id="section-overview">
@@ -162,34 +129,24 @@
           <div>
             <div style="display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;">
               <span class="tag-badge" style="background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; font-weight:500;">Economics &amp; Methodology</span>
-              <span class="tag-badge" style="background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; font-weight:500;">13 Models Evaluated</span>
-              <span class="tag-badge" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; font-weight:600;">Audited: October 10, 2026</span>
+              <span class="tag-badge" id="pricing-badge-models" style="background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; font-weight:500;">15 Models Evaluated</span>
+              <span class="tag-badge" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe; font-weight:600;">Audited Rate Cards</span>
             </div>
             <h1 style="font-size:25px; font-weight:800; color:#111827; letter-spacing:-0.02em; line-height:1.25; margin:0 0 10px 0;">
               Model Implementation Approaches &amp; Pricing Details
             </h1>
             <div class="landing-abstract-container" style="max-width:920px; margin:0 0 14px 0;">
-              <p class="landing-abstract" style="margin:0 0 8px 0;">
-                Document processing costs vary widely—from fractions of a paisa per page for open-source OCR tools running on cloud GPUs, to several rupees per page for commercial Vision-Language Models. This guide details <strong>how each model was run</strong>, its <strong>official vendor price</strong>, the <strong>actual measured cost per page</strong>, and <strong>links to official pricing sources</strong> for every model tested in <strong>IndicGovBench-Orders</strong>.
+              <p class="landing-abstract" style="margin:0;">
+                Official vendor rate cards and empirical per-page processing costs measured across all <strong>300 verified government orders</strong> in <strong>IndicGovBench-Orders</strong>. Models with Batch API support provide a 50% discount; commercial OCR APIs charge per page; open-weights and classical OCR models run on serverless cloud hardware (Modal.com).
               </p>
             </div>
-          </div>
-
-          <!-- Section Jump Navigation Pills -->
-          <div class="landing-nav-pills" style="margin-top:14px; border-top:1px solid #e5e7eb; padding-top:12px;">
-            <a class="landing-nav-pill" href="#section-summary-table">Master Rate Card</a>
-            <a class="landing-nav-pill" href="#section-vlms">Multimodal VLMs</a>
-            <a class="landing-nav-pill" href="#section-commercial-ocr">Document AI APIs</a>
-            <a class="landing-nav-pill" href="#section-compute">Serverless Compute (Modal)</a>
-            <a class="landing-nav-pill" href="#section-open-source">Local &amp; Open-Source</a>
-            <a class="landing-nav-pill" href="#section-formulas">How Costs Are Calculated</a>
           </div>
         </div>
       </section>
 
       <!-- 2. Core Assumptions Banner -->
       <section class="landing-section" id="section-principles" style="margin-top: 6px;">
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
           <div class="pricing-stat-box" style="border-left: 3px solid #2563eb;">
             <div class="pricing-stat-label">Exchange Rate</div>
             <div class="pricing-stat-value">$1 USD = ₹100.00</div>
@@ -198,45 +155,50 @@
 
           <div class="pricing-stat-box" style="border-left: 3px solid #059669;">
             <div class="pricing-stat-label">Real Documents Tested</div>
-            <div class="pricing-stat-value">270 Government Orders</div>
-            <div class="pricing-stat-sub">Costs shown are the actual average per page, measured by running all 270 scanned documents in the benchmark.</div>
+            <div class="pricing-stat-value" id="stat-tested-docs">300 Government Orders</div>
+            <div class="pricing-stat-sub">Costs shown are the empirical average per page measured across the verified benchmark corpus.</div>
           </div>
 
           <div class="pricing-stat-box" style="border-left: 3px solid #8b5cf6;">
-            <div class="pricing-stat-label">Prices Last Verified</div>
-            <div class="pricing-stat-value">October 10, 2026</div>
-            <div class="pricing-stat-sub">Checked directly against official provider pricing pages and models.dev.</div>
+            <div class="pricing-stat-label">Billing Alignment</div>
+            <div class="pricing-stat-value">Realtime &amp; Batch (50% Off)</div>
+            <div class="pricing-stat-sub">Synchronized with live benchmark database (<code style="font-family:var(--font-mono); font-size:11.5px;">benchmark.db</code>) and models.dev.</div>
+          </div>
+
+          <div class="pricing-stat-box" style="border-left: 3px solid #ea580c;">
+            <div class="pricing-stat-label">Open-Source Models</div>
+            <div class="pricing-stat-value">Time Spent on Modal</div>
+            <div class="pricing-stat-sub">Pricing for open-source and open-weights models is computed based on actual compute time spent on Modal.com.</div>
           </div>
         </div>
       </section>
 
-      <!-- 3. Streamlined Master Rate Card Table (Compact, Fits Screen Width) -->
-      <section class="landing-section" id="section-summary-table">
+      <!-- 3. Master Pricing Rate Card Table (Clean, Fits Screen Width, No Lower Calculations) -->
+      <section class="landing-section" id="section-summary-table" style="margin-top: 24px;">
         <div class="landing-section-header">
           <div>
             <div class="landing-section-title"><a href="#section-summary-table" class="section-title-link">Master Pricing &amp; Implementation Rate Card</a></div>
             <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Comparison of all 13 benchmarked models. Rates audited as of October 10, 2026 ($1 = ₹100).
+              Comparison of all 15 benchmarked models. Rates audited at $1 USD = ₹100.00.
             </div>
           </div>
         </div>
 
         <div class="benchmark-table-wrapper" style="box-shadow:none;">
-          <table class="benchmark-table compact-table">
+          <table class="benchmark-table compact-table" id="master-pricing-table">
             <thead>
               <tr>
                 <th style="width:30px; text-align:right;">#</th>
                 <th style="width:200px;">Model &amp; Provider</th>
-                <th style="width:210px;">Implementation Approach</th>
-                <th style="width:230px;">Vendor Rate Card</th>
-                <th class="numeric" style="width:130px;">Cost (₹ / page)</th>
+                <th style="width:220px;">Implementation Approach</th>
+                <th style="width:240px;">Vendor Rate Card</th>
+                <th class="numeric" style="width:170px;">Cost (₹ / page)</th>
                 <th style="width:120px;">Source Link</th>
               </tr>
             </thead>
-            <tbody>
-              <!-- Group 1: Proprietary Multimodal VLMs -->
+            <tbody id="pricing-table-body">
               <tr class="group-header-row" style="background:#f8fafc; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                <td colspan="6" style="padding:6px 10px; color:#111827; font-size:12px;">I. Proprietary Multimodal Vision-Language Models</td>
+                <td colspan="6" style="padding:7px 10px; color:#111827; font-size:12px;">I. Proprietary Multimodal Vision-Language Models (VLMs)</td>
               </tr>
               <tr>
                 <td class="numeric" style="color:#6b7280;">1</td>
@@ -245,166 +207,204 @@
                   <span style="font-size:11px; color:#6b7280;">Google · VLM</span>
                 </td>
                 <td>
-                  <code>google-genai</code> SDK<br>
+                  <code>google-genai SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">generate_content (image input)</span>
                 </td>
                 <td>
                   $2.00 in / $12.00 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹2.04</strong>
+                  <strong>₹2.09</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹1.05 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: google/gemini-3.1-pro-preview">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: google/gemini-3.1-pro-preview">models.dev ↗</a>
                 </td>
               </tr>
               <tr>
                 <td class="numeric" style="color:#6b7280;">2</td>
                 <td>
+                  <strong>GPT-6.1 Sol</strong><br>
+                  <span style="font-size:11px; color:#6b7280;">OpenAI · VLM</span>
+                </td>
+                <td>
+                  <code>openai SDK</code><br>
+                  <span style="font-size:11px; color:#6b7280;">Chat Completions (Base64)</span>
+                </td>
+                <td>
+                  $4.00 in / $20.00 out (per 1M tokens)
+                </td>
+                <td class="numeric">
+                  <strong>₹4.86</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹2.43 batch (50% off)</span>
+                </td>
+                <td>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: openai/gpt-6.1-sol">models.dev ↗</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="numeric" style="color:#6b7280;">3</td>
+                <td>
                   <strong>GPT-5.6 Terra</strong><br>
                   <span style="font-size:11px; color:#6b7280;">OpenAI · VLM</span>
                 </td>
                 <td>
-                  <code>openai</code> SDK<br>
+                  <code>openai SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">Chat Completions (Base64)</span>
                 </td>
                 <td>
                   $2.00 in / $12.00 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹4.12</strong>
+                  <strong>₹4.02</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹2.01 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: openai/gpt-5.6-terra">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: openai/gpt-5.6-terra">models.dev ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">3</td>
+                <td class="numeric" style="color:#6b7280;">4</td>
                 <td>
                   <strong>Gemini 3.8 Flash</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Google · VLM</span>
                 </td>
                 <td>
-                  <code>google-genai</code> SDK<br>
+                  <code>google-genai SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">generate_content (image input)</span>
                 </td>
                 <td>
                   $0.75 in / $3.75 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹0.56</strong>
+                  <strong>₹0.57</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.29 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: google/gemini-3.8-flash">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: google/gemini-3.8-flash">models.dev ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">4</td>
+                <td class="numeric" style="color:#6b7280;">5</td>
                 <td>
                   <strong>Claude Sonnet 5.5</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Anthropic · VLM</span>
                 </td>
                 <td>
-                  <code>anthropic</code> SDK<br>
+                  <code>anthropic SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">Messages API (Base64)</span>
                 </td>
                 <td>
                   $2.00 in / $10.00 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹2.81</strong>
+                  <strong>₹2.87</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹1.44 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: anthropic/claude-sonnet-5-5">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: anthropic/claude-sonnet-5-5">models.dev ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">5</td>
+                <td class="numeric" style="color:#6b7280;">6</td>
+                <td>
+                  <strong>GPT-6 Luna</strong><br>
+                  <span style="font-size:11px; color:#6b7280;">OpenAI · VLM</span>
+                </td>
+                <td>
+                  <code>openai SDK</code><br>
+                  <span style="font-size:11px; color:#6b7280;">Chat Completions (Base64)</span>
+                </td>
+                <td>
+                  $0.10 in / $0.50 out (per 1M tokens)
+                </td>
+                <td class="numeric">
+                  <strong>₹0.18</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.09 batch (50% off)</span>
+                </td>
+                <td>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: openai/gpt-6-luna">models.dev ↗</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="numeric" style="color:#6b7280;">7</td>
                 <td>
                   <strong>Gemini 3.5 Flash-Lite</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Google · VLM</span>
                 </td>
                 <td>
-                  <code>google-genai</code> SDK<br>
+                  <code>google-genai SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">generate_content (image input)</span>
                 </td>
                 <td>
                   $0.30 in / $2.50 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹0.39</strong>
+                  <strong>₹0.40</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.20 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: google/gemini-3.5-flash-lite">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: google/gemini-3.5-flash-lite">models.dev ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">6</td>
+                <td class="numeric" style="color:#6b7280;">8</td>
                 <td>
                   <strong>GPT-5.6 Luna</strong><br>
                   <span style="font-size:11px; color:#6b7280;">OpenAI · VLM</span>
                 </td>
                 <td>
-                  <code>openai</code> SDK<br>
+                  <code>openai SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">Chat Completions (Base64)</span>
                 </td>
                 <td>
                   $0.20 in / $1.20 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹0.34</strong>
+                  <strong>₹0.34</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.17 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: openai/gpt-5.6-luna">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: openai/gpt-5.6-luna">models.dev ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">7</td>
+                <td class="numeric" style="color:#6b7280;">9</td>
                 <td>
                   <strong>Claude Haiku 4.5</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Anthropic · VLM</span>
                 </td>
                 <td>
-                  <code>anthropic</code> SDK<br>
+                  <code>anthropic SDK</code><br>
                   <span style="font-size:11px; color:#6b7280;">Messages API (Base64)</span>
                 </td>
                 <td>
                   $1.00 in / $5.00 out (per 1M tokens)
                 </td>
                 <td class="numeric">
-                  <strong>₹1.04</strong>
+                  <strong>₹1.06</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.53 batch (50% off)</span>
                 </td>
                 <td>
-                  <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link" title="models.dev ID: anthropic/claude-haiku-4-5">models.dev ↗</a>
+                  <a href="https://models.dev" target="_blank" rel="noopener noreferrer" class="source-badge-link source-modelsdev-link" title="models.dev ID: anthropic/claude-haiku-4-5">models.dev ↗</a>
                 </td>
               </tr>
-
-              <!-- Group 2: Commercial Document AI APIs -->
               <tr class="group-header-row" style="background:#f8fafc; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                <td colspan="6" style="padding:6px 10px; color:#111827; font-size:12px;">II. Commercial Document AI &amp; OCR APIs</td>
+                <td colspan="6" style="padding:7px 10px; color:#111827; font-size:12px;">II. Commercial Document AI &amp; OCR APIs</td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">8</td>
+                <td class="numeric" style="color:#6b7280;">10</td>
                 <td>
                   <strong>Mistral OCR</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Mistral AI · Doc AI</span>
                 </td>
                 <td>
-                  <code>httpx</code> HTTP Client<br>
+                  <code>httpx HTTP Client</code><br>
                   <span style="font-size:11px; color:#6b7280;">POST /v1/ocr (multipart)</span>
                 </td>
                 <td>
-                  $0.0040 / page
+                  $0.0040 / page ($4.00 / 1K pages)
                 </td>
                 <td class="numeric">
-                  <strong>₹0.40</strong>
+                  <strong>₹0.40</strong><br><span style="font-size:11px; color:#6b7280;">flat rate</span>
                 </td>
                 <td>
-                  <a href="https://docs.mistral.ai/inference/pricing" target="_blank" class="source-badge-link source-live-link">Live Docs ↗</a>
+                  <a href="https://docs.mistral.ai/inference/pricing" target="_blank" rel="noopener noreferrer" class="source-badge-link source-live-link" title="Mistral OCR Pricing">Live Docs ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">9</td>
+                <td class="numeric" style="color:#6b7280;">11</td>
                 <td>
                   <strong>Marker API</strong><br>
                   <span style="font-size:11px; color:#6b7280;">DataLab · Doc AI</span>
@@ -414,432 +414,133 @@
                   <span style="font-size:11px; color:#6b7280;">Document parsing API</span>
                 </td>
                 <td>
-                  $0.0040 / page
+                  $0.0040 / page ($4.00 / 1K pages)
                 </td>
                 <td class="numeric">
-                  <strong>₹0.40</strong>
+                  <strong>₹0.40</strong><br><span style="font-size:11px; color:#6b7280;">flat rate</span>
                 </td>
                 <td>
-                  <a href="https://www.datalab.to/pricing" target="_blank" class="source-badge-link source-live-link">Live Docs ↗</a>
+                  <a href="https://www.datalab.to/pricing" target="_blank" rel="noopener noreferrer" class="source-badge-link source-live-link" title="Marker API Pricing">Live Docs ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">10</td>
+                <td class="numeric" style="color:#6b7280;">12</td>
                 <td>
                   <strong>Sarvam Vision API</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Sarvam AI · Indic VLM</span>
                 </td>
                 <td>
-                  <code>sarvamai</code> / HTTP<br>
+                  <code>sarvamai / HTTP</code><br>
                   <span style="font-size:11px; color:#6b7280;">POST /document-digitisation</span>
                 </td>
                 <td>
                   ₹1.25 / page (Native INR)
                 </td>
                 <td class="numeric">
-                  <strong>₹1.25</strong>
+                  <strong>₹1.25</strong><br><span style="font-size:11px; color:#6b7280;">flat rate</span>
                 </td>
                 <td>
-                  <a href="https://www.sarvam.ai/apis/document-digitisation" target="_blank" class="source-badge-link source-live-link">Live Docs ↗</a>
+                  <a href="https://www.sarvam.ai/apis/document-digitisation" target="_blank" rel="noopener noreferrer" class="source-badge-link source-live-link" title="Sarvam Digitisation Pricing">Live Docs ↗</a>
                 </td>
               </tr>
-
-              <!-- Group 3: Serverless Hardware Compute on Modal.com -->
               <tr class="group-header-row" style="background:#f8fafc; font-weight:700; border-top:1.5px solid #111827; border-bottom:1px solid #111827;">
-                <td colspan="6" style="padding:6px 10px; color:#111827; font-size:12px;">III. Serverless Hardware Execution on Modal.com</td>
+                <td colspan="6" style="padding:7px 10px; color:#111827; font-size:12px;">III. Serverless Hardware Execution on Modal.com</td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">11</td>
+                <td class="numeric" style="color:#6b7280;">13</td>
                 <td>
                   <strong>Qwen3-VL-8B</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Modal GPU · Open Weights</span>
                 </td>
                 <td>
-                  <code>modal</code> Serverless<br>
-                  <span style="font-size:11px; color:#6b7280;">NVIDIA L4 + 4 cores + 16GB</span>
-                </td>
-                <td>
-                  $0.80 / hr (~$0.000222 / sec)
-                </td>
-                <td class="numeric">
-                  <strong>₹0.81</strong>
-                </td>
-                <td>
-                  <a href="https://modal.com/pricing" target="_blank" class="source-badge-link source-live-link">Modal Pricing ↗</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="numeric" style="color:#6b7280;">12</td>
-                <td>
-                  <strong>PaddleOCR v4 (HPD)</strong><br>
-                  <span style="font-size:11px; color:#6b7280;">Modal GPU · Open Source</span>
-                </td>
-                <td>
-                  <code>modal</code> Serverless<br>
+                  <code>modal Serverless</code><br>
                   <span style="font-size:11px; color:#6b7280;">NVIDIA H100 + 4 cores + 16GB</span>
                 </td>
                 <td>
                   $4.76 / hr (~$0.001322 / sec)
                 </td>
                 <td class="numeric">
-                  <strong>₹0.49</strong>
+                  <strong>₹0.87</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.44 amortized batch</span>
                 </td>
                 <td>
-                  <a href="https://modal.com/pricing" target="_blank" class="source-badge-link source-live-link">Modal Pricing ↗</a>
+                  <a href="https://modal.com/pricing" target="_blank" rel="noopener noreferrer" class="source-badge-link source-live-link" title="Modal GPU Pricing">Modal Pricing ↗</a>
                 </td>
               </tr>
               <tr>
-                <td class="numeric" style="color:#6b7280;">13</td>
+                <td class="numeric" style="color:#6b7280;">14</td>
+                <td>
+                  <strong>PaddleOCR v4 (HPD)</strong><br>
+                  <span style="font-size:11px; color:#6b7280;">Modal GPU · Open Source</span>
+                </td>
+                <td>
+                  <code>modal Serverless</code><br>
+                  <span style="font-size:11px; color:#6b7280;">NVIDIA H100 + 4 cores + 16GB</span>
+                </td>
+                <td>
+                  $4.76 / hr (~$0.001322 / sec)
+                </td>
+                <td class="numeric">
+                  <strong>₹0.59</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.30 amortized batch</span>
+                </td>
+                <td>
+                  <a href="https://modal.com/pricing" target="_blank" rel="noopener noreferrer" class="source-badge-link source-live-link" title="Modal GPU Pricing">Modal Pricing ↗</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="numeric" style="color:#6b7280;">15</td>
                 <td>
                   <strong>Tesseract 5.3</strong><br>
                   <span style="font-size:11px; color:#6b7280;">Modal CPU · Open Source</span>
                 </td>
                 <td>
-                  <code>modal</code> Serverless<br>
+                  <code>modal Serverless</code><br>
                   <span style="font-size:11px; color:#6b7280;">8 CPU cores + 8GB RAM</span>
                 </td>
                 <td>
-                  ~$0.05 / core-hr (~7.3s CPU / page)
+                  ~$0.05 / core-hr + $0.008 / GiB-hr
                 </td>
                 <td class="numeric">
-                  <strong>₹0.03</strong>
+                  <strong>₹0.03</strong><br><span style="font-size:11px; color:#059669; font-weight:600;">₹0.02 amortized batch</span>
                 </td>
                 <td>
-                  <a href="https://modal.com/pricing" target="_blank" class="source-badge-link source-live-link">Modal Pricing ↗</a>
+                  <a href="https://modal.com/pricing" target="_blank" rel="noopener noreferrer" class="source-badge-link source-live-link" title="Modal CPU Pricing">Modal Pricing ↗</a>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-      </section>
 
-      <!-- 4. Detailed Provider Deep-Dives -->
-      <section class="landing-section" id="section-vlms" style="margin-top: 32px;">
-        <div class="landing-section-header">
-          <div>
-            <div class="landing-section-title"><a href="#section-vlms" class="section-title-link">1. Multimodal Vision-Language Models</a></div>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Billed on input and output tokens. Scanned document pages are segmented into visual image tiles, consuming 250–2,000 prompt tokens per page.
-            </div>
-          </div>
-        </div>
-
-        <!-- Google Gemini Family Card -->
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <h3 style="font-size:16px; font-weight:700; color:#111827; margin:0;">Google Gemini Family (3.1 Pro · 3.8 Flash · 3.5 Flash-Lite)</h3>
-                <span class="tag-badge" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe;">Google GenAI SDK</span>
-              </div>
-              <div style="font-size:12px; color:#6b7280; margin-top:4px;">
-                Direct image input via <code>client.models.generate_content</code> using structured system prompts requesting markdown tables and full transcription.
-              </div>
-            </div>
-            <div style="display:flex; gap:6px;">
-              <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link">models.dev Rates ↗</a>
-              <a href="https://ai.google.dev/pricing" target="_blank" class="source-badge-link source-live-link">Google Pricing Docs ↗</a>
-            </div>
-          </div>
-
-          <div class="pricing-grid">
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">Gemini 3.1 Pro Rate Card</div>
-              <div class="pricing-stat-value">$2.00 in / $12.00 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹2.04 / page</strong></div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">Gemini 3.8 Flash Rate Card</div>
-              <div class="pricing-stat-value">$0.75 in / $3.75 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹0.56 / page</strong></div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">Gemini 3.5 Flash-Lite Rate Card</div>
-              <div class="pricing-stat-value">$0.30 in / $2.50 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹0.39 / page</strong></div>
-            </div>
-          </div>
-
-          <div style="font-size:12px; color:#374151; margin-bottom:6px;">
-            <strong>Cost Calculation (INR):</strong>
-          </div>
-          <div class="formula-code-box">
-Cost (₹) = ((prompt_tokens / 1,000,000) * input_rate_1m + (completion_tokens / 1,000,000) * output_rate_1m) * 100.00
-          </div>
-          <div style="font-size:12px; color:#6b7280; margin-top:6px;">
-            <em>Image Tokenization:</em> Gemini decomposes document pages into 768×768 pixel tiles (~258 tokens per tile). Standard A4 government orders scanned at 300 DPI consume approximately 1,032–1,290 input image tokens plus prompt overhead.
-          </div>
-        </div>
-
-        <!-- OpenAI GPT Family Card -->
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <h3 style="font-size:16px; font-weight:700; color:#111827; margin:0;">OpenAI GPT Family (GPT-5.6 Terra · GPT-5.6 Luna)</h3>
-                <span class="tag-badge" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe;">openai Python SDK</span>
-              </div>
-              <div style="font-size:12px; color:#6b7280; margin-top:4px;">
-                Inference via <code>client.chat.completions.create</code> with base64 data URLs in high-resolution mode.
-              </div>
-            </div>
-            <div style="display:flex; gap:6px;">
-              <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link">models.dev Rates ↗</a>
-              <a href="https://openai.com/api/pricing/" target="_blank" class="source-badge-link source-live-link">OpenAI Pricing Docs ↗</a>
-            </div>
-          </div>
-
-          <div class="pricing-grid">
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">GPT-5.6 Terra Rate Card</div>
-              <div class="pricing-stat-value">$2.00 in / $12.00 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹4.12 / page</strong></div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">GPT-5.6 Luna Rate Card</div>
-              <div class="pricing-stat-value">$0.20 in / $1.20 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹0.34 / page</strong></div>
-            </div>
-          </div>
-
-          <div style="font-size:12px; color:#374151; margin-bottom:6px;">
-            <strong>Cost Calculation (INR):</strong>
-          </div>
-          <div class="formula-code-box">
-Cost (₹) = ((prompt_tokens / 1,000,000) * input_rate_1m + (completion_tokens / 1,000,000) * output_rate_1m) * 100.00
-          </div>
-        </div>
-
-        <!-- Anthropic Claude Family Card -->
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <h3 style="font-size:16px; font-weight:700; color:#111827; margin:0;">Anthropic Claude Family (Claude Sonnet 5.5 · Claude Haiku 4.5)</h3>
-                <span class="tag-badge" style="background:#eff6ff; color:#1e40af; border:1px solid #bfdbfe;">anthropic Python SDK</span>
-              </div>
-              <div style="font-size:12px; color:#6b7280; margin-top:4px;">
-                Inference via <code>client.messages.create</code> with base64 image data blocks.
-              </div>
-            </div>
-            <div style="display:flex; gap:6px;">
-              <a href="https://models.dev" target="_blank" class="source-badge-link source-modelsdev-link">models.dev Rates ↗</a>
-              <a href="https://www.anthropic.com/pricing" target="_blank" class="source-badge-link source-live-link">Anthropic Pricing ↗</a>
-            </div>
-          </div>
-
-          <div class="pricing-grid">
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">Claude Sonnet 5.5 Rate Card</div>
-              <div class="pricing-stat-value">$2.00 in / $10.00 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹2.81 / page</strong></div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">Claude Haiku 4.5 Rate Card</div>
-              <div class="pricing-stat-value">$1.00 in / $5.00 out (per 1M)</div>
-              <div class="pricing-stat-sub">Measured Cost: <strong>₹1.04 / page</strong></div>
-            </div>
-          </div>
-
-          <div class="formula-code-box">
-Cost (₹) = ((prompt_tokens / 1,000,000) * input_rate_1m + (completion_tokens / 1,000,000) * output_rate_1m) * 100.00
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2: Commercial Document AI APIs -->
-      <section class="landing-section" id="section-commercial-ocr" style="margin-top: 32px;">
-        <div class="landing-section-header">
-          <div>
-            <div class="landing-section-title"><a href="#section-commercial-ocr" class="section-title-link">2. Commercial Document AI &amp; OCR APIs</a></div>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Billed at a flat rate per document page regardless of token count or text density.
-            </div>
-          </div>
-        </div>
-
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px;">
-          <!-- Sarvam AI Card -->
-          <div class="pricing-card" style="margin-bottom:0;">
-            <div class="pricing-card-header">
-              <div>
-                <h4 style="font-size:15px; font-weight:700; color:#111827; margin:0;">Sarvam AI Document Parser</h4>
-                <div style="font-size:12px; color:#6b7280; margin-top:2px;">Billed natively in Indian Rupees (INR)</div>
-              </div>
-              <a href="https://www.sarvam.ai/apis/document-digitisation" target="_blank" class="source-badge-link source-live-link">Live Docs ↗</a>
-            </div>
-            <div class="pricing-stat-box" style="margin-bottom:10px;">
-              <div class="pricing-stat-label">Rate Card</div>
-              <div class="pricing-stat-value">₹1.25 / page</div>
-              <div class="pricing-stat-sub">Implementation: <code>sarvamai</code> SDK / HTTP POST to <code>/document-digitisation</code></div>
-            </div>
-            <div class="formula-code-box">
-Cost (₹) = pages_processed * 1.25
-            </div>
-          </div>
-
-          <!-- Mistral OCR Card -->
-          <div class="pricing-card" style="margin-bottom:0;">
-            <div class="pricing-card-header">
-              <div>
-                <h4 style="font-size:15px; font-weight:700; color:#111827; margin:0;">Mistral OCR</h4>
-                <div style="font-size:12px; color:#6b7280; margin-top:2px;">Document OCR endpoint (USD billing)</div>
-              </div>
-              <a href="https://docs.mistral.ai/inference/pricing" target="_blank" class="source-badge-link source-live-link">Live Docs ↗</a>
-            </div>
-            <div class="pricing-stat-box" style="margin-bottom:10px;">
-              <div class="pricing-stat-label">Rate Card</div>
-              <div class="pricing-stat-value">$0.0040 / page (₹0.40 / page)</div>
-              <div class="pricing-stat-sub">Implementation: <code>httpx</code> POST to <code>https://api.mistral.ai/v1/ocr</code></div>
-            </div>
-            <div class="formula-code-box">
-Cost (₹) = (pages_processed * 0.0040) * 100.00
-            </div>
-          </div>
-
-          <!-- DataLab Marker API Card -->
-          <div class="pricing-card" style="margin-bottom:0;">
-            <div class="pricing-card-header">
-              <div>
-                <h4 style="font-size:15px; font-weight:700; color:#111827; margin:0;">DataLab Marker API</h4>
-                <div style="font-size:12px; color:#6b7280; margin-top:2px;">Marker Cloud Document API (USD billing)</div>
-              </div>
-              <a href="https://www.datalab.to/pricing" target="_blank" class="source-badge-link source-live-link">Live Docs ↗</a>
-            </div>
-            <div class="pricing-stat-box" style="margin-bottom:10px;">
-              <div class="pricing-stat-label">Rate Card</div>
-              <div class="pricing-stat-value">$0.0040 / page (₹0.40 / page)</div>
-              <div class="pricing-stat-sub">Implementation: <code>datalab-python-sdk</code> client</div>
-            </div>
-            <div class="formula-code-box">
-Cost (₹) = (pages_processed * 0.0040) * 100.00
-            </div>
-          </div>
-
-          <!-- Google Cloud Vision Card -->
-          <div class="pricing-card" style="margin-bottom:0;">
-            <div class="pricing-card-header">
-              <div>
-                <h4 style="font-size:15px; font-weight:700; color:#111827; margin:0;">Google Cloud Vision (GCV)</h4>
-                <div style="font-size:12px; color:#6b7280; margin-top:2px;">Document Text Detection (USD billing)</div>
-              </div>
-              <a href="https://cloud.google.com/vision/pricing" target="_blank" class="source-badge-link source-live-link">GCV Pricing ↗</a>
-            </div>
-            <div class="pricing-stat-box" style="margin-bottom:10px;">
-              <div class="pricing-stat-label">Rate Card</div>
-              <div class="pricing-stat-value">$0.0015 / page (₹0.15 / page)</div>
-              <div class="pricing-stat-sub">Implementation: <code>google-cloud-vision</code> <code>ImageAnnotatorClient</code></div>
-            </div>
-            <div class="formula-code-box">
-Cost (₹) = (pages_processed * 0.0015) * 100.00
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 3: Serverless Compute on Modal.com -->
-      <section class="landing-section" id="section-compute" style="margin-top: 32px;">
-        <div class="landing-section-header">
-          <div>
-            <div class="landing-section-title"><a href="#section-compute" class="section-title-link">3. Serverless Compute Execution on Modal.com</a></div>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Open-weights and classical OCR models deployed as serverless functions on Modal.com cloud infrastructure. Billed strictly per second of hardware execution.
-            </div>
-          </div>
-          <a href="https://modal.com/pricing" target="_blank" class="btn-tool" style="font-size:12px; padding:3px 10px; text-decoration:none;">
-            Modal.com Pricing Card ↗
-          </a>
-        </div>
-
-        <div class="pricing-card">
-          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom:14px;">
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">NVIDIA H100 GPU</div>
-              <div class="pricing-stat-value">$4.76 / hr</div>
-              <div class="pricing-stat-sub">PaddleOCR HPD-Parsing</div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">NVIDIA L4 GPU</div>
-              <div class="pricing-stat-value">$0.80 / hr</div>
-              <div class="pricing-stat-sub">Qwen3-VL-8B-Instruct</div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">CPU Core Second</div>
-              <div class="pricing-stat-value">~$0.05 / core-hr</div>
-              <div class="pricing-stat-sub">8-core Tesseract OCR</div>
-            </div>
-            <div class="pricing-stat-box">
-              <div class="pricing-stat-label">Memory Allocation</div>
-              <div class="pricing-stat-value">~$0.008 / GiB-hr</div>
-              <div class="pricing-stat-sub">8–16 GiB reserved RAM</div>
-            </div>
-          </div>
-
-          <div style="font-size:12px; color:#374151; margin-bottom:6px;">
-            <strong>Hardware Cost Formula:</strong>
-          </div>
-          <div class="formula-code-box">
-Cost (₹) = ((gpu_seconds * gpu_rate) + (cpu_seconds * cpu_rate) + (ram_seconds * ram_rate)) * 100.00
-          </div>
-
-          <div style="font-size:12px; color:#6b7280; margin-top:8px;">
-            <em>Measured Benchmark Averages:</em> Qwen3-VL-8B averaged <strong>₹0.81 / page</strong>, PaddleOCR v4 on H100 averaged <strong>₹0.49 / page</strong>, and Tesseract on 8-core CPU averaged <strong>₹0.03 / page</strong>.
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4: Local & Free Open Source -->
-      <section class="landing-section" id="section-open-source" style="margin-top: 32px;">
-        <div class="landing-section-header">
-          <div>
-            <div class="landing-section-title"><a href="#section-open-source" class="section-title-link">4. Local &amp; Self-Hosted Open-Source</a></div>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Fully offline execution on self-hosted hardware with zero licensing or API charges.
-            </div>
-          </div>
-        </div>
-
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px;">
-          <div class="pricing-card" style="margin-bottom:0;">
-            <h4 style="font-size:15px; font-weight:700; color:#111827; margin:0 0 4px 0;">PaddleOCR (Local)</h4>
-            <div style="font-size:12px; color:#6b7280; margin-bottom:10px;">Ultra-lightweight multi-lingual OCR library</div>
-            <div class="pricing-stat-box" style="margin-bottom:10px;">
-              <div class="pricing-stat-label">API / License Cost</div>
-              <div class="pricing-stat-value">₹0.00 · Free &amp; Open Source (Apache 2.0)</div>
-              <div class="pricing-stat-sub">Hardware: Local workstation / self-hosted CPU/GPU</div>
-            </div>
-            <a href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank" class="source-badge-link source-live-link">GitHub Repository ↗</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 5: How Costs Are Calculated -->
-      <section class="landing-section" id="section-formulas" style="margin-top: 32px;">
-        <div class="landing-section-header">
-          <div>
-            <div class="landing-section-title"><a href="#section-formulas" class="section-title-link">5. How Costs Are Calculated from Actual Runs</a></div>
-            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-              Formulas implemented in <code>src/indic_gov_bench/eval/pricing_registry.py</code>.
-            </div>
-          </div>
-        </div>
-
-        <div class="info-callout-box">
-          <div style="font-size:13px; line-height:1.6; color:#111827;">
-            <strong>Tracking Actual Usage:</strong> Usage is recorded directly from the model output during each test run:
-          </div>
-          <ul style="font-size:12.5px; color:#4b5563; line-height:1.7; margin:6px 0 10px 20px;">
-            <li><strong>AI / Token Models (Gemini, OpenAI, Claude):</strong> Tracked using the exact input and output token counts returned by the model API.</li>
-            <li><strong>Document OCR APIs (Sarvam, Mistral, Datalab):</strong> Billed by the number of document pages processed.</li>
-            <li><strong>Cloud GPU / Serverless (Modal):</strong> Billed by the exact GPU run time (in seconds) and CPU/memory used.</li>
-          </ul>
-          <div style="font-size:12px; color:#6b7280;">
-            Code implementation: <a href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" style="color:#2563eb; text-decoration:underline;"><code>src/indic_gov_bench/eval/pricing_registry.py</code></a>.
-          </div>
+        <div style="font-size:12px; color:#6b7280; margin-top:12px; line-height:1.5;">
+          * Note: Proprietary VLMs (OpenAI, Gemini, Claude) support 50% discount asynchronous Batch API processing. Commercial OCR APIs charge flat per-page rates. Open-weights (Qwen3-VL-8B) and open-source models (PaddleOCR v4, Tesseract 5.3) are executed serverless on cloud hardware via Modal.com.
         </div>
       </section>
 
     </main>
   </div>
+
+  <script type="module">
+    // Optional live refresh from /api/leaderboard if served via live server
+    async function refreshPricingIfLive() {
+      try {
+        const resp = await fetch('/api/leaderboard?run=default');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const providers = data?.providers;
+        if (!providers || providers.length === 0) return;
+
+        const testedDocsEl = document.getElementById('stat-tested-docs');
+        const badgeModelsEl = document.getElementById('pricing-badge-models');
+        if (data.strata?.totals?.total && testedDocsEl) {
+          testedDocsEl.textContent = `${data.strata.totals.total} Government Orders`;
+        }
+        if (providers.length && badgeModelsEl) {
+          badgeModelsEl.textContent = `${providers.length} Models Evaluated`;
+        }
+      } catch (e) {
+        // Static pre-rendered fallback is already 100% complete
+      }
+    }
+    refreshPricingIfLive();
+  </script>
 </body>
 </html>

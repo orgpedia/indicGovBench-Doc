@@ -213,8 +213,8 @@ export class OverviewView {
 
       if (isExcluded || isUncertain) {
         const chipHtml = isExcluded
-          ? `<span class="chip" style="background:rgba(239,68,68,0.2); color:#f87171; font-size:10px; font-weight:700;">🚫 Excluded · ${escapeHtml(b.reason || 'non-target')}</span>`
-          : `<span class="chip" style="background:rgba(245,158,11,0.2); color:#fbbf24; font-size:10px; font-weight:700;">❓ Uncertain · ${escapeHtml(b.reason || 'illegible')}</span>`;
+          ? `<span class="chip" style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; font-size:10px; font-weight:700;">🚫 Excluded · ${escapeHtml(b.reason || 'non-target')}</span>`
+          : `<span class="chip" style="background:#fef3c7; color:#92400e; border:1px solid #fcd34d; font-size:10px; font-weight:700;">❓ Uncertain · ${escapeHtml(b.reason || 'illegible')}</span>`;
 
         const content = b.type === 'table'
           ? `<div class="rendered-table-wrapper" style="opacity:0.75;">${b.html || ''}</div>`
@@ -242,17 +242,17 @@ export class OverviewView {
 
         const badges = [];
         if (b.content) {
-          badges.push(`<span class="chip" style="background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3); font-size:10px; font-weight:600;" title="Content: ${escapeHtml(b.content)}">${getContentLabel(b.content)}</span>`);
+          badges.push(`<span class="chip" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; font-size:10px; font-weight:600;" title="Content: ${escapeHtml(b.content)}">${getContentLabel(b.content)}</span>`);
         }
         if (b.doc_category) {
-          badges.push(`<span class="chip" style="background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.3); font-size:10px; font-weight:600;" title="Category: ${escapeHtml(b.doc_category)}">${getDocCategoryLabel(b.doc_category)}</span>`);
+          badges.push(`<span class="chip" style="background:#f3e8ff; color:#6b21a8; border:1px solid #e9d5ff; font-size:10px; font-weight:600;" title="Category: ${escapeHtml(b.doc_category)}">${getDocCategoryLabel(b.doc_category)}</span>`);
         }
         const badgesHtml = badges.length ? `<span style="margin-left:6px; display:inline-flex; gap:4px;">${badges.join('')}</span>` : '';
 
         return `
           <div class="overview-block table-block" data-block-id="${item.id}" id="gt-block-${item.id}">
             <div class="text-faint" style="font-size:11px; margin-bottom:4px; display:flex; align-items:center; flex-wrap:wrap; gap:4px;">
-              <span class="chip" style="background:rgba(16,185,129,0.15); color:#059669; border:1px solid rgba(16,185,129,0.3); font-weight:700; font-size:10px;">📊 GT Table #${b.id + 1}</span>
+              <span class="chip" style="background:#dcfce7; color:#166534; border:1px solid #bbf7d0; font-weight:700; font-size:10px;">📊 GT Table #${b.id + 1}</span>
               <span>· 🎯 Reading #${(item.readingOrder ?? 0) + 1}</span>
               ${badgesHtml}
             </div>
@@ -265,10 +265,10 @@ export class OverviewView {
       const text = escapeHtml(b.text || '').replace(/\n/g, '<br>');
       const badges = [];
       if (b.content) {
-        badges.push(`<span class="chip" style="background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3); font-size:10px; font-weight:600;" title="Content: ${escapeHtml(b.content)}">${getContentLabel(b.content)}</span>`);
+        badges.push(`<span class="chip" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; font-size:10px; font-weight:600;" title="Content: ${escapeHtml(b.content)}">${getContentLabel(b.content)}</span>`);
       }
       if (b.doc_category) {
-        badges.push(`<span class="chip" style="background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.3); font-size:10px; font-weight:600;" title="Category: ${escapeHtml(b.doc_category)}">${getDocCategoryLabel(b.doc_category)}</span>`);
+        badges.push(`<span class="chip" style="background:#f3e8ff; color:#6b21a8; border:1px solid #e9d5ff; font-size:10px; font-weight:600;" title="Category: ${escapeHtml(b.doc_category)}">${getDocCategoryLabel(b.doc_category)}</span>`);
       }
       const badgesHtml = badges.length ? `<div style="display:flex; gap:6px; margin-bottom:4px;">${badges.join('')}</div>` : '';
 

@@ -14,8 +14,7 @@ class TestStudioPages(unittest.TestCase):
         self.assertIn("<svg", index_html)
         self.assertNotIn("[Official Site]", index_html)
         self.assertNotIn("[Github]", index_html)
-        self.assertIn("arXiv", index_html)
-        self.assertIn("https://arxiv.org", index_html)
+        self.assertIn("https://github.com/orgpedia/indicGovBench-Doc", index_html)
 
         # 2. Evaluation Run dropdown removed
         self.assertNotIn('id="run-select"', index_html)
@@ -44,11 +43,54 @@ class TestStudioPages(unittest.TestCase):
         # 8. Attribute-wise exploration static cards
         self.assertNotIn("If you would like to study", index_html)
         self.assertIn("Table Content &amp; Structural Elements", index_html)
-        self.assertIn("Authentication Artifacts", index_html)
-        self.assertIn("Capture Quality &amp; Degradations", index_html)
+        self.assertIn("Signatures, Stamps &amp; Logos", index_html)
+        self.assertIn("Scan Quality &amp; Imperfections", index_html)
         self.assertIn("has_tables", index_html)
         self.assertIn("scan_has_darkpatch", index_html)
-        self.assertIn("119 / 270", index_html)
+        self.assertIn("300", index_html)
+
+    def test_pricing_page_layout_and_models(self) -> None:
+        static_dir = Path(__file__).resolve().parent.parent / "web" / "studio" / "static"
+        pricing_html = (static_dir / "pricing.html").read_text(encoding="utf-8")
+
+        # 1. Back link and header
+        self.assertIn('href="index.html#section-results"', pricing_html)
+        self.assertIn("Pricing &amp; Rate Card", pricing_html)
+        self.assertIn("15 Models Evaluated", pricing_html)
+        self.assertIn("300 Government Orders", pricing_html)
+
+        # 2. All 15 models present in table
+        for model in [
+            "Gemini 3.1 Pro",
+            "GPT-6.1 Sol",
+            "GPT-5.6 Terra",
+            "Gemini 3.8 Flash",
+            "Claude Sonnet 5.5",
+            "GPT-6 Luna",
+            "Gemini 3.5 Flash-Lite",
+            "GPT-5.6 Luna",
+            "Claude Haiku 4.5",
+            "Mistral OCR",
+            "Marker API",
+            "Sarvam Vision API",
+            "Qwen3-VL-8B",
+            "PaddleOCR v4 (HPD)",
+            "Tesseract 5.3",
+        ]:
+            self.assertIn(model, pricing_html)
+
+        # 3. Streamlined: NO detailed calculations or deep dive cards below table
+        self.assertNotIn("1. Multimodal Vision-Language Models", pricing_html)
+        self.assertNotIn("Cost Calculation Formulas &amp; Worked Examples", pricing_html)
+        self.assertNotIn("formula-code-box", pricing_html)
+        self.assertNotIn("pricing-card", pricing_html)
+
+        # 4. 4 Core Assumption boxes including Modal compute
+        self.assertIn("Exchange Rate", pricing_html)
+        self.assertIn("Real Documents Tested", pricing_html)
+        self.assertIn("Billing Alignment", pricing_html)
+        self.assertIn("Open-Source Models", pricing_html)
+        self.assertIn("Time Spent on Modal", pricing_html)
 
     def test_attribute_catalog_and_set_i_order(self) -> None:
         import re
@@ -64,12 +106,14 @@ class TestStudioPages(unittest.TestCase):
 
         # 2. Extract Set I attributes from attribute_catalog.js
         tables_match = re.search(
-            r"groupId:\s*'tables'.*?attributes:\s*\[(.*?)\]\s*,\s*\}", catalog_js, re.DOTALL
+            r'["\']groupId["\']:\s*["\']tables["\'].*?["\']attributes["\']:\s*\[(.*?)\]\s*,?\s*\}',
+            catalog_js,
+            re.DOTALL,
         )
         self.assertIsNotNone(
             tables_match, "Set I tables group must be defined in attribute_catalog.js"
         )
-        catalog_set_i = re.findall(r"key:\s*'([^']+)'", tables_match.group(1))
+        catalog_set_i = re.findall(r'["\']key["\']:\s*["\']([^"\']+)["\']', tables_match.group(1))
 
         expected_order = [
             "has_tables",
@@ -79,11 +123,11 @@ class TestStudioPages(unittest.TestCase):
             "table_has_multi_row_header",
             "table_row_has_lines",
             "table_has_full_outer_border",
-            "table_bottom_top_border",
+            "table_has_only_bottom_top_border",
             "table_has_merged_rows",
             "table_has_merged_cols",
-            "table_has_merged_cells",
-            "table_has_multi_lines",
+            "table_has_multi_merged_cells",
+            "table_cell_has_multi_lines",
         ]
         self.assertEqual(
             catalog_set_i, expected_order, "attribute_catalog.js Set I order must match expected"
@@ -97,8 +141,8 @@ class TestStudioPages(unittest.TestCase):
         )
         self.assertEqual(
             catalog_set_i[-1],
-            "table_has_multi_lines",
-            "table_has_multi_lines must be the last attribute in Set I",
+            "table_cell_has_multi_lines",
+            "table_cell_has_multi_lines must be the last attribute in Set I",
         )
 
         # 4. Verify index.html Set I HTML table is in 100% parity with attribute_catalog.js

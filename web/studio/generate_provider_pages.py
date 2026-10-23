@@ -41,10 +41,10 @@ def get_color_for_score(score: float | None) -> str:
     if score is None:
         return "var(--text-main)"
     if score >= 0.85:
-        return "#4ade80"
+        return "#16a34a"
     if score < 0.50:
-        return "#f87171"
-    return "#fbbf24"
+        return "#dc2626"
+    return "#d97706"
 
 
 def render_provider_html(
@@ -140,7 +140,7 @@ def render_provider_html(
           <td>{ned}</td>
           <td>{teds}</td>
           <td title="{html.escape(token_summary)}" style="font-family:var(--font-mono); font-size:12px;">
-            <span style="font-weight:700; color:#10b981;">{cost_batch}</span>
+            <span style="font-weight:700; color:#059669;">{cost_batch}</span>
             {token_sub}
           </td>
           <td style="font-size:11px;">{diff_str}</td>
@@ -156,12 +156,12 @@ def render_provider_html(
         rows_html = '<tr><td colspan="9" style="text-align:center; padding:30px; color:var(--text-muted);">No documents match the active filter</td></tr>'
 
     spend_badge = (
-        f'<span>Spend: <strong style="color:#10b981;">{tot_spend}</strong></span>'
+        f'<span>Spend: <strong style="color:#059669;">{tot_spend}</strong></span>'
         if tot_spend
         else ""
     )
     savings_badge = (
-        f'<span class="chip" style="font-size:10px; color:#10b981; background:rgba(16,185,129,0.1); border-color:rgba(16,185,129,0.3);">{tot_savings}</span>'
+        f'<span class="chip" style="font-size:10px; color:#166534; background:#dcfce7; border-color:#bbf7d0;">{tot_savings}</span>'
         if tot_savings
         else ""
     )

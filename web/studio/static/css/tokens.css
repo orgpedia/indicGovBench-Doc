@@ -3,61 +3,61 @@
  */
 :root {
   /* Colors - Functional & Brand */
-  --bg-app: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-surface-elevated: #334155;
-  --bg-pane: #090d16;
-  --bg-card: #1e293b;
-  --bg-card-hover: #283548;
-  --bg-input: #0f172a;
+  --bg-app: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f8fafc;
+  --bg-pane: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-input: #ffffff;
   
   /* Text */
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-faint: #64748b;
-  --text-inverse: #0f172a;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-faint: #94a3b8;
+  --text-inverse: #ffffff;
 
   /* Borders */
-  --border-subtle: #334155;
-  --border-strong: #475569;
-  --border-focus: #38bdf8;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-focus: #2563eb;
 
-  /* Semantic Diff Colors (§3.5 in specs) */
+  /* Semantic Diff Colors (§3.5 in specs) - High-contrast accessible light theme */
   --diff-raw-bg: transparent;
-  --diff-raw-text: #f8fafc;
-  --diff-subs-bg: rgba(245, 158, 11, 0.25);
+  --diff-raw-text: #0f172a;
+  --diff-subs-bg: #fef3c7;
   --diff-subs-border: #f59e0b;
-  --diff-subs-text: #fbbf24;
-  --diff-missing-bg: rgba(239, 68, 68, 0.25);
+  --diff-subs-text: #92400e;
+  --diff-missing-bg: #fee2e2;
   --diff-missing-border: #ef4444;
-  --diff-missing-text: #f87171;
-  --diff-extra-bg: rgba(168, 85, 247, 0.25);
+  --diff-missing-text: #991b1b;
+  --diff-extra-bg: #f3e8ff;
   --diff-extra-border: #a855f7;
-  --diff-extra-text: #c084fc;
-  --diff-matched-bg: rgba(34, 197, 94, 0.2);
+  --diff-extra-text: #6b21a8;
+  --diff-matched-bg: #dcfce7;
   --diff-matched-border: #22c55e;
-  --diff-matched-text: #4ade80;
+  --diff-matched-text: #166534;
 
   /* Bounding Box Overlay Colors */
-  --bbox-gt-stroke: #38bdf8;
-  --bbox-gt-fill: rgba(56, 189, 248, 0.15);
-  --bbox-table-stroke: #10b981;
-  --bbox-table-fill: rgba(16, 185, 129, 0.16);
-  --bbox-gt-active: #f59e0b;
-  --bbox-selected-stroke: #f59e0b;
-  --bbox-selected-fill: rgba(245, 158, 11, 0.28);
-  --bbox-pred-stroke: #f97316;
-  --bbox-pred-fill: rgba(249, 115, 22, 0.15);
-  --bbox-word-stroke: #facc15;
-  --bbox-word-fill: rgba(250, 204, 21, 0.18);
+  --bbox-gt-stroke: #0284c7;
+  --bbox-gt-fill: rgba(2, 132, 199, 0.12);
+  --bbox-table-stroke: #059669;
+  --bbox-table-fill: rgba(5, 150, 105, 0.12);
+  --bbox-gt-active: #d97706;
+  --bbox-selected-stroke: #2563eb;
+  --bbox-selected-fill: rgba(37, 99, 235, 0.14);
+  --bbox-pred-stroke: #ea580c;
+  --bbox-pred-fill: rgba(234, 88, 12, 0.12);
+  --bbox-word-stroke: #ca8a04;
+  --bbox-word-fill: rgba(202, 138, 4, 0.14);
 
   /* Status Chips */
-  --status-saved-bg: rgba(34, 197, 94, 0.2);
-  --status-saved-text: #4ade80;
-  --status-stale-bg: rgba(245, 158, 11, 0.25);
-  --status-stale-text: #fbbf24;
-  --status-saving-bg: rgba(56, 189, 248, 0.2);
-  --status-saving-text: #38bdf8;
+  --status-saved-bg: #dcfce7;
+  --status-saved-text: #166534;
+  --status-stale-bg: #fef3c7;
+  --status-stale-text: #92400e;
+  --status-saving-bg: #e0f2fe;
+  --status-saving-text: #0369a1;
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -72,8 +72,8 @@
   --radius-lg: 8px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  /* Shadows - Light Theme */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
 }

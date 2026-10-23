@@ -183,6 +183,24 @@ async function handleApiRequest(path, method, url, request, env) {
   }
 
   // ---------------------------------------------------------------------------
+  // GET /api/pricing
+  // ---------------------------------------------------------------------------
+  if (path === "/api/pricing" && (method === "GET" || method === "HEAD")) {
+    const runId = url.searchParams.get("run") || url.searchParams.get("run_id") || "default";
+    const ceStmt = db.prepare(`
+      SELECT provider, avg_realtime_cost_inr, avg_batch_cost_inr, total_realtime_cost_inr, total_batch_cost_inr, billing_mode, native_currency
+      FROM corpus_evaluations
+      WHERE run_id = ?
+    `).bind(runId);
+    const ceRes = await ceStmt.all();
+    return jsonResponse({
+      status: "success",
+      usd_to_inr_rate: 100.0,
+      providers: ceRes.results || [],
+    });
+  }
+
+  // ---------------------------------------------------------------------------
   // GET /api/leaderboard
   // ---------------------------------------------------------------------------
   if (path === "/api/leaderboard" && (method === "GET" || method === "HEAD")) {

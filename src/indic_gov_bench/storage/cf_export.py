@@ -29,6 +29,14 @@ from typing import Any
 
 from indic_gov_bench.storage.db import DEFAULT_DB_PATH, db_session
 
+DEFAULT_CLARITY_TRACKING_CODE = """<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z23hiv1jjs");
+</script>"""
+
 CF_SCHEMA_SQL = """-- Cloudflare D1 Schema for IndicGovBench (Pruned for Free Tier)
 
 CREATE TABLE IF NOT EXISTS runs (
@@ -570,7 +578,30 @@ def bundle_static_assets(repo_root: Path, out_static_dir: Path) -> None:
     if redundant_img.exists():
         shutil.rmtree(redundant_img)
 
-    print(f"✅ Bundled web static assets into {out_static_dir}")
+    # Inject tracking code into all exported HTML files (Cloudflare only, leaving local files clean)
+    tracking_code = DEFAULT_CLARITY_TRACKING_CODE
+    clarity_file = repo_root / ".clarity.tracking.code"
+    if clarity_file.is_file():
+        custom_code = clarity_file.read_text(encoding="utf-8").strip()
+        if custom_code:
+            tracking_code = custom_code
+
+    injected_count = 0
+    for html_file in sorted(out_static_dir.glob("*.html")):
+        content = html_file.read_text(encoding="utf-8")
+        if "clarity.ms/tag" not in content:
+            if "</head>" in content:
+                content = content.replace("</head>", f"  {tracking_code}\n</head>", 1)
+            elif "</HEAD>" in content:
+                content = content.replace("</HEAD>", f"  {tracking_code}\n</HEAD>", 1)
+            elif "</body>" in content:
+                content = content.replace("</body>", f"  {tracking_code}\n</body>", 1)
+            else:
+                content += f"\n{tracking_code}\n"
+            html_file.write_text(content, encoding="utf-8")
+            injected_count += 1
+
+    print(f"✅ Bundled web static assets into {out_static_dir} (injected tracking into {injected_count} HTML pages)")
 
 
 def main() -> None:

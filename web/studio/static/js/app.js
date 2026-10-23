@@ -380,7 +380,7 @@ export class DashboardApp {
     headerEl.innerHTML = `
       <div class="brand-title">
         <button class="btn-tool" id="btn-doc-back" style="margin-right:8px;" title="Back to Provider Workspace">${escapeHtml(backLabel)}</button>
-        <span>IndicGovBench</span>
+        <span>🏛️ IndicGovBench-Orders</span>
         <span class="brand-badge">Audit Workspace</span>
       </div>
       <div class="strata-info text-muted" style="font-size:12px;">

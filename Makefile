@@ -464,6 +464,8 @@ html:
 	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_landing_html.py --db $(WORKSPACE_DIR)/benchmark.db
 	@echo "🤖 Compiling static Provider Workspace HTML pages from benchmark.db..."
 	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_provider_pages.py --db $(WORKSPACE_DIR)/benchmark.db
+	@echo "💳 Compiling static Pricing Rate Card HTML from benchmark.db..."
+	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_pricing_html.py --db $(WORKSPACE_DIR)/benchmark.db
 	@echo "✅ All static HTML documentation and provider workspaces compiled into web/studio/static/"
 
 metrics_tutorial: html

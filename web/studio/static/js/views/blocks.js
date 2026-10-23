@@ -324,17 +324,17 @@ export class BlocksView {
           headerBadgesHtml += `<span class="reading-badge" title="Target Block">🎯 Target</span>`;
         }
         if (b.content) {
-          headerBadgesHtml += `<span class="chip" style="background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3); font-size:10px; font-weight:600;" title="Content: ${escapeHtml(b.content)}">${getContentLabel(b.content)}</span>`;
+          headerBadgesHtml += `<span class="chip" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; font-size:10px; font-weight:600;" title="Content: ${escapeHtml(b.content)}">${getContentLabel(b.content)}</span>`;
         }
         if (b.doc_category) {
-          headerBadgesHtml += `<span class="chip" style="background:rgba(168,85,247,0.15); color:#c084fc; border:1px solid rgba(168,85,247,0.3); font-size:10px; font-weight:600;" title="Category: ${escapeHtml(b.doc_category)}">${getDocCategoryLabel(b.doc_category)}</span>`;
+          headerBadgesHtml += `<span class="chip" style="background:#f3e8ff; color:#6b21a8; border:1px solid #e9d5ff; font-size:10px; font-weight:600;" title="Category: ${escapeHtml(b.doc_category)}">${getDocCategoryLabel(b.doc_category)}</span>`;
         }
       } else if (isExcluded) {
         const reasonLabel = currentReason ? ` · ${currentReason}` : '';
-        headerBadgesHtml += `<span class="chip" style="background:rgba(239,68,68,0.2); color:#f87171; font-size:10px; font-weight:700;">🚫 Excluded${escapeHtml(reasonLabel)}</span>`;
+        headerBadgesHtml += `<span class="chip" style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5; font-size:10px; font-weight:700;">🚫 Excluded${escapeHtml(reasonLabel)}</span>`;
       } else if (isUncertain) {
         const reasonLabel = currentReason ? ` · ${currentReason}` : '';
-        headerBadgesHtml += `<span class="chip" style="background:rgba(245,158,11,0.2); color:#fbbf24; font-size:10px; font-weight:700;">❓ Uncertain${escapeHtml(reasonLabel)}</span>`;
+        headerBadgesHtml += `<span class="chip" style="background:#fef3c7; color:#92400e; border:1px solid #fcd34d; font-size:10px; font-weight:700;">❓ Uncertain${escapeHtml(reasonLabel)}</span>`;
       }
 
       // Layout & Text Badges for Provider Output
@@ -432,7 +432,7 @@ export class BlocksView {
           <div class="block-card-header">
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
               ${headerBadgesHtml}
-              ${isTableBlock ? '<span class="chip" style="background:rgba(16,185,129,0.15); color:#059669; border:1px solid rgba(16,185,129,0.3); font-weight:700; font-size:10px;">📊 GT Table</span>' : ''}
+              ${isTableBlock ? '<span class="chip" style="background:#dcfce7; color:#166534; border:1px solid #bbf7d0; font-weight:700; font-size:10px;">📊 GT Table</span>' : ''}
               <span style="font-weight:700; font-size:12px;">Block #${b.id}</span>
               <span class="text-faint" style="font-size:11px;">(${b.type})</span>
               ${layoutBadgeHtml}

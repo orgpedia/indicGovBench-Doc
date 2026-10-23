@@ -140,7 +140,7 @@ export class ProviderWorkspaceView {
           <td>${ned}</td>
           <td>${teds}</td>
           <td title="${tokenSummary}" style="font-family:var(--font-mono); font-size:12px;">
-            <span style="font-weight:700; color:#10b981;">${costBatch}</span>
+            <span style="font-weight:700; color:#059669;">${costBatch}</span>
             ${tokenSummary ? `<div class="text-faint" style="font-size:10px;">${tokenSummary}</div>` : ''}
           </td>
           <td style="font-size:11px;">${diffStr}</td>
@@ -168,8 +168,8 @@ export class ProviderWorkspaceView {
               <span>Composite: <strong style="color:var(--text-main);">${compScore}</strong></span>
               <span>CER: <strong style="color:var(--text-main);">${cerScore}</strong></span>
               <span>TEDS: <strong style="color:var(--text-main);">${tedsScore}</strong></span>
-              ${totSpend ? `<span>Spend: <strong style="color:#10b981;">${totSpend}</strong></span>` : ''}
-              ${totSavings ? `<span class="chip" style="font-size:10px; color:#10b981; background:rgba(16,185,129,0.1); border-color:rgba(16,185,129,0.3);">${totSavings}</span>` : ''}
+              ${totSpend ? `<span>Spend: <strong style="color:#059669;">${totSpend}</strong></span>` : ''}
+              ${totSavings ? `<span class="chip" style="font-size:10px; color:#166534; background:#dcfce7; border-color:#bbf7d0;">${totSavings}</span>` : ''}
             </div>
           </div>
 
@@ -281,9 +281,9 @@ export class ProviderWorkspaceView {
 
 function getColorForScore(score) {
   if (score === null || score === undefined) return 'var(--text-main)';
-  if (score >= 0.85) return '#4ade80';
-  if (score < 0.50) return '#f87171';
-  return '#fbbf24';
+  if (score >= 0.85) return '#16a34a';
+  if (score < 0.50) return '#dc2626';
+  return '#d97706';
 }
 
 function escapeHtml(str) {
