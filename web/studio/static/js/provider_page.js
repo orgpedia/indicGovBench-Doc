@@ -6,6 +6,7 @@ import { ProviderWorkspaceView } from './views/provider_workspace.js';
 
 class ProviderPageApp {
   constructor() {
+    window.providerPageApp = this;
     const params = new URLSearchParams(window.location.search);
     this.currentRun = params.get('run') || 'default';
     this.selectedProvider = params.get('provider') || 'gemini_3_1_pro';
@@ -38,14 +39,18 @@ class ProviderPageApp {
   }
 }
 
+let isBootstrapped = false;
+
 function bootstrapProviderPage() {
-  if (!window.providerPageApp) {
-    window.providerPageApp = new ProviderPageApp();
+  if (isBootstrapped || window.providerPageApp) {
+    return;
   }
+  isBootstrapped = true;
+  window.providerPageApp = new ProviderPageApp();
 }
 
 if (document.readyState === 'loading') {
-  window.addEventListener('DOMContentLoaded', bootstrapProviderPage);
+  window.addEventListener('DOMContentLoaded', bootstrapProviderPage, { once: true });
 } else {
   bootstrapProviderPage();
 }

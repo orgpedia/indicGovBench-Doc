@@ -160,10 +160,8 @@ export class SummaryView {
               <a class="landing-nav-pill" href="#section-strata">Dataset Strata</a>
               <a class="landing-nav-pill" href="#section-results">Leaderboard Results</a>
               <a class="landing-nav-pill" href="#section-cost-perf">Cost vs Performance</a>
-              <a class="landing-nav-pill" href="#section-metrics">Metric Definitions</a>
-              <a class="landing-nav-pill" href="#section-annotation">Annotation &amp; Protocol</a>
               <a class="landing-nav-pill" href="#section-attributes">Attribute-Wise Exploration</a>
-              <a class="landing-nav-pill" href="/protocol" target="_blank" style="background:#eff6ff; font-weight:600;">📜 Protocol Spec ↗</a>
+              <a class="landing-nav-pill" href="#section-annotation">Annotation &amp; Collaboration</a>
               <a class="landing-nav-pill" href="/metrics" target="_blank" style="background:#f0fdf4; font-weight:600;">🔬 Metrics Demo ↗</a>
             </div>
           </div>
@@ -267,7 +265,7 @@ export class SummaryView {
               </div>
             </div>
 
-            <a href="pricing.html" class="btn-tool" id="btn-open-pricing-top" style="background:#111827; color:#ffffff; border:1px solid #111827; font-size:12px; padding:4px 12px; font-weight:500; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.06); flex-shrink:0;">
+            <a href="pricing.html" class="btn-tool" id="btn-open-pricing-top" style="background:#111827; color:#ffffff; border:1px solid #111827; font-size:12px; padding:4px 12px; font-weight:500; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.06); flex-shrink:0; margin-left:auto;">
               Pricing &amp; Implementation Details →
             </a>
           </div>
@@ -417,26 +415,20 @@ export class SummaryView {
           </div>
         </section>
 
-        <!-- 6. Annotation & Protocol Section -->
+        <!-- 6. Annotation & Collaboration Section -->
         <section class="landing-section" id="section-annotation">
           <div class="landing-section-header">
             <div>
-              <div class="landing-section-title"><a href="#section-annotation" class="section-title-link">Annotation &amp; Protocol</a></div>
+              <div class="landing-section-title"><a href="#section-annotation" class="section-title-link">Annotation &amp; Collaboration</a></div>
               <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
-                Ground-truth curation methodology, normalization specifications, and call for collaborators.
+                Ground-truth curation methodology and call for collaborators.
               </div>
             </div>
-            <a class="btn-tool" href="/protocol" target="_blank" style="font-size:12px; padding:4px 10px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">
-              View Full Protocol Spec (v0.9) ↗
-            </a>
           </div>
 
           <div class="info-callout-box">
             <div style="font-size:13.5px; line-height:1.6; color:#111827;">
               Annotation was done using a modified version of the <a href="#" id="link-open-annotation-ui" style="color:#2563eb; font-weight:600; text-decoration:underline;">UI shown here</a>, please reach out to me if you would like to help annotate the remaining sets of documents, especially if you know the other 7 languages.
-            </div>
-            <div style="font-size:13.5px; line-height:1.6; color:#4b5563; margin-top:6px;">
-              The protocol used for annotation can be read in full on our <a href="/protocol" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">Annotation Protocol &amp; Guidelines Specification page</a>. Also it is worth noting that the text obtained from the provider was normalized before comparison, the normalization tasks are detailed in <a href="/protocol#8-text-normalization-profiles" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">§8 Normalization Profiles</a>.
             </div>
 
             <!-- Call for Collaborators Card -->

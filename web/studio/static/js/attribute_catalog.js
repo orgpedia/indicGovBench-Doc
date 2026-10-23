@@ -1,57 +1,193 @@
 /**
  * attribute_catalog.js — Canonical Catalog & Order for Document Attributes
  *
- * Single Source of Truth for:
- * - Attribute ordering and groupings (Set I: Tables, Set II: Authentication, Set III: Quality)
- * - Attribute keys, sequential IDs, and benchmark document distributions
- * - Shared HTML table markup generation for index.html and summary.js
+ * AUTO-GENERATED from database via web/studio/generate_landing_html.py
+ * Do not edit manually. Run 'make html' to recompile.
  */
 
 export const ATTRIBUTE_CATALOG = [
   {
-    groupId: 'tables',
-    title: 'I. Table Content &amp; Structural Elements',
-    column: 'left',
-    attributes: [
-      { id: 1, key: 'has_tables', count: 119, total: 270, pct: '44.1%' },
-      { id: 2, key: 'table_has_full_page', count: 64, total: 270, pct: '23.7%' },
-      { id: 3, key: 'table_count', count: 119, total: 270, pct: '44.1%' },
-      { id: 4, key: 'table_has_no_header', count: 26, total: 270, pct: '9.6%' },
-      { id: 5, key: 'table_has_multi_row_header', count: 23, total: 270, pct: '8.5%' },
-      { id: 6, key: 'table_row_has_lines', count: 77, total: 270, pct: '28.5%' },
-      { id: 7, key: 'table_has_full_outer_border', count: 77, total: 270, pct: '28.5%' },
-      { id: 8, key: 'table_bottom_top_border', count: 23, total: 270, pct: '8.5%' },
-      { id: 9, key: 'table_has_merged_rows', count: 10, total: 270, pct: '3.7%' },
-      { id: 10, key: 'table_has_merged_cols', count: 22, total: 270, pct: '8.1%' },
-      { id: 11, key: 'table_has_merged_cells', count: 16, total: 270, pct: '5.9%' },
-      { id: 12, key: 'table_has_multi_lines', count: 104, total: 270, pct: '38.5%' },
-    ],
+    "groupId": "tables",
+    "title": "I. Table Content &amp; Structural Elements",
+    "column": "left",
+    "attributes": [
+      {
+        "id": 1,
+        "key": "has_tables",
+        "count": 135,
+        "total": 300,
+        "pct": "45.0%"
+      },
+      {
+        "id": 2,
+        "key": "table_has_full_page",
+        "count": 76,
+        "total": 300,
+        "pct": "25.3%"
+      },
+      {
+        "id": 3,
+        "key": "table_count",
+        "count": 135,
+        "total": 300,
+        "pct": "45.0%"
+      },
+      {
+        "id": 4,
+        "key": "table_has_no_header",
+        "count": 28,
+        "total": 300,
+        "pct": "9.3%"
+      },
+      {
+        "id": 5,
+        "key": "table_has_multi_row_header",
+        "count": 30,
+        "total": 300,
+        "pct": "10.0%"
+      },
+      {
+        "id": 6,
+        "key": "table_row_has_lines",
+        "count": 91,
+        "total": 300,
+        "pct": "30.3%"
+      },
+      {
+        "id": 7,
+        "key": "table_has_full_outer_border",
+        "count": 91,
+        "total": 300,
+        "pct": "30.3%"
+      },
+      {
+        "id": 8,
+        "key": "table_has_only_bottom_top_border",
+        "count": 23,
+        "total": 300,
+        "pct": "7.7%"
+      },
+      {
+        "id": 9,
+        "key": "table_has_merged_rows",
+        "count": 11,
+        "total": 300,
+        "pct": "3.7%"
+      },
+      {
+        "id": 10,
+        "key": "table_has_merged_cols",
+        "count": 24,
+        "total": 300,
+        "pct": "8.0%"
+      },
+      {
+        "id": 11,
+        "key": "table_has_multi_merged_cells",
+        "count": 20,
+        "total": 300,
+        "pct": "6.7%"
+      },
+      {
+        "id": 12,
+        "key": "table_cell_has_multi_lines",
+        "count": 114,
+        "total": 300,
+        "pct": "38.0%"
+      }
+    ]
   },
   {
-    groupId: 'auth',
-    title: 'II. Authentication Artifacts',
-    column: 'right',
-    attributes: [
-      { id: 13, key: 'has_logo', count: 24, total: 270, pct: '8.9%' },
-      { id: 14, key: 'has_signature', count: 100, total: 270, pct: '37.0%' },
-      { id: 15, key: 'signature_type', count: 99, total: 270, pct: '36.7%' },
-      { id: 16, key: 'has_stamp', count: 9, total: 270, pct: '3.3%' },
-      { id: 17, key: 'has_handwritten', count: 4, total: 270, pct: '1.5%' },
-      { id: 18, key: 'has_watermark', count: 6, total: 270, pct: '2.2%' },
-    ],
+    "groupId": "auth",
+    "title": "II. Signatures, Stamps &amp; Logos",
+    "column": "right",
+    "attributes": [
+      {
+        "id": 13,
+        "key": "has_logo",
+        "count": 29,
+        "total": 300,
+        "pct": "9.7%"
+      },
+      {
+        "id": 14,
+        "key": "has_signature",
+        "count": 113,
+        "total": 300,
+        "pct": "37.7%"
+      },
+      {
+        "id": 15,
+        "key": "signature_type",
+        "count": 111,
+        "total": 300,
+        "pct": "37.0%"
+      },
+      {
+        "id": 16,
+        "key": "has_stamp",
+        "count": 26,
+        "total": 300,
+        "pct": "8.7%"
+      },
+      {
+        "id": 17,
+        "key": "has_handwritten",
+        "count": 70,
+        "total": 300,
+        "pct": "23.3%"
+      },
+      {
+        "id": 18,
+        "key": "has_watermark",
+        "count": 6,
+        "total": 300,
+        "pct": "2.0%"
+      }
+    ]
   },
   {
-    groupId: 'quality',
-    title: 'III. Capture Quality &amp; Degradations',
-    column: 'right',
-    attributes: [
-      { id: 19, key: 'rotation', count: 10, total: 270, pct: '3.7%' },
-      { id: 20, key: 'scan_has_tilt', count: 27, total: 270, pct: '10.0%' },
-      { id: 21, key: 'scan_has_wavy_distortion', count: 22, total: 270, pct: '8.1%' },
-      { id: 22, key: 'scan_has_dots', count: 105, total: 270, pct: '38.9%' },
-      { id: 23, key: 'scan_has_darkpatch', count: 54, total: 270, pct: '20.0%' },
-    ],
-  },
+    "groupId": "quality",
+    "title": "III. Scan Quality &amp; Imperfections",
+    "column": "right",
+    "attributes": [
+      {
+        "id": 19,
+        "key": "rotation",
+        "count": 12,
+        "total": 300,
+        "pct": "4.0%"
+      },
+      {
+        "id": 20,
+        "key": "scan_has_tilt",
+        "count": 29,
+        "total": 300,
+        "pct": "9.7%"
+      },
+      {
+        "id": 21,
+        "key": "scan_has_wavy_distortion",
+        "count": 22,
+        "total": 300,
+        "pct": "7.3%"
+      },
+      {
+        "id": 22,
+        "key": "scan_has_dots",
+        "count": 110,
+        "total": 300,
+        "pct": "36.7%"
+      },
+      {
+        "id": 23,
+        "key": "scan_has_darkpatch",
+        "count": 58,
+        "total": 300,
+        "pct": "19.3%"
+      }
+    ]
+  }
 ];
 
 export function renderAttributeExplorationHtml(catalog = ATTRIBUTE_CATALOG) {

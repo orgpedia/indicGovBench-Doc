@@ -398,6 +398,7 @@ eval_all:
 		$(if $(EXCLUDE),--exclude $(EXCLUDE),) \
 		$(if $(FORCE),--force,) \
 		$(if $(RUN),--run $(RUN),)
+	@$(MAKE) html
 
 eval_doc:
 	@if [ -z "$(DOC)" ]; then echo "❌ Please specify DOC=<doc_id>"; exit 1; fi
@@ -430,7 +431,7 @@ sync_pricing:
 # 4. Cloudflare Edge Targets
 # ----------------------------------------------------------------------
 
-cf_export:
+cf_export: html
 	@echo "📦 Exporting pruned Cloudflare D1 data and WebP images..."
 	PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.storage.cf_export --out-dir $(WORKSPACE_DIR)/cf_export $(if $(FORCE_IMAGES),--force-images,) $(if $(SKIP_IMAGES),--skip-images,)
 
@@ -459,7 +460,11 @@ html:
 	PYTHONPATH=src:. $(PY_EXEC) metrics_tutorial/generate_html.py $(if $(CASE),--case $(CASE),--case all)
 	@echo "📑 Compiling Annotation Protocol HTML (web/studio/static/protocol.html)..."
 	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_protocol_html.py --spec docs/annotation_protocol.md --output web/studio/static/protocol.html
-	@echo "✅ All static HTML documentation compiled into web/studio/static/"
+	@echo "🏛️ Compiling Landing Page & Attribute Catalog from benchmark.db..."
+	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_landing_html.py --db $(WORKSPACE_DIR)/benchmark.db
+	@echo "🤖 Compiling static Provider Workspace HTML pages from benchmark.db..."
+	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_provider_pages.py --db $(WORKSPACE_DIR)/benchmark.db
+	@echo "✅ All static HTML documentation and provider workspaces compiled into web/studio/static/"
 
 metrics_tutorial: html
 	PYTHONPATH=src:. $(PY_EXEC) metrics_tutorial/generate_markdown.py $(if $(CASE),--case $(CASE),--case all)

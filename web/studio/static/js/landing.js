@@ -1101,14 +1101,18 @@ function escapeHtml(str) {
 }
 
 // Instantiate on page load
+let isLandingBootstrapped = false;
+
 function bootstrapLanding() {
-  if (!window.landingPage) {
-    window.landingPage = new LandingPage();
+  if (isLandingBootstrapped || window.landingPage) {
+    return;
   }
+  isLandingBootstrapped = true;
+  window.landingPage = new LandingPage();
 }
 
 if (document.readyState === 'loading') {
-  window.addEventListener('DOMContentLoaded', bootstrapLanding);
+  window.addEventListener('DOMContentLoaded', bootstrapLanding, { once: true });
 } else {
   bootstrapLanding();
 }

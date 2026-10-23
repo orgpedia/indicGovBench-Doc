@@ -118,10 +118,17 @@ export default {
       }
 
       // Query-based routing for landing page vs provider vs audit
-      if (path === "/" || path === "/index.html") {
+      if (path === "/" || path === "/index.html" || path === "/provider.html" || path === "/provider") {
         if (url.searchParams.has("doc") || url.searchParams.has("doc_id")) {
           return env.ASSETS.fetch(new Request(new URL(`/audit.html${url.search}`, request.url), request));
         } else if (url.searchParams.has("provider") && url.searchParams.get("view") !== "attributes" && url.searchParams.get("view") !== "coverage") {
+          const prov = url.searchParams.get("provider");
+          if (prov) {
+            const preResp = await env.ASSETS.fetch(new Request(new URL(`/provider_${prov}.html`, request.url), request));
+            if (preResp.status === 200) {
+              return preResp;
+            }
+          }
           return env.ASSETS.fetch(new Request(new URL(`/provider.html${url.search}`, request.url), request));
         }
       }

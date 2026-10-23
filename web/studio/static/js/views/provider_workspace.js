@@ -14,6 +14,20 @@ export class ProviderWorkspaceView {
   }
 
   async render(container) {
+    const preloadedEl = document.getElementById('precomputed-docs-data');
+    if (preloadedEl) {
+      try {
+        this.docsData = JSON.parse(preloadedEl.textContent);
+        this.docsData.all_documents = this.docsData.documents;
+        if (container.querySelector('.doc-list-table')) {
+          this.bindEvents(container);
+          return;
+        }
+      } catch (err) {
+        console.warn('Failed parsing precomputed docs data, falling back to fetch', err);
+      }
+    }
+
     container.innerHTML = `
       <div class="workspace-container" id="provider-workspace-mount">
         <div style="text-align:center; padding:40px; color:var(--text-muted);">
@@ -26,6 +40,26 @@ export class ProviderWorkspaceView {
   }
 
   async fetchAndRender(container) {
+    if (this.docsData?.all_documents) {
+      let filtered = [...this.docsData.all_documents];
+      if (this.currentFilter === 'high_error') {
+        filtered = filtered.filter(d => d.composite_score !== null && d.composite_score !== undefined && d.composite_score < 0.50);
+      } else if (this.currentFilter === 'low_error') {
+        filtered = filtered.filter(d => d.composite_score !== null && d.composite_score !== undefined && d.composite_score >= 0.85);
+      } else if (this.currentFilter === 'has_table') {
+        filtered = filtered.filter(d => d.has_tables);
+      } else if (this.currentFilter === 'gt_review') {
+        filtered = filtered.filter(d => d.audit_status === 'needs_review');
+      }
+      if (this.searchQuery) {
+        const q = this.searchQuery.toLowerCase();
+        filtered = filtered.filter(d => d.doc_id.toLowerCase().includes(q));
+      }
+      this.docsData.documents = filtered;
+      this.renderContent(container);
+      return;
+    }
+
     try {
       const resp = await fetch(`/api/documents?run=${this.app.currentRun}&provider=${this.app.selectedProvider}&filter=${this.currentFilter}&search=${encodeURIComponent(this.searchQuery)}`);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);

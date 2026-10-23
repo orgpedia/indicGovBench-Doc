@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="landing-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IndicGovBench-Orders: Document Transcription Benchmark for Government Orders</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="landing-mode">
+  <div id="app-container">
+    <!-- Top Global Header -->
+    <header id="global-header" data-testid="global-header">
+      <div class="brand-title">
+        <span>🏛️ IndicGovBench-Orders</span>
+        <span class="brand-badge">Paper &amp; Benchmark Landing</span>
+      </div>
+      <div class="header-actions" style="display:flex; align-items:center; gap:8px;">
+        <a class="header-nav-link" href="https://indicgovbench.orgpedia.in" target="_blank" rel="noopener noreferrer" title="Orgpedia Official Website">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>Official Site</span>
+        </a>
+        <a class="header-nav-link" href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" title="GitHub Repository">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="#181717">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a class="header-nav-link" href="https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" title="HuggingFace Benchmark Dataset">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFD21E">
+            <path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624"/>
+          </svg>
+          <span>HuggingFace</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Landing Page Content -->
+    <main class="summary-container" id="landing-page-root">
+      
+      <!-- 1. Paper Title & Hero Introduction -->
+      <section class="landing-section" id="section-overview">
+        <div class="landing-title-row">
+          <div>
+            <div style="display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;">
+              <span class="tag-badge" style="background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; font-weight:500;">Benchmark Paper</span>
+              <span class="tag-badge" id="hero-badge-counts" style="background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; font-weight:500;">{{HERO_BADGE_COUNTS}}</span>
+              <span class="tag-badge" id="hero-badge-langs" style="background:#f3f4f6; color:#374151; border:1px solid #e5e7eb; font-weight:500;">{{HERO_BADGE_LANGS}}</span>
+            </div>
+            <h1 style="font-size:26px; font-weight:800; color:#111827; letter-spacing:-0.02em; line-height:1.25; margin:0 0 10px 0;">
+              IndicGovBench-Orders: Document Transcription Benchmark for Government Orders
+            </h1>
+            <div class="landing-abstract-container" style="max-width:880px; margin:0 0 14px 0;">
+              <p class="landing-abstract" style="margin:0 0 8px 0;">
+                Most OCR benchmarks do not adequately represent real-world scanned documents. Very few include scanned documents in Indian languages, and almost none focus specifically on scanned government documents in Indian languages. <strong>IndicGovBench-Orders</strong> is designed to address this gap.
+              </p>
+
+              <div id="abstract-extended" style="display:none;">
+                <p class="landing-abstract" style="margin:0 0 10px 0;">
+                  We have curated <strong>{{TOTAL_DOCS}} government orders</strong> across {{LANGUAGES_CONJUNCTION}}, collectively covering a diverse range of document characteristics and challenges found in real-world government orders. These include varied table structures, combinations of handwritten and computer-generated text, stamps, signatures, and other document elements. The benchmark currently evaluates two tasks: <strong>OCR/transcription</strong> and <strong>table extraction</strong>.
+                </p>
+                <p class="landing-abstract" style="margin:0 0 10px 0;">
+                  We call this benchmark <strong>IndicGovBench-Orders</strong>. <strong><a href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" style="color:#2563eb; text-decoration:underline;">[Link to paper]</a></strong> provides a more detailed description of the benchmark, its construction, and its comparison with existing benchmarks.
+                </p>
+                <p class="landing-abstract" style="margin:0 0 10px 0;">
+                  Given the scale of government and the sheer volume of documents generated every day, there is a strong need for reliable automated techniques for extracting information from these documents. IndicGovBench-Orders is our first step towards building benchmarks that evaluate these capabilities on real-world government documents.
+                </p>
+                <p class="landing-abstract" style="margin:0 0 10px 0;">
+                  Over the longer term, we plan to expand the benchmark to cover <strong>10 Indian languages</strong>, a much broader range of government documents—including Gazettes, land records, legislative documents, financial records, and electoral rolls—and additional document-understanding tasks. Our ultimate goal is to build <strong>IndicGovBench-Doc</strong>, a benchmark that covers the breadth of documents generated by governments and the different tasks required to understand them.
+                </p>
+                <p class="landing-abstract" style="margin:0 0 10px 0;">
+                  We envision IndicGovBench-Doc becoming an important benchmark for evaluating progress in document intelligence, much as established benchmarks have helped drive progress in areas such as question answering, speech-to-text, speaker diarization, financial analysis, and Text-to-SQL. Our goal is to provide researchers and developers with challenging, real-world documents that reflect the complexity of documents encountered in practice.
+                </p>
+              </div>
+
+              <button id="btn-toggle-abstract" type="button" style="background:none; border:none; padding:4px 0; color:#2563eb; font-size:13.5px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:4px; outline:none;">
+                <span id="btn-toggle-abstract-text">Read more</span>
+                <span id="btn-toggle-abstract-icon">▾</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Anchor Navigation Pills -->
+          <div class="landing-nav-pills" style="margin-top:16px; border-top:1px solid #e5e7eb; padding-top:12px;">
+            <a class="landing-nav-pill" href="#section-results">Leaderboard</a>
+            <a class="landing-nav-pill" href="#section-strata">Dataset Statistics</a>
+            <a class="landing-nav-pill" href="#section-cost-perf">Cost vs Performance</a>
+            <a class="landing-nav-pill" href="#section-metrics">Metrics</a>
+            <a class="landing-nav-pill" href="#section-attributes">Attribute-Wise Exploration</a>
+            <a class="landing-nav-pill" href="#section-annotation">Annotation &amp; Collaboration</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Results: Benchmark Leaderboard Table -->
+      <section class="landing-section" id="section-results">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-results" class="section-title-link">Benchmark Results &amp; Leaderboard</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              Comparative evaluation across {{TOTAL_MODELS}} providers. Click any column header to sort. Click any provider to inspect its workspace.
+            </div>
+          </div>
+          <a href="provider.html?run=default&provider=gemini_3_1_pro" class="btn-tool" id="btn-open-audit-top" style="background:#111827; color:#ffffff; border:1px solid #111827; font-size:12px; padding:4px 12px; font-weight:500; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.06); flex-shrink:0;">
+            Audit Workspace →
+          </a>
+        </div>
+
+        <!-- Category Filter Pills & View Toggles -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div class="pill-group" id="leaderboard-filter-pills" style="margin:0;">
+            <button class="pill-btn active" data-cat="all">All Models ({{TOTAL_MODELS}})</button>
+            <button class="pill-btn" data-cat="batching">Batching Supported ({{BATCH_MODELS_COUNT}})</button>
+            <button class="pill-btn" data-cat="proprietary">Proprietary VLMs</button>
+            <button class="pill-btn" data-cat="open_weights">Open Weights</button>
+            <button class="pill-btn" data-cat="classical_ocr">Classical OCR</button>
+          </div>
+          
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="pill-group" style="margin:0;">
+              <button class="pill-btn active" id="btn-toggle-table-view">Table</button>
+              <button class="pill-btn" id="btn-toggle-cards-view">Cards</button>
+            </div>
+            <div style="font-size:12px; color:#6b7280;">
+              Sorted by: <strong style="color:#111827;" id="sort-label-display">Composite Score (DESC)</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Results Container (Table or Cards) -->
+        <div id="leaderboard-view-container">
+          <div style="text-align:center; padding:40px; color:#6b7280;">Loading benchmark leaderboard...</div>
+        </div>
+      </section>
+
+      <!-- 3. Details: Dataset Strata Table -->
+      <section class="landing-section" id="section-strata">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-strata" class="section-title-link">Dataset Breakdown by Language &amp; Era</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              Breakdown of verified documents across languages and time periods (recent vs. archive).
+            </div>
+          </div>
+        </div>
+
+        <div class="benchmark-table-wrapper" style="max-width:680px;">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th style="width:200px;">Language</th>
+                <th class="numeric" style="width:160px;">Current (> Jan 2021)</th>
+                <th class="numeric" style="width:160px;">Archive (≤ Dec 2020)</th>
+                <th class="numeric" style="width:160px;">Total Documents</th>
+              </tr>
+            </thead>
+            <tbody id="strata-table-body">
+{{STRATA_TABLE_ROWS}}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Strata Definitions & Legend -->
+        <div style="font-size:12.5px; color:#4b5563; line-height:1.6; max-width:800px;">
+          <div>
+            <strong style="color:#111827;">Current:</strong> Orders in last five years (> Jan 2021). Generated on computer using word processor, but all scanned.
+          </div>
+          <div>
+            <strong style="color:#111827;">Archive:</strong> Older historical orders. Includes typewriter prints, low-resolution legacy scans, along with older word processed documents.
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Cost vs Performance Scatter Plot -->
+      <section class="landing-section" id="section-cost-perf">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-cost-perf" class="section-title-link">Cost vs Performance</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              Compare transcription quality against processing cost (in ₹ per page, <span id="cost-axis-subtitle-scale">Log Scale</span>) to find the best models for your budget.
+            </div>
+          </div>
+
+          <a href="pricing.html" class="btn-tool" id="btn-open-pricing-top" style="background:#111827; color:#ffffff; border:1px solid #111827; font-size:12px; padding:4px 12px; font-weight:500; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.06); flex-shrink:0; margin-left:auto;">
+            Pricing &amp; Implementation Details →
+          </a>
+        </div>
+
+        <!-- Plot Controls -->
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <label for="plot-metric-select" style="font-size:12px; color:#4b5563;">Metric (Y-Axis):</label>
+            <select class="select-input" id="plot-metric-select" style="font-size:12px; padding:3px 8px;">
+              <option value="composite_score" selected>Composite Quality Score (▲)</option>
+              <option value="textCER_norm">TextCER (▼)</option>
+              <option value="e2eNED_norm">e2eNED (▼)</option>
+              <option value="TEDS">TEDS Table Similarity (▲)</option>
+            </select>
+          </div>
+
+          <button class="btn-tool" id="btn-toggle-scale" style="font-size:12px; padding:3px 10px; font-weight:500; cursor:pointer;" title="Currently Log Scale. Click to switch to Linear Scale.">
+            Scale: <strong id="scale-current-mode">Log</strong> (<span id="scale-label-display">Switch to Linear</span>)
+          </button>
+
+          <button class="btn-tool" id="btn-cost-redraw-header" style="font-size:12px; padding:3px 10px; font-weight:600; cursor:pointer;" title="Redraw chart and autoscale axes to fit selected models">
+            🔄 Redraw Chart
+          </button>
+        </div>
+
+        <div class="cost-perf-container">
+          <div class="cost-perf-svg-wrapper" id="cost-perf-plot-mount">
+            <!-- SVG Plot dynamically injected here -->
+          </div>
+          <div class="cost-perf-tooltip" id="cost-perf-tooltip" style="display:none;"></div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:11.5px; color:#6b7280; padding:0 4px; flex-wrap:wrap; gap:8px;">
+          <div>
+            <em>The dashed curve highlights the most cost-effective models (best quality at each price point). Hover over any point for details; click to view model results.</em>
+          </div>
+        </div>
+
+        <!-- Provider / Model Selection Tray Below Chart -->
+        <div style="background:#fafafa; border:1px solid #e5e7eb; border-radius:6px; padding:12px 16px; margin-top:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <strong style="font-size:12.5px; color:#111827;">Filter Models on Chart:</strong>
+              <span id="cost-perf-count-label" style="font-size:11.5px; color:#6b7280;">({{TOTAL_MODELS}} of {{TOTAL_MODELS}} models active)</span>
+            </div>
+
+            <!-- Quick Action Presets & Redraw Button -->
+            <div class="pill-group" style="margin:0;">
+              <button class="pill-btn" id="btn-cost-prov-all">All Models</button>
+              <button class="pill-btn" id="btn-cost-prov-top5">Top 5</button>
+              <button class="pill-btn" id="btn-cost-prov-prop">Proprietary</button>
+              <button class="pill-btn" id="btn-cost-prov-open">Open Weights</button>
+              <button class="pill-btn" id="btn-cost-prov-ocr">Classical OCR</button>
+              <button class="pill-btn" id="btn-cost-prov-clear" style="color:#dc2626;">Clear</button>
+              <button class="pill-btn" id="btn-cost-redraw-tray" style="font-weight:700; background:#111827; color:#ffffff; border-color:#111827;">🔄 Redraw Chart</button>
+            </div>
+          </div>
+
+          <!-- Provider Chips with Brand Colors -->
+          <div class="provider-chips-tray" id="cost-perf-chips-tray" style="display:flex; flex-wrap:wrap; gap:6px;">
+            <!-- Dynamically populated by landing.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Metric Definitions Section -->
+      <section class="landing-section" id="section-metrics">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-metrics" class="section-title-link">Metric Definitions</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              How we score transcription accuracy, reading order, and table extraction.
+            </div>
+          </div>
+          <a class="btn-tool" href="/metrics" target="_blank" style="text-decoration:none; font-size:12px; padding:4px 10px; display:inline-flex; align-items:center; gap:4px;">
+            Open Metrics Tutorial ↗
+          </a>
+        </div>
+
+        <div style="font-size:13px; color:#4b5563; line-height:1.6;">
+          We evaluate models across character accuracy, reading order sequence, and structural table similarity. To see step-by-step examples, edge cases, and how text is cleaned before scoring, see the <a href="/metrics" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:underline;">Metrics Tutorial ↗</a>.
+        </div>
+
+        <div class="metric-def-grid">
+          <div class="metric-def-card">
+            <div class="metric-def-header">
+              <span>Composite Score</span>
+              <span style="font-size:11px; color:#6b7280;">▲ Higher is better</span>
+            </div>
+            <div class="metric-def-desc">
+              An equal blend (1/3 each) of character accuracy (TextCER), reading order (e2eNED), and table accuracy (TEDS). Gives a single overall score from 0 to 1 (or 0–100%).
+            </div>
+          </div>
+
+          <div class="metric-def-card">
+            <div class="metric-def-header">
+              <span>TextCER (Norm CER)</span>
+              <span style="font-size:11px; color:#6b7280;">▼ Lower is better</span>
+            </div>
+            <div class="metric-def-desc">
+              Character error rate on document text (lower is better). Measures missing, extra, or misspelled characters after standardizing spelling and Unicode.
+            </div>
+          </div>
+
+          <div class="metric-def-card">
+            <div class="metric-def-header">
+              <span>e2eNED (Edit Distance)</span>
+              <span style="font-size:11px; color:#6b7280;">▼ Lower is better</span>
+            </div>
+            <div class="metric-def-desc">
+              Reading-order error rate (lower is better). Checks if the text flows in the right sequence across columns and sections, penalizing scrambled or skipped blocks.
+            </div>
+          </div>
+
+          <div class="metric-def-card">
+            <div class="metric-def-header">
+              <span>TEDS (Table Similarity)</span>
+              <span style="font-size:11px; color:#6b7280;">▲ Higher is better</span>
+            </div>
+            <div class="metric-def-desc">
+              Table accuracy score (higher is better). Evaluates both the layout (rows, columns, merged cells) and the text inside each cell.
+            </div>
+          </div>
+
+          <div class="metric-def-card">
+            <div class="metric-def-header">
+              <span>Cost (₹ INR / Page)</span>
+              <span style="font-size:11px; color:#6b7280;">▼ Lower is better</span>
+            </div>
+            <div class="metric-def-desc">
+              Average per-page processing cost in Indian Rupees (₹). Models with asynchronous Batch API support (50% discount) are marked with a green <strong>Batching</strong> tag. Prices quoted in the leaderboard reflect real-time inference pricing.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Document Attributes & Challenges Section -->
+      <section class="landing-section" id="section-attributes">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-attributes" class="section-title-link">Document Attributes &amp; Challenges</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              How model accuracy holds up against poor scan quality, complex tables, stamps, and signatures.
+            </div>
+          </div>
+          <a class="btn-tool" href="attributes.html" style="font-size:12px; padding:4px 10px; text-decoration:none;">
+            Explore Attributes →
+          </a>
+        </div>
+
+        {{ATTRIBUTE_EXPLORATION_GRID}}
+
+        <div style="font-size:12px; color:#6b7280; margin-top:8px;">
+          * Note: Distribution of document attributes across {{TOTAL_DOCS}} verified ground-truth documents. Click <a href="attributes.html" style="color:#2563eb; font-weight:500; text-decoration:underline;">Explore Attributes →</a> to see how models perform on each document challenge.
+        </div>
+      </section>
+
+      <!-- 7. Annotation & Collaboration Section -->
+      <section class="landing-section" id="section-annotation">
+        <div class="landing-section-header">
+          <div>
+            <div class="landing-section-title"><a href="#section-annotation" class="section-title-link">Annotation &amp; Collaboration</a></div>
+            <div style="font-size:12.5px; color:#6b7280; margin-top:2px;">
+              How the dataset was verified and how to get involved.
+            </div>
+          </div>
+        </div>
+
+        <div class="info-callout-box">
+          <div style="font-size:13.5px; line-height:1.6; color:#111827;">
+            Documents were labeled and verified using our interactive <a href="provider.html?run=default&provider=gemini_3_1_pro" style="color:#2563eb; font-weight:600; text-decoration:underline;">Audit Workspace UI</a>. We are expanding to more Indian languages—if you can help verify documents in languages: Punjabi, Tamil, Telugu, Kannada, Gujarati, Odia, and Malayalam, we’d love to have your help!
+          </div>
+
+          <!-- Call for Collaborators Card -->
+          <div style="margin-top:12px; padding:12px 16px; background:#ffffff; border:1px solid #e5e7eb; border-radius:4px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div>
+              <div style="font-weight:600; color:#111827; font-size:13px;">
+                Join as an Indic Language Annotator
+              </div>
+              <div style="font-size:12px; color:#6b7280; margin-top:2px;">
+                Expanding beyond Marathi, Hindi, and English to <strong>7 additional Indic languages</strong>: Punjabi, Tamil, Telugu, Kannada, Gujarati, Odia, and Malayalam.
+              </div>
+            </div>
+            <a href="mailto:info@orgpedia.in?subject=IndicGovBench%20Annotation%20Collaboration" class="btn-tool" style="font-size:12px; text-decoration:none; padding:5px 12px; background:#111827; color:#ffffff; border:1px solid #111827;">
+              Contact: info@orgpedia.in ✉️
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="js/landing.js"></script>
+</body>
+</html>

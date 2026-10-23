@@ -1555,14 +1555,27 @@ body.landing-mode .landing-section {
   gap: 16px !important;
 }
 
-body.landing-mode .landing-section-header {
+body.landing-mode .landing-section-header,
+.landing-section-header {
   border-bottom: 1.5px solid #111827 !important;
   padding-bottom: 8px !important;
   display: flex !important;
   justify-content: space-between !important;
-  align-items: baseline !important;
+  align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 8px !important;
+  gap: 12px !important;
+}
+
+body.landing-mode .landing-section-header > div:first-child,
+.landing-section-header > div:first-child {
+  flex: 1 1 280px !important;
+  min-width: 0 !important;
+}
+
+body.landing-mode .landing-section-header .btn-tool,
+.landing-section-header .btn-tool {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
 }
 
 body.landing-mode .landing-section-title {

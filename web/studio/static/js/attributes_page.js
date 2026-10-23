@@ -6,6 +6,7 @@ import { AttributesView } from './views/attributes.js';
 
 class AttributesPageApp {
   constructor() {
+    window.attributesPageApp = this;
     const params = new URLSearchParams(window.location.search);
     this.currentRun = params.get('run') || 'default';
     this.view = new AttributesView(this);
@@ -20,14 +21,18 @@ class AttributesPageApp {
   }
 }
 
+let isBootstrapped = false;
+
 function bootstrapAttributesPage() {
-  if (!window.attributesPageApp) {
-    window.attributesPageApp = new AttributesPageApp();
+  if (isBootstrapped || window.attributesPageApp) {
+    return;
   }
+  isBootstrapped = true;
+  window.attributesPageApp = new AttributesPageApp();
 }
 
 if (document.readyState === 'loading') {
-  window.addEventListener('DOMContentLoaded', bootstrapAttributesPage);
+  window.addEventListener('DOMContentLoaded', bootstrapAttributesPage, { once: true });
 } else {
   bootstrapAttributesPage();
 }

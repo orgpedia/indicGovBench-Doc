@@ -144,7 +144,7 @@ export class DashboardApp {
             </svg>
             <span>Official Site</span>
           </a>
-          <a class="header-nav-link" href="https://github.com/orgpedia/indicGovBench" target="_blank" rel="noopener noreferrer" title="GitHub Repository">
+          <a class="header-nav-link" href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" title="GitHub Repository">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="#181717">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
             </svg>
@@ -249,7 +249,12 @@ export class DashboardApp {
   openProviderWorkspace(provider) {
     if (!this.confirmLeave()) return;
     if (window.location.pathname.includes('audit')) {
-      window.location.href = `provider.html?run=${encodeURIComponent(this.currentRun)}&provider=${encodeURIComponent(provider || this.selectedProvider)}`;
+      if (document.referrer && document.referrer.includes('provider') && window.history.length > 1) {
+        window.history.back();
+        return;
+      }
+      const targetProv = provider || this.selectedProvider;
+      window.location.href = `provider.html?run=${encodeURIComponent(this.currentRun)}&provider=${encodeURIComponent(targetProv)}`;
       return;
     }
     document.body.classList.remove('landing-mode');
@@ -388,6 +393,10 @@ export class DashboardApp {
     `;
 
     headerEl.querySelector('#btn-doc-back')?.addEventListener('click', () => {
+      if (document.referrer && document.referrer.includes('provider') && window.history.length > 1) {
+        window.history.back();
+        return;
+      }
       if (this.selectedProvider !== 'none') {
         this.openProviderWorkspace(this.selectedProvider);
       } else {
@@ -1636,14 +1645,18 @@ function escapeHtml(str) {
 }
 
 // Bootstrap on DOM ready
+let isAppBootstrapped = false;
+
 function bootstrapApp() {
-  if (!window.app) {
-    window.app = new DashboardApp();
+  if (isAppBootstrapped || window.app) {
+    return;
   }
+  isAppBootstrapped = true;
+  window.app = new DashboardApp();
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootstrapApp);
+  document.addEventListener('DOMContentLoaded', bootstrapApp, { once: true });
 } else {
   bootstrapApp();
 }

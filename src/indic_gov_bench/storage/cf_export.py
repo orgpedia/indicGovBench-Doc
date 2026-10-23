@@ -527,6 +527,7 @@ def bundle_static_assets(repo_root: Path, out_static_dir: Path) -> None:
         "index.html",
         "provider.html",
         "attributes.html",
+        "pricing.html",
         "audit.html",
         "protocol.html",
         "metrics.html",
@@ -535,6 +536,10 @@ def bundle_static_assets(repo_root: Path, out_static_dir: Path) -> None:
         src_f = src_static / item
         if src_f.is_file():
             shutil.copy2(src_f, out_static_dir / item)
+
+    # Copy precomputed provider workspace pages
+    for p_file in src_static.glob("provider_*.html"):
+        shutil.copy2(p_file, out_static_dir / p_file.name)
 
     # Also bundle metrics report if not already present
     if not (out_static_dir / "metrics.html").is_file():

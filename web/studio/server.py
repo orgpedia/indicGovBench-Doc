@@ -9,7 +9,7 @@ import argparse
 import json
 import mimetypes
 from http import HTTPStatus
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -34,19 +34,37 @@ from web.studio.api_handlers import (
 class Dashboard3Handler(SimpleHTTPRequestHandler):
     """Custom HTTP handler serving dashboard3 SPA, static assets, images, and REST APIs."""
 
+    timeout = 10.0  # Avoid hung sockets holding threads indefinitely
     db_path: Path = DEFAULT_DB_PATH
     static_dir: Path = Path(__file__).resolve().parent / "static"
     repo_root: Path = Path(__file__).resolve().parents[2]
 
+    def handle(self) -> None:
+        """Handle multiple requests on connection, catching client disconnects cleanly."""
+        try:
+            super().handle()
+        except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError, TimeoutError):
+            pass
+
+    def finish(self) -> None:
+        """Finish request handling, suppressing socket errors if client already disconnected."""
+        try:
+            super().finish()
+        except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError, TimeoutError):
+            pass
+
     def _send_json(self, data: dict | list, status_code: int = 200) -> None:
-        payload = json.dumps(data, ensure_ascii=False).encode("utf-8")
-        self.send_response(status_code)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Content-Length", str(len(payload)))
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
-        self.end_headers()
-        self.wfile.write(payload)
+        try:
+            payload = json.dumps(data, ensure_ascii=False).encode("utf-8")
+            self.send_response(status_code)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+            self.end_headers()
+            self.wfile.write(payload)
+        except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError):
+            pass
 
     def _send_error(self, message: str, status_code: int = 400) -> None:
         self._send_json({"status": "error", "message": message}, status_code=status_code)
@@ -229,10 +247,28 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
                 "attributes",
                 "coverage",
             ):
+                prov = query.get("provider", [""])[0]
+                if prov:
+                    pre_file = self.static_dir / f"provider_{prov}.html"
+                    if pre_file.is_file():
+                        self._serve_file(pre_file, "text/html; charset=utf-8")
+                        return
                 prov_file = self.static_dir / "provider.html"
                 if prov_file.is_file():
                     self._serve_file(prov_file, "text/html; charset=utf-8")
                     return
+
+        if path in ("/provider", "/provider.html"):
+            prov = query.get("provider", [""])[0]
+            if prov:
+                pre_file = self.static_dir / f"provider_{prov}.html"
+                if pre_file.is_file():
+                    self._serve_file(pre_file, "text/html; charset=utf-8")
+                    return
+            prov_file = self.static_dir / "provider.html"
+            if prov_file.is_file():
+                self._serve_file(prov_file, "text/html; charset=utf-8")
+                return
 
         req_path = path.lstrip("/")
         if not req_path:
@@ -406,6 +442,8 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
             self.send_header("Cache-Control", "no-cache, must-revalidate")
             self.end_headers()
             self.wfile.write(content)
+        except (ConnectionResetError, BrokenPipeError, ConnectionAbortedError):
+            pass
         except Exception as e:
             self._send_error(f"Error reading file: {e}", status_code=500)
 
@@ -413,7 +451,8 @@ class Dashboard3Handler(SimpleHTTPRequestHandler):
 def run_server(port: int = 8030, db_path: Path = DEFAULT_DB_PATH) -> None:
     Dashboard3Handler.db_path = db_path
     server_address = ("", port)
-    httpd = HTTPServer(server_address, Dashboard3Handler)
+    httpd = ThreadingHTTPServer(server_address, Dashboard3Handler)
+    httpd.daemon_threads = True
     print(f"🚀 IndicGovBench Dashboard3 running at http://localhost:{port}/")
     print(f"📁 Database connected: {db_path}")
     print("Press Ctrl+C to stop.")
