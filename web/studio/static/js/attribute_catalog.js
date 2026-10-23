@@ -119,9 +119,9 @@ export const ATTRIBUTE_CATALOG = [
       {
         "id": 15,
         "key": "signature_type",
-        "count": 111,
+        "count": 106,
         "total": 300,
-        "pct": "37.0%"
+        "pct": "35.3%"
       },
       {
         "id": 16,

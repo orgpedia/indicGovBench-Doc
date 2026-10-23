@@ -47,6 +47,32 @@ def get_color_for_score(score: float | None) -> str:
     return "#d97706"
 
 
+def format_rank_badge_html(
+    rank: int | None, total: int = 15, raw_val: str | None = None
+) -> str:
+    if rank is None:
+        return '<span class="text-faint">—</span>'
+    if rank == 1:
+        cls = "rank-1"
+    elif rank <= 3:
+        cls = "rank-top"
+    elif rank >= 11:
+        cls = "rank-worst"
+    else:
+        cls = "rank-mid"
+    title = f"Rank #{rank} of {total}" + (f" · Value: {raw_val}" if raw_val else "")
+    val_span = (
+        f'<span class="rank-sub-val">{html.escape(raw_val)}</span>'
+        if raw_val and raw_val != "—"
+        else ""
+    )
+    return (
+        f'<div class="rank-cell-wrapper">'
+        f'<span class="rank-badge {cls}" title="{html.escape(title)}">#{rank}</span>'
+        f'{val_span}</div>'
+    )
+
+
 def render_provider_html(
     docs_data: dict[str, Any],
     provider: str,
@@ -96,6 +122,22 @@ def render_provider_html(
         teds_val = d.get("TEDS")
         teds = f"{teds_val * 100:.1f}%" if teds_val is not None else "—"
 
+        ranks = d.get("ranks") or {}
+        rank_comp = ranks.get("composite_score")
+        rank_cer = ranks.get("textCER_norm")
+        rank_ned = ranks.get("e2eNED_norm")
+        rank_teds = ranks.get("TEDS")
+        rank_cost = ranks.get("cost_batch_inr")
+
+        comp_rank_html = format_rank_badge_html(rank_comp, 15, comp)
+        cer_rank_html = format_rank_badge_html(rank_cer, 15, cer)
+        ned_rank_html = format_rank_badge_html(rank_ned, 15, ned)
+        teds_rank_html = (
+            format_rank_badge_html(rank_teds, 15, teds)
+            if d.get("has_tables")
+            else '<span class="text-faint">—</span>'
+        )
+
         diffs = d.get("diff_counts") or {}
         diff_str = f"🟡 {diffs.get('subs', 0)} · 🔴 {diffs.get('missing', 0)} · 🟣 {diffs.get('extra', 0)}"
 
@@ -114,6 +156,7 @@ def render_provider_html(
 
         cost_val = d.get("cost_batch_inr")
         cost_batch = f"₹{cost_val:.2f}*" if cost_val is not None else "—"
+        cost_rank_html = format_rank_badge_html(rank_cost, 15, cost_batch)
 
         pin = d.get("prompt_tokens")
         pout = d.get("candidates_tokens")
@@ -135,13 +178,30 @@ def render_provider_html(
         row_html = f"""        <tr class="doc-row" data-doc-id="{d_id}">
           <td style="font-family:var(--font-mono); font-weight:700; color:var(--border-focus);">{d_id}</td>
           <td style="color:var(--text-muted); font-size:12px;">{html.escape(strata)}</td>
-          <td style="font-weight:700; color:{get_color_for_score(comp_val)};">{comp}</td>
-          <td>{cer}</td>
-          <td>{ned}</td>
-          <td>{teds}</td>
-          <td title="{html.escape(token_summary)}" style="font-family:var(--font-mono); font-size:12px;">
-            <span style="font-weight:700; color:#059669;">{cost_batch}</span>
-            {token_sub}
+          <td class="col-metric" data-col="composite_score" style="font-weight:700; color:{get_color_for_score(comp_val)};">
+            <span class="cell-val">{comp}</span>
+            <span class="cell-rank" style="display:none;">{comp_rank_html}</span>
+          </td>
+          <td class="col-metric" data-col="textCER_norm">
+            <span class="cell-val">{cer}</span>
+            <span class="cell-rank" style="display:none;">{cer_rank_html}</span>
+          </td>
+          <td class="col-metric" data-col="e2eNED_norm">
+            <span class="cell-val">{ned}</span>
+            <span class="cell-rank" style="display:none;">{ned_rank_html}</span>
+          </td>
+          <td class="col-metric" data-col="TEDS">
+            <span class="cell-val">{teds}</span>
+            <span class="cell-rank" style="display:none;">{teds_rank_html}</span>
+          </td>
+          <td class="col-metric" data-col="cost_batch_inr" title="{html.escape(token_summary)}" style="font-family:var(--font-mono); font-size:12px;">
+            <div class="cell-val">
+              <span style="font-weight:700; color:#059669;">{cost_batch}</span>
+              {token_sub}
+            </div>
+            <div class="cell-rank" style="display:none;">
+              {cost_rank_html}
+            </div>
           </td>
           <td style="font-size:11px;">{diff_str}</td>
           <td>{status_badge}</td>
@@ -183,7 +243,7 @@ def render_provider_html(
             </div>
           </div>
 
-          <!-- Filter Strip (§8) -->
+          <!-- Filter Strip (§8) + View Mode Toggle -->
           <div class="filter-strip">
             <input type="text" class="search-field" id="doc-search-input" placeholder="Search doc_id..." value="" />
             <div class="pill-bar">
@@ -192,6 +252,13 @@ def render_provider_html(
               <button class="pill-btn" data-filter="low_error">Low Error (≥85%)</button>
               <button class="pill-btn" data-filter="has_table">Has Table</button>
               <button class="pill-btn" data-filter="gt_review">GT Review</button>
+            </div>
+            <div class="view-mode-toggle">
+              <span style="font-size:11px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;">Mode:</span>
+              <div class="mode-slider-bar" id="provider-view-mode-toggle">
+                <button class="mode-slider-btn active" data-mode="values">📊 Values</button>
+                <button class="mode-slider-btn" data-mode="ranks">🏆 Ranks</button>
+              </div>
             </div>
           </div>
         </div>
@@ -206,19 +273,19 @@ def render_provider_html(
                 </th>
                 <th>Strata &amp; Attributes</th>
                 <th class="sortable" data-sort="composite_score" title="Sort by Composite Quality Score">
-                  Composite Score <span class="sort-icon sort-icon-idle">⇅</span>
+                  <span class="col-header-text">Composite Score</span> <span class="sort-icon sort-icon-idle">⇅</span>
                 </th>
                 <th class="sortable" data-sort="textCER_norm" title="Sort by Text Character Error Rate Score">
-                  Text CER <span class="sort-icon sort-icon-idle">⇅</span>
+                  <span class="col-header-text">Text CER</span> <span class="sort-icon sort-icon-idle">⇅</span>
                 </th>
                 <th class="sortable" data-sort="e2eNED_norm" title="Sort by End-to-End Normalized Edit Distance">
-                  e2e NED <span class="sort-icon sort-icon-idle">⇅</span>
+                  <span class="col-header-text">e2e NED</span> <span class="sort-icon sort-icon-idle">⇅</span>
                 </th>
                 <th class="sortable" data-sort="TEDS" title="Sort by Tree Edit Distance for Structure (Tables)">
-                  TEDS <span class="sort-icon sort-icon-idle">⇅</span>
+                  <span class="col-header-text">TEDS</span> <span class="sort-icon sort-icon-idle">⇅</span>
                 </th>
                 <th class="sortable" data-sort="cost_batch_inr" title="Sort by Batch Document Cost (INR)">
-                  Cost (₹)* <span class="sort-icon sort-icon-idle">⇅</span>
+                  <span class="col-header-text">Cost (₹)*</span> <span class="sort-icon sort-icon-idle">⇅</span>
                 </th>
                 <th>Diff Signals</th>
                 <th>Status</th>

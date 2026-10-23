@@ -10,6 +10,7 @@ class ProviderPageApp {
     const params = new URLSearchParams(window.location.search);
     this.currentRun = params.get('run') || 'default';
     this.selectedProvider = params.get('provider') || 'gemini_3_1_pro';
+    this.initialViewMode = params.get('mode') || params.get('view') || 'values';
 
     // Update header title and badge
     const badge = document.getElementById('provider-header-badge');

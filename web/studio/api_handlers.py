@@ -314,12 +314,47 @@ def get_documents_list(
         """
         rows = conn.execute(query, (provider, run_id, provider)).fetchall()
 
+        # Compute document-level ranks across all models for this provider
+        rank_query = """
+            WITH ranked AS (
+                SELECT 
+                    pe.doc_id,
+                    pe.provider,
+                    RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.composite_score DESC) AS rank_composite,
+                    RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.textCER_norm ASC) AS rank_cer,
+                    RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.e2eNED_norm ASC) AS rank_ned,
+                    CASE WHEN pe.TEDS IS NOT NULL THEN 
+                        RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.TEDS DESC)
+                    ELSE NULL END AS rank_teds,
+                    RANK() OVER (PARTITION BY pe.doc_id ORDER BY COALESCE(p.cost_batch_inr, pe.cost_batch_inr, 999999) ASC) AS rank_cost
+                FROM page_evaluations pe
+                LEFT JOIN predictions p ON pe.doc_id = p.doc_id AND pe.provider = p.provider
+                WHERE pe.run_id = ?
+            )
+            SELECT doc_id, rank_composite, rank_cer, rank_ned, rank_teds, rank_cost
+            FROM ranked
+            WHERE provider = ?
+        """
+        rank_rows = conn.execute(rank_query, (run_id, provider)).fetchall()
+        ranks_by_doc = {
+            r[0]: {
+                "composite_score": r[1],
+                "textCER_norm": r[2],
+                "e2eNED_norm": r[3],
+                "TEDS": r[4],
+                "cost_batch_inr": r[5],
+                "total_models": 15,
+            }
+            for r in rank_rows
+        }
+
         docs = []
         for r in rows:
             d = dict(r)
             meta = json.loads(d.pop("meta_json", "{}") or "{}")
             d["notes"] = meta.get("notes", "")
             d["diff_counts"] = json.loads(d.pop("diff_counts_json", "{}") or "{}")
+            d["ranks"] = ranks_by_doc.get(d["doc_id"], {})
 
             # Check staleness
             gt_edited_at = meta.get("gt_edited_at")

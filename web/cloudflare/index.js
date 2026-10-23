@@ -331,10 +331,44 @@ async function handleApiRequest(path, method, url, request, env) {
 
     const provQuery = `SELECT * FROM corpus_evaluations WHERE run_id = ? AND provider = ?`;
 
-    const [docRes, provRes] = await db.batch([
+    const rankQuery = `
+      WITH ranked AS (
+          SELECT 
+              pe.doc_id,
+              pe.provider,
+              RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.composite_score DESC) AS rank_composite,
+              RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.textCER_norm ASC) AS rank_cer,
+              RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.e2eNED_norm ASC) AS rank_ned,
+              CASE WHEN pe.TEDS IS NOT NULL THEN 
+                  RANK() OVER (PARTITION BY pe.doc_id ORDER BY pe.TEDS DESC)
+              ELSE NULL END AS rank_teds,
+              RANK() OVER (PARTITION BY pe.doc_id ORDER BY COALESCE(p.cost_batch_inr, pe.cost_batch_inr, 999999) ASC) AS rank_cost
+          FROM page_evaluations pe
+          LEFT JOIN predictions p ON pe.doc_id = p.doc_id AND pe.provider = p.provider
+          WHERE pe.run_id = ?
+      )
+      SELECT doc_id, rank_composite, rank_cer, rank_ned, rank_teds, rank_cost
+      FROM ranked
+      WHERE provider = ?
+    `;
+
+    const [docRes, provRes, rankRes] = await db.batch([
       db.prepare(docQuery).bind(provider, runId, provider),
       db.prepare(provQuery).bind(runId, provider),
+      db.prepare(rankQuery).bind(runId, provider),
     ]);
+
+    const ranksMap = {};
+    for (const rk of rankRes.results || []) {
+      ranksMap[rk.doc_id] = {
+        composite_score: rk.rank_composite,
+        textCER_norm: rk.rank_cer,
+        e2eNED_norm: rk.rank_ned,
+        TEDS: rk.rank_teds,
+        cost_batch_inr: rk.rank_cost,
+        total_models: 15,
+      };
+    }
 
     const docs = [];
     for (const r of docRes.results || []) {
@@ -345,6 +379,7 @@ async function handleApiRequest(path, method, url, request, env) {
 
       r.notes = meta.notes || "";
       r.diff_counts = diffCounts;
+      r.ranks = ranksMap[r.doc_id] || {};
       r.is_stale = false; // Always verified on edge
 
       const comp = r.composite_score;

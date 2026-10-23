@@ -1,6 +1,7 @@
 /**
  * provider_workspace.js — Provider Workspace & Document Filtering View (§3.3 & §8 in specs)
- * Lists all documents evaluated for a provider with search, strata tags, and error filters.
+ * Lists all documents evaluated for a provider with search, strata tags, error filters,
+ * and interactive View Mode toggle (Metric Values vs. Provider Ranks).
  */
 
 export class ProviderWorkspaceView {
@@ -10,6 +11,7 @@ export class ProviderWorkspaceView {
     this.searchQuery = '';
     this.sortColumn = 'doc_id';
     this.sortDirection = 'asc';
+    this.viewMode = app.initialViewMode || 'values'; // 'values' | 'ranks'
     this.docsData = null;
   }
 
@@ -19,7 +21,7 @@ export class ProviderWorkspaceView {
       try {
         this.docsData = JSON.parse(preloadedEl.textContent);
         this.docsData.all_documents = this.docsData.documents;
-        if (container.querySelector('.doc-list-table')) {
+        if (container.querySelector('.doc-list-table') && this.viewMode === 'values') {
           this.bindEvents(container);
           return;
         }
@@ -74,8 +76,13 @@ export class ProviderWorkspaceView {
     if (!this.sortColumn) return docs;
     const multiplier = this.sortDirection === 'asc' ? 1 : -1;
     return [...docs].sort((a, b) => {
-      const valA = a[this.sortColumn];
-      const valB = b[this.sortColumn];
+      let valA = a[this.sortColumn];
+      let valB = b[this.sortColumn];
+
+      if (this.viewMode === 'ranks' && this.sortColumn !== 'doc_id') {
+        valA = a.ranks ? a.ranks[this.sortColumn] : null;
+        valB = b.ranks ? b.ranks[this.sortColumn] : null;
+      }
 
       const aNull = valA === null || valA === undefined || (typeof valA === 'number' && isNaN(valA));
       const bNull = valB === null || valB === undefined || (typeof valB === 'number' && isNaN(valB));
@@ -102,6 +109,8 @@ export class ProviderWorkspaceView {
     const rawDocs = this.docsData?.documents || [];
     const docs = this.getSortedDocuments(rawDocs);
     const prov = this.app.selectedProvider;
+    const isRanksMode = this.viewMode === 'ranks';
+    const totalModels = 15;
 
     const compScore = pStats.composite_score !== undefined ? `${(pStats.composite_score * 100).toFixed(1)}%` : '—';
     const cerScore = pStats.textCER_norm !== undefined ? `${(pStats.textCER_norm * 100).toFixed(1)}%` : '—';
@@ -109,10 +118,21 @@ export class ProviderWorkspaceView {
 
     // Rows
     const rowsHtml = docs.map((d) => {
-      const comp = d.composite_score !== null ? `${(d.composite_score * 100).toFixed(1)}%` : '—';
-      const cer = d.textCER_norm !== null ? `${(d.textCER_norm * 100).toFixed(1)}%` : '—';
-      const ned = d.e2eNED_norm !== null ? `${(d.e2eNED_norm * 100).toFixed(1)}%` : '—';
-      const teds = d.TEDS !== null ? `${(d.TEDS * 100).toFixed(1)}%` : '—';
+      const compVal = d.composite_score;
+      const comp = compVal !== null && compVal !== undefined ? `${(compVal * 100).toFixed(1)}%` : '—';
+      const cerVal = d.textCER_norm;
+      const cer = cerVal !== null && cerVal !== undefined ? `${(cerVal * 100).toFixed(1)}%` : '—';
+      const nedVal = d.e2eNED_norm;
+      const ned = nedVal !== null && nedVal !== undefined ? `${(nedVal * 100).toFixed(1)}%` : '—';
+      const tedsVal = d.TEDS;
+      const teds = tedsVal !== null && tedsVal !== undefined ? `${(tedsVal * 100).toFixed(1)}%` : '—';
+
+      const ranks = d.ranks || {};
+      const rankComp = ranks.composite_score;
+      const rankCer = ranks.textCER_norm;
+      const rankNed = ranks.e2eNED_norm;
+      const rankTeds = ranks.TEDS;
+      const rankCost = ranks.cost_batch_inr;
 
       const diffs = d.diff_counts || {};
       const diffStr = `🟡 ${diffs.subs || 0} · 🔴 ${diffs.missing || 0} · 🟣 ${diffs.extra || 0}`;
@@ -131,18 +151,36 @@ export class ProviderWorkspaceView {
         ? `In: ${d.prompt_tokens.toLocaleString()} · Out: ${d.candidates_tokens.toLocaleString()}`
         : (d.gpu_seconds ? `${d.gpu_seconds.toFixed(2)}s GPU` : (d.billing_mode === 'fixed_page' ? '1 page flat' : ''));
 
+      // Metric Cells content based on isRanksMode
+      let compCell, cerCell, nedCell, tedsCell, costCell;
+      if (isRanksMode) {
+        compCell = formatRankBadge(rankComp, totalModels, comp);
+        cerCell = formatRankBadge(rankCer, totalModels, cer);
+        nedCell = formatRankBadge(rankNed, totalModels, ned);
+        tedsCell = d.has_tables ? formatRankBadge(rankTeds, totalModels, teds) : '<span class="text-faint">—</span>';
+        costCell = formatRankBadge(rankCost, totalModels, costBatch);
+      } else {
+        compCell = `<span style="font-weight:700; color:${getColorForScore(compVal)};">${comp}</span>`;
+        cerCell = cer;
+        nedCell = ned;
+        tedsCell = teds;
+        costCell = `
+          <div title="${escapeHtml(tokenSummary)}" style="font-family:var(--font-mono); font-size:12px;">
+            <span style="font-weight:700; color:#059669;">${costBatch}</span>
+            ${tokenSummary ? `<div class="text-faint" style="font-size:10px;">${escapeHtml(tokenSummary)}</div>` : ''}
+          </div>
+        `;
+      }
+
       return `
         <tr class="doc-row" data-doc-id="${escapeHtml(d.doc_id)}">
           <td style="font-family:var(--font-mono); font-weight:700; color:var(--border-focus);">${escapeHtml(d.doc_id)}</td>
           <td style="color:var(--text-muted); font-size:12px;">${escapeHtml(strata)}</td>
-          <td style="font-weight:700; color:${getColorForScore(d.composite_score)};">${comp}</td>
-          <td>${cer}</td>
-          <td>${ned}</td>
-          <td>${teds}</td>
-          <td title="${tokenSummary}" style="font-family:var(--font-mono); font-size:12px;">
-            <span style="font-weight:700; color:#059669;">${costBatch}</span>
-            ${tokenSummary ? `<div class="text-faint" style="font-size:10px;">${tokenSummary}</div>` : ''}
-          </td>
+          <td class="col-metric" data-col="composite_score">${compCell}</td>
+          <td class="col-metric" data-col="textCER_norm">${cerCell}</td>
+          <td class="col-metric" data-col="e2eNED_norm">${nedCell}</td>
+          <td class="col-metric" data-col="TEDS">${tedsCell}</td>
+          <td class="col-metric" data-col="cost_batch_inr">${costCell}</td>
           <td style="font-size:11px;">${diffStr}</td>
           <td>${statusBadge}</td>
           <td style="text-align:right;">
@@ -154,6 +192,30 @@ export class ProviderWorkspaceView {
 
     const totSpend = pStats.total_batch_cost_inr !== undefined && pStats.total_batch_cost_inr !== null ? `₹${pStats.total_batch_cost_inr.toFixed(2)}*` : null;
     const totSavings = pStats.total_savings_inr ? `Save ₹${pStats.total_savings_inr.toFixed(2)} (50%)` : null;
+
+    const headers = isRanksMode ? {
+      comp: 'Composite Rank',
+      cer: 'CER Rank',
+      ned: 'NED Rank',
+      teds: 'TEDS Rank',
+      cost: 'Cost Rank',
+      compTooltip: 'Sort by Composite Quality Rank (Rank 1 = Highest Quality)',
+      cerTooltip: 'Sort by Character Error Rate Rank (Rank 1 = Lowest Error)',
+      nedTooltip: 'Sort by Normalized Edit Distance Rank (Rank 1 = Lowest Edit Distance)',
+      tedsTooltip: 'Sort by Table Structure Accuracy Rank (Rank 1 = Highest Similarity)',
+      costTooltip: 'Sort by Batch Document Cost Rank (Rank 1 = Cheapest Inference)',
+    } : {
+      comp: 'Composite Score',
+      cer: 'Text CER',
+      ned: 'e2e NED',
+      teds: 'TEDS',
+      cost: 'Cost (₹)*',
+      compTooltip: 'Sort by Composite Quality Score',
+      cerTooltip: 'Sort by Text Character Error Rate Score',
+      nedTooltip: 'Sort by End-to-End Normalized Edit Distance',
+      tedsTooltip: 'Sort by Tree Edit Distance for Structure (Tables)',
+      costTooltip: 'Sort by Batch Document Cost (INR)',
+    };
 
     container.innerHTML = `
       <div class="workspace-container">
@@ -173,7 +235,7 @@ export class ProviderWorkspaceView {
             </div>
           </div>
 
-          <!-- Filter Strip (§8) -->
+          <!-- Filter Strip (§8) + View Mode Toggle -->
           <div class="filter-strip">
             <input type="text" class="search-field" id="doc-search-input" placeholder="Search doc_id..." value="${escapeHtml(this.searchQuery)}" />
             <div class="pill-bar">
@@ -182,6 +244,13 @@ export class ProviderWorkspaceView {
               <button class="pill-btn ${this.currentFilter === 'low_error' ? 'active' : ''}" data-filter="low_error">Low Error (≥85%)</button>
               <button class="pill-btn ${this.currentFilter === 'has_table' ? 'active' : ''}" data-filter="has_table">Has Table</button>
               <button class="pill-btn ${this.currentFilter === 'gt_review' ? 'active' : ''}" data-filter="gt_review">GT Review</button>
+            </div>
+            <div class="view-mode-toggle">
+              <span style="font-size:11px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;">Mode:</span>
+              <div class="mode-slider-bar" id="provider-view-mode-toggle">
+                <button class="mode-slider-btn ${!isRanksMode ? 'active' : ''}" data-mode="values">📊 Values</button>
+                <button class="mode-slider-btn ${isRanksMode ? 'active' : ''}" data-mode="ranks">🏆 Ranks</button>
+              </div>
             </div>
           </div>
         </div>
@@ -195,20 +264,20 @@ export class ProviderWorkspaceView {
                   Document ID ${this.renderSortIcon('doc_id')}
                 </th>
                 <th>Strata & Attributes</th>
-                <th class="sortable ${this.sortColumn === 'composite_score' ? 'active-sort' : ''}" data-sort="composite_score" title="Sort by Composite Quality Score">
-                  Composite Score ${this.renderSortIcon('composite_score')}
+                <th class="sortable ${this.sortColumn === 'composite_score' ? 'active-sort' : ''}" data-sort="composite_score" title="${headers.compTooltip}">
+                  <span class="col-header-text">${headers.comp}</span> ${this.renderSortIcon('composite_score')}
                 </th>
-                <th class="sortable ${this.sortColumn === 'textCER_norm' ? 'active-sort' : ''}" data-sort="textCER_norm" title="Sort by Text Character Error Rate Score">
-                  Text CER ${this.renderSortIcon('textCER_norm')}
+                <th class="sortable ${this.sortColumn === 'textCER_norm' ? 'active-sort' : ''}" data-sort="textCER_norm" title="${headers.cerTooltip}">
+                  <span class="col-header-text">${headers.cer}</span> ${this.renderSortIcon('textCER_norm')}
                 </th>
-                <th class="sortable ${this.sortColumn === 'e2eNED_norm' ? 'active-sort' : ''}" data-sort="e2eNED_norm" title="Sort by End-to-End Normalized Edit Distance">
-                  e2e NED ${this.renderSortIcon('e2eNED_norm')}
+                <th class="sortable ${this.sortColumn === 'e2eNED_norm' ? 'active-sort' : ''}" data-sort="e2eNED_norm" title="${headers.nedTooltip}">
+                  <span class="col-header-text">${headers.ned}</span> ${this.renderSortIcon('e2eNED_norm')}
                 </th>
-                <th class="sortable ${this.sortColumn === 'TEDS' ? 'active-sort' : ''}" data-sort="TEDS" title="Sort by Tree Edit Distance for Structure (Tables)">
-                  TEDS ${this.renderSortIcon('TEDS')}
+                <th class="sortable ${this.sortColumn === 'TEDS' ? 'active-sort' : ''}" data-sort="TEDS" title="${headers.tedsTooltip}">
+                  <span class="col-header-text">${headers.teds}</span> ${this.renderSortIcon('TEDS')}
                 </th>
-                <th class="sortable ${this.sortColumn === 'cost_batch_inr' ? 'active-sort' : ''}" data-sort="cost_batch_inr" title="Sort by Batch Document Cost (INR)">
-                  Cost (₹)* ${this.renderSortIcon('cost_batch_inr')}
+                <th class="sortable ${this.sortColumn === 'cost_batch_inr' ? 'active-sort' : ''}" data-sort="cost_batch_inr" title="${headers.costTooltip}">
+                  <span class="col-header-text">${headers.cost}</span> ${this.renderSortIcon('cost_batch_inr')}
                 </th>
                 <th>Diff Signals</th>
                 <th>Status</th>
@@ -235,6 +304,25 @@ export class ProviderWorkspaceView {
       }
     });
 
+    // View Mode Toggle (Option A Segmented Slider)
+    container.querySelectorAll('.mode-slider-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetMode = btn.dataset.mode;
+        if (this.viewMode === targetMode) return;
+        this.viewMode = targetMode;
+
+        // When switching to ranks mode and sorting by a metric, default to ascending (Rank 1 at top)
+        if (this.viewMode === 'ranks' && this.sortColumn !== 'doc_id') {
+          this.sortDirection = 'asc';
+        } else if (this.viewMode === 'values' && this.sortColumn === 'composite_score') {
+          this.sortDirection = 'desc';
+        }
+
+        this.renderContent(container);
+      });
+    });
+
     // Column Header Sorting
     container.querySelectorAll('th.sortable').forEach((th) => {
       th.addEventListener('click', () => {
@@ -244,8 +332,13 @@ export class ProviderWorkspaceView {
           this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
         } else {
           this.sortColumn = sortKey;
-          // Metrics default to descending on first click, doc_id to ascending
-          this.sortDirection = sortKey === 'doc_id' ? 'asc' : 'desc';
+          if (this.viewMode === 'ranks' && sortKey !== 'doc_id') {
+            // In Rank Mode: Rank 1 is best! First click sorts ascending (1, 2, 3...) to show BEST first
+            this.sortDirection = 'asc';
+          } else {
+            // In Values Mode:
+            this.sortDirection = (sortKey === 'doc_id' || sortKey === 'textCER_norm' || sortKey === 'e2eNED_norm' || sortKey === 'cost_batch_inr') ? 'asc' : 'desc';
+          }
         }
         this.renderContent(container);
       });
@@ -254,7 +347,6 @@ export class ProviderWorkspaceView {
     // Search Input
     const searchInput = container.querySelector('#doc-search-input');
     if (searchInput) {
-      // Restore cursor position if focused
       searchInput.addEventListener('input', (e) => {
         this.searchQuery = e.target.value.trim();
         this.fetchAndRender(container);
@@ -271,12 +363,44 @@ export class ProviderWorkspaceView {
 
     // Document Row Click
     container.querySelectorAll('.doc-row').forEach((row) => {
-      row.addEventListener('click', () => {
+      row.addEventListener('click', (e) => {
+        // Ignore clicks on audit button or inside buttons
+        if (e.target.closest('button')) return;
         const docId = row.dataset.docId;
         this.app.loadDocument(docId, this.app.selectedProvider);
       });
     });
+
+    // Audit Button Click
+    container.querySelectorAll('.btn-open-doc').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const docId = btn.dataset.docId;
+        this.app.loadDocument(docId, this.app.selectedProvider);
+      });
+    });
   }
+}
+
+function formatRankBadge(rank, total = 15, rawValue = null) {
+  if (rank === null || rank === undefined) {
+    return '<span class="text-faint">—</span>';
+  }
+  let cls = 'rank-mid';
+  if (rank === 1) {
+    cls = 'rank-1';
+  } else if (rank <= 3) {
+    cls = 'rank-top';
+  } else if (rank >= 11) {
+    cls = 'rank-worst';
+  }
+  const title = rawValue !== null && rawValue !== undefined
+    ? `Rank #${rank} of ${total} · Value: ${rawValue}`
+    : `Rank #${rank} of ${total}`;
+  const valSpan = (rawValue !== null && rawValue !== undefined && rawValue !== '—')
+    ? `<span class="rank-sub-val">${escapeHtml(rawValue)}</span>`
+    : '';
+  return `<div class="rank-cell-wrapper"><span class="rank-badge ${cls}" title="${escapeHtml(title)}">#${rank}</span>${valSpan}</div>`;
 }
 
 function getColorForScore(score) {
