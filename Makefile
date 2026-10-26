@@ -251,7 +251,7 @@ BATCH_PROVIDERS    := gemini_3_1_pro gemini_3_8_flash gemini_3_5_flash_lite \
                       claude_haiku_4_5 claude_sonnet_5_5 \
                       paddleocr_hpd qwen3_vl_8b tesseract
 
-REALTIME_PROVIDERS := datalab_api mistral_api sarvam_api
+REALTIME_PROVIDERS := datalab_api mistral_api sarvam_api documentai_form_parser documentai_api
 
 # Complete list of supported benchmark models (excluding internal helper 'gcv_api')
 VALID_PROVIDERS    := $(BATCH_PROVIDERS) $(REALTIME_PROVIDERS)
@@ -333,7 +333,7 @@ gcv:
 raw:
 	@if [ -z "$(PROVIDER)" ]; then echo "❌ Please specify PROVIDER=<name>"; exit 1; fi
 	@mkdir -p data/raw_responses/$(PROVIDER)
-	@if [ "$(REALTIME)" = "1" ] || [ "$(BATCH)" = "0" -a -n "$(DOC)" -a "$(BATCH)" != "1" ]; then \
+	@if [ "$(REALTIME)" = "1" ] || [ -n "$(filter $(PROVIDER),$(REALTIME_PROVIDERS))" ] || [ "$(BATCH)" = "0" -a -n "$(DOC)" -a "$(BATCH)" != "1" ]; then \
 		if [ -n "$(DOC)" ]; then \
 			PYTHONPATH=src $(PY_EXEC) -m indic_gov_bench.providers.query_api --provider $(PROVIDER) --input-pdf data/pdfs/$(DOC).pdf --output-json data/raw_responses/$(PROVIDER)/$(DOC).json $(if $(VERBOSE),--verbose $(VERBOSE),); \
 		else \

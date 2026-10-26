@@ -1,0 +1,106 @@
+{
+  "doc_id": "order_en_archive_009",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        232.2,
+        27.3,
+        397.5,
+        27.3,
+        397.5,
+        48.8,
+        232.2,
+        48.8
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS\n(as on 11.12.2018)"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        92.0,
+        49.2,
+        545.8,
+        49.2,
+        545.8,
+        169.2,
+        92.0,
+        169.2
+      ],
+      "html": "<table><thead><tr><td>Shri Narendra Modi</td><td>Prime Minister and also in-charge of:</td></tr></thead><tbody><tr><td></td><td>Ministry of Personnel, Public Grievances and Pensions;</td></tr><tr><td></td><td>Department of Atomic Energy;</td></tr><tr><td></td><td>Department of Space;</td></tr><tr><td></td><td>All important policy issues, and</td></tr><tr><td></td><td>All other portfolios not allocated to any Minister.</td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        262.6,
+        178.4,
+        366.3,
+        178.4,
+        366.3,
+        186.5,
+        262.6,
+        186.5
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        90.6,
+        190.8,
+        547.9,
+        190.8,
+        547.9,
+        730.2,
+        90.6,
+        730.2
+      ],
+      "html": "<table><thead><tr><td>1.</td><td>Shri Raj Nath Singh</td><td>Minister of Home Affairs.</td></tr></thead><tbody><tr><td>2.</td><td>Smt. Sushma Swaraj</td><td>Minister of External Affairs.</td></tr><tr><td>3.</td><td>Shri Arun Jaitley</td><td>Minister of Finance ;</td><td>Minister of Finance ; and Minister of Corporate Affairs.</td></tr><tr><td>4.</td><td>Shri Nitin Jairam Gadkari</td><td>Minister of Road Transport and Highways; Minister of Shipping; and Minister of Water Resources, River Development and Ganga Rejuvenation.</td></tr><tr><td>5.</td><td>Shri Suresh Prabhu</td><td>Minister of Commerce and Industry; and Minister of Civil Aviation.</td></tr><tr><td>6.</td><td>Shri D.V. Sadananda Gowda</td><td>Minister of Statistics and Programme Implementation; and Minister of Chemicals and Fertilizers.</td></tr><tr><td>7.</td><td>Sushri Uma Bharati</td><td>Minister of Drinking Water and Sanitation.</td></tr><tr><td>8.</td><td>Shri Ramvilas Paswan</td><td>Minister of Consumer Affairs, Food and Public Distribution.</td></tr><tr><td>9.</td><td>Smt. Maneka Sanjay Gandhi</td><td>Minister of Women and Child Development.</td></tr><tr><td>10.</td><td>Shri Ravi Shankar Prasad</td><td>Minister of Law and Justice; and Minister of Electronics and Information Technology.</td></tr><tr><td>11.</td><td>Shri Jagat Prakash Nadda</td><td>Minister of Health and Family Welfare.</td></tr><tr><td>12.</td><td>Shri Anant Geete</td><td>Minister of Heavy Industries and Public Enterprises.</td></tr><tr><td>13.</td><td>Smt. Harsimrat Kaur Badal</td><td>Minister of Food Processing Industries.</td></tr><tr><td>14.</td><td>Shri Narendra Singh Tomar</td><td>Minister of Rural Development; Minister of Panchayati Raj; Minister of Mines; and Minister of Parliamentary Affairs.</td></tr><tr><td>15.</td><td>Shri Chaudhary Birender Singh</td><td>Minister of Steel.</td></tr><tr><td>16.</td><td>Shri Jual Oram</td><td>Minister of Tribal Affairs.</td></tr><tr><td>17.</td><td>Shri Radha Mohan Singh</td><td>Minister of Agriculture and Farmers Welfare.</td></tr><tr><td>18.</td><td>Shri Thaawar Chand Gehlot</td><td>Minister of Social Justice and Empowerment.</td></tr><tr><td>19.</td><td>Smt. Smriti Zubin Irani</td><td>Minister of Textiles.</td></tr><tr><td>20.</td><td>Dr. Harsh Vardhan</td><td>Minister of Science and Technology; Minister of Earth Sciences; and Minister of Environment, Forest and Climate Change.</td></tr><tr><td>21.</td><td>Shri Prakash Javadekar</td><td>Minister of Human Resource Development.</td></tr></tbody></table>"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        524.6,
+        733.0,
+        529.2,
+        733.0,
+        529.2,
+        739.0,
+        524.6,
+        739.0
+      ],
+      "text": "1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

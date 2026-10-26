@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_current_026",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        54.2,
+        41.1,
+        530.9,
+        40.7,
+        531.3,
+        711.8,
+        54.5,
+        712.1
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td></td><td></td><td></td><td></td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>Allotment Year:</td><td>2019</td><td></td><td></td></tr><tr><td>194</td><td>श्रेया गुप्ता</td><td>RR</td><td>20/05/1992</td><td></td><td>On Central Deputation</td><td></td></tr><tr><td></td><td>Shreya Gupta B.A. (Hons.)</td><td>20191050 Delhi</td><td>26/08/2019</td><td></td><td>07/08/2025</td><td>Level 12</td><td></td></tr><tr><td>195</td><td>अभिषेक गुप्ता Abhishek Gupta LLB</td><td>Punjab</td><td>20191061</td><td>RR</td><td>11/06/1993 26/08/2019</td><td></td><td>SP, Pudukottai District 04/01/2025</td><td>Level 11</td><td></td></tr><tr><td>196</td><td>यादव गिरीश अशोक Yadav Girish Ashok B. Tech.</td><td>RR</td><td>20191064</td><td>Maharashtra</td><td>12/07/1995</td><td>16/12/2019</td><td></td><td>SP, Tiruppur District</td><td>02/01/2025 Level 11</td><td></td></tr><tr><td>197</td><td>गौतम गोयल</td><td>RR</td><td>10/09/1992</td><td></td><td>SP, Salem District</td><td></td></tr><tr><td></td><td>Gautam Goyal M.Sc.</td><td>20191065 Haryana</td><td>26/08/2019</td><td></td><td>14/08/2024</td><td>Level 11</td><td></td></tr><tr><td>198</td><td>अरविन्द बी के Arvind B K Β.Ε.</td><td>RR</td><td>20191076</td><td>Tamil Nadu</td><td>03/11/1992</td><td>16/12/2019</td><td></td><td>Level 11</td><td>SP, Madurai District 01/03/2024</td><td></td></tr><tr><td>199</td><td></td><td>200</td><td>201</td><td>अरुण कबीलान ऐ के Arun Kabilan A K Tech बृंदा एस S अयमान जमाल B. Brinda Μ.Α.</td><td>Tech B.</td><td>बृंदा एस</td><td>S Brinda Μ.Α.</td><td>RR</td><td>20191092</td><td>Tamil Nadu</td><td></td><td>RR</td><td>20191106 Karnataka</td><td>RR</td><td>15/09/1995</td><td>16/12/2019</td><td></td><td>10/08/1992</td><td>26/08/2019</td><td>15/08/1988</td><td></td><td></td><td></td><td>AIGP, HQ, O/o the DGP &amp;</td><td>HoPF, Chennai</td><td>27/06/2025</td><td>Level 11</td><td>SP, Commandant, Regimental</td><td>Centre, Avadi 10/03/2025 Level 11</td><td>SP, Ranipet District</td><td></td><td></td><td></td></tr><tr><td></td><td>Ayman Jamal B.Sc.</td><td>20191109 Uttar Pradesh</td><td>26/08/2019</td><td></td><td>21/07/2025</td><td>Level 11</td><td></td></tr><tr><td></td><td></td><td>Allotment Year: 2020</td><td></td><td></td></tr><tr><td>202</td><td>रघुपति बी.</td><td>Ragupathi B. Β.Ε.</td><td>RR</td><td>20201070 Tamil Nadu</td><td>03/05/1991</td><td>28/12/2020</td><td></td><td>SP, Aide-de-camp Hon&#x27;ble Govr TN Raj Bhj Bhavan 07/01/2025 Level 11</td><td></td></tr><tr><td>203</td><td>विवेकानंद शुक्ला Vivekananda Shukla B.Sc.(Physics)</td><td>RR</td><td>20201095</td><td>Bihar</td><td>16/08/1996</td><td>28/12/2020</td><td></td><td>SP, Thiruvallur District</td><td>17/07/2025 Level 11</td><td></td></tr><tr><td>204</td><td>मधु कुमारी Madhu Kumari Master in Social Work</td><td>RR</td><td>20201104</td><td>Bihar</td><td>07/01/1988</td><td>10/10/2020</td><td></td><td>SP, Comdt, Tamil Nadu Special Police, VI BN</td><td>Madurai 01/01/2025 Level 11</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        289.2,
+        731.2,
+        304.8,
+        731.2,
+        304.8,
+        736.9,
+        289.2,
+        736.9
+      ],
+      "text": "341"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

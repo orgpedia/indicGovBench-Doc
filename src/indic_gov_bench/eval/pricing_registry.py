@@ -500,6 +500,46 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         "formula": "pages * rate_per_page * USD_TO_INR",
         "batch_formula": "realtime_cost",
     },
+    "documentai_form_parser": {
+        "name": "Google Document AI (Form Parser)",
+        "archetype": "fixed_page",
+        "native_currency": "USD",
+        "rate_per_page": 0.0300,  # $30.00 / 1,000 pages ($0.030 per page)
+        "supports_batching": False,
+        "batch_discount_pct": 0.0,
+        "pricing_source": "Google Cloud Document AI Pricing",
+        "source_url": "https://cloud.google.com/document-ai/pricing#general-processors",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-24",
+        "billing_unit": "USD per page",
+        "how_computed": (
+            "Standard General Processor Form Parser rate ($30.00 per 1,000 pages / $0.030 per page). "
+            "Converted to INR ($1=₹100)."
+        ),
+        "formula": "pages * rate_per_page * USD_TO_INR",
+        "batch_formula": "realtime_cost",
+    },
+    "documentai_api": {
+        "name": "Google Document AI (Form Parser)",
+        "archetype": "fixed_page",
+        "native_currency": "USD",
+        "rate_per_page": 0.0300,  # $30.00 / 1,000 pages ($0.030 per page)
+        "supports_batching": False,
+        "batch_discount_pct": 0.0,
+        "pricing_source": "Google Cloud Document AI Pricing",
+        "source_url": "https://cloud.google.com/document-ai/pricing#general-processors",
+        "wayback_url": None,
+        "models_dev_id": None,
+        "last_synced_at": "2026-10-24",
+        "billing_unit": "USD per page",
+        "how_computed": (
+            "Standard General Processor Form Parser rate ($30.00 per 1,000 pages / $0.030 per page). "
+            "Converted to INR ($1=₹100)."
+        ),
+        "formula": "pages * rate_per_page * USD_TO_INR",
+        "batch_formula": "realtime_cost",
+    },
     # 5. Compute-Time Providers (Open Source on Modal.com)
     "paddleocr_hpd": {
         "name": "PaddleOCR HPD-Parsing (Modal H100)",
@@ -848,10 +888,12 @@ def extract_usage_from_raw(
             "batch_metrics": None,
         }
 
-    # 6. Fixed-page providers: Sarvam, Datalab, GCV
+    # 6. Fixed-page providers: Sarvam, Datalab, GCV, Document AI
     pages = 1
     if "pages" in raw_json and isinstance(raw_json["pages"], list):
         pages = len(raw_json["pages"]) or 1
+    elif "document" in raw_json and isinstance(raw_json["document"], dict):
+        pages = len(raw_json["document"].get("pages", [])) or 1
     elif "metadata" in raw_json and isinstance(raw_json["metadata"], dict):
         stats = raw_json["metadata"].get("page_stats", [])
         if isinstance(stats, list):

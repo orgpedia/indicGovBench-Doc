@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_current_023",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        54.2,
+        42.8,
+        517.8,
+        42.8,
+        517.8,
+        681.0,
+        54.2,
+        681.0
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td></td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>436</td><td>रामटेके सुमित सुधाकर</td><td>RR</td><td>20/10/1993</td><td>ACP Police Commissionerate,</td><td></td></tr><tr><td></td><td>Ramteke Sumit Sudhakar B.Tech</td><td>20221099</td><td>Maharashtra</td><td>29/08/2022</td><td>Kanpur Nagar 01/01/2025 Level 10</td><td></td></tr><tr><td>437</td><td>भोसले विनायक गोपाल Bhosale Vinayak Gopal Β.Α.</td><td>RR</td><td>20221104</td><td>Maharashtra</td><td>13/02/1988</td><td>29/08/2022</td><td>ASP, Sitapur</td><td>26/07/2025 Level 10</td><td></td></tr><tr><td>438</td><td>मनोज कुमार यादव Manoj Kumar Yadav B.Sc. (Hons)</td><td>RR</td><td>20221110</td><td>Uttar Pradesh</td><td>07/04/1996</td><td>19/12/2022</td><td>ASP, Saharanpur</td><td>01/09/2024</td><td>Level 10</td><td></td></tr><tr><td>439</td><td>माविस टाक Mavis Tak B.A. (Hons)</td><td>RR 20221112</td><td>Rajasthan</td><td>24/09/1996</td><td>29/08/2022</td><td>ASP Banda</td><td>26/07/2025</td><td>Level 10</td><td></td></tr><tr><td>440</td><td>ईशान सोनी</td><td>RR</td><td>30/04/1996</td><td>ACP (U/T) Police</td><td></td></tr><tr><td></td><td>Ishan Soni MBBS</td><td>20221117 Rajasthan</td><td>29/08/2022</td><td>Commissionerate Varanasi</td><td>01/09/2024 Level 10</td><td></td></tr><tr><td>441</td><td>आलोक कुमार Alok Kumar B.A. (Hons)</td><td>RR</td><td>20221128</td><td>Uttar Pradesh</td><td>19/12/2022</td><td>28/11/1994</td><td>ASP Sambhal</td><td>17/03/2025</td><td>Level 10</td><td></td></tr><tr><td>442</td><td>गौतम राय</td><td>RR</td><td>26/02/1992</td><td>ASP Bijnor</td><td></td></tr><tr><td></td><td>Gautam Rai B.Tech</td><td>20221195 Uttar Pradesh</td><td>13/11/2023</td><td>26/07/2025</td><td>Level 10</td><td></td></tr><tr><td>443</td><td>राजकुमार मीणा</td><td>RR</td><td>22/07/1997</td><td>ACP Police Commissionerate</td><td></td></tr><tr><td></td><td>Rajkumar Meena</td><td>B.Tech</td><td>20221160 Rajasthan</td><td>29/08/2022</td><td>Prayagraj 01/09/2024</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>Level 10</td><td></td></tr><tr><td></td><td></td><td></td><td>Allotment Year:</td><td>2023</td><td></td></tr><tr><td>444</td><td>संचित शर्मा</td><td>Sanchit Sharma B. Tech</td><td>RR</td><td>20231003 Madhya Pradesh</td><td>01/01/2000</td><td>13/11/2023</td><td>ASP (U/T) Unnao 29/12/2025 Level 10</td><td></td></tr><tr><td>445</td><td>प्रशांत राज</td><td>RR</td><td>07/07/1998</td><td>ASP Pratapgarh</td><td></td></tr><tr><td></td><td>Prashant Raj B. Tech</td><td>20231006 Uttar Pradesh</td><td>01/08/2023</td><td>26/07/2025 Level 10</td><td></td></tr><tr><td>446</td><td>सिद्धार्थ के मिश्रा Siddharth K Misra B. Tech.</td><td>RR</td><td>20231009</td><td>Uttar Pradesh</td><td>30/09/1996</td><td>01/08/2023</td><td>ASP Muzaffar Nagar</td><td>26/07/2025</td><td>Level 10</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        289.2,
+        708.9,
+        304.0,
+        708.9,
+        304.0,
+        714.6,
+        289.2,
+        714.6
+      ],
+      "text": "408"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

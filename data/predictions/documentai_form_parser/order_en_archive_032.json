@@ -1,0 +1,90 @@
+{
+  "doc_id": "order_en_archive_032",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        406.4,
+        34.4,
+        440.9,
+        34.7,
+        440.5,
+        54.9,
+        406.0,
+        54.6
+      ],
+      "text": "160"
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        43.6,
+        54.3,
+        487.8,
+        59.2,
+        483.7,
+        350.0,
+        39.4,
+        345.4
+      ],
+      "html": "<table><thead><tr><td>20</td><td>Shri</td><td>Sontosh Mohan Dev</td><td>Minister of Heavy Industries Enterprises.</td><td>&amp;</td><td>Public</td></tr></thead><tbody><tr><td>21</td><td>Prof. Saif-ud-din Soz</td><td>Minister of Water Resources.</td><td></td></tr><tr><td>22</td><td>Shri Raghuvansh Prasad Singh</td><td>Minister of Rural Development.</td><td></td></tr><tr><td>23</td><td>Shri Priyaranjan Dasmunsi</td><td>Minister without Portfolio.</td><td></td></tr><tr><td>25</td><td>24</td><td>Shri Mani Shankar Aiyar</td><td>Smt. Meira Kumar</td><td>Minister of Panchayati Raj and Minister of Development of North Eastern Region.</td></tr><tr><td>26</td><td>28</td><td>29</td><td>Shri Murli Deora</td><td>Smt.</td><td>27 Smt. Ambika Soni</td><td>.</td><td>Shri A. Raja</td><td>Shri Kapil Sibal</td><td>Minister of Social Justice &amp; Empowerment. Minister of Petroleum &amp; Natural Gas. :</td><td>Minister of Tourism and Minister of Culture. Minister of Communications and Information Technology.</td><td>Minister of Science &amp; Technology and Minister of Earth Sciences.</td></tr><tr><td>30</td><td>Shri Prem Chand Gupta</td><td>Minister of Corporate Affairs.</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        114.8,
+        361.9,
+        368.5,
+        371.5,
+        368.1,
+        381.1,
+        114.4,
+        371.5
+      ],
+      "text": "MINISTERS OF STATE (INDEPENDENT CHARGE)"
+    },
+    {
+      "id": 3,
+      "type": "table",
+      "order": 3,
+      "poly": [
+        32.2,
+        388.4,
+        457.5,
+        392.7,
+        453.4,
+        710.0,
+        28.0,
+        705.7
+      ],
+      "html": "<table><thead><tr><td>1 Smt. Renuka Chowdhury</td><td>Minister of State (Independent Charge) of the Ministry of Women &amp; Child Development.</td></tr></thead><tbody><tr><td>2 Shri Subodh Kant Sahay</td><td>Minister of State (Independent Charge) of the Ministry of Food Processing Industries.</td></tr><tr><td>3 Shri Vilas Muttemwar</td><td>Minister of State (Independent Charge) of the Ministry of New and Renewable Energy.</td></tr><tr><td>4 Kumari Selja</td></tr><tr><td>Minister of State (Independent Ministry of Housing and Alleviation.</td><td>Charge) of the Urban Poverty</td></tr><tr><td>5 Shri Praful Patel</td><td>6 Shri G.K. Vasan</td><td>7</td><td>Dr. M.S. Gill</td><td>8</td><td>Smt. Panabaka Lakshmi</td><td>Minister of State (Independent Charge) of the Ministry of Civil Aviation.</td><td>Minister of State (Independent Charge) of the Ministry of Statistics &amp; Programme Implementation and Minister of State (Independent Charge) of the Ministry of Labour &amp; Employment . Minister of State (Independent Charge) of the Ministry of Youth Affairs &amp; Sports. Minister of State (Independent Charge) of the Ministry of Health &amp; Family Welfare.</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

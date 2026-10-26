@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_current_024",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        49.2,
+        39.6,
+        522.8,
+        39.6,
+        522.8,
+        671.1,
+        49.2,
+        671.1
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td></td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td></tr><tr><td>447</td><td>आशना चौधरी</td><td>RR</td><td>28/08/1998</td><td>ASP Mathura</td></tr><tr><td></td><td>Aashna Chaudhary</td><td>B.A.(Hons)</td><td>20231013</td><td>Uttar Pradesh</td><td>01/08/2023</td><td>26/07/2025</td><td>Level 10</td></tr><tr><td>448</td><td>विश्वजीत सौर्य</td><td>RR</td><td>03/05/1991</td><td>ASP Sidharth Nagar</td></tr><tr><td></td><td>Vishwajeet Souryan B. Tech</td><td>20231019 Uttar Pradesh</td><td>01/08/2023</td><td>26/07/2025 Level 10</td></tr><tr><td>449</td><td>शिवम आशुतोष Shivam Ashutosh</td><td>B.A.(Hons)</td><td>RR</td><td>20231021</td><td>Delhi</td><td>11/03/1994</td><td>01/08/2023</td><td>ASP Bareilly</td><td>26/07/2025</td><td>Level 10</td></tr><tr><td>450</td><td>अभिनव द्विवेदी</td><td>RR</td><td>10/01/1996</td><td>ASP Moradabad</td></tr><tr><td>451</td><td>452</td><td>Abhinav Dwivedi Tech. मिश्र Sonali Mishra Tech. दिनेश गोदारा Dinesh Godara B. Tech. B. सोनाली B.</td><td>Tech. B.</td><td>मिश्र Sonali Mishra Tech. सोनाली B.</td><td>RR</td><td>RR</td><td>20231027 Uttar Pradesh</td><td>20231025 Delhi</td><td>20231031 Rajasthan</td><td>01/08/2023</td><td>03/04/1995</td><td>13/11/2023</td><td>06/03/1998</td><td>01/08/2023</td><td>26/07/2025</td><td>Level 10</td><td>ASP Bareilly</td><td>28/07/2025 Level 10</td><td>ASP (U/T) Gorakhpur 29/12/2025 Level 10</td></tr><tr><td>453</td><td>शुभम जैन Shubham Jain B.A.L.L.B. Hons</td><td>RR 20231033 Delhi</td><td>20/11/1997</td><td>13/11/2023</td><td>ASP (U</td><td>ASP (U/T) Ayodhya 29/12/2025 Level 10</td></tr><tr><td>454</td><td>श्रुति जैन Shrusti Jain Β.Ε.</td><td>RR 20231040 Madhya Pradesh</td><td>10/02/1998</td><td>13/11/2023</td><td>ASP (U/T) Kanpur 29/12/2025</td><td>Level 10</td></tr><tr><td>455</td><td>Β.Α.</td><td>नताशा गोयल Natasha Goyal</td><td>RR</td><td>20231043 Punjab</td><td>10/06/1992</td><td>13/11/2023</td><td>ASP Pilibhit</td><td>26/07/2025 Level 10</td></tr><tr><td>456</td><td>मानसी</td><td>Mansi</td><td>RR</td><td>20231044</td><td>26/05/1999</td><td>13/11/2023</td><td>ASP (U/T) Police Commissionerate, Varanasi</td></tr><tr><td></td><td>B.Sc.</td><td>Haryana</td><td></td><td>29/12/2025 Level 10</td></tr><tr><td>457</td><td>गोल्डी गुप्ता</td><td>Goldi Gupta B.A.(Hons)</td><td>RR</td><td>20231046 Madhya Pradesh</td><td>12/10/1996</td><td>13/11/2023</td><td>ASP Jaunpur</td><td>26/07/2025</td><td>Level 10</td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        289.2,
+        693.0,
+        303.7,
+        693.0,
+        303.7,
+        698.7,
+        289.2,
+        698.7
+      ],
+      "text": "409"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

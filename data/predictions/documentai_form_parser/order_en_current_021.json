@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_current_021",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        55.9,
+        36.1,
+        532.7,
+        36.1,
+        532.7,
+        687.3,
+        55.9,
+        687.3
+      ],
+      "html": "<table><thead><tr><td>पश्चिम बंगाल</td><td></td><td></td><td></td><td></td><td>West Bengal</td></tr></thead><tbody><tr><td>(1)</td><td>(2)</td><td></td><td></td><td>(5)</td><td>(6)</td><td></td></tr><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>150</td><td>पुष्पा</td><td>RR</td><td>14/02/1983</td><td>SRP, Howrah</td><td></td><td></td></tr><tr><td></td><td>Pushpa M.Sc.</td><td>20121276</td><td>Haryana</td><td>24/12/2012</td><td>05/10/2024</td><td>Level 13</td><td></td><td></td></tr><tr><td>151</td><td>जे मर्सी</td><td>RR</td><td>17/02/1981</td><td>SRP, Sealdah</td><td></td><td></td></tr><tr><td></td><td>J Mercy M.Sc.</td><td>20121465 Tamil Nadu</td><td>03/09/2012</td><td>15/03/2023</td><td>Level 13</td><td></td><td></td></tr><tr><td>152</td><td>सौम्य रॉय</td><td>RR</td><td>08/02/1987</td><td>DCP, Holding charge as Jt</td><td></td><td></td></tr><tr><td></td><td>Saumya Roy M.Sc.</td><td>20121585 West Bengal</td><td>03/09/2012</td><td>CP(I), SB, Kollata 04/04/2024 Level 13</td><td></td><td></td></tr><tr><td>153</td><td>अंशुमान साहा</td><td>Angshuman Saha</td><td>B.Sc.</td><td>SPS</td><td>20122851</td><td>West Bengal</td><td>15/06/1979</td><td>11/12/2017</td><td>CO, Narayani Bn. Cooch Behar, CO, SSF, Barrackpore 11/08/2022 Level 13</td><td></td><td></td></tr><tr><td>154</td><td>सैकत घोष</td><td>Saikat Ghosh</td><td>SPS</td><td>20122841</td><td>07/08/1976</td><td>11/12/2017</td><td>DC, Bhangar Divn., Kolkata 01/02/2024</td><td></td><td></td></tr><tr><td></td><td>B.Com</td><td>West Bengal</td><td></td><td>Level 13</td><td></td><td></td></tr><tr><td>155</td><td>अर्नब बिस्वास</td><td>SPS</td><td>26/12/1978</td><td>DC, Serampore, Chandannagar</td><td></td><td></td></tr><tr><td></td><td>Arnab Biswas</td><td>B.Tech</td><td>20122842</td><td>West Bengal</td><td>11/12/2017</td><td>PC</td><td>05/02/2024 Level 11</td><td></td><td></td></tr><tr><td>156</td><td>तन्मय सरकार</td><td>Tanmay Sarkar B.Sc.</td><td>SPS</td><td>20122843 West Bengal</td><td>11/12/1979</td><td>11/12/2017</td><td>DC, HQ, Siliguri PC 19/02/2024 Level 13</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>Allotment Year:</td><td>2013</td><td></td><td></td></tr><tr><td>157</td><td>प्रदीप कुमार यादव Pradeep Kumar Yadav MBBS</td><td>RR</td><td>20131429 Haryana</td><td>04/08/1985</td><td>23/12/2013</td><td>SP, Traffic, Uttar Dinajpur 02/12/2025 Level 12</td><td></td><td></td></tr><tr><td>158</td><td>अपराजिता राय</td><td>Aparajita Rai</td><td>LLB</td><td>RR</td><td>20131359 Sikkim</td><td>25/10/1985</td><td>02/09/2013</td><td>SS, IB, N Bengal, Siliguri designated as SP Kalimp</td><td>19/02/2024 Level 12</td><td></td><td></td></tr><tr><td>159</td><td>इंदिरा मुखर्जी Indira Mukherjee BE</td><td>RR 20131256</td><td>West Bengal</td><td>29/12/1985</td><td>02/09/2013</td><td>DC, Central Division Kolkata 04/02/2024</td><td>Level 12</td><td></td><td></td></tr><tr><td>160</td><td>वाई रघुवंशी Y Raghuvamshi</td><td>RR 20131139</td><td>08/04/1987</td><td>02/09/2013</td><td>SP, Jalpaiguri</td><td>01/12/2025</td><td></td><td></td></tr><tr><td></td><td>BE</td><td>Andhra Pradesh</td><td></td><td>Level 12</td><td></td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        288.8,
+        708.9,
+        304.8,
+        708.9,
+        304.8,
+        714.6,
+        288.8,
+        714.6
+      ],
+      "text": "435"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

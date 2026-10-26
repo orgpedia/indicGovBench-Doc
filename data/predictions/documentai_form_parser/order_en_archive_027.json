@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_archive_027",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        210.2,
+        42.5,
+        455.5,
+        37.2,
+        455.9,
+        60.2,
+        210.6,
+        65.5
+      ],
+      "text": "List of Ministers appointment on and\n15th August 1947."
+    },
+    {
+      "id": 1,
+      "type": "table",
+      "order": 1,
+      "poly": [
+        64.1,
+        59.1,
+        586.9,
+        59.1,
+        586.9,
+        500.0,
+        64.1,
+        500.0
+      ],
+      "html": "<table><thead><tr><td>Name of Minister</td><td></td><td>Portfolio (Cabinet)</td><td>Date of appointment.</td></tr></thead><tbody><tr><td>Shri Jawaharlal Nehru</td><td>Prime Minister Minister of External Affairs, Commonwealth Relations and Scientific Research</td><td>15-8-47</td></tr><tr><td>2. Sardar Vallabhbhai Patel.</td><td>Deputy Prime Minister Minister, Hone, Information &amp; Broadcasting and States.</td><td>-do-</td></tr><tr><td>John Matthai. Dr.</td><td>Maulana Abul Kalam Azad,</td><td>Dr. Rajendra Prasad. Maulana Abul Kalam ம் John Matthai. Sardar Baldev Singh. Dr. ம்</td><td></td><td></td><td>Food &amp; Agriculture.</td><td>Education.</td><td></td><td>Transport.</td><td>Defence.</td><td>-do-</td><td>-do-</td><td>-do-</td><td>-do-</td></tr><tr><td>ல் 9.</td><td>ல் Shri Jagjivan Ram.</td><td>லி ல் 8. Dr. C.H. Bhabha. V ✓ Shri Rafi Ahmed Kidwai &quot;. 9.</td><td>லி 8.</td><td>ம் ம் ல் லி ல் ஆ , 8. 9. 10. 11</td><td>ல் 9.</td><td>Rajkumari Amrit Kaur.✓</td><td>ஆ 10.</td><td>ஆ 10.</td><td>Dr. B.R. Ambedkar.</td><td></td><td></td><td></td><td>Lav</td><td>Commerce.</td><td>Communications.</td><td>Health,</td><td>Labour.</td><td>-do-</td><td>-do-</td><td>-do-</td><td>-do-</td><td>-do-</td></tr><tr><td>, 11</td><td></td><td></td></tr><tr><td>-do-</td></tr><tr><td>Shri R.K. Shanmukham Chetty. ✓ Industry &amp; Supply. Er. Shyama Pd. Mukherjee . Works, Mines &amp; Shri N.V. Gadgil. Finance. Power</td><td>12.</td><td>13. 13.</td><td>Finance.</td><td>Works, Mines &amp; Power.</td><td>-40-</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

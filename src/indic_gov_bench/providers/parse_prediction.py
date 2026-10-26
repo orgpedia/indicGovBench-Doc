@@ -17,6 +17,7 @@ from indic_gov_bench.core.models import PredictionDocument
 from indic_gov_bench.eval.pricing_registry import calculate_doc_cost, extract_usage_from_raw
 from indic_gov_bench.providers.claude_provider import parse_claude_raw_response
 from indic_gov_bench.providers.datalab_provider import parse_datalab_raw_response
+from indic_gov_bench.providers.documentai_provider import parse_documentai_raw_response
 from indic_gov_bench.providers.gcv_provider import parse_gcv_raw_response
 from indic_gov_bench.providers.gemini_provider import parse_gemini_raw_response
 from indic_gov_bench.providers.mistral_provider import parse_mistral_raw_response
@@ -97,6 +98,10 @@ def parse_single_prediction(
             )
         elif "gcv" in p_lower:
             pred_doc = parse_gcv_raw_response(raw_json, doc_id=doc_id, page_width=w, page_height=h)
+        elif "documentai" in p_lower or "gdai" in p_lower or "docai" in p_lower:
+            pred_doc = parse_documentai_raw_response(
+                raw_json, doc_id=doc_id, page_width=w, page_height=h
+            )
         elif "hpd" in p_lower or "paddleocr" in p_lower:
             pred_doc = parse_modal_hpd_response(
                 raw_json, doc_id=doc_id, page_width=w, page_height=h

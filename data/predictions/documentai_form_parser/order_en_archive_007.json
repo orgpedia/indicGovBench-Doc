@@ -1,0 +1,106 @@
+{
+  "doc_id": "order_en_archive_007",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        209.9,
+        31.2,
+        369.2,
+        27.3,
+        369.2,
+        36.5,
+        210.2,
+        40.4
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        491.3,
+        25.5,
+        527.0,
+        25.1,
+        527.0,
+        37.2,
+        491.3,
+        37.5
+      ],
+      "text": "(265"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        242.8,
+        42.1,
+        335.9,
+        40.0,
+        336.3,
+        52.4,
+        243.2,
+        54.5
+      ],
+      "text": "(as on 18.12.2011)"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        235.7,
+        61.3,
+        345.5,
+        58.8,
+        345.5,
+        67.3,
+        236.1,
+        69.8
+      ],
+      "text": "CABINET MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        93.4,
+        70.8,
+        547.2,
+        70.5,
+        547.6,
+        744.6,
+        93.8,
+        745.0
+      ],
+      "html": "<table><thead><tr><td>Dr. Manmohan Singh</td><td>1.</td><td>Prime Minister and also in-charge of the specifically not Ministries/Departments allocated to the charge of any Minister viz.:</td></tr></thead><tbody><tr><td></td><td>(i) Ministry of Personnel, Public Grievances and Pensions;</td></tr><tr><td></td><td>(ii) Ministry of Planning;</td></tr><tr><td></td><td>(iii) Department of Atomic Energy; and</td></tr><tr><td></td><td>(iv) Department of Space.</td></tr><tr><td>2.</td><td>Shri Pranab Mukherjee</td><td>Minister of Finance.</td></tr><tr><td>Shri Sharad Pawar 3.</td><td>Minister of Agriculture and Minister of Food Processing Industries.</td></tr><tr><td>Shri A.K. Antony</td><td>4.</td><td>Minister of Defence.</td></tr><tr><td>Shri P. Chidambaram Shri S.M. Krishna</td><td>5.</td><td>6.</td><td>Minister of Home Affairs.</td><td>Minister of External Affairs.</td></tr><tr><td>Dr. Farooq Abdullah</td><td>20.</td><td>8.</td><td>Shri Ghulam Nabi Azad</td><td>9.</td><td>Shri Sushilkumar Shinde</td><td>10.</td><td>Shri M. Veerappa Moily</td><td>11.</td><td>Shri Virbhadra Singh</td><td>12.</td><td>Shri S. Jaipal Reddy</td><td>13.</td><td>Shri Kamal Nath</td><td>14.</td><td>Shri Ajit Singh</td><td>15.</td><td>Shri Vayalar Ravi</td><td>16.</td><td>Smt. Ambika Soni</td><td>17.</td><td>Shri Mallikarjun Kharge</td><td>18.</td><td>Shri Kapil Sibal</td><td>19.</td><td>Shri Anand Sharma</td><td>7.</td><td>Shri Virbhadra Minister of Micro, Small and Medium Singh Enterprises. Minister of Science and Technology and Shri Vilasrao Deshmukh Minister of Earth Sciences.</td><td>Minister of Health and Family Welfare.</td><td>Minister of Power.</td><td>Minister of Corporate Affairs.</td><td>Minister of New and Renewable Energy.</td><td>Minister of Petroleum and Natural Gas. Minister of Urban Development.</td><td>Minister of Civil Aviation.</td><td>Minister of Overseas Indian Affairs. of Information and Minister of Labour and Employment. Minister Broadcasting</td><td>of Information and Minister Broadcasting.</td><td>Minister of Human Resource Development and Minister of Communications and Information Technology. Minister of Commerce and Industry and Minister of Textiles.</td></tr><tr><td>Shri C.P. Joshi</td><td>21.</td><td>Minister of Road Transport and Highways.</td></tr><tr><td>Kumari Selja</td><td>22.</td><td>Minister of Housing and Urban Poverty Alleviation and Minister of Culture. 1 Page</td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "doc_id": "order_en_current_017",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        251.7,
+        179.1,
+        337.7,
+        179.1,
+        337.7,
+        194.7,
+        251.7,
+        194.7
+      ],
+      "text": "सत्यमेव जयते"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        149.7,
+        249.2,
+        445.3,
+        249.2,
+        445.3,
+        420.5,
+        149.7,
+        420.5
+      ],
+      "text": "सिविल लिस्ट\nCIVIL LIST\n2026"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        278.6,
+        528.4,
+        315.7,
+        528.4,
+        315.7,
+        552.1,
+        278.6,
+        552.1
+      ],
+      "text": "JPS"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        205.6,
+        592.5,
+        385.1,
+        592.5,
+        385.1,
+        625.0,
+        205.6,
+        625.0
+      ],
+      "text": "भारतीय पुलिस सेवा\nINDIAN POLICE SERVICE"
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        236.1,
+        663.6,
+        352.5,
+        663.6,
+        352.5,
+        689.5,
+        236.1,
+        689.5
+      ],
+      "text": "गृह मंत्रालय"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        228.3,
+        699.4,
+        359.6,
+        699.4,
+        359.6,
+        716.7,
+        228.3,
+        716.7
+      ],
+      "text": "भारत सरकार"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        119.6,
+        730.5,
+        476.4,
+        730.5,
+        476.4,
+        749.3,
+        119.6,
+        749.3
+      ],
+      "text": "MINISTRY OF HOME AFFAIRS"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        151.8,
+        762.7,
+        449.9,
+        762.7,
+        449.9,
+        781.1,
+        151.8,
+        781.1
+      ],
+      "text": "GOVERNMENT OF INDIA"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

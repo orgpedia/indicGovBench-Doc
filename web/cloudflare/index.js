@@ -102,34 +102,27 @@ export default {
     // 2. Static Assets & Image Handling
     // -------------------------------------------------------------------------
     if (env.ASSETS) {
-      // Direct rewrite for /protocol and /protocol/
-      if (path === "/protocol" || path === "/protocol/") {
-        return env.ASSETS.fetch(new Request(new URL("/protocol.html", request.url), request));
-      }
-
-      // Direct rewrite for /metrics and /metrics/
-      if (path === "/metrics" || path === "/metrics/" || path === "/metrics_demo" || path === "/metrics_demo/") {
-        return env.ASSETS.fetch(new Request(new URL("/metrics.html", request.url), request));
-      }
-
-      // Direct rewrite for /pricing and /pricing/
-      if (path === "/pricing" || path === "/pricing/") {
-        return env.ASSETS.fetch(new Request(new URL("/pricing.html", request.url), request));
+      // Direct rewrite/redirect for trailing slashes
+      if (path.length > 1 && path.endsWith("/")) {
+        return Response.redirect(new URL(`${path.slice(0, -1)}${url.search}`, request.url), 301);
       }
 
       // Query-based routing for landing page vs provider vs audit
       if (path === "/" || path === "/index.html" || path === "/provider.html" || path === "/provider") {
         if (url.searchParams.has("doc") || url.searchParams.has("doc_id")) {
-          return env.ASSETS.fetch(new Request(new URL(`/audit.html${url.search}`, request.url), request));
+          return Response.redirect(new URL(`/audit${url.search}`, request.url), 302);
         } else if (url.searchParams.has("provider") && url.searchParams.get("view") !== "attributes" && url.searchParams.get("view") !== "coverage") {
           const prov = url.searchParams.get("provider");
-          if (prov) {
-            const preResp = await env.ASSETS.fetch(new Request(new URL(`/provider_${prov}.html`, request.url), request));
-            if (preResp.status === 200) {
-              return preResp;
-            }
+          const supportedProviders = [
+            "gemini_3_1_pro", "gemini_3_8_flash", "gemini_3_5_flash_lite",
+            "openai_gpt_6_1_sol", "openai_gpt_6_luna", "openai_gpt_5_6_tera", "openai_gpt_5_6_luna",
+            "claude_haiku_4_5", "claude_sonnet_5_5",
+            "paddleocr_hpd", "qwen3_vl_8b", "tesseract",
+            "datalab_api", "mistral_api", "sarvam_api"
+          ];
+          if (prov && supportedProviders.includes(prov)) {
+            return Response.redirect(new URL(`/provider_${prov}`, request.url), 302);
           }
-          return env.ASSETS.fetch(new Request(new URL(`/provider.html${url.search}`, request.url), request));
         }
       }
 

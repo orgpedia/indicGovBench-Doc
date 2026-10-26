@@ -1,0 +1,58 @@
+{
+  "doc_id": "order_en_current_022",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "table",
+      "order": 0,
+      "poly": [
+        52.4,
+        37.9,
+        516.1,
+        37.5,
+        516.4,
+        688.7,
+        52.7,
+        689.1
+      ],
+      "html": "<table><thead><tr><td>पश्चिम</td><td>बंगाल</td><td></td><td></td><td></td><td>West</td></tr></thead><tbody><tr><td>(1)</td><td>(2)</td><td></td><td></td><td>(5)</td><td>(6)</td></tr><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>205</td><td>श्यामल सामंता</td><td>Shyamal Samanta M.Sc.</td><td>SPS</td><td>20152901 West Bengal</td><td>22/11/1980</td><td>04/01/2023</td><td>DC, HQ, Howrah PC 04/02/2024 Level 11</td><td></td></tr><tr><td>206</td><td>तौसीफ अली अजहर</td><td>Tauseef Ali Azhar Β.Α.</td><td>SPS</td><td>20152903</td><td>04/01/2023</td><td>20/11/1976</td><td>CO, SIRB, Borjora 30/12/2023 Level 11</td><td></td></tr><tr><td>207</td><td>वांगडेन भूटिया</td><td>Wangden Bhutia Β.Α.</td><td>SPS</td><td>20152904 West Bengal</td><td>05/05/1982</td><td>04/01/2023</td><td>CO, 2nd IR Bn Siliguri WB 16/11/2023 Level 11</td><td></td></tr><tr><td>208</td><td>तनमोय सरकार-II</td><td>SPS</td><td>23/06/1980</td><td>CO,SAP 12th Bn</td><td></td></tr><tr><td></td><td>Tanmoy Sarkar-II M.Sc.</td><td>20152905</td><td>West Bengal</td><td>04/01/2023</td><td>31/12/2023</td><td>Level 11</td><td></td></tr><tr><td>209</td><td>ध्रुबा दास Dhruba Das</td><td>B.Sc.</td><td>SPS</td><td>20152906</td><td>West Bengal</td><td>20/02/1981</td><td>04/01/2023</td><td>19/02/2024 Level 11</td><td>PC</td><td>DC,Central, Asansol Durgapur</td><td></td></tr><tr><td>210</td><td>गणेश बिस्वास</td><td>Ganesh Biswas B.Tech.</td><td>SPS</td><td>20152907 West Bengal</td><td>19/07/1979</td><td>04/01/2023</td><td>DC, North, Barrackpore PC 19/02/2024 Level 11</td><td></td></tr><tr><td>211</td><td>पिनाकी रंजन दास</td><td>SPS</td><td>07/02/1975</td><td>SP, WBHRC</td><td></td></tr><tr><td></td><td>Pinaki Ranjan Das</td><td>Β.Α.</td><td>20152908 West Bengal</td><td>04/01/2023</td><td>17/11/2023 Level 11</td><td></td></tr><tr><td></td><td></td><td></td><td>Allotment Year:</td><td>2016</td><td></td></tr><tr><td>212</td><td>सुरिंदर सिंह</td><td>RR</td><td>15/05/1984</td><td>DC, South, Howrh PC</td><td></td></tr><tr><td></td><td>Surinder Singh MA, LLB</td><td>20161190 Uttar Pradesh</td><td>29/08/2016</td><td>22/11/2024 Level 11</td><td></td></tr><tr><td>213</td><td>होसैन मेहेदी रेहमान Hossain Mehedi Rehman MBBS</td><td>RR 20161535 West Bengal</td><td>02/06/1989</td><td>19/12/2016</td><td>SP, Basirhat PD</td><td>02/02/2024 Level 11</td><td></td></tr><tr><td>214</td><td>सोनवणे कुलदीप सुरेश Sonawane Kuldip Suresh MBBS</td><td>RR 20161636 Maharashtra</td><td>29/07/1989</td><td>19/12/2016</td><td>SP, Rajganj Police District 03/12/2025</td><td>Level 11</td><td></td></tr><tr><td>215</td><td>अभिषेक गुप्ता Abhishek Gupta</td><td>B.Tech</td><td>RR 20161202</td><td>West Bengal</td><td>11/12/1991</td><td>29/08/2016</td><td>DC, East, Asansol Durgapur</td><td>PC</td><td>06/02/2024 Level 11</td><td></td></tr></tbody></table>"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        288.8,
+        708.9,
+        304.8,
+        708.9,
+        304.8,
+        714.6,
+        288.8,
+        714.6
+      ],
+      "text": "440"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "fixed_page",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": null,
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.03,
+      "batch": 0.03
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 3.0,
+      "batch": 3.0,
+      "savings": 0.0,
+      "batch_discount_pct": 0.0
+    }
+  }
+}

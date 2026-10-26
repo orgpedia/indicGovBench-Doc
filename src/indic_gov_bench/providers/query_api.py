@@ -894,6 +894,134 @@ def call_gcv_api(pdf_path: Path) -> dict[str, Any]:
     return {"responses": [resp_dict]}
 
 
+def call_documentai_api(
+    pdf_path: Path,
+    processor_id: str | None = None,
+    location: str | None = None,
+    project_id: str | None = None,
+    verbose: int = 0,
+) -> dict[str, Any]:
+    """Calls Google Cloud Document AI (Form Parser) API on a PDF file.
+
+    Supports both Google Cloud Document AI client library and direct REST API with Google Auth.
+    """
+    import base64
+    import os
+
+    loc = (
+        location
+        or os.environ.get("DOCUMENTAI_LOCATION")
+        or os.environ.get("GOOGLE_DOCUMENTAI_LOCATION")
+        or os.environ.get("GOOGLE_LOCATION")
+        or os.environ.get("GOOGLE_CLOUD_LOCATION")
+        or "us"
+    )
+    if loc == "global":
+        loc = "us"
+    proc = (
+        processor_id
+        or os.environ.get("DOCUMENTAI_PROCESSOR_ID")
+        or os.environ.get("GOOGLE_DOCUMENTAI_PROCESSOR_ID")
+        or os.environ.get("GDAI_PROCESSOR_ID")
+    )
+    if not proc:
+        raise ValueError(
+            "Missing Document AI processor ID. Please set GOOGLE_DOCUMENTAI_PROCESSOR_ID "
+            "or DOCUMENTAI_PROCESSOR_ID in your .env or pass --docai-processor-id."
+        )
+
+    # Sanitize GOOGLE_APPLICATION_CREDENTIALS if accidentally pointing to a directory
+    g_creds = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+    if g_creds and (os.path.isdir(g_creds) or not os.path.isfile(g_creds)):
+        del os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
+
+    # Resolve project ID
+    proj = (
+        project_id
+        or os.environ.get("DOCUMENTAI_PROJECT_ID")
+        or os.environ.get("GOOGLE_CLOUD_PROJECT")
+        or os.environ.get("GOOGLE_PROJECT_ID")
+    )
+
+    # 1. Try google-cloud-documentai client if installed
+    try:
+        from google.cloud import documentai_v1 as documentai
+        from google.protobuf.json_format import MessageToDict
+
+        client_options = {"api_endpoint": f"{loc}-documentai.googleapis.com"} if loc != "us" else None
+        client = documentai.DocumentProcessorServiceClient(client_options=client_options)
+
+        if not proj:
+            # Try to resolve project from ADC credentials
+            import google.auth
+
+            _, default_project = google.auth.default()
+            proj = default_project or os.environ.get("GOOGLE_CLOUD_PROJECT")
+
+        if not proj:
+            raise ValueError(
+                "Missing GCP Project ID. Set GOOGLE_CLOUD_PROJECT or DOCUMENTAI_PROJECT_ID in .env."
+            )
+
+        name = client.processor_path(proj, loc, proc)
+        with open(pdf_path, "rb") as f:
+            pdf_bytes = f.read()
+
+        raw_document = documentai.RawDocument(content=pdf_bytes, mime_type="application/pdf")
+        request = documentai.ProcessRequest(name=name, raw_document=raw_document)
+        if verbose > 0:
+            print(f"📡 Querying Google Document AI ({loc}) processor {proc} for {pdf_path.name}...")
+
+        result = client.process_document(request=request)
+        return MessageToDict(result.document._pb)
+
+    except ImportError:
+        # 2. Seamless fallback to REST API via google.auth + requests
+        import google.auth
+        import google.auth.transport.requests
+        import requests
+
+        credentials, default_project = google.auth.default(
+            scopes=["https://www.googleapis.com/auth/cloud-platform"]
+        )
+        if not proj:
+            proj = default_project or getattr(credentials, "project_id", None)
+        if not proj:
+            raise ValueError(
+                "Missing GCP Project ID. Set GOOGLE_CLOUD_PROJECT or DOCUMENTAI_PROJECT_ID in .env."
+            )
+
+        auth_req = google.auth.transport.requests.Request()
+        credentials.refresh(auth_req)
+        token = credentials.token
+
+        with open(pdf_path, "rb") as f:
+            pdf_bytes = f.read()
+
+        endpoint = f"https://{loc}-documentai.googleapis.com/v1/projects/{proj}/locations/{loc}/processors/{proc}:process"
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "rawDocument": {
+                "content": base64.b64encode(pdf_bytes).decode("utf-8"),
+                "mimeType": "application/pdf",
+            }
+        }
+
+        if verbose > 0:
+            print(f"📡 Querying Google Document AI REST API ({loc}) processor {proc} for {pdf_path.name}...")
+
+        resp = requests.post(endpoint, headers=headers, json=payload, timeout=120)
+        if resp.status_code != 200:
+            raise RuntimeError(
+                f"Document AI API error ({resp.status_code}): {resp.text}"
+            )
+
+        return resp.json()
+
+
 def call_datalab_api(pdf_path: Path) -> dict[str, Any]:
     """Calls Datalab Document AI API using datalab_sdk."""
     api_key = os.environ.get("DATALAB_API_KEY")
@@ -1084,6 +1212,9 @@ def query_single_api(
     max_tokens: int = 16384,
     seed: int | None = 42,
     force_realtime: bool = False,
+    docai_processor_id: str | None = None,
+    docai_location: str | None = None,
+    docai_project_id: str | None = None,
 ) -> bool:
     """Queries the external API for a single PDF and writes the raw response JSON."""
     if not pdf_path.is_file():
@@ -1219,6 +1350,14 @@ def query_single_api(
             )
         elif "gcv" in p_lower:
             raw_res = call_gcv_api(pdf_path)
+        elif "documentai" in p_lower or "gdai" in p_lower or "docai" in p_lower:
+            raw_res = call_documentai_api(
+                pdf_path,
+                processor_id=docai_processor_id,
+                location=docai_location,
+                project_id=docai_project_id,
+                verbose=verbose,
+            )
         elif "datalab" in p_lower:
             raw_res = call_datalab_api(pdf_path)
         elif "mistral" in p_lower:
@@ -1380,6 +1519,24 @@ def main() -> None:
         action="store_true",
         help="Bypass active cloud batch check and execute real-time call immediately",
     )
+    parser.add_argument(
+        "--docai-processor-id",
+        type=str,
+        default=None,
+        help="Google Document AI Processor ID (default: from DOCUMENTAI_PROCESSOR_ID env)",
+    )
+    parser.add_argument(
+        "--docai-location",
+        type=str,
+        default=None,
+        help="Google Document AI Location (default: from DOCUMENTAI_LOCATION env or 'us')",
+    )
+    parser.add_argument(
+        "--docai-project-id",
+        type=str,
+        default=None,
+        help="GCP Project ID (default: from DOCUMENTAI_PROJECT_ID or Google credentials)",
+    )
 
     args = parser.parse_args()
     input_pdf_str = args.input_pdf or args.input_pdf_flag
@@ -1404,6 +1561,9 @@ def main() -> None:
         max_tokens=args.max_tokens,
         seed=args.seed,
         force_realtime=args.force_realtime,
+        docai_processor_id=args.docai_processor_id,
+        docai_location=args.docai_location,
+        docai_project_id=args.docai_project_id,
     )
     if not ok:
         sys.exit(1)
