@@ -1,0 +1,78 @@
+{
+  "doc_id": "order_en_current_025",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        61.28,
+        32.84,
+        99.96,
+        32.84,
+        99.96,
+        45.47,
+        61.28,
+        45.47
+      ],
+      "text": "तमिलनाडु"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        487.9,
+        35.36,
+        533.12,
+        35.36,
+        533.12,
+        43.78,
+        487.9,
+        43.78
+      ],
+      "text": "Tamil Nadu"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        58.91,
+        47.99,
+        534.9,
+        47.99,
+        534.9,
+        693.81,
+        58.91,
+        693.81
+      ],
+      "html": "<table><thead><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td></tr></thead><tbody><tr><td></td><td>सर्वश्री S/Shri</td><td></td><td></td><td></td><td></td></tr><tr><td>205</td><td>केलकर सुभ्रमण्य भालचंद्रKelkar Subhramanya BhalchandraBBM (Agri), M.A. (Political Science)</td><td>RR20201106Maharashtra</td><td>17/01/199328/12/2020</td><td>DCP, South,Salem City21/06/2025Level 11</td><td></td></tr><tr><td>206</td><td>कंभम सैमुअल प्रवीण गौतमKambham Samuel Praveen GowthamB.Tech.</td><td>RR20201124Andhra Pradesh</td><td>14/05/199628/12/2020</td><td>DCP, North, Tiruppur City18/06/2025Level 11</td><td></td></tr><tr><td>207</td><td>स्टालिन आरStalin RGraduate with Animal Husbandry &amp; Vet. Science</td><td>RR20201135Tamil Nadu</td><td>14/05/199210/10/2020</td><td>SP, Kanniyakumari District03/01/2025Level 11</td><td></td></tr><tr><td>208</td><td>गरड करुण उद्धवरावGarad Karun UddhavraoM.Tech. (Aero Space)</td><td>RR20201140Maharashtra</td><td>21/02/198728/12/2020</td><td>SP, Tiruvarur District01/01/2025Level 12</td><td></td></tr><tr><td>209</td><td>बलवीर सिंहBalveer SinghB.Tech.</td><td>RR20201147Rajasthan</td><td>17/05/198428/12/2020</td><td>ASP, Special Task Force, Erode01/12/2025Level 10</td><td></td></tr></tbody></table>"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1731,
+      "output": 802,
+      "total": 2533
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.011482,
+      "batch": 0.005741
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.1482,
+      "batch": 0.5741,
+      "savings": 0.5741,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

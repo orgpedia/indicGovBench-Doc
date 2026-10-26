@@ -212,7 +212,12 @@ class GeminiBatchAdapter(BaseBatchAdapter):
             "response_schema": GEMINI_BLOCKS_SCHEMA,
             "temperature": 0.0,
         }
-        if "3.1" in str(self.model_name).lower() or "pro" in str(self.model_name).lower():
+        if (
+            "3.1" in str(self.model_name).lower()
+            or "pro" in str(self.model_name).lower()
+            or "argon" in str(self.model_name).lower()
+            or "gemini-4" in str(self.model_name).lower()
+        ):
             gen_config["thinking_config"] = {"thinking_level": "LOW"}
         elif "3.5" in str(self.model_name).lower():
             gen_config["thinking_config"] = {"thinking_level": "MINIMAL"}

@@ -118,8 +118,32 @@ class TestProviderSmoke(unittest.TestCase):
         self.assertEqual(cost_dict["pricing_type"], "fixed_page")
         self.assertEqual(cost_dict["pages"], 1)
         self.assertIn("native_costs", cost_dict)
-        self.assertIn("cost_inr", cost_dict)
-        self.assertGreater(cost_dict["cost_inr"]["realtime"], 0.0)
+    def test_gemini_4_argon_pricing_telemetry(self) -> None:
+        """Verify that gemini_4_argon token pricing model extracts usage and calculates 50% batch discount."""
+        from indic_gov_bench.providers.prompts import GEMINI_SLUG_MODEL_MAP
+
+        self.assertEqual(GEMINI_SLUG_MODEL_MAP.get("gemini_4_argon"), "gemini-4-argon")
+        self.assertNotIn("gemini_4", GEMINI_SLUG_MODEL_MAP)
+
+        sample_raw = {
+            "usage_metadata": {
+                "prompt_token_count": 1000,
+                "candidates_token_count": 200,
+                "total_token_count": 1200,
+            }
+        }
+        usage = extract_usage_from_raw("gemini_4_argon", sample_raw)
+        self.assertEqual(usage.get("prompt_tokens"), 1000)
+        self.assertEqual(usage.get("completion_tokens"), 200)
+
+        cost_dict = calculate_doc_cost("gemini_4_argon", usage, fx_rate=100.0)
+        self.assertEqual(cost_dict["pricing_type"], "token")
+        self.assertEqual(cost_dict["cost_inr"]["batch_discount_pct"], 50.0)
+        # 1000 tokens @ $2.00/1M = $0.002; 200 tokens @ $10.00/1M = $0.002; Total = $0.004
+        self.assertAlmostEqual(cost_dict["native_costs"]["realtime"], 0.004, places=5)
+        self.assertAlmostEqual(cost_dict["native_costs"]["batch"], 0.002, places=5)
+        self.assertAlmostEqual(cost_dict["cost_inr"]["realtime"], 0.40, places=2)
+        self.assertAlmostEqual(cost_dict["cost_inr"]["batch"], 0.20, places=2)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,206 @@
+{
+  "doc_id": "order_en_archive_013",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        187.43,
+        132.19,
+        235.62,
+        132.19,
+        235.62,
+        570.88,
+        187.43,
+        570.88
+      ],
+      "text": "The undersigned is directed to state that the\ndesignation of Shri A.M. Thomas, Minister of State in the\nMinistry of Defence will be as Minister of Defence Production\nin the Ministry of Defence."
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        353.43,
+        137.25,
+        384.37,
+        137.25,
+        384.37,
+        571.72,
+        353.43,
+        571.72
+      ],
+      "text": "Copy forwarded to the Secretary to the Prime Minister/\nthe Private Secretary to the Prime Minister, for information."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        418.88,
+        150.72,
+        431.38,
+        150.72,
+        431.38,
+        196.19,
+        418.88,
+        196.19
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        285.6,
+        156.61,
+        311.19,
+        156.61,
+        311.19,
+        313.22,
+        285.6,
+        313.22
+      ],
+      "text": "(D.P. Chopra)\nfor Cabinet Secretary."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        92.22,
+        165.03,
+        106.5,
+        165.03,
+        106.5,
+        231.55,
+        92.22,
+        231.55
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        261.2,
+        208.82,
+        287.38,
+        208.82,
+        287.38,
+        274.49,
+        261.2,
+        274.49
+      ],
+      "text": "Chopra"
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        329.63,
+        244.18,
+        346.88,
+        244.18,
+        346.88,
+        528.78,
+        329.63,
+        528.78
+      ],
+      "text": "All Members of the Council of Ministers."
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        149.94,
+        246.71,
+        164.82,
+        246.71,
+        164.82,
+        483.31,
+        149.94,
+        483.31
+      ],
+      "text": "New Delhi, the 31st January 1966."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        102.93,
+        261.86,
+        140.42,
+        261.86,
+        140.42,
+        480.78,
+        102.93,
+        480.78
+      ],
+      "text": "GOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        90.44,
+        337.64,
+        102.93,
+        337.64,
+        102.93,
+        431.95,
+        90.44,
+        431.95
+      ],
+      "text": "No.55/4/CF-66"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        318.33,
+        556.56,
+        327.85,
+        556.56,
+        327.85,
+        573.4,
+        318.33,
+        573.4
+      ],
+      "text": "To"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1731,
+      "output": 555,
+      "total": 2286
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.009012,
+      "batch": 0.004506
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.9012,
+      "batch": 0.4506,
+      "savings": 0.4506,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

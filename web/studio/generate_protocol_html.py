@@ -1,7 +1,7 @@
 """generate_protocol_html.py — Generates Standalone Interactive Annotation Protocol HTML.
 
 Reads specs/benchmark_format_and_metrics_spec_2.md and generates
-src/indic_gov_bench/dashboard3/static/protocol.html with interactive TOC,
+web/studio/static/protocol.html with interactive TOC,
 Annotator Quick Reference Card, RFC badges, and zoomable worked example.
 """
 
@@ -11,6 +11,8 @@ import argparse
 import re
 import sys
 from pathlib import Path
+
+from web.studio.site_chrome import render_footer, render_header
 
 try:
     import markdown
@@ -26,131 +28,42 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IndicGovBench-Orders: Annotation Guidelines, Data Format &amp; Metrics Specification</title>
 <link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 <style>
-  :root {
-    --bg-page: #f8fafc;
-    --bg-surface: #ffffff;
-    --border: #e2e8f0;
-    --border-dark: #cbd5e1;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #64748b;
-    --accent: #2563eb;
-    --accent-light: #eff6ff;
-    --accent-dark: #1d4ed8;
-    --green-bg: #dcfce7;
-    --green-text: #166534;
-    --amber-bg: #fef3c7;
-    --amber-text: #92400e;
-    --red-bg: #fee2e2;
-    --red-text: #991b1b;
-    --purple-bg: #f3e8ff;
-    --purple-text: #6b21a8;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg-page);
-    color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+  /* Page-specific Protocol Styles */
+  .protocol-layout {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  /* Top Global Header */
-  #global-header {
-    background: #ffffff;
-    border-bottom: 1px solid var(--border);
-    padding: 12px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    z-index: 40;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-  }
-  .brand-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .brand-title {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-  }
-  .brand-badge {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: #f1f5f9;
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
-  }
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .btn-nav {
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid var(--border);
-    background: #ffffff;
-    color: var(--text-primary);
-    transition: all 0.15s ease;
-    cursor: pointer;
-  }
-  .btn-nav:hover {
-    background: var(--bg-page);
-    border-color: var(--border-dark);
-  }
-  .btn-nav-primary {
-    background: #0f172a;
-    color: #ffffff;
-    border-color: #0f172a;
-  }
-  .btn-nav-primary:hover {
-    background: #1e293b;
-    color: #ffffff;
-  }
-
-  /* Two-column layout */
-  .layout-body {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    gap: 32px;
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - var(--header-height, 48px));
   }
 
   /* Left Sidebar TOC */
   #toc-sidebar {
-    width: 320px;
-    background: #ffffff;
-    border-right: 1px solid var(--border);
+    width: 300px;
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    position: sticky;
+    top: calc(var(--header-height, 48px) + 16px);
+    max-height: calc(100vh - var(--header-height, 48px) - 32px);
+    z-index: 20;
   }
   .toc-header {
-    padding: 14px 18px 10px;
-    border-bottom: 1px solid var(--border);
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
   }
   .toc-title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--text-primary);
     text-transform: uppercase;
@@ -160,11 +73,13 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   .toc-search input {
     width: 100%;
     padding: 7px 10px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-sm, 6px);
     font-size: 12.5px;
     outline: none;
     transition: border-color 0.15s;
+    background: var(--bg-surface, #ffffff);
+    color: var(--text-primary);
   }
   .toc-search input:focus {
     border-color: var(--accent);
@@ -181,7 +96,7 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   }
   .toc-content ul ul {
     padding-left: 14px;
-    border-left: 1px solid #f1f5f9;
+    border-left: 1px solid var(--border-subtle, #e2e8f0);
     margin-top: 3px;
     margin-bottom: 3px;
   }
@@ -193,7 +108,7 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     text-decoration: none;
     display: block;
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm, 4px);
     font-size: 12.5px;
     line-height: 1.4;
     transition: all 0.1s ease;
@@ -211,26 +126,22 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   /* Main Reader Area */
   #main-reader {
     flex: 1;
-    overflow-y: auto;
-    background: var(--bg-page);
-    scroll-behavior: smooth;
-    padding: 24px 32px 60px;
+    min-width: 0;
   }
   .reader-inner {
     max-width: 960px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 40px 48px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    padding: 36px 44px;
+    box-shadow: var(--shadow-sm);
   }
 
   /* Fast Jump Pills */
   .fast-jump-bar {
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    background: var(--bg-secondary, #f8fafc);
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-sm, 6px);
     padding: 10px 14px;
     margin-bottom: 24px;
     display: flex;
@@ -249,34 +160,33 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   .fast-jump-pill {
     font-size: 12px;
     font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-subtle, #e2e8f0);
     padding: 4px 10px;
-    border-radius: 4px;
-    background: #ffffff;
-    color: var(--accent);
-    border: 1px solid var(--border);
+    border-radius: 9999px;
     text-decoration: none;
     transition: all 0.15s ease;
   }
   .fast-jump-pill:hover {
+    color: var(--accent);
+    border-color: var(--accent);
     background: var(--accent-light);
-    border-color: #bfdbfe;
   }
 
-  /* Annotator's Cheat Sheet Card */
+  /* Cheat Sheet Card */
   .cheat-sheet-card {
-    background: #f0f7ff;
+    background: #eff6ff;
     border: 1.5px solid #bfdbfe;
-    border-radius: 8px;
-    padding: 20px 22px;
-    margin-bottom: 32px;
+    border-radius: var(--radius-md, 8px);
+    padding: 20px;
+    margin-bottom: 28px;
   }
   .cheat-sheet-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #dbeafe;
   }
   .cheat-sheet-header h3 {
     font-size: 15px;
@@ -288,11 +198,10 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-  @media (max-width: 860px) { .cheat-sheet-grid { grid-template-columns: 1fr; } }
   .cheat-sheet-col {
     background: #ffffff;
     border: 1px solid #dbeafe;
-    border-radius: 6px;
+    border-radius: var(--radius-sm, 6px);
     padding: 12px 14px;
     font-size: 12.5px;
   }
@@ -330,10 +239,10 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     display: inline-block;
     letter-spacing: 0.3px;
   }
-  .rfc-must { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .rfc-must { background: var(--red-bg); color: var(--red-text); border: 1px solid #fca5a5; }
   .rfc-must-not { background: #7f1d1d; color: #ffffff; }
-  .rfc-should { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
-  .rfc-should-not { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .rfc-should { background: var(--accent-light); color: #1e40af; border: 1px solid #bfdbfe; }
+  .rfc-should-not { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #fde68a; }
   .rfc-may { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
 
   /* Markdown Typography & Structure */
@@ -352,7 +261,7 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     margin-top: 36px;
     margin-bottom: 14px;
     padding-bottom: 6px;
-    border-bottom: 1.5px solid var(--border);
+    border-bottom: 1.5px solid var(--border-subtle, #e2e8f0);
     letter-spacing: -0.01em;
   }
   .reader-content h3 {
@@ -388,11 +297,11 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   .reader-content hr {
     border: 0;
     height: 1px;
-    background: var(--border);
+    background: var(--border-subtle, #e2e8f0);
     margin: 28px 0;
   }
   .reader-content strong {
-    color: #0f172a;
+    color: var(--text-primary);
     font-weight: 700;
   }
   .reader-content em {
@@ -405,13 +314,13 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     border-collapse: collapse;
     margin: 16px 0 24px;
     font-size: 13px;
-    background: #ffffff;
+    background: var(--bg-surface, #ffffff);
     border-top: 2px solid var(--text-primary);
     border-bottom: 2px solid var(--text-primary);
   }
   .reader-content th {
-    background: #f8fafc;
-    border-bottom: 1.5px solid var(--border-dark);
+    background: var(--bg-secondary, #f8fafc);
+    border-bottom: 1.5px solid var(--border-strong, #cbd5e1);
     padding: 9px 12px;
     font-weight: 700;
     text-align: left;
@@ -419,25 +328,25 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   }
   .reader-content td {
     padding: 8px 12px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
     color: #334155;
   }
   .reader-content tr:last-child td {
     border-bottom: none;
   }
   .reader-content tr:hover td {
-    background: #f8fafc;
+    background: var(--bg-secondary, #f8fafc);
   }
 
   /* Code & Syntax */
   .reader-content code {
-    font-family: "SFMono-Regular", Consolas, Menlo, Monaco, monospace;
+    font-family: var(--font-mono, monospace);
     font-size: 12.5px;
     background: #f1f5f9;
-    color: #0f172a;
+    color: var(--text-primary);
     padding: 2px 5px;
     border-radius: 4px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-subtle, #e2e8f0);
   }
   .code-block-wrapper {
     position: relative;
@@ -446,12 +355,12 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   .reader-content pre {
     background: #0f172a;
     color: #f8fafc;
-    border-radius: 6px;
+    border-radius: var(--radius-sm, 6px);
     padding: 16px;
     overflow-x: auto;
     font-size: 12.5px;
     line-height: 1.55;
-    font-family: "SFMono-Regular", Consolas, Menlo, Monaco, monospace;
+    font-family: var(--font-mono, monospace);
   }
   .reader-content pre code {
     background: transparent;
@@ -481,16 +390,16 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
 
   /* Worked Example Figure Card */
   .protocol-figure-card {
-    background: #ffffff;
-    border: 1.5px solid var(--border-dark);
-    border-radius: 8px;
+    background: var(--bg-surface, #ffffff);
+    border: 1.5px solid var(--border-strong, #cbd5e1);
+    border-radius: var(--radius-md, 8px);
     overflow: hidden;
     margin: 24px 0 28px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-sm);
   }
   .figure-header {
-    background: #f8fafc;
-    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary, #f8fafc);
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
     padding: 12px 18px;
     display: flex;
     justify-content: space-between;
@@ -515,8 +424,8 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     max-width: 100%;
     max-height: 640px;
     border-radius: 4px;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-strong, #cbd5e1);
+    box-shadow: var(--shadow-md);
     transition: transform 0.2s ease;
   }
   .annotated-doc-image:hover {
@@ -530,8 +439,8 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   }
   .figure-caption {
     padding: 16px 20px;
-    background: #ffffff;
-    border-top: 1px solid var(--border);
+    background: var(--bg-surface, #ffffff);
+    border-top: 1px solid var(--border-subtle, #e2e8f0);
     font-size: 13px;
     color: #334155;
     line-height: 1.6;
@@ -597,7 +506,7 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
   #btn-back-to-top {
     position: fixed;
     bottom: 24px;
-    right: 32px;
+    right: 28px;
     background: #0f172a;
     color: #ffffff;
     border: none;
@@ -614,31 +523,84 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
     transition: opacity 0.2s;
   }
   #btn-back-to-top.visible { display: flex; }
+
+  /* Mobile TOC Drawer & Sticky Trigger Bar */
+  .mobile-toc-bar {
+    position: sticky;
+    top: var(--header-height, 48px);
+    z-index: 25;
+    background: var(--bg-surface, #ffffff);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
+    box-shadow: var(--shadow-sm);
+  }
+  .toc-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    z-index: 55;
+  }
+  .toc-backdrop.active {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    [id] {
+      scroll-margin-top: calc(var(--header-height, 48px) + 48px);
+    }
+    .protocol-layout {
+      display: block;
+      padding: 12px 12px 32px;
+    }
+    #toc-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(85vw, 340px);
+      max-height: 100vh;
+      height: 100vh;
+      border-radius: 0;
+      z-index: 60;
+      box-shadow: var(--shadow-lg);
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+    #toc-sidebar.open {
+      transform: translateX(0);
+    }
+    .reader-inner {
+      padding: 20px 16px;
+    }
+    .cheat-sheet-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 <body>
 
-<!-- Header -->
-<header id="global-header">
-  <div class="brand-group">
-    <a href="/" class="brand-title">
-      <span>🏛️ IndicGovBench-Orders</span>
-    </a>
-    <span class="brand-badge">Annotation Protocol &amp; Metrics Spec (v0.9)</span>
-  </div>
-  <div class="header-actions">
-    <a href="/" class="btn-nav">← Benchmark Leaderboard</a>
-    <a href="/metrics" target="_blank" class="btn-nav">🔬 Metrics Demo ↗</a>
-    <a href="/?provider=gemini_3_1_pro" class="btn-nav btn-nav-primary">Audit Workspace →</a>
-  </div>
-</header>
+{{HEADER_HTML}}
 
-<!-- Main Layout -->
-<div class="layout-body">
+<!-- Mobile Sticky TOC Bar -->
+<div class="mobile-toc-bar mobile-only">
+  <button id="btn-toggle-toc" class="btn-tool" style="width:100%; justify-content:center; padding:8px 12px; font-weight:600; display:flex; align-items:center; gap:8px;" aria-expanded="false" aria-controls="toc-sidebar">
+    <span>📑 Table of Contents (Sections 1–14) ▾</span>
+  </button>
+</div>
+<div class="toc-backdrop" id="toc-backdrop"></div>
+
+<!-- Main Protocol Layout -->
+<div class="protocol-layout">
   <!-- Left TOC Sidebar -->
   <aside id="toc-sidebar">
+    <div class="toc-mobile-header mobile-only" style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; border-bottom:1px solid var(--border-subtle);">
+      <span style="font-weight:700; font-size:13px; text-transform:uppercase;">Table of Contents</span>
+      <button id="btn-close-toc" class="btn-tool" aria-label="Close table of contents">&times; Close</button>
+    </div>
     <div class="toc-header">
-      <div class="toc-title">Table of Contents</div>
+      <div class="toc-title desktop-only">Table of Contents</div>
       <div class="toc-search">
         <input type="text" id="tocFilterInput" placeholder="Filter sections (e.g., table, stamp)..." onkeyup="filterToc()">
       </div>
@@ -738,6 +700,9 @@ HTML_SHELL_TEMPLATE = """<!DOCTYPE html>
 <!-- Back to top button -->
 <button id="btn-back-to-top" onclick="scrollToTop()" title="Back to top">&uarr;</button>
 
+{{FOOTER_HTML}}
+
+<script src="js/nav.js"></script>
 <script>
 function filterToc() {
   const query = document.getElementById('tocFilterInput').value.toLowerCase();
@@ -752,6 +717,37 @@ function filterToc() {
   });
 }
 
+// Mobile TOC Drawer Controls
+const tocSidebar = document.getElementById('toc-sidebar');
+const tocBackdrop = document.getElementById('toc-backdrop');
+const btnToggleToc = document.getElementById('btn-toggle-toc');
+const btnCloseToc = document.getElementById('btn-close-toc');
+
+function openToc() {
+  tocSidebar?.classList.add('open');
+  tocBackdrop?.classList.add('active');
+  btnToggleToc?.setAttribute('aria-expanded', 'true');
+}
+
+function closeToc() {
+  tocSidebar?.classList.remove('open');
+  tocBackdrop?.classList.remove('active');
+  btnToggleToc?.setAttribute('aria-expanded', 'false');
+}
+
+btnToggleToc?.addEventListener('click', () => {
+  if (tocSidebar?.classList.contains('open')) closeToc();
+  else openToc();
+});
+btnCloseToc?.addEventListener('click', closeToc);
+tocBackdrop?.addEventListener('click', closeToc);
+
+document.querySelectorAll('.toc-content a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 768) closeToc();
+  });
+});
+
 function openImageLightbox(src) {
   const modal = document.getElementById('lightbox-modal');
   if (modal) modal.classList.add('active');
@@ -763,18 +759,16 @@ function closeImageLightbox() {
 }
 
 function scrollToTop() {
-  document.getElementById('main-reader').scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Scrollspy and Back to Top Visibility
-const reader = document.getElementById('main-reader');
+// Back to Top Visibility based on window scroll
 const backToTop = document.getElementById('btn-back-to-top');
-
-reader.addEventListener('scroll', () => {
-  if (reader.scrollTop > 300) {
-    backToTop.classList.add('visible');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop?.classList.add('visible');
   } else {
-    backToTop.classList.remove('visible');
+    backToTop?.classList.remove('visible');
   }
 });
 
@@ -863,9 +857,18 @@ def convert_spec_to_html(md_path: Path, output_path: Path) -> str:
         r"<strong>MAY</strong>", '<span class="rfc-badge rfc-may">MAY</span>', body_html
     )
 
-    # 3. Assemble full HTML
-    final_html = HTML_SHELL_TEMPLATE.replace("{{TOC_HTML}}", toc_html).replace(
-        "{{BODY_HTML}}", body_html
+    # 3. Assemble full HTML using site_chrome
+    header_html = render_header(
+        active_nav="",
+        context_badge="Annotation Protocol & Metrics Spec",
+    )
+    footer_html = render_footer()
+
+    final_html = (
+        HTML_SHELL_TEMPLATE.replace("{{HEADER_HTML}}", header_html)
+        .replace("{{FOOTER_HTML}}", footer_html)
+        .replace("{{TOC_HTML}}", toc_html)
+        .replace("{{BODY_HTML}}", body_html)
     )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)

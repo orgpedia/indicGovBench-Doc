@@ -5,131 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IndicGovBench-Orders: Annotation Guidelines, Data Format &amp; Metrics Specification</title>
 <link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 <style>
-  :root {
-    --bg-page: #f8fafc;
-    --bg-surface: #ffffff;
-    --border: #e2e8f0;
-    --border-dark: #cbd5e1;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #64748b;
-    --accent: #2563eb;
-    --accent-light: #eff6ff;
-    --accent-dark: #1d4ed8;
-    --green-bg: #dcfce7;
-    --green-text: #166534;
-    --amber-bg: #fef3c7;
-    --amber-text: #92400e;
-    --red-bg: #fee2e2;
-    --red-text: #991b1b;
-    --purple-bg: #f3e8ff;
-    --purple-text: #6b21a8;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg-page);
-    color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+  /* Page-specific Protocol Styles */
+  .protocol-layout {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  /* Top Global Header */
-  #global-header {
-    background: #ffffff;
-    border-bottom: 1px solid var(--border);
-    padding: 12px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    z-index: 40;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-  }
-  .brand-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .brand-title {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-  }
-  .brand-badge {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: #f1f5f9;
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
-  }
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .btn-nav {
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid var(--border);
-    background: #ffffff;
-    color: var(--text-primary);
-    transition: all 0.15s ease;
-    cursor: pointer;
-  }
-  .btn-nav:hover {
-    background: var(--bg-page);
-    border-color: var(--border-dark);
-  }
-  .btn-nav-primary {
-    background: #0f172a;
-    color: #ffffff;
-    border-color: #0f172a;
-  }
-  .btn-nav-primary:hover {
-    background: #1e293b;
-    color: #ffffff;
-  }
-
-  /* Two-column layout */
-  .layout-body {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    gap: 32px;
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - var(--header-height, 48px));
   }
 
   /* Left Sidebar TOC */
   #toc-sidebar {
-    width: 320px;
-    background: #ffffff;
-    border-right: 1px solid var(--border);
+    width: 300px;
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    position: sticky;
+    top: calc(var(--header-height, 48px) + 16px);
+    max-height: calc(100vh - var(--header-height, 48px) - 32px);
+    z-index: 20;
   }
   .toc-header {
-    padding: 14px 18px 10px;
-    border-bottom: 1px solid var(--border);
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
   }
   .toc-title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--text-primary);
     text-transform: uppercase;
@@ -139,11 +50,13 @@
   .toc-search input {
     width: 100%;
     padding: 7px 10px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-sm, 6px);
     font-size: 12.5px;
     outline: none;
     transition: border-color 0.15s;
+    background: var(--bg-surface, #ffffff);
+    color: var(--text-primary);
   }
   .toc-search input:focus {
     border-color: var(--accent);
@@ -160,7 +73,7 @@
   }
   .toc-content ul ul {
     padding-left: 14px;
-    border-left: 1px solid #f1f5f9;
+    border-left: 1px solid var(--border-subtle, #e2e8f0);
     margin-top: 3px;
     margin-bottom: 3px;
   }
@@ -172,7 +85,7 @@
     text-decoration: none;
     display: block;
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm, 4px);
     font-size: 12.5px;
     line-height: 1.4;
     transition: all 0.1s ease;
@@ -190,26 +103,22 @@
   /* Main Reader Area */
   #main-reader {
     flex: 1;
-    overflow-y: auto;
-    background: var(--bg-page);
-    scroll-behavior: smooth;
-    padding: 24px 32px 60px;
+    min-width: 0;
   }
   .reader-inner {
     max-width: 960px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 40px 48px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    padding: 36px 44px;
+    box-shadow: var(--shadow-sm);
   }
 
   /* Fast Jump Pills */
   .fast-jump-bar {
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    background: var(--bg-secondary, #f8fafc);
+    border: 1px solid var(--border-subtle, #e2e8f0);
+    border-radius: var(--radius-sm, 6px);
     padding: 10px 14px;
     margin-bottom: 24px;
     display: flex;
@@ -228,34 +137,33 @@
   .fast-jump-pill {
     font-size: 12px;
     font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-subtle, #e2e8f0);
     padding: 4px 10px;
-    border-radius: 4px;
-    background: #ffffff;
-    color: var(--accent);
-    border: 1px solid var(--border);
+    border-radius: 9999px;
     text-decoration: none;
     transition: all 0.15s ease;
   }
   .fast-jump-pill:hover {
+    color: var(--accent);
+    border-color: var(--accent);
     background: var(--accent-light);
-    border-color: #bfdbfe;
   }
 
-  /* Annotator's Cheat Sheet Card */
+  /* Cheat Sheet Card */
   .cheat-sheet-card {
-    background: #f0f7ff;
+    background: #eff6ff;
     border: 1.5px solid #bfdbfe;
-    border-radius: 8px;
-    padding: 20px 22px;
-    margin-bottom: 32px;
+    border-radius: var(--radius-md, 8px);
+    padding: 20px;
+    margin-bottom: 28px;
   }
   .cheat-sheet-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #dbeafe;
   }
   .cheat-sheet-header h3 {
     font-size: 15px;
@@ -267,11 +175,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-  @media (max-width: 860px) { .cheat-sheet-grid { grid-template-columns: 1fr; } }
   .cheat-sheet-col {
     background: #ffffff;
     border: 1px solid #dbeafe;
-    border-radius: 6px;
+    border-radius: var(--radius-sm, 6px);
     padding: 12px 14px;
     font-size: 12.5px;
   }
@@ -309,10 +216,10 @@
     display: inline-block;
     letter-spacing: 0.3px;
   }
-  .rfc-must { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .rfc-must { background: var(--red-bg); color: var(--red-text); border: 1px solid #fca5a5; }
   .rfc-must-not { background: #7f1d1d; color: #ffffff; }
-  .rfc-should { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
-  .rfc-should-not { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .rfc-should { background: var(--accent-light); color: #1e40af; border: 1px solid #bfdbfe; }
+  .rfc-should-not { background: var(--amber-bg); color: var(--amber-text); border: 1px solid #fde68a; }
   .rfc-may { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
 
   /* Markdown Typography & Structure */
@@ -331,7 +238,7 @@
     margin-top: 36px;
     margin-bottom: 14px;
     padding-bottom: 6px;
-    border-bottom: 1.5px solid var(--border);
+    border-bottom: 1.5px solid var(--border-subtle, #e2e8f0);
     letter-spacing: -0.01em;
   }
   .reader-content h3 {
@@ -367,11 +274,11 @@
   .reader-content hr {
     border: 0;
     height: 1px;
-    background: var(--border);
+    background: var(--border-subtle, #e2e8f0);
     margin: 28px 0;
   }
   .reader-content strong {
-    color: #0f172a;
+    color: var(--text-primary);
     font-weight: 700;
   }
   .reader-content em {
@@ -384,13 +291,13 @@
     border-collapse: collapse;
     margin: 16px 0 24px;
     font-size: 13px;
-    background: #ffffff;
+    background: var(--bg-surface, #ffffff);
     border-top: 2px solid var(--text-primary);
     border-bottom: 2px solid var(--text-primary);
   }
   .reader-content th {
-    background: #f8fafc;
-    border-bottom: 1.5px solid var(--border-dark);
+    background: var(--bg-secondary, #f8fafc);
+    border-bottom: 1.5px solid var(--border-strong, #cbd5e1);
     padding: 9px 12px;
     font-weight: 700;
     text-align: left;
@@ -398,25 +305,25 @@
   }
   .reader-content td {
     padding: 8px 12px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
     color: #334155;
   }
   .reader-content tr:last-child td {
     border-bottom: none;
   }
   .reader-content tr:hover td {
-    background: #f8fafc;
+    background: var(--bg-secondary, #f8fafc);
   }
 
   /* Code & Syntax */
   .reader-content code {
-    font-family: "SFMono-Regular", Consolas, Menlo, Monaco, monospace;
+    font-family: var(--font-mono, monospace);
     font-size: 12.5px;
     background: #f1f5f9;
-    color: #0f172a;
+    color: var(--text-primary);
     padding: 2px 5px;
     border-radius: 4px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-subtle, #e2e8f0);
   }
   .code-block-wrapper {
     position: relative;
@@ -425,12 +332,12 @@
   .reader-content pre {
     background: #0f172a;
     color: #f8fafc;
-    border-radius: 6px;
+    border-radius: var(--radius-sm, 6px);
     padding: 16px;
     overflow-x: auto;
     font-size: 12.5px;
     line-height: 1.55;
-    font-family: "SFMono-Regular", Consolas, Menlo, Monaco, monospace;
+    font-family: var(--font-mono, monospace);
   }
   .reader-content pre code {
     background: transparent;
@@ -460,16 +367,16 @@
 
   /* Worked Example Figure Card */
   .protocol-figure-card {
-    background: #ffffff;
-    border: 1.5px solid var(--border-dark);
-    border-radius: 8px;
+    background: var(--bg-surface, #ffffff);
+    border: 1.5px solid var(--border-strong, #cbd5e1);
+    border-radius: var(--radius-md, 8px);
     overflow: hidden;
     margin: 24px 0 28px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-sm);
   }
   .figure-header {
-    background: #f8fafc;
-    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary, #f8fafc);
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
     padding: 12px 18px;
     display: flex;
     justify-content: space-between;
@@ -494,8 +401,8 @@
     max-width: 100%;
     max-height: 640px;
     border-radius: 4px;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-strong, #cbd5e1);
+    box-shadow: var(--shadow-md);
     transition: transform 0.2s ease;
   }
   .annotated-doc-image:hover {
@@ -509,8 +416,8 @@
   }
   .figure-caption {
     padding: 16px 20px;
-    background: #ffffff;
-    border-top: 1px solid var(--border);
+    background: var(--bg-surface, #ffffff);
+    border-top: 1px solid var(--border-subtle, #e2e8f0);
     font-size: 13px;
     color: #334155;
     line-height: 1.6;
@@ -576,7 +483,7 @@
   #btn-back-to-top {
     position: fixed;
     bottom: 24px;
-    right: 32px;
+    right: 28px;
     background: #0f172a;
     color: #ffffff;
     border: none;
@@ -593,31 +500,151 @@
     transition: opacity 0.2s;
   }
   #btn-back-to-top.visible { display: flex; }
+
+  /* Mobile TOC Drawer & Sticky Trigger Bar */
+  .mobile-toc-bar {
+    position: sticky;
+    top: var(--header-height, 48px);
+    z-index: 25;
+    background: var(--bg-surface, #ffffff);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border-subtle, #e2e8f0);
+    box-shadow: var(--shadow-sm);
+  }
+  .toc-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    z-index: 55;
+  }
+  .toc-backdrop.active {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    [id] {
+      scroll-margin-top: calc(var(--header-height, 48px) + 48px);
+    }
+    .protocol-layout {
+      display: block;
+      padding: 12px 12px 32px;
+    }
+    #toc-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(85vw, 340px);
+      max-height: 100vh;
+      height: 100vh;
+      border-radius: 0;
+      z-index: 60;
+      box-shadow: var(--shadow-lg);
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+    #toc-sidebar.open {
+      transform: translateX(0);
+    }
+    .reader-inner {
+      padding: 20px 16px;
+    }
+    .cheat-sheet-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 <body>
 
-<!-- Header -->
-<header id="global-header">
-  <div class="brand-group">
-    <a href="/" class="brand-title">
-      <span>🏛️ IndicGovBench-Orders</span>
-    </a>
-    <span class="brand-badge">Annotation Protocol &amp; Metrics Spec (v0.9)</span>
-  </div>
-  <div class="header-actions">
-    <a href="/" class="btn-nav">← Benchmark Leaderboard</a>
-    <a href="/metrics" target="_blank" class="btn-nav">🔬 Metrics Demo ↗</a>
-    <a href="/?provider=gemini_3_1_pro" class="btn-nav btn-nav-primary">Audit Workspace →</a>
-  </div>
-</header>
+    <!-- Top Global Header -->
+    <header id="global-header" data-testid="global-header">
+      <div class="header-left">
+        <a href="index.html#section-results" class="brand-link" title="IndicGovBench-Orders Home">
+          <span class="brand-title">🏛️ IndicGovBench-Orders</span>
+        </a>
+        <span class="brand-badge" id="header-context-badge">Annotation Protocol &amp; Metrics Spec</span>
+      </div>
 
-<!-- Main Layout -->
-<div class="layout-body">
+      <nav class="header-nav desktop-only" aria-label="Main Navigation">
+        <a href="index.html#section-results" class="nav-item">Leaderboard</a>
+        <a href="pricing.html" class="nav-item">Pricing</a>
+        <a href="metrics.html" class="nav-item">Metrics</a>
+        <a href="attributes.html" class="nav-item">Attributes</a>
+      </nav>
+
+      <div class="header-actions">
+        
+        <div class="repo-links desktop-only">
+          <a class="header-nav-link" href="https://indicgovbench.orgpedia.in" target="_blank" rel="noopener noreferrer" title="Orgpedia Official Website">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>Official Site</span>
+          </a>
+          <a class="header-nav-link" href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" title="GitHub Repository">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="#181717">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a class="header-nav-link" href="https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" title="HuggingFace Benchmark Dataset">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFD21E">
+              <path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244-1.176-.506-1.176-.506-2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624"/>
+            </svg>
+            <span>HuggingFace</span>
+          </a>
+        </div>
+        <button class="btn-hamburger mobile-only" id="btn-mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="mobile-drawer-header">
+        <span class="drawer-title">Navigation</span>
+        <button class="btn-close-drawer" id="btn-close-drawer" aria-label="Close navigation menu">✕</button>
+      </div>
+      <nav class="mobile-drawer-links" aria-label="Mobile Navigation">
+        <a href="index.html#section-results" class="drawer-link">📊 Leaderboard</a>
+        <a href="pricing.html" class="drawer-link">💳 Pricing &amp; Rate Card</a>
+        <a href="metrics.html" class="drawer-link">🔬 Metrics</a>
+        <a href="attributes.html" class="drawer-link">🏷️ Attributes</a>
+        <hr class="drawer-divider">
+        <a href="https://indicgovbench.orgpedia.in" target="_blank" rel="noopener noreferrer" class="drawer-link">Official Site ↗</a>
+        <a href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" class="drawer-link">GitHub Repository ↗</a>
+        <a href="https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" class="drawer-link">HuggingFace Dataset ↗</a>
+      </nav>
+    </div>
+    <div class="mobile-drawer-backdrop" id="mobile-nav-backdrop"></div>
+
+<!-- Mobile Sticky TOC Bar -->
+<div class="mobile-toc-bar mobile-only">
+  <button id="btn-toggle-toc" class="btn-tool" style="width:100%; justify-content:center; padding:8px 12px; font-weight:600; display:flex; align-items:center; gap:8px;" aria-expanded="false" aria-controls="toc-sidebar">
+    <span>📑 Table of Contents (Sections 1–14) ▾</span>
+  </button>
+</div>
+<div class="toc-backdrop" id="toc-backdrop"></div>
+
+<!-- Main Protocol Layout -->
+<div class="protocol-layout">
   <!-- Left TOC Sidebar -->
   <aside id="toc-sidebar">
+    <div class="toc-mobile-header mobile-only" style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; border-bottom:1px solid var(--border-subtle);">
+      <span style="font-weight:700; font-size:13px; text-transform:uppercase;">Table of Contents</span>
+      <button id="btn-close-toc" class="btn-tool" aria-label="Close table of contents">&times; Close</button>
+    </div>
     <div class="toc-header">
-      <div class="toc-title">Table of Contents</div>
+      <div class="toc-title desktop-only">Table of Contents</div>
       <div class="toc-search">
         <input type="text" id="tocFilterInput" placeholder="Filter sections (e.g., table, stamp)..." onkeyup="filterToc()">
       </div>
@@ -3771,6 +3798,24 @@ runs over the 27 <code>target</code> blocks only; <code>excluded</code> and <cod
 <!-- Back to top button -->
 <button id="btn-back-to-top" onclick="scrollToTop()" title="Back to top">&uarr;</button>
 
+    <!-- Academic Footer -->
+    <footer class="academic-footer site-footer">
+      <div class="footer-container">
+        <div class="footer-summary">
+          IndicGovBench-Orders — A standardized benchmark for document transcription and table extraction across Indian government orders.
+        </div>
+        <div class="footer-meta">
+          Orgpedia Foundation · CC BY 4.0
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer">GitHub</a> · 
+          <a href="https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer">HuggingFace</a> · 
+          <a href="mailto:info@orgpedia.in">Contact: info@orgpedia.in</a>
+        </div>
+      </div>
+    </footer>
+
+<script src="js/nav.js"></script>
 <script>
 function filterToc() {
   const query = document.getElementById('tocFilterInput').value.toLowerCase();
@@ -3785,6 +3830,37 @@ function filterToc() {
   });
 }
 
+// Mobile TOC Drawer Controls
+const tocSidebar = document.getElementById('toc-sidebar');
+const tocBackdrop = document.getElementById('toc-backdrop');
+const btnToggleToc = document.getElementById('btn-toggle-toc');
+const btnCloseToc = document.getElementById('btn-close-toc');
+
+function openToc() {
+  tocSidebar?.classList.add('open');
+  tocBackdrop?.classList.add('active');
+  btnToggleToc?.setAttribute('aria-expanded', 'true');
+}
+
+function closeToc() {
+  tocSidebar?.classList.remove('open');
+  tocBackdrop?.classList.remove('active');
+  btnToggleToc?.setAttribute('aria-expanded', 'false');
+}
+
+btnToggleToc?.addEventListener('click', () => {
+  if (tocSidebar?.classList.contains('open')) closeToc();
+  else openToc();
+});
+btnCloseToc?.addEventListener('click', closeToc);
+tocBackdrop?.addEventListener('click', closeToc);
+
+document.querySelectorAll('.toc-content a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 768) closeToc();
+  });
+});
+
 function openImageLightbox(src) {
   const modal = document.getElementById('lightbox-modal');
   if (modal) modal.classList.add('active');
@@ -3796,18 +3872,16 @@ function closeImageLightbox() {
 }
 
 function scrollToTop() {
-  document.getElementById('main-reader').scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Scrollspy and Back to Top Visibility
-const reader = document.getElementById('main-reader');
+// Back to Top Visibility based on window scroll
 const backToTop = document.getElementById('btn-back-to-top');
-
-reader.addEventListener('scroll', () => {
-  if (reader.scrollTop > 300) {
-    backToTop.classList.add('visible');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop?.classList.add('visible');
   } else {
-    backToTop.classList.remove('visible');
+    backToTop?.classList.remove('visible');
   }
 });
 

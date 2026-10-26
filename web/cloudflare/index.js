@@ -118,10 +118,10 @@ export default {
             "openai_gpt_6_1_sol", "openai_gpt_6_luna", "openai_gpt_5_6_tera", "openai_gpt_5_6_luna",
             "claude_haiku_4_5", "claude_sonnet_5_5",
             "paddleocr_hpd", "qwen3_vl_8b", "tesseract",
-            "datalab_api", "mistral_api", "sarvam_api"
+            "datalab_api", "mistral_api", "sarvam_api", "documentai_form_parser"
           ];
           if (prov && supportedProviders.includes(prov)) {
-            return Response.redirect(new URL(`/provider_${prov}`, request.url), 302);
+            return Response.redirect(new URL(`/provider_${prov}${url.search}`, request.url), 302);
           }
         }
       }

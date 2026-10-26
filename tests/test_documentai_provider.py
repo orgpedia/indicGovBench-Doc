@@ -280,7 +280,7 @@ class TestDocumentAIProvider(unittest.TestCase):
     def test_pricing_registry_integration(self) -> None:
         """Verify that documentai_form_parser rate card and telemetry work properly."""
         self.assertIn("documentai_form_parser", PRICING_REGISTRY)
-        self.assertIn("documentai_api", PRICING_REGISTRY)
+        self.assertNotIn("documentai_api", PRICING_REGISTRY)
 
         reg = PRICING_REGISTRY["documentai_form_parser"]
         self.assertEqual(reg["archetype"], "fixed_page")

@@ -155,6 +155,62 @@ class TestStudioPages(unittest.TestCase):
             html_set_i, catalog_set_i, "index.html Set I order must match attribute_catalog.js"
         )
 
+    def test_provider_pages_data_attributes(self) -> None:
+        static_dir = Path(__file__).resolve().parent.parent / "web" / "studio" / "static"
+        provider_files = list(static_dir.glob("provider_*.html"))
+        self.assertGreaterEqual(len(provider_files), 15, "All 15 pre-built provider pages must exist")
+        for prov_file in provider_files:
+            slug = prov_file.stem.replace("provider_", "")
+            content = prov_file.read_text(encoding="utf-8")
+            self.assertIn(f'data-provider="{slug}"', content, f"{prov_file.name} must have data-provider='{slug}'")
+            self.assertIn('data-run="default"', content, f"{prov_file.name} must have data-run='default'")
+            self.assertIn('class="app-shell"', content, f"{prov_file.name} must have class='app-shell'")
+
+    def test_global_chrome_and_unlinked_protocol(self) -> None:
+        static_dir = Path(__file__).resolve().parent.parent / "web" / "studio" / "static"
+        html_files = {
+            "index": (static_dir / "index.html").read_text(encoding="utf-8"),
+            "pricing": (static_dir / "pricing.html").read_text(encoding="utf-8"),
+            "metrics": (static_dir / "metrics.html").read_text(encoding="utf-8"),
+            "attributes": (static_dir / "attributes.html").read_text(encoding="utf-8"),
+            "protocol": (static_dir / "protocol.html").read_text(encoding="utf-8"),
+            "provider": (static_dir / "provider.html").read_text(encoding="utf-8"),
+            "audit": (static_dir / "audit.html").read_text(encoding="utf-8"),
+        }
+
+        # 1. Zero protocol links in navigation or footer
+        for name, content in html_files.items():
+            if name != "protocol":
+                self.assertNotIn('href="protocol.html"', content, f"{name}.html must not link to protocol.html")
+                self.assertNotIn('href="/protocol"', content, f"{name}.html must not link to /protocol")
+                self.assertNotIn('href="protocol"', content, f"{name}.html must not link to protocol")
+            self.assertIn("🏛️ IndicGovBench-Orders", content, f"{name}.html must have brand title")
+
+        # 2. Harmonized footer with CC BY 4.0 and info@orgpedia.in on natural pages
+        for name in ["index", "pricing", "metrics", "protocol", "attributes"]:
+            content = html_files[name]
+            self.assertIn("CC BY 4.0", content, f"{name}.html must have CC BY 4.0 license in footer")
+            self.assertIn("info@orgpedia.in", content, f"{name}.html must have contact email in footer")
+            self.assertIn("site-footer", content, f"{name}.html must have site-footer")
+
+        # 3. Mobile drawer and nav.js on interactive pages
+        for name in ["index", "pricing", "metrics", "protocol", "attributes", "provider"]:
+            content = html_files[name]
+            self.assertIn("nav.js", content, f"{name}.html must include nav.js")
+            self.assertIn('id="mobile-nav-drawer"', content, f"{name}.html must have mobile-nav-drawer")
+
+        # 4. Audit workspace desktop advisory notice
+        self.assertIn("audit-desktop-notice", html_files["audit"])
+        self.assertIn("mobile-only", html_files["audit"])
+        self.assertIn("app-shell", html_files["audit"])
+
+    def test_zero_local_tracking(self) -> None:
+        static_dir = Path(__file__).resolve().parent.parent / "web" / "studio" / "static"
+        for html_file in static_dir.glob("*.html"):
+            content = html_file.read_text(encoding="utf-8")
+            self.assertNotIn("clarity.ms", content, f"{html_file.name} must not contain Clarity tracking script")
+            self.assertNotIn("z23hiv1jjs", content, f"{html_file.name} must not contain Clarity project tag")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -8,13 +8,13 @@ class ProviderPageApp {
   constructor() {
     window.providerPageApp = this;
     const params = new URLSearchParams(window.location.search);
-    this.currentRun = params.get('run') || 'default';
-    this.selectedProvider = params.get('provider') || 'gemini_3_1_pro';
+    this.selectedProvider = document.body.dataset.provider || params.get('provider') || 'gemini_3_1_pro';
+    this.currentRun = document.body.dataset.run || params.get('run') || 'default';
     this.initialViewMode = params.get('mode') || params.get('view') || 'values';
 
-    // Update header title and badge
+    // Update header title and badge if empty
     const badge = document.getElementById('provider-header-badge');
-    if (badge) {
+    if (badge && !badge.textContent.trim()) {
       badge.textContent = `${this.selectedProvider} (${this.currentRun})`;
     }
 

@@ -12,6 +12,7 @@ from typing import Sequence
 from metrics_tutorial.cases import ALL_TEST_CASES, get_test_case
 from metrics_tutorial.diff_engine import CaseExecutionTrace, extract_case_trace
 from metrics_tutorial.models import MetricTestCase
+from web.studio.site_chrome import render_footer, render_header
 
 
 def trace_to_dict(trace: CaseExecutionTrace) -> dict:
@@ -167,11 +168,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IndicGovBench — Evaluation Metrics Verification & Interactive Showcase</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 <style>
   :root {
-    --bg-main: #f8fafc;
-    --bg-card: #ffffff;
-    --border: #e2e8f0;
+    --bg-main: var(--bg-page, #f8fafc);
+    --bg-card: var(--bg-surface, #ffffff);
+    --border: var(--border-subtle, #e2e8f0);
     --text-primary: #0f172a;
     --text-muted: #64748b;
     --accent: #2563eb;
@@ -185,16 +189,38 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     --purple-bg: #f3e8ff;
     --purple-text: #6b21a8;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  body { background: var(--bg-main); color: var(--text-primary); display: flex; height: 100vh; overflow: hidden; }
+
+  /* Page Wrapper */
+  .metrics-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--header-height, 48px));
+    width: 100%;
+  }
+  .metrics-layout {
+    display: flex;
+    flex: 1;
+    width: 100%;
+  }
 
   /* Sidebar */
-  #sidebar { width: 340px; background: #ffffff; border-right: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+  #sidebar {
+    width: 320px;
+    background: var(--bg-surface, #ffffff);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: var(--header-height, 48px);
+    height: calc(100vh - var(--header-height, 48px));
+    overflow: hidden;
+  }
   .sidebar-header { padding: 18px 20px; border-bottom: 1px solid var(--border); }
-  .sidebar-header h1 { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+  .sidebar-header h1 { font-size: 15px; font-weight: 700; color: var(--text-primary); }
   .sidebar-header p { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
   .search-box { padding: 10px 16px; border-bottom: 1px solid var(--border); }
-  .search-box input { width: 100%; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; outline: none; }
+  .search-box input { width: 100%; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; outline: none; background: var(--bg-surface, #ffffff); color: var(--text-primary); }
   .case-list { flex: 1; overflow-y: auto; padding: 8px; }
   .tier-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); padding: 12px 10px 6px; letter-spacing: 0.5px; }
   .case-item { padding: 10px 12px; border-radius: 6px; cursor: pointer; margin-bottom: 4px; border: 1px solid transparent; transition: all 0.15s; }
@@ -206,9 +232,31 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .badge-pass { background: var(--green-bg); color: var(--green-text); }
   .badge-score { font-size: 11px; font-weight: 700; color: var(--accent); }
 
+  /* Mobile Selector Bar */
+  .mobile-case-bar {
+    background: var(--bg-surface, #ffffff);
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: sticky;
+    top: var(--header-height, 48px);
+    z-index: 20;
+  }
+  .mobile-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm, 6px);
+    font-size: 14px;
+    background: var(--bg-surface, #ffffff);
+    color: var(--text-primary);
+  }
+
   /* Main Content Area */
-  #main { flex: 1; display: flex; flex-direction: column; overflow-y: auto; background: var(--bg-main); }
-  .top-toolbar { background: #ffffff; border-bottom: 1px solid var(--border); padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
+  #main { flex: 1; display: flex; flex-direction: column; background: var(--bg-main); min-width: 0; }
+  .top-toolbar { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
   .top-title h2 { font-size: 18px; font-weight: 700; }
   .top-title span { font-size: 13px; color: var(--text-muted); }
   .toolbar-actions { display: flex; gap: 10px; align-items: center; }
@@ -295,7 +343,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   @media (max-width: 1080px) { .canvas-grid { grid-template-columns: 1fr; } }
   .doc-sheet-container { display: flex; flex-direction: column; gap: 8px; }
   .doc-sheet-title { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; }
-  .doc-sheet { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.03); position: relative; overflow: hidden; height: 480px; }
+  .doc-sheet { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.03); position: relative; overflow: hidden; min-height: 380px; max-height: 520px; aspect-ratio: 1 / 1.414; }
   .sheet-block { position: absolute; box-sizing: border-box; border-radius: 4px; padding: 5px 7px; overflow: hidden; font-size: 11px; line-height: 1.35; transition: all 0.15s ease; cursor: pointer; }
   .sheet-block:hover { z-index: 25; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
   .sheet-block-target { background: #f8fafc; border: 1.5px solid #94a3b8; color: #0f172a; }
@@ -314,37 +362,83 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .sheet-order-pred-transposed { background: #b45309; color: #ffffff; }
   .sheet-block-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; word-break: break-word; white-space: pre-wrap; max-height: calc(100% - 18px); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
   .empty-sheet-msg { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; color: #94a3b8; }
+
+  /* Responsive Rules */
+  @media (max-width: 900px) {
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 768px) {
+    #sidebar {
+      display: none !important;
+    }
+    .panes-container {
+      grid-template-columns: 1fr !important;
+    }
+    .top-toolbar {
+      padding: 12px 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .content-body {
+      padding: 14px 16px;
+    }
+  }
+  @media (max-width: 540px) {
+    .metrics-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .doc-sheet {
+      height: 380px !important;
+    }
+  }
 </style>
 </head>
 <body>
 
-<div id="sidebar">
-  <div class="sidebar-header">
-    <h1>🔬 Metrics Demo & Verification</h1>
-    <p>IndicGovBench Benchmark Engine (v3)</p>
+{{HEADER_HTML}}
+
+<div class="metrics-page-wrapper">
+  <!-- Mobile case selector bar -->
+  <div class="mobile-case-bar mobile-only">
+    <label for="mobileCaseSelect" style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Select Test Case:</label>
+    <select id="mobileCaseSelect" class="mobile-select" onchange="selectCase(this.value)"></select>
   </div>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search test cases or tags..." onkeyup="filterCases()">
+
+  <div class="metrics-layout">
+    <aside id="sidebar" class="desktop-only">
+      <div class="sidebar-header">
+        <h1>🔬 Metrics Demo &amp; Verification</h1>
+        <p>IndicGovBench Benchmark Engine (v3)</p>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search test cases or tags..." onkeyup="filterCases()">
+      </div>
+      <div class="case-list" id="caseListContainer"></div>
+    </aside>
+
+    <main id="main">
+      <div class="top-toolbar">
+        <div class="top-title">
+          <h2 id="activeCaseTitle">Loading...</h2>
+          <span id="activeCaseSub"></span>
+        </div>
+        <div class="toolbar-actions">
+          <span style="font-size: 12px; font-weight: 600; color: var(--text-muted);">Profile:</span>
+          <button class="btn-toggle active" id="btnNorm" onclick="setProfile('norm')">Normalized</button>
+          <button class="btn-toggle" id="btnRaw" onclick="setProfile('raw')">Raw CodePoints</button>
+        </div>
+      </div>
+
+      <div class="content-body" id="contentArea"></div>
+    </main>
   </div>
-  <div class="case-list" id="caseListContainer"></div>
 </div>
 
-<div id="main">
-  <div class="top-toolbar">
-    <div class="top-title">
-      <h2 id="activeCaseTitle">Loading...</h2>
-      <span id="activeCaseSub"></span>
-    </div>
-    <div class="toolbar-actions">
-      <span style="font-size: 12px; font-weight: 600; color: var(--text-muted);">Profile:</span>
-      <button class="btn-toggle active" id="btnNorm" onclick="setProfile('norm')">Normalized</button>
-      <button class="btn-toggle" id="btnRaw" onclick="setProfile('raw')">Raw CodePoints</button>
-    </div>
-  </div>
+{{FOOTER_HTML}}
 
-  <div class="content-body" id="contentArea"></div>
-</div>
-
+<script src="js/nav.js"></script>
 <script>
 const DATA_NORM = JSON_DATA_NORM;
 const DATA_RAW = JSON_DATA_RAW;
@@ -353,17 +447,24 @@ let activeCaseId = DATA_NORM[0].id;
 
 function renderSidebar() {
   const container = document.getElementById('caseListContainer');
+  const mobileSelect = document.getElementById('mobileCaseSelect');
   const data = (currentProfile === 'norm') ? DATA_NORM : DATA_RAW;
   
   let html = '';
+  let selectHtml = '';
   let currentTier = '';
+  let optgroupOpen = false;
 
   data.forEach((c) => {
     if (c.tier !== currentTier) {
+      if (optgroupOpen) selectHtml += '</optgroup>';
       currentTier = c.tier;
       html += `<div class="tier-group-title">${currentTier}</div>`;
+      selectHtml += `<optgroup label="${escapeHtml(currentTier)}">`;
+      optgroupOpen = true;
     }
     const isActive = (c.id === activeCaseId) ? 'active' : '';
+    const isSelected = (c.id === activeCaseId) ? 'selected' : '';
     html += `
       <div class="case-item ${isActive}" onclick="selectCase('${c.id}')" data-title="${c.title.toLowerCase()}" data-tags="${c.tags.join(' ')}">
         <div class="case-item-title">
@@ -373,12 +474,18 @@ function renderSidebar() {
         <div class="case-item-id">${c.id}</div>
       </div>
     `;
+    selectHtml += `<option value="${c.id}" ${isSelected}>${escapeHtml(c.id)}: ${escapeHtml(c.title)}</option>`;
   });
-  container.innerHTML = html;
+  if (optgroupOpen) selectHtml += '</optgroup>';
+
+  if (container) container.innerHTML = html;
+  if (mobileSelect) mobileSelect.innerHTML = selectHtml;
 }
 
 function selectCase(caseId) {
   activeCaseId = caseId;
+  const mobileSelect = document.getElementById('mobileCaseSelect');
+  if (mobileSelect && mobileSelect.value !== caseId) mobileSelect.value = caseId;
   renderSidebar();
   renderContent();
 }
@@ -1154,7 +1261,18 @@ def generate_html_report(cases: list[MetricTestCase], output_path: str = "web/st
     json_norm = json.dumps([trace_to_dict(t) for t in norm_traces], ensure_ascii=False)
     json_raw = json.dumps([trace_to_dict(t) for t in raw_traces], ensure_ascii=False)
 
-    html_content = HTML_TEMPLATE.replace("JSON_DATA_NORM", json_norm).replace("JSON_DATA_RAW", json_raw)
+    header_html = render_header(
+        active_nav="metrics",
+        context_badge="Metrics Tutorial & Verification",
+    )
+    footer_html = render_footer()
+
+    html_content = (
+        HTML_TEMPLATE.replace("{{HEADER_HTML}}", header_html)
+        .replace("{{FOOTER_HTML}}", footer_html)
+        .replace("JSON_DATA_NORM", json_norm)
+        .replace("JSON_DATA_RAW", json_raw)
+    )
 
     out_file = Path(output_path)
     out_file.parent.mkdir(parents=True, exist_ok=True)

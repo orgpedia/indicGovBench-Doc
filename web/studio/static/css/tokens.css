@@ -22,6 +22,21 @@
   --border-strong: #cbd5e1;
   --border-focus: #2563eb;
 
+  /* Accent & Interaction */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
+
+  /* Alert / Badge Fills */
+  --green-bg: #dcfce7;
+  --green-text: #166534;
+  --amber-bg: #fef3c7;
+  --amber-text: #92400e;
+  --red-bg: #fee2e2;
+  --red-text: #991b1b;
+  --purple-bg: #f3e8ff;
+  --purple-text: #6b21a8;
+
   /* Semantic Diff Colors (§3.5 in specs) - High-contrast accessible light theme */
   --diff-raw-bg: transparent;
   --diff-raw-text: #0f172a;

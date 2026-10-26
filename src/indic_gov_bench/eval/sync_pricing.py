@@ -33,21 +33,20 @@ REGISTRY_FILE_PATH = Path(__file__).resolve().parent / "pricing_registry.py"
 # Mapping table between IndicGovBench provider slugs and models.dev catalog
 MODEL_MAPPINGS: dict[str, dict[str, Any]] = {
     # 1. Google Gemini Models
+    "gemini_4_argon": {"provider": "google", "model": "gemini-4-argon"},
     "gemini_3_8_flash": {"provider": "google", "model": "gemini-3.8-flash"},
     "gemini_3_5_flash_lite": {"provider": "google", "model": "gemini-3.5-flash-lite"},
     "gemini_3_1_pro": {"provider": "google", "model": "gemini-3.1-pro-preview"},
     "gemini_2_5_flash": {"provider": "google", "model": "gemini-2.5-flash"},
     "gemini_2_5_pro": {"provider": "google", "model": "gemini-2.5-pro"},
     "gemini_2_0_flash": {"provider": "google", "model": "gemini-2.0-flash"},
-    "gemini_api": {"alias_of": "gemini_3_8_flash"},
     # 2. OpenAI Models
     "openai_gpt_6_1_sol": {"provider": "openai", "model": "gpt-6.1-sol"},
     "openai_gpt_6_luna": {"provider": "openai", "model": "gpt-6-luna"},
     "openai_gpt_5_6_luna": {"provider": "openai", "model": "gpt-5.6-luna"},
     "openai_gpt_5_6_terra": {"provider": "openai", "model": "gpt-5.6-terra"},
-    "openai_gpt_5_6_tera": {"alias_of": "openai_gpt_5_6_terra"},
+    "openai_gpt_5_6_tera": {"provider": "openai", "model": "gpt-5.6-terra"},
     "openai_gpt_5_6_sol": {"provider": "openai", "model": "gpt-5.6-sol"},
-    "openai_api": {"alias_of": "openai_gpt_5_6_sol"},
     # 3. Anthropic Claude Models
     "claude_haiku_4_5": {"provider": "anthropic", "model": "claude-haiku-4-5"},
     "claude_sonnet_5_5": {"provider": "anthropic", "model": "claude-sonnet-5-5"},

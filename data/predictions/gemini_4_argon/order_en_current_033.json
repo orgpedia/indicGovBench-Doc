@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_current_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        94.01,
+        110.3,
+        246.33,
+        110.3,
+        246.33,
+        122.93,
+        94.01,
+        122.93
+      ],
+      "text": "No. K-13012/01/2024-US-I"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        415.9,
+        110.3,
+        521.22,
+        110.3,
+        521.22,
+        122.93,
+        415.9,
+        122.93
+      ],
+      "text": "Dated: 06.09.2025."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        94.01,
+        158.3,
+        148.75,
+        158.3,
+        148.75,
+        170.93,
+        94.01,
+        170.93
+      ],
+      "text": "Copy to:-"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        106.5,
+        189.45,
+        519.43,
+        189.45,
+        519.43,
+        488.36,
+        106.5,
+        488.36
+      ],
+      "text": "1. S/Shri (i) Amitabh Kumar Rai and (ii) Rajiv Lochan Shukla,\nAdvocates through the Registrar General, Allahabad High Court,\nPrayagraj.\n2. The Secretary to Governor, Uttar Pradesh, Lucknow.\n3. The Secretary to Chief Minister, Uttar Pradesh, Lucknow.\n4. The Secretary to the Chief Justice, Allahabad High Court, Prayagraj.\n5. The Chief Secretary, Uttar Pradesh, Lucknow.\n6. The Registrar General, Allahabad High Court, Prayagraj.\n7. The Accountant General, Uttar Pradesh, Lucknow.\n8. The President`s Secretariat, (CA.II Section), Rashtrapati Bhawan,\nNew Delhi.\n9. PS to Principal Secretary to the Prime Minister, PM’s Office, South\nBlock, New Delhi.\n10. Registrar (Conf.), o/o Chief Justice of India, 07, Krishna Menon Marg,\nNew Delhi.\n11. PS to MoS(L&J)/ PPS to Secretary (Justice).\n12. Technical Director, NIC, Department of Justice, with a request to\nupload on the notification website of the Department\n(www.doj.gov.in)."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        476.6,
+        492.57,
+        554.54,
+        492.57,
+        554.54,
+        560.77,
+        476.6,
+        560.77
+      ],
+      "text": "Pm\n06/09/25"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        358.19,
+        558.25,
+        547.4,
+        558.25,
+        547.4,
+        601.19,
+        358.19,
+        601.19
+      ],
+      "text": "(Prem Chand)\nUnder Secretary (Appointments-I)\nTele: 2338 2978"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1731,
+      "output": 568,
+      "total": 2299
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.009142,
+      "batch": 0.004571
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.9142,
+      "batch": 0.4571,
+      "savings": 0.4571,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

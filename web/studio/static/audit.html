@@ -8,10 +8,22 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
-<body>
+<body class="app-shell">
   <div id="app-container">
+    <!-- Desktop Advisory Banner for Mobile Viewports (<768px) -->
+    <div class="mobile-only audit-desktop-notice" role="alert" style="background:#fef3c7; color:#92400e; padding:10px 14px; font-size:12px; text-align:center; border-bottom:1px solid #fde68a; font-weight:500;">
+      ⚠️ Document Audit Workspace is optimized for desktop annotation workstations. Please open on a desktop screen (≥768px).
+    </div>
+
     <!-- Top Header -->
-    <header id="global-header" data-testid="global-header"></header>
+    <header id="global-header" data-testid="global-header">
+      <div class="header-left">
+        <a href="index.html#section-results" class="brand-link" title="IndicGovBench-Orders Home">
+          <span class="brand-title">🏛️ IndicGovBench-Orders</span>
+        </a>
+        <span class="brand-badge" id="header-context-badge">Audit Workspace</span>
+      </div>
+    </header>
 
     <!-- Command / Context Row -->
     <section id="command-row" data-testid="command-row"></section>

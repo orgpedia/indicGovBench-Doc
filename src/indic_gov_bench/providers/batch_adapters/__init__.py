@@ -16,7 +16,6 @@ BATCH_ADAPTER_REGISTRY: dict[str, type[BaseBatchAdapter]] = {
     "paddleocr_hpd": ModalBatchAdapter,
     "qwen3_vl_8b": ModalBatchAdapter,
     "tesseract": ModalBatchAdapter,
-    "tesseract_modal": ModalBatchAdapter,
     "hpd": ModalBatchAdapter,
     "qwen": ModalBatchAdapter,
     "modal": ModalBatchAdapter,

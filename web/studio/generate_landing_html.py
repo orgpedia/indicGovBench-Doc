@@ -17,6 +17,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from web.studio.site_chrome import render_footer, render_header
+
 LANG_DISPLAY_NAMES = {
     "marathi": "Marathi (मराठी)",
     "hindi": "Hindi (हिन्दी)",
@@ -210,7 +212,7 @@ def build_attribute_grid_html(catalog: list[dict[str, Any]]) -> str:
     right_html = "\n".join(render_group_rows(g) for g in right_groups)
 
     return f"""        <!-- 2-Column Side-by-Side Attribute Distribution Grid -->
-        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; align-items:start;">
+        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:24px; align-items:start;">
           <!-- Left Column: I. Table Content & Structural Elements -->
           <div class="benchmark-table-wrapper">
             <table class="benchmark-table">
@@ -279,7 +281,7 @@ export function renderAttributeExplorationHtml(catalog = ATTRIBUTE_CATALOG) {{
   const rightGroups = catalog.filter(g => g.column === 'right');
 
   return `<!-- 2-Column Side-by-Side Attribute Distribution Grid -->
-        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; align-items:start;">
+        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:24px; align-items:start;">
           <!-- Left Column: I. Table Content & Structural Elements -->
           <div class="benchmark-table-wrapper">
             <table class="benchmark-table">
@@ -379,7 +381,15 @@ def main():
     with open(args.template, "r", encoding="utf-8") as f:
         template_content = f.read()
 
+    header_html = render_header(
+        active_nav="leaderboard",
+        context_badge="Paper & Benchmark Landing",
+    )
+    footer_html = render_footer()
+
     replacements = {
+        "{{GLOBAL_HEADER}}": header_html,
+        "{{GLOBAL_FOOTER}}": footer_html,
         "{{HERO_BADGE_COUNTS}}": f"{total_docs} Orders · {total_models} Models",
         "{{HERO_BADGE_LANGS}}": hero_badge_langs,
         "{{TOTAL_DOCS}}": str(total_docs),

@@ -1,0 +1,222 @@
+{
+  "doc_id": "order_en_archive_011",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        90.44,
+        228.18,
+        103.53,
+        228.18,
+        103.53,
+        308.17,
+        90.44,
+        308.17
+      ],
+      "text": "NARULA ML"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        140.42,
+        228.18,
+        174.93,
+        228.18,
+        174.93,
+        682.86,
+        140.42,
+        682.86
+      ],
+      "text": "Copy forwarded to the Principal Private Secretary to the\nPrime Minister/the Private Secretary to the Prime Minister, for\ninformation."
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "order": 2,
+      "poly": [
+        201.11,
+        229.87,
+        210.63,
+        229.87,
+        210.63,
+        245.02,
+        201.11,
+        245.02
+      ],
+      "text": "To"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        271.32,
+        230.71,
+        354.02,
+        230.71,
+        354.02,
+        677.81,
+        271.32,
+        677.81
+      ],
+      "text": "The undersigned is directed to state that, with\neffect from the forenoon of February 16, 1963, the designation\nof Shri S.K. Dey will be \"Minister of Community Development\nand Cooperation\"."
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "order": 4,
+      "poly": [
+        185.04,
+        281.23,
+        198.14,
+        281.23,
+        198.14,
+        566.67,
+        185.04,
+        566.67
+      ],
+      "text": "All Members of the Council of Ministers."
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        380.8,
+        305.65,
+        456.37,
+        305.65,
+        456.37,
+        548.14,
+        380.8,
+        548.14
+      ],
+      "text": "No.55/4/CF-63\nGOVERNMENT OF INDIA\nCABINET SECRETARIAT\n(Department of Cabinet Affairs)\nNew Delhi, the 16th February 1963."
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "order": 6,
+      "poly": [
+        493.25,
+        377.22,
+        508.13,
+        377.22,
+        508.13,
+        435.31,
+        493.25,
+        435.31
+      ],
+      "text": "S.NO.77"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "order": 7,
+      "poly": [
+        208.25,
+        435.31,
+        231.46,
+        435.31,
+        231.46,
+        654.23,
+        208.25,
+        654.23
+      ],
+      "text": "(B.G. Rau)\nJoint Secretary to the Cabinet."
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "order": 8,
+      "poly": [
+        245.14,
+        525.41,
+        267.16,
+        525.41,
+        267.16,
+        561.61,
+        245.14,
+        561.61
+      ],
+      "text": "B.G.Rau"
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "order": 9,
+      "poly": [
+        466.48,
+        565.82,
+        476.6,
+        565.82,
+        476.6,
+        631.5,
+        466.48,
+        631.5
+      ],
+      "text": "IMMEDIATE"
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "order": 10,
+      "poly": [
+        112.45,
+        618.03,
+        121.97,
+        618.03,
+        121.97,
+        659.29,
+        112.45,
+        659.29
+      ],
+      "text": "P.T.O."
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "order": 11,
+      "poly": [
+        514.08,
+        647.5,
+        532.52,
+        647.5,
+        532.52,
+        670.23,
+        514.08,
+        670.23
+      ],
+      "text": "168"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1731,
+      "output": 626,
+      "total": 2357
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.009722,
+      "batch": 0.004861
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 0.9722,
+      "batch": 0.4861,
+      "savings": 0.4861,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

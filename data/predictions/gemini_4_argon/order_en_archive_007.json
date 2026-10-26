@@ -1,0 +1,94 @@
+{
+  "doc_id": "order_en_archive_007",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        498.61,
+        25.26,
+        525.38,
+        25.26,
+        525.38,
+        38.73,
+        498.61,
+        38.73
+      ],
+      "text": "265"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        208.84,
+        26.94,
+        370.09,
+        26.94,
+        370.09,
+        72.41,
+        208.84,
+        72.41
+      ],
+      "text": "LIST OF COUNCIL OF MINISTERS\n(as on 18.12.2011)\nCABINET MINISTERS"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        98.77,
+        69.04,
+        537.88,
+        69.04,
+        537.88,
+        739.28,
+        98.77,
+        739.28
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Dr. Manmohan Singh</td><td>Prime Minister and also in-charge of the Ministries/Departments not specifically allocated to the charge of any Minister viz.:\n(i) Ministry of Personnel, Public Grievances and Pensions;\n(ii) Ministry of Planning;\n(iii) Department of Atomic Energy; and\n(iv) Department of Space.</td></tr><tr><td>2.</td><td>Shri Pranab Mukherjee</td><td>Minister of Finance.</td></tr><tr><td>3.</td><td>Shri Sharad Pawar</td><td>Minister of Agriculture and Minister of Food Processing Industries.</td></tr><tr><td>4.</td><td>Shri A.K. Antony</td><td>Minister of Defence.</td></tr><tr><td>5.</td><td>Shri P. Chidambaram</td><td>Minister of Home Affairs.</td></tr><tr><td>6.</td><td>Shri S.M. Krishna</td><td>Minister of External Affairs.</td></tr><tr><td>7.</td><td>Shri Virbhadra Singh</td><td>Minister of Micro, Small and Medium Enterprises.</td></tr><tr><td>8.</td><td>Shri Vilasrao Deshmukh</td><td>Minister of Science and Technology and Minister of Earth Sciences.</td></tr><tr><td>9.</td><td>Shri Ghulam Nabi Azad</td><td>Minister of Health and Family Welfare.</td></tr><tr><td>10.</td><td>Shri Sushilkumar Shinde</td><td>Minister of Power.</td></tr><tr><td>11.</td><td>Shri M. Veerappa Moily</td><td>Minister of Corporate Affairs.</td></tr><tr><td>12.</td><td>Dr. Farooq Abdullah</td><td>Minister of New and Renewable Energy.</td></tr><tr><td>13.</td><td>Shri S. Jaipal Reddy</td><td>Minister of Petroleum and Natural Gas.</td></tr><tr><td>14.</td><td>Shri Kamal Nath</td><td>Minister of Urban Development.</td></tr><tr><td>15.</td><td>Shri Ajit Singh</td><td>Minister of Civil Aviation.</td></tr><tr><td>16.</td><td>Shri Vayalar Ravi</td><td>Minister of Overseas Indian Affairs.</td></tr><tr><td>17.</td><td>Smt. Ambika Soni</td><td>Minister of Information and Broadcasting.</td></tr><tr><td>18.</td><td>Shri Mallikarjun Kharge</td><td>Minister of Labour and Employment.</td></tr><tr><td>19.</td><td>Shri Kapil Sibal</td><td>Minister of Human Resource Development and Minister of Communications and Information Technology.</td></tr><tr><td>20.</td><td>Shri Anand Sharma</td><td>Minister of Commerce and Industry and Minister of Textiles.</td></tr><tr><td>21.</td><td>Shri C.P. Joshi</td><td>Minister of Road Transport and Highways.</td></tr><tr><td>22.</td><td>Kumari Selja</td><td>Minister of Housing and Urban Poverty Alleviation and Minister of Culture.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        489.09,
+        739.28,
+        518.84,
+        739.28,
+        518.84,
+        751.06,
+        489.09,
+        751.06
+      ],
+      "text": "Page 1"
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1731,
+      "output": 843,
+      "total": 2574
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.011892,
+      "batch": 0.005946
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.1892,
+      "batch": 0.5946,
+      "savings": 0.5946,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

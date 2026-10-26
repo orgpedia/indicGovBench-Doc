@@ -1,0 +1,126 @@
+{
+  "doc_id": "order_en_archive_033",
+  "blocks": [
+    {
+      "id": 0,
+      "type": "text",
+      "order": 0,
+      "poly": [
+        534.31,
+        25.26,
+        560.49,
+        25.26,
+        560.49,
+        42.94,
+        534.31,
+        42.94
+      ],
+      "text": "100"
+    },
+    {
+      "id": 1,
+      "type": "text",
+      "order": 1,
+      "poly": [
+        274.89,
+        70.73,
+        308.21,
+        70.73,
+        308.21,
+        84.2,
+        274.89,
+        84.2
+      ],
+      "text": ": 3 :"
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "order": 2,
+      "poly": [
+        98.77,
+        90.94,
+        545.02,
+        90.94,
+        545.02,
+        416.79,
+        98.77,
+        416.79
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>20.</td><td>Shri Pattabhi Rama Rao</td><td>-</td><td>Minister of State in the Ministry of Finance.</td></tr><tr><td>21.</td><td>Shri R. C. Rath</td><td>-</td><td>Minister of State in the Ministry of Chemicals &amp; Fertilizers.</td></tr><tr><td>22.</td><td>Shri N. K. P. Salve</td><td>-</td><td>Minister of State (Independent charge) of the Ministry of Information and Broadcasting.</td></tr><tr><td>23.</td><td>Shri C. K. Jaffar Sharief</td><td>-</td><td>Minister of State in the Ministry of Railways.</td></tr><tr><td>24.</td><td>Shri Chandra Shekhar Singh</td><td>-</td><td>Minister of State in the Ministry of Energy.</td></tr><tr><td>25.</td><td>Shri Dalbir Singh</td><td>-</td><td>Minister of State in the Department of Coal in the Ministry of Energy.</td></tr><tr><td>26.</td><td>Shri Virbhadra Singh</td><td>-</td><td>Minister of State in the Ministry of Industry.</td></tr><tr><td>27.</td><td>Smt. Ram Dulari Sinha</td><td>-</td><td>Minister of State in the Ministries of Industry and Steel &amp; Mines.</td></tr><tr><td>28.</td><td>Shri P. Venkatasubbaiah</td><td>-</td><td>Minister of State in the Ministry of Home Affairs.</td></tr></tbody></table>"
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "order": 3,
+      "poly": [
+        254.06,
+        435.31,
+        358.78,
+        435.31,
+        358.78,
+        449.63,
+        254.06,
+        449.63
+      ],
+      "text": "DEPUTY MINISTERS"
+    },
+    {
+      "id": 4,
+      "type": "table",
+      "order": 4,
+      "poly": [
+        98.77,
+        456.36,
+        525.38,
+        456.36,
+        525.38,
+        684.55,
+        98.77,
+        684.55
+      ],
+      "html": "<table><thead></thead><tbody><tr><td>1.</td><td>Shri Mohammed Usman Arif</td><td>-</td><td>Deputy Minister in the Ministry of Civil Supplies.</td></tr><tr><td>2.</td><td>Shri Ghulam Nabi Azad</td><td>-</td><td>Deputy Minister in the Ministry of Law, Justice and Company Affairs.</td></tr><tr><td>3.</td><td>Shri Ashok Gehlot</td><td>-</td><td>Deputy Minister in the Ministry of Tourism.</td></tr><tr><td>4.</td><td>Miss. Kumudben M. Joshi</td><td>-</td><td>Deputy Minister in the Ministry of Health and Family Welfare.</td></tr><tr><td>5.</td><td>Shri Mallikarjun</td><td>-</td><td>Deputy Minister in the Ministry of Information and Broadcasting in addition to his office as Deputy Minister in the Department of Parliamentary Affairs.</td></tr><tr><td>6.</td><td>Shri Vijay N. Patil</td><td>-</td><td>Deputy Minister in the Ministry of Communications.</td></tr></tbody></table>"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "order": 5,
+      "poly": [
+        468.86,
+        686.23,
+        522.41,
+        686.23,
+        522.41,
+        698.86,
+        468.86,
+        698.86
+      ],
+      "text": ".. 4 .."
+    }
+  ],
+  "usage_and_cost": {
+    "pricing_type": "token",
+    "native_currency": "USD",
+    "pages": 1,
+    "tokens": {
+      "input": 1731,
+      "output": 844,
+      "total": 2575
+    },
+    "compute_details": null,
+    "native_costs": {
+      "realtime": 0.011902,
+      "batch": 0.005951
+    },
+    "fx": {
+      "rate_usd_to_inr": 100.0,
+      "source": "USD_TO_INR=100.00"
+    },
+    "cost_inr": {
+      "realtime": 1.1902,
+      "batch": 0.5951,
+      "savings": 0.5951,
+      "batch_discount_pct": 50.0
+    }
+  }
+}

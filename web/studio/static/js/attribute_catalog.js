@@ -119,9 +119,9 @@ export const ATTRIBUTE_CATALOG = [
       {
         "id": 15,
         "key": "signature_type",
-        "count": 106,
+        "count": 107,
         "total": 300,
-        "pct": "35.3%"
+        "pct": "35.7%"
       },
       {
         "id": 16,
@@ -213,7 +213,7 @@ export function renderAttributeExplorationHtml(catalog = ATTRIBUTE_CATALOG) {
   const rightGroups = catalog.filter(g => g.column === 'right');
 
   return `<!-- 2-Column Side-by-Side Attribute Distribution Grid -->
-        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; align-items:start;">
+        <div id="attribute-exploration-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:24px; align-items:start;">
           <!-- Left Column: I. Table Content & Structural Elements -->
           <div class="benchmark-table-wrapper">
             <table class="benchmark-table">

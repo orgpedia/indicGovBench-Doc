@@ -116,27 +116,32 @@ export class DashboardApp {
     return window.confirm('You have unsaved changes. Discard changes and navigate?');
   }
 
-  openSummary() {
-    if (!this.confirmLeave()) return;
-    if (window.location.pathname.includes('audit')) {
-      window.location.href = 'index.html#section-results';
-      return;
-    }
-    document.body.classList.add('landing-mode');
-    this.appMode = 'summary';
-    this.currentDocId = null;
-    this.currentView = 'overview';
-    this.updateUrlParams();
-
+  setGlobalHeader({ badge = '', activeNav = '', backBtn = null, centerHtml = '', actionsHtml = '' }) {
     const headerEl = document.getElementById('global-header');
-    if (headerEl) {
-      headerEl.innerHTML = `
-        <div class="brand-title">
-          <span>🏛️ IndicGovBench-Orders</span>
-          <span class="brand-badge">Paper &amp; Benchmark Landing</span>
-        </div>
-        <div class="header-actions" style="display:flex; align-items:center; gap:8px;">
-          <a class="header-nav-link" href="https://orgpedia.in" target="_blank" rel="noopener noreferrer" title="Orgpedia Official Website">
+    if (!headerEl) return;
+
+    const backHtml = backBtn
+      ? `<button class="btn-tool" id="${backBtn.id}" style="margin-right:8px; font-weight:600;" title="${backBtn.title || ''}">${backBtn.label}</button>`
+      : '';
+    const badgeHtml = badge
+      ? `<span class="brand-badge" id="header-context-badge">${escapeHtml(badge)}</span>`
+      : '';
+
+    headerEl.innerHTML = `
+      <div class="header-left">
+        ${backHtml}
+        <a href="index.html#section-results" class="brand-link" title="IndicGovBench-Orders Home">
+          <span class="brand-title">🏛️ IndicGovBench-Orders</span>
+        </a>
+        ${badgeHtml}
+      </div>
+      <div class="header-center" style="display:flex; align-items:center; gap:8px;">
+        ${centerHtml}
+      </div>
+      <div class="header-actions">
+        ${actionsHtml}
+        <div class="repo-links desktop-only">
+          <a class="header-nav-link" href="https://indicgovbench.orgpedia.in" target="_blank" rel="noopener noreferrer" title="Orgpedia Official Website">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -150,21 +155,31 @@ export class DashboardApp {
             </svg>
             <span>GitHub</span>
           </a>
-          <a class="header-nav-link" href="https://huggingface.co/datasets/Orgpedia/indicGovBench-Doc" target="_blank" rel="noopener noreferrer" title="HuggingFace Benchmark Dataset">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFD21E">
-              <path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624"/>
-            </svg>
-            <span>HuggingFace</span>
-          </a>
-          <a class="header-nav-link" href="https://arxiv.org" target="_blank" rel="noopener noreferrer" title="arXiv Preprint">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#B31B1B">
-              <path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/>
-            </svg>
-            <span>arXiv</span>
-          </a>
         </div>
-      `;
+      </div>
+    `;
+
+    if (backBtn && backBtn.onClick) {
+      headerEl.querySelector(`#${backBtn.id}`)?.addEventListener('click', backBtn.onClick);
     }
+  }
+
+  openSummary() {
+    if (!this.confirmLeave()) return;
+    if (window.location.pathname.includes('audit')) {
+      window.location.href = 'index.html#section-results';
+      return;
+    }
+    document.body.classList.remove('landing-mode');
+    this.appMode = 'summary';
+    this.currentDocId = null;
+    this.currentView = 'overview';
+    this.updateUrlParams();
+
+    this.setGlobalHeader({
+      badge: 'Leaderboard',
+      activeNav: 'leaderboard'
+    });
 
     const rowEl = document.getElementById('command-row');
     if (rowEl) rowEl.style.display = 'none';
@@ -181,26 +196,27 @@ export class DashboardApp {
     this.currentView = 'attributes';
     this.updateUrlParams();
 
+    this.setGlobalHeader({
+      badge: 'Attributes',
+      activeNav: 'attributes',
+      backBtn: {
+        id: 'btn-header-back-summary',
+        label: '← Leaderboard',
+        title: 'Back to Leaderboard',
+        onClick: () => this.openSummary(),
+      },
+      actionsHtml: `
+        <a class="btn-tool desktop-only" href="metrics.html" target="_blank" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px;" title="View interactive metrics tutorial">🔬 Metrics Tutorial ↗</a>
+        <button class="btn-tool" id="btn-header-coverage" title="Analyze dataset metadata &amp; coverage metrics">📊 Coverage</button>
+        <button class="btn-tool" id="btn-header-audit" style="color:var(--accent); font-weight:600;" title="Open document audit workspace">Audit Workspace →</button>
+        <button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>
+      `
+    });
+
     const headerEl = document.getElementById('global-header');
-    if (headerEl) {
-      headerEl.innerHTML = `
-        <div class="brand-title">
-          <button class="btn-tool" id="btn-header-back-summary" style="margin-right:8px; font-weight:600;">← Back to Leaderboard</button>
-          <span>🏛️ IndicGovBench</span>
-          <span class="brand-badge" style="background:#f3f4f6; color:#111827; border-color:#d1d5db;">Attribute-Wise Explorer</span>
-        </div>
-        <div class="header-actions" style="display:flex; align-items:center; gap:8px;">
-          <a class="btn-tool" href="/metrics" target="_blank" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px;" title="View interactive metrics demo">🔬 Metrics Demo ↗</a>
-          <button class="btn-tool" id="btn-header-coverage" title="Analyze dataset metadata &amp; coverage metrics">📊 Coverage</button>
-          <button class="btn-tool" id="btn-header-audit" style="color:var(--border-focus); font-weight:600;" title="Open document audit workspace">Audit Workspace →</button>
-          <button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>
-        </div>
-      `;
-      headerEl.querySelector('#btn-header-back-summary')?.addEventListener('click', () => this.openSummary());
-      headerEl.querySelector('#btn-header-coverage')?.addEventListener('click', () => this.openMetadataCoverage());
-      headerEl.querySelector('#btn-header-audit')?.addEventListener('click', () => this.openProviderWorkspace('gemini_3_1_pro'));
-      headerEl.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
-    }
+    headerEl?.querySelector('#btn-header-coverage')?.addEventListener('click', () => this.openMetadataCoverage());
+    headerEl?.querySelector('#btn-header-audit')?.addEventListener('click', () => this.openProviderWorkspace('gemini_3_1_pro'));
+    headerEl?.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
 
     const rowEl = document.getElementById('command-row');
     if (rowEl) rowEl.style.display = 'none';
@@ -223,21 +239,17 @@ export class DashboardApp {
     this.currentView = 'coverage';
     this.updateUrlParams();
 
-    const headerEl = document.getElementById('global-header');
-    if (headerEl) {
-      headerEl.innerHTML = `
-        <div class="brand-title">
-          <button class="btn-tool" id="btn-header-back-summary" style="margin-right:8px;">← Back to Leaderboard</button>
-          <span>🏛️ IndicGovBench</span>
-          <span class="brand-badge" style="background:rgba(2, 132, 199, 0.2); color:#38bdf8; border-color:rgba(56, 189, 248, 0.4);">Dataset & Metadata Coverage</span>
-        </div>
-        <div class="header-actions">
-          <button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>
-        </div>
-      `;
-      headerEl.querySelector('#btn-header-back-summary')?.addEventListener('click', () => this.openSummary());
-      headerEl.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
-    }
+    this.setGlobalHeader({
+      badge: 'Coverage',
+      backBtn: {
+        id: 'btn-header-back-summary',
+        label: '← Leaderboard',
+        title: 'Back to Leaderboard',
+        onClick: () => this.openSummary(),
+      },
+      actionsHtml: `<button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>`
+    });
+    document.getElementById('global-header')?.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
 
     const rowEl = document.getElementById('command-row');
     if (rowEl) rowEl.style.display = 'none';
@@ -264,21 +276,17 @@ export class DashboardApp {
     this.currentView = 'overview';
     this.updateUrlParams();
 
-    const headerEl = document.getElementById('global-header');
-    if (headerEl) {
-      headerEl.innerHTML = `
-        <div class="brand-title">
-          <button class="btn-tool" id="btn-header-back" style="margin-right:8px;">← All Providers</button>
-          <span>IndicGovBench</span>
-          <span class="brand-badge">Provider Workspace</span>
-        </div>
-        <div class="header-actions">
-          <button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>
-        </div>
-      `;
-      headerEl.querySelector('#btn-header-back')?.addEventListener('click', () => this.openSummary());
-      headerEl.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
-    }
+    this.setGlobalHeader({
+      badge: 'Provider Workspace',
+      backBtn: {
+        id: 'btn-header-back',
+        label: '← All Providers',
+        title: 'Back to Leaderboard',
+        onClick: () => this.openSummary(),
+      },
+      actionsHtml: `<button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>`
+    });
+    document.getElementById('global-header')?.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
 
     const rowEl = document.getElementById('command-row');
     if (rowEl) rowEl.style.display = 'none';
@@ -368,43 +376,37 @@ export class DashboardApp {
 
   renderHeader() {
     const doc = this.currentDocBundle?.document || {};
-    const evalData = this.currentDocBundle?.evaluation || {};
-
-    const headerEl = document.getElementById('global-header');
-    if (!headerEl) return;
-
     const strata = [doc.language, doc.scan_type, doc.department].filter(Boolean).join(' · ');
-
     const backLabel = this.selectedProvider !== 'none' ? `← ${this.selectedProvider}` : '← Leaderboard';
 
-    headerEl.innerHTML = `
-      <div class="brand-title">
-        <button class="btn-tool" id="btn-doc-back" style="margin-right:8px;" title="Back to Provider Workspace">${escapeHtml(backLabel)}</button>
-        <span>🏛️ IndicGovBench-Orders</span>
-        <span class="brand-badge">Audit Workspace</span>
-      </div>
-      <div class="strata-info text-muted" style="font-size:12px;">
-        ${strata ? `<span>${escapeHtml(strata)}</span>` : ''}
-      </div>
-      <div class="header-actions">
+    this.setGlobalHeader({
+      badge: 'Audit Workspace',
+      backBtn: {
+        id: 'btn-doc-back',
+        label: escapeHtml(backLabel),
+        title: 'Back to Provider Workspace',
+        onClick: () => {
+          if (document.referrer && document.referrer.includes('provider') && window.history.length > 1) {
+            window.history.back();
+            return;
+          }
+          if (this.selectedProvider !== 'none') {
+            this.openProviderWorkspace(this.selectedProvider);
+          } else {
+            this.openSummary();
+          }
+        }
+      },
+      centerHtml: strata ? `<div class="strata-info text-muted desktop-only" style="font-size:12px;"><span>${escapeHtml(strata)}</span></div>` : '',
+      actionsHtml: `
         <button class="btn-tool" id="btn-notes" title="Document Notes">📝 Notes</button>
         <button class="btn-tool" id="btn-shortcuts" title="Keyboard Shortcuts (?)">⌨️ Shortcuts</button>
-      </div>
-    `;
-
-    headerEl.querySelector('#btn-doc-back')?.addEventListener('click', () => {
-      if (document.referrer && document.referrer.includes('provider') && window.history.length > 1) {
-        window.history.back();
-        return;
-      }
-      if (this.selectedProvider !== 'none') {
-        this.openProviderWorkspace(this.selectedProvider);
-      } else {
-        this.openSummary();
-      }
+      `
     });
-    headerEl.querySelector('#btn-notes')?.addEventListener('click', () => this.openMetadataModal());
-    headerEl.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
+
+    const headerEl = document.getElementById('global-header');
+    headerEl?.querySelector('#btn-notes')?.addEventListener('click', () => this.openMetadataModal());
+    headerEl?.querySelector('#btn-shortcuts')?.addEventListener('click', () => this.toggleCheatSheet());
   }
 
   renderCommandRow() {

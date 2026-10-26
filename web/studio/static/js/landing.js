@@ -29,7 +29,9 @@ class LandingPage {
     this.sortColumn = 'composite_score';
     this.sortDirection = 'desc';
     this.categoryFilter = 'all';
-    this.viewMode = 'table'; // 'table' | 'cards'
+    const isMobile = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
+    const storedView = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('leaderboard_view_mode') : null;
+    this.viewMode = storedView || (isMobile ? 'cards' : 'table'); // 'table' | 'cards'
     this.chartMetric = 'composite_score';
     this.chartScale = 'log'; // Always log scale
     this.showPareto = true;
@@ -984,8 +986,17 @@ class LandingPage {
     const btnCards = document.getElementById('btn-toggle-cards-view');
 
     if (btnTable && btnCards) {
+      if (this.viewMode === 'cards') {
+        btnCards.classList.add('active');
+        btnTable.classList.remove('active');
+      } else {
+        btnTable.classList.add('active');
+        btnCards.classList.remove('active');
+      }
+
       btnTable.addEventListener('click', () => {
         this.viewMode = 'table';
+        try { sessionStorage.setItem('leaderboard_view_mode', 'table'); } catch (e) {}
         btnTable.classList.add('active');
         btnCards.classList.remove('active');
         this.renderLeaderboardView();
@@ -993,6 +1004,7 @@ class LandingPage {
 
       btnCards.addEventListener('click', () => {
         this.viewMode = 'cards';
+        try { sessionStorage.setItem('leaderboard_view_mode', 'cards'); } catch (e) {}
         btnCards.classList.add('active');
         btnTable.classList.remove('active');
         this.renderLeaderboardView();

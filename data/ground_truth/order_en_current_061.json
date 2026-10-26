@@ -29,6 +29,25 @@
       "reason": "excluded"
     },
     {
+      "id": 14,
+      "type": "text",
+      "scope": "excluded",
+      "order": null,
+      "poly": [
+        426.3,
+        748.1,
+        576.3,
+        748.1,
+        576.3,
+        774.1,
+        426.3,
+        774.1
+      ],
+      "text": "[SIGNATURE]",
+      "html": null,
+      "reason": "excluded"
+    },
+    {
       "id": 0,
       "type": "text",
       "scope": "target",
@@ -274,25 +293,6 @@
       "text": "(Dr. J. Ramesh)\nMedical Superintendent – cum-\nHead of Office, DFS",
       "html": null,
       "reason": null
-    },
-    {
-      "id": 14,
-      "type": "text",
-      "scope": "excluded",
-      "order": null,
-      "poly": [
-        426.3,
-        748.1,
-        576.3,
-        748.1,
-        576.3,
-        774.1,
-        426.3,
-        774.1
-      ],
-      "text": "[SIGNATURE]",
-      "html": null,
-      "reason": "excluded"
     }
   ]
 }

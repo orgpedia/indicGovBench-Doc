@@ -96,14 +96,13 @@ GEMINI_BLOCKS_SCHEMA: dict[str, Any] = {
 # ==============================================================================
 
 GEMINI_SLUG_MODEL_MAP: dict[str, str] = {
+    "gemini_4_argon": "gemini-4-argon",
     "gemini_3_8_flash": "gemini-3.8-flash",
     "gemini_3_1_pro": "gemini-3.1-pro-preview",
     "gemini_3_5_flash_lite": "gemini-3.5-flash-lite",
     "gemini_2_5_flash": "gemini-2.5-flash",
     "gemini_2_5_pro": "gemini-3.1-pro-preview",
     "gemini_2_0_flash": "gemini-2.0-flash",
-    "gemini_api": "gemini-3.8-flash",
-    "gemini": "gemini-3.8-flash",
 }
 
 OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
@@ -113,14 +112,11 @@ OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
     "openai_gpt_5_6_terra": "gpt-5.6-terra",
     "openai_gpt_5_6_tera": "gpt-5.6-terra",
     "openai_gpt_5_6_luna": "gpt-5.6-luna",
-    "openai_api": "gpt-5.6-sol",
-    "openai": "gpt-5.6-sol",
 }
 
 CLAUDE_SLUG_MODEL_MAP: dict[str, str] = {
     "claude_haiku_4_5": os.environ.get("CLAUDE_HAIKU_MODEL", "claude-haiku-4-5-20251001"),
     "claude_sonnet_5_5": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
-    "claude": os.environ.get("CLAUDE_SONNET_MODEL", "claude-sonnet-5-5"),
 }
 
 # ==============================================================================
@@ -144,6 +140,7 @@ def estimate_gemini_cost(
         }
 
     PRICING_MAP = {
+        "gemini-4-argon": (2.00, 10.00),
         "gemini-3.8-flash": (0.10, 0.40),
         "gemini-3.1-pro": (1.25, 5.00),
         "gemini-3.5-flash-lite": (0.075, 0.30),
