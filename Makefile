@@ -438,8 +438,8 @@ cf_export: html
 
 cf_sync_db: cf_export
 	@echo "🗄️ Seeding Cloudflare D1 database (schema & pruned data)..."
-	cd web/cloudflare && npx -y wrangler d1 execute indic_gov_bench_db --remote --file=../../$(WORKSPACE_DIR)/cf_export/schema.sql
-	cd web/cloudflare && npx -y wrangler d1 execute indic_gov_bench_db --remote --file=../../$(WORKSPACE_DIR)/cf_export/data.sql
+	cd web/cloudflare && npx -y wrangler d1 execute indic_gov_bench_db --remote --file=../../$(WORKSPACE_DIR)/cf_export/schema.sql --yes
+	cd web/cloudflare && npx -y wrangler d1 execute indic_gov_bench_db --remote --file=../../$(WORKSPACE_DIR)/cf_export/data.sql --yes
 	@echo "✅ Cloudflare D1 database seeded successfully!"
 
 cf_deploy: cf_export

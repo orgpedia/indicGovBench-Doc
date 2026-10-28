@@ -40,6 +40,7 @@ PROVIDER_GROUPS = [
             "gemini_3_5_flash_lite",
             "openai_gpt_5_6_luna",
             "claude_haiku_4_5",
+            "gemini_4_argon",
         ],
     },
     {
@@ -49,6 +50,7 @@ PROVIDER_GROUPS = [
             "mistral_api",
             "datalab_api",
             "sarvam_api",
+            "documentai_form_parser",
         ],
     },
     {
@@ -162,6 +164,17 @@ PROVIDER_DISPLAY_INFO = {
         "source_class": "source-modelsdev-link",
         "source_title": "models.dev ID: anthropic/claude-haiku-4-5",
     },
+    "gemini_4_argon": {
+        "name": "Gemini 4 Argon",
+        "sub": "Google · VLM",
+        "approach_code": "google-genai SDK",
+        "approach_sub": "generate_content (image input)",
+        "rate_card": "$2.00 in / $10.00 out (per 1M tokens)",
+        "source_badge": "models.dev ↗",
+        "source_url": "https://models.dev",
+        "source_class": "source-modelsdev-link",
+        "source_title": "models.dev ID: google/gemini-4-argon",
+    },
     "mistral_api": {
         "name": "Mistral OCR",
         "sub": "Mistral AI · Doc AI",
@@ -194,6 +207,17 @@ PROVIDER_DISPLAY_INFO = {
         "source_url": "https://www.sarvam.ai/apis/document-digitisation",
         "source_class": "source-live-link",
         "source_title": "Sarvam Digitisation Pricing",
+    },
+    "documentai_form_parser": {
+        "name": "Document AI (Form Parser)",
+        "sub": "Google Cloud · Doc AI",
+        "approach_code": "google-cloud-documentai",
+        "approach_sub": "projects.locations.processors.process",
+        "rate_card": "$0.0300 / page ($30.00 / 1K pages)",
+        "source_badge": "Live Docs ↗",
+        "source_url": "https://cloud.google.com/document-ai/pricing#general-processors",
+        "source_class": "source-live-link",
+        "source_title": "Google Cloud Document AI Pricing",
     },
     "qwen3_vl_8b": {
         "name": "Qwen3-VL-8B",

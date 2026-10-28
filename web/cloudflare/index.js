@@ -35,6 +35,8 @@ const PROVIDER_META_MAP = {
   gemini_3_5_flash_lite: { display_name: "Gemini 3.5 Flash-Lite", org: "Google", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#0ea5e9" },
   openai_gpt_5_6_luna: { display_name: "GPT-5.6 Luna", org: "OpenAI", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#10b981" },
   claude_haiku_4_5: { display_name: "Claude Haiku 4.5", org: "Anthropic", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#ea580c" },
+  gemini_4_argon: { display_name: "Gemini 4 Argon", org: "Google", category: "proprietary", tags: ["VLM", "Proprietary"], supports_batching: true, color: "#1e3a8a" },
+  documentai_form_parser: { display_name: "Document AI (Form Parser)", org: "Google Cloud", category: "proprietary", tags: ["Doc AI", "Proprietary"], supports_batching: false, color: "#4285f4" },
   paddleocr_hpd: { display_name: "PaddleOCR v4", org: "PaddlePaddle", category: "classical_ocr", tags: ["OCR", "Open Source"], supports_batching: false, color: "#ca8a04" },
   tesseract: { display_name: "Tesseract 5.3", org: "Open Source", category: "classical_ocr", tags: ["OCR", "Open Source"], supports_batching: false, color: "#4b5563" },
 };
@@ -114,7 +116,7 @@ export default {
         } else if (url.searchParams.has("provider") && url.searchParams.get("view") !== "attributes" && url.searchParams.get("view") !== "coverage") {
           const prov = url.searchParams.get("provider");
           const supportedProviders = [
-            "gemini_3_1_pro", "gemini_3_8_flash", "gemini_3_5_flash_lite",
+            "gemini_3_1_pro", "gemini_3_8_flash", "gemini_3_5_flash_lite", "gemini_4_argon",
             "openai_gpt_6_1_sol", "openai_gpt_6_luna", "openai_gpt_5_6_tera", "openai_gpt_5_6_luna",
             "claude_haiku_4_5", "claude_sonnet_5_5",
             "paddleocr_hpd", "qwen3_vl_8b", "tesseract",

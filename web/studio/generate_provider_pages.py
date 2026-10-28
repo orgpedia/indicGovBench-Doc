@@ -33,6 +33,8 @@ PROVIDER_DISPLAY_NAMES = {
     "gemini_3_5_flash_lite": "Gemini 3.5 Flash-Lite",
     "openai_gpt_5_6_luna": "GPT-5.6 Luna",
     "claude_haiku_4_5": "Claude Haiku 4.5",
+    "gemini_4_argon": "Gemini 4 Argon",
+    "documentai_form_parser": "Document AI (Form Parser)",
     "paddleocr_hpd": "PaddleOCR v4",
     "tesseract": "Tesseract 5.3",
 }

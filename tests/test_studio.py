@@ -56,10 +56,10 @@ class TestStudioPages(unittest.TestCase):
         # 1. Back link and header
         self.assertIn('href="index.html#section-results"', pricing_html)
         self.assertIn("Pricing &amp; Rate Card", pricing_html)
-        self.assertIn("15 Models Evaluated", pricing_html)
+        self.assertIn("17 Models Evaluated", pricing_html)
         self.assertIn("300 Government Orders", pricing_html)
 
-        # 2. All 15 models present in table
+        # 2. All 17 models present in table
         for model in [
             "Gemini 3.1 Pro",
             "GPT-6.1 Sol",
@@ -70,9 +70,11 @@ class TestStudioPages(unittest.TestCase):
             "Gemini 3.5 Flash-Lite",
             "GPT-5.6 Luna",
             "Claude Haiku 4.5",
+            "Gemini 4 Argon",
             "Mistral OCR",
             "Marker API",
             "Sarvam Vision API",
+            "Document AI (Form Parser)",
             "Qwen3-VL-8B",
             "PaddleOCR v4 (HPD)",
             "Tesseract 5.3",
@@ -158,7 +160,7 @@ class TestStudioPages(unittest.TestCase):
     def test_provider_pages_data_attributes(self) -> None:
         static_dir = Path(__file__).resolve().parent.parent / "web" / "studio" / "static"
         provider_files = list(static_dir.glob("provider_*.html"))
-        self.assertGreaterEqual(len(provider_files), 15, "All 15 pre-built provider pages must exist")
+        self.assertGreaterEqual(len(provider_files), 17, "All 17 pre-built provider pages must exist")
         for prov_file in provider_files:
             slug = prov_file.stem.replace("provider_", "")
             content = prov_file.read_text(encoding="utf-8")
