@@ -33,6 +33,7 @@ PROVIDER_GROUPS = [
         "slugs": [
             "gemini_3_1_pro",
             "openai_gpt_6_1_sol",
+            "openai_gpt_6_1_terra",
             "openai_gpt_5_6_tera",
             "gemini_3_8_flash",
             "claude_sonnet_5_5",
@@ -50,7 +51,6 @@ PROVIDER_GROUPS = [
             "mistral_api",
             "datalab_api",
             "sarvam_api",
-            "documentai_form_parser",
         ],
     },
     {
@@ -86,6 +86,17 @@ PROVIDER_DISPLAY_INFO = {
         "source_url": "https://models.dev",
         "source_class": "source-modelsdev-link",
         "source_title": "models.dev ID: openai/gpt-6.1-sol",
+    },
+    "openai_gpt_6_1_terra": {
+        "name": "GPT-6.1 Terra",
+        "sub": "OpenAI · VLM",
+        "approach_code": "openai SDK",
+        "approach_sub": "Chat Completions (Base64)",
+        "rate_card": "$1.00 in / $5.00 out (per 1M tokens)",
+        "source_badge": "models.dev ↗",
+        "source_url": "https://models.dev",
+        "source_class": "source-modelsdev-link",
+        "source_title": "models.dev ID: openai/gpt-6.1-terra",
     },
     "openai_gpt_5_6_tera": {
         "name": "GPT-5.6 Terra",

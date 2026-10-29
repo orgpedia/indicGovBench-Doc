@@ -42,6 +42,8 @@ MODEL_MAPPINGS: dict[str, dict[str, Any]] = {
     "gemini_2_0_flash": {"provider": "google", "model": "gemini-2.0-flash"},
     # 2. OpenAI Models
     "openai_gpt_6_1_sol": {"provider": "openai", "model": "gpt-6.1-sol"},
+    "openai_gpt_6_1_terra": {"provider": "openai", "model": "gpt-6.1-terra"},
+    "openai_gpt_6_1_tera": {"provider": "openai", "model": "gpt-6.1-terra"},
     "openai_gpt_6_luna": {"provider": "openai", "model": "gpt-6-luna"},
     "openai_gpt_5_6_luna": {"provider": "openai", "model": "gpt-5.6-luna"},
     "openai_gpt_5_6_terra": {"provider": "openai", "model": "gpt-5.6-terra"},

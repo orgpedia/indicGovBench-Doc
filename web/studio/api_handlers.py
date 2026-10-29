@@ -336,6 +336,13 @@ def get_documents_list(
             WHERE provider = ?
         """
         rank_rows = conn.execute(rank_query, (run_id, provider)).fetchall()
+        total_models_cnt = (
+            conn.execute(
+                "SELECT COUNT(DISTINCT provider) FROM page_evaluations WHERE run_id = ?",
+                (run_id,),
+            ).fetchone()[0]
+            or 17
+        )
         ranks_by_doc = {
             r[0]: {
                 "composite_score": r[1],
@@ -343,7 +350,7 @@ def get_documents_list(
                 "e2eNED_norm": r[3],
                 "TEDS": r[4],
                 "cost_batch_inr": r[5],
-                "total_models": 15,
+                "total_models": total_models_cnt,
             }
             for r in rank_rows
         }

@@ -145,6 +145,33 @@ class TestProviderSmoke(unittest.TestCase):
         self.assertAlmostEqual(cost_dict["cost_inr"]["realtime"], 0.40, places=2)
         self.assertAlmostEqual(cost_dict["cost_inr"]["batch"], 0.20, places=2)
 
+    def test_openai_gpt_6_1_terra_pricing_telemetry(self) -> None:
+        """Verify that openai_gpt_6_1_terra token pricing model extracts usage and calculates 50% batch discount."""
+        from indic_gov_bench.providers.prompts import OPENAI_SLUG_MODEL_MAP
+
+        self.assertEqual(OPENAI_SLUG_MODEL_MAP.get("openai_gpt_6_1_terra"), "gpt-6.1-terra")
+        self.assertEqual(OPENAI_SLUG_MODEL_MAP.get("openai_gpt_6_1_tera"), "gpt-6.1-terra")
+
+        sample_raw = {
+            "usage": {
+                "prompt_tokens": 1000,
+                "completion_tokens": 200,
+                "total_tokens": 1200,
+            }
+        }
+        usage = extract_usage_from_raw("openai_gpt_6_1_terra", sample_raw)
+        self.assertEqual(usage.get("prompt_tokens"), 1000)
+        self.assertEqual(usage.get("completion_tokens"), 200)
+
+        cost_dict = calculate_doc_cost("openai_gpt_6_1_terra", usage, fx_rate=100.0)
+        self.assertEqual(cost_dict["pricing_type"], "token")
+        self.assertEqual(cost_dict["cost_inr"]["batch_discount_pct"], 50.0)
+        # 1000 tokens @ $1.00/1M = $0.001; 200 tokens @ $5.00/1M = $0.001; Total = $0.002
+        self.assertAlmostEqual(cost_dict["native_costs"]["realtime"], 0.002, places=5)
+        self.assertAlmostEqual(cost_dict["native_costs"]["batch"], 0.001, places=5)
+        self.assertAlmostEqual(cost_dict["cost_inr"]["realtime"], 0.20, places=2)
+        self.assertAlmostEqual(cost_dict["cost_inr"]["batch"], 0.10, places=2)
+
 
 if __name__ == "__main__":
     unittest.main()

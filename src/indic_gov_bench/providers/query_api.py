@@ -113,6 +113,8 @@ GEMINI_SLUG_MODEL_MAP: dict[str, str] = {
 
 OPENAI_SLUG_MODEL_MAP: dict[str, str] = {
     "openai_gpt_6_1_sol": "gpt-6.1-sol",
+    "openai_gpt_6_1_terra": "gpt-6.1-terra",
+    "openai_gpt_6_1_tera": "gpt-6.1-terra",
     "openai_gpt_6_luna": "gpt-6-luna",
     "openai_gpt_5_6_sol": "gpt-5.6-sol",
     "openai_gpt_5_6_terra": "gpt-5.6-terra",
@@ -515,6 +517,7 @@ def estimate_openai_cost(
     # Reference: OpenAI API pricing
     PRICING_MAP = {
         "gpt-6.1-sol": (2.50, 10.00),
+        "gpt-6.1-terra": (1.00, 5.00),
         "gpt-5.6-sol": (2.50, 10.00),
         "gpt-5.6-terra": (1.25, 5.00),
         "gpt-5.6-luna": (0.25, 1.00),
@@ -1470,7 +1473,7 @@ def main() -> None:
         "--openai-model",
         type=str,
         default=None,
-        help="OpenAI model identifier (e.g. gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna)",
+        help="OpenAI model identifier (e.g. gpt-6.1-terra, gpt-6.1-sol, gpt-5.6-sol, gpt-5.6-luna)",
     )
     parser.add_argument(
         "--openai-detail",

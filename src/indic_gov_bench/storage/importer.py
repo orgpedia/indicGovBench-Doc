@@ -506,7 +506,7 @@ def import_benchmark_to_db(
                 print(f"❌ Error ingesting reference file {rf.name}: {err}")
 
         # 3. Ingest Predictions across Providers
-        HELPER_PROVIDERS = {"gcv_api", "gcv"}
+        HELPER_PROVIDERS = {"gcv_api", "gcv", "documentai_form_parser"}
         exclude_set = set(HELPER_PROVIDERS)
         if exclude_providers:
             if isinstance(exclude_providers, str):

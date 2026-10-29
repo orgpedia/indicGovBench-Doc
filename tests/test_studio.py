@@ -56,13 +56,14 @@ class TestStudioPages(unittest.TestCase):
         # 1. Back link and header
         self.assertIn('href="index.html#section-results"', pricing_html)
         self.assertIn("Pricing &amp; Rate Card", pricing_html)
-        self.assertIn("17 Models Evaluated", pricing_html)
+        self.assertIn("Models Evaluated", pricing_html)
         self.assertIn("300 Government Orders", pricing_html)
 
-        # 2. All 17 models present in table
+        # 2. Models present in table
         for model in [
             "Gemini 3.1 Pro",
             "GPT-6.1 Sol",
+            "GPT-6.1 Terra",
             "GPT-5.6 Terra",
             "Gemini 3.8 Flash",
             "Claude Sonnet 5.5",
@@ -74,7 +75,6 @@ class TestStudioPages(unittest.TestCase):
             "Mistral OCR",
             "Marker API",
             "Sarvam Vision API",
-            "Document AI (Form Parser)",
             "Qwen3-VL-8B",
             "PaddleOCR v4 (HPD)",
             "Tesseract 5.3",

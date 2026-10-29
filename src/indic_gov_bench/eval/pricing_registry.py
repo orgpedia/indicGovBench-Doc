@@ -300,6 +300,51 @@ PRICING_REGISTRY: dict[str, dict[str, Any]] = {
         ),
         "batch_formula": "realtime_cost * 0.50",
     },
+    "openai_gpt_6_1_terra": {
+        "name": "GPT-6.1 Terra",
+        "archetype": "token",
+        "native_currency": "USD",
+        "input_rate_1m": 1.00,
+        "output_rate_1m": 5.00,
+        "supports_batching": True,
+        "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-6.1-terra",
+        "last_synced_at": "2026-10-28",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": (
+            "Computed from input and output tokens via models.dev rates, "
+            "converted to INR ($1=₹100). Batch API applies 50% discount."
+        ),
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
+    },
+    "openai_gpt_6_1_tera": {
+        "name": "GPT-6.1 Terra (Alias)",
+        "archetype": "token",
+        "native_currency": "USD",
+        "input_rate_1m": 1.00,
+        "output_rate_1m": 5.00,
+        "supports_batching": True,
+        "batch_discount_pct": 50.0,
+        "pricing_source": "models.dev",
+        "source_url": "https://models.dev",
+        "wayback_url": None,
+        "models_dev_id": "openai/gpt-6.1-terra",
+        "last_synced_at": "2026-10-28",
+        "billing_unit": "USD per 1M tokens",
+        "how_computed": "OpenAI Terra alias endpoint mapped to GPT-6.1 Terra rates.",
+        "formula": (
+            "((prompt_tokens / 1e6) * input_rate_1m + "
+            "(completion_tokens / 1e6) * output_rate_1m) * USD_TO_INR"
+        ),
+        "batch_formula": "realtime_cost * 0.50",
+    },
     "openai_gpt_6_1_sol": {
         "name": "GPT-6.1 Sol",
         "archetype": "token",

@@ -248,11 +248,11 @@ delete_tag:
 # 1. Supported Provider Registries
 BATCH_PROVIDERS    := gemini_4_argon \
                       gemini_3_1_pro gemini_3_8_flash gemini_3_5_flash_lite \
-                      openai_gpt_6_1_sol openai_gpt_6_luna openai_gpt_5_6_tera openai_gpt_5_6_luna \
+                      openai_gpt_6_1_sol openai_gpt_6_1_terra openai_gpt_6_1_tera openai_gpt_6_luna openai_gpt_5_6_tera openai_gpt_5_6_luna \
                       claude_haiku_4_5 claude_sonnet_5_5 \
                       paddleocr_hpd qwen3_vl_8b tesseract
 
-REALTIME_PROVIDERS := datalab_api mistral_api sarvam_api documentai_form_parser
+REALTIME_PROVIDERS := datalab_api mistral_api sarvam_api
 
 # Complete list of supported benchmark models (excluding internal helper 'gcv_api')
 VALID_PROVIDERS    := $(BATCH_PROVIDERS) $(REALTIME_PROVIDERS)

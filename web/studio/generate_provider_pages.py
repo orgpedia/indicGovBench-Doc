@@ -22,6 +22,8 @@ from web.studio.site_chrome import render_header
 PROVIDER_DISPLAY_NAMES = {
     "gemini_3_1_pro": "Gemini 3.1 Pro",
     "openai_gpt_6_1_sol": "GPT-6.1 Sol",
+    "openai_gpt_6_1_terra": "GPT-6.1 Terra",
+    "openai_gpt_6_1_tera": "GPT-6.1 Terra",
     "openai_gpt_6_luna": "GPT-6 Luna",
     "openai_gpt_5_6_tera": "GPT-5.6 Terra",
     "mistral_api": "Mistral OCR",
@@ -34,7 +36,6 @@ PROVIDER_DISPLAY_NAMES = {
     "openai_gpt_5_6_luna": "GPT-5.6 Luna",
     "claude_haiku_4_5": "Claude Haiku 4.5",
     "gemini_4_argon": "Gemini 4 Argon",
-    "documentai_form_parser": "Document AI (Form Parser)",
     "paddleocr_hpd": "PaddleOCR v4",
     "tesseract": "Tesseract 5.3",
 }

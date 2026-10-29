@@ -39,6 +39,8 @@ LANG_DISPLAY_NAMES = {
 PROVIDER_META_MAP = {
     "gemini_3_1_pro": {"supports_batching": True},
     "openai_gpt_6_1_sol": {"supports_batching": True},
+    "openai_gpt_6_1_terra": {"supports_batching": True},
+    "openai_gpt_6_1_tera": {"supports_batching": True},
     "openai_gpt_6_luna": {"supports_batching": True},
     "openai_gpt_5_6_tera": {"supports_batching": True},
     "mistral_api": {"supports_batching": False},
@@ -51,7 +53,6 @@ PROVIDER_META_MAP = {
     "openai_gpt_5_6_luna": {"supports_batching": True},
     "claude_haiku_4_5": {"supports_batching": True},
     "gemini_4_argon": {"supports_batching": True},
-    "documentai_form_parser": {"supports_batching": False},
     "paddleocr_hpd": {"supports_batching": False},
     "tesseract": {"supports_batching": False},
 }

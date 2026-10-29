@@ -20,7 +20,8 @@ from indic_gov_bench.eval.table_html import (
 
 def _extract_box(item: dict[str, Any]) -> list[float]:
     """Extracts [ymin, xmin, ymax, xmax] from various box key formats and nesting levels,
-    ensuring proper axis ordering: ymin <= ymax and xmin <= xmax."""
+    robustly resolving both standard [ymin, xmin, ymax, xmax] and [ymin, xmin, xmax, ymax]
+    (top, left, right, bottom) coordinate conventions."""
     for key in ("box_2d", "box", "bbox", "polygon", "bounds"):
         val = item.get(key)
         if val is None:
@@ -30,13 +31,36 @@ def _extract_box(item: dict[str, Any]) -> list[float]:
             val = val[0]
         if isinstance(val, (list, tuple)) and len(val) == 4:
             try:
-                coords = [float(x) for x in val]
-                raw_ymin, raw_xmin, raw_ymax, raw_xmax = coords
-                ymin = min(raw_ymin, raw_ymax)
-                ymax = max(raw_ymin, raw_ymax)
-                xmin = min(raw_xmin, raw_xmax)
-                xmax = max(raw_xmin, raw_xmax)
-                return [ymin, xmin, ymax, xmax]
+                c0, c1, c2, c3 = [float(x) for x in val]
+
+                # Hypothesis 1: [ymin, xmin, ymax, xmax] (standard)
+                # y in [c0, c2], x in [c1, c3]
+                h1, w1 = c2 - c0, c3 - c1
+                valid1 = (h1 > 0) and (w1 > 0)
+
+                # Hypothesis 2: [ymin, xmin, xmax, ymax] (swapped xmax/ymax)
+                # y in [c0, c3], x in [c1, c2]
+                h2, w2 = c3 - c0, c2 - c1
+                valid2 = (h2 > 0) and (w2 > 0)
+
+                if valid1 and not valid2:
+                    return [c0, c1, c2, c3]
+                elif valid2 and not valid1:
+                    return [c0, c1, c3, c2]
+                elif valid1 and valid2:
+                    # Both hypotheses have positive spans.
+                    # When c2 >= c3, c2 represents horizontal xmax and c3 represents vertical ymax.
+                    if c2 >= c3:
+                        return [c0, c1, c3, c2]
+                    else:
+                        return [c0, c1, c2, c3]
+                else:
+                    # Degenerate fallback: enforce monotonic axes
+                    ymin = min(c0, c2)
+                    ymax = max(c0, c2)
+                    xmin = min(c1, c3)
+                    xmax = max(c1, c3)
+                    return [ymin, xmin, ymax, xmax]
             except (ValueError, TypeError):
                 pass
     return [0.0, 0.0, 1000.0, 1000.0]
