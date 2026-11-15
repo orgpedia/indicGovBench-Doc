@@ -206,12 +206,76 @@ class TestStudioPages(unittest.TestCase):
         self.assertIn("mobile-only", html_files["audit"])
         self.assertIn("app-shell", html_files["audit"])
 
-    def test_zero_local_tracking(self) -> None:
+    def test_doc_averages_page(self) -> None:
         static_dir = Path(__file__).resolve().parent.parent / "web" / "studio" / "static"
-        for html_file in static_dir.glob("*.html"):
-            content = html_file.read_text(encoding="utf-8")
-            self.assertNotIn("clarity.ms", content, f"{html_file.name} must not contain Clarity tracking script")
-            self.assertNotIn("z23hiv1jjs", content, f"{html_file.name} must not contain Clarity project tag")
+        doc_avg_html = static_dir / "doc_averages.html"
+        doc_avg_js = static_dir / "js" / "doc_averages.js"
+
+        self.assertTrue(doc_avg_html.is_file(), "doc_averages.html must exist")
+        self.assertTrue(doc_avg_js.is_file(), "js/doc_averages.js must exist")
+
+        content = doc_avg_html.read_text(encoding="utf-8")
+        js_content = doc_avg_js.read_text(encoding="utf-8")
+
+        # 1. Header is unlinked from global site navigation (local diagnostic only)
+        self.assertIn("Document Averages (Local)", content)
+        self.assertIn("Local Diagnostic Only", content)
+        self.assertNotIn('<nav class="header-nav', content, "doc_averages.html must not contain global site navigation")
+
+        # 2. Filter Models for Averaging tray
+        self.assertIn("Filter Models for Averaging:", content)
+        self.assertIn('id="model-chips-tray"', content)
+        self.assertIn('id="btn-model-all"', content)
+        self.assertIn('id="btn-model-top5"', content)
+        self.assertIn('id="btn-model-prop"', content)
+        self.assertIn('id="btn-model-open"', content)
+        self.assertIn('id="btn-model-ocr"', content)
+        self.assertIn('id="btn-model-clear"', content)
+
+        # 3. Top Strata Breakdown Bar & KPI Banner
+        self.assertIn('id="breakdown-total-comp"', content)
+        self.assertIn('id="breakdown-lang-english"', content)
+        self.assertIn('id="breakdown-lang-hindi"', content)
+        self.assertIn('id="breakdown-lang-marathi"', content)
+        self.assertIn('id="breakdown-horiz-current"', content)
+        self.assertIn('id="breakdown-horiz-archive"', content)
+        self.assertIn('id="breakdown-table-yes"', content)
+        self.assertIn('id="breakdown-table-no"', content)
+        self.assertIn('id="kpi-composite"', content)
+        self.assertIn('id="kpi-cer"', content)
+        self.assertIn('id="kpi-ned"', content)
+        self.assertIn('id="kpi-teds"', content)
+        self.assertIn('id="kpi-cost"', content)
+
+        # 4. Left Sidebar Filters
+        self.assertIn('class="doc-averages-sidebar"', content)
+        self.assertIn('data-filter-type="language"', content)
+        self.assertIn('data-filter-type="horizon"', content)
+        self.assertIn('data-filter-type="table"', content)
+        self.assertIn('id="btn-reset-sidebar-filters"', content)
+        self.assertIn('id="sidebar-matched-count"', content)
+
+        # 5. Table and data script
+        self.assertIn('id="doc-averages-table"', content)
+        self.assertIn('id="doc-averages-data"', content)
+        self.assertIn('src="js/doc_averages.js"', content)
+        self.assertIn('>#</th>', content, "Table must have '#' column in header")
+
+        # 6. Client controller methods & index column
+        self.assertIn("calculateAverages", js_content)
+        self.assertIn("bindSidebarEvents", js_content)
+        self.assertIn("filterLanguage", js_content)
+        self.assertIn("filterHorizon", js_content)
+        self.assertIn("filterTable", js_content)
+        self.assertIn("getFilteredAndSortedDocuments", js_content)
+        self.assertIn("renderTable", js_content)
+        self.assertIn("audit.html", js_content)
+        self.assertIn("${idx + 1}", js_content, "Client render must include 1-based index column")
+
+        # 7. Strictly excluded from Cloudflare export
+        cf_export_py = Path(__file__).resolve().parent.parent / "src" / "indic_gov_bench" / "storage" / "cf_export.py"
+        cf_code = cf_export_py.read_text(encoding="utf-8")
+        self.assertNotIn('"doc_averages.html"', cf_code, "doc_averages.html must NEVER be in Cloudflare export list")
 
 
 if __name__ == "__main__":

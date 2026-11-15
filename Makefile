@@ -32,7 +32,7 @@ HF_BIN ?= $(shell if command -v huggingface-cli >/dev/null 2>&1; then echo huggi
         init_db reset_db export_db eval_all eval_doc inspect_doc leaderboard \
         serve cf_export cf_sync_db cf_deploy cf_fetch_reports \
         check_pricing sync_pricing \
-        html metrics_tutorial test_metrics_tutorial test lint format clean clean_batches clean_workspace
+        doc_averages html metrics_tutorial test_metrics_tutorial test lint format clean clean_batches clean_workspace
 
 help:
 	@echo "IndicGovBench-Doc: Benchmark & Curation Studio"
@@ -87,6 +87,7 @@ help:
 	@echo ""
 	@echo "🖥️ Web Application & Deployment:"
 	@echo "  make html               Compile interactive documentation (metrics.html and protocol.html)"
+	@echo "  make doc_averages       Compile local cross-model document averages (doc_averages.html)"
 	@echo "  make serve [PORT=9091]  Launch unified Curation Studio & Benchmark Hub"
 	@echo "  make cf_export          Export pruned SQLite database & WebP images for Cloudflare"
 	@echo "  make cf_sync_db         Seed Cloudflare D1 database with schema & pruned benchmark data"
@@ -455,6 +456,10 @@ cf_fetch_reports:
 # ----------------------------------------------------------------------
 # 5. Documentation & Metrics Tutorial Targets
 # ----------------------------------------------------------------------
+
+doc_averages:
+	@echo "📊 Compiling Cross-Model Document Averages (web/studio/static/doc_averages.html)..."
+	PYTHONPATH=src:. $(PY_EXEC) web/studio/generate_doc_averages_html.py --db $(WORKSPACE_DIR)/benchmark.db
 
 html:
 	@echo "📊 Compiling interactive Metrics Tutorial HTML (web/studio/static/metrics.html)..."
