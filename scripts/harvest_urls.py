@@ -7,7 +7,8 @@ PDF files (no PNG generation).
 Features:
   - PDF Only: Generates exclusively 1-page PDF files and staging documents.yaml.
   - Idempotent: Skips already harvested (url, page_number) pairs when re-run.
-  - Local Fallback: Checks if URL's PDF was already downloaded manually into the text file's directory.
+  - Local Fallback & URL Lookup: Reads pre-downloaded local PDFs, and if url.txt exists
+    in the directory containing the PDF, copies its first line to the manifest url field.
   - Monotonic ID Allocator: Strictly increments sequence IDs (max + 1) to preserve order.
   - Network Resilience: HTTP/1.1 with fallback to urllib/SSL-bypass for state government portals.
   - Strict Horizon Validation: Warns on invalid horizon values (e.g. 'curent').
@@ -29,7 +30,9 @@ Input File Format (space or tab separated, lines starting with # are comments):
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
+import shlex
 import ssl
 import sys
 import time
@@ -37,7 +40,7 @@ import urllib.request
 from io import BytesIO
 from pathlib import Path
 from typing import Any
-from urllib.parse import unquote, urlparse
+from urllib.parse import parse_qs, quote, unquote, urlparse, urlsplit, urlunsplit
 
 import httpx
 import pypdfium2 as pdfium
@@ -100,24 +103,169 @@ def allocate_next_id(prefix: str, known_ids: set[str]) -> str:
     return new_id
 
 
+def normalize_url(url: str) -> str:
+    """Encodes raw spaces in HTTP URL paths to %20 while leaving local file paths untouched."""
+    clean_url = url.strip()
+    if clean_url.startswith("http://") or clean_url.startswith("https://"):
+        parsed = urlsplit(clean_url)
+        # Quote path characters (like spaces) but prevent double percent-encoding
+        safe_path = quote(unquote(parsed.path))
+        return urlunsplit((parsed.scheme, parsed.netloc, safe_path, parsed.query, parsed.fragment))
+    return clean_url
+
+
 def get_url_filename(url: str) -> str:
     """Extracts clean filename from URL (stripping query parameters and decoding %20)."""
     parsed = urlparse(url)
     return unquote(Path(parsed.path).name)
 
 
+def derive_cache_filename(url: str) -> str:
+    """Derives a clean, filesystem-safe filename for storing a downloaded full PDF locally."""
+    parsed = urlparse(url)
+    clean_fname = unquote(Path(parsed.path).name).strip()
+
+    # If query parameters contain a better PDF name (e.g. PdfName=... or file=...)
+    qs = parse_qs(parsed.query)
+    for qk, qvs in qs.items():
+        if any(keyword in qk.lower() for keyword in ("pdf", "file", "doc", "name")):
+            for qv in qvs:
+                q_clean = unquote(Path(qv).name).strip()
+                if q_clean:
+                    clean_fname = q_clean
+                    break
+
+    # Sanitize characters unsafe for filesystems
+    safe_name = re.sub(r'[/\\?%*:|"<> ]', "_", clean_fname)
+    if not safe_name or safe_name in (".", "..") or safe_name == ".pdf":
+        h = hashlib.md5(url.encode("utf-8")).hexdigest()[:10]
+        host = re.sub(r"[^a-zA-Z0-9]", "_", parsed.netloc)
+        safe_name = f"{host}_{h}.pdf"
+
+    if not safe_name.lower().endswith(".pdf"):
+        safe_name = f"{safe_name}.pdf"
+
+    return safe_name
+
+
 def find_local_source_pdf(url: str, local_dir: Path | None) -> Path | None:
-    """Checks if a PDF matching url's filename exists locally in local_dir."""
+    """Checks if a PDF matching url's filename or query parameters exists locally in local_dir."""
     if not local_dir or not local_dir.is_dir():
         return None
 
-    fname = get_url_filename(url)
-    if fname:
-        candidate = local_dir / fname
-        if candidate.is_file() and candidate.stat().st_size > 0:
-            return candidate
+    parsed = urlparse(url)
+    raw_fname = Path(parsed.path).name
+    clean_fname = unquote(raw_fname)
+    cache_cand = derive_cache_filename(url)
+
+    candidates = [cache_cand, clean_fname, raw_fname]
+    if not clean_fname.lower().endswith(".pdf"):
+        candidates.append(f"{clean_fname}.pdf")
+    if not raw_fname.lower().endswith(".pdf"):
+        candidates.append(f"{raw_fname}.pdf")
+
+    # Space and underscore variants
+    for name in [clean_fname, cache_cand]:
+        if " " in name:
+            candidates.append(name.replace(" ", "_"))
+        if "_" in name:
+            candidates.append(name.replace("_", " "))
+
+    # Also check query parameters (e.g. PdfName=..., file=..., pdf=...)
+    qs = parse_qs(parsed.query)
+    for qk, qvs in qs.items():
+        if any(keyword in qk.lower() for keyword in ("pdf", "file", "doc", "name")):
+            for qv in qvs:
+                q_clean = unquote(Path(qv).name)
+                candidates.append(q_clean)
+                if not q_clean.lower().endswith(".pdf"):
+                    candidates.append(f"{q_clean}.pdf")
+                # Also handle compound extensions like 01-AUCTON150DCREVENUE.pdf.PdfCompressor...
+                if ".pdf" in q_clean.lower():
+                    idx = q_clean.lower().find(".pdf")
+                    candidates.append(q_clean[: idx + 4])
+
+    # 1. Check candidates directly in local_dir
+    for cand in candidates:
+        if cand:
+            p = local_dir / cand
+            if p.is_file() and p.stat().st_size > 0:
+                return p
+
+    # 2. Case-insensitive match in top-level of local_dir
+    lower_map = {p.name.lower(): p for p in local_dir.glob("*.pdf")}
+    for cand in candidates:
+        if cand and cand.lower() in lower_map:
+            p = lower_map[cand.lower()]
+            if p.stat().st_size > 0:
+                return p
+
+    # 3. Recursive match in subdirectories of local_dir (e.g. gad/, gad-1/, downloads/)
+    try:
+        lower_map_recursive = {p.name.lower(): p for p in local_dir.rglob("*.pdf")}
+        for cand in candidates:
+            if cand and cand.lower() in lower_map_recursive:
+                p = lower_map_recursive[cand.lower()]
+                if p.stat().st_size > 0:
+                    return p
+    except Exception:
+        pass
 
     return None
+
+
+def locate_local_pdf(url: str, local_dir: Path | None = None) -> Path | None:
+    """
+    Checks if url refers to or matches a local PDF file on disk.
+    Returns the resolved Path if found, otherwise None.
+    """
+    # 1. file:// scheme
+    if url.startswith("file://"):
+        p = Path(unquote(url[7:]))
+        if p.is_file() and p.stat().st_size > 0:
+            return p.resolve()
+
+    # 2. Direct path (absolute or relative to current working directory)
+    p = Path(url)
+    if p.is_file() and p.stat().st_size > 0:
+        return p.resolve()
+
+    # 3. Path relative to local_dir or matching filename in local_dir
+    if local_dir and local_dir.is_dir():
+        cand = local_dir / url
+        if cand.is_file() and cand.stat().st_size > 0:
+            return cand.resolve()
+
+        candidate = find_local_source_pdf(url, local_dir)
+        if candidate:
+            return candidate.resolve()
+
+    return None
+
+
+def get_url_from_directory(directory: Path | None) -> str | None:
+    """
+    Looks up 'url.txt' in the directory containing the PDF and returns the first non-empty line if present.
+    """
+    if not directory or not directory.is_dir():
+        return None
+
+    for candidate_name in ("url.txt", "URL.txt"):
+        url_file = directory / candidate_name
+        if url_file.is_file():
+            try:
+                with open(url_file, "r", encoding="utf-8") as f:
+                    for line in f:
+                        clean_line = line.strip()
+                        if clean_line:
+                            return clean_line
+            except Exception as err:
+                print(f"⚠️ Warning reading {url_file}: {err}", file=sys.stderr)
+    return None
+
+
+# In-memory session cache: url -> (pdf_bytes, description, local_pdf_path)
+_SESSION_CACHE: dict[str, tuple[bytes, str, Path | None]] = {}
 
 
 def download_pdf(
@@ -125,26 +273,53 @@ def download_pdf(
     timeout: int = 30,
     verify_ssl: bool = True,
     local_dir: Path | None = None,
-) -> tuple[bytes, str]:
+    local_pdf: Path | None = None,
+    cache_dir: Path | None = None,
+) -> tuple[bytes, str, Path | None]:
     """
     Downloads PDF bytes from url with browser headers, or reads from local file if present.
-    Returns (pdf_bytes, source_description).
+    Saves downloaded full PDFs locally to cache_dir/local_dir so subsequent runs run offline.
+    Never downloads the same URL twice in a session or across runs if cached.
+    Returns (pdf_bytes, source_description, local_pdf_path).
     """
-    # 1. Check if user manually saved the PDF in local_dir (e.g. via browser)
-    local_file = find_local_source_pdf(url, local_dir)
-    if local_file:
-        return local_file.read_bytes(), f"local browser download ({local_file.name})"
+    url_key = url.strip()
 
-    # 2. Check file:// scheme or direct local path in URL
-    if url.startswith("file://"):
-        p = Path(unquote(url[7:]))
-        if p.is_file():
-            return p.read_bytes(), f"local file:// ({p.name})"
-    if Path(url).is_file():
-        p = Path(url)
-        return p.read_bytes(), f"local path ({p.name})"
+    # 1. Check in-memory session cache (guarantees zero duplicate downloads in same run)
+    if url_key in _SESSION_CACHE:
+        c_bytes, _, c_path = _SESSION_CACHE[url_key]
+        desc = f"session cache ({c_path.name if c_path else 'memory'})"
+        return c_bytes, desc, c_path
 
-    # 3. Network download with browser headers
+    # 2. Check local file on disk (prelocated or via search in local_dir or cache_dir)
+    local_file = local_pdf or locate_local_pdf(url, local_dir)
+    if not local_file and cache_dir and cache_dir != local_dir:
+        local_file = locate_local_pdf(url, cache_dir)
+
+    if local_file and local_file.is_file():
+        content = local_file.read_bytes()
+        _SESSION_CACHE[url_key] = (content, f"local file ({local_file.name})", local_file)
+        return content, f"local file ({local_file.name})", local_file
+
+    target_cache_dir = cache_dir or local_dir
+
+    def _cache_and_return(raw_bytes: bytes, desc: str) -> tuple[bytes, str, Path | None]:
+        cached_path: Path | None = None
+        if target_cache_dir:
+            try:
+                target_cache_dir.mkdir(parents=True, exist_ok=True)
+                cache_name = derive_cache_filename(url)
+                cached_path = target_cache_dir / cache_name
+                if not cached_path.is_file() or cached_path.stat().st_size == 0:
+                    with open(cached_path, "wb") as cf:
+                        cf.write(raw_bytes)
+                    print(f"   💾 Saved full source PDF locally: {cached_path.name}")
+                desc = f"{desc} -> cached ({cached_path.name})"
+            except Exception as ce:
+                print(f"⚠️ Warning saving cache file: {ce}", file=sys.stderr)
+        _SESSION_CACHE[url_key] = (raw_bytes, desc, cached_path)
+        return raw_bytes, desc, cached_path
+
+    # 2. Network download with browser headers
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -162,7 +337,7 @@ def download_pdf(
         with httpx.Client(http2=False, follow_redirects=True, timeout=timeout, verify=verify_ssl) as client:
             resp = client.get(url, headers=headers)
             resp.raise_for_status()
-            return resp.content, "network (httpx)"
+            return _cache_and_return(resp.content, "network (httpx)")
     except Exception as err:
         last_error = err
 
@@ -175,7 +350,7 @@ def download_pdf(
 
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=timeout, context=ctx) as response:
-            return response.read(), "network (urllib)"
+            return _cache_and_return(response.read(), "network (urllib)")
     except Exception as err:
         last_error = err
 
@@ -187,7 +362,7 @@ def download_pdf(
             req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=timeout, context=ctx) as response:
                 print(f"   ⚠️ Notice: Downloaded using unverified SSL for state portal: {url}")
-                return response.read(), "network (urllib unverified-ssl)"
+                return _cache_and_return(response.read(), "network (urllib unverified-ssl)")
         except Exception as e3:
             last_error = e3
 
@@ -272,8 +447,12 @@ def build_default_metadata_entry(
     }
 
 
-def parse_input_lines(input_path: Path, default_lang: str) -> list[dict[str, Any]]:
-    """Parses text file with format: <url> <page_num> <horizon> [lang]."""
+def parse_input_lines(
+    input_path: Path,
+    default_lang: str,
+    default_horizon: str = "current",
+) -> list[dict[str, Any]]:
+    """Parses text file with format: <url> <page_num> [horizon] [lang]."""
     items: list[dict[str, Any]] = []
     with open(input_path, "r", encoding="utf-8") as f:
         for line_no, raw_line in enumerate(f, start=1):
@@ -281,15 +460,19 @@ def parse_input_lines(input_path: Path, default_lang: str) -> list[dict[str, Any
             if not line or line.startswith("#"):
                 continue
 
-            parts = line.split()
-            if len(parts) < 3:
+            try:
+                parts = shlex.split(line)
+            except ValueError:
+                parts = line.split()
+
+            if len(parts) < 2:
                 print(
-                    f"⚠️ Skipping line {line_no}: Expected at least 3 fields (<url> <page> <horizon>), got: '{line}'",
+                    f"⚠️ Skipping line {line_no}: Expected at least 2 fields (<url> <page> [horizon] [lang]), got: '{line}'",
                     file=sys.stderr,
                 )
                 continue
 
-            url = parts[0]
+            url = normalize_url(parts[0])
             try:
                 page_num = int(parts[1])
             except ValueError:
@@ -299,15 +482,32 @@ def parse_input_lines(input_path: Path, default_lang: str) -> list[dict[str, Any
                 )
                 continue
 
-            horizon = parts[2].lower()
-            if horizon not in {"current", "archive"}:
-                print(
-                    f"⚠️ Skipping line {line_no}: Horizon must be 'current' or 'archive', got '{parts[2]}'",
-                    file=sys.stderr,
-                )
-                continue
-
-            lang = parts[3].lower() if len(parts) >= 4 else default_lang.lower()
+            if len(parts) == 2:
+                horizon = default_horizon.lower()
+                lang = default_lang.lower()
+            elif len(parts) == 3:
+                val = parts[2].lower()
+                if val in {"current", "archive"}:
+                    horizon = val
+                    lang = default_lang.lower()
+                elif val in LANGUAGE_MAP:
+                    horizon = default_horizon.lower()
+                    lang = val
+                else:
+                    print(
+                        f"⚠️ Skipping line {line_no}: 3rd field '{parts[2]}' must be horizon ('current'/'archive') or language code",
+                        file=sys.stderr,
+                    )
+                    continue
+            else:
+                horizon = parts[2].lower()
+                if horizon not in {"current", "archive"}:
+                    print(
+                        f"⚠️ Skipping line {line_no}: Horizon must be 'current' or 'archive', got '{parts[2]}'",
+                        file=sys.stderr,
+                    )
+                    continue
+                lang = parts[3].lower()
 
             items.append({
                 "url": url,
@@ -326,6 +526,7 @@ def harvest_batch(
     manifest_path: Path,
     pdfs_dir: Path,
     local_dir: Path | None = None,
+    cache_dir: Path | None = None,
     timeout: int = 30,
     verify_ssl: bool = True,
 ) -> int:
@@ -343,6 +544,7 @@ def harvest_batch(
     staging_manifest = out_dir / "documents.yaml"
     existing_staging_entries: list[dict[str, Any]] = []
     staged_by_url_page: dict[tuple[str, int], str] = {}
+    staged_by_file_page: dict[tuple[str, int], str] = {}
 
     if staging_manifest.is_file():
         try:
@@ -356,6 +558,14 @@ def harvest_batch(
                         u = str(e["url"]).strip()
                         p = int(e["page_number"])
                         staged_by_url_page[(u, p)] = did
+                    # Map source file if recorded in notes
+                    notes = str(e.get("notes") or "")
+                    if "Source file:" in notes and "page_number" in e:
+                        fname = notes.split("Source file:")[-1].strip()
+                        if fname:
+                            staged_by_file_page[(fname, int(e["page_number"]))] = did
+                    if "source_file" in e and "page_number" in e:
+                        staged_by_file_page[(str(e["source_file"]).strip(), int(e["page_number"]))] = did
         except Exception as err:
             print(f"⚠️ Warning reading staging manifest: {err}", file=sys.stderr)
 
@@ -381,47 +591,85 @@ def harvest_batch(
     print(f"🚀 Processing {len(items)} document(s) into staging directory '{out_dir}' (PDFs only)...\n")
 
     for idx, item in enumerate(items, start=1):
-        url = item["url"]
+        raw_url = item["url"]
         page_num = item["page_num"]
         horizon = item["horizon"]
         lang = item["lang"]
-        key = (url.strip(), page_num)
+
+        # Check if raw_url refers to a local file, and resolve url.txt if present in the PDF's directory
+        local_pdf_path = locate_local_pdf(raw_url, local_dir)
+        effective_url = raw_url
+        resolved_from_txt = False
+        if local_pdf_path:
+            url_from_file = get_url_from_directory(local_pdf_path.parent)
+            if url_from_file:
+                effective_url = url_from_file
+                resolved_from_txt = True
+
+        raw_key = (raw_url.strip(), page_num)
+        file_key = (local_pdf_path.name, page_num) if local_pdf_path else None
+        url_key = (effective_url.strip(), page_num)
 
         # Check 1: Already in main benchmark
-        if key in benchmark_by_url_page:
-            b_id = benchmark_by_url_page[key]
+        if file_key and file_key in benchmark_by_url_page:
+            b_id = benchmark_by_url_page[file_key]
+            print(f"[{idx}/{len(items)}] ⚠️ Skipping: Already in benchmark as {b_id} (Page {page_num})")
+            skipped += 1
+            continue
+        if not resolved_from_txt and url_key in benchmark_by_url_page:
+            b_id = benchmark_by_url_page[url_key]
+            print(f"[{idx}/{len(items)}] ⚠️ Skipping: Already in benchmark as {b_id} (Page {page_num})")
+            skipped += 1
+            continue
+        if raw_key in benchmark_by_url_page:
+            b_id = benchmark_by_url_page[raw_key]
             print(f"[{idx}/{len(items)}] ⚠️ Skipping: Already in benchmark as {b_id} (Page {page_num})")
             skipped += 1
             continue
 
         # Check 2: Already harvested in staging with valid PDF
-        if key in staged_by_url_page:
-            staged_id = staged_by_url_page[key]
+        staged_id = None
+        if file_key and file_key in staged_by_file_page:
+            staged_id = staged_by_file_page[file_key]
+        elif raw_key in staged_by_url_page:
+            staged_id = staged_by_url_page[raw_key]
+        elif not resolved_from_txt and url_key in staged_by_url_page:
+            staged_id = staged_by_url_page[url_key]
+
+        if staged_id:
             staged_pdf = out_dir / f"{staged_id}.pdf"
             if staged_pdf.is_file() and staged_pdf.stat().st_size > 0:
-                print(f"[{idx}/{len(items)}] ⏩ Skipping {staged_id}: already harvested from {url} (Page {page_num})")
+                source_disp = local_pdf_path.name if local_pdf_path else effective_url
+                print(f"[{idx}/{len(items)}] ⏩ Skipping {staged_id}: already harvested from {source_disp} (Page {page_num})")
                 skipped += 1
                 continue
 
         # Allocate ID (reusing staged_id if recovering partial file, or allocating next monotonically)
-        if key in staged_by_url_page:
-            doc_id = staged_by_url_page[key]
+        if staged_id:
+            doc_id = staged_id
         else:
             prefix = f"order_{lang}_{horizon}_"
             doc_id = allocate_next_id(prefix, known_ids)
 
-        print(f"[{idx}/{len(items)}] Harvesting {doc_id} (Page {page_num}) from {url}...")
+        if resolved_from_txt and local_pdf_path:
+            print(f"[{idx}/{len(items)}] Harvesting {doc_id} (Page {page_num}) from local file '{local_pdf_path.name}' (URL from url.txt: {effective_url})...")
+        else:
+            print(f"[{idx}/{len(items)}] Harvesting {doc_id} (Page {page_num}) from {effective_url}...")
 
         # Step A: Download or read local manual download
         try:
             t0 = time.time()
-            full_pdf_bytes, source_label = download_pdf(
-                url,
+            full_pdf_bytes, source_label, dl_path = download_pdf(
+                raw_url,
                 timeout=timeout,
                 verify_ssl=verify_ssl,
                 local_dir=local_dir,
+                local_pdf=local_pdf_path,
+                cache_dir=cache_dir,
             )
             dl_time = time.time() - t0
+            if dl_path and not local_pdf_path:
+                local_pdf_path = dl_path
         except Exception as err:
             print(f"   ❌ Download failed: {err}")
             known_ids.discard(doc_id)
@@ -441,13 +689,19 @@ def harvest_batch(
         # Step C: Construct metadata entry (No PNG rendering)
         entry = build_default_metadata_entry(
             doc_id=doc_id,
-            url=url,
+            url=effective_url,
             page_number=page_num,
             horizon=horizon,
             lang_code=lang,
         )
+        if local_pdf_path:
+            entry["notes"] = f"Source file: {local_pdf_path.name}"
+            staged_by_file_page[(local_pdf_path.name, page_num)] = doc_id
+
         new_staging_entries.append(entry)
-        staged_by_url_page[key] = doc_id
+        if not resolved_from_txt:
+            staged_by_url_page[url_key] = doc_id
+        staged_by_url_page[raw_key] = doc_id
         successful += 1
         print(f"   ✅ Saved {doc_id}.pdf via {source_label} in {dl_time:.1f}s")
 
@@ -501,7 +755,7 @@ def main() -> int:
         type=str,
         choices=["current", "archive"],
         default="current",
-        help="Horizon category: current or archive (used with --url)",
+        help="Default horizon category: current or archive (default: current)",
     )
     parser.add_argument(
         "--lang",
@@ -520,6 +774,12 @@ def main() -> int:
         type=Path,
         default=None,
         help="Directory to check for pre-downloaded browser PDFs (default: input file's directory)",
+    )
+    parser.add_argument(
+        "--cache-dir",
+        type=Path,
+        default=None,
+        help="Directory to cache downloaded full source PDFs (default: same as --local-dir or staging/downloads)",
     )
     parser.add_argument(
         "--manifest",
@@ -551,6 +811,10 @@ def main() -> int:
     if local_dir is None and args.input:
         local_dir = args.input.parent
 
+    cache_dir = args.cache_dir
+    if cache_dir is None:
+        cache_dir = local_dir or (args.out_dir.parent / "downloads")
+
     if args.url:
         items = [{
             "url": args.url,
@@ -563,7 +827,11 @@ def main() -> int:
         if not args.input.is_file():
             print(f"❌ Input file not found: {args.input}", file=sys.stderr)
             return 1
-        items = parse_input_lines(args.input, default_lang=args.lang)
+        items = parse_input_lines(
+            args.input,
+            default_lang=args.lang,
+            default_horizon=args.horizon,
+        )
 
     if not items:
         print("❌ No valid items to harvest.", file=sys.stderr)
@@ -575,6 +843,7 @@ def main() -> int:
         manifest_path=args.manifest,
         pdfs_dir=args.pdfs_dir,
         local_dir=local_dir,
+        cache_dir=cache_dir,
         timeout=args.timeout,
         verify_ssl=not args.insecure,
     )
